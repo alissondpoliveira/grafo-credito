@@ -1,0 +1,40 @@
+name: Coletor ANBIMA (debêntures)
+
+on:
+  schedule:
+    # 23:00 UTC = 20:00 em Brasília, segunda a sexta. Repete às 02:00 UTC como segunda tentativa.
+    - cron: "0 23 * * 1-5"
+    - cron: "0 2 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coletor-anbima
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Coletar últimos dias úteis
+        run: python coletor/anbima_debentures.py
+
+      - name: Salvar no repositório
+        run: |
+          git config user.name "coletor-anbima[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dados/
+          if git diff --cached --quiet; then
+            echo "Nada novo para salvar."
+          else
+            git commit -m "dados: ANBIMA debêntures $(date -u +%Y-%m-%d)"
+            git push
+          fi
