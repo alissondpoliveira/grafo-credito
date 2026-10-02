@@ -1,0 +1,502 @@
+[
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-07-12",
+  "titulo": "Oferta Pública Secundária",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1259286&numSequencia=784012&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|fato_relevante|2024-07-12|Oferta Pública Secundária"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-07-18",
+  "titulo": "Pricing Oferta Pública Secundária TRPL4",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1261017&numSequencia=785743&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|fato_relevante|2024-07-18|Pricing Oferta Pública Secundária TRPL4"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-08-29",
+  "titulo": "Vitória de Leilão para 5 Novos Projetos no Peru",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1276894&numSequencia=801620&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|fato_relevante|2024-08-29|Vitória de Leilão para 5 Novos Projetos no Peru"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-03-28",
+  "titulo": "Reorganização Societária - Incorporação, Cisão ou Fusão da Companhia",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1215289&numSequencia=740015&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|fato_relevante|2024-03-28|Reorganização Societária - Incorporação, Cisão ou Fusão da C"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2026-07-03",
+  "titulo": "Vitoria do Lote 7 do Leilão de Transmissão Aneel 01/26 (2ªEtapa)",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1541817&numSequencia=1066523&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|fato_relevante|2026-07-03|Vitoria do Lote 7 do Leilão de Transmissão Aneel 01/26 (2ªEt"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-05-08",
+  "titulo": "Proposta de Distribuição de Proventos",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1235027&numSequencia=759753&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|fato_relevante|2024-05-08|Proposta de Distribuição de Proventos"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2026-04-07",
+  "titulo": "Conversão de Ações",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1502158&numSequencia=1026864&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|fato_relevante|2026-04-07|Conversão de Ações"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-12-11",
+  "titulo": "Primeiro programa de recompra de ações da companhia",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1314647&numSequencia=839373&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|fato_relevante|2024-12-11|Primeiro programa de recompra de ações da companhia"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2024-09-27",
+  "titulo": "Aquisição de lote no leilão ANEEL 02.2024",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286043&numSequencia=810769&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|fato_relevante|2024-09-27|Aquisição de lote no leilão ANEEL 02.2024"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2026-05-21",
+  "titulo": "TAESA celebra contrato para aquisição de 5 ativos de transmissão de energia",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525312&numSequencia=1050018&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|fato_relevante|2026-05-21|TAESA celebra contrato para aquisição de 5 ativos de transmi"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2025-01-31",
+  "titulo": "Aquisição de ações de emissão da RIALMA IV",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1329076&numSequencia=853802&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|fato_relevante|2025-01-31|Aquisição de ações de emissão da RIALMA IV"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2026-05-15",
+  "titulo": "Celebração de acordo para a criação de plataforma de controle conjunto de ativos no Brasil entre La Caisse e Grupo Energía Bogotá",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1522700&numSequencia=1047406&numVersao=1",
+  "cnpj": "26845702000160",
+  "emissor": "Belem Transmissora De Energia S.A.",
+  "id": "26845702000160|fato_relevante|2026-05-15|Celebração de acordo para a criação de plataforma de control"
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2026-07-31",
+  "titulo": "Conclusão do descruzamento de participações na IE Madeira e IE Garanhuns",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1550490&numSequencia=1075196&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|fato_relevante|2026-07-31|Conclusão do descruzamento de participações na IE Madeira e "
+ },
+ {
+  "tipo": "fato_relevante",
+  "data": "2025-08-01",
+  "titulo": "Conclusão da aquisição de Rialma IV",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1406425&numSequencia=931137&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|fato_relevante|2025-08-01|Conclusão da aquisição de Rialma IV"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2024-09-26",
+  "titulo": "Comunicado - Eleição Diretor Presidente",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285622&numSequencia=810348&numVersao=1",
+  "cnpj": "24624490000165",
+  "emissor": "Argo Transmissao De Energia S.A.",
+  "id": "24624490000165|comunicado|2024-09-26|Comunicado - Eleição Diretor Presidente"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-05-08",
+  "titulo": "Apresentação de Resultados do 1T26",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1518480&numSequencia=1043186&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|comunicado|2026-05-08|Apresentação de Resultados do 1T26"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2024-04-15",
+  "titulo": "Aviso ao Mercado - oferta pública de debênture -11ª emissão",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1221710&numSequencia=746436&numVersao=1",
+  "cnpj": "92715812000131",
+  "emissor": "Cpfl Transmissao S.A.",
+  "id": "92715812000131|comunicado|2024-04-15|Aviso ao Mercado - oferta pública de debênture -11ª emissão"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-08-17",
+  "titulo": "Entrada em operação de Tangará",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1558698&numSequencia=1083404&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|comunicado|2026-08-17|Entrada em operação de Tangará"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-07-15",
+  "titulo": "Comunicado ao Mercado",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1545295&numSequencia=1070001&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|comunicado|2026-07-15|Comunicado ao Mercado"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-09-22",
+  "titulo": "Comunicado ao Mercado",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1570484&numSequencia=1095190&numVersao=1",
+  "cnpj": "28201130000101",
+  "emissor": "Energisa Transmissao De Energia S.A.",
+  "id": "28201130000101|comunicado|2026-09-22|Comunicado ao Mercado"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-05-05",
+  "titulo": "Apresentação de resultados 1T26",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1515884&numSequencia=1040590&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|comunicado|2026-05-05|Apresentação de resultados 1T26"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2024-09-30",
+  "titulo": "Mudança na composição do comitê de auditoria estatutário",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286436&numSequencia=811162&numVersao=1",
+  "cnpj": "27967244000102",
+  "emissor": "Tapajos Transmissora De Energia S.A.",
+  "id": "27967244000102|comunicado|2024-09-30|Mudança na composição do comitê de auditoria estatutário"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-04-22",
+  "titulo": "Energização Jacarandá",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1507001&numSequencia=1031707&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|comunicado|2026-04-22|Energização Jacarandá"
+ },
+ {
+  "tipo": "comunicado",
+  "data": "2026-08-04",
+  "titulo": "Apresentação de Resultados 2T26",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1551492&numSequencia=1076198&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|comunicado|2026-08-04|Apresentação de Resultados 2T26"
+ },
+ {
+  "tipo": "aviso_debenturistas",
+  "data": "2024-11-13",
+  "titulo": "Resgate Total Antecipado",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1303704&numSequencia=828430&numVersao=1",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|aviso_debenturistas|2024-11-13|Resgate Total Antecipado"
+ },
+ {
+  "tipo": "aviso_debenturistas",
+  "data": "2024-06-14",
+  "titulo": "Aviso aos Debenturistas - Pgto de Juros 8a emissão",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1250192&numSequencia=774918&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|aviso_debenturistas|2024-06-14|Aviso aos Debenturistas - Pgto de Juros 8a emissão"
+ },
+ {
+  "tipo": "aviso_debenturistas",
+  "data": "2026-05-14",
+  "titulo": "Amortização||Liquidação||Pagamento de juros/remuneração",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1522339&numSequencia=1047045&numVersao=1",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|aviso_debenturistas|2026-05-14|Amortização||Liquidação||Pagamento de juros/remuneração"
+ },
+ {
+  "tipo": "aviso_debenturistas",
+  "data": "2026-06-12",
+  "titulo": "Pagamento de principal e juros da 1a Emissão de Debêntures Simples da IE Ivaí",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1534102&numSequencia=1058808&numVersao=1",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|aviso_debenturistas|2026-06-12|Pagamento de principal e juros da 1a Emissão de Debêntures S"
+ },
+ {
+  "tipo": "aviso_debenturistas",
+  "data": "2025-04-16",
+  "titulo": "Amortização||Pagamento de juros/remuneração",
+  "fonte": "CVM",
+  "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1361880&numSequencia=886606&numVersao=5",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|aviso_debenturistas|2025-04-16|Amortização||Pagamento de juros/remuneração"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-04-30",
+  "titulo": "Taesa (TAEE11) registra nova RAP de R$ 23 mi com SE Açailândia",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjJuLTBnak81ZDl3TzVXem92YkpIV3lLM3JDRmZSQi1mOW5US3g3Q1FydmxxS1dWS3p3T0paQjdPRzF4dEFEWkFxODdKd1A1NTNzVkxxX0VCcFVpbDlOVzZ6OF90Tm1aSVZnUUM1WmNuMHhjRTdzeG1lTlBQUkpOSWQxQkt0NzB0T2ZSRUFOckhXRUFVQmlTaFZrYVc3Zw?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|noticia|2026-04-30|Taesa (TAEE11) registra nova RAP de R$ 23 mi com SE Açailând"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-07-06",
+  "titulo": "ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de ações PN",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTWpJQ1ZzbTktRHozOXpXcmxIbTI4YklCX3ZsNzRKN0ZmQWdmeEtvMVBNc29hR3JjYzQySzN1ZFBsM1d6Z3BNYmZ1TUt1VEttWmk3X09ZemlYdkRSUEU3aUJhYUw2NTE0eWxVajNQb0VTalE4ZFlLQ212eWdfTGc3dmlrZmg4RmpHRGhnblBhd0Jfem0yOWc5SUpmcldwcEk?oc=5",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|noticia|2026-07-06|ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de ações"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-07-15",
+  "titulo": "ISA Energia (ISAE3, ISAE4) registra oferta de até 44,4 mi de ações PN",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYldnWi1hY00tOG9INWhCWGRlenhmREc5OGxNeWc4ZkdjRkpIS1A2Q0NDcEY1cW1rLUxadjh0Z2ZPWFU0NGpBbUJ4V2NJaEJOMWxXMjNXY1ZRdXU0Q0NLV3pwNTA4MVNtckh3RDVjeTg4UGxkUG1zU0s1VDdOc0kzZzl2TXZhdTZJODBDWVFuWl9vLTdOSUpaZXFWenpSMUQ4bzBBVGRn?oc=5",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|noticia|2026-07-15|ISA Energia (ISAE3, ISAE4) registra oferta de até 44,4 mi de"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-04-22",
+  "titulo": "ISA Energia (ISAE3) registra início da operação do projeto Jacarandá",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUnBzNXhjVGdLZEx2THlRZ2YzQlEzUEFxMlBwaGdqamRGVUZhTHRlY2w4TjZhNFkzbG1acEo4ZXcwYnlHMDBiLWRDRHNNakt1a1hDU1lyQlBfbnpZTnMzOHl6R3U1aVJPUV85RjJIZDlIUlFkWlhKZ0NLcjJIN3R2OHlIR1l5NlhMSDFOSklFcnZ2MElmQ0FFdG9Fam9oZF9JaHlvckFIUQ?oc=5",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|noticia|2026-04-22|ISA Energia (ISAE3) registra início da operação do projeto J"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-03-06",
+  "titulo": "Alupar acelera ciclo de investimentos e projeta pico de alavancagem em 2028",
+  "fonte": "CNN Brasil",
+  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeHlBdGQ3U1RQdlQ2d1lGTUx2MUVZUEpJTjkwOFYtQ2M2QnpMVldfWjQ3WHNmR3FkdTExZk9iTU5KZUJ2Tm1kTkVwckRSN3lqajMyUFJJVVFsQkdUUXFVdWVfNklWbXJNNHRnb1QzUmdKQ2RxcGJnTFZhTjJjeTI4U0ZXa1BGcFQ2Y1BZS1kzZHpGZXAwVDYwVUFsQUtNMjh1STNWWHlmczBrWlRDeWtXaGtVelI?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|noticia|2026-03-06|Alupar acelera ciclo de investimentos e projeta pico de alav"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-07-03",
+  "titulo": "Alupar (ALUP4) anuncia RAP de R$ 96,7 mi em leilão da Aneel",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaHh5enBkUnQ0aThpV21HaGtzcm5saExJem4yX3VUM3hnNjlXcWhLblo2OXhZWm1VYzFxYXE4eE5OcG1IOHJHU3VzME51UE9xeDEtRm1sZ28wTTRSeDRmTFYwUWJwNUF5OU1xQ2JRR0xFdkJIR2xmb2NLUkhyQVE5N28zTVoxNjVETVE2WVNtU1NibGc1b2FINw?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|noticia|2026-07-03|Alupar (ALUP4) anuncia RAP de R$ 96,7 mi em leilão da Aneel"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-08-11",
+  "titulo": "JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar hoje",
+  "fonte": "infomoney.com.br",
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNR2hWR01PTWQ3RGtlZ2VmWUdFS0hlVmhZVHBuRV9mM18xNC1sWThjMm50T0dEdWhvcTJLWnliaVA2b0h2T1BkWnAwU1dJc09pYTl3OGZ3NlZGSlJZa1hSWXhLQmlKUG9jU3FXVzZpVFUzWWNUTTdrdFJtMTUtSWh5VUM1WnVYZm1mZ3kyakphOGl6MzY5VHhFRXJNN3JNSm500gGmAUFVX3lxTE9iN0JKVS1EanByQXBRTG1RMno3LUJBYW5UV0k0b1ZvSnhlcnkyTHVhbzNQck5YSFpiOGNLMUpxQTRfV1JGNXBHb0RncFNCODRxRXJYM25JUVhiS0NaenUtOG9xZGJGZWVDLWotS2hBVGZUZ0FMZVhodFpPLVJCZG90YTlabnFjS1lfcGNpeHhRMFRyemc5SzFPa1hOOHBwcHZRWFlSNFE?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|noticia|2026-08-11|JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar "
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-06-17",
+  "titulo": "Taesa (TAEE11) anuncia renúncia de presidente do conselho",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOenBYd3BGRFJUX1doak44Tzl3SkJyaUNORm9KMzliTjRlajdLRTBvbDRqR3VldjlHS2QyNTJ5ZXRaUndHUjhVdUc1NE84eTZDY2hIWVlTQkdWMkxTU2hUcktCeDNfV2dxTmZ5TUstOXJuczBlMXZqakRKYk1ZRDViN0s0UnptRmo5S2dWMGo2N2hoRGNaNmozTw?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|noticia|2026-06-17|Taesa (TAEE11) anuncia renúncia de presidente do conselho"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-03-06",
+  "titulo": "Alupar (ALUP11) 4T25: receita segue avançando, mas variações em custos mantêm margem estável; neutro.",
+  "fonte": "InvesTalk",
+  "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFWTNlbFg4SjlGd3BnancyQlVHWlpPVXY1ZkVQbzBYZjZ5cHRDM3V1SWdhODFaYUdfbkRqdlZzQnZpbkNoejlUWkU1cUZjMU1YTTQzZ2xFQzhjY09vdndCUFdpX1VkNTROak9kY09laGxlel9ZWENVNTdQcm8?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|noticia|2026-03-06|Alupar (ALUP11) 4T25: receita segue avançando, mas variações"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-08-12",
+  "titulo": "Taesa (TAEE11) conclui aquisição de ativos de transmissão por R$ 1,6 bi",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUUtJMlJOVFhZQ1pJb0JrRl9OUGdHWlJqbTR5NndDYmYxdWJQNG9LSTRJZmVQUWNXQXNLLWtiWmdXNnpGcjItZ002eEp0blVUX210SFdyOHBBOUozUWhvMWJlb2F3YjRkZ3c1RzFxNkZtYXE3bFhwbXl5akpCUGhUMUloZjVERTJnNklQZ3BWN2tjQmJVNHI2UWdQcDVXWjRPZXdMdUFsSXI?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|noticia|2026-08-12|Taesa (TAEE11) conclui aquisição de ativos de transmissão po"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-02-10",
+  "titulo": "Alupar capta R$ 2,45 bilhões em debêntures para financiar projetos de transmissão em SP, MG e GO",
+  "fonte": "ADVFN",
+  "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQ2poaHVJRThaVVp1UHFyVVhOQlJpY1dXSUw0YkUyM3E0bEdnS2lKU0hFVUZkUmhWaWNUQm5IRmZkUGZRZnd6czNfOVpqQ0ZtNFctS0xJWFVxZDMzUjI5NlBBNlZqalViODcyZXVvNEdTcWhCRjByQjRkcnVndmJiMGtDVEkwMmZ5MG11RTZveEVrVEZuZ09Nb2Q5NWJlZ2FCS2RQdDdGcEl5OVNIbmJlNGhnSF83UGZoQVJZeFd0Z3NoblJyMDV0OWV3?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|noticia|2026-02-10|Alupar capta R$ 2,45 bilhões em debêntures para financiar pr"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-07-15",
+  "titulo": "Phronesis atinge 5% das ações PN da Alupar (ALUP11)",
+  "fonte": "Visno Invest",
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTVMySk01OHE1VkJoWFVVTEFJZnB5UFVxcmRoaDRkZ25KWkZkR0FZT1JDMWk4U3IwX1NuYW5Tb0RCR3E0Z0JPTU5lblY1SVJDem1BRnJ3Q2xPWE90WU82Rnl1TmdQMkdKQU0xRF8ycjgyUzh5R1RQUjdKdUFNbGsxN3N4NXNGQ2djdmVQY0dlNA?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|noticia|2026-07-15|Phronesis atinge 5% das ações PN da Alupar (ALUP11)"
+ },
+ {
+  "tipo": "noticia",
+  "data": "2026-04-23",
+  "titulo": "Taesa paga R$ 23 milhões em juros de debêntures e reforça previsibilidade no setor elétrico",
+  "fonte": "ADVFN",
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTURQR1ZHMG9Pb09qYnZRaTcwREhrajNiMU12cktuSi1zWi1kUlV4QlFxVVBYSjJhVXRoNEIwcFVjWGhNN1ZqWFhPUHpwN0dBUUpNeHZSTV9UdGdSWUh5UV90SERJUVU4QXlnV3kyRkJtYnJsV1JENE41U2lDa05YYUZmd25NTVZoekhVQU5IQ0RaNXR5djZsbVNIVWVuTWFqa28zelJJbHJSamM5M2NBTGQ5UHZRdUxMMVhPRnlNc0gzZHBZ?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|noticia|2026-04-23|Taesa paga R$ 23 milhões em juros de debêntures e reforça pr"
+ },
+ {
+  "tipo": "analise",
+  "data": "2023-07-31",
+  "titulo": "Taesa (TAEE11), Bradesco (BBDC4), Petrobras (PETR4) divulgam resultados do 2T23: veja agenda completa desta semana",
+  "fonte": "Suno",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZmN2VDVTN0tIdFA3MnVrT2lOTG91cHpoaTJJQnJUUG5ONlFNZVhpazN1VEVTT2RBejlKSmxMMWwtZ29XYUg0ZXpSOWo3c1pjUDdzVVZ2U1huTjMxajl0RkhWN1JkWEZKR3IxVTlDTVIzcWprNWJJOGd0ZVp1T1gyQzJ3cm1QczdlVjdQempiNHpVMTVoRkd4czhvc9IBoAFBVV95cUxNUFB0bXFmWGREeF9XRHFCUnlmM0ZiRjBuRGJ4RExMS1ZURkIyYW5TdGNBTFRJMWFWR3VYWmhvQkU0YUJiUFVONFBGbzlqSzJsV242VGZIdXoxRVQ5U3lPZk94LVlZZlRrU0wzWW5xTE0yOEZObHRYa1NYdE5QVFhnVWh2ZjZpb2xTV2p6R3RHb2FxTmt4c0dWLVdNSEt5TmJT?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|analise|2023-07-31|Taesa (TAEE11), Bradesco (BBDC4), Petrobras (PETR4) divulgam"
+ },
+ {
+  "tipo": "analise",
+  "data": "2020-05-22",
+  "titulo": "Análise - Debênture TPE - Renda Fixa - Transmissora Paraíso de Energia S.A. - SET/2028",
+  "fonte": "XP",
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWTFGQ1BwaWVPQm80TEZmUzN5Vms3U3F0ZVdTTUZBTGlrdDE4em5qVTl6MFpRc1E5YjdUdjNwS1RnRHA4QWs2ZjlMZXo3NkF4RjRLMFNyb3VrdTRKdzVUQTQ1RkxEbF9oMklnSmg4bk5VQTZaNEFZTU5XU3p2LW9mdjRESWNRYkttNzR0dFlRVkNOU1dDRGhfZk9zb2REWWcy?oc=5",
+  "cnpj": "26796739000145",
+  "emissor": "Tpe  - Transmissora Paraiso De Energia S.A.",
+  "id": "26796739000145|analise|2020-05-22|Análise - Debênture TPE - Renda Fixa - Transmissora Paraíso "
+ },
+ {
+  "tipo": "analise",
+  "data": "2024-05-09",
+  "titulo": "Taesa (TAEE11): Resultados do 1T24",
+  "fonte": "XP",
+  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPYUdkSWZDQzZ1ZHZZRFJlaElOYmpsOUZWSGhwdVA5MFhoZVY0WGlvNlBwZnA4NU52bnd6Y2lqRFo3aGRINlV1UEs5SEFnNW52YzlrNGZsdS03WkhRcXNLc19YY0ZTcmZvYUV2UnR1Q0RFd09aa1pDcWhMbjBaRDlKYkVXV0c?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|analise|2024-05-09|Taesa (TAEE11): Resultados do 1T24"
+ },
+ {
+  "tipo": "analise",
+  "data": "2020-05-26",
+  "titulo": "Análise - DEB EDP TRANSMISSAO SP-MG S/A - Renda Fixa - JUL/2039",
+  "fonte": "XP",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE96YUhzNk1RVHdGaVVDVFpDSkpmTXJrMkRUalBnQWVJWTFEVktnTi1Vb0RvWEpEWXNhTlI1YkxYZVNMMnF2QjYwRENJQWMxMWhDanNTU0lDS0NLZUE?oc=5",
+  "cnpj": "27821748000101",
+  "emissor": "Transmissao Sp-Mg S/A",
+  "id": "27821748000101|analise|2020-05-26|Análise - DEB EDP TRANSMISSAO SP-MG S/A - Renda Fixa - JUL/2"
+ },
+ {
+  "tipo": "analise",
+  "data": "2024-04-23",
+  "titulo": "Taesa (TAEE11) capta R$ 1,3 bilhão com emissão de debêntures",
+  "fonte": "Suno",
+  "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSER4TzE0WFFDM0tjSTVSRDVTUHRfb0pOeHRHYkxaQ2hDTVo0VDlqRm9UQjZkS21lTF9Rc0RwMUR6US11QkpWaFpyUDRuN3hyMUE5Z09pYW12ZkJoaGZOWHdjODk5Y29iNGxqNGo1Qm5nbTcwY0FRNzdGMHIyMk52dE1wWExoX0FjQXfSAY8BQVVfeXFMTzdWdVUzREo0dEVnN3B2QXdJR1E2dk0wZmo4UEFkM2k5Nzc4aW9XUUo0aHRsaTc0OHVYMXpva2NfYlVUb3JOVVpNVFZObVpoMUtIWTZkUUdzdHAxelN0bURBMnVmOUp0WlBjTEJGQUlMT19yUC1haFhuYXpVZ1dpUDdpRXg1TXM4WlkwSFM4Ykk?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|analise|2024-04-23|Taesa (TAEE11) capta R$ 1,3 bilhão com emissão de debêntures"
+ },
+ {
+  "tipo": "analise",
+  "data": "2026-05-05",
+  "titulo": "ISA Energia (ISAE4) 1T26: Resultados Ajustados em Linha",
+  "fonte": "XP",
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUWZuek9MTHBudExQeDhRclk2bDRyZWFLZFptV21ha185clpGR0gzejJ2X0RoNzZfRTZKYld3RU5FaXVrRkFZb3pfemlqWDRGYlhlWTBXYkN5SVowZ2tobFdEM1YtVGNZTlhFZDdIdUtSU3ZJNFphX2JyYkZycWRVOWRqTkV5bUZ1eXdmOVVtbjQ3R0tHS0V0T0ltR2gzRXUt?oc=5",
+  "cnpj": "02998611000104",
+  "emissor": "Isa Energia Brasil S.A.",
+  "id": "02998611000104|analise|2026-05-05|ISA Energia (ISAE4) 1T26: Resultados Ajustados em Linha"
+ },
+ {
+  "tipo": "analise",
+  "data": "2024-03-07",
+  "titulo": "Taesa (TAEE11): alavancagem está confortável, diz presidente da companhia após dados do 4T23",
+  "fonte": "Suno",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjljRXFPS0xESW54STJGWmpaUzdVZHpLMWxFY2ZTZGxxVFU0cWVhcDFKSzNlWC1BY3gzdEEzNXZ0TkZTN2NHRDB3U21GT1lhRkNxYVdURGVOQm5pTTF5eEItT3M3TmMwNDhfQ2pJTXdnb2gxR1dzMWdPa0pTSzQxb1FzNDVzQ0sxYTZwS29JU0hJTk9iWEQzN9IBngFBVV95cUxPNnJPZkpZZXNZN2M1S05lUGNMTUlCZjZpVE1CR3lJazNDLVEySjdkUDMtUlRzY2xhbUhRTzJLc09sc0N5YVlyVGdoS0N1NUhhV2J4T0NncUJrb2gyUEJrTkhZc2I4WURxTW1pUl9YX1hNNDUweUNXdVd6TS05WUItNHMyalkzVW9rYThrYmJsUTRXSEJRZEoxWDR6bHVLZw?oc=5",
+  "cnpj": "07859971000130",
+  "emissor": "Transmissora Alianca De Energia Eletrica S/A",
+  "id": "07859971000130|analise|2024-03-07|Taesa (TAEE11): alavancagem está confortável, diz presidente"
+ },
+ {
+  "tipo": "analise",
+  "data": "2019-12-10",
+  "titulo": "Alupar capta R$ 648,5 milhões com debêntures",
+  "fonte": "Suno",
+  "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCRDNEeERqc2ZYSzBTVXV6d1ZnRmdlcExqV1UyLThwSjZxdTBUZ3YxZDFOT2YzdmZKVFlERVhDR2JWOFItWU5sZEJ5ZHAwbllzSUJGT0g0Y01sVGlRUlBpZGNaTmRpTHViVExNRHNQNNIBdEFVX3lxTFBFWXZNT1hQeHJZTG9aS3RMWDJVdHlCbDVPSURuN1FmaTFPall4eW96Sm1kS2cyZ1lTM3BEVFNTNzFtRWpNU1FpekdPbnR0Y2o5b2k1bmd6ZlpUTS1zMWRKaFlpbGNMeXZGMmRTazQ1UjdhSllN?oc=5",
+  "cnpj": "08364948000138",
+  "emissor": "Alupar Investimento S/A",
+  "id": "08364948000138|analise|2019-12-10|Alupar capta R$ 648,5 milhões com debêntures"
+ }
+]
