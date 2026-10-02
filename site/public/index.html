@@ -6,33 +6,52 @@
 <title>Alisson Prata Oliveira</title>
 <meta name="description" content="Alisson Prata Oliveira: análise de mercado e crédito privado.">
 <style>
-:root{--bg:#fbfaf8;--fg:#1d1d1f;--muted:#6b6b70;--line:#e4e2dd;--accent:#1f4e79;--chip:#eef2f6}
-@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececee;--muted:#9a9aa0;--line:#2b2b2f;--accent:#8fb8e0;--chip:#1f2630}}
+:root{--bg:#fbfaf8;--fg:#1d1d1f;--muted:#6b6b70;--line:#e4e2dd;--accent:#1f4e79;--chip:#eef2f6;--panel:#ffffff;--edge:#b9b6ae}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141416;--fg:#ececee;--muted:#9a9aa0;--line:#2b2b2f;--accent:#8fb8e0;--chip:#1f2630;--panel:#1b1b1e;--edge:#4a4a50}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:980px;margin:0 auto;padding:56px 16px 80px}
+main{max-width:1080px;margin:0 auto;padding:56px 16px 80px}
 .estreito{max-width:640px}
 h1{font-size:2rem;line-height:1.2;margin:0 0 .5rem;letter-spacing:-.01em}
-h2{font-size:1.15rem;margin:2.5rem 0 .75rem}
+h2{font-size:1.15rem;margin:2.75rem 0 .75rem}
 p{margin:.5rem 0 1rem}
 a{color:var(--accent)}
 .muted{color:var(--muted)}
+.pequeno{font-size:.86rem}
 nav{font-size:.9rem;margin-bottom:2.5rem}
 nav a{margin-right:1rem;text-decoration:none}
 .links a{margin-right:1.25rem}
 .tabela{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
-table{border-collapse:collapse;width:100%;font-size:.86rem;font-variant-numeric:tabular-nums}
-th,td{padding:.5rem .65rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-size:.84rem;font-variant-numeric:tabular-nums}
+th,td{padding:.45rem .6rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
 th{font-weight:600;color:var(--muted);background:var(--chip);position:sticky;top:0}
 td.t,th.t{text-align:left}
 tr:last-child td{border-bottom:0}
-.chip{display:inline-block;padding:.05rem .5rem;border-radius:99px;background:var(--chip);font-size:.78rem}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--chip)}
+.chip{display:inline-block;padding:.05rem .5rem;border-radius:99px;background:var(--chip);font-size:.76rem}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1.25rem 0}
-.card{border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem}
-.card b{display:block;font-size:1.4rem}
-ol li{margin-bottom:.35rem}
+.card{border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;background:var(--panel)}
+.card b{display:block;font-size:1.35rem}
+#grafo{width:100%;height:auto;aspect-ratio:5/3;max-height:640px;border:1px solid var(--line);border-radius:8px;background:var(--panel);display:block;touch-action:none}
+.legenda{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.8rem;color:var(--muted);margin:.5rem 0}
+.legenda span{display:inline-flex;align-items:center;gap:.35rem}
+.bolinha{width:10px;height:10px;border-radius:50%;display:inline-block}
+.tip{position:fixed;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.4rem .6rem;font-size:.8rem;max-width:280px;display:none;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px;border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--panel)}
+@media (max-width:760px){.sim{grid-template-columns:1fr}}
+.sim label{display:block;font-size:.82rem;color:var(--muted);margin:.6rem 0 .2rem}
+.sim select,.sim input{width:100%;padding:.45rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
+.botoes{display:flex;flex-wrap:wrap;gap:6px;margin-top:.5rem}
+.botoes button{padding:.3rem .6rem;border:1px solid var(--line);border-radius:6px;background:var(--chip);color:var(--fg);font:inherit;font-size:.82rem;cursor:pointer}
+.res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.res div{border:1px solid var(--line);border-radius:6px;padding:.5rem .7rem}
+.res small{color:var(--muted);display:block;font-size:.76rem}
+.res b{font-size:1.1rem;font-variant-numeric:tabular-nums}
+ol li,ul li{margin-bottom:.35rem}
 footer{margin-top:3rem;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
 </style>
+
 </head>
 <body>
 <main class="estreito">

@@ -4,3 +4,5 @@ dados/anbima/debentures/brutos/** -text
 *.yml text eol=lf
 *.md text eol=lf
 *.csv text eol=lf
+dados/anbima/titulos_publicos/brutos/** -text
+dados/anbima/ettj/brutos/** -text

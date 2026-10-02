@@ -30,6 +30,24 @@ jobs:
       - name: Coletar títulos públicos
         run: python coletor/anbima_titulos_publicos.py
 
+      - name: Coletar curva zero-cupom (ETTJ)
+        run: python coletor/anbima_ettj.py
+
+      - name: Coletar IPCA mensal (BCB)
+        continue-on-error: true
+        run: python coletor/bcb_ipca.py
+
+      - name: Atualizar características e agenda (SND)
+        continue-on-error: true
+        run: python coletor/snd_debentures.py
+
+      - name: Atualizar universo e grupos de risco (SND + CVM)
+        continue-on-error: true
+        run: python analises/universo_grupos.py
+
+      - name: Precificar universo
+        run: python analises/precificacao.py
+
       - name: Gerar site
         run: python site/gerar.py
 
