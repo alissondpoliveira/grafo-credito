@@ -103,6 +103,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--surface);border:2px solid var(--ink)}
 .regua-marcas{display:flex;justify-content:space-between;font-size:.7rem;color:var(--ink-3);margin-top:-4px;font-variant-numeric:tabular-nums}
 #curva{width:100%;height:auto;aspect-ratio:2.2/1;display:block;margin-top:10px;touch-action:none}
+#trilha a{color:var(--accent);text-decoration:none}#trilha a:hover{text-decoration:underline}#trilha span{color:var(--ink)}
 #ficha{margin-top:12px;padding:16px;display:none}
 #ficha h3{margin:0 0 .2rem;font-family:Newsreader,Georgia,serif;font-size:1.2rem}
 .ficha-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
@@ -333,8 +334,8 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
 
   function visiveis(){
     const nos = [];
-    segmentos.forEach(s => { if (!abertosS.has(s)) nos.push({id:'S:'+s, tipo:'bolha', nivel:'segmento', segmento:s, grupo:'', rotulo:nomeSeg(s)});
-      else gruposDe(s).forEach(k => { if (!abertosG.has(k)) nos.push({id:'G:'+k, tipo:'bolha', nivel:'grupo', segmento:s, grupo:k, rotulo:nomeGrupo(k)}); }); });
+    if (!abertosS.size) segmentos.forEach(s => nos.push({id:'S:'+s, tipo:'bolha', nivel:'segmento', segmento:s, grupo:'', rotulo:nomeSeg(s)}));
+    else { const s = [...abertosS][0]; gruposDe(s).forEach(k => { if (!abertosG.has(k)) nos.push({id:'G:'+k, tipo:'bolha', nivel:'grupo', segmento:s, grupo:k, rotulo:nomeGrupo(k)}); }); }
     todos.forEach(n => { if (!abertosS.has(n.segmento) || !abertosG.has(n.grupo)) return; if (filho(n) && !abertosE.has(paiSerie.get(n.id))) return; nos.push(n); });
     const ids = new Set(nos.map(n=>n.id)), vistos = new Map();
     D.grafo.links.forEach(l => { const s = rep(l.source.id||l.source), t = rep(l.target.id||l.target);
@@ -350,8 +351,8 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     const abertos = [...abertosG], bolhasG = nos.filter(n => n.nivel==='grupo'), bolhasS = nos.filter(n => n.nivel==='segmento');
     abertos.forEach((k,i) => { const a = 2*Math.PI*i/abertos.length, d = abertos.length>1 ? 140 : 0; ancora[k] = [W/2+d*Math.cos(a), H/2+d*.7*Math.sin(a)]; });
     const anel = (lista, rx, ry, desloc) => lista.forEach((n,i) => { const a = -Math.PI/2 + desloc + 2*Math.PI*i/Math.max(lista.length,1); ancora[n.id] = [W/2+rx*Math.cos(a), H/2+ry*Math.sin(a)]; });
-    if (!abertosS.size) anel(bolhasS, 340, 240, 0);
-    else { anel(bolhasG, abertos.length ? 300 : 230, abertos.length ? 215 : 170, 0); anel(bolhasS, 470, 300, Math.PI/bolhasS.length); }
+    if (!abertosS.size) anel(bolhasS, 390, 255, 0);
+    else anel(bolhasG, abertos.length ? 400 : 300, abertos.length ? 265 : 215, 0);
   }
   const alvo = n => n.tipo==='bolha' ? (ancora[n.id] || [W/2,H/2]) : (ancora[n.grupo] || ancora['G:'+n.grupo] || [W/2,H/2]);
 
@@ -360,7 +361,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     .force('charge', d3.forceManyBody().strength(n => n.tipo==='bolha'?-260 : n.tipo==='serie'?-40 : -110).distanceMax(280))
     .force('x', d3.forceX(n => alvo(n)[0]).strength(n => n.tipo==='bolha'?.35:.2))
     .force('y', d3.forceY(n => alvo(n)[1]).strength(n => n.tipo==='bolha'?.35:.2))
-    .force('colide', d3.forceCollide().radius(n => raio(n)+(n.tipo==='bolha'?14:2.5)));
+    .force('colide', d3.forceCollide().radius(n => raio(n)+(n.tipo==='bolha'?24:2.5)));
 
   let no = camNo.selectAll('g'), link = camLink.selectAll('line'), rot = camRot.selectAll('text'), hull = camHull.selectAll('path'), hullRot = camHull.selectAll('text');
   let rotulos = 'controle';
@@ -420,21 +421,33 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
       .text(n => n.rotulo.length>30 ? n.rotulo.slice(0,29)+'…' : n.rotulo).attr('font-size',8.5).attr('fill','var(--ink-2)')
       .attr('dx', n=>raio(n)+3).attr('dy',3).style('pointer-events','none').attr('paint-order','stroke').attr('stroke','var(--surface)').attr('stroke-width',3);
     aplicarRot(); ligarEventos(); sim.alpha(1).restart();
-    clearTimeout(enquadrar.t); enquadrar.t = setTimeout(enquadrar, 900);
+    precisaEnquadrar = true; clearTimeout(enquadrar.t); enquadrar.t = setTimeout(enquadrar, 2500);
   }
   const aplicarRot = () => rot.attr('display', n => visRot(n)?null:'none');
-  sim.on('tick', () => { sim.nodes().forEach(n => pos.set(n.id, {x:n.x, y:n.y})); desenhar(); });
+  let precisaEnquadrar = false;
+  sim.on('tick', () => { sim.nodes().forEach(n => pos.set(n.id, {x:n.x, y:n.y})); desenhar(); if (precisaEnquadrar && sim.alpha() < .08) enquadrar(); });
 
   function enquadrar(){
-    const foco = sim.nodes().filter(n => n.tipo!=='bolha' || (abertosS.size && n.nivel==='grupo'));
-    if (!foco.length || !abertosS.size) { svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity); return; }
+    if (!precisaEnquadrar) return; precisaEnquadrar = false; clearTimeout(enquadrar.t);
+    const foco = sim.nodes().filter(n => n.tipo!=='bolha');
+    if (!foco.length || !abertosG.size) { svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity); return; }
     const x0 = d3.min(foco,n=>n.x)-70, x1 = d3.max(foco,n=>n.x)+170, y0 = d3.min(foco,n=>n.y)-50, y1 = d3.max(foco,n=>n.y)+50;
     const k = Math.max(1, Math.min(2.2, .9*Math.min(W/(x1-x0), H/(y1-y0))));
     svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity.translate(W/2 - k*(x0+x1)/2, H/2 - k*(y0+y1)/2).scale(k));
   }
-  function abrirSegmento(s){ abertosS.add(s); atualizar('S:'+s); }
-  function abrirGrupo(k){ abertosS.add(segDe(k)); abertosG.add(k); atualizar('G:'+k); }
-  function fecharGrupo(k){ abertosG.delete(k); todos.filter(n=>n.grupo===k && n.tipo==='emissor').forEach(n=>abertosE.delete(n.id)); atualizar(); }
+  function abrirSegmento(s){ abertosS.clear(); abertosS.add(s); [...abertosG].filter(k=>segDe(k)!==s).forEach(k=>abertosG.delete(k)); pos.clear(); atualizar(); trilha(); }
+  function abrirGrupo(k){ if (!abertosS.has(segDe(k))) abrirSegmento(segDe(k)); abertosG.add(k); atualizar('G:'+k); trilha(); }
+  function voltarGeral(){ abertosS.clear(); abertosG.clear(); abertosE.clear(); pos.clear(); atualizar(); trilha(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); }
+  function trilha(){
+    const el = document.getElementById('trilha'), s = [...abertosS][0], gs = [...abertosG];
+    let h = '<a href="#" data-nav="geral">Todos os segmentos</a>';
+    if (s) h += ' › <a href="#" data-nav="seg">'+nomeSeg(s)+'</a>';
+    gs.forEach(k => h += ' › <span>'+nomeGrupo(k)+'</span>');
+    el.innerHTML = h;
+    el.querySelector('[data-nav="geral"]').onclick = e => { e.preventDefault(); voltarGeral(); };
+    const a = el.querySelector('[data-nav="seg"]'); if (a) a.onclick = e => { e.preventDefault(); abertosG.clear(); abertosE.clear(); pos.clear(); atualizar(); trilha(); };
+  }
+  function fecharGrupo(k){ abertosG.delete(k); todos.filter(n=>n.grupo===k && n.tipo==='emissor').forEach(n=>abertosE.delete(n.id)); atualizar(); trilha(); }
   function fecharSegmento(s){ abertosS.delete(s); [...abertosG].filter(k=>segDe(k)===s).forEach(fecharGrupo); atualizar(); }
   function alternarEmissor(id){ abertosE.has(id) ? abertosE.delete(id) : abertosE.add(id); atualizar(id); }
 
@@ -444,6 +457,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     no.on('mouseenter', (e,n) => { const v = viz(); realcar(new Set([n.id, ...(v.get(n.id)||[])]));
         if (n.tipo==='bolha') { const r = resumo[n.id]; mostrar(e, '<b>'+(n.nivel==='segmento'?nomeSeg(n.segmento):nomeGrupo(n.grupo)+' · '+nomeSeg(n.segmento))+'</b>'
           + (n.nivel==='segmento'?linha('Grupos', r.grupos):'') + linha('Emissores', r.emissores)+linha('Séries', r.series)+linha('Desvio mediano', r.mediana==null?'–':sinal(r.mediana)+' bps')
+          + (n.nivel==='grupo' && !n.grupo.endsWith(ISOL) ? (() => { const outros = segmentos.filter(x => x!==n.segmento && gruposDe(x).includes(x+'|'+n.grupo.split('|')[1])).map(nomeSeg); return outros.length ? '<br><span class="fraco">também atua em: '+outros.join(', ')+'</span><br>' : ''; })() : '')
           + '<span class="fraco">clique para abrir'+(n.nivel==='segmento' && abertosS.has(n.segmento)?'':'')+'</span>'); }
         else if (n.tipo==='serie') mostrar(e, textoSerie(n));
         else if (n.tipo==='doc') mostrar(e, '<b>'+nomeDoc[n.subtipo]+'</b> <span class="fraco">'+(n.data||'')+' · '+n.fonte+'</span><br>'+n.rotulo
@@ -484,11 +498,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   segmentos.forEach(s => { op('S:'+s, nomeSeg(s)); gruposDe(s).filter(k => !k.endsWith(ISOL)).sort((a,b)=>resumo['G:'+b].series-resumo['G:'+a].series).forEach(k => op('G:'+k, '   '+nomeGrupo(k))); });
   selG.addEventListener('change', () => { const v = selG.value; if (!v) return; v.startsWith('S:') ? abrirSegmento(v.slice(2)) : abrirGrupo(v.slice(2)); });
   document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
-  document.getElementById('abrirTudo').addEventListener('click', () => { segmentos.forEach(s => abertosS.add(s)); atualizar(); });
-  document.getElementById('abrirEmissoes').addEventListener('click', () => { const s = segmentos[0]; abertosS.add(s); gruposDe(s).forEach(k => abertosG.add(k)); atualizar(); });
-  document.getElementById('fecharTudo').addEventListener('click', () => { abertosS.clear(); abertosG.clear(); abertosE.clear(); pos.clear(); atualizar(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
-
-  atualizar();
+  atualizar(); trilha();
 })();
 
 // ---------- desvio em relação aos pares (barras divergentes) ----------
@@ -729,7 +739,7 @@ def gerar_projeto() -> str:
 <div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada bola grande é um segmento; dentro dele, cada bola é um grupo de risco, do tamanho do número de séries. Clique num segmento para ver os grupos. Clique numa bola para abrir as empresas do grupo; clique num emissor para abrir as emissões (coloridas pelo desvio em relação aos pares) e os documentos dele (fatos relevantes, escrituras, notícias e análises), com a ficha completa abaixo do mapa. Clique num documento para abrir o original e no nome do grupo para recolher. Linhas pontilhadas entre bolas são empresas compartilhadas entre grupos.</p></div></div>
 <div class="painel">
 <div class="controles"><label>Abrir grupo <select id="filtroGrupo"></select></label>
-<button id="abrirTudo">abrir todos os segmentos</button><button id="abrirEmissoes">abrir o maior segmento</button><button id="fecharTudo">recolher</button>
+<span id="trilha" class="pequeno"></span>
 <label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
 <div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>

@@ -1,41 +1,230 @@
 cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fase_regra,confianca_fase_jev,patrocinador
+26025075000110,AGUAS DE BOMBINHAS SANEAMENTO SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+61067901000195,AGUAS DO PARA A SPE S.A.,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+15385166000140,EQUIPAV SANEAMENTO S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+08827501000158,AEGEA SANEAMENTO E PARTICIPACOES S/A,Aegea,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+12528708000107,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+02016440000162,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,CPFL,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+12648266000124,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,Isolada (a identificar),saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+02451848000162,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09324949000111,AUTOPISTA FLUMINENSE S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09325109000173,AUTOPISTA PLANALTO SUL S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09336431000106,AUTOPISTA REGIS BITTENCOURT S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+00242184000104,ARMAC LOCACAO LOGISTICA E SERVICOS S.A.,Isolada (a identificar),locacao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+02919555000167,ARTERIS S.A.,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+28594234000123,AUREN ENERGIA S.A.,Auren,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+00001180000126,AXIA ENERGIA S.A.,Axia (ex-Eletrobras),integrada_gt,corporativa,9,operacional,regra (ANEEL),operacional,,grupo_inferido
+24396489000120,BRK AMBIENTAL PARTICIPACOES S/A,BRK,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+07040108000157,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,Isolada (a identificar),saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+82508433000117,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,Casan,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+10647979000148,CONCESSIONARIA ROTA DAS BANDEIRAS S/A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+45736131000170,UNIDAS LOCADORA S.A..,Unidas,locacao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+08467115000100,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,Equatorial,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+03467321000199,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+05914650000166,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+60933603000178,CESP - COMPANHIA ENERGETICA DE SAO PAULO,Auren,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+61856571000117,COMPANHIA DE GAS DE SAO PAULO - COMGAS,Compass,distribuicao_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+07802794000156,ESSENTIA PCHS S.A,Pátria,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+01543032000104,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+33541368000116,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,Axia (ex-Eletrobras),integrada_gt,corporativa,25,operacional,regra (ANEEL),operacional,,grande_grupo
+19014221000147,CHINA THREE GORGES BRASIL ENERGIA S.A.,CTG,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+15114494000102,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,Isolada (a identificar),logistica,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+43514079000181,CLI SUL S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+06981180000116,CEMIG DISTRIBUICAO S/A,Cemig,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,regra (ANEEL),operacional,,grande_grupo
+07682638000107,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,Motiva (ex-CCR),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+03025305000146,RODOVIAS DAS COLINAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+04370282000170,COPEL GERACAO E TRANSMISSAO S.A.,Copel,integrada_gt,project_finance,12,operacional,regra (ANEEL),operacional,,grande_grupo
+04368898000106,COPEL  DISTRIBUICAO S/A,Copel,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+08439659000150,CPFL ENERGIAS RENOVAVEIS S.A,CPFL,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+05336882000184,CACHOEIRA PAULISTA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+17281106000103,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,Copasa,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02998611000104,ISA ENERGIA BRASIL S.A.,ISA,transmissao,corporativa,5,operacional,regra (ANEEL),operacional,,grande_grupo
-07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,regra (ANEEL),operacional,,grande_grupo
+25086034000171,ENERGISA TOCANTINS DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+02302100000106,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,EDP,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02509491000126,CONCESSIONARIA ECOVIAS DOS IMIGRANTES S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,regra (ANEEL),operacional,,grupo_inferido
+07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,regra (ANEEL),operacional,,grande_grupo
+02474103000119,ENGIE BRASIL ENERGIA SA,Engie,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02328280000197,ELEKTRO REDES S.A.,Neoenergia,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+61695227000193,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,Enel,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+00357038000116,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,Axia (ex-Eletrobras),integrada_gt,project_finance,13,operacional,regra (ANEEL),operacional,,grande_grupo
+15413826000150,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+04423567000121,ENEVA S.A.,Eneva,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+00864214000106,ENERGISA SA,Energisa,energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+04895728000180,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+03220438000173,EQUATORIAL ENERGIA S.A.,Equatorial,energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+08873873000110,ECORODOVIAS CONCESSOES E SERVICOS S/A,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+28152650000171,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,EDP,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09257877000137,FERROVIA NORTE SUL S/A,VLI,ferrovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+19527639000158,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+04089570000150,AGUAS GUARIROBA  S/A,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+12648327000153,HIDROVIAS DO BRASIL S.A.,Hidrovias do Brasil,logistica,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
+58070452000120,IGUA SERGIPE S.A.,Iguá,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+52548435000179,JSL S.A,Simpar,logistica,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+07415333000120,SIMPAR S.A.,Simpar,logistica,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+16670085000155,LOCALIZA RENT A CAR S/A,Localiza,locacao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+21314559000166,MOVIDA PARTICIPACOES S/A,Simpar,locacao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+62070362000106,COMPANHIA DO METROPOLITANO DE SAO PAULO - METRO,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+03279285000130,ORIZON MEIO AMBIENTE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+75609123000123,UNIDAS LOCACOES E SERVICOS S/A,Unidas,locacao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+21389501000181,COMPASS GAS E ENERGIA S.A,Compass,distribuicao_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09313969000197,AUTOPISTA LITORAL SUL S/A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+02382073000110,PROLAGOS S/A - CONCESSIONARIA DE SERVICOS PUBLICOS DE AGUA E ESGOTO,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+44854238000150,PARSAN S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+28367479000118,QUANTUM PARTICIPACOES S.A.,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+46568486000160,MANTIQUEIRA HOLDING S.A.,State Grid,energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+41508382000146,RODOVIAS DO BRASIL HOLDING S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+92802784000190,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09095183000140,ENERGISA PARAIBA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+76484013000145,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,Sanepar,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+43776517000180,CIA SANEAMENTO BASICO EST. SP - SABESP,Sabesp,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+01616929000102,SANEAMENTO DE GOIAS S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+02762121000104,SANTOS BRASIL PARTICIPACOES S/A,Santos Brasil,portos,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+40263170000183,SOLVI ESSENCIS AMBIENTAL S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 07859971000130,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,Taesa (Cemig + ISA),transmissao,corporativa,14,operacional,regra (ANEEL),operacional,,grande_grupo
+02286479000108,LOCALIZA FLEET S/A,Localiza,locacao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+00194724000113,AUREN OPERACOES S.A.,Auren,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+23373000000132,VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,Simpar,locacao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+32681371000172,VIX LOGISTICA S/A,Isolada (a identificar),logistica,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+49037416000173,ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A.,Isolada (a identificar),comercializacao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+39523638000142,AGUAS DA IMPERATRIZ S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+30997588000160,ATHON GERACAO DISTRIBUIDA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+12009135000105,ALIANCA GERACAO DE ENERGIA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 08364948000138,ALUPAR INVESTIMENTO S/A,Alupar,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09326342000170,AUTOPISTA FERNAO DIAS S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09359927000197,ASA BRANCA HOLDING S.A.,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+45456117000112,AGUAS DO SERTAO S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+38286323000166,ASSURUA 4 E 5 HOLDING ENERGIA S.A.,Serena,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+52948225000178,ATHON GERACAO DISTRIBUIDA III S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+38213667000145,ATHON GERACAO DISTRIBUIDA II S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+14641895000158,BARUERI ENERGIA RENOVAVEL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 20223016000170,BELO MONTE TRANSMISSORA DE ENERGIA SPE S.A.,Belo Monte (State Grid + Eletrobras),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+02013199000118,CONCESSIONARIA AGUAS DE JUTURNAIBA S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+10319900000150,REGENERA RIO S.A,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+59196897000113,CONCESSIONARIA DE RODOVIAS PRVIAS S.A.,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02846056000197,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,Motiva (ex-CCR),mobilidade_urbana,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+24274124000123,ASSURUA 2 ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+12272084000100,EQUATORIAL ALAGOAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+48569926000129,AMBIENTAL CEARA 2 SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+08322396000103,CERRADINHO BIOENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+39881421000104,COMPANHIA ESTADUAL DE GERACAO DE ENERGIA ELETRICA - CEEE-G,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+01115535000170,TESC - TERMINAL SANTA CATARINA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+42288184000187,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+36128741000108,CONCESSIONARIA DA RODOVIA MS 306 S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+19642306000170,CONCESSIONARIA DE RODOVIA SUL - MATOGROSSENSE S.A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+05104205000130,CONFLUENCIA ENERGIA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+,CPFL TRANSMISSAO S.A,CPFL,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+00535681000192,COMPANHIA PARANAENSE DE GAS COMPAGAS,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+06840748000189,EQUATORIAL PIAUI DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+53859112000169,COMPANHIA JAGUARI DE ENERGIA,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+51742485000120,CONCESSIONARIA RODOVIAS DO CAFE SPE S.A.,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+08822767000108,CONCESSIONARIA DA RODOVIA MG-050 S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+49314049000108,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+19521322000104,CONCESSIONARIA ROTA DO OESTE S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48127012000108,EPR TRIANGULO S.A,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+19527586000175,COMPANHIA ENERGETICA SINOP S.A,Axia (ex-Eletrobras),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02016507000169,AXIA ENERGIA SUL S.A.,Axia (ex-Eletrobras),integrada_gt,project_finance,13,operacional,regra (ANEEL),operacional,,grande_grupo
 20732109000120,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+10979076000164,CUTIA EMPREENDIMENTOS EOLICOS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48569940000122,AMBIENTAL CEARA 1 SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+13504675000110,EMPRESA BAIANA DE AGUAS E SANEAMENTO SA,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+35593905000105,CONCESSIONARIA ECOVIAS DO CERRADO S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+24743678000122,ECHOENERGIA PARTICIPACOES S/A,Echoenergia,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+15484093000144,ECO101 CONCESSIONARIA DE RODOVIAS S/A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+22163297000149,CONCESSIONARIA PONTE RIO-NITEROI S/A - ECOPONTE,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+29884545000190,ECORIOMINAS CONCESSIONARIA DE RODOVIAS S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 49008174000190,ACU TRANSMISSORA S.A.,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
 27831352000145,EDP TRANSMISSAO ALIANCA SC S.A.,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 24870962000160,EDTE -  EMPRESA DIAMANTINA DE TRANSMISSAO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 20626892000148,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+28925264000175,COMPANHIA ENERGETICA JAGUARA..,Engie,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+28942127000149,COMPANHIA ENERGETICA MIRANDA,Engie,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+13017462000163,ENERGISA SERGIPE - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+26664057000189,ENTREVIAS CONCESSIONARIA DE RODOVIAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+51137031000120,EPR LITORAL PIONEIRO S.A.,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26845460000104,VALE DO SERTAO TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 26845283000166,ALTO SERTAO TRANSMISSORA DE ENERGIA S.A,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26845497000132,BURITIRAMA TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 27967244000102,TAPAJOS TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 26845650000121,BARREIRAS TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 23520790000131,VERENE TRANSMISSAO SUBHOLDING S.A.,Verene/IEB,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+18494537000110,EMPRESA DE ENERGIA SAO MANOEL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 24870961000115,ETB - EMPRESA DE TRANSMISSAO BAIANA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 28201130000101,ENERGISA TRANSMISSAO DE ENERGIA S.A.,Energisa,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
+12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+23274194000119,FURNAS CENTRAIS ELETRICAS S/A,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+27157474000106,AGUAS DE TERESINA SANEAMENTO  SPE  S.A.,Aegea,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+18903785000178,HOLDING DO ARAGUAIA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+32431519000110,HELIO VALGAS SOLAR PARTICIPACOES S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 29554549000100,SERRA DE IBIAPABA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+08159965000133,IGUA SANEAMENTO S.A,Iguá,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+42353180000135,IGUA RIO DE JANEIRO S.A.,Iguá,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+06220197000150,COMPANHIA AGUAS DE ITAPEMA,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+01317277000105,ITAPOA TERMINAIS PORTUARIOS S.A.,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 26617923000180,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+21540697000163,LAGOA 1 ENERGIA RENOVAVEL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+60444437000146,LIGHT SERVICOS DE ELETRICIDADE S/A,Light,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 14395590000103,LINHAS DE TAUBATE TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+10324624000118,CONCESSAO METROVIARIA DO RIO DE JANEIRO S/A,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 27821748000101,TRANSMISSAO SP-MG S/A,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+01417222000177,MRS LOGISTICA S/A,MRS,ferrovias,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 19699063000106,MATA DE SANTA GENEBRA TRANSMISSAO S/A,Mata de Santa Genebra (Copel + Furnas),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+01083200000118,NEOENERGIA S/A,Neoenergia,energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 28438834000100,NEOENERGIA MORRO DO CHAPEU TRANSMISSAO E ENERGIA S.A.,Neoenergia,transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,grupo_inferido
+48710127000120,SPE NOVO NORTE AEROPORTOS S.A.,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+12300288000107,NORTE ENERGIA S/A,Axia (ex-Eletrobras),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 20514590000188,ARGO V TRANSMISSAO DE ENERGIA S.A.,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+14797436000168,DELTA 3 ENERGIA S.A,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48725405000113,BLOCO DE ONZE AEROPORTOS DO BRASIL S.A,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+32021201000161,ORIGEM ENERGIA S.A.,Isolada (a identificar),energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
+01691945000160,PARANAGUA SANEAMENTO S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48533969000154,PAX INVESTIMENTOS EM AEROPORTOS S.A,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+25117259000148,PIRAPORA SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+27219024000192,PIRAPORA II SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48534024000157,PRS AEROPORTOS S.A.,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 17553029000101,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 32667691000178,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,nao_identificado
 51715706000170,RIALMA TRANSMISSORA DE ENERGIA V S/A,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
+48127008000140,CONCESSIONARIA RODOVIAS DO SUL DE MINAS SPE S.A.,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+42310775000103,AGUAS DO RIO 1 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+48851242000115,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+39580673000101,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,BRK,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02387241000160,RUMO S.A.,Rumo,ferrovias,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+18156217000150,SANTA VITORIA DO PALMAR ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
+42500384000151,SERENA ENERGIA S.A,Serena,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+23907723000174,SERTAO I SOLAR ENERGIA SPE S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+37020274000152,VENTOS DE SANTA TEREZA 07 ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+23080281000135,TIBAGI ENERGIA SPE S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 26796739000145,TPE  - TRANSMISSORA PARAISO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 15286382000139,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 26796760000140,TCC - TRANSMISSORA CAMINHO DO CAFE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 24624490000165,ARGO TRANSMISSAO DE ENERGIA S.A.,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 49786044000188,TECP - TRANSMISSORA DE ENERGIA CENTRAL PAULISTANA S.A.,Isolada (a identificar),transmissao,project_finance,2,construcao,regra (ANEEL),construcao,,nao_identificado
+27352303000120,UHE SAO SIMAO ENERGIA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+23449511000190,UTE GNA I GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+04739720000124,USINA TERMELETRICA PAMPA SUL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+44067725000172,VIA BRASIL BR 163 CONCESSIONARIA DE RODOVIAS S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+19788923000188,VDB F2 GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+03497792000140,RODOVIAS INTEGRADAS DO OESTE S/A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+42276907000128,VLI MULTIMODAL S.A.,VLI,ferrovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+28019100000189,VIAPAULISTA  S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+10635691000153,VIARONDON CONCESSIONARIA DE RODOVIA S/A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 23093056000133,XINGU RIO TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
