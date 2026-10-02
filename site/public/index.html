@@ -37,8 +37,8 @@ nav a{color:var(--ink-2);text-decoration:none;margin-left:1.1rem}nav a:first-chi
 section{margin-top:48px}
 .cab{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:12px}
 .cab p{margin:0;max-width:640px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
-.tile{background:var(--surface);padding:14px 16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
+.tile{background:var(--surface);padding:14px 16px;box-shadow:inset -1px -1px 0 var(--line)}
 .tile span{display:block;font-size:.76rem;color:var(--ink-2)}
 .tile b{display:block;font-size:1.55rem;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
 .tile small{color:var(--ink-3);font-size:.74rem}
@@ -73,6 +73,7 @@ th:hover{color:var(--ink)}
 td.t,th.t{text-align:left}
 tbody tr[data-codigo]{cursor:pointer}tbody tr:hover{background:var(--surface-2)}
 .marca{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.selo.hy{border-color:var(--div-pos-2);color:var(--div-pos-2);font-weight:600}
 .selo{display:inline-block;padding:0 .4rem;border-radius:4px;font-size:.7rem;border:1px solid var(--line-2);color:var(--ink-2)}
 .coef td:first-child{text-align:left}
 ul.metodo li{margin-bottom:.45rem;color:var(--ink-2)}ul.metodo b{color:var(--ink)}

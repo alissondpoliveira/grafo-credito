@@ -57,8 +57,8 @@ nav a{color:var(--ink-2);text-decoration:none;margin-left:1.1rem}nav a:first-chi
 section{margin-top:48px}
 .cab{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:12px}
 .cab p{margin:0;max-width:640px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
-.tile{background:var(--surface);padding:14px 16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
+.tile{background:var(--surface);padding:14px 16px;box-shadow:inset -1px -1px 0 var(--line)}
 .tile span{display:block;font-size:.76rem;color:var(--ink-2)}
 .tile b{display:block;font-size:1.55rem;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
 .tile small{color:var(--ink-3);font-size:.74rem}
@@ -93,6 +93,7 @@ th:hover{color:var(--ink)}
 td.t,th.t{text-align:left}
 tbody tr[data-codigo]{cursor:pointer}tbody tr:hover{background:var(--surface-2)}
 .marca{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.selo.hy{border-color:var(--div-pos-2);color:var(--div-pos-2);font-weight:600}
 .selo{display:inline-block;padding:0 .4rem;border-radius:4px;font-size:.7rem;border:1px solid var(--line-2);color:var(--ink-2)}
 .coef td:first-child{text-align:left}
 ul.metodo li{margin-bottom:.45rem;color:var(--ink-2)}ul.metodo b{color:var(--ink)}
@@ -224,6 +225,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
         no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g, segmento=seg,
            spread=d.get("spread"), justo=d.get("justo"), desvio=d.get("desvio"), dp=d.get("dp"), classe=d.get("classe"),
            justo_pares=d.get("justo_pares"), ajuste=d.get("ajuste"), pares=d.get("pares"), justo_reg=d.get("justo_reg"),
+           faixa=d.get("faixa"), motivo_faixa=d.get("motivo_faixa"),
            status=s["status"])
         links.append({"source": em_id, "target": "s:" + s["codigo"], "tipo": "emitiu"})
 
@@ -289,7 +291,7 @@ const esconder = () => tip.style.display = 'none';
 const linha = (a, b) => '<div class="l"><span>'+a+'</span><span>'+b+'</span></div>';
 // desvio em desvios-padrão -> cinco degraus do par divergente (neutro no meio)
 const corDesvio = dp => dp==null||isNaN(dp) ? 'var(--surface)' : dp<=-1.5?'var(--div-neg-2)': dp<=-.5?'var(--div-neg-1)': dp<.5?'var(--div-0)': dp<1.5?'var(--div-pos-1)':'var(--div-pos-2)';
-const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span><br><span class="fraco">'+n.grupo+'</span>'
+const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span>'+(n.faixa==='high_yield'?' <span class="selo hy">high yield</span><br><span class="fraco">'+n.motivo_faixa+'</span>':'')+'<br><span class="fraco">'+String(n.grupo||'').split('|').pop()+'</span>'
   + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps')
      + linha('Justo pelos pares', fmt(n.justo_pares,0)+' bps') + (n.ajuste ? linha('Ajuste por eventos', sinal(n.ajuste,1)+' bps') : '')
      + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') + linha('Justo pela regressão', fmt(n.justo_reg,0)+' bps')
@@ -627,7 +629,8 @@ def gerar_projeto() -> str:
                                     "justo_reg": f(j["spread_justo_bps"]),
                                     "desvio": f(pr["desvio_bps"]) if pr else f(j["desvio_bps"]),
                                     "dp": f(pr["desvio_em_dp"]) if pr else f(j["desvio_em_dp"]),
-                                    "var_hist": f(j["variacao_hist_bps"]), "n_hist": int(j["n_dias_hist"] or 0)}
+                                    "var_hist": f(j["variacao_hist_bps"]), "n_hist": int(j["n_dias_hist"] or 0),
+                                    "faixa": j.get("faixa", "principal"), "motivo_faixa": j.get("motivo_faixa", "")}
     arq_docs = RAIZ / "dados" / "derivados" / "documentos.json"
     documentos = json.loads(arq_docs.read_text(encoding="utf-8"))["emissores"] if arq_docs.exists() else {}
     arq_jev = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
@@ -672,11 +675,12 @@ def gerar_projeto() -> str:
         dp = d.get("dp")
         cor = "var(--surface)" if dp is None else "var(--div-neg-2)" if dp <= -1.5 else "var(--div-neg-1)" if dp <= -.5 else "var(--div-0)" if dp < .5 else "var(--div-pos-1)" if dp < 1.5 else "var(--div-pos-2)"
         segm = u.get("segmento", "")
+        selo_hy = (' <span class="selo hy" title="' + html.escape(d.get("motivo_faixa", "")) + '">HY</span>') if d.get("faixa") == "high_yield" else ""
         abre = (f'<tr data-codigo="{html.escape(s["codigo"])}" data-segmento="{segm}">' if valida else f'<tr data-segmento="{segm}">')
         celula = lambda v, c=0, sinal=False: f'<td data-v="{"" if v is None else v}">{("+" if sinal and v is not None and v > 0 else "") + num(v, c)}</td>'
         trs.append(
             abre
-            + f'<td class="t"><span class="marca" style="background:{cor}"></span>{html.escape(s["codigo"])}</td>'
+            + f'<td class="t"><span class="marca" style="background:{cor}"></span>{html.escape(s["codigo"])}{selo_hy}</td>'
             + f'<td class="t">{html.escape(u["emissor_atual_snd"].title())}</td>'
             + f'<td class="t">{html.escape(u["grupo_risco"])} <span class="selo">{fonte}</span></td>' if fonte else
             abre
@@ -732,6 +736,7 @@ def gerar_projeto() -> str:
 <div class="tile"><span>Grupos de risco</span><b>{n_grupos}</b><small>mais as isoladas</small></div>
 <div class="tile"><span>Segmentos</span><b>{len({u.get("segmento") for u in universo.values()})}</b><small>pares só dentro do segmento</small></div>
 <div class="tile"><span>Spread comparável mediano</span><b>{num(mediana, 0)} bps</b><small>IPCA+, gross-up 15% nas isentas</small></div>
+<div class="tile"><span>Faixa high yield</span><b>{sum(1 for d in desvios.values() if d.get("faixa") == "high_yield")}</b><small>séries com Z ≥ 300 bps ou evento de crédito</small></div>
 <div class="tile"><span>Fora da faixa dos pares</span><b>{fora}</b><small>séries com |desvio| ≥ 1,5 dp</small></div>
 </div>
 
@@ -798,7 +803,8 @@ def gerar_projeto() -> str:
 <ul class="metodo pequeno">
 <li><b>Fluxo de pagamentos</b> da agenda de eventos do SND; validação contra a duration ANBIMA. Séries que não batem ficam fora e aparecem marcadas.</li>
 <li><b>Spread comparável</b>: Z-spread sobre a curva zero-cupom real (ETTJ IPCA, ANBIMA), com gross-up de 15% na taxa nominal das debêntures incentivadas (isentas para pessoa física), usando a inflação implícita na duration de cada série.</li>
-<li><b>Pares comparáveis</b>: filtros obrigatórios de mesmo segmento (transmissão) e mesma classe (IPCA+ ou DI+); entre os candidatos de outros emissores, os 8 mais próximos por estrutura (project finance ou corporativa), fase do ativo (construção, transição, operacional; regra pela idade da concessão na ANEEL, refinada pelo JEV), patrocinador, garantia, isenção, duration, folga até o fim da concessão e tamanho. Pesos explícitos em <code>analises/pares.py</code>. O spread justo é a mediana dos pares.</li>
+<li><b>Faixa high yield</b>: séries IPCA+ com Z-spread de mercado ≥ 300 bps, DI+ com spread ≥ 300 bps sobre o CDI, ou emissor com evento de crédito negativo (JEV, confiança ≥ 0,8) nos últimos 12 meses. Ficam fora da regressão e só se comparam com outras high yield.</li>
+<li><b>Pares comparáveis</b>: filtros obrigatórios de mesmo segmento, mesma classe (IPCA+ ou DI+) e mesma faixa (principal ou high yield; high yield com menos de 3 pares no segmento compara entre segmentos); entre os candidatos de outros emissores, os 8 mais próximos por estrutura (project finance ou corporativa), fase do ativo (construção, transição, operacional; regra pela idade da concessão na ANEEL, refinada pelo JEV), patrocinador, garantia, isenção, duration, folga até o fim da concessão e tamanho. Pesos explícitos em <code>analises/pares.py</code>. O spread justo é a mediana dos pares.</li>
 <li><b>Ajuste por eventos</b> (provisório, conservador): crédito negativo +25 bps, outro impacto negativo +8, avanço operacional −5, só com classificação JEV de confiança ≥ 0,8; meia-vida de 60 dias, janela de 180, tetos por tipo (−10 / +20 / +40) e de ±40 por emissor. Será recalibrado por estudo de evento quando houver histórico.</li>
 <li><b>Spread justo pela regressão</b> (segunda leitura): modelo provisório com duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</li>
 <li><b>DI+</b>: a taxa indicativa ANBIMA já é o spread sobre o CDI; desvio contra a mediana das DI+ do piloto (amostra pequena).</li>

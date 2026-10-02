@@ -34,6 +34,29 @@ VARIAVEIS = {
     "tail": "Folga até o fim da concessão (anos)",
 }
 NEGOCIOS = RAIZ / "dados" / "snd" / "negocios.csv"
+JEV = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
+
+# FAIXA HIGH YIELD (decisão do Alisson em 02/10/2026: faixa separada). Critérios explícitos:
+CORTE_HY_IPCA_BPS = 300.0   # Z-spread de MERCADO (sem gross-up) sobre a curva real
+CORTE_HY_DI_BPS = 300.0     # spread sobre o CDI
+JANELA_EVENTO_HY_DIAS = 365  # evento de crédito negativo (JEV, confiança >= 0,8) no emissor nesse período
+
+
+def emissores_com_evento_credito(data_ref: str) -> dict[str, str]:
+    from datetime import date
+    if not JEV.exists():
+        return {}
+    ref = date.fromisoformat(data_ref)
+    out = {}
+    for chave, r in json.loads(JEV.read_text(encoding="utf-8")).items():
+        if r.get("status") == "automatico" and r.get("evento") == "credito_negativo" and r.get("evento_confianca", 0) >= 0.8:
+            cnpj, _, d, titulo = chave.split("|", 3)
+            try:
+                if 0 <= (ref - date.fromisoformat(d)).days <= JANELA_EVENTO_HY_DIAS:
+                    out.setdefault(cnpj, f"{d}: {titulo[:70]}")
+            except ValueError:
+                pass
+    return out
 CONTRATOS = RAIZ / "dados" / "aneel" / "contratos_transmissao.csv"
 UNIVERSO = RAIZ / "dados" / "referencia" / "universo_series.csv"
 
@@ -107,7 +130,22 @@ def main() -> None:
             if v:
                 hist.setdefault(s["codigo"], []).append((a.stem, float(v)))
 
-    ipca = [s for s in series if s["status"] == "ok"]
+    univ0 = {u["codigo"]: u for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
+    eventos = emissores_com_evento_credito(hoje.stem)
+    faixa, motivo_hy = {}, {}
+    for s in series:
+        cn = univ0.get(s["codigo"], {}).get("cnpj", "")
+        if s["status"] == "ok" and float(s["zspread_bps"]) >= CORTE_HY_IPCA_BPS:
+            faixa[s["codigo"]], motivo_hy[s["codigo"]] = "high_yield", f"Z-spread de mercado {float(s['zspread_bps']):.0f} bps"
+        elif s["status"] == "ok DI+" and float(s["spread_di_bps"]) >= CORTE_HY_DI_BPS:
+            faixa[s["codigo"]], motivo_hy[s["codigo"]] = "high_yield", f"spread sobre CDI {float(s['spread_di_bps']):.0f} bps"
+        elif cn in eventos and s["status"] in ("ok", "ok DI+"):
+            faixa[s["codigo"]], motivo_hy[s["codigo"]] = "high_yield", "evento de crédito negativo: " + eventos[cn]
+        else:
+            faixa[s["codigo"]] = "principal"
+
+    ipca_todas = [s for s in series if s["status"] == "ok"]
+    ipca = [s for s in ipca_todas if faixa[s["codigo"]] == "principal"]  # regressão só na faixa principal
     liq = liquidez_por_serie(hoje.stem)
     fins = fim_concessao()
     univ = {u["codigo"]: u for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
@@ -169,6 +207,14 @@ def main() -> None:
                "n_tributadas": n_trib, "n_isentas": int(np.array(isenta)[usar].sum()),
                "leitura": "negativo = o mercado paga menos spread pela isenção; compare com o gross-up de 15% aplicado"}
 
+    # high yield IPCA+: justo = mediana dos high yield IPCA+ do mesmo segmento (ou de todos, se < 3 no segmento)
+    hy_ipca = [s for s in ipca_todas if faixa[s["codigo"]] == "high_yield"]
+    hy_por_seg: dict[str, list[float]] = {}
+    for s in hy_ipca:
+        hy_por_seg.setdefault(seg(s["codigo"]), []).append(float(s["zspread_comparavel_bps"]))
+    hy_todos = [float(s["zspread_comparavel_bps"]) for s in hy_ipca]
+    sd_hy = float(np.std(hy_todos, ddof=1)) if len(hy_todos) > 2 else None
+
     di = [s for s in series if s["status"] == "ok DI+"]
     # DI+: referência é a mediana do mesmo segmento (ou de todas as DI+ se o segmento tiver menos de 3)
     por_seg_di: dict[str, list[float]] = {}
@@ -192,6 +238,19 @@ def main() -> None:
             "n_dias_hist": len(valores), "inicio_hist": h[0][0] if h else None,
             **extras.get(s["codigo"], {}),
         })
+    for s in hy_ipca:
+        h = hist.get(s["codigo"], [])
+        valores = [v for _, v in h]
+        v = float(s["zspread_comparavel_bps"])
+        base = hy_por_seg[seg(s["codigo"])] if len(hy_por_seg.get(seg(s["codigo"]), [])) >= 3 else hy_todos
+        r = float(np.median(base))
+        saida.append({
+            "codigo": s["codigo"], "classe": "IPCA+", "spread_bps": v, "spread_justo_bps": r,
+            "desvio_bps": v - r, "desvio_em_dp": (v - r) / sd_hy if sd_hy else None,
+            "variacao_hist_bps": valores[-1] - valores[0] if len(valores) > 1 else None,
+            "dp_hist_bps": float(np.std(valores, ddof=1)) if len(valores) > 2 else None,
+            "n_dias_hist": len(valores), "inicio_hist": h[0][0] if h else None, "segmento": seg(s["codigo"]),
+        })
     for s in di:
         h = hist.get(s["codigo"], [])
         valores = [v for _, v in h]
@@ -206,6 +265,9 @@ def main() -> None:
             "segmento": seg(s["codigo"]),
         })
 
+    for l in saida:
+        l["faixa"] = faixa.get(l["codigo"], "principal")
+        l["motivo_faixa"] = motivo_hy.get(l["codigo"], "")
     SAIDA.mkdir(parents=True, exist_ok=True)
     campos = list(dict.fromkeys(k for l in saida for k in l))
     with (SAIDA / f"{hoje.stem}.csv").open("w", newline="", encoding="utf-8") as f:
@@ -219,6 +281,8 @@ def main() -> None:
         + [{"variavel": k, "descricao": descricoes[k], "coef": float(beta[j + 1]), "erro_padrao_hc1": float(se[j + 1]), "vif": float(vifs[j])}
            for j, k in enumerate(nomes)],
         "isencao": isencao,
+        "high_yield": {"corte_ipca_bps": CORTE_HY_IPCA_BPS, "corte_di_bps": CORTE_HY_DI_BPS, "janela_evento_dias": JANELA_EVENTO_HY_DIAS,
+                       "n_series": sum(1 for v in faixa.values() if v == "high_yield")},
         "di": {"n": len(di), "mediana_bps": float(np.median(todas_di)) if todas_di else None, "dp_bps": sd_di},
     }
     (SAIDA / f"{hoje.stem}_modelo.json").write_text(json.dumps(modelo, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -229,7 +293,7 @@ def main() -> None:
         print(f"  {c['descricao'][:46]:46} {c['coef']:9.2f}  t={t:6.2f}  VIF={c['vif'] if c['vif'] is None else round(c['vif'], 2)}")
     print(f"Isenção (Z de mercado): {isencao['coef_bps']:.1f} bps (t={isencao['coef_bps'] / isencao['erro_padrao_hc1']:.2f}); "
           f"{isencao['n_tributadas']} tributadas, {isencao['n_isentas']} isentas")
-    print(f"DI+: n={len(di)}")
+    print(f"DI+: n={len(di)} | high yield: {sum(1 for v in faixa.values() if v == 'high_yield')} séries")
 
 
 if __name__ == "__main__":

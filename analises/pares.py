@@ -101,6 +101,7 @@ def main() -> None:
         vol = br(c["Quantidade Emitida"]) * br(c["Valor Nominal na Emissao"]) / 1e6 if c.get("Quantidade Emitida") else None
         base.append({
             "codigo": s["codigo"], "cnpj": cnpj.get(s["codigo"]), "classe": j["classe"], "segmento": a.get("segmento", "transmissao"),
+            "faixa": j.get("faixa", "principal"),
             "spread": float(j["spread_bps"]), "estrutura": a.get("estrutura"), "fase": a.get("fase"), "patrocinador": a.get("patrocinador"),
             "garantia": s["garantia"], "incentivada": s["incentivada"], "duration": float(s["duration_mod_anos"]),
             "tail": float(j["tail_anos"]) if j.get("tail_anos") not in ("", None) else None, "tamanho": math.log(vol) if vol else None,
@@ -117,7 +118,12 @@ def main() -> None:
 
     linhas = []
     for a in base:
-        candidatos = [b for b in base if b["cnpj"] != a["cnpj"] and b["classe"] == a["classe"] and b["segmento"] == a["segmento"]]
+        # filtros obrigatórios: classe, faixa (principal / high yield) e segmento
+        mesma = lambda b: b["cnpj"] != a["cnpj"] and b["classe"] == a["classe"] and b["faixa"] == a["faixa"]
+        candidatos = [b for b in base if mesma(b) and b["segmento"] == a["segmento"]]
+        entre_segmentos = False
+        if len(candidatos) < 3 and a["faixa"] == "high_yield":
+            candidatos, entre_segmentos = [b for b in base if mesma(b)], True  # poucos high yield no segmento
         candidatos.sort(key=lambda b: distancia(a, b))
         pares = candidatos[:K]
         if len(pares) < 3:
@@ -132,13 +138,14 @@ def main() -> None:
             "ajuste_eventos_bps": aj, "motivos_ajuste": " | ".join(motivos),
             "justo_ajustado_bps": justo + aj, "desvio_bps": a["spread"] - (justo + aj),
             "estrutura": a["estrutura"], "fase": a["fase"], "patrocinador": a["patrocinador"],
+            "faixa": a["faixa"], "pares_entre_segmentos": "S" if entre_segmentos else "",
         })
-    # desvio em desvios-padrão, por classe
-    for classe in {l["classe"] for l in linhas}:
-        ds = [l["desvio_bps"] for l in linhas if l["classe"] == classe]
+    # desvio em desvios-padrão, por classe e faixa
+    for grupo in {(l["classe"], l["faixa"]) for l in linhas}:
+        ds = [l["desvio_bps"] for l in linhas if (l["classe"], l["faixa"]) == grupo]
         dp = pstdev(ds) if len(ds) > 2 else None
         for l in linhas:
-            if l["classe"] == classe:
+            if (l["classe"], l["faixa"]) == grupo:
                 l["desvio_em_dp"] = l["desvio_bps"] / dp if dp else None
 
     SAIDA.mkdir(parents=True, exist_ok=True)

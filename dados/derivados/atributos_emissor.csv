@@ -5,7 +5,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08827501000158,AEGEA SANEAMENTO E PARTICIPACOES S/A,Aegea,saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 12528708000107,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02016440000162,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,CPFL,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-12648266000124,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,Isolada (a identificar),saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02451848000162,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 09324949000111,AUTOPISTA FLUMINENSE S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 09325109000173,AUTOPISTA PLANALTO SUL S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo

@@ -63,7 +63,7 @@ MACRO_POR_NOME = [
 ]
 SEGMENTOS = [s for v in SUB.values() for s, _ in v]
 # nomes com "energia" que não são do setor elétrico (combustíveis, GLP, açúcar e etanol)
-FORA = re.compile(r"VIBRA|RAIZEN|COPA ENERGIA|ULTRAPAR|COSAN|PETROBRAS|PETRO")
+FORA = re.compile(r"VIBRA|RAIZEN|COPA ENERGIA|ULTRAPAR|COSAN|PETROBRAS|PETRO|AMBIPAR")  # Ambipar: serviços ambientais, não saneamento
 
 
 def sem_acento(t: str) -> str:
