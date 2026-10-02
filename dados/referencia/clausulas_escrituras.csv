@@ -1,0 +1,63 @@
+codigo,texto_legivel,documentos_lidos,fiadora,fiadoras_candidatas,tem_fianca,alienacao_fiduciaria_acoes,cessao_fiduciaria,penhor,cross_default,cross_default_gatilho_brl,cross_default_abrange,covenant_divida_ebitda,covenant_icsd,resgate_facultativo,resumo,status_revisao
+ALUP18,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+BLMN12,S,2,,,S,N,S,S,S,,,,S,S,"cessão fiduciária, penhor · cross-default",a revisar
+CTEE18,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+CTEE19,S,1,,,N,N,S,S,S,"120.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 120.000.000,00",a revisar
+CTEE29,S,1,,,N,N,S,S,S,"120.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 120.000.000,00",a revisar
+EDPR13,S,1,,,S,N,N,N,S,"200.000.000,00",,,N,S,"cross-default ≥ R$ 200.000.000,00",a revisar
+EDPR23,S,1,,,S,N,N,N,S,"200.000.000,00",,,N,S,"cross-default ≥ R$ 200.000.000,00",a revisar
+EDPT11,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+EDTE12,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+EEELA0,S,3,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELA1,S,2,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELA3,S,2,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELA4,S,3,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELA5,S,2,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELB1,S,2,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EEELB5,S,2,,,S,N,N,N,S,,,"3,75",N,S,"cross-default · DL/EBITDA 3,75x",a revisar
+EQSP11,S,2,,,S,N,N,N,N,,,,N,N,,a revisar
+EQSP21,S,2,,,S,N,N,N,N,,,,N,N,,a revisar
+EQTC11,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+EQTN11,S,2,,,S,N,N,N,N,,,,N,N,,a revisar
+EQTR11,S,2,,,S,N,N,N,N,,,,N,N,,a revisar
+EQTR21,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+EQTS11,S,2,,,S,N,N,N,N,,,,N,N,,a revisar
+EQUA11,S,3,,,S,N,N,N,S,"80.000.000,00",,,N,S,"cross-default ≥ R$ 80.000.000,00",a revisar
+ETBA12,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+ETEN12,S,2,,,S,N,S,N,S,"80.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 80.000.000,00",a revisar
+ETEN21,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+ETEN22,S,2,,,S,N,S,N,S,"80.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 80.000.000,00",a revisar
+ETSP12,S,3,,,S,N,N,N,S,,,,N,N,cross-default,a revisar
+ISAEA8,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+ISAEA9,S,1,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+ISAEB0,S,2,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+ISAEB1,S,2,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+ISAEB2,S,1,,,N,N,S,S,S,"240.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 240.000.000,00",a revisar
+ISAEB3,S,1,,,N,N,S,S,S,"240.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 240.000.000,00",a revisar
+ISAEB8,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+ISAEC0,S,2,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+ISAEC1,S,2,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+ISAEC2,S,1,,,N,N,S,S,S,"240.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 240.000.000,00",a revisar
+ISAED1,S,2,,,N,N,S,S,S,"230.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 230.000.000,00",a revisar
+MGSP12,S,2,,,S,N,N,S,S,,,,S,N,penhor · cross-default,a revisar
+MSGT13,S,2,,,S,N,S,S,S,,,,S,S,"cessão fiduciária, penhor · cross-default",a revisar
+MSGT23,S,2,,,S,N,S,S,S,,,,S,S,"cessão fiduciária, penhor · cross-default",a revisar
+MSGT33,S,2,,,S,N,S,S,S,,,,S,S,"cessão fiduciária, penhor · cross-default",a revisar
+NMCH11,S,1,,,S,N,S,S,S,"100.000.000,00",,,S,S,"cessão fiduciária, penhor · cross-default ≥ R$ 100.000.000,00",a revisar
+TAEEA4,S,2,,,S,N,S,N,S,"130.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 130.000.000,00",a revisar
+TAEEA5,S,2,,,N,N,N,N,N,,,,N,S,,a revisar
+TAEEA6,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+TAEEA7,S,2,,,N,N,N,N,S,"130.000.000,00",,,N,S,"cross-default ≥ R$ 130.000.000,00",a revisar
+TAEEA8,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+TAEEA9,S,2,,,S,N,S,N,S,"215.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 215.000.000,00",a revisar
+TAEEB0,S,2,,,S,N,S,N,S,"215.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 215.000.000,00",a revisar
+TAEEB4,S,2,,,S,N,S,N,S,"130.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 130.000.000,00",a revisar
+TAEEB8,S,1,,,N,N,N,N,N,,,,N,N,,a revisar
+TAEEC4,S,2,,,S,N,S,N,S,"130.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 130.000.000,00",a revisar
+TAEED2,S,2,,,S,N,S,N,S,"100.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 100.000.000,00",a revisar
+TAEEE2,S,1,,,S,N,S,N,S,"216.000.000,00",,,N,S,"cessão fiduciária · cross-default ≥ R$ 216.000.000,00",a revisar
+TPEN11,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+TPNO13,S,2,,,S,S,S,S,S,,,,S,S,"alienação fiduciária de ações, cessão fiduciária, penhor · cross-default",a revisar
+TRCC11,N,0,,,N,N,N,N,N,,,,N,N,escritura sem texto (escaneada),a revisar
+TRGO11,S,1,,,S,N,N,S,N,,,,N,N,penhor,a revisar
+TRPLA6,S,1,,,N,N,S,S,S,"215.000.000,00",,,N,S,"cessão fiduciária, penhor · cross-default ≥ R$ 215.000.000,00",a revisar

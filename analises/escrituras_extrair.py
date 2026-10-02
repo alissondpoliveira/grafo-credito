@@ -41,8 +41,8 @@ REGRAS = {
 NOME_FIADORA = re.compile(
     r"([A-ZÀ-Ý][A-ZÀ-Ý0-9 .,&/\-]{6,140}?(?:S\.\s?A\.?|S/A|LTDA\.?))[^\"“”]{0,500}?[\"“]Fiador[a]?[\"”]"
 )
-GATILHO = re.compile(r"individual ou agregad[oa][^R]{0,60}R\$\s?([\d.]+,\d{2})", re.I)
-ABRANGE = re.compile(r"(Controladas?|Controladora|Subsidi[aá]rias|Fiadora|Acionista|Coligadas)")
+GATILHO = re.compile(r"individual (?:ou|e/ou) agregad[oa][\s\S]{0,80}?R\$\s?([\d.]+,\d{2})", re.I)
+ABRANGE = re.compile(r"(Controladas?|Controladora|Subsidi[aá]rias(?: Relevantes)?|Fiadora|Garantidora|Acionistas?|Coligadas)", re.I)
 LIMITE_COVENANT = re.compile(r"(\d{1,2}[,.]\d{1,2})\s*(?:x|vezes)", re.I)
 
 

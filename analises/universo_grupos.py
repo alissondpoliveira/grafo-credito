@@ -96,6 +96,12 @@ def main() -> None:
     cnpjs = {snd[s["codigo"]]["CNPJ"].zfill(14) for s in series if s["codigo"] in snd}
     ctrl = baixar_controladores(cnpjs)
 
+    revisao: dict[str, list[dict]] = {}
+    arq_rev = RAIZ / "dados" / "referencia" / "revisao_escrituras.csv"
+    if arq_rev.exists():
+        for r in csv.DictReader(arq_rev.open(encoding="utf-8")):
+            revisao.setdefault(r["codigo"], []).append(r)
+
     linhas, controladores = [], []
     for cnpj, cs in sorted(ctrl.items()):
         for nome, doc, rel, doc_rel in cs:
@@ -114,6 +120,10 @@ def main() -> None:
             if any(chave.upper() in n for n in nomes_ctrl):
                 grupo, fonte, motivo = g, "CVM FRE", "controlador PJ declarado"
                 break
+        rev = revisao.get(s["codigo"])
+        if not fonte and rev:
+            grupo, fonte = rev[0]["grupo_risco"], "escritura"
+            motivo = "; ".join(f'{r["parte"].title()} ({r["papel"]})' for r in rev)
         if not fonte:
             for chave, (g, porque) in INFERIDOS.items():
                 if chave in up:

@@ -164,6 +164,9 @@ def ler_csv(p: Path) -> list[dict]:
 
 
 def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: dict) -> dict:
+    revisao = {}
+    for r in ler_csv(RAIZ / "dados" / "referencia" / "revisao_escrituras.csv"):
+        revisao.setdefault(r["codigo"], []).append(r)
     controladores = {}
     for c in ler_csv(CONTROLADORES):
         controladores.setdefault(c["cnpj_companhia"], []).append(c)
@@ -196,6 +199,14 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
                     alvo = "c:" + (c["cnpj_socio_de"] or c["socio_de"])
                     no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, detalhe="controlador declarado na CVM")
                 links.append({"source": c_id, "target": alvo, "tipo": "controla"})
+        elif u["fonte_grupo"] == "escritura":
+            for r in revisao.get(s["codigo"], []):
+                p_id = "c:" + sem_acento(r["parte"]).upper()
+                no(p_id, tipo="controlador" if "acionista" in r["papel"] or "interveniente" in r["papel"] else "garantidor",
+                   rotulo=r["parte"].title(), grupo=g, detalhe=f'{r["papel"]} na escritura (a revisar)')
+                links.append({"source": p_id, "target": em_id, "tipo": "escritura"})
+                if "fiador" in r["papel"] or "garantidor" in r["papel"]:
+                    links.append({"source": p_id, "target": "s:" + s["codigo"], "tipo": "garante"})
         elif u["fonte_grupo"] == "inferido":
             g_id = "g:" + g
             no(g_id, tipo="grupo", rotulo=g, grupo=g, detalhe="grupo inferido, a confirmar na escritura")
@@ -266,7 +277,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   const link = camLink.selectAll('line').data(links).join('line').attr('stroke','var(--edge)')
     .attr('stroke-width', l => l.tipo==='emitiu'?.7 : l.tipo==='garante'||l.tipo==='cross'?1.6 : 1.2)
     .attr('stroke', l => l.tipo==='cross' ? 'var(--div-pos-2)' : 'var(--edge)').attr('stroke-opacity', l => l.tipo==='cross'?.55:1)
-    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='cross'?'6 2':null);
+    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='cross'?'6 2' : l.tipo==='escritura'?'8 2 2 2':null);
   const no = camNo.selectAll('g').data(nos).join('g').style('cursor','pointer');
   no.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
     .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
@@ -438,7 +449,7 @@ def gerar_projeto() -> str:
         u, d = universo[s["codigo"]], desvios.get(s["codigo"], {})
         valida = s["status"] in ("ok", "ok DI+")
         cl = clausulas.get(s["codigo"], {})
-        fonte = {"CVM FRE": "CVM", "inferido": "inferido"}.get(u["fonte_grupo"], "")
+        fonte = {"CVM FRE": "CVM", "inferido": "inferido", "escritura": "escritura"}.get(u["fonte_grupo"], "")
         dp = d.get("dp")
         cor = "var(--surface)" if dp is None else "var(--div-neg-2)" if dp <= -1.5 else "var(--div-neg-1)" if dp <= -.5 else "var(--div-0)" if dp < .5 else "var(--div-pos-1)" if dp < 1.5 else "var(--div-pos-2)"
         abre = f'<tr data-codigo="{html.escape(s["codigo"])}">' if valida else "<tr>"
@@ -506,7 +517,7 @@ def gerar_projeto() -> str:
 <div class="controles"><label>Destacar <select id="filtroGrupo"></select></label>
 <label>Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
-<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
+<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
 </section>
 
@@ -563,7 +574,8 @@ def gerar_projeto() -> str:
 <li><b>Spread justo</b>: modelo provisório com duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</li>
 <li><b>DI+</b>: a taxa indicativa ANBIMA já é o spread sobre o CDI; desvio contra a mediana das DI+ do piloto (amostra pequena).</li>
 <li><b>Variação histórica</b>: diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026). Ganha significado com o tempo.</li>
-<li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "inferido" = regra explícita, a confirmar na escritura. Emissor identificado pelo CNPJ do SND.</li>
+<li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "escritura" = acionista, fiadora ou interveniente citada no preâmbulo da escritura (lida e a revisar); "inferido" = regra explícita, a confirmar. Emissor identificado pelo CNPJ do SND.</li>
+<li><b>Cláusulas</b> (coluna "Escritura"): presença de fiança, cessão fiduciária, cross-default e covenant de dívida líquida/EBITDA, localizada por regras de texto nas escrituras públicas (Pentágono e CVM IPE). Evidência a revisar, não leitura jurídica.</li>
 </ul>
 </section>
 
