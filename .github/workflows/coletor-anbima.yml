@@ -95,5 +95,6 @@ jobs:
             echo "Nada novo para salvar."
           else
             git commit -m "dados: ANBIMA $(date -u +%Y-%m-%d)"
+            git pull --rebase -X theirs
             git push
           fi
