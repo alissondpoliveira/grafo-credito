@@ -232,7 +232,7 @@ function calcular(){
   document.getElementById('r_var').textContent = fmt(cheio,2)+'%';
   document.getElementById('r_aprox').textContent = fmt(aprox,2)+'%';
   document.getElementById('r_dur').textContent = fmt(s.dmod,2)+' anos';
-  document.getElementById('r_z').textContent = fmt(s.z,0)+' bps' + (s.zgu!=null ? ' (gross-up '+fmt(s.zgu,0)+')' : '');
+  document.getElementById('r_z').textContent = fmt(s.zc,0)+' bps' + (s.zgu!=null ? ' (mercado '+fmt(s.z,0)+')' : '');
   document.getElementById('r_be6').textContent = fmt(s.be6,1)+' bps';
   document.getElementById('r_be12').textContent = fmt(s.be12,1)+' bps';
 }
@@ -257,7 +257,7 @@ def gerar_projeto() -> str:
 
     ok = [s for s in series if s["status"] == "ok"]
     zs = [float(s["zspread_bps"]) for s in ok]
-    zgu = [float(s["zspread_grossup_bps"]) for s in ok if s["zspread_grossup_bps"]]
+    zcomp = [float(s["zspread_comparavel_bps"]) for s in ok]
     n_emissores = len({universo[s["codigo"]]["cnpj"] for s in series})
     n_cvm = len({universo[s["codigo"]]["cnpj"] for s in series if universo[s["codigo"]]["fonte_grupo"] == "CVM FRE"})
 
@@ -265,6 +265,7 @@ def gerar_projeto() -> str:
         "codigo": s["codigo"], "emissor": s["emissor_atual"].title(), "pu": float(s["pu_anbima"]) if s["pu_anbima"] else None,
         "dmod": float(s["duration_mod_anos"]), "convex": float(s["convexidade"]), "z": float(s["zspread_bps"]),
         "zgu": float(s["zspread_grossup_bps"]) if s["zspread_grossup_bps"] else None,
+        "zc": float(s["zspread_comparavel_bps"]),
         "be6": float(s["breakeven_6m_bps"]), "be12": float(s["breakeven_12m_bps"]),
     } for s in ok]
 
@@ -285,8 +286,8 @@ def gerar_projeto() -> str:
             f'<td class="t">{incent}</td>'
             f'<td class="t">{html.escape(s["garantia"] or "–")}</td>'
             f'<td>{num(s["taxa_indicativa"], 4)}</td>'
+            f'<td><b>{num(s.get("zspread_comparavel_bps"), 0)}</b></td>'
             f'<td>{num(s.get("zspread_bps"), 0)}</td>'
-            f'<td>{num(s.get("zspread_grossup_bps"), 0)}</td>'
             f'<td>{num(s.get("duration_mod_anos"), 2)}</td>'
             f'<td>{num(s.get("choque_100_pct"), 2)}</td>'
             f'<td>{num(s["pu_anbima"], 2)}</td>'
@@ -309,8 +310,8 @@ def gerar_projeto() -> str:
 <div class="card"><span class="muted">Séries no piloto</span><b>{len(series)}</b></div>
 <div class="card"><span class="muted">Emissores</span><b>{n_emissores}</b></div>
 <div class="card"><span class="muted">Controle confirmado na CVM</span><b>{n_cvm} emissores</b></div>
-<div class="card"><span class="muted">Z-spread mediano IPCA+</span><b>{num(statistics.median(zs), 0)} bps</b></div>
-<div class="card"><span class="muted">Mediano com gross-up 15%</span><b>{num(statistics.median(zgu), 0) if zgu else "–"} bps</b></div>
+<div class="card"><span class="muted">Spread comparável mediano</span><b>{num(statistics.median(zcomp), 0)} bps</b></div>
+<div class="card"><span class="muted">Z-spread de mercado mediano</span><b>{num(statistics.median(zs), 0)} bps</b></div>
 </div>
 
 <h2>Grafo do universo</h2>
@@ -333,16 +334,16 @@ def gerar_projeto() -> str:
 <div><small>Variação (reprecificação completa)</small><b id="r_var">–</b></div>
 <div><small>Variação (duration + convexidade)</small><b id="r_aprox">–</b></div>
 <div><small>Duration modificada</small><b id="r_dur">–</b></div>
-<div><small>Z-spread sobre a curva real</small><b id="r_z">–</b></div>
+<div><small>Spread comparável (gross-up 15% se isenta)</small><b id="r_z">–</b></div>
 <div><small>Break-even de abertura em 6 meses</small><b id="r_be6">–</b></div>
 <div><small>Break-even de abertura em 12 meses</small><b id="r_be12">–</b></div>
 </div>
 </div>
 
 <h2>Tabela de precificação</h2>
-<p class="muted pequeno">Z-spread: spread constante somado à curva zero-cupom real (ETTJ IPCA, ANBIMA) que reproduz o preço da série. Choque +100: variação do PU com reprecificação completa. Clique numa linha para simular.</p>
+<p class="muted pequeno">Z-spread: spread constante somado à curva zero-cupom real (ETTJ IPCA, ANBIMA) que reproduz o preço da série. Spread comparável: Z-spread após gross-up de 15% nas incentivadas. Choque +100: variação do PU com reprecificação completa. Clique numa linha para simular.</p>
 <div class="tabela"><table>
-<thead><tr><th class="t">Código</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Incentivada</th><th class="t">Garantia</th><th>Taxa indicativa (%)</th><th>Z-spread (bps)</th><th>Z gross-up (bps)</th><th>Duration mod.</th><th>Choque +100 (%)</th><th>PU (R$)</th><th class="t"></th></tr></thead>
+<thead><tr><th class="t">Código</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Incentivada</th><th class="t">Garantia</th><th>Taxa indicativa (%)</th><th>Spread comparável (bps)</th><th>Z-spread mercado (bps)</th><th>Duration mod.</th><th>Choque +100 (%)</th><th>PU (R$)</th><th class="t"></th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
@@ -352,8 +353,8 @@ def gerar_projeto() -> str:
 <li><b>Fluxo de pagamentos</b> montado da agenda de eventos do SND. Validação: a duration recalculada bate com a da ANBIMA (mediana de erro perto de zero); séries que não batem ficam fora do Z-spread e aparecem marcadas.</li>
 <li><b>Emissor atual</b> é o do SND (por CNPJ). Os nomes da ANBIMA estão desatualizados em várias séries após trocas de controle.</li>
 <li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "inferido" = regra explícita (cadeia societária ou nome), a confirmar na escritura.</li>
-<li><b>Gross-up</b> provisório: alíquota de 15% sobre a taxa nominal, com inflação implícita da ETTJ na duration de cada série. É o efeito tributário máximo para pessoa física; o desconto que o mercado de fato aplica às incentivadas ainda será estimado.</li>
-<li><b>Break-even</b>: quanto o spread pode abrir no horizonte até a perda de preço igualar o carry do Z-spread no período. Z-spread negativo gera break-even negativo.</li>
+<li><b>Spread comparável</b>: para debêntures incentivadas (isentas de IR para pessoa física, Lei 12.431), a taxa nominal passa por gross-up de 15% antes do cálculo do Z-spread, usando a inflação implícita da ETTJ na duration de cada série; para as demais, é o próprio Z-spread. Coloca isentas e tributadas na mesma base de um investidor pessoa física. O Z-spread de mercado, sem ajuste, aparece ao lado.</li>
+<li><b>Break-even</b>: quanto o spread pode abrir no horizonte até a perda de preço igualar o carry do Z-spread de mercado no período. Z-spread negativo gera break-even negativo.</li>
 <li>Debêntures DI+ do universo ainda não entram no Z-spread nem no simulador.</li>
 </ul>
 

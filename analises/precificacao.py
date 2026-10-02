@@ -10,7 +10,8 @@ Convenções (fato = documentado pela ANBIMA/SND; escolha = decisão do projeto)
 - calendário: feriados nacionais (fato: ANBIMA usa feriados nacionais)
 - juros de cada evento sobre o saldo antes da amortização do mesmo dia
 - Z-spread somado à taxa spot da curva real, curva Svensson ANBIMA (escolha, CFA L2)
-- gross-up: alíquota ALIQUOTA_GROSS_UP sobre a taxa nominal, com inflação implícita da ETTJ (escolha a validar)
+- gross-up: alíquota ALIQUOTA_GROSS_UP (15%, decisão do Alisson em 02/10/2026) sobre a taxa nominal das incentivadas,
+  com inflação implícita da ETTJ; 'zspread_comparavel_bps' = gross-up nas isentas, Z-spread puro nas demais
 - break-even: quanto o spread pode abrir no horizonte até a perda de preço igualar o carry do spread (escolha)
 
 Uso: python analises/precificacao.py [AAAA-MM-DD]
@@ -342,6 +343,7 @@ def main(data_ref_txt: str | None) -> None:
             "zspread_bps": z * 1e4,
             "inflacao_implicita_na_duration_pct": infl * 100,
             "zspread_grossup_bps": z_gu,
+            "zspread_comparavel_bps": z_gu if z_gu != "" else z * 1e4,
             **choques,
             **breakeven,
         })
