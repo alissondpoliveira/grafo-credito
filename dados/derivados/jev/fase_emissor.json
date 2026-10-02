@@ -1,0 +1,34 @@
+{
+ "20223016000170|1|Bndes aprova financiamento de R$ 2,56 bi": {
+  "fase": "construcao",
+  "confianca": 0.32
+ },
+ "27967244000102|5|Celebração de acordo para a criação de p": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "26845702000160|5|Celebração de acordo para a criação de p": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "26617923000180|1|Análise - DEB JANAUBA S.A. - Renda Fixa ": {
+  "fase": "operacional",
+  "confianca": 0.66
+ },
+ "28438834000100|4|Neoenergia (NEOE3) anuncia operação de R": {
+  "fase": "operacional",
+  "confianca": 0.76
+ },
+ "20514590000188|2|Comunicado - Eleição Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.78
+ },
+ "20514555000169|2|Comunicado - Eleição Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.8
+ },
+ "24624490000165|2|Comunicado - Eleição Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.62
+ }
+}

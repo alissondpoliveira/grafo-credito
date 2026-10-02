@@ -21,7 +21,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 23520790000131,VERENE TRANSMISSAO SUBHOLDING S.A.,Verene/IEB,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 24870961000115,ETB - EMPRESA DE TRANSMISSAO BAIANA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 28201130000101,ENERGISA TRANSMISSAO DE ENERGIA S.A.,Energisa,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 29554549000100,SERRA DE IBIAPABA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 26617923000180,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 14395590000103,LINHAS DE TAUBATE TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -32,7 +32,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 17553029000101,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 32667691000178,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,nao_identificado
 51715706000170,RIALMA TRANSMISSORA DE ENERGIA V S/A,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
-20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
 26796739000145,TPE  - TRANSMISSORA PARAISO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 15286382000139,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 26796760000140,TCC - TRANSMISSORA CAMINHO DO CAFE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
