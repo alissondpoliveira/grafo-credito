@@ -1,4 +1,4 @@
-name: Coletor ANBIMA (debêntures)
+name: Coletor ANBIMA
 
 on:
   schedule:
@@ -24,8 +24,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Coletar últimos dias úteis
+      - name: Coletar debêntures
         run: python coletor/anbima_debentures.py
+
+      - name: Coletar títulos públicos
+        run: python coletor/anbima_titulos_publicos.py
 
       - name: Salvar no repositório
         run: |
@@ -35,6 +38,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nada novo para salvar."
           else
-            git commit -m "dados: ANBIMA debêntures $(date -u +%Y-%m-%d)"
+            git commit -m "dados: ANBIMA $(date -u +%Y-%m-%d)"
             git push
           fi
