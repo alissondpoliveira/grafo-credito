@@ -184,6 +184,12 @@ SEGMENTOS_NOMES = {
     "energia_diversificada": "Holdings de energia", "comercializacao": "Comercialização", "saneamento": "Saneamento",
     "distribuicao_gas": "Distribuição de gás", "rodovias": "Rodovias", "ferrovias": "Ferrovias", "portos": "Portos",
     "aeroportos": "Aeroportos", "mobilidade_urbana": "Mobilidade urbana", "logistica": "Logística", "locacao": "Locação de veículos",
+    "saude": "Saúde", "telecom": "Telecomunicações", "varejo": "Varejo", "agro_acucar_etanol": "Agro, açúcar e etanol",
+    "oleo_gas": "Óleo, gás e combustíveis", "mineracao_siderurgia": "Mineração e siderurgia", "educacao": "Educação",
+    "industria": "Indústria", "financeiro": "Financeiro", "servicos_lazer": "Serviços e lazer",
+    "imobiliario_construcao": "Imobiliário e construção", "quimica": "Química", "papel_celulose": "Papel e celulose",
+    "alimentos_bebidas": "Alimentos e bebidas", "tecnologia_midia": "Tecnologia e mídia", "servicos_ambientais": "Serviços ambientais",
+    "outros_corporativo": "Outros corporativos",
 }
 
 

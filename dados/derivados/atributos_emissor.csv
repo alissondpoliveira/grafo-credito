@@ -34,7 +34,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 64904295000103,CAMIL ALIMENTOS S/A,Camil Alimentos,alimentos_bebidas,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 82508433000117,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,Casan,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 10647979000148,CONCESSIONARIA ROTA DAS BANDEIRAS S/A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,nao_identificado
-09114805000130,OCEANPACT SERVICOS MARITIMOS S.A.,Pátria,oleo_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09114805000130,OCEANPACT SERVICOS MARITIMOS S.A.,Oceanpact Servicos,oleo_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 47508411000156,COMPANHIA BRASILEIRA DE DISTRIBUICAO,Brasileira Distribuicao,varejo,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 45736131000170,UNIDAS LOCADORA S.A..,Unidas,locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -49,7 +49,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 05914650000166,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 60933603000178,CESP - COMPANHIA ENERGETICA DE SAO PAULO,Auren,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 61856571000117,COMPANHIA DE GAS DE SAO PAULO - COMGAS,Compass,distribuicao_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-07802794000156,ESSENTIA PCHS S.A,Pátria,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+07802794000156,ESSENTIA PCHS S.A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 01543032000104,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 33541368000116,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,Axia (ex-Eletrobras),integrada_gt,corporativa,25,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 19014221000147,CHINA THREE GORGES BRASIL ENERGIA S.A.,CTG,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo
@@ -114,7 +114,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 12648327000153,HIDROVIAS DO BRASIL S.A.,Hidrovias do Brasil,logistica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 27902165000105,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,Highline Brasil,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02284062000106,HOSPITAL ESPERANCA S/A,Hospital Esperanca,saude,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-02932074000191,HYPERA S/A,Votorantim,saude,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+02932074000191,HYPERA S/A,Hypera,saude,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 51218147000193,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,Iguatemi Empresa,varejo,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo

@@ -57,6 +57,8 @@ GRUPOS_CONHECIDOS = [
     ("UNIDAS", "Unidas"), ("SANTOS BRASIL", "Santos Brasil"), ("HIDROVIAS", "Hidrovias do Brasil"), ("PATRIA", "Pátria"),
 ]
 
+SO_PELO_NOME = {"VOTORANTIM", "PATRIA"}
+
 # Inferências explícitas para emissores sem FRE (fonte = 'inferido'); cada uma diz o porquê
 INFERIDOS = {
     "VERENE TRANSMISSAO SUBHOLDING": ("Verene/IEB", "mesmo nome do controlador de Belém e Tapajós (CVM)"),
@@ -147,6 +149,8 @@ def main() -> None:
             if fonte:
                 break
             for chave, g in list(GRUPO_POR_CONTROLADOR.items()) + GRUPOS_CONHECIDOS:
+                if chave in SO_PELO_NOME:
+                    continue  # nomes que também aparecem em gestoras e fundos acionistas: só valem no nome do emissor
                 if any(casa(chave, n) for n in nomes):
                     grupo, fonte, motivo = g, "CVM FRE", "controlador PJ declarado" + (" (indireto)" if nomes is indiretos else "")
                     break
