@@ -1,0 +1,41 @@
+cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fase_regra,confianca_fase_jev,patrocinador
+02998611000104,ISA ENERGIA BRASIL S.A.,ISA,transmissao,corporativa,5,operacional,regra (ANEEL),operacional,,grande_grupo
+07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,regra (ANEEL),operacional,,grande_grupo
+92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,regra (ANEEL),operacional,,grande_grupo
+26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
+26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
+07859971000130,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,Taesa (Cemig + ISA),transmissao,corporativa,14,operacional,regra (ANEEL),operacional,,grande_grupo
+08364948000138,ALUPAR INVESTIMENTO S/A,Alupar,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+20223016000170,BELO MONTE TRANSMISSORA DE ENERGIA SPE S.A.,Belo Monte (State Grid + Eletrobras),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+20732109000120,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+49008174000190,ACU TRANSMISSORA S.A.,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
+27831352000145,EDP TRANSMISSAO ALIANCA SC S.A.,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
+04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+24870962000160,EDTE -  EMPRESA DIAMANTINA DE TRANSMISSAO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+20626892000148,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+26845460000104,VALE DO SERTAO TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+26845283000166,ALTO SERTAO TRANSMISSORA DE ENERGIA S.A,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
+26845497000132,BURITIRAMA TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+27967244000102,TAPAJOS TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+26845650000121,BARREIRAS TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+23520790000131,VERENE TRANSMISSAO SUBHOLDING S.A.,Verene/IEB,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+24870961000115,ETB - EMPRESA DE TRANSMISSAO BAIANA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+28201130000101,ENERGISA TRANSMISSAO DE ENERGIA S.A.,Energisa,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
+26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+29554549000100,SERRA DE IBIAPABA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+26617923000180,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+14395590000103,LINHAS DE TAUBATE TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+27821748000101,TRANSMISSAO SP-MG S/A,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+19699063000106,MATA DE SANTA GENEBRA TRANSMISSAO S/A,Mata de Santa Genebra (Copel + Furnas),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+28438834000100,NEOENERGIA MORRO DO CHAPEU TRANSMISSAO E ENERGIA S.A.,Neoenergia,transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,grupo_inferido
+20514590000188,ARGO V TRANSMISSAO DE ENERGIA S.A.,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+17553029000101,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+32667691000178,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,nao_identificado
+51715706000170,RIALMA TRANSMISSORA DE ENERGIA V S/A,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
+20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+26796739000145,TPE  - TRANSMISSORA PARAISO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+15286382000139,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+26796760000140,TCC - TRANSMISSORA CAMINHO DO CAFE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
+24624490000165,ARGO TRANSMISSAO DE ENERGIA S.A.,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
+49786044000188,TECP - TRANSMISSORA DE ENERGIA CENTRAL PAULISTANA S.A.,Isolada (a identificar),transmissao,project_finance,2,construcao,regra (ANEEL),construcao,,nao_identificado
+23093056000133,XINGU RIO TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado

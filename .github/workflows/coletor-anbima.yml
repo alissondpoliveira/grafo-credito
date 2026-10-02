@@ -71,6 +71,14 @@ jobs:
           pip install --quiet numpy
           python analises/spread_justo.py
 
+      - name: Atributos de comparabilidade e pares (JEV refina a fase)
+        continue-on-error: true
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+        run: |
+          python analises/atributos_emissor.py
+          python analises/pares.py
+
       - name: Gerar site
         run: python site/gerar.py
 

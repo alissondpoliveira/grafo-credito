@@ -213,6 +213,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
         d = desvios.get(s["codigo"], {})
         no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g,
            spread=d.get("spread"), justo=d.get("justo"), desvio=d.get("desvio"), dp=d.get("dp"), classe=d.get("classe"),
+           justo_pares=d.get("justo_pares"), ajuste=d.get("ajuste"), pares=d.get("pares"), justo_reg=d.get("justo_reg"),
            status=s["status"])
         links.append({"source": em_id, "target": "s:" + s["codigo"], "tipo": "emitiu"})
 
@@ -278,7 +279,10 @@ const linha = (a, b) => '<div class="l"><span>'+a+'</span><span>'+b+'</span></di
 // desvio em desvios-padrão -> cinco degraus do par divergente (neutro no meio)
 const corDesvio = dp => dp==null||isNaN(dp) ? 'var(--surface)' : dp<=-1.5?'var(--div-neg-2)': dp<=-.5?'var(--div-neg-1)': dp<.5?'var(--div-0)': dp<1.5?'var(--div-pos-1)':'var(--div-pos-2)';
 const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span><br><span class="fraco">'+n.grupo+'</span>'
-  + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps') + linha(n.classe==='DI+'?'Mediana DI+':'Spread justo (pares)', fmt(n.justo,0)+' bps') + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') : '<br>'+n.status);
+  + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps')
+     + linha('Justo pelos pares', fmt(n.justo_pares,0)+' bps') + (n.ajuste ? linha('Ajuste por eventos', sinal(n.ajuste,1)+' bps') : '')
+     + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') + linha('Justo pela regressão', fmt(n.justo_reg,0)+' bps')
+     + (n.pares ? '<br><span class="fraco">pares: '+n.pares+'</span>' : '') : '<br>'+n.status);
 
 // ---------- mapa de controle e risco: grupo -> empresas -> emissões ----------
 (function(){
@@ -460,7 +464,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     const lista = t => docs.filter(d => t.includes(d.tipo)).map(item);
     f.innerHTML = '<div class="kicker">'+esc(nomeGrupo(n.grupo))+' · CNPJ '+n.cnpj+'</div><h3>'+esc(n.rotulo)+'</h3><p class="muted pequeno" style="margin:0">'+esc(n.detalhe)+'</p>'
       + '<div class="ficha-grade">'
-      + bloco('Emissões', series.map(m => '<li><span>'+m.rotulo+'</span>'+(m.spread!=null ? fmt(m.spread,0)+' bps · desvio '+sinal(m.desvio)+' bps' : esc(m.status))+'</li>'))
+      + bloco('Emissões', series.map(m => '<li><span>'+m.rotulo+'</span>'+(m.spread!=null ? fmt(m.spread,0)+' bps · justo '+fmt(m.justo,0)+' · desvio '+sinal(m.desvio)+' bps'+(m.pares?'<br><span class="fraco">pares: '+m.pares+'</span>':'') : esc(m.status))+'</li>'))
       + bloco('Fatos relevantes', lista(['fato_relevante'])) + bloco('Comunicados e avisos', lista(['comunicado','aviso_debenturistas']))
       + bloco('Escrituras', lista(['escritura'])) + bloco('Notícias', lista(['noticia'])) + bloco('Análises', lista(['analise']))
       + '</div>' + (docs.length ? '' : '<p class="fraco pequeno">Sem documentos públicos indexados ainda para este emissor.</p>');
@@ -569,13 +573,24 @@ def gerar_projeto() -> str:
     clausulas = {c["codigo"]: c for c in ler_csv(CLAUSULAS)}
 
     f = lambda v: float(v) if v not in ("", None) else None
+    pasta_pares = RAIZ / "dados" / "derivados" / "pares"
+    pares = {x["codigo"]: x for x in ler_csv(pasta_pares / f"{data_ref}.csv")}
+    param_pares = json.loads((pasta_pares / "parametros.json").read_text(encoding="utf-8")) if (pasta_pares / "parametros.json").exists() else None
     desvios = {}
     for s in series:
         j = justos.get(s["codigo"])
         if j:
-            desvios[s["codigo"]] = {"classe": j["classe"], "spread": f(j["spread_bps"]), "justo": f(j["spread_justo_bps"]),
-                                    "desvio": f(j["desvio_bps"]), "dp": f(j["desvio_em_dp"]), "var_hist": f(j["variacao_hist_bps"]),
-                                    "n_hist": int(j["n_dias_hist"] or 0)}
+            pr = pares.get(s["codigo"])
+            desvios[s["codigo"]] = {"classe": j["classe"], "spread": f(j["spread_bps"]),
+                                    "justo": f(pr["justo_ajustado_bps"]) if pr else f(j["spread_justo_bps"]),
+                                    "justo_pares": f(pr["justo_pares_bps"]) if pr else None,
+                                    "ajuste": f(pr["ajuste_eventos_bps"]) if pr else 0.0,
+                                    "motivos": pr["motivos_ajuste"] if pr else "",
+                                    "pares": pr["pares"] if pr else "",
+                                    "justo_reg": f(j["spread_justo_bps"]),
+                                    "desvio": f(pr["desvio_bps"]) if pr else f(j["desvio_bps"]),
+                                    "dp": f(pr["desvio_em_dp"]) if pr else f(j["desvio_em_dp"]),
+                                    "var_hist": f(j["variacao_hist_bps"]), "n_hist": int(j["n_dias_hist"] or 0)}
     arq_docs = RAIZ / "dados" / "derivados" / "documentos.json"
     documentos = json.loads(arq_docs.read_text(encoding="utf-8"))["emissores"] if arq_docs.exists() else {}
     arq_jev = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
@@ -635,7 +650,8 @@ def gerar_projeto() -> str:
             f'<td class="t">{ {"S": "sim", "N": "não"}.get(s["incentivada"], "–") }</td>'
             f'<td class="t">{html.escape(s["garantia"] or "–")}</td>'
             + celula(d.get("spread"))
-            + celula(d.get("justo"))
+            + celula(d.get("justo_pares"))
+            + celula(d.get("ajuste"), 1, True)
             + celula(d.get("desvio"), 0, True)
             + celula(dp, 1, True)
             + celula(d.get("var_hist"), 0, True)
@@ -691,7 +707,7 @@ def gerar_projeto() -> str:
 </section>
 
 <section id="desvios">
-<div class="cab"><div><h2>Desvio em relação aos pares</h2><p class="muted pequeno">Spread observado menos spread justo estimado pelos pares, em bps. À direita, a série paga mais que o perfil dela sugere; à esquerda, menos. A cor marca o tamanho do desvio em desvios-padrão dos resíduos.</p></div>
+<div class="cab"><div><h2>Desvio em relação aos pares</h2><p class="muted pequeno">Spread observado menos o spread justo dos pares (mediana das 8 séries mais comparáveis de outros emissores, mesmo segmento e mesma classe), já com o ajuste por eventos. À direita, a série paga mais que o perfil dela sugere; à esquerda, menos. A cor marca o tamanho do desvio em desvios-padrão dos resíduos.</p></div>
 <div><button data-classe="IPCA+" class="ativo">IPCA+</button> <button data-classe="DI+">DI+</button></div></div>
 <div class="painel" style="padding:8px 4px"><svg id="desvio" role="img" aria-label="Barras divergentes do desvio de spread de cada série"></svg></div>
 </section>
@@ -724,7 +740,7 @@ def gerar_projeto() -> str:
 <section id="tabela">
 <div class="cab"><div><h2>Tabela</h2><p class="muted pequeno">Clique no cabeçalho para ordenar; clique numa linha para simular.</p></div></div>
 <div class="painel tabela"><table id="tab">
-<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Classe</th><th class="t">Isenta</th><th class="t">Garantia</th><th>Spread (bps)</th><th>Justo (bps)</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th>Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t">Escritura / status</th></tr></thead>
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Classe</th><th class="t">Isenta</th><th class="t">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th>Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th>Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
@@ -740,7 +756,9 @@ def gerar_projeto() -> str:
 <ul class="metodo pequeno">
 <li><b>Fluxo de pagamentos</b> da agenda de eventos do SND; validação contra a duration ANBIMA. Séries que não batem ficam fora e aparecem marcadas.</li>
 <li><b>Spread comparável</b>: Z-spread sobre a curva zero-cupom real (ETTJ IPCA, ANBIMA), com gross-up de 15% na taxa nominal das debêntures incentivadas (isentas para pessoa física), usando a inflação implícita na duration de cada série.</li>
-<li><b>Spread justo</b>: modelo provisório com duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</li>
+<li><b>Pares comparáveis</b>: filtros obrigatórios de mesmo segmento (transmissão) e mesma classe (IPCA+ ou DI+); entre os candidatos de outros emissores, os 8 mais próximos por estrutura (project finance ou corporativa), fase do ativo (construção, transição, operacional; regra pela idade da concessão na ANEEL, refinada pelo JEV), patrocinador, garantia, isenção, duration, folga até o fim da concessão e tamanho. Pesos explícitos em <code>analises/pares.py</code>. O spread justo é a mediana dos pares.</li>
+<li><b>Ajuste por eventos</b> (provisório, conservador): crédito negativo +25 bps, outro impacto negativo +8, avanço operacional −5, só com classificação JEV de confiança ≥ 0,8; meia-vida de 60 dias, janela de 180, tetos por tipo (−10 / +20 / +40) e de ±40 por emissor. Será recalibrado por estudo de evento quando houver histórico.</li>
+<li><b>Spread justo pela regressão</b> (segunda leitura): modelo provisório com duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</li>
 <li><b>DI+</b>: a taxa indicativa ANBIMA já é o spread sobre o CDI; desvio contra a mediana das DI+ do piloto (amostra pequena).</li>
 <li><b>Variação histórica</b>: diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026). Ganha significado com o tempo.</li>
 <li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "escritura" = acionista, fiadora ou interveniente citada no preâmbulo da escritura (lida e a revisar); "inferido" = regra explícita, a confirmar. Emissor identificado pelo CNPJ do SND.</li>

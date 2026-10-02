@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "testar | validar | comparar | tudo"
+        description: "testar | validar | comparar | tudo | atributos"
         required: true
         default: testar
 
@@ -26,12 +26,12 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
         run: |
           pip install --quiet openpyxl
-          python analises/jev_classificar.py ${{ inputs.modo }}
+          if [ "${{ inputs.modo }}" = "atributos" ]; then python analises/atributos_emissor.py && python analises/pares.py; else python analises/jev_classificar.py ${{ inputs.modo }}; fi
 
       - name: Salvar respostas
         if: inputs.modo != 'testar'
         run: |
           git config user.name "jev[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dados/derivados/jev/
+          git add dados/derivados/
           git diff --cached --quiet || (git commit -m "dados: JEV ${{ inputs.modo }}" && git push)
