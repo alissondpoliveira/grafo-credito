@@ -618,7 +618,7 @@ document.querySelectorAll('#tab th').forEach((th, i) => th.addEventListener('cli
 
 // ---------- CRI e CRA (carregados sob demanda) ----------
 let _cri = null;
-window.carregarCri = () => _cri || (_cri = fetch('cri_cra.json', {cache:'no-cache'}).then(r => r.json()));
+window.carregarCri = () => _cri || (_cri = fetch('/grafo-credito/cri_cra.json', {cache:'no-cache'}).then(r => r.json()));
 (function(){
   const sec = document.getElementById('crisec'); if (!sec) return;
   const fT = document.getElementById('criTipo'), fS = document.getElementById('criSit'), fL = document.getElementById('criLastro'), fQ = document.getElementById('criBusca'), corpo = document.getElementById('criCorpo'), info = document.getElementById('criInfo');
@@ -1026,7 +1026,7 @@ def gerar_projeto() -> str:
 <div id="tip" class="tip"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>function iniciar(){{""" + JS + """}
-fetch('dados.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { window.DADOS = d; iniciar(); });</script>"""
+fetch('/grafo-credito/dados.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { window.DADOS = d; iniciar(); });</script>"""
     return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo)
 
 
