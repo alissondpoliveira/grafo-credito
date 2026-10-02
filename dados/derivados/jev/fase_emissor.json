@@ -30,5 +30,585 @@
  "24624490000165|2|Comunicado - Eleição Diretor Presidente": {
   "fase": "operacional",
   "confianca": 0.62
+ },
+ "61067901000195|2|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "15385166000140|9|Aumento de capital da subsidiária Aegea": {
+  "fase": "operacional",
+  "confianca": 0.35
+ },
+ "08827501000158|15|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.64
+ },
+ "12528708000107|15|Deferimento do pedido de tutela antecipa": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "02016440000162|10|Renovação da Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12648266000124|15|Acordos Firmados com Determinados Credor": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "02451848000162|10|Reconhecimento do desequilíbrio econômic": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09324949000111|3|Fato Relevante - Liquidação da 8ª Emissã": {
+  "fase": "transicao",
+  "confianca": 0.15
+ },
+ "09325109000173|4|Comunicado Conta Escrow": {
+  "fase": "operacional",
+  "confianca": 0.32
+ },
+ "00242184000104|15|Renúncia José Augusto Pereira Aragão": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "02919555000167|15|Resultado Processo Competitivo BR-116/SP": {
+  "fase": "operacional",
+  "confianca": 0.67
+ },
+ "28594234000123|15|Conversão de Categoria da CESP | Protoco": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "00001180000126|15|Aprovação do capital alocável": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "24396489000120|15|15ª Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "07040108000157|15|Celebração ou Extinção de Contrato": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "82508433000117|11|Eleição de novo Diretor-Presidente e alt": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "10647979000148|7|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "45736131000170|6|4° Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "15139629000194|9|Eleição Diretora Presidente": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "08467115000100|8|Mudança na composição do comitê de audit": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03467321000199|13|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "60933603000178|6|Conversão de Categoria da CESP | Protoco": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "61856571000117|10|Alteração de Diretor Financeiro e de Rel": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "07802794000156|5|Eleição do Diretor de Relações com Inves": {
+  "fase": "operacional",
+  "confianca": 0.73
+ },
+ "01543032000104|8|COMUNICADO AO MERCADO REFERENTE À DIVULG": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "33541368000116|15|Descruzamento de Participações de Transm": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "19014221000147|8|Venda da totalidade das ações de emissão": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "15114494000102|10|Mudança de Controle da Companhia": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "43514079000181|10|Mudança de Controle da Companhia": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "06981180000116|15|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "06981176000158|11|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "07682638000107|13|Celebração de aditivo ao Contrato de Con": {
+  "fase": "transicao",
+  "confianca": 0.87
+ },
+ "03025305000146|13|TAM 30/2026 - Extensão do prazo contratu": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "04370282000170|15|Desinvestimento na UHE Baixo Iguaçu Conc": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "04368898000106|12|Fato Relevante 01/26 - 6º Ciclo de Revis": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08439659000150|4|Renúncia da Diretora Vice-presidente de ": {
+  "fase": "operacional",
+  "confianca": 0.43
+ },
+ "17281106000103|15|Notificação de Intenção de Rescisão Ante": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02998611000104|15|Conclusão do descruzamento de participaç": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "25086034000171|1|BNDES aprova R$ 1,05 bilhão para distrib": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "02302100000106|1|Tauil & Chequer Advogados assessora Sant": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02509491000126|9|Termo Aditivo Modificativo nº 24/2026 (p": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "07779299000173|1|Governo de Goiás, por intermédio da CELG": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "07282377000120|9|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "92715812000131|12|Alteração de Controle Acionário": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "02474103000119|15|Precificação da Oferta de Ações": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "02328280000197|8|Eleição de Diretora Executiva de Control": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "61695227000193|13|Revisão de Rating": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "00357038000116|15|Processo Judicial movido pelo Estado do ": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "15413826000150|8|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "04423567000121|15|Eneva e Diamante Energia Celebram Operaç": {
+  "fase": "operacional",
+  "confianca": 0.45
+ },
+ "00864214000106|15|Desinvestimento em Ativos de Transmissão": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "06272793000184|9|Renovação Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04895728000180|9|Renovação Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03220438000173|15|Alocação das ações de emissão da Copasa ": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "08873873000110|15|Aprovação da 17ª Emissão de Debêntures d": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "28152650000171|1|Comunicado ao Mercado referente à Oferta": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09257877000137|6|Renúncia de Diretor Presidente": {
+  "fase": "transicao",
+  "confianca": 0.39
+ },
+ "19527639000158|3|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04089570000150|8|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "12648327000153|15|Divulgação do edital e proposta da admin": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "58070452000120|14|Aprovação da contratação de financiament": {
+  "fase": "transicao",
+  "confianca": 0.38
+ },
+ "52548435000179|15|Prévia de Resultado 2T26": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "07415333000120|15|Projeção CS Infra": {
+  "fase": "transicao",
+  "confianca": 0.46
+ },
+ "16670085000155|15|Juros sobre o capital próprio": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "21314559000166|15|Guidance de Lucro Líquido 3T26": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "62070362000106|8|Eleição de membro do Comitê de Elegibili": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "09149503000106|4|Comunicado Pós Resultado do Bookbuilding": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "03279285000130|13|Aquisição G4": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "75609123000123|15|23ª Emissão de Debêntures da Unidas Loca": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "21389501000181|15|Programa de Recompra": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "09313969000197|1|Projetos das Rodovias Fernão Dias, Autop": {
+  "fase": "transicao",
+  "confianca": 0.21
+ },
+ "02382073000110|5|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "44854238000150|7|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "28367479000118|3|Reorganização Societária - Incorporação,": {
+  "fase": "operacional",
+  "confianca": 0.43
+ },
+ "46568486000160|1|Fechamento da operação de aquisição do c": {
+  "fase": "operacional",
+  "confianca": 0.66
+ },
+ "41508382000146|8|Redução da cifra do capital social.": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "92802784000190|12|Publicação das Demonstrações Financeiras": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09095183000140|4|Assinatura do Termo Aditivo da  Prorroga": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "76484013000145|15|Indeferimento, pela AGEPAR, do recurso a": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "43776517000180|15|Acionistas da EMAE aprovaram a incorpora": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "01616929000102|10|Aprovação do Planejamento Estratégico": {
+  "fase": "operacional",
+  "confianca": 0.34
+ },
+ "02762121000104|15|JV United Ports": {
+  "fase": "operacional",
+  "confianca": 0.78
+ },
+ "40263170000183|11|Aquisição Amplitec e Essencial": {
+  "fase": "operacional",
+  "confianca": 0.74
+ },
+ "07859971000130|15|Conclusão da aquisição de 5 ativos de tr": {
+  "fase": "transicao",
+  "confianca": 0.53
+ },
+ "02286479000108|15|Comunicado de aquisição facultativa": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "00194724000113|15|Conversão de Categoria da CESP | Protoco": {
+  "fase": "operacional",
+  "confianca": 0.81
+ },
+ "59115685000164|2|Aditamento e Extensão do Contrato de Ope": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "23373000000132|15|Eleição de CFO interino": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "32681371000172|15|Distribuição de dividendos": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08364948000138|15|Vitoria do Lote 7 do Leilão de Transmiss": {
+  "fase": "transicao",
+  "confianca": 0.68
+ },
+ "09326342000170|9|10ª Emissão de debentures": {
+  "fase": "operacional",
+  "confianca": 0.6
+ },
+ "09359927000197|4|Rebaixamento de Rating": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "45456117000112|13|Aumento de Capital": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "10319900000150|4|Alteração de membro da diretoria da Comp": {
+  "fase": "transicao",
+  "confianca": 0.23
+ },
+ "02846056000197|15|Conclusão Transação da PLataforma de Aer": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "12272084000100|1|Aneel aprova alta média de 5,43% para co": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08322396000103|13|Descontinuidade Projeções": {
+  "fase": "operacional",
+  "confianca": 0.59
+ },
+ "39881421000104|7|3º Emissão de Debenture CEEE-G": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "22261473000185|9|Nomeação do Sr. Carlos Ivan Camargo de C": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "19642306000170|12|Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "|2|BB-BI analisa a CPFL Energia sob a ótica": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "06840748000189|2|Equatorial Energia (EQTL3) anuncia ratin": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "51742485000120|1|1º Aditamento - Escritura 2ª emissão de ": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "08822767000108|2|Acordo ou Contrato de Transferência do C": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "49314049000108|4|3ª emissão de debêntures simples da Comp": {
+  "fase": "operacional",
+  "confianca": 0.44
+ },
+ "19521322000104|7|Aumento de Capital Social": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "48127012000108|2|Conclusão Procedimento de Bookbuilding 2": {
+  "fase": "operacional",
+  "confianca": 0.41
+ },
+ "19527586000175|1|Eleição de Diretor(es)": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "02016507000169|15|6ª Emissão de Debêntures da AXIA Energia": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "35593905000105|1|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "15484093000144|11|Fato Relevante - Aprovação da 3ª Emissão": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "22163297000149|1|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "29884545000190|4|4ª emissão de debêntures simples da Comp": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "28925264000175|3|Leilão de Reserva de Capacidade na forma": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "28942127000149|2|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "13017462000163|4|Assinatura do Termo Aditivo da  Prorroga": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "26664057000189|15|Eleição do Sr. Pablo  Gustavo Pascuttini": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "51137031000120|2|EPR Litoral Pioneiro inicia duplicação d": {
+  "fase": "transicao",
+  "confianca": 0.28
+ },
+ "28201130000101|8|Desinvestimento em Ativos de Transmissão": {
+  "fase": "transicao",
+  "confianca": 0.69
+ },
+ "12489315000123|1|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "02502844000166|7|Alteração do Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "27157474000106|6|DFs": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "18903785000178|2|Comunicado ao Mercado": {
+  "fase": "construcao",
+  "confianca": 0.37
+ },
+ "32431519000110|10|Rescisão de contrato": {
+  "fase": "transicao",
+  "confianca": 0.29
+ },
+ "08159965000133|15|Aumento de Capital": {
+  "fase": "transicao",
+  "confianca": 0.77
+ },
+ "42353180000135|10|Procedimento arbitral": {
+  "fase": "operacional",
+  "confianca": 0.24
+ },
+ "60444437000146|15|Plano de Investimentos Plurianual": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "10324624000118|14|Esclarecimentos sobre notícia veiculada ": {
+  "fase": "operacional",
+  "confianca": 0.28
+ },
+ "01417222000177|15|14a. Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "01083200000118|15|Deferimento de Conversão de Registro de ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "12300288000107|13|Eleição do Novo Diretor-Presidente": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "32021201000161|15|Resultado Leilão LRCAP 2026 - Origem Ene": {
+  "fase": "transicao",
+  "confianca": 0.92
+ },
+ "25117259000148|1|Usinas Fotovoltaicas Pirapora Recebem Pr": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "27219024000192|1|Usinas Fotovoltaicas Pirapora Recebem Pr": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "23096269000119|2|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "42644220000106|6|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "42310775000103|6|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "48851242000115|2|3ª Emissão de Debêntures da Way 112": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "39580673000101|2|Assinatura do Terceiro Termo Aditivo e d": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "02387241000160|15|5o Aditivo ao Contrato de Concessão da M": {
+  "fase": "operacional",
+  "confianca": 0.46
+ },
+ "42500384000151|15|Plano de investimento para conclusão do ": {
+  "fase": "transicao",
+  "confianca": 0.76
+ },
+ "04739720000124|5|Alteração do Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "44067725000172|12|Assinatura 6º Termo Aditivo e Termo de A": {
+  "fase": "transicao",
+  "confianca": 0.32
+ },
+ "42276907000128|3|Renúncia de Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "28019100000189|1|Comunicado Conta Escrow": {
+  "fase": "operacional",
+  "confianca": 0.84
  }
 }
