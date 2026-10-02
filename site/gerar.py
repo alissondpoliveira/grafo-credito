@@ -8,6 +8,7 @@ Uso: python site/gerar.py
 
 import csv
 import html
+import re
 import unicodedata
 import json
 import statistics
@@ -171,7 +172,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
     for c in ler_csv(CONTROLADORES):
         controladores.setdefault(c["cnpj_companhia"], []).append(c)
 
-    nos, links, vistos = [], [], set()
+    nos, links, vistos, pendentes_escritura = [], [], set(), []
 
     def no(i, **kw):
         if i not in vistos:
@@ -200,13 +201,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
                     no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, detalhe="controlador declarado na CVM")
                 links.append({"source": c_id, "target": alvo, "tipo": "controla"})
         elif u["fonte_grupo"] == "escritura":
-            for r in revisao.get(s["codigo"], []):
-                p_id = "c:" + sem_acento(r["parte"]).upper()
-                no(p_id, tipo="controlador" if "acionista" in r["papel"] or "interveniente" in r["papel"] else "garantidor",
-                   rotulo=r["parte"].title(), grupo=g, detalhe=f'{r["papel"]} na escritura (a revisar)')
-                links.append({"source": p_id, "target": em_id, "tipo": "escritura"})
-                if "fiador" in r["papel"] or "garantidor" in r["papel"]:
-                    links.append({"source": p_id, "target": "s:" + s["codigo"], "tipo": "garante"})
+            pendentes_escritura.append((s, u, em_id, g))
         elif u["fonte_grupo"] == "inferido":
             g_id = "g:" + g
             no(g_id, tipo="grupo", rotulo=g, grupo=g, detalhe="grupo inferido, a confirmar na escritura")
@@ -225,6 +220,19 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
             for c in controladores.get(u["cnpj"], []):
                 if not c["socio_de"]:
                     links.append({"source": "c:" + (c["cnpj_controlador"] or c["controlador"]), "target": "s:" + s["codigo"], "tipo": "cross"})
+
+    # partes citadas nas escrituras: reaproveita o nó do controlador da CVM quando é a mesma empresa
+    chave = lambda t: re.sub(r"[^A-Z]", "", sem_acento(t).upper().replace("IEB-", "").replace(" S/A", "").replace(" S.A.", ""))[:22]
+    for s, u, em_id, g in pendentes_escritura:
+        for r in revisao.get(s["codigo"], []):
+            existente = next((n for n in nos if n["tipo"] == "controlador" and chave(n["rotulo"]) == chave(r["parte"])), None)
+            p_id = existente["id"] if existente else "c:" + sem_acento(r["parte"]).upper()
+            if not existente:
+                no(p_id, tipo="controlador" if "acionista" in r["papel"] or "interveniente" in r["papel"] else "garantidor",
+                   rotulo=r["parte"].title(), grupo=g, detalhe=f'{r["papel"]} na escritura (a revisar)')
+            links.append({"source": p_id, "target": em_id, "tipo": "escritura"})
+            if "fiador" in r["papel"] or "garantidor" in r["papel"]:
+                links.append({"source": p_id, "target": "s:" + s["codigo"], "tipo": "garante"})
 
     for n in [n for n in nos if n["tipo"] == "grupo"]:
         for c in [c for c in nos if c["tipo"] == "controlador" and c["grupo"] == n["grupo"]]:
@@ -247,71 +255,165 @@ const corDesvio = dp => dp==null||isNaN(dp) ? 'var(--surface)' : dp<=-1.5?'var(-
 const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span><br><span class="fraco">'+n.grupo+'</span>'
   + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps') + linha(n.classe==='DI+'?'Mediana DI+':'Spread justo (pares)', fmt(n.justo,0)+' bps') + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') : '<br>'+n.status);
 
-// ---------- mapa de controle e risco ----------
+// ---------- mapa de controle e risco: grupo -> empresas -> emissões ----------
 (function(){
   const svg = d3.select('#grafo'); const W = 1120, H = 700;
   svg.attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio','xMidYMid meet');
   const g = svg.append('g');
-  svg.call(d3.zoom().scaleExtent([.4, 5]).on('zoom', e => g.attr('transform', e.transform)));
-  const nos = D.grafo.nodes, links = D.grafo.links;
-  const raio = n => ({controlador:6, grupo:7, garantidor:6, emissor:5.5, serie:4.2})[n.tipo];
-  const grupos = [...new Set(nos.map(n=>n.grupo).filter(x=>!x.startsWith('Isolada')))];
-  const tam = Object.fromEntries(grupos.map(x => [x, nos.filter(n=>n.grupo===x).length]));
-  grupos.sort((a,b)=>tam[b]-tam[a]);
-  const ancora = {}; grupos.forEach((x,i) => { const a = -Math.PI/2 + 2*Math.PI*i/grupos.length; ancora[x] = [W/2+330*Math.cos(a), H/2+250*Math.sin(a)]; });
-  const ax = n => ancora[n.grupo] ? ancora[n.grupo][0] : W/2, ay = n => ancora[n.grupo] ? ancora[n.grupo][1] : H/2;
-  nos.forEach(n => { n.x = ax(n)+(Math.random()-.5)*40; n.y = ay(n)+(Math.random()-.5)*40; });
-  const sim = d3.forceSimulation(nos)
-    .force('link', d3.forceLink(links).id(d=>d.id).distance(l => l.tipo==='emitiu'?13:30).strength(l => l.tipo==='emitiu'?1:.4))
-    .force('charge', d3.forceManyBody().strength(n => n.tipo==='serie'?-12:-55).distanceMax(180))
-    .force('x', d3.forceX(ax).strength(n => ancora[n.grupo]?.16:.08)).force('y', d3.forceY(ay).strength(n => ancora[n.grupo]?.16:.08))
-    .force('colide', d3.forceCollide().radius(n => raio(n)+2));
-  for (let i=0;i<450;i++) sim.tick(); sim.stop();
-
+  const zoom = d3.zoom().scaleExtent([.4, 5]).on('zoom', e => g.attr('transform', e.transform));
+  svg.call(zoom).on('dblclick.zoom', null);
   const camHull = g.append('g'), camLink = g.append('g'), camNo = g.append('g'), camRot = g.append('g');
-  const hullDe = x => { const pts = nos.filter(n=>n.grupo===x).flatMap(n => { const r=raio(n)+12; return [[n.x-r,n.y],[n.x+r,n.y],[n.x,n.y-r],[n.x,n.y+r]]; }); return d3.polygonHull(pts); };
-  const contornos = nos.some(n=>n.grupo.startsWith('Isolada')) ? [...grupos, 'Isolada (a identificar)'] : grupos;
-  const hull = camHull.selectAll('path').data(contornos).join('path').attr('stroke-dasharray', x => x.startsWith('Isolada')?'3 3':null).attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-width',1).attr('stroke-linejoin','round');
-  const hullRot = camHull.selectAll('text').data(contornos).join('text').text(x=>x.startsWith('Isolada')?'ISOLADAS · GRUPO A IDENTIFICAR':x.toUpperCase())
-    .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.08em').attr('fill','var(--ink-2)').attr('text-anchor','middle');
-  const link = camLink.selectAll('line').data(links).join('line').attr('stroke','var(--edge)')
-    .attr('stroke-width', l => l.tipo==='emitiu'?.7 : l.tipo==='garante'||l.tipo==='cross'?1.6 : 1.2)
-    .attr('stroke', l => l.tipo==='cross' ? 'var(--div-pos-2)' : 'var(--edge)').attr('stroke-opacity', l => l.tipo==='cross'?.55:1)
-    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='cross'?'6 2' : l.tipo==='escritura'?'8 2 2 2':null);
-  const no = camNo.selectAll('g').data(nos).join('g').style('cursor','pointer');
-  no.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
-    .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
-  no.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
-  no.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill','var(--surface)').attr('stroke','var(--ink)').attr('stroke-width',1.4);
-  no.filter(n=>n.tipo==='serie').append('circle').attr('r',raio).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2);
-  const rot = camRot.selectAll('text').data(nos.filter(n=>n.tipo!=='serie')).join('text')
-    .text(n => n.rotulo.length>30 ? n.rotulo.slice(0,29)+'…' : n.rotulo).attr('font-size',8.5).attr('fill','var(--ink-2)')
-    .attr('dx', n=>raio(n)+3).attr('dy',3).style('pointer-events','none')
-    .attr('paint-order','stroke').attr('stroke','var(--surface)').attr('stroke-width',3);
 
+  const todos = D.grafo.nodes, porId = new Map(todos.map(n => [n.id, n]));
+  const ISOL = 'Isolada (a identificar)';
+  const nomeGrupo = x => x===ISOL ? 'Isoladas' : x;
+  // emissor de cada série
+  const paiSerie = new Map(); D.grafo.links.forEach(l => { if (l.tipo==='emitiu') paiSerie.set(l.target, l.source); });
+  const grupos = [...new Set(todos.map(n => n.grupo))];
+  const resumo = Object.fromEntries(grupos.map(x => { const ss = todos.filter(n => n.grupo===x && n.tipo==='serie');
+    const ds = ss.map(n=>n.desvio).filter(v=>v!=null).sort((a,b)=>a-b);
+    return [x, {series: ss.length, emissores: todos.filter(n=>n.grupo===x && n.tipo==='emissor').length, mediana: ds.length ? ds[Math.floor(ds.length/2)] : null}]; }));
+  grupos.sort((a,b) => (a===ISOL) - (b===ISOL) || resumo[b].series - resumo[a].series);
+  const ancora = {};
+  // grupos abertos dividem o centro; bolas fechadas ficam num anel em volta (anel mais largo quando há algo aberto)
+  function posicionarAncoras(){
+    const abertos = grupos.filter(x => abertosG.has(x)), fechados = grupos.filter(x => !abertosG.has(x));
+    const anel = abertos.length ? fechados : fechados.filter(x => x!==ISOL);
+    const rx = abertos.length ? 420 : 320, ry = abertos.length ? 285 : 240;
+    anel.forEach((x,i) => { const a = -Math.PI/2 + 2*Math.PI*i/Math.max(anel.length,1); ancora[x] = [W/2+rx*Math.cos(a), H/2+ry*Math.sin(a)]; });
+    if (!abertos.length) ancora[ISOL] = [W/2, H/2];
+    abertos.forEach((x,i) => { const a = 2*Math.PI*i/abertos.length; const d = abertos.length>1 ? 150 : 0; ancora[x] = [W/2+d*Math.cos(a), H/2+d*.7*Math.sin(a)]; });
+  }
+  const abertosG = new Set(), abertosE = new Set();
+  posicionarAncoras();
+  const raioBolha = x => 14 + 5.5*Math.sqrt(resumo[x].series);
+  const raio = n => n.tipo==='bolha' ? raioBolha(n.grupo) : ({controlador:6, grupo:7, garantidor:6, emissor:6.5, serie:4.4})[n.tipo];
+
+  const pos = new Map(); grupos.forEach(x => pos.set('G:'+x, {x: ancora[x][0], y: ancora[x][1]}));
+
+  // representante visível de qualquer nó: bolha do grupo fechado, emissor fechado ou o próprio nó
+  const rep = id => { const n = porId.get(id); if (!n) return id;
+    if (!abertosG.has(n.grupo)) return 'G:'+n.grupo;
+    if (n.tipo==='serie' && !abertosE.has(paiSerie.get(id))) return paiSerie.get(id);
+    return id; };
+
+  function visiveis(){
+    const nos = [];
+    grupos.forEach(x => { if (!abertosG.has(x)) nos.push({id:'G:'+x, tipo:'bolha', grupo:x, rotulo:nomeGrupo(x)}); });
+    todos.forEach(n => { if (!abertosG.has(n.grupo)) return; if (n.tipo==='serie' && !abertosE.has(paiSerie.get(n.id))) return; nos.push(n); });
+    const ids = new Set(nos.map(n=>n.id)), vistos = new Map();
+    D.grafo.links.forEach(l => { const s = rep(l.source.id||l.source), t = rep(l.target.id||l.target);
+      if (s===t || !ids.has(s) || !ids.has(t)) return;
+      const ponte = s.startsWith('G:') && t.startsWith('G:'), k = s<t ? s+'|'+t : t+'|'+s;
+      if (!vistos.has(k)) vistos.set(k, {source:s, target:t, tipo: ponte ? 'ponte' : (s.startsWith('G:')||t.startsWith('G:')) ? 'ponte' : l.tipo}); });
+    return {nos, links:[...vistos.values()]};
+  }
+
+  const sim = d3.forceSimulation().alphaDecay(.03).velocityDecay(.35)
+    .force('link', d3.forceLink().id(d=>d.id).distance(l => l.tipo==='ponte'?160 : l.tipo==='emitiu'?30 : 46).strength(l => l.tipo==='ponte'?.02 : l.tipo==='emitiu'?.9 : .35))
+    .force('charge', d3.forceManyBody().strength(n => n.tipo==='bolha'?-300 : n.tipo==='serie'?-40 : -110).distanceMax(280))
+    .force('x', d3.forceX(n => ancora[n.grupo][0]).strength(n => n.tipo==='bolha'?.3:.2))
+    .force('y', d3.forceY(n => ancora[n.grupo][1]).strength(n => n.tipo==='bolha'?.3:.2))
+    .force('colide', d3.forceCollide().radius(n => raio(n)+(n.tipo==='bolha'?8:2.5)));
+
+  let no = camNo.selectAll('g'), link = camLink.selectAll('line'), rot = camRot.selectAll('text'), hull = camHull.selectAll('path'), hullRot = camHull.selectAll('text');
   let rotulos = 'controle';
-  const visRot = n => rotulos==='todos' || (rotulos==='controle' && n.tipo!=='emissor');
-  const desenhar = () => {
-    hull.attr('d', x => { const h = hullDe(x); return h ? 'M'+h.join('L')+'Z' : null; });
-    hullRot.each(function(x){ const ns = nos.filter(n=>n.grupo===x); d3.select(this).attr('x', d3.mean(ns,n=>n.x)).attr('y', d3.min(ns,n=>n.y)-16); });
-    link.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
-    no.attr('transform', n => `translate(${n.x},${n.y})`); rot.attr('x',n=>n.x).attr('y',n=>n.y);
-  };
-  const aplicarRot = () => rot.attr('display', n => visRot(n)?null:'none');
-  desenhar(); aplicarRot();
-  sim.on('tick', desenhar);
-  no.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.25).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+  const visRot = n => n.tipo==='bolha' || n.tipo==='serie' ? false : rotulos==='todos' || (rotulos==='controle' && n.tipo!=='emissor') || (n.tipo==='emissor' && abertosE.has(n.id));
 
-  const viz = new Map(); links.forEach(l => [[l.source.id,l.target.id],[l.target.id,l.source.id]].forEach(([a,b]) => { if(!viz.has(a)) viz.set(a,new Set()); viz.get(a).add(b); }));
-  const realcar = ids => { no.attr('opacity', n => !ids||ids.has(n.id)?1:.12); rot.attr('opacity', n => !ids||ids.has(n.id)?1:.12).attr('display', n => ids&&ids.has(n.id) ? null : visRot(n)?null:'none'); link.attr('opacity', l => !ids||(ids.has(l.source.id)&&ids.has(l.target.id))?1:.06); hull.attr('opacity', x => !ids||[...ids].some(i=>nos.find(n=>n.id===i)?.grupo===x)?1:.3); };
-  no.on('mouseenter', (e,n) => { const ids = new Set([n.id, ...(viz.get(n.id)||[])]); realcar(ids);
-        mostrar(e, n.tipo==='serie' ? textoSerie(n) : '<b>'+n.rotulo+'</b><br><span class="fraco">'+n.grupo+'</span><br>'+(n.detalhe||'')); })
-    .on('mousemove', mover).on('mouseleave', () => { realcar(null); esconder(); aplicarRot(); })
-    .on('click', (e,n) => { if (n.tipo==='serie') { selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } });
+  function desenhar(){
+    hull.attr('d', x => { const pts = sim.nodes().filter(n=>n.grupo===x && n.tipo!=='bolha').flatMap(n => { const r=raio(n)+12; return [[n.x-r,n.y],[n.x+r,n.y],[n.x,n.y-r],[n.x,n.y+r]]; }); const h = d3.polygonHull(pts); return h ? 'M'+h.join('L')+'Z' : null; });
+    hullRot.each(function(x){ const ns = sim.nodes().filter(n=>n.grupo===x && n.tipo!=='bolha'); if (!ns.length) return; d3.select(this).attr('x', d3.mean(ns,n=>n.x)).attr('y', d3.min(ns,n=>n.y)-16); });
+    link.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
+    no.attr('transform', n => `translate(${n.x},${n.y})`);
+    rot.attr('x', n => n.x).attr('y', n => n.y);
+  }
+
+  function atualizar(origem){
+    posicionarAncoras();
+    const {nos, links} = visiveis();
+    // nós novos nascem na posição de quem foi aberto
+    nos.forEach(n => { if (n.x==null || !pos.has(n.id)) { const p = pos.get(origem) || pos.get('G:'+n.grupo) || {x:ancora[n.grupo][0], y:ancora[n.grupo][1]};
+      n.x = p.x + (Math.random()-.5)*20; n.y = p.y + (Math.random()-.5)*20; } });
+    sim.nodes(nos); sim.force('link').links(links);
+
+    const abertos = [...abertosG];
+    hull = camHull.selectAll('path').data(abertos, x=>x).join('path').attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-linejoin','round')
+      .attr('stroke-dasharray', x => x===ISOL?'3 3':null).style('cursor','pointer').on('click', (e,x) => { e.stopPropagation(); fecharGrupo(x); });
+    hullRot = camHull.selectAll('text').data(abertos, x=>x).join('text').text(x => (x===ISOL?'ISOLADAS · GRUPO A IDENTIFICAR':x.toUpperCase())+'  ×')
+      .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.08em').attr('fill','var(--ink-2)').attr('text-anchor','middle').style('cursor','pointer')
+      .on('click', (e,x) => { e.stopPropagation(); fecharGrupo(x); });
+
+    link = camLink.selectAll('line').data(links, l => (l.source.id||l.source)+'|'+(l.target.id||l.target)).join('line')
+      .attr('stroke', l => l.tipo==='cross'?'var(--div-pos-2)':'var(--edge)')
+      .attr('stroke-width', l => l.tipo==='ponte'?2 : l.tipo==='emitiu'?.8 : 1.3)
+      .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='escritura'?'8 2 2 2' : l.tipo==='ponte'?'2 4' : null);
+
+    no = camNo.selectAll('g.no').data(nos, n=>n.id).join(enter => {
+      const ge = enter.append('g').attr('class','no').style('cursor','pointer');
+      ge.filter(n=>n.tipo==='bolha').append('circle').attr('r', 0).attr('fill','var(--surface-2)').attr('stroke','var(--line-2)').attr('stroke-width',1.5)
+        .transition().duration(350).attr('r', n => raio(n));
+      ge.filter(n=>n.tipo==='bolha').append('text').attr('class','rb').attr('text-anchor','middle').attr('dy', n => raio(n)+15).attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text(n=>n.rotulo);
+      ge.filter(n=>n.tipo==='bolha').append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+28).attr('font-size',9.5).attr('fill','var(--ink-3)')
+        .text(n => resumo[n.grupo].emissores+' emissores · '+resumo[n.grupo].series+' séries');
+      ge.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
+        .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
+      ge.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
+      ge.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill','var(--surface)').attr('stroke','var(--ink)').attr('stroke-width',1.5);
+      ge.filter(n=>n.tipo==='emissor').append('text').attr('class','mais').attr('text-anchor','middle').attr('dy',3).attr('font-size',8).attr('font-weight',700).attr('fill','var(--ink)').text('+');
+      ge.filter(n=>n.tipo==='serie').append('circle').attr('r',0).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2).transition().duration(300).attr('r', raio);
+      return ge;
+    });
+    no.select('text.mais').text(n => abertosE.has(n.id) ? '−' : '+');
+
+    rot = camRot.selectAll('text').data(nos.filter(n => n.tipo!=='bolha' && n.tipo!=='serie'), n=>n.id).join('text')
+      .text(n => n.rotulo.length>30 ? n.rotulo.slice(0,29)+'…' : n.rotulo).attr('font-size',8.5).attr('fill','var(--ink-2)')
+      .attr('dx', n=>raio(n)+3).attr('dy',3).style('pointer-events','none').attr('paint-order','stroke').attr('stroke','var(--surface)').attr('stroke-width',3);
+    aplicarRot();
+    ligarEventos();
+    sim.alpha(1).restart();
+    clearTimeout(enquadrar.t); enquadrar.t = setTimeout(enquadrar, 900);
+  }
+  // zoom automático: aproxima o que está aberto; tudo recolhido volta à vista inteira
+  function enquadrar(){
+    const foco = sim.nodes().filter(n => n.tipo!=='bolha');
+    if (!foco.length) { svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity); return; }
+    const x0 = d3.min(foco,n=>n.x)-60, x1 = d3.max(foco,n=>n.x)+160, y0 = d3.min(foco,n=>n.y)-50, y1 = d3.max(foco,n=>n.y)+40;
+    const k = Math.max(1, Math.min(2.2, .9*Math.min(W/(x1-x0), H/(y1-y0))));
+    svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity.translate(W/2 - k*(x0+x1)/2, H/2 - k*(y0+y1)/2).scale(k));
+  }
+  const aplicarRot = () => rot.attr('display', n => visRot(n)?null:'none');
+  sim.on('tick', () => { sim.nodes().forEach(n => pos.set(n.id, {x:n.x, y:n.y})); desenhar(); });
+
+  function abrirGrupo(x){ abertosG.add(x); atualizar('G:'+x); }
+  function fecharGrupo(x){ abertosG.delete(x); todos.filter(n=>n.grupo===x && n.tipo==='emissor').forEach(n=>abertosE.delete(n.id)); pos.set('G:'+x, centro(x)); atualizar(); }
+  const centro = x => { const ns = sim.nodes().filter(n=>n.grupo===x); return ns.length ? {x:d3.mean(ns,n=>n.x), y:d3.mean(ns,n=>n.y)} : {x:ancora[x][0], y:ancora[x][1]}; };
+  function alternarEmissor(id){ abertosE.has(id) ? abertosE.delete(id) : abertosE.add(id); atualizar(id); }
+
+  const viz = () => { const m = new Map(); sim.force('link').links().forEach(l => [[l.source.id,l.target.id],[l.target.id,l.source.id]].forEach(([a,b]) => { if(!m.has(a)) m.set(a,new Set()); m.get(a).add(b); })); return m; };
+  function realcar(ids){ no.attr('opacity', n => !ids||ids.has(n.id)?1:.15); rot.attr('opacity', n => !ids||ids.has(n.id)?1:.15); link.attr('opacity', l => !ids||(ids.has(l.source.id)&&ids.has(l.target.id))?1:.08); }
+  function ligarEventos(){
+    no.on('mouseenter', (e,n) => { const v = viz(); realcar(new Set([n.id, ...(v.get(n.id)||[])]));
+        if (n.tipo==='bolha') { const r = resumo[n.grupo]; mostrar(e, '<b>'+nomeGrupo(n.grupo)+'</b>'+linha('Emissores', r.emissores)+linha('Séries', r.series)+linha('Desvio mediano', r.mediana==null?'–':sinal(r.mediana)+' bps')+'<span class="fraco">clique para abrir</span>'); }
+        else if (n.tipo==='serie') mostrar(e, textoSerie(n));
+        else mostrar(e, '<b>'+n.rotulo+'</b><br><span class="fraco">'+nomeGrupo(n.grupo)+'</span><br>'+(n.detalhe||'')+(n.tipo==='emissor'?'<br><span class="fraco">clique para '+(abertosE.has(n.id)?'recolher':'ver as emissões')+'</span>':'')); })
+      .on('mousemove', mover).on('mouseleave', () => { realcar(null); esconder(); })
+      .on('click', (e,n) => { e.stopPropagation(); esconder();
+        if (n.tipo==='bolha') abrirGrupo(n.grupo);
+        else if (n.tipo==='emissor') alternarEmissor(n.id);
+        else if (n.tipo==='serie') { selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } })
+      .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+  }
+
+  // controles
   const selG = document.getElementById('filtroGrupo');
-  ['Todos os grupos', ...grupos, 'Isolada (a identificar)'].forEach(x => { const o=document.createElement('option'); o.value=x; o.textContent=x; selG.appendChild(o); });
-  selG.addEventListener('change', () => { const x = selG.value; realcar(x==='Todos os grupos'?null:new Set(nos.filter(n=>n.grupo===x).map(n=>n.id))); });
+  ['Todos os grupos', ...grupos].forEach(x => { const o=document.createElement('option'); o.value=x; o.textContent=nomeGrupo(x); selG.appendChild(o); });
+  selG.addEventListener('change', () => { const x = selG.value; if (x==='Todos os grupos') { realcar(null); return; } if (!abertosG.has(x)) abrirGrupo(x); setTimeout(() => realcar(new Set(sim.nodes().filter(n=>n.grupo===x).map(n=>n.id))), 400); });
   document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
+  document.getElementById('abrirTudo').addEventListener('click', () => { grupos.forEach(x => abertosG.add(x)); atualizar(); });
+  document.getElementById('abrirEmissoes').addEventListener('click', () => { grupos.forEach(x => abertosG.add(x)); todos.filter(n=>n.tipo==='emissor').forEach(n=>abertosE.add(n.id)); atualizar(); });
+  document.getElementById('fecharTudo').addEventListener('click', () => { abertosG.clear(); abertosE.clear(); grupos.forEach(x => pos.set('G:'+x, {x:ancora[x][0], y:ancora[x][1]})); atualizar(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
+
+  atualizar();
 })();
 
 // ---------- desvio em relação aos pares (barras divergentes) ----------
@@ -512,12 +614,13 @@ def gerar_projeto() -> str:
 </div>
 
 <section id="mapa">
-<div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada contorno é um grupo de risco. Quadrados são controladores declarados na CVM; anéis são emissores; pontos são séries, coloridos pelo desvio em relação aos pares. Passe o mouse para ver as ligações, arraste os nós, role para dar zoom, clique numa série para simular.</p></div></div>
+<div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada bola é um grupo de risco, do tamanho do número de séries. Clique numa bola para abrir as empresas do grupo (controladores e emissores); clique num emissor para abrir as emissões, coloridas pelo desvio em relação aos pares; clique no nome do grupo para recolher. Linhas pontilhadas entre bolas são empresas compartilhadas entre grupos.</p></div></div>
 <div class="painel">
-<div class="controles"><label>Destacar <select id="filtroGrupo"></select></label>
-<label>Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
+<div class="controles"><label>Abrir grupo <select id="filtroGrupo"></select></label>
+<button id="abrirTudo">abrir todos os grupos</button><button id="abrirEmissoes">abrir tudo até as emissões</button><button id="fecharTudo">recolher</button>
+<label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
-<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
+<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>· · ponte entre grupos</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
 </section>
 

@@ -143,6 +143,17 @@ def main() -> None:
             "motivo_exclusao": fora,
         })
 
+    # o grupo é do emissor (CNPJ): todas as séries herdam a melhor evidência encontrada em qualquer uma delas
+    peso = {"CVM FRE": 3, "escritura": 2, "inferido": 1, "": 0}
+    melhor = {}
+    for l in linhas:
+        if peso[l["fonte_grupo"]] > peso[melhor.get(l["cnpj"], {}).get("fonte_grupo", "")]:
+            melhor[l["cnpj"]] = l
+    for l in linhas:
+        m = melhor.get(l["cnpj"])
+        if m and peso[m["fonte_grupo"]] > peso[l["fonte_grupo"]]:
+            l.update(grupo_risco=m["grupo_risco"], fonte_grupo=m["fonte_grupo"], motivo_grupo=m["motivo_grupo"] + " (mesmo emissor)")
+
     with DESTINO.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(linhas[0].keys()), lineterminator="\n")
         w.writeheader()
