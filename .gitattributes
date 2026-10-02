@@ -1,0 +1,6 @@
+# Arquivos originais da ANBIMA: preservar byte a byte (latin-1, CRLF)
+dados/anbima/debentures/brutos/** -text
+*.py text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
