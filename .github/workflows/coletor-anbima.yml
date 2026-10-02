@@ -45,6 +45,18 @@ jobs:
         continue-on-error: true
         run: python analises/universo_grupos.py
 
+      - name: Negócios do secundário (SND)
+        continue-on-error: true
+        run: python coletor/snd_negocios.py 30
+
+      - name: Contratos de concessão (ANEEL)
+        continue-on-error: true
+        run: python coletor/aneel_concessoes.py
+
+      - name: Documentos, notícias e análises por emissor
+        continue-on-error: true
+        run: python coletor/documentos.py
+
       - name: Precificar universo
         run: python analises/precificacao.py
 

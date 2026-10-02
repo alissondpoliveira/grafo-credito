@@ -1,0 +1,1811 @@
+{
+ "gerado_em": "2026-10-02T12:36",
+ "emissores": {
+  "02998611000104": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-31",
+    "titulo": "Conclusão do descruzamento de participações na IE Madeira e IE Garanhuns",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1550490&numSequencia=1075196&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-24",
+    "titulo": "Oferta Pública de Ações - Definição do Preço por Ação",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1547623&numSequencia=1072329&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-15",
+    "titulo": "Lançamento de Oferta Pública Primária",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1544922&numSequencia=1069628&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-06",
+    "titulo": "POTENCIAL OFERTA PÚBLICA",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1541896&numSequencia=1066602&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-27",
+    "titulo": "JULGAMENTO DO TRIBUNAL REGIONAL FEDERAL DA 1ª REGIÃO (TRF1) SOBRE O RBSE",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1527167&numSequencia=1051873&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-04-07",
+    "titulo": "Conversão de Ações",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1502158&numSequencia=1026864&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-03-19",
+    "titulo": "DESCRUZAMENTO DE PARTICIPAÇÕES NA IE MADEIRA E IE GARANHUNS",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1492844&numSequencia=1017550&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-03-19",
+    "titulo": "CONVERSÃO DE AÇÕES ORDINÁRIAS",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1492846&numSequencia=1017552&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-06-10",
+    "titulo": "DECISÃO SOBRE RBSE E SEUS IMPACTOS",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1389186&numSequencia=913898&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-07-18",
+    "titulo": "Pricing Oferta Pública Secundária TRPL4",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1261017&numSequencia=785743&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-07-12",
+    "titulo": "Oferta Pública Secundária",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1259286&numSequencia=784012&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-03-01",
+    "titulo": "Interrupção do Processo de Retirada de Patrocínio do Plano de Suplementação de Aposentadorias e Pensão PSAP/CTEEP",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1201867&numSequencia=726593&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-09-08",
+    "titulo": "UBS Global Emerging Markets Conference",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1565414&numSequencia=1090120&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-04",
+    "titulo": "Apresentação de Resultados 2T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1551492&numSequencia=1076198&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-06-18",
+    "titulo": "Conferência CITI",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1536060&numSequencia=1060766&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-06-11",
+    "titulo": "Comunicado ao mercado - Piraquê",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1533471&numSequencia=1058177&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-27",
+    "titulo": "Obtenção de LI - Projeto Serra Dourada (Bloco 2)",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1527416&numSequencia=1052122&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-05",
+    "titulo": "Apresentação de resultados 1T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1515884&numSequencia=1040590&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-04",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1515429&numSequencia=1040135&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-04-22",
+    "titulo": "Energização Jacarandá",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1507001&numSequencia=1031707&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-09-14",
+    "titulo": "Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1567916&numSequencia=1092622&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-06-12",
+    "titulo": "Pagamento de principal e juros da 1a Emissão de Debêntures Simples da IE Ivaí",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1534102&numSequencia=1058808&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-04-16",
+    "titulo": "Amortização||Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1361880&numSequencia=886606&numVersao=5"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2024-06-14",
+    "titulo": "Aviso aos Debenturistas - Pgto de Juros 8a emissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1250192&numSequencia=774918&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2024-02-14",
+    "titulo": "Pagamento de Principal e Juros - 5a emissão de debêntures",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1194385&numSequencia=719111&numVersao=2"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-07-03",
+    "titulo": "Escritura - 23ª Emissão de Debêntures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1541860&numSequencia=1066566&numVersao=1",
+    "serie": "ISAEB3"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-04-01",
+    "titulo": "1º Aditamente 22ª emissão",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1500152&numSequencia=1024858&numVersao=1",
+    "serie": "ISAEB2"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-03-20",
+    "titulo": "Escritura - 22a Emissão de Debêntures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1493302&numSequencia=1018008&numVersao=1",
+    "serie": "ISAEB2"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-01-30",
+    "titulo": "Primeiro Aditamento da 21ª Emissão de Debêntures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1471764&numSequencia=996470&numVersao=1",
+    "serie": "ISAEB1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-01-09",
+    "titulo": "Escritura - 21a Emissão de Debêntures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1466045&numSequencia=990751&numVersao=1",
+    "serie": "ISAEB1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-10-20",
+    "titulo": "Aditamento 20ª Emissão de Debêntures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1434084&numSequencia=958796&numVersao=1",
+    "serie": "ISAEB0"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-29",
+    "titulo": "ISA Energia (ISAE3, ISAE4) aprova JCP de R$ 0,57 por ação",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaFJtdDNnU1pETnFKV3dTZWFuX2kteWxsWWV4aU9oWVBwWElFX0hOUnRIUFAwR3JhZjA5Mm13V2g0ZmxQUE5fMlF0V0doRDhqMEpPMGhpYWhRbXctRmxMN3dmZ0J1TDFVRkdxQjROcDVPRmk2UDZmZWRHU1ZiV2NGbENJYW5sdTJCYWw5U2VkamxOREFM?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-03",
+    "titulo": "ISA Energia (ISAE4) registra lucro de R$ 173,9 mi no 2T26",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVy1Ud3FkaTFkQ0V6ajhYZWIwam9pR01XaGI1SVVUa0tnb2hTVkVjeGZya0luTUFYajB0ajNuSkRucW9TRFV6VmRPTXI0VG5ubkJaMjQ3aWRDdU93V2tRNzEyeFN1X2FUS2NxZUxWU0lWcGpKQkZkSzlOZURNamhZdlpvMmF6VHNGRUJMVnVyVXkxemFCNXc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-03",
+    "titulo": "ISA Energia Brasil (ISAE3) lucra R$ 173,9 milhões no 2T26",
+    "fonte": "BPMoney",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZVh6aGM5YTUzRXpJNXVYQ01ueGVOT2JuSlFsV01fSnA2VXNFRUlqREhibjNNSTNfX1JuWktQNFJldUFpeWNmdFBIYnVYSnRIbXJwaVAwa2xSdlN4TnptY25Xb0owUVAyZXJwSllXMWlpZVlQX3hhUlZFTGZXWkJJNUlwMHUycUEyNDdva0ln?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-15",
+    "titulo": "ISA Energia (ISAE3, ISAE4) registra oferta de até 44,4 mi de ações PN",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYldnWi1hY00tOG9INWhCWGRlenhmREc5OGxNeWc4ZkdjRkpIS1A2Q0NDcEY1cW1rLUxadjh0Z2ZPWFU0NGpBbUJ4V2NJaEJOMWxXMjNXY1ZRdXU0Q0NLV3pwNTA4MVNtckh3RDVjeTg4UGxkUG1zU0s1VDdOc0kzZzl2TXZhdTZJODBDWVFuWl9vLTdOSUpaZXFWenpSMUQ4bzBBVGRn?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-06",
+    "titulo": "ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de ações PN",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTWpJQ1ZzbTktRHozOXpXcmxIbTI4YklCX3ZsNzRKN0ZmQWdmeEtvMVBNc29hR3JjYzQySzN1ZFBsM1d6Z3BNYmZ1TUt1VEttWmk3X09ZemlYdkRSUEU3aUJhYUw2NTE0eWxVajNQb0VTalE4ZFlLQ212eWdfTGc3dmlrZmg4RmpHRGhnblBhd0Jfem0yOWc5SUpmcldwcEk?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-03",
+    "titulo": "ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de R$ 650 mi",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdVRRZWpXUi1CX2xwT2c1WWRhQnBjRW9BdnRFdDZWVGJzYUkxTk1mLVAzbDVuUk55WE1XU2pCdUlLU25UUXpodjQ1QnYtV2tyME9xVDNqV3ZyUVFTLUotQy1USXlrakdGNWF0WjQxc1I0TUY3U2dkYVhZR3VDVk5ORWxHYnp5YnVnaTk5dWNLdmJrQVhyMGVFMGYwUGNlVEU?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-05-27",
+    "titulo": "ISA Energia (ISAE3, ISAE4) registra decisão do TRF1 sobre RBSE",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbjJydms2RXVyMzI1SXlUcXBDbGdWZDEyUTN0UlFhay03QmxITkVYaC1fQU9QRVByVXVyV3phVFhoSXVrSnNmQnF1Wmd2QThwLVUySlBQdVhDUHdPWTBKcWlkSWpZeG1xNjgxQ2UzdGZsTk5Wc0JQdHNZLTIzNDJIdWZxbzVwTVpQNkh6RXN4TUFReS1sZXpGckNFbHNFQQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-05-04",
+    "titulo": "Isa Energia (ISAE4): Lucro cai 14%, para R$ 619,1 milhões, com peso do resultado financeiro",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeXVlTUY0UmFPZXdaZXc5bS1JTWJocTZwRE1YVWV2RFJIVk9JWjlfYkp5R3FXYm9JM2VDWkNfMWNWNEs1dFpEcWktUEd3NTdmZk5QeWNoQmY5WkVXMVlOd1B6d1VnSXpydGJLb1JSOEQ2bzQxMkxFaEVteDhGb0dYU0VwNUFsWC1CSEtsRVZLbnJWV254TktBeTFvd2tmdnZ4cWt5amM5TXMwa21Na1lkWEtUT2hvejE3dGJ3?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-22",
+    "titulo": "AXIA Energia atinge 21% do capital da ISA Energia (ISAE3)",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWjFkbXhnMUU5cnJNMm90d2J1a3hjVFhjZENJWHQ1LVUyZzRTelB4TXItOTdvOHh0ZHVPc3FjMUlzYThuWnNFNTFyUFNUQkpKV0xwTkxGSGFnbUYwSThmZ0lXSWVReTN4emdibFBPOHR0ckFEbEtEaXRZMWJUaXpBUXRUWDN4dXhYX21HQ1JTeEJLbnRHZ3g4?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-22",
+    "titulo": "ISA Energia (ISAE3) registra início da operação do projeto Jacarandá",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUnBzNXhjVGdLZEx2THlRZ2YzQlEzUEFxMlBwaGdqamRGVUZhTHRlY2w4TjZhNFkzbG1acEo4ZXcwYnlHMDBiLWRDRHNNakt1a1hDU1lyQlBfbnpZTnMzOHl6R3U1aVJPUV85RjJIZDlIUlFkWlhKZ0NLcjJIN3R2OHlIR1l5NlhMSDFOSklFcnZ2MElmQ0FFdG9Fam9oZF9JaHlvckFIUQ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2026-08-04",
+    "titulo": "ISA Energia (ISAE4) vê lucro pressionado por despesas financeiras; entenda o resultado do 2T26",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdUN5dzBDcEFsQ2dNSVFjZk1NbDV6TGVValdsX001RkN5dlJ3LVFad2d6Y0RnbzVHYlNZUFBDTVp3ZHlyU1J3SzBvNE0xMUxTWGdkYmJweHZYanA0c2tQV19XNUJESXg2NjVFUFMzTTlzWXVyeHBTUDlwbklvem4zc1R1ZlZsS1MzRmdYVGhaVGlxemVtUV9iQ0l4Xy3SAaIBQVVfeXFMTTNoQnUwR3YydGF5cEExeUtQdlZWTnhjbWE4REFUS2pKLW5jVGxkX2RYcnlfanQyM2JENUNfdTBNaDF0VHhuUE5tajIzR2ZWTTJCSmFrYlVkUlFmWHZRSTE1RGRmR3NJRGNROWNiOUtrNWo4dXppVDd0T3V4bkFXTmROeDdjYlRNc3I4aUo4TEc1UERQOWZGeXlRYy1aRTRENG9B?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2026-05-05",
+    "titulo": "ISA Energia (ISAE4) 1T26: Resultados Ajustados em Linha",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUWZuek9MTHBudExQeDhRclk2bDRyZWFLZFptV21ha185clpGR0gzejJ2X0RoNzZfRTZKYld3RU5FaXVrRkFZb3pfemlqWDRGYlhlWTBXYkN5SVowZ2tobFdEM1YtVGNZTlhFZDdIdUtSU3ZJNFphX2JyYkZycWRVOWRqTkV5bUZ1eXdmOVVtbjQ3R0tHS0V0T0ltR2gzRXUt?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2025-02-25",
+    "titulo": "ISA Energia (ISAE4): Resultado pouco abaixo do esperado devido a custos mais altos",
+    "fonte": "BTG Pactual",
+    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPQU1qQndsM3g3Mng1Y0VMd2diMUt1TW5LcXJSZTk0MkszWFVfVjFLMUIwYWwzcHo4OVNlQXFUcmw5Z240NEdYeGthejBHM29naXhQSUZtWDZuZDNqeUV5RzgyQjB2OHBjRm1sX0tDaGVNOEwtQlg5dW8wcGNPc21DdEE0UWs4WEZ6R2NfdUU5bVVBR29CQ1pfalExc3k2SkZJV1psLUdsTHBvS1gweEhtMHFJdng4U0I3RHVRd2dnZy05bW9sREdDaUlTaUtZVXVyS0hVOThkUE9fUUdGclgxcmlBTjdrUkgxeW8xTFcyejNIUQ?oc=5"
+   }
+  ],
+  "07779299000173": [
+   {
+    "tipo": "escritura",
+    "data": "2025-12-11",
+    "titulo": "2025.12.11 - Escritura de Emissão - vf Registrada RTD São Paulo.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=72795",
+    "serie": "EDPR13"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-10-03",
+    "titulo": "Governo de Goiás, por intermédio da CELGPAR, realiza leilão na B3 para alienação de participações societárias",
+    "fonte": "B3",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNVlFFX010cURpRnBRYTBjenVoMlN6ajlVOHFGTWRfdHp4cWswTmpJekJRVXJJYkhSd19SOUhIa0xiaWpJRDJUM3hzeHltZzBPUV9FVGZaTk9ENU1TWFp4X21ZUUQ5bUhfbFZTV1MzaWdOSEN3ZVRJTThkMlZRSkRfQW0xTnNqS2UySHZpV054N3J5OVVpYmxTOW1nUHhLbV9TNkRKeDNKZE5uSDlORnJoSlVtRzhqNFBLc3hxalRNUEQ1dUJwQjlWY2xPQlJwdWFvSmpFb24tWDdrT1lkdGRRTXNR?oc=5"
+   }
+  ],
+  "92715812000131": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-12-05",
+    "titulo": "Alteração de Controle Acionário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453640&numSequencia=978352&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-12-01",
+    "titulo": "Alteração de Controle Acionário da Companhia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1451141&numSequencia=975853&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-04-26",
+    "titulo": "Reorganização Societária 5 pequenas transmissoras",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1227467&numSequencia=752193&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-02-28",
+    "titulo": "Incorporação da CPFL Cone Sul pela CPFL Transmissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1200548&numSequencia=725274&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-10-31",
+    "titulo": "Aquisição de lote no Leilão de Transmissão ANEEL nº 4/2025",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1438066&numSequencia=962778&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-05-22",
+    "titulo": "Oferta Pública de Distribuição da 15ª Emissão de Debêntures - Resultado do Procedimento de Bookbuilding",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381694&numSequencia=906406&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-03-05",
+    "titulo": "Oferta pública de distribuição da 14ª emissão de debentures - Conclusão do Procedimento de Bookbuilding",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1342001&numSequencia=866727&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-05-20",
+    "titulo": "Resultado do Procedimento de Bookbuilding - Oferta Pública de Distribuição da 11ª Emissão de Debêntures Simples",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1240243&numSequencia=764969&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-05-15",
+    "titulo": "Atualização do cronograma da oferta pública de distribuição das Debêntures - 11ª emissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1238536&numSequencia=763262&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-04-15",
+    "titulo": "Aviso ao Mercado - oferta pública de debênture -11ª emissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1221710&numSequencia=746436&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-05-22",
+    "titulo": "PRIMEIRO ADITAMENTO AO INSTRUMENTO PARTICULAR DE ESCRITURA DA 15ª (DÉCIMA QUINTA) EMISSÃO DE DEBÊNTURES",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381814&numSequencia=906526&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-05-21",
+    "titulo": "2025.05.21 - 1º Aditamento à Escritura de Emissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67042",
+    "serie": "EEELA5"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-04-30",
+    "titulo": "2025.04.30 - Escritura de Emissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67041",
+    "serie": "EEELA5"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-03-05",
+    "titulo": "2025.03.05 - 1º Aditamento à Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65577",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-02-12",
+    "titulo": "2025.02.12 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65284",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-02-12",
+    "titulo": "2025.02.12 - Escritura de Emissão CPFL Transmissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65285",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-09-03",
+    "titulo": "2024.09.03 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=58706",
+    "serie": "EEELA3"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-09-05",
+    "titulo": "BB-BI analisa a CPFL Energia sob a ótica do crédito privado",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa2VaVUVyM3RTWmEzQUMydWVXNE1meUZsSmluZUN1Znp0NVcwdnVEWHo2TUJuNllhUkdxT3ZjeXRJeHduVk9QMWczQTV5anI4c2hGajQ3TmtoNExLdFBsWUVzdS1jalVPY1Zfb2RESVR1YjBVb29wWkw3UWFFdkFKcTAyMmtJWDE1QTh0Y0lIXzJsLU0?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-04-30",
+    "titulo": "CPFL (CPFE3) aprova 15ª emissão de título de dívida no valor de R$ 1,08 bi",
+    "fonte": "Estadão",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWUJldFBwZ2ZiOThKNTZWSjdlUlU1NUxUeDBuamNnMzFkZ3NoMjdDRmpvZzRkRlF6SFZPVFY0Z09Mb0NFT2t6MS1FNGhacV9BVlNGdkszWnZLeThPclhJOUFDb0lMb3pQbWp6N3NrMlVMaERhXzVqSDhBRy12Q05RT01BcFRHX1Ftc0x6T3VvTnVGXzZVc3V0bzMwZ9IBoAFBVV95cUxOVWcwYVh0QXNvaEpJeEdaZGRiNDQ1NmVNRHF5SW5XSV9TdnRsZFFkcF9ZNUpCcS1NMGdmYm4wTnNnR1FNSUFjR0MwQVNXRGxucEdHTWJkVXVQUHpwdmtORlFObE5YeHRnZW9IY2NCVUpOSk83cEpjekFjR0NtMHlRODVOZHhLMEwxX2VHTE5pQ2lhM2w2bHZZMGRBVEN6SFpW?oc=5"
+   }
+  ],
+  "26707830000147": [],
+  "26712591000113": [],
+  "07859971000130": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-08-12",
+    "titulo": "Conclusão da aquisição de 5 ativos de transmissão de energia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1556473&numSequencia=1081179&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-21",
+    "titulo": "TAESA celebra contrato para aquisição de 5 ativos de transmissão de energia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525312&numSequencia=1050018&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-02-28",
+    "titulo": "Contratação de Formador de Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1341392&numSequencia=866118&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-01-30",
+    "titulo": "Eleição do Diretor Financeiro e de Relações com Investidores",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1328979&numSequencia=853705&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-09-27",
+    "titulo": "Aquisição de lote no leilão ANEEL 02.2024",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286043&numSequencia=810769&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-08-27",
+    "titulo": "Eleição de novo Diretor Presidente",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1276088&numSequencia=800814&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-05-08",
+    "titulo": "Proposta de Distribuição de Proventos",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1235027&numSequencia=759753&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-03-28",
+    "titulo": "Reorganização Societária - Incorporação, Cisão ou Fusão da Companhia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1215289&numSequencia=740015&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-02-21",
+    "titulo": "Alteração na Diretoria",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1197102&numSequencia=721828&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-09-16",
+    "titulo": "Eleição de Presidente do Conselho de Administração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1568852&numSequencia=1093558&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-09-03",
+    "titulo": "TAESA  Apresentação Eficiencia para Transmitir o Futuro_PressTrip",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1564384&numSequencia=1089090&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-25",
+    "titulo": "Comunicado ao Mercado - Energização de Reforço em São Pedro (3º Banco de Autotransformadores)",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561263&numSequencia=1085969&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-20",
+    "titulo": "Energização de Saíra (conversora Garabi 2)",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1559988&numSequencia=1084694&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-17",
+    "titulo": "Entrada em operação de Tangará",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1558698&numSequencia=1083404&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-10",
+    "titulo": "Comunicado ao Mercado: Obtenção de Licença de Instalação de Juruá",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1555476&numSequencia=1080182&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-04",
+    "titulo": "Comunicado ao Mercado - Energização de Ananaí",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1552127&numSequencia=1076833&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-04",
+    "titulo": "Comunicado ao Mercado - Energização Parcial Tangará",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1552133&numSequencia=1076839&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-09-15",
+    "titulo": "Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1568241&numSequencia=1092947&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-09-14",
+    "titulo": "Amortização||Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1568098&numSequencia=1092804&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-07-14",
+    "titulo": "Pagamento de Juros da 11° emissão da TAESA",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1544814&numSequencia=1069520&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-07-14",
+    "titulo": "Pagamento de Juros e Amortização da 1ª emissão de Janauba",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1544815&numSequencia=1069521&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-05-14",
+    "titulo": "Amortização||Liquidação||Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1522339&numSequencia=1047045&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-04-22",
+    "titulo": "Aviso aos Debenturistas - Pagamento de juros da 19ª Emissão de Debêntures da TAESA||Pagamento de juros/remuneração",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1507341&numSequencia=1032047&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2026-06-16",
+    "titulo": "2026.06.16 - Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=77042",
+    "serie": "TAEEE2"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-12-16",
+    "titulo": "2025.12.16 - 1º Aditamento à Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=72742",
+    "serie": "TAEEB0"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-11-17",
+    "titulo": "2025.11.17 - Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=72741",
+    "serie": "TAEEB0"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-10-29",
+    "titulo": "2025.10.29 - 1º Aditamento à Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=71676",
+    "serie": "TAEEA9"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-10-09",
+    "titulo": "2025.10.09  -Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=71675",
+    "serie": "TAEEA9"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-09-26",
+    "titulo": "2° aditamento da escritura da 18° emissão debentures",
+    "fonte": "CVM IPE",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1427161&numSequencia=951873&numVersao=1",
+    "serie": "TAEEA8"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-16",
+    "titulo": "Taesa (TAEE11) elege nova presidente do conselho de administração",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUFg5T242TXNDYjZsaXhYdUlTSlk3WmJYMDFfVXZPMzFwRkVNVEl0MzhpbDJGVnBwNDlzdWthNlY5OVhadEZWQVB1MXdvOE1nUTdRel82WDg0WWNNbmg3b1l6YkpRRzZLVHBnMHlzM0dPbTJGejgtdnprTm5XUC1PZGxGaWt2OEljRS16VzJrS09kN2NQQlVuNjlmcVEzRHppTXQ4?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-26",
+    "titulo": "Oncoclínicas, Hapvida, Bradesco, Azzas, Taesa e mais ações para acompanhar hoje",
+    "fonte": "infomoney.com.br",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPczdXMlpQUWx3UExQWmNWUTJJSjA3UU1ic1dHZmE4R1RWWVZEZVlYRTh0RmFuUTB3akk0akw2TzI4QTVETG4zQVFHdjB5MW5DcEJSM29TLTVBVTlFVUxubnZLdmdyRXpQVlhkQkxQeDY0VkFReW5vejB1bm9FbHItQ2owQzVYRmFMTHdVOXBlQTRZV3JDZzFsbHBFTlpvLTBOMVN4eVFJbFBYWlI2N3NMYWU3WGzSAboBQVVfeXFMT0ZKaUdBQk9YX2tKdGp2SC1EeHo4blJyT3ZLaXoteTJydS15N0VmWlY1TkNpa3dsUldSZXpRSlhaT2VxcV9iMkVFdFpVNUk1T1ZST09fbVVuYnN3U0ctbHJWdUVEallnMHpBY0NuQjdaWmJJSnpSM085YkRvdVA2eW5oYW1wQ21qX0hNa2pucnlpdXVSeWR4RmtCWmE0UVgtMk5EZXh6TWRWMU52MThLX2tkVC1TNGozVTNn?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-12",
+    "titulo": "Taesa (TAEE11) conclui aquisição de ativos de transmissão por R$ 1,6 bi",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUUtJMlJOVFhZQ1pJb0JrRl9OUGdHWlJqbTR5NndDYmYxdWJQNG9LSTRJZmVQUWNXQXNLLWtiWmdXNnpGcjItZ002eEp0blVUX210SFdyOHBBOUozUWhvMWJlb2F3YjRkZ3c1RzFxNkZtYXE3bFhwbXl5akpCUGhUMUloZjVERTJnNklQZ3BWN2tjQmJVNHI2UWdQcDVXWjRPZXdMdUFsSXI?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-11",
+    "titulo": "JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar hoje",
+    "fonte": "infomoney.com.br",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNR2hWR01PTWQ3RGtlZ2VmWUdFS0hlVmhZVHBuRV9mM18xNC1sWThjMm50T0dEdWhvcTJLWnliaVA2b0h2T1BkWnAwU1dJc09pYTl3OGZ3NlZGSlJZa1hSWXhLQmlKUG9jU3FXVzZpVFUzWWNUTTdrdFJtMTUtSWh5VUM1WnVYZm1mZ3kyakphOGl6MzY5VHhFRXJNN3JNSm500gGmAUFVX3lxTE9iN0JKVS1EanByQXBRTG1RMno3LUJBYW5UV0k0b1ZvSnhlcnkyTHVhbzNQck5YSFpiOGNLMUpxQTRfV1JGNXBHb0RncFNCODRxRXJYM25JUVhiS0NaenUtOG9xZGJGZWVDLWotS2hBVGZUZ0FMZVhodFpPLVJCZG90YTlabnFjS1lfcGNpeHhRMFRyemc5SzFPa1hOOHBwcHZRWFlSNFE?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-08",
+    "titulo": "Taesa (TAEE11) capta R$ 1,7 bi em debêntures",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxON0FRNTNsTnl1dlhPLTlNeXlBa3VxWEFyTkRLMFNvTnUwRXdCYjE5SjE2VXpZR0VvNWExV1B1c3FKb0h0NUNJaU1kb2h6WklwWERXVUd1TWhrbEI4ZFFHYVlfNTdXZ2cya2NlWG5VYnVTeFN0eUtEODcyV1g0OXZrT2xFbVA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-17",
+    "titulo": "Taesa capta R$ 1,7 bilhão com emissão de debêntures",
+    "fonte": "CanalEnergia",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUkNwSmJCSi1LWl9LMWtUNFhJN05uTnhBNkJ3c0E1bng5QkRKemMxdzMxczVQNXgxV0RTdzVwcGJyeGZ0TnA3R1JpVjZsR3BIYjNaRmdmOFNWbTVhYU1wSjJGbTBEUlQ5Z2xzbDZuQ040RXVCMjM1cElETFFmaFlTd0tlUmJmQ01fSkFYMWk1ZndZUDZVTGxzVFA1SFlnWWZY?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-17",
+    "titulo": "TAESA Lança Debêntures De R$ 1,7 Bi Sem Rating E Projeta Aportes Em Capex",
+    "fonte": "Cenário Energia",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObzRBXzNjSmJIRXJMcFFSdHlQS0I4NkFTZHdFSld0aTltYmpCT2tmV01TMkJ2eEp1V0hHRHF4RXFMVkd4ZEVUWFdGVklyU0ZmU3Q0Q3RxckdRZGV2OHdJeTlOWF95TzktOEFERGhldnZmdDdTME5YUmtQYVZCc0RtYWlGNG9iQXIzN1lsMGYzX052X3lKb0dLRXdKbmVfYkQ4WDNVY1gwTGxuWjQtN2hRazZDOA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-17",
+    "titulo": "Taesa (TAEE11) anuncia renúncia de presidente do conselho",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOenBYd3BGRFJUX1doak44Tzl3SkJyaUNORm9KMzliTjRlajdLRTBvbDRqR3VldjlHS2QyNTJ5ZXRaUndHUjhVdUc1NE84eTZDY2hIWVlTQkdWMkxTU2hUcktCeDNfV2dxTmZ5TUstOXJuczBlMXZqakRKYk1ZRDViN0s0UnptRmo5S2dWMGo2N2hoRGNaNmozTw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-30",
+    "titulo": "Taesa (TAEE11) registra nova RAP de R$ 23 mi com SE Açailândia",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjJuLTBnak81ZDl3TzVXem92YkpIV3lLM3JDRmZSQi1mOW5US3g3Q1FydmxxS1dWS3p3T0paQjdPRzF4dEFEWkFxODdKd1A1NTNzVkxxX0VCcFVpbDlOVzZ6OF90Tm1aSVZnUUM1WmNuMHhjRTdzeG1lTlBQUkpOSWQxQkt0NzB0T2ZSRUFOckhXRUFVQmlTaFZrYVc3Zw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-23",
+    "titulo": "Taesa paga R$ 23 milhões em juros de debêntures e reforça previsibilidade no setor elétrico",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTURQR1ZHMG9Pb09qYnZRaTcwREhrajNiMU12cktuSi1zWi1kUlV4QlFxVVBYSjJhVXRoNEIwcFVjWGhNN1ZqWFhPUHpwN0dBUUpNeHZSTV9UdGdSWUh5UV90SERJUVU4QXlnV3kyRkJtYnJsV1JENE41U2lDa05YYUZmd25NTVZoekhVQU5IQ0RaNXR5djZsbVNIVWVuTWFqa28zelJJbHJSamM5M2NBTGQ5UHZRdUxMMVhPRnlNc0gzZHBZ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2025-05-08",
+    "titulo": "Taesa (TAEE11): Resultado do 1T25",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOS25DWkd6ZnJDa3phX3pGVGliM0ZDOEpKaEZHZFZQNkp1MHVYSmtzY3hteXQ3MkoxcU5PYkI4eWtod0hhbzhPZE91Vmtsb21aSXZnQkpqMmJaLTIybWwxSFUwbmJDVmFxZUUzZXY3YS1INnUySHFmenMyR3EyQXAxdU5OZw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2024-08-13",
+    "titulo": "Taesa (TAEE11): Resultados do 2T24",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPR2h5amYwYk9Jb3RMMTN6WFh0d2ozNDh0dFh2VjU3cFRhQlp6OUFYaFluSTFqY3dCZDFxZlc0eUQwSWRVNy1UTzk4OEx4M0k0ZVF4MlZzMENkbVlaSEI1cVVGaVpHWkZ0VHlTUHJEdlBLRkNwN3paZ28tUjl6N042TFY5dFY?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2024-05-09",
+    "titulo": "Taesa (TAEE11): Resultados do 1T24",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPYUdkSWZDQzZ1ZHZZRFJlaElOYmpsOUZWSGhwdVA5MFhoZVY0WGlvNlBwZnA4NU52bnd6Y2lqRFo3aGRINlV1UEs5SEFnNW52YzlrNGZsdS03WkhRcXNLc19YY0ZTcmZvYUV2UnR1Q0RFd09aa1pDcWhMbjBaRDlKYkVXV0c?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2024-04-23",
+    "titulo": "Taesa (TAEE11) capta R$ 1,3 bilhão com emissão de debêntures",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSER4TzE0WFFDM0tjSTVSRDVTUHRfb0pOeHRHYkxaQ2hDTVo0VDlqRm9UQjZkS21lTF9Rc0RwMUR6US11QkpWaFpyUDRuN3hyMUE5Z09pYW12ZkJoaGZOWHdjODk5Y29iNGxqNGo1Qm5nbTcwY0FRNzdGMHIyMk52dE1wWExoX0FjQXfSAY8BQVVfeXFMTzdWdVUzREo0dEVnN3B2QXdJR1E2dk0wZmo4UEFkM2k5Nzc4aW9XUUo0aHRsaTc0OHVYMXpva2NfYlVUb3JOVVpNVFZObVpoMUtIWTZkUUdzdHAxelN0bURBMnVmOUp0WlBjTEJGQUlMT19yUC1haFhuYXpVZ1dpUDdpRXg1TXM4WlkwSFM4Ykk?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2024-03-07",
+    "titulo": "Taesa (TAEE11): alavancagem está confortável, diz presidente da companhia após dados do 4T23",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjljRXFPS0xESW54STJGWmpaUzdVZHpLMWxFY2ZTZGxxVFU0cWVhcDFKSzNlWC1BY3gzdEEzNXZ0TkZTN2NHRDB3U21GT1lhRkNxYVdURGVOQm5pTTF5eEItT3M3TmMwNDhfQ2pJTXdnb2gxR1dzMWdPa0pTSzQxb1FzNDVzQ0sxYTZwS29JU0hJTk9iWEQzN9IBngFBVV95cUxPNnJPZkpZZXNZN2M1S05lUGNMTUlCZjZpVE1CR3lJazNDLVEySjdkUDMtUlRzY2xhbUhRTzJLc09sc0N5YVlyVGdoS0N1NUhhV2J4T0NncUJrb2gyUEJrTkhZc2I4WURxTW1pUl9YX1hNNDUweUNXdVd6TS05WUItNHMyalkzVW9rYThrYmJsUTRXSEJRZEoxWDR6bHVLZw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-08-29",
+    "titulo": "Taesa (TAEE11) ensaia emissão de R$ 800 milhões em debêntures",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQN1NJUzBfQTdRZVJ0OGowTE9Dc1gtd1pFZ0FfT3FIb0lTM0dDdGVYSFBldVY4SUFST1ZJdm8yUHlwNnVrcDdLRHNpbUI1ejhicWhXTUx1Z2NWU0hRY2Fpb2Vuamh2TzNYVC1TMnhkVGR2d2x3aTBlZ3ZhNlJ2YnlFddIBhgFBVV95cUxQVTlkeDl5TU4xM3l5MFZGZFNVUjNiNHJwMlRTcEgwcDVseXVwY0FkaTBXMEhSdU1KbGRhVm80Z204VDZwY19YbXRJbkZjRHY2Y21BVzBDamJILVpvUUIzOGFhRFV6SmozajRuSVFaWDFjQzV2UFdOZS1ZWVY4cUxPeFBUQmNrdw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-08-29",
+    "titulo": "Radar: Minerva (BEEF3) sofre na Bolsa após compra de ativos da Marfrig (MRFG3), Braskem (BRKM5) é rebaixada e Taesa (TAEE11) planeja emitir debêntures milionárias",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOGFDY1VEVFhXbm5ZU3ZGMjdRYThjSDRBUkxkZEZOMjYzeTJUZjk4NzhZZTEwMi1Ba1hYUUUybllEaEFoYmhNdTNid2FNalZscG9NNVR5cjhfZnotcFF3QzZIcE9BRzFXczRfQS1SVVJ1VG1oTGc0MHBGN0VQajF3emZNb1FDb1NIUjlwMTNjeFBoSEYyd2RFNElB0gGfAUFVX3lxTE9rRDZydFJSejBkdlQtc0FGRWZ3M1pUUkN6LWlPUkhZeG5JT1ppMUJobG1pd1ZMek5mVEhFVmhCcTZOc1lpMExiQWFPWURCQVZUU2ZKQzk3bktzU1B2am1ZWXI4bkVVV1FNaGxhUklLcS11Yzc2Y09SZ1BibmlwdFp4S1pmbE5wSDAzSUw4NWRqc05MakR1Ri1IYUFkcG5wNA?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-08-04",
+    "titulo": "Taesa tem interesse em leilões da Aneel; Como isto impacta suas dívidas",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ2pJSFpXbFU2VEFudFBOVmZqVjNnRnFzSFFxeUpmVE1BYXNYQnJpNllYUVFnWWVwcnlOSzV3YjZMVm1vSndtTml6c25iRGJlSFE3Y0luQVdleEhxQzl5Y2tiYTVELXB4eEo0N0JMOFBUVzJyYktTUnlNTXdoSXgyY3M0a0daYUJ5NnloX3EtbzgyZldaaW9Tc0ZmSFp0d2dkMzBBT2NST0REVHZHQ2RFczJxVkRoaW44YzhFdml6cw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-07-31",
+    "titulo": "Debêntures Taesa - 12ª Emissão",
+    "fonte": "Inter",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVGFpYlI1RmtjZ2ZmZEMyb2VYb0E3a1d0X1F4SzFNc0FTbmRLVWZ5azRINWx2WjRvSjl2NnlOakpoZnV5OUZ2QkZpNDV2NTY2WkYwc1VjVWpzOFNpS0lwTUxDTVFMQ3ozSFN1N24xb3BzTDZUYk5SamdTYTRCUEdZUk9XazBnQTM0WnkzSWtvRGRNUEdoNW1tVw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-07-31",
+    "titulo": "Taesa (TAEE11), Bradesco (BBDC4), Petrobras (PETR4) divulgam resultados do 2T23: veja agenda completa desta semana",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZmN2VDVTN0tIdFA3MnVrT2lOTG91cHpoaTJJQnJUUG5ONlFNZVhpazN1VEVTT2RBejlKSmxMMWwtZ29XYUg0ZXpSOWo3c1pjUDdzVVZ2U1huTjMxajl0RkhWN1JkWEZKR3IxVTlDTVIzcWprNWJJOGd0ZVp1T1gyQzJ3cm1QczdlVjdQempiNHpVMTVoRkd4czhvc9IBoAFBVV95cUxNUFB0bXFmWGREeF9XRHFCUnlmM0ZiRjBuRGJ4RExMS1ZURkIyYW5TdGNBTFRJMWFWR3VYWmhvQkU0YUJiUFVONFBGbzlqSzJsV242VGZIdXoxRVQ5U3lPZk94LVlZZlRrU0wzWW5xTE0yOEZObHRYa1NYdE5QVFhnVWh2ZjZpb2xTV2p6R3RHb2FxTmt4c0dWLVdNSEt5TmJT?oc=5"
+   }
+  ],
+  "08364948000138": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-03",
+    "titulo": "Vitoria do Lote 7 do Leilão de Transmissão Aneel 01/26 (2ªEtapa)",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1541817&numSequencia=1066523&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-09-22",
+    "titulo": "Entrada em Operação da TNE",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1425517&numSequencia=950229&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-09-22",
+    "titulo": "Vitoria do Grupo 03 em leilão realizado no Peru",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1425603&numSequencia=950315&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-08-01",
+    "titulo": "Conclusão da aquisição de Rialma IV",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1406425&numSequencia=931137&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-04-16",
+    "titulo": "Bonificação de Ações",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1362112&numSequencia=886838&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-01-31",
+    "titulo": "Aquisição de ações de emissão da RIALMA IV",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1329076&numSequencia=853802&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-12-11",
+    "titulo": "Primeiro programa de recompra de ações da companhia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1314647&numSequencia=839373&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-10-09",
+    "titulo": "Substituição do Diretor de Relações com Investidores da Companhia com a consequente eleição do novo Diretor de Relações com Investidores da Companhia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1290130&numSequencia=814856&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-09-12",
+    "titulo": "Vitória de Leilão para Novo Projeto no Peru",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1281792&numSequencia=806518&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-08-29",
+    "titulo": "Vitória de Leilão para 5 Novos Projetos no Peru",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1276894&numSequencia=801620&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-06-11",
+    "titulo": "Vitória de Leilão para 2 Novos Projetos no Peru",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1249042&numSequencia=773768&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-06-03",
+    "titulo": "Vitória de Leilão para 2 Novos Projetos no Chile",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1245074&numSequencia=769800&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-09-18",
+    "titulo": "Apresentação Corporativa 2T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1569440&numSequencia=1094146&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-08-07",
+    "titulo": "Apresentação de Resultados 2T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1553910&numSequencia=1078616&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-07-15",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1545295&numSequencia=1070001&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-07-10",
+    "titulo": "Obtenção da Licença de Instalação do Projeto TECP (TAP)",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1544128&numSequencia=1068834&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-28",
+    "titulo": "Apresentação Corporativa 1T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1527792&numSequencia=1052498&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-20",
+    "titulo": "Licença de Instalação para as Subestações Silvânia, Nova Ponte 3 e Ribeirão Preto",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525283&numSequencia=1049989&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-05-08",
+    "titulo": "Apresentação de Resultados do 1T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1518480&numSequencia=1043186&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-03-18",
+    "titulo": "Apresentação Corporativa - 4T25",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1491757&numSequencia=1016463&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2024-11-13",
+    "titulo": "Resgate Total Antecipado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1303704&numSequencia=828430&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-10-21",
+    "titulo": "2024.10.21 - 1º Aditamento à Escritura de Emissão - vf Registrado JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=62217",
+    "serie": "ALUP18"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-10-09",
+    "titulo": "2024.10.09 - Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=60759",
+    "serie": "ALUP18"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-27",
+    "titulo": "Notícia da Motiva, Alupar, Riachuelo, Multiplan, Axia e outros destaques",
+    "fonte": "financenews.com.br",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUXdOejY3ZThOSklGcWQwa1BxYXoyem0tSldsNkdaTlV4dG5FR05vU1JPQlpDUGhmU2paQzRzUFV0VWtXaDZuOV9vVU5ja0MxRmYybFlJclFHNmNLVTFvUTlobWNUaVNFTFFBWXJSaGN0MFFHLU1iYVZXdUM5Sllobnd6VmtpNUhkZEFSSGxmYnNSQ2JtMmM3UGJ5d0NrU0lwUnVlVDlRNA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-18",
+    "titulo": "Alupar (ALUP11) registra receita de R$ 2,9 bi no 1S26",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOa043R05CZDEtNV9GSE9fUWRVWTRBeUl0b0g2MklKTU10emR3Nk56eG0yTVRtalpfbDdlWGFFOHJUS2RkaHBxN055STBPSHJBZ3k4dDZrRm1sSDVhV05aaWlST3lzZVdhMTY1SmtUVjB6MFlOWGwxNE5EYjFpX2p6Y1Fpa1VtTFh5U0FueGYzTUo?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-31",
+    "titulo": "A conta da Alupar para investir R$ 10 bilhões sem abrir mão de dividendos",
+    "fonte": "Exame",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSmdnUk1DOS1lMlo4R2pXUzdhd3JDN2RWQ3pod0R6cnJncVRYWFFXR2lHVUJ1dEx5OWgyVTI0ZXhMWWZodTM1V0hYY1p1S2VYOXc2NWRORTVWazBfbnBXR3RDMzJha19xWm1CUzdTa3UtY2JuWUtKSU1xRElETXRhX2JtWk81WFZMT3VXd3ZrVmV1dVVBWVpqVFIwSm5YMEVYWHc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-15",
+    "titulo": "Phronesis atinge 5% das ações PN da Alupar (ALUP11)",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTVMySk01OHE1VkJoWFVVTEFJZnB5UFVxcmRoaDRkZ25KWkZkR0FZT1JDMWk4U3IwX1NuYW5Tb0RCR3E0Z0JPTU5lblY1SVJDem1BRnJ3Q2xPWE90WU82Rnl1TmdQMkdKQU0xRF8ycjgyUzh5R1RQUjdKdUFNbGsxN3N4NXNGQ2djdmVQY0dlNA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-03",
+    "titulo": "Alupar (ALUP4) anuncia RAP de R$ 96,7 mi em leilão da Aneel",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaHh5enBkUnQ0aThpV21HaGtzcm5saExJem4yX3VUM3hnNjlXcWhLblo2OXhZWm1VYzFxYXE4eE5OcG1IOHJHU3VzME51UE9xeDEtRm1sZ28wTTRSeDRmTFYwUWJwNUF5OU1xQ2JRR0xFdkJIR2xmb2NLUkhyQVE5N28zTVoxNjVETVE2WVNtU1NibGc1b2FINw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-03",
+    "titulo": "Rápidas: Petrobras, Vale, Magazine Luiza, Renner, Sanepar, Alupar, Raízen, Smartfit, Simpar",
+    "fonte": "financenews.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeDdGV3Z0V2tHUGI0b3NiUmpmZjlqSFM1NlBYQ2Vmc3RIZld2bnk1czRxU01KcmtvcTFEWGJWeDRiSmFNb1RLYkE3MG9Dd3RubFdzRDhwaUtjalRrRFhORGQ3ZWI4WVVwbGRjZ1ltMG9IWl9Xcldzd3oyRDF0c0lnZVF1cDlVOW9ndS1LczFPTUpMSGlOSUFIX0FKbzU2c3RaVXVzdkRWZ2NKYURIUlhPMWxjbXpfWVpMYnc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-03-06",
+    "titulo": "Alupar acelera ciclo de investimentos e projeta pico de alavancagem em 2028",
+    "fonte": "CNN Brasil",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeHlBdGQ3U1RQdlQ2d1lGTUx2MUVZUEpJTjkwOFYtQ2M2QnpMVldfWjQ3WHNmR3FkdTExZk9iTU5KZUJ2Tm1kTkVwckRSN3lqajMyUFJJVVFsQkdUUXFVdWVfNklWbXJNNHRnb1QzUmdKQ2RxcGJnTFZhTjJjeTI4U0ZXa1BGcFQ2Y1BZS1kzZHpGZXAwVDYwVUFsQUtNMjh1STNWWHlmczBrWlRDeWtXaGtVelI?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-03-06",
+    "titulo": "Alupar (ALUP11) 4T25: receita segue avançando, mas variações em custos mantêm margem estável; neutro.",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFWTNlbFg4SjlGd3BnancyQlVHWlpPVXY1ZkVQbzBYZjZ5cHRDM3V1SWdhODFaYUdfbkRqdlZzQnZpbkNoejlUWkU1cUZjMU1YTTQzZ2xFQzhjY09vdndCUFdpX1VkNTROak9kY09laGxlel9ZWENVNTdQcm8?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-02-10",
+    "titulo": "Alupar capta R$ 2,45 bilhões em debêntures para financiar projetos de transmissão em SP, MG e GO",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQ2poaHVJRThaVVp1UHFyVVhOQlJpY1dXSUw0YkUyM3E0bEdnS2lKU0hFVUZkUmhWaWNUQm5IRmZkUGZRZnd6czNfOVpqQ0ZtNFctS0xJWFVxZDMzUjI5NlBBNlZqalViODcyZXVvNEdTcWhCRjByQjRkcnVndmJiMGtDVEkwMmZ5MG11RTZveEVrVEZuZ09Nb2Q5NWJlZ2FCS2RQdDdGcEl5OVNIbmJlNGhnSF83UGZoQVJZeFd0Z3NoblJyMDV0OWV3?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-12-19",
+    "titulo": "Dividendos e JCP: C&A, Tenda, Hypera, Alupar e mais empresas informam proventos",
+    "fonte": "infomoney.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUlloWEF5RE5pdEgyR2V3bzUtZTNDWTI1NEkzdWY0a216eDdud2xXaDBlOEloR2tPbWpKSmlBWjNpdFFfTFk4SnJvNm0zeUVFcWRfTjQ5akZqRksxNDJRbG9sbjFuaFdiazhMeUJkbkw5aWkwbmtMd1V6ZmgydUp0ZVg2ZTR0bmlGN294YWEycUp4TUVqWXpldVgzaUdPejZvSjh5T1kxUm4zRDNiWWpzbF84NNIBuAFBVV95cUxOS3oxRm42Zm1uS185ZlBFVXFVaEtXYTdUODFCbFBCb0hJeU8xalR3amxabFRvcEVmUVRLdnhjMHd2TUVMMlp1X3VuN1RTaHplUTlFQ0hIS1AzVDZLT2o1eWMwN3Nwc1JpMy1UdG14eVJDV3FpajQyTmVqVEJXSTRTUzNIQ0FZdWpSc2FDS2VQdUlqT2dzSmFLQVVfbl9obVNJMThBOTZwRi1JSkp6a1R2Yk9RaU5sRGRf?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2025-02-27",
+    "titulo": "Alupar (ALUP11): Resultados do 4T24",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRG1IZEdmMFRBSmVuWk1KQ083Y2k5S1J2T1BPUnJ6QnJwUDNWeEFsbEhRa1o0WlhQa05lSXRoZ1F5SGh3NldLUk1MNlRVMU1QYTV6RFRtZThSbWZ1SUswRmwwSlIwckFKS09CX1pVZWFzSnJuN1NGZkpwR1hCZGY5SFZUSWVPZw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-03-02",
+    "titulo": "Alupar (ALUP11): Resultados 4T22",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPNjlqYno1NkVmTU5LbG42aGExZzFVZEJIWmh4UXRXS195NExNUnN5R01oV3dieGY2OWlrOFdIcFUtamthbmpOTDd1V3ZsZEF3clZkb3diT3h4cEJ4NGJ6anZReHdJY1J0RFlBV25jRnRpODFqcHotZDlwYVRqOVBZUTV3?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2019-12-10",
+    "titulo": "Alupar capta R$ 648,5 milhões com debêntures",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCRDNEeERqc2ZYSzBTVXV6d1ZnRmdlcExqV1UyLThwSjZxdTBUZ3YxZDFOT2YzdmZKVFlERVhDR2JWOFItWU5sZEJ5ZHAwbllzSUJGT0g0Y01sVGlRUlBpZGNaTmRpTHViVExNRHNQNNIBdEFVX3lxTFBFWXZNT1hQeHJZTG9aS3RMWDJVdHlCbDVPSURuN1FmaTFPall4eW96Sm1kS2cyZ1lTM3BEVFNTNzFtRWpNU1FpekdPbnR0Y2o5b2k1bmd6ZlpUTS1zMWRKaFlpbGNMeXZGMmRTazQ1UjdhSllN?oc=5"
+   }
+  ],
+  "20223016000170": [
+   {
+    "tipo": "escritura",
+    "data": "2017-10-31",
+    "titulo": "Escritura de Emissão - 2017.10.31 vf Registrada JUCERJA.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=7548",
+    "serie": "BLMN12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2017-10-31",
+    "titulo": "Escritura de Emissão - 2017.10.31 vf Registrado DF Brasília e RJ Rio de Janeiro.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15338",
+    "serie": "BLMN12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "",
+    "titulo": "Aditamento Fiança  Safra BMTE 3º Desembolso- 2531441.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=30797",
+    "serie": "BLMN12"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2017-02-20",
+    "titulo": "Bndes aprova financiamento de R$ 2,56 bi para linha de transmissão de Belo Monte",
+    "fonte": "Jornal do Comércio",
+    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNellZNmF4aDVrSF9OdUM5OUVHWDhwTFl3M3hwZC0zRTZiX3JydThmWGV3Ry15bWFKR0U4bU9TeFg4ZWNhWVlBUVlQSEFLTUNwQ1RhbWVfUnIybzAwbDlCeGpWajFBZl9IRWtBeUg3VHNxUVh4SjdEUVhJVi1FTUlTeUZFZC1rZG1tb21sekp6NmdEeWZwLWFjQWdaX0hGRkpQUnhGNlhLajdtY2lqMlhHVlR1MDNPRWVFdURRblJ1Wjl2NzZpTDcxRGpOVG5uYm1oZjI1LVFPaGV6dmllcktpUUVkeVh1UQ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2020-05-20",
+    "titulo": "Análise - Debênture Belo Monte Transmissora de Energia - Renda Fixa - DEZ/2031",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZzJvMVFQZ0tXMWlqRnZ2TDhnMmVveHNVWjF6Q1BKVmJ2QmUxMEt5R2dVY3V5U1NzSTM0dUoyNXVkckV3WGtsUW1kUmFqZ2NTRmFRU0VjM1c3S2x4UlA0NU5zVzk0b0xvelZuOUJ4Ql9XYk40R2p6ZVJHOTdqaE9iT20tTUVVYnFMYmlEZG1MRjlRMlgtQ05YTnhn?oc=5"
+   }
+  ],
+  "20732109000120": [],
+  "49008174000190": [],
+  "27831352000145": [],
+  "04705039000165": [
+   {
+    "tipo": "escritura",
+    "data": "2021-12-28",
+    "titulo": "2º Aditamento à Escritura de Emissão - 2021.12.28 vf Registrado JUCEES.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=34007",
+    "serie": "EDPT11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-04-18",
+    "titulo": "Escritura de Emissão - 2018.04.18 vf Registrada JUCEES.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=30804",
+    "serie": "EDPT11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-04-18",
+    "titulo": "Escritura de Emissão - 2018.04.18 vf Registrada RTD São Mateus.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=6734",
+    "serie": "EDPT11"
+   }
+  ],
+  "24870962000160": [
+   {
+    "tipo": "escritura",
+    "data": "2018-12-20",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.12.20 vf Registrada JUCESP Parte 2.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67729",
+    "serie": "EDTE12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-12-20",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.12.20 vf Registrada RTD RJ.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15625",
+    "serie": "EDTE12"
+   }
+  ],
+  "20626892000148": [],
+  "26845460000104": [
+   {
+    "tipo": "escritura",
+    "data": "2025-09-26",
+    "titulo": "2025.09.26 - 2º Aditamento à Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=70861",
+    "serie": "EQSP11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-08",
+    "titulo": "Escritura de Emissão - 2019.01.08 vf Registrada RTD Brasilia São Luis e SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15640",
+    "serie": "EQSP11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-08",
+    "titulo": "Escritura de Emissão - 2019.01.08 vf Registrada RTD JCDF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=6199",
+    "serie": "EQSP11"
+   }
+  ],
+  "26845283000166": [
+   {
+    "tipo": "escritura",
+    "data": "2019-05-21",
+    "titulo": "2019.05.21 - 1º Adit. à Escritura de Emissão - vf Rgstd RTD DF RTD SP e RTD São Luís.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78507",
+    "serie": "EQTC11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-04-15",
+    "titulo": "2019.04.15 - Escritura de Emissão - vf Registrada JCDF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78504",
+    "serie": "EQTC11"
+   }
+  ],
+  "26845497000132": [
+   {
+    "tipo": "escritura",
+    "data": "2025-10-06",
+    "titulo": "2025.10.06 - 2º Aditamento da Escritura de Emissão - vf Registrada JCDF.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78524",
+    "serie": "EQTN11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-10",
+    "titulo": "2019.01.10 - Escritura de Emissão - vf Registrada JCDF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78520",
+    "serie": "EQTN11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-10",
+    "titulo": "2019.01.10 - Escritura de Emissão - vf Registrada RTS Brasilia São Luis e SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78521",
+    "serie": "EQTN11"
+   }
+  ],
+  "27967244000102": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-15",
+    "titulo": "Celebração de acordo para a criação de plataforma de controle conjunto de ativos no Brasil entre La Caisse e Grupo Energía Bogotá",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1522701&numSequencia=1047407&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-04-04",
+    "titulo": "Alienação SP8",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1358182&numSequencia=882908&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-06-03",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1530640&numSequencia=1055346&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-10-31",
+    "titulo": "Alienação de Ativos de Transmissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1438392&numSequencia=963104&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-30",
+    "titulo": "Mudança na composição do comitê de auditoria estatutário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286436&numSequencia=811162&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-10-08",
+    "titulo": "2025.10.08 - 2º Adit. à Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=71355",
+    "serie": "EQTR11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-04-15",
+    "titulo": "2019.04.15 - Escritura de Emissão - vf Registrada JUCEMA.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78528",
+    "serie": "EQTR11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-04-15",
+    "titulo": "2019.04.15 - Escritura de Emissão - vf Registrada RTD SP e RTD São Luís.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78537",
+    "serie": "EQTR21"
+   }
+  ],
+  "26845650000121": [
+   {
+    "tipo": "escritura",
+    "data": "2025-09-26",
+    "titulo": "2025.09.26 - 2º Aditamento da Escritura de Emissão - vf Registrada JCDF.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78516",
+    "serie": "EQTS11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-10",
+    "titulo": "2019.01.10 - Escritura de Emissão - vf Registrada JCDF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78512",
+    "serie": "EQTS11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-01-10",
+    "titulo": "2019.01.10 - Escritura de Emissão - vf Registrada RTD Brasilia São Luis e SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=78513",
+    "serie": "EQTS11"
+   }
+  ],
+  "23520790000131": [
+   {
+    "tipo": "escritura",
+    "data": "2021-03-31",
+    "titulo": "1º Aditamento Escritura - 2021.03.31 vf Registrada JCDF.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=23945",
+    "serie": "EQUA11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2021-03-11",
+    "titulo": "Escritura de Emissão - 2021.03.11 vf Registrada JUCIS-DF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=23723",
+    "serie": "EQUA11"
+   }
+  ],
+  "24870961000115": [
+   {
+    "tipo": "escritura",
+    "data": "2018-12-21",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.12.21 vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=6780",
+    "serie": "ETBA12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-12-10",
+    "titulo": "Escritura de Emissão - 2018.12.10 vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=6779",
+    "serie": "ETBA12"
+   }
+  ],
+  "28201130000101": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-08-12",
+    "titulo": "Desinvestimento em Ativos de Transmissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1556475&numSequencia=1081181&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-21",
+    "titulo": "Desinvestimento de Ativos de Transmissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525313&numSequencia=1050019&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-09-22",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1570484&numSequencia=1095190&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-12-23",
+    "titulo": "Entrada em operação da Energisa Amapá Transmissora",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1318853&numSequencia=843579&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-12-23",
+    "titulo": "Avanço em mais uma etapa da Energisa Amazonas Transmissora, energização da nova Subestação Balbina..",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1318855&numSequencia=843581&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-05-08",
+    "titulo": "Entrada em operação da Energisa Tocantins Transmissora II",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1234721&numSequencia=759447&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2020-10-20",
+    "titulo": "1º Aditamento à Escritura de Emissão ETE - 2020.10.20 vf Registrada JUCEMG.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=20606",
+    "serie": "ETEN12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2020-09-24",
+    "titulo": "Escritura - 2020.09.24 vf Registrada JUCEMG.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=20605",
+    "serie": "ETEN12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2020-09-24",
+    "titulo": "Escritura - 2020.09.24 vf Registrada RTD Cataguases.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=20718",
+    "serie": "ETEN12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-12-04",
+    "titulo": "2018.12.04 - Escritura de Emissão - vf Registrada JUCEMG.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=48020",
+    "serie": "ETEN21"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-12-04",
+    "titulo": "2018.12.04 - Escritura de Emissão - vf Registrada RTD MG.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=48019",
+    "serie": "ETEN21"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-12",
+    "titulo": "Energisa conclui venda de cinco ativos de transmissão por R$ 1,638 bilhão",
+    "fonte": "atlaspublico.com.br",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOd0w2VGd3VXRFd2xkc3MyRlpWaENHdGhWU0ktalFaMWI5RmN5VXdCV29CTUJWQWx6SWRQaHhxRVlmMUFOQWdPckRuQVlFMjV6MjNnaEk2Q19wejI5cERadFJ2SVBWY2pvclFaSGFQSGJNQ2xQMUZrNG9GMXJ0M2pmMk9uakx1dVdfM3oySnJqNWdCZ0piSDJJR08wOTE0YlVsNWZncjNjSQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2023-03-31",
+    "titulo": "Energisa desiste de emissão de debêntures milionária; veja o motivo",
+    "fonte": "Estadão",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMTNvcm1iTklkMWowd0NGWUtCZDZZTWZZdnFqaUMxMUlLYVFwY0gxalFMMXVBa0l3enhOYmozT3V4QVN5aDM5ZzlwTlQ3SUJnajk2a0xtX3prM0VlNzVlMVdOZlVRYV94dk5Uc0IyVDFfNC03QkFtNXp3eFhCS0ZPVmtyMjdoX1VxN1lGSFVwdDBhaUxGRVhqU0ZqNUYwSHAwOGwtNHg4cGZfQdIBrwFBVV95cUxQa1FyNUNFYkNCWHVpdGRDVm1zbjN3NmRTWVBLQ2d3UkptcXpxelhhMlRUdWtTb01FVnFRY3gxQU0wS3JUVk83QzhiVjZYMXI0dnZHV1FJaFpMcnlnNGx3b2tLelprb3E1cUtISHBydFNFX1pfdmhCbnJybXZwcGRhbm5iM0xXbjZtaVNXdzd5alB5Q1FCY1hFTFRmZS1NMXBYekJDdzZVX1ZTblVtNVVZ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-07-28",
+    "titulo": "Debêntures Energisa Transmissão de Energia S.A.",
+    "fonte": "Inter",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFJlNkJjZ2F3TlZsbmNrb1dpRjZYTVlZWkI1eUM5R0dybHNEcm5QRkxFWGx0bmpTakxrLXNyUVpmSXNzdGdjRGRkVFBxNkFYVGJGTXVwTnhmUnpuMVlRb25mU0VwRWxkSkQzMGhtRGZhV2hTcW5mdUN1RkhXaGRsOWt6QTRfblZzakU1WHlUMFpLT3I5ZGgxYW1Ta0NJTEtjc2h3b0cwTVBHWUlCeGdj?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2020-05-18",
+    "titulo": "Análise - Debênture Energisa Transmissão de Energia - Renda Fixa - DEZ/2028",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPd2ktWFNMS0F0b0VSYnlUZVRRN0Z0SGlTeW4yOURCcWh3bDFISHlfRmt4SFc3a0hhMVo1X2V0cUFTdFZXc1RLQVJiS0RvQ3NKTEd2bHBzazN0TmZXd0hSbnU4UGI1bDhvOHBqWkRydE9OUjRFLWlYRzdoSjBXOXBJTm9IMTJFbFh1RHdOazRGQlllTjVTSEE?oc=5"
+   }
+  ],
+  "26845702000160": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-15",
+    "titulo": "Celebração de acordo para a criação de plataforma de controle conjunto de ativos no Brasil entre La Caisse e Grupo Energía Bogotá",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1522700&numSequencia=1047406&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-12-05",
+    "titulo": "Fato Relevante - Closing Alienação SPE 7",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1311901&numSequencia=836627&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-07-09",
+    "titulo": "Celebração de Contrato de Compra e Venda de Ações",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1257842&numSequencia=782568&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-06-02",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1385936&numSequencia=910648&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-30",
+    "titulo": "Instalação, mudança ou dissolução do Comitê de Auditoria Estatutário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286492&numSequencia=811218&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-12-05",
+    "titulo": "2024.12.05 - 2º Aditamento à Escritura de Emissão - vf Registrada JUCERJA.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=66153",
+    "serie": "ETSP12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2019-05-21",
+    "titulo": "1º Adit. à Escritura de Emissão - 2019.05.21 vf Registrada JCDF.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15644",
+    "serie": "ETSP12"
+   }
+  ],
+  "29554549000100": [],
+  "26617923000180": [
+   {
+    "tipo": "noticia",
+    "data": "2020-08-06",
+    "titulo": "Análise - DEB JANAUBA S.A. - Renda Fixa - DEZ/2044",
+    "fonte": "XP Investimentos",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDWDBHSlBlX1FDd0VqUWk1cWNIM2JFY0o3Q1cxajR0aHBzaE80MV93OGlMOWl3S05QZS13ZFJFaFpEYUVJeWU1OTU5UDlYTFJOOXpoUktxSUZPQjQ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2020-08-06",
+    "titulo": "Análise - DEB JANAUBA S.A. - Renda Fixa - DEZ/2044",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDWDBHSlBlX1FDd0VqUWk1cWNIM2JFY0o3Q1cxajR0aHBzaE80MV93OGlMOWl3S05QZS13ZFJFaFpEYUVJeWU1OTU5UDlYTFJOOXpoUktxSUZPQjQ?oc=5"
+   }
+  ],
+  "14395590000103": [
+   {
+    "tipo": "analise",
+    "data": "2020-12-11",
+    "titulo": "Análise - DEB LINHAS DE TAUBATE TRANSMI - Renda Fixa - OUT/2038",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HNl9veHJlMWs3ZEQ2bDJ1a1ZDa1NZanV4U1pIRUFyRDRGUmpGWFNscFE2UHc4S3AwdkhHZ21CVmk4aTA3SC1kM2pNcUZscF8xa2htZVVfeVdYc0U?oc=5"
+   }
+  ],
+  "27821748000101": [
+   {
+    "tipo": "escritura",
+    "data": "2026-01-22",
+    "titulo": "2026.01.22 - 2º Aditamento à Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=74635",
+    "serie": "MGSP12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-02-20",
+    "titulo": "2024.02.20 - 1º Adit. Escritura de Emissão - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=51693",
+    "serie": "MGSP12"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-02-20",
+    "titulo": "2024.02.20 - 1º Adit. Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=53875",
+    "serie": "MGSP12"
+   },
+   {
+    "tipo": "analise",
+    "data": "2020-05-26",
+    "titulo": "Análise - DEB EDP TRANSMISSAO SP-MG S/A - Renda Fixa - JUL/2039",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE96YUhzNk1RVHdGaVVDVFpDSkpmTXJrMkRUalBnQWVJWTFEVktnTi1Vb0RvWEpEWXNhTlI1YkxYZVNMMnF2QjYwRENJQWMxMWhDanNTU0lDS0NLZUE?oc=5"
+   }
+  ],
+  "19699063000106": [
+   {
+    "tipo": "escritura",
+    "data": "2025-06-24",
+    "titulo": "2025.06.24 - 1º Aditamento ao Contrato de Penhor de Ações - vf Assinada.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=68090",
+    "serie": "MSGT13"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-06-23",
+    "titulo": "2025.06.23 - 1º Aditamento ao Contrato de Penhor de Ações - vf Registrada RTD Curitiba.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=72686",
+    "serie": "MSGT23"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2021-11-08",
+    "titulo": "2021.11.08 - Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=60845",
+    "serie": "MSGT13"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2021-11-08",
+    "titulo": "2021.11.08 - Escritura de Emissão - vf Registrada RTD Curitiba.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=60847",
+    "serie": "MSGT13"
+   }
+  ],
+  "28438834000100": [
+   {
+    "tipo": "escritura",
+    "data": "2024-11-14",
+    "titulo": "2024.11.14 - 2º Aditamento à Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=63407",
+    "serie": "NMCH11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-10-23",
+    "titulo": "2024.10.23 - Escritura de Emissão - vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=63141",
+    "serie": "NMCH11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-10-23",
+    "titulo": "2024.10.23 - Escritura de Emissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=63142",
+    "serie": "NMCH11"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-28",
+    "titulo": "Neoenergia (NEOE3) anuncia operação de R$ 2,4 bi em transmissão",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPa3ZDRGFLLXVRSW5rWVNDNTdzdVN5RHFCLTgyRDE3Rjh6X3RYVVY2emRaNTgzNTUySlF0SlNOT3RBS0dneHJnQWZBbm1PSFZ4RW9Nak9meG9tOUNTYVMtLVEzcEx3N2hKYm8tV2NFVk0zbkpCZXczQ2lHdUlyNGpuQ19XUHBEMzhEcmFoUjNCQjI0QnJ2Y3J0T0VSZXFIZw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-11-28",
+    "titulo": "Neoenergia (NEOE3) busca “waiver” de debenturistas para OPA de fechamento de capital",
+    "fonte": "infomoney.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObHZsQjVoendET2ZsbzdDdEd3SWp5N19nbmxyS3IxTnpuM1pINEJSWVFadVpjRW1tS2IyWlhaT3o1VFYxM3BwZHRka3N5ZTRsYW1DMEdHZng3T05sMW9XMnYwUElHNVI0OGExSDl3aHBkOE5VVlE0M1U1MEZBb1c4b2thVXdvY3BwN2dwb2FtRFZHQmdpYWo1MG85TVYzYXFuYTAzTVo4TmxOMlJlTDFCdzhEdjV1MEhjX0kw0gHAAUFVX3lxTFAtalRhVHFLR0Y1eHZnbHlxaDF2SFhPV3ZzQkZNbzNTaV93TjVqNkRiRFJtZzZRdDBxZll2WXB2MFN2RkdiYVpGQXlIZVlPSC1PNGtrX0ItQjdXc3VjemlCMkxTSkdRbGo0VmplbVdmc3JVNGI0Qk0wcHFvTkc5dHdlMjNvVUZEWFlrOFQ3Nk51SjlTcnVmeUd0R2xIQTBzREZwb2lOZ3h3UzFoM29POF9vUzR3YWtHU04wX2M1WkR3dQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-11-28",
+    "titulo": "Fechamento de capital: Neoenergia (NEOE3) pede ‘sim’ dos debenturistas",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaUFOejlOMEp0dndpSVp6cFJ1cFROM253SjZmWlpMSmVUam45MTI1RlBMcmMxSnY3dlZRaEZsMERCUHFHTEctT1lOdEFwenU0NWlzWmhsS0k2VG96cm9aYV9JdlhuLUo0b3hPczA1Yy1LcFRrZldBX282dXFmNU9LZldiWTF0SU1KNmxSZnhVbHdTRVRtRG9oV240NFloanZFMVBB?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-11-28",
+    "titulo": "Neoenergia pede waiver de debenturistas para avançar com OPA e fechamento de capital no Brasil",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZmVLSmlZakJscGdKNmFvdmZaUEt2XzlJV1htOHlHRU5DX1pOeXlpYzFGY19xd2VyUGFmZTFEUVRpb0NTOC1VZTVRLVFOWG05Z1FtTm5DYXk0R05KUm4wNlRKVWRnNlFaaVZ0RHU5anZEdnJHclF0bi1GUy0zVDNfa0tlOE5WVzkwWEI2TS1FQUdES0FtSTZvRW9MU2hyQ3ZhNFg4V29KOTE0WUlwLWVaM1BUT2FJa3h2VElLckhQeW8wUVl0ODRpS3RR?oc=5"
+   }
+  ],
+  "20514590000188": [
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-26",
+    "titulo": "Comunicado - Eleição Diretor Presidente",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285595&numSequencia=810321&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-01-31",
+    "titulo": "Troca de Diretoria",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1188205&numSequencia=712931&numVersao=1"
+   }
+  ],
+  "17553029000101": [],
+  "32667691000178": [],
+  "51715706000170": [],
+  "20514555000169": [
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-26",
+    "titulo": "Comunicado - Eleição Diretor Presidente",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285598&numSequencia=810324&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-01-31",
+    "titulo": "Troca de Diretoria",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1188207&numSequencia=712933&numVersao=1"
+   }
+  ],
+  "26796739000145": [
+   {
+    "tipo": "escritura",
+    "data": "2018-10-05",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.10.05 vf Registrada JUCESP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=6685",
+    "serie": "TPEN11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-10-05",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.10.05 vf Registrada RTD SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15922",
+    "serie": "TPEN11"
+   },
+   {
+    "tipo": "analise",
+    "data": "2020-05-22",
+    "titulo": "Análise - Debênture TPE - Renda Fixa - Transmissora Paraíso de Energia S.A. - SET/2028",
+    "fonte": "XP",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWTFGQ1BwaWVPQm80TEZmUzN5Vms3U3F0ZVdTTUZBTGlrdDE4em5qVTl6MFpRc1E5YjdUdjNwS1RnRHA4QWs2ZjlMZXo3NkF4RjRLMFNyb3VrdTRKdzVUQTQ1RkxEbF9oMklnSmg4bk5VQTZaNEFZTU5XU3p2LW9mdjRESWNRYkttNzR0dFlRVkNOU1dDRGhfZk9zb2REWWcy?oc=5"
+   }
+  ],
+  "15286382000139": [
+   {
+    "tipo": "escritura",
+    "data": "2021-06-07",
+    "titulo": "Segundo Aditamento à Escritura de Emissão - 2021.06.07 vf Registrada JUCERJA.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=26469",
+    "serie": "TPNO13"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2021-05-14",
+    "titulo": "Escritura de Emissão - 2021.05.14 vf Registrada JUCERJA.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=25348",
+    "serie": "TPNO13"
+   }
+  ],
+  "26796760000140": [
+   {
+    "tipo": "escritura",
+    "data": "2018-10-05",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.10.05 vf Registrada JUCESP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15914",
+    "serie": "TRCC11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-10-05",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.10.05 vf Registrada RTD SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=7225",
+    "serie": "TRCC11"
+   }
+  ],
+  "24624490000165": [
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-26",
+    "titulo": "Comunicado - Eleição Diretor Presidente",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285622&numSequencia=810348&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-01-31",
+    "titulo": "Troca de Diretoria",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1188203&numSequencia=712929&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-08-20",
+    "titulo": "Rerratificação 1º Adit  à Escritura de Emissão - 2018.08.20 JUCESP e RTD SP.PDF",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=20782",
+    "serie": "TRGO11"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2018-08-14",
+    "titulo": "1º Adit. à Escritura de Emissão - 2018.08.14 vf Registrada JUCESP.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=15361",
+    "serie": "TRGO11"
+   }
+  ],
+  "49786044000188": [],
+  "23093056000133": []
+ }
+}

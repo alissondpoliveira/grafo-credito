@@ -30,8 +30,41 @@ VARIAVEIS = {
     "garantia_real": "Garantia real (1 = sim)",
     "controle_documentado": "Controlador declarado na CVM (1 = sim)",
     "ln_volume": "ln(volume emitido, R$ milhões)",
-    "dispersao": "Dispersão das contribuições ANBIMA (bps)",
+    "liquidez": "Dias com negócio nos últimos 180 dias (%)",
+    "tail": "Folga até o fim da concessão (anos)",
 }
+NEGOCIOS = RAIZ / "dados" / "snd" / "negocios.csv"
+CONTRATOS = RAIZ / "dados" / "aneel" / "contratos_transmissao.csv"
+UNIVERSO = RAIZ / "dados" / "referencia" / "universo_series.csv"
+
+
+def liquidez_por_serie(data_ref: str) -> dict[str, dict]:
+    """% de dias úteis com negócio e volume financeiro nos 180 dias corridos até a data de referência."""
+    from datetime import date, timedelta
+    fim = date.fromisoformat(data_ref)
+    ini = (fim - timedelta(180)).isoformat()
+    dias_uteis = sum(1 for k in range(180) if (fim - timedelta(k)).weekday() < 5)
+    out: dict[str, dict] = {}
+    if not NEGOCIOS.exists():
+        return out
+    for l in csv.DictReader(NEGOCIOS.open(encoding="utf-8")):
+        if ini < l["data"] <= data_ref:
+            d = out.setdefault(l["codigo"], {"dias": 0, "negocios": 0, "volume": 0.0})
+            d["dias"] += 1
+            d["negocios"] += int(l["negocios"])
+            d["volume"] += int(l["quantidade"]) * float(l["pu_medio"])
+    for d in out.values():
+        d["pct_dias"] = 100 * d["dias"] / dias_uteis
+    return out
+
+
+def fim_concessao() -> dict[str, str]:
+    fins: dict[str, str] = {}
+    if CONTRATOS.exists():
+        for l in csv.DictReader(CONTRATOS.open(encoding="utf-8")):
+            if l["fim"] and l["fim"] > fins.get(l["cnpj"], ""):
+                fins[l["cnpj"]] = l["fim"]
+    return fins
 
 
 def br(t: str) -> float:
@@ -75,17 +108,30 @@ def main() -> None:
                 hist.setdefault(s["codigo"], []).append((a.stem, float(v)))
 
     ipca = [s for s in series if s["status"] == "ok"]
+    liq = liquidez_por_serie(hoje.stem)
+    fins = fim_concessao()
+    cnpj = {u["codigo"]: u["cnpj"] for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
+    extras = {}
     linhas_x, y = [], []
     for s in ipca:
         c = snd.get(s["codigo"], {})
         volume = br(c["Quantidade Emitida"]) * br(c["Valor Nominal na Emissao"]) / 1e6 if c.get("Quantidade Emitida") else None
-        disp = float(s["desvio_padrao"]) * 100 if s.get("desvio_padrao") else None  # % -> bps
+        l = liq.get(s["codigo"], {"pct_dias": 0.0, "negocios": 0, "volume": 0.0})
+        venc = c.get(" Data de Vencimento", c.get("Data de Vencimento", "")).strip()
+        fim = fins.get(cnpj.get(s["codigo"], ""), "")
+        tail = None
+        if venc and fim:
+            d, m, a = venc.split("/")
+            tail = (int(fim[:4]) - int(a)) + (int(fim[5:7]) - int(m)) / 12
+        extras[s["codigo"]] = {"liquidez_pct_dias": l["pct_dias"], "negocios_180d": l["negocios"],
+                               "volume_negociado_180d_mi": l["volume"] / 1e6, "fim_concessao": fim, "tail_anos": tail}
         linhas_x.append([
             float(s["duration_mod_anos"]),
             1.0 if s["garantia"] == "Real" else 0.0,
             1.0 if s["fonte_grupo"] == "CVM FRE" else 0.0,
             math.log(volume) if volume else float("nan"),
-            disp if disp is not None else float("nan"),
+            l["pct_dias"],
+            tail if tail is not None else float("nan"),
         ])
         y.append(float(s["zspread_comparavel_bps"]))
     X = np.array(linhas_x)
@@ -115,6 +161,7 @@ def main() -> None:
             "variacao_hist_bps": valores[-1] - valores[0] if len(valores) > 1 else None,
             "dp_hist_bps": float(np.std(valores, ddof=1)) if len(valores) > 2 else None,
             "n_dias_hist": len(valores), "inicio_hist": h[0][0] if h else None,
+            **extras.get(s["codigo"], {}),
         })
     for s in di:
         h = hist.get(s["codigo"], [])
