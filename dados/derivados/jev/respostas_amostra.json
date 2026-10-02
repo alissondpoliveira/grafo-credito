@@ -1,0 +1,1002 @@
+{
+ "02998611000104|fato_relevante|2024-07-12|Oferta Pública Secundária": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.7,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "resultado": 0.0,
+   "outro": 0.17,
+   "aquisicao_venda": 0.06,
+   "nova_divida": 0.74,
+   "rating": 0.0,
+   "societario_governanca": 0.02,
+   "pagamento_divida": 0.01,
+   "operacional": 0.0
+  },
+  "impacto_score": 0.9,
+  "impacto_confianca": 0.59,
+  "relevante": 0.83,
+  "modelo": "jev-1.13.0",
+  "tokens": 763
+ },
+ "02998611000104|fato_relevante|2024-07-18|Pricing Oferta Pública Secundária TRPL4": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.51,
+  "evento_probabilidades": {
+   "societario_governanca": 0.02,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "operacional": 0.0,
+   "outro": 0.35,
+   "rating": 0.0,
+   "nova_divida": 0.5700000000000001,
+   "aquisicao_venda": 0.06,
+   "resultado": 0.0
+  },
+  "impacto_score": 0.99,
+  "impacto_confianca": 0.86,
+  "relevante": 0.33,
+  "modelo": "jev-1.13.0",
+  "tokens": 767
+ },
+ "08364948000138|fato_relevante|2024-08-29|Vitória de Leilão para 5 Novos Projetos no Peru": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 0.96,
+  "evento_probabilidades": {
+   "nova_divida": 0.0,
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "operacional": 0.03,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.97,
+   "resultado": 0.0
+  },
+  "impacto_score": 1.93,
+  "impacto_confianca": 0.9,
+  "relevante": 0.34,
+  "modelo": "jev-1.13.0",
+  "tokens": 774
+ },
+ "07859971000130|fato_relevante|2024-03-28|Reorganização Societária - Incorporação, Cisão ou Fusão da C": {
+  "evento": "societario_governanca",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "aquisicao_venda": 0.01,
+   "outro": 0.0,
+   "nova_divida": 0.0,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "societario_governanca": 0.99,
+   "resultado": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.0
+  },
+  "impacto_score": 0.96,
+  "impacto_confianca": 0.82,
+  "relevante": 0.41,
+  "modelo": "jev-1.13.0",
+  "tokens": 788
+ },
+ "08364948000138|fato_relevante|2026-07-03|Vitoria do Lote 7 do Leilão de Transmissão Aneel 01/26 (2ªEt": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 0.96,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.97,
+   "rating": 0.0,
+   "nova_divida": 0.01,
+   "operacional": 0.02,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "pagamento_divida": 0.0
+  },
+  "impacto_score": 1.92,
+  "impacto_confianca": 0.88,
+  "relevante": 0.43,
+  "modelo": "jev-1.13.0",
+  "tokens": 789
+ },
+ "07859971000130|fato_relevante|2024-05-08|Proposta de Distribuição de Proventos": {
+  "evento": "resultado",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.0,
+   "nova_divida": 0.01,
+   "resultado": 0.98,
+   "operacional": 0.0,
+   "rating": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.01
+  },
+  "impacto_score": 0.61,
+  "impacto_confianca": 0.22,
+  "relevante": 0.8,
+  "modelo": "jev-1.13.0",
+  "tokens": 776
+ },
+ "02998611000104|fato_relevante|2026-04-07|Conversão de Ações": {
+  "evento": "societario_governanca",
+  "evento_confianca": 0.66,
+  "evento_probabilidades": {
+   "resultado": 0.0,
+   "pagamento_divida": 0.04,
+   "operacional": 0.0,
+   "aquisicao_venda": 0.01,
+   "nova_divida": 0.05,
+   "credito_negativo": 0.03,
+   "rating": 0.0,
+   "outro": 0.18,
+   "societario_governanca": 0.69
+  },
+  "impacto_score": 0.84,
+  "impacto_confianca": 0.59,
+  "relevante": 0.76,
+  "modelo": "jev-1.13.0",
+  "tokens": 765
+ },
+ "08364948000138|fato_relevante|2024-12-11|Primeiro programa de recompra de ações da companhia": {
+  "evento": "societario_governanca",
+  "evento_confianca": 0.41,
+  "evento_probabilidades": {
+   "aquisicao_venda": 0.08,
+   "operacional": 0.0,
+   "resultado": 0.06,
+   "societario_governanca": 0.49,
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.37
+  },
+  "impacto_score": 0.45,
+  "impacto_confianca": 0.33,
+  "relevante": 0.56,
+  "modelo": "jev-1.13.0",
+  "tokens": 769
+ },
+ "07859971000130|fato_relevante|2024-09-27|Aquisição de lote no leilão ANEEL 02.2024": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 1.0,
+   "outro": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.0,
+   "resultado": 0.0,
+   "societario_governanca": 0.0
+  },
+  "impacto_score": 1.67,
+  "impacto_confianca": 0.5,
+  "relevante": 0.38,
+  "modelo": "jev-1.13.0",
+  "tokens": 786
+ },
+ "07859971000130|fato_relevante|2026-05-21|TAESA celebra contrato para aquisição de 5 ativos de transmi": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "pagamento_divida": 0.0,
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "nova_divida": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 1.0,
+   "outro": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 1.41,
+  "impacto_confianca": 0.12,
+  "relevante": 0.46,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ },
+ "08364948000138|fato_relevante|2025-01-31|Aquisição de ações de emissão da RIALMA IV": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "aquisicao_venda": 0.99,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.01,
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "operacional": 0.0,
+   "outro": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0
+  },
+  "impacto_score": 1.1,
+  "impacto_confianca": 0.51,
+  "relevante": 0.64,
+  "modelo": "jev-1.13.0",
+  "tokens": 775
+ },
+ "26845702000160|fato_relevante|2026-05-15|Celebração de acordo para a criação de plataforma de control": {
+  "evento": "outro",
+  "evento_confianca": 0.25,
+  "evento_probabilidades": {
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 0.27,
+   "outro": 0.34,
+   "operacional": 0.08,
+   "credito_negativo": 0.0,
+   "resultado": 0.0,
+   "societario_governanca": 0.31
+  },
+  "impacto_score": 1.18,
+  "impacto_confianca": 0.6,
+  "relevante": 0.33,
+  "modelo": "jev-1.13.0",
+  "tokens": 790
+ },
+ "02998611000104|fato_relevante|2026-07-31|Conclusão do descruzamento de participações na IE Madeira e ": {
+  "evento": "societario_governanca",
+  "evento_confianca": 0.77,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "nova_divida": 0.0,
+   "aquisicao_venda": 0.19,
+   "resultado": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.0,
+   "societario_governanca": 0.8,
+   "operacional": 0.01
+  },
+  "impacto_score": 1.2,
+  "impacto_confianca": 0.44,
+  "relevante": 0.66,
+  "modelo": "jev-1.13.0",
+  "tokens": 780
+ },
+ "08364948000138|fato_relevante|2025-08-01|Conclusão da aquisição de Rialma IV": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "aquisicao_venda": 1.0,
+   "operacional": 0.0,
+   "resultado": 0.0,
+   "societario_governanca": 0.0,
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "outro": 0.0,
+   "pagamento_divida": 0.0,
+   "rating": 0.0
+  },
+  "impacto_score": 1.54,
+  "impacto_confianca": 0.31,
+  "relevante": 0.7,
+  "modelo": "jev-1.13.0",
+  "tokens": 769
+ },
+ "24624490000165|comunicado|2024-09-26|Comunicado - Eleição Diretor Presidente": {
+  "evento": "societario_governanca",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "resultado": 0.0,
+   "aquisicao_venda": 0.0,
+   "societario_governanca": 1.0,
+   "pagamento_divida": 0.0,
+   "operacional": 0.0,
+   "outro": 0.0,
+   "nova_divida": 0.0,
+   "rating": 0.0
+  },
+  "impacto_score": 0.99,
+  "impacto_confianca": 0.95,
+  "relevante": 0.35,
+  "modelo": "jev-1.13.0",
+  "tokens": 774
+ },
+ "08364948000138|comunicado|2026-05-08|Apresentação de Resultados do 1T26": {
+  "evento": "resultado",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "operacional": 0.0,
+   "outro": 0.0,
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 1.0,
+   "aquisicao_venda": 0.0
+  },
+  "impacto_score": 1.05,
+  "impacto_confianca": 0.89,
+  "relevante": 0.83,
+  "modelo": "jev-1.13.0",
+  "tokens": 776
+ },
+ "92715812000131|comunicado|2024-04-15|Aviso ao Mercado - oferta pública de debênture -11ª emissão": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "nova_divida": 1.0,
+   "aquisicao_venda": 0.0,
+   "resultado": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.0,
+   "societario_governanca": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 0.95,
+  "impacto_confianca": 0.68,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 781
+ },
+ "07859971000130|comunicado|2026-08-17|Entrada em operação de Tangará": {
+  "evento": "operacional",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "operacional": 0.99,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.01,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "aquisicao_venda": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 1.81,
+  "impacto_confianca": 0.71,
+  "relevante": 0.74,
+  "modelo": "jev-1.13.0",
+  "tokens": 773
+ },
+ "08364948000138|comunicado|2026-07-15|Comunicado ao Mercado": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.93,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "operacional": 0.0,
+   "outro": 0.05,
+   "rating": 0.0,
+   "nova_divida": 0.95,
+   "aquisicao_venda": 0.0,
+   "resultado": 0.0
+  },
+  "impacto_score": 1.0,
+  "impacto_confianca": 0.96,
+  "relevante": 0.85,
+  "modelo": "jev-1.13.0",
+  "tokens": 766
+ },
+ "28201130000101|comunicado|2026-09-22|Comunicado ao Mercado": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.8,
+  "evento_probabilidades": {
+   "outro": 0.17,
+   "pagamento_divida": 0.01,
+   "resultado": 0.0,
+   "nova_divida": 0.82,
+   "credito_negativo": 0.0,
+   "operacional": 0.0,
+   "aquisicao_venda": 0.0,
+   "societario_governanca": 0.0,
+   "rating": 0.0
+  },
+  "impacto_score": 1.0,
+  "impacto_confianca": 0.97,
+  "relevante": 0.86,
+  "modelo": "jev-1.13.0",
+  "tokens": 770
+ },
+ "02998611000104|comunicado|2026-05-05|Apresentação de resultados 1T26": {
+  "evento": "resultado",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "resultado": 1.0,
+   "aquisicao_venda": 0.0,
+   "rating": 0.0,
+   "outro": 0.0,
+   "nova_divida": 0.0
+  },
+  "impacto_score": 1.03,
+  "impacto_confianca": 0.93,
+  "relevante": 0.84,
+  "modelo": "jev-1.13.0",
+  "tokens": 771
+ },
+ "27967244000102|comunicado|2024-09-30|Mudança na composição do comitê de auditoria estatutário": {
+  "evento": "societario_governanca",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "aquisicao_venda": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "societario_governanca": 1.0,
+   "outro": 0.0,
+   "rating": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 1.02,
+  "impacto_confianca": 0.92,
+  "relevante": 0.5,
+  "modelo": "jev-1.13.0",
+  "tokens": 780
+ },
+ "02998611000104|comunicado|2026-04-22|Energização Jacarandá": {
+  "evento": "operacional",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "nova_divida": 0.02,
+   "societario_governanca": 0.0,
+   "credito_negativo": 0.0,
+   "outro": 0.0,
+   "operacional": 0.98,
+   "resultado": 0.0,
+   "aquisicao_venda": 0.0,
+   "pagamento_divida": 0.0
+  },
+  "impacto_score": 1.44,
+  "impacto_confianca": 0.26,
+  "relevante": 0.71,
+  "modelo": "jev-1.13.0",
+  "tokens": 768
+ },
+ "02998611000104|comunicado|2026-08-04|Apresentação de Resultados 2T26": {
+  "evento": "resultado",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "outro": 0.0,
+   "rating": 0.0,
+   "operacional": 0.0,
+   "aquisicao_venda": 0.0,
+   "pagamento_divida": 0.0,
+   "societario_governanca": 0.0,
+   "nova_divida": 0.0,
+   "credito_negativo": 0.0,
+   "resultado": 1.0
+  },
+  "impacto_score": 1.03,
+  "impacto_confianca": 0.92,
+  "relevante": 0.84,
+  "modelo": "jev-1.13.0",
+  "tokens": 773
+ },
+ "08364948000138|aviso_debenturistas|2024-11-13|Resgate Total Antecipado": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 0.75,
+  "evento_probabilidades": {
+   "resultado": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.21,
+   "nova_divida": 0.0,
+   "societario_governanca": 0.0,
+   "rating": 0.0,
+   "outro": 0.0,
+   "pagamento_divida": 0.79
+  },
+  "impacto_score": 1.66,
+  "impacto_confianca": 0.5,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 769
+ },
+ "02998611000104|aviso_debenturistas|2024-06-14|Aviso aos Debenturistas - Pgto de Juros 8a emissão": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "outro": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 1.0,
+   "aquisicao_venda": 0.0,
+   "rating": 0.0,
+   "nova_divida": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 1.7,
+  "impacto_confianca": 0.55,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 780
+ },
+ "07859971000130|aviso_debenturistas|2026-05-14|Amortização||Liquidação||Pagamento de juros/remuneração": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "operacional": 0.0,
+   "resultado": 0.0,
+   "outro": 0.0,
+   "rating": 0.0,
+   "societario_governanca": 0.0,
+   "credito_negativo": 0.0,
+   "aquisicao_venda": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 1.0
+  },
+  "impacto_score": 1.41,
+  "impacto_confianca": 0.28,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 789
+ },
+ "02998611000104|aviso_debenturistas|2026-06-12|Pagamento de principal e juros da 1a Emissão de Debêntures S": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "outro": 0.0,
+   "operacional": 0.0,
+   "aquisicao_venda": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "pagamento_divida": 1.0,
+   "nova_divida": 0.0,
+   "credito_negativo": 0.0
+  },
+  "impacto_score": 1.87,
+  "impacto_confianca": 0.8,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 786
+ },
+ "02998611000104|aviso_debenturistas|2025-04-16|Amortização||Pagamento de juros/remuneração": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 0.0,
+   "operacional": 0.0,
+   "rating": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 1.0
+  },
+  "impacto_score": 1.42,
+  "impacto_confianca": 0.26,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 776
+ },
+ "07859971000130|noticia|2026-04-30|Taesa (TAEE11) registra nova RAP de R$ 23 mi com SE Açailând": {
+  "evento": "operacional",
+  "evento_confianca": 0.99,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "societario_governanca": 0.0,
+   "outro": 0.0,
+   "resultado": 0.0,
+   "aquisicao_venda": 0.0,
+   "nova_divida": 0.01,
+   "pagamento_divida": 0.0,
+   "credito_negativo": 0.0,
+   "operacional": 0.99
+  },
+  "impacto_score": 1.47,
+  "impacto_confianca": 0.2,
+  "relevante": 0.71,
+  "modelo": "jev-1.13.0",
+  "tokens": 788
+ },
+ "02998611000104|noticia|2026-07-06|ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de ações": {
+  "evento": "outro",
+  "evento_confianca": 0.38,
+  "evento_probabilidades": {
+   "nova_divida": 0.12,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "credito_negativo": 0.0,
+   "operacional": 0.0,
+   "outro": 0.46,
+   "societario_governanca": 0.38,
+   "aquisicao_venda": 0.04
+  },
+  "impacto_score": 1.06,
+  "impacto_confianca": 0.66,
+  "relevante": 0.35,
+  "modelo": "jev-1.13.0",
+  "tokens": 772
+ },
+ "02998611000104|noticia|2026-07-15|ISA Energia (ISAE3, ISAE4) registra oferta de até 44,4 mi de": {
+  "evento": "outro",
+  "evento_confianca": 0.36,
+  "evento_probabilidades": {
+   "operacional": 0.0,
+   "credito_negativo": 0.0,
+   "nova_divida": 0.24,
+   "aquisicao_venda": 0.07,
+   "outro": 0.44,
+   "resultado": 0.01,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "societario_governanca": 0.24
+  },
+  "impacto_score": 1.05,
+  "impacto_confianca": 0.46,
+  "relevante": 0.43,
+  "modelo": "jev-1.13.0",
+  "tokens": 779
+ },
+ "02998611000104|noticia|2026-04-22|ISA Energia (ISAE3) registra início da operação do projeto J": {
+  "evento": "operacional",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "rating": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 1.0,
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 0.0,
+   "outro": 0.0,
+   "societario_governanca": 0.0,
+   "pagamento_divida": 0.0
+  },
+  "impacto_score": 1.91,
+  "impacto_confianca": 0.87,
+  "relevante": 0.25,
+  "modelo": "jev-1.13.0",
+  "tokens": 772
+ },
+ "08364948000138|noticia|2026-03-06|Alupar acelera ciclo de investimentos e projeta pico de alav": {
+  "evento": "resultado",
+  "evento_confianca": 0.74,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "resultado": 0.78,
+   "rating": 0.0,
+   "aquisicao_venda": 0.0,
+   "societario_governanca": 0.0,
+   "operacional": 0.02,
+   "pagamento_divida": 0.0,
+   "outro": 0.01,
+   "nova_divida": 0.19
+  },
+  "impacto_score": 0.16,
+  "impacto_confianca": 0.76,
+  "relevante": 0.91,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ },
+ "08364948000138|noticia|2026-07-03|Alupar (ALUP4) anuncia RAP de R$ 96,7 mi em leilão da Aneel": {
+  "evento": "operacional",
+  "evento_confianca": 0.99,
+  "evento_probabilidades": {
+   "outro": 0.0,
+   "pagamento_divida": 0.0,
+   "resultado": 0.0,
+   "nova_divida": 0.0,
+   "credito_negativo": 0.0,
+   "operacional": 0.99,
+   "aquisicao_venda": 0.01,
+   "societario_governanca": 0.0,
+   "rating": 0.0
+  },
+  "impacto_score": 1.72,
+  "impacto_confianca": 0.58,
+  "relevante": 0.49,
+  "modelo": "jev-1.13.0",
+  "tokens": 782
+ },
+ "07859971000130|noticia|2026-08-11|JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar ": {
+  "evento": "outro",
+  "evento_confianca": 0.62,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "rating": 0.0,
+   "nova_divida": 0.34,
+   "aquisicao_venda": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.66,
+   "resultado": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.0
+  },
+  "impacto_score": 1.0,
+  "impacto_confianca": 0.98,
+  "relevante": 0.16,
+  "modelo": "jev-1.13.0",
+  "tokens": 785
+ },
+ "07859971000130|noticia|2026-06-17|Taesa (TAEE11) anuncia renúncia de presidente do conselho": {
+  "evento": "societario_governanca",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "aquisicao_venda": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "outro": 0.0,
+   "societario_governanca": 1.0,
+   "rating": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 0.84,
+  "impacto_confianca": 0.75,
+  "relevante": 0.19,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ },
+ "08364948000138|noticia|2026-03-06|Alupar (ALUP11) 4T25: receita segue avançando, mas variações": {
+  "evento": "resultado",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "societario_governanca": 0.0,
+   "pagamento_divida": 0.0,
+   "resultado": 1.0,
+   "nova_divida": 0.0,
+   "rating": 0.0,
+   "operacional": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.0
+  },
+  "impacto_score": 1.01,
+  "impacto_confianca": 0.98,
+  "relevante": 0.73,
+  "modelo": "jev-1.13.0",
+  "tokens": 795
+ },
+ "07859971000130|noticia|2026-08-12|Taesa (TAEE11) conclui aquisição de ativos de transmissão po": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 1.0,
+   "societario_governanca": 0.0,
+   "operacional": 0.0,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 1.16,
+  "impacto_confianca": 0.0,
+  "relevante": 0.48,
+  "modelo": "jev-1.13.0",
+  "tokens": 785
+ },
+ "08364948000138|noticia|2026-02-10|Alupar capta R$ 2,45 bilhões em debêntures para financiar pr": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "pagamento_divida": 0.0,
+   "resultado": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "nova_divida": 1.0,
+   "credito_negativo": 0.0,
+   "rating": 0.0,
+   "outro": 0.0,
+   "societario_governanca": 0.0
+  },
+  "impacto_score": 1.44,
+  "impacto_confianca": 0.16,
+  "relevante": 0.96,
+  "modelo": "jev-1.13.0",
+  "tokens": 784
+ },
+ "08364948000138|noticia|2026-07-15|Phronesis atinge 5% das ações PN da Alupar (ALUP11)": {
+  "evento": "societario_governanca",
+  "evento_confianca": 0.29,
+  "evento_probabilidades": {
+   "outro": 0.23,
+   "nova_divida": 0.02,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.37,
+   "societario_governanca": 0.38,
+   "rating": 0.0,
+   "operacional": 0.0,
+   "credito_negativo": 0.0,
+   "resultado": 0.0
+  },
+  "impacto_score": 1.08,
+  "impacto_confianca": 0.56,
+  "relevante": 0.36,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ },
+ "07859971000130|noticia|2026-04-23|Taesa paga R$ 23 milhões em juros de debêntures e reforça pr": {
+  "evento": "pagamento_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "pagamento_divida": 1.0,
+   "operacional": 0.0,
+   "outro": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 0.0,
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "resultado": 0.0,
+   "societario_governanca": 0.0
+  },
+  "impacto_score": 1.98,
+  "impacto_confianca": 0.97,
+  "relevante": 0.94,
+  "modelo": "jev-1.13.0",
+  "tokens": 790
+ },
+ "07859971000130|analise|2023-07-31|Taesa (TAEE11), Bradesco (BBDC4), Petrobras (PETR4) divulgam": {
+  "evento": "resultado",
+  "evento_confianca": 0.97,
+  "evento_probabilidades": {
+   "resultado": 0.98,
+   "societario_governanca": 0.0,
+   "credito_negativo": 0.0,
+   "outro": 0.0,
+   "nova_divida": 0.02,
+   "pagamento_divida": 0.0,
+   "rating": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 1.04,
+  "impacto_confianca": 0.89,
+  "relevante": 0.28,
+  "modelo": "jev-1.13.0",
+  "tokens": 805
+ },
+ "26796739000145|analise|2020-05-22|Análise - Debênture TPE - Renda Fixa - Transmissora Paraíso ": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.71,
+  "evento_probabilidades": {
+   "operacional": 0.0,
+   "resultado": 0.0,
+   "credito_negativo": 0.0,
+   "outro": 0.18,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.75,
+   "rating": 0.07,
+   "societario_governanca": 0.0,
+   "aquisicao_venda": 0.0
+  },
+  "impacto_score": 1.02,
+  "impacto_confianca": 0.84,
+  "relevante": 0.94,
+  "modelo": "jev-1.13.0",
+  "tokens": 801
+ },
+ "07859971000130|analise|2024-05-09|Taesa (TAEE11): Resultados do 1T24": {
+  "evento": "resultado",
+  "evento_confianca": 0.99,
+  "evento_probabilidades": {
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.99,
+   "aquisicao_venda": 0.0,
+   "rating": 0.0,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.01,
+   "outro": 0.0,
+   "credito_negativo": 0.0
+  },
+  "impacto_score": 1.16,
+  "impacto_confianca": 0.67,
+  "relevante": 0.64,
+  "modelo": "jev-1.13.0",
+  "tokens": 781
+ },
+ "27821748000101|analise|2020-05-26|Análise - DEB EDP TRANSMISSAO SP-MG S/A - Renda Fixa - JUL/2": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.72,
+  "evento_probabilidades": {
+   "nova_divida": 0.76,
+   "resultado": 0.0,
+   "rating": 0.1,
+   "pagamento_divida": 0.0,
+   "credito_negativo": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "outro": 0.14,
+   "aquisicao_venda": 0.0
+  },
+  "impacto_score": 1.01,
+  "impacto_confianca": 0.88,
+  "relevante": 0.94,
+  "modelo": "jev-1.13.0",
+  "tokens": 791
+ },
+ "07859971000130|analise|2024-04-23|Taesa (TAEE11) capta R$ 1,3 bilhão com emissão de debêntures": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "outro": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "rating": 0.0,
+   "nova_divida": 1.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "operacional": 0.0
+  },
+  "impacto_score": 1.44,
+  "impacto_confianca": 0.16,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 793
+ },
+ "02998611000104|analise|2026-05-05|ISA Energia (ISAE4) 1T26: Resultados Ajustados em Linha": {
+  "evento": "resultado",
+  "evento_confianca": 0.98,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "outro": 0.0,
+   "aquisicao_venda": 0.0,
+   "nova_divida": 0.01,
+   "resultado": 0.99,
+   "operacional": 0.0,
+   "rating": 0.0,
+   "credito_negativo": 0.0,
+   "pagamento_divida": 0.0
+  },
+  "impacto_score": 1.13,
+  "impacto_confianca": 0.79,
+  "relevante": 0.74,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ },
+ "07859971000130|analise|2024-03-07|Taesa (TAEE11): alavancagem está confortável, diz presidente": {
+  "evento": "resultado",
+  "evento_confianca": 0.92,
+  "evento_probabilidades": {
+   "operacional": 0.0,
+   "resultado": 0.93,
+   "credito_negativo": 0.0,
+   "outro": 0.03,
+   "pagamento_divida": 0.0,
+   "nova_divida": 0.03,
+   "rating": 0.01,
+   "societario_governanca": 0.0,
+   "aquisicao_venda": 0.0
+  },
+  "impacto_score": 1.83,
+  "impacto_confianca": 0.74,
+  "relevante": 0.91,
+  "modelo": "jev-1.13.0",
+  "tokens": 792
+ },
+ "08364948000138|analise|2019-12-10|Alupar capta R$ 648,5 milhões com debêntures": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "societario_governanca": 0.0,
+   "pagamento_divida": 0.0,
+   "nova_divida": 1.0,
+   "resultado": 0.0,
+   "credito_negativo": 0.0,
+   "aquisicao_venda": 0.0,
+   "rating": 0.0,
+   "operacional": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 1.45,
+  "impacto_confianca": 0.17,
+  "relevante": 0.95,
+  "modelo": "jev-1.13.0",
+  "tokens": 778
+ }
+}
