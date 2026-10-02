@@ -8,6 +8,7 @@ Uso: python site/gerar.py
 
 import csv
 import html
+import unicodedata
 import json
 import statistics
 from datetime import date
@@ -94,6 +95,13 @@ tbody tr[data-codigo]{cursor:pointer}tbody tr:hover{background:var(--surface-2)}
 .selo{display:inline-block;padding:0 .4rem;border-radius:4px;font-size:.7rem;border:1px solid var(--line-2);color:var(--ink-2)}
 .coef td:first-child{text-align:left}
 ul.metodo li{margin-bottom:.45rem;color:var(--ink-2)}ul.metodo b{color:var(--ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;padding:0;border:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--div-neg-2),var(--div-0) 50%,var(--div-pos-2))}
+input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--div-neg-2),var(--div-0) 50%,var(--div-pos-2))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);margin-top:-6px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--surface);border:2px solid var(--ink)}
+.regua-marcas{display:flex;justify-content:space-between;font-size:.7rem;color:var(--ink-3);margin-top:-4px;font-variant-numeric:tabular-nums}
+#curva{width:100%;height:auto;aspect-ratio:2.2/1;display:block;margin-top:10px;touch-action:none}
 footer{margin-top:56px;font-size:.78rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
 .links a{margin-right:1.25rem}
 """
@@ -147,6 +155,10 @@ def gerar_home() -> str:
     return pagina("Alisson Prata Oliveira", "Alisson Prata Oliveira: análise de mercado e crédito privado.", corpo)
 
 
+def sem_acento(t: str) -> str:
+    return unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
+
+
 def ler_csv(p: Path) -> list[dict]:
     return list(csv.DictReader(p.open(encoding="utf-8"))) if p.exists() else []
 
@@ -189,12 +201,19 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
             no(g_id, tipo="grupo", rotulo=g, grupo=g, detalhe="grupo inferido, a confirmar na escritura")
             links.append({"source": g_id, "target": em_id, "tipo": "inferido"})
 
-        # garantidores e controladores citados na escritura (quando já lidos)
+        # ligações de risco lidas nas escrituras (status 'a revisar' até revisão humana)
         cl = clausulas.get(s["codigo"])
         if cl and cl.get("fiadora"):
-            f_id = "f:" + cl["fiadora"].upper()
-            no(f_id, tipo="garantidor", rotulo=cl["fiadora"], grupo=g, detalhe="fiadora citada na escritura")
+            alvo_nome = sem_acento(cl["fiadora"]).upper()[:18]
+            existente = next((n for n in nos if n["tipo"] in ("controlador", "emissor") and sem_acento(n["rotulo"]).upper().startswith(alvo_nome)), None)
+            f_id = existente["id"] if existente else "f:" + cl["fiadora"].upper()
+            if not existente:
+                no(f_id, tipo="garantidor", rotulo=cl["fiadora"], grupo=g, detalhe="fiadora citada na escritura (a revisar)")
             links.append({"source": f_id, "target": "s:" + s["codigo"], "tipo": "garante"})
+        if cl and cl.get("cross_default") == "S" and any(x in cl.get("cross_default_abrange", "") for x in ("Controladora", "Fiadora", "Acionista")):
+            for c in controladores.get(u["cnpj"], []):
+                if not c["socio_de"]:
+                    links.append({"source": "c:" + (c["cnpj_controlador"] or c["controlador"]), "target": "s:" + s["codigo"], "tipo": "cross"})
 
     for n in [n for n in nos if n["tipo"] == "grupo"]:
         for c in [c for c in nos if c["tipo"] == "controlador" and c["grupo"] == n["grupo"]]:
@@ -245,8 +264,9 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   const hullRot = camHull.selectAll('text').data(contornos).join('text').text(x=>x.startsWith('Isolada')?'ISOLADAS · GRUPO A IDENTIFICAR':x.toUpperCase())
     .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.08em').attr('fill','var(--ink-2)').attr('text-anchor','middle');
   const link = camLink.selectAll('line').data(links).join('line').attr('stroke','var(--edge)')
-    .attr('stroke-width', l => l.tipo==='emitiu'?.7 : l.tipo==='garante'?1.6 : 1.2)
-    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : null);
+    .attr('stroke-width', l => l.tipo==='emitiu'?.7 : l.tipo==='garante'||l.tipo==='cross'?1.6 : 1.2)
+    .attr('stroke', l => l.tipo==='cross' ? 'var(--div-pos-2)' : 'var(--edge)').attr('stroke-opacity', l => l.tipo==='cross'?.55:1)
+    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='cross'?'6 2':null);
   const no = camNo.selectAll('g').data(nos).join('g').style('cursor','pointer');
   no.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
     .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
@@ -324,10 +344,42 @@ function calcular(){
   document.getElementById('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
   document.getElementById('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
 }
-function selecionar(c){ sel.value=c; calcular(); }
-sel.addEventListener('change', calcular); choque.addEventListener('input', calcular);
-document.querySelectorAll('.botoes button').forEach(b => b.addEventListener('click', () => { choque.value=b.dataset.v; calcular(); }));
-if (sel.options.length) { sel.value = sel.options[0].value; calcular(); }
+// régua e curva preço x choque: os três controles (régua, ponto arrastável, campo) ficam sincronizados
+const regua = document.getElementById('regua'), reguaValor = document.getElementById('regua_valor');
+const variacao = (s, bps) => { const f = D.fluxos[s.codigo], ds = bps/1e4;
+  return f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : (-s.dmod*ds)*100; };
+function definir(bps, origem){
+  bps = Math.max(-300, Math.min(300, Math.round(bps/5)*5));
+  if (origem!=='campo') choque.value = bps; if (origem!=='regua') regua.value = bps;
+  reguaValor.textContent = (bps>0?'+':'')+bps+' bps'; calcular(); desenharCurva();
+}
+function desenharCurva(){
+  const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
+  const svg = d3.select('#curva'); svg.selectAll('*').remove();
+  const W = 440, H = 200, M = {t:12, r:12, b:22, l:40}; svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const pts = d3.range(-300, 301, 10).map(b => [b, variacao(s, b)]);
+  const x = d3.scaleLinear().domain([-300, 300]).range([M.l, W-M.r]);
+  const y = d3.scaleLinear().domain(d3.extent(pts, p=>p[1])).nice().range([H-M.b, M.t]);
+  y.ticks(4).forEach(t => { svg.append('line').attr('x1',M.l).attr('x2',W-M.r).attr('y1',y(t)).attr('y2',y(t)).attr('stroke','var(--line)');
+    svg.append('text').attr('x',M.l-6).attr('y',y(t)+3).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text(fmt(t,0)+'%'); });
+  [-300,-150,0,150,300].forEach(t => svg.append('text').attr('x',x(t)).attr('y',H-6).attr('text-anchor','middle').attr('font-size',9.5).attr('fill','var(--ink-3)').text((t>0?'+':'')+t));
+  svg.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',M.t).attr('y2',H-M.b).attr('stroke','var(--line-2)');
+  svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(pts)).attr('fill','none').attr('stroke','var(--ink)').attr('stroke-width',2);
+  const b = +choque.value || 0, v = variacao(s, b);
+  svg.append('line').attr('x1',x(b)).attr('x2',x(b)).attr('y1',y(v)).attr('y2',H-M.b).attr('stroke','var(--ink-3)').attr('stroke-dasharray','3 3');
+  svg.append('circle').attr('cx',x(b)).attr('cy',y(v)).attr('r',7).attr('fill', b<0?'var(--div-neg-2)':b>0?'var(--div-pos-2)':'var(--div-0)').attr('stroke','var(--surface)').attr('stroke-width',2);
+  svg.append('text').attr('x', x(b) + (b>150?-10:10)).attr('y', y(v)-10).attr('text-anchor', b>150?'end':'start').attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text(fmt(v,2)+'%');
+  // arrastar em qualquer ponto do gráfico move o choque
+  svg.append('rect').attr('x',M.l).attr('y',0).attr('width',W-M.l-M.r).attr('height',H).attr('fill','transparent').style('cursor','ew-resize')
+    .call(d3.drag().on('start drag', e => definir(x.invert(e.x), 'curva')))
+    .on('click', e => definir(x.invert(d3.pointer(e)[0]), 'curva'));
+}
+function selecionar(c){ sel.value=c; calcular(); desenharCurva(); }
+sel.addEventListener('change', () => { calcular(); desenharCurva(); });
+regua.addEventListener('input', () => definir(+regua.value, 'regua'));
+choque.addEventListener('input', () => definir(+choque.value || 0, 'campo'));
+document.querySelectorAll('.botoes button').forEach(b => b.addEventListener('click', () => definir(+b.dataset.v, 'botao')));
+if (sel.options.length) { sel.value = sel.options[0].value; definir(100, 'inicio'); }
 
 // ---------- tabela: ordenar e abrir no simulador ----------
 document.querySelectorAll('tbody tr[data-codigo]').forEach(tr => tr.addEventListener('click', () => { selecionar(tr.dataset.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); }));
@@ -454,7 +506,7 @@ def gerar_projeto() -> str:
 <div class="controles"><label>Destacar <select id="filtroGrupo"></select></label>
 <label>Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
-<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado</span><span>- - grupo inferido</span><span>··· fiança na escritura</span></div>
+<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
 </section>
 
@@ -469,7 +521,11 @@ def gerar_projeto() -> str:
 <div class="painel sim">
 <div>
 <label for="serie">Série</label><select id="serie"></select>
-<label for="choque">Choque no spread (bps)</label><input id="choque" type="number" step="5" value="100">
+<label for="regua">Choque no spread: <b id="regua_valor" class="serif" style="font-size:1.05rem">+100 bps</b></label>
+<input id="regua" type="range" min="-300" max="300" step="5" value="100" aria-label="Choque no spread em bps">
+<div class="regua-marcas"><span>−300</span><span>−150</span><span>0</span><span>+150</span><span>+300</span></div>
+<svg id="curva" role="img" aria-label="Variação do PU em função do choque de spread; arraste o ponto para ajustar"></svg>
+<label for="choque">Valor exato (bps)</label><input id="choque" type="number" step="5" value="100">
 <div class="botoes"><button data-v="-100">−100</button><button data-v="-50">−50</button><button data-v="50">+50</button><button data-v="100">+100</button><button data-v="200">+200</button></div>
 </div>
 <div><div class="res">
