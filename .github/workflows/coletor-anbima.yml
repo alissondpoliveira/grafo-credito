@@ -57,6 +57,12 @@ jobs:
         continue-on-error: true
         run: python coletor/documentos.py
 
+      - name: Classificar documentos novos (JEV)
+        continue-on-error: true
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+        run: python analises/jev_classificar.py tudo
+
       - name: Precificar universo
         run: python analises/precificacao.py
 

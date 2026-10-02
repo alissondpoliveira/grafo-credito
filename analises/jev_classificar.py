@@ -22,6 +22,7 @@ import csv
 import json
 import os
 import random
+import re
 import sys
 import time
 import urllib.error
@@ -46,14 +47,24 @@ EVENTOS = {
     "societario_governanca": "Mudança de controle, reorganização societária, eleição de diretores ou conselheiros",
     "resultado": "Resultados financeiros, guidance, proventos, dividendos",
     "rating": "Atribuição ou manutenção de rating de crédito",
+    "analise_credito": "Análise ou relatório de crédito sobre a debênture ou a dívida do emissor, feito por casa de análise",
     "outro": "Outro assunto, sem relação clara com crédito",
 }
 IMPACTO = ["negativo para o credor", "neutro para o credor", "positivo para o credor"]
 PERGUNTAS = {
     "evento": {"type": "choice", "instructions": "Qual é o tipo de evento descrito neste documento?", "criteria": EVENTOS},
     "impacto": {"type": "score", "instructions": "Para quem detém debêntures deste emissor, qual o impacto do evento sobre a capacidade de pagamento?", "criteria": IMPACTO},
-    "relevante": {"type": "noul", "instructions": "O documento trata do crédito, da dívida ou da situação financeira deste emissor (e não apenas o cita entre várias empresas)?"},
+    "relevante": {"type": "noul", "instructions": (
+        "Este documento é principalmente sobre este emissor e afeta, mesmo que indiretamente, sua capacidade de pagar dívidas? "
+        "Conta como sim: dívida, pagamentos, resultados, receita, entrada em operação de ativos, leilões, aquisições, venda de ativos, "
+        "mudança de controle. Conta como não: o emissor é só uma entre várias empresas citadas, ou o assunto é apenas governança "
+        "interna (eleição, comitês) sem efeito financeiro.")},
 }
+# títulos sem conteúdo: o JEV respondeu com confiança alta e errado na validação (02/10/2026); não são enviados
+GENERICOS = re.compile(r"^\s*(comunicado( ao mercado)?|fato relevante|aviso aos (acionistas|debenturistas)|outros comunicados|"
+                       r"esclarecimentos?( sobre .{0,20})?)\s*[.:-]?\s*$", re.I)
+CONFIANCA_MINIMA = 0.8  # validação: 89% de acerto no tipo de evento com confiança >= 0,8, 36% abaixo disso
+
 TIPOS_CLASSIFICADOS = ("fato_relevante", "comunicado", "aviso_debenturistas", "noticia", "analise")
 NOME_TIPO = {"fato_relevante": "Fato relevante (CVM)", "comunicado": "Comunicado ao mercado (CVM)",
              "aviso_debenturistas": "Aviso aos debenturistas (CVM)", "noticia": "Notícia", "analise": "Análise de casa de research"}
@@ -222,19 +233,44 @@ def comparar() -> None:
     (PASTA / "comparacao.json").write_text(json.dumps({"linhas": linhas}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def nivel_impacto(score: float) -> str:
+    return "negativo" if score < 0.67 else "neutro" if score < 1.33 else "positivo"
+
+
 def tudo() -> None:
+    """Classifica documentos novos. Confiança >= CONFIANCA_MINIMA entra direto; abaixo vai para a fila de revisão."""
     saida = {}
     arq = PASTA / "classificacao.json"
     if arq.exists():
         saida = json.loads(arq.read_text(encoding="utf-8"))
-    novos = 0
+    novos = genericos = 0
     for d in todos_docs():
-        if d["id"] not in saida:
-            saida[d["id"]] = classificar(d, d["emissor"])
-            novos += 1
-            time.sleep(0.3)
+        if d["id"] in saida:
+            continue
+        if GENERICOS.match(d["titulo"]):
+            saida[d["id"]] = {"status": "titulo_generico"}
+            genericos += 1
+            continue
+        r = classificar(d, d["emissor"])
+        r["impacto"] = nivel_impacto(r["impacto_score"])
+        r["status"] = "automatico" if r["evento_confianca"] >= CONFIANCA_MINIMA else "a_revisar"
+        saida[d["id"]] = r
+        novos += 1
+        time.sleep(0.3)
     arq.write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{novos} documentos novos classificados; total {len(saida)}")
+
+    # fila de calibração: o que o JEV não teve certeza, para o Alisson decidir aos poucos
+    docs = {d["id"]: d for d in todos_docs()}
+    fila = [(i, r) for i, r in saida.items() if r.get("status") == "a_revisar" and i in docs]
+    with (PASTA / "fila_revisao.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["id", "emissor", "tipo", "data", "titulo", "jev_evento", "jev_confianca", "jev_impacto", "decisao_evento", "decisao_impacto"])
+        for i, r in sorted(fila, key=lambda x: x[1]["evento_confianca"]):
+            d = docs[i]
+            w.writerow([i, d["emissor"], d["tipo"], d.get("data", ""), d["titulo"], r["evento"], round(r["evento_confianca"], 2), r["impacto"], "", ""])
+    from collections import Counter
+    st = Counter(r.get("status") for r in saida.values())
+    print(f"{novos} novos classificados, {genericos} títulos genéricos ignorados; total {dict(st)}; fila de revisão: {len(fila)}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,404 @@
+{
+ "linhas": [
+  {
+   "n": 1,
+   "titulo": "Oferta Pública Secundária",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "nova_divida",
+   "conf": 0.7,
+   "ok": false
+  },
+  {
+   "n": 2,
+   "titulo": "Pricing Oferta Pública Secundária TRPL4",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "nova_divida",
+   "conf": 0.51,
+   "ok": false
+  },
+  {
+   "n": 3,
+   "titulo": "Vitória de Leilão para 5 Novos Projetos no Peru",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 0.96,
+   "ok": true
+  },
+  {
+   "n": 4,
+   "titulo": "Reorganização Societária - Incorporação, Cisão ou Fusão da Companhia",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 5,
+   "titulo": "Vitoria do Lote 7 do Leilão de Transmissão Aneel 01/26 (2ªEtapa)",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 0.96,
+   "ok": true
+  },
+  {
+   "n": 6,
+   "titulo": "Proposta de Distribuição de Proventos",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 7,
+   "titulo": "Conversão de Ações",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 0.66,
+   "ok": true
+  },
+  {
+   "n": 8,
+   "titulo": "Primeiro programa de recompra de ações da companhia",
+   "humano_evento": "resultado",
+   "jev_evento": "societario_governanca",
+   "conf": 0.41,
+   "ok": false
+  },
+  {
+   "n": 9,
+   "titulo": "Aquisição de lote no leilão ANEEL 02.2024",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 10,
+   "titulo": "TAESA celebra contrato para aquisição de 5 ativos de transmissão de energia",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 11,
+   "titulo": "Aquisição de ações de emissão da RIALMA IV",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 12,
+   "titulo": "Celebração de acordo para a criação de plataforma de controle conjunto de ativos",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "outro",
+   "conf": 0.25,
+   "ok": false
+  },
+  {
+   "n": 13,
+   "titulo": "Conclusão do descruzamento de participações na IE Madeira e IE Garanhuns",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "societario_governanca",
+   "conf": 0.77,
+   "ok": false
+  },
+  {
+   "n": 14,
+   "titulo": "Conclusão da aquisição de Rialma IV",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 15,
+   "titulo": "Comunicado - Eleição Diretor Presidente",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 16,
+   "titulo": "Apresentação de Resultados do 1T26",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 17,
+   "titulo": "Aviso ao Mercado - oferta pública de debênture -11ª emissão",
+   "humano_evento": "nova_divida",
+   "jev_evento": "nova_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 18,
+   "titulo": "Entrada em operação de Tangará",
+   "humano_evento": "operacional",
+   "jev_evento": "operacional",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 19,
+   "titulo": "Comunicado ao Mercado",
+   "humano_evento": "outro",
+   "jev_evento": "nova_divida",
+   "conf": 0.93,
+   "ok": false
+  },
+  {
+   "n": 20,
+   "titulo": "Comunicado ao Mercado",
+   "humano_evento": "outro",
+   "jev_evento": "nova_divida",
+   "conf": 0.8,
+   "ok": false
+  },
+  {
+   "n": 21,
+   "titulo": "Apresentação de resultados 1T26",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 22,
+   "titulo": "Mudança na composição do comitê de auditoria estatutário",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 23,
+   "titulo": "Energização Jacarandá",
+   "humano_evento": "operacional",
+   "jev_evento": "operacional",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 24,
+   "titulo": "Apresentação de Resultados 2T26",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 25,
+   "titulo": "Resgate Total Antecipado",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 0.75,
+   "ok": true
+  },
+  {
+   "n": 26,
+   "titulo": "Aviso aos Debenturistas - Pgto de Juros 8a emissão",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 27,
+   "titulo": "Amortização||Liquidação||Pagamento de juros/remuneração",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 28,
+   "titulo": "Pagamento de principal e juros da 1a Emissão de Debêntures Simples da IE Ivaí",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 29,
+   "titulo": "Amortização||Pagamento de juros/remuneração",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 30,
+   "titulo": "Taesa (TAEE11) registra nova RAP de R$ 23 mi com SE Açailândia",
+   "humano_evento": "operacional",
+   "jev_evento": "operacional",
+   "conf": 0.99,
+   "ok": true
+  },
+  {
+   "n": 31,
+   "titulo": "ISA Energia (ISAE3, ISAE4) anuncia potencial oferta de ações PN",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "outro",
+   "conf": 0.38,
+   "ok": false
+  },
+  {
+   "n": 32,
+   "titulo": "ISA Energia (ISAE3, ISAE4) registra oferta de até 44,4 mi de ações PN",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "outro",
+   "conf": 0.36,
+   "ok": false
+  },
+  {
+   "n": 33,
+   "titulo": "ISA Energia (ISAE3) registra início da operação do projeto Jacarandá",
+   "humano_evento": "operacional",
+   "jev_evento": "operacional",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 34,
+   "titulo": "Alupar acelera ciclo de investimentos e projeta pico de alavancagem em 2028",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 0.74,
+   "ok": true
+  },
+  {
+   "n": 35,
+   "titulo": "Alupar (ALUP4) anuncia RAP de R$ 96,7 mi em leilão da Aneel",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "operacional",
+   "conf": 0.99,
+   "ok": false
+  },
+  {
+   "n": 36,
+   "titulo": "JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar hoje",
+   "humano_evento": "outro",
+   "jev_evento": "outro",
+   "conf": 0.62,
+   "ok": true
+  },
+  {
+   "n": 37,
+   "titulo": "Taesa (TAEE11) anuncia renúncia de presidente do conselho",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 38,
+   "titulo": "Alupar (ALUP11) 4T25: receita segue avançando, mas variações em custos mantêm ma",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 39,
+   "titulo": "Taesa (TAEE11) conclui aquisição de ativos de transmissão por R$ 1,6 bi",
+   "humano_evento": "aquisicao_venda",
+   "jev_evento": "aquisicao_venda",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 40,
+   "titulo": "Alupar capta R$ 2,45 bilhões em debêntures para financiar projetos de transmissã",
+   "humano_evento": "nova_divida",
+   "jev_evento": "nova_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 41,
+   "titulo": "Phronesis atinge 5% das ações PN da Alupar (ALUP11)",
+   "humano_evento": "societario_governanca",
+   "jev_evento": "societario_governanca",
+   "conf": 0.29,
+   "ok": true
+  },
+  {
+   "n": 42,
+   "titulo": "Taesa paga R$ 23 milhões em juros de debêntures e reforça previsibilidade no set",
+   "humano_evento": "pagamento_divida",
+   "jev_evento": "pagamento_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 43,
+   "titulo": "Taesa (TAEE11), Bradesco (BBDC4), Petrobras (PETR4) divulgam resultados do 2T23:",
+   "humano_evento": "outro",
+   "jev_evento": "resultado",
+   "conf": 0.97,
+   "ok": false
+  },
+  {
+   "n": 44,
+   "titulo": "Análise - Debênture TPE - Renda Fixa - Transmissora Paraíso de Energia S.A. - SE",
+   "humano_evento": "outro",
+   "jev_evento": "nova_divida",
+   "conf": 0.71,
+   "ok": false
+  },
+  {
+   "n": 45,
+   "titulo": "Taesa (TAEE11): Resultados do 1T24",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 0.99,
+   "ok": true
+  },
+  {
+   "n": 46,
+   "titulo": "Análise - DEB EDP TRANSMISSAO SP-MG S/A - Renda Fixa - JUL/2039",
+   "humano_evento": "outro",
+   "jev_evento": "nova_divida",
+   "conf": 0.72,
+   "ok": false
+  },
+  {
+   "n": 47,
+   "titulo": "Taesa (TAEE11) capta R$ 1,3 bilhão com emissão de debêntures",
+   "humano_evento": "nova_divida",
+   "jev_evento": "nova_divida",
+   "conf": 1.0,
+   "ok": true
+  },
+  {
+   "n": 48,
+   "titulo": "ISA Energia (ISAE4) 1T26: Resultados Ajustados em Linha",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 0.98,
+   "ok": true
+  },
+  {
+   "n": 49,
+   "titulo": "Taesa (TAEE11): alavancagem está confortável, diz presidente da companhia após d",
+   "humano_evento": "resultado",
+   "jev_evento": "resultado",
+   "conf": 0.92,
+   "ok": true
+  },
+  {
+   "n": 50,
+   "titulo": "Alupar capta R$ 648,5 milhões com debêntures",
+   "humano_evento": "nova_divida",
+   "jev_evento": "nova_divida",
+   "conf": 1.0,
+   "ok": true
+  }
+ ]
+}

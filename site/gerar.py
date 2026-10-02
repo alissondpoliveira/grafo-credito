@@ -175,7 +175,7 @@ CATEGORIA_DOC = {"fato_relevante": "oficial", "comunicado": "oficial", "aviso_de
                  "escritura": "escritura", "noticia": "noticia", "analise": "analise"}
 
 
-def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: dict, documentos: dict) -> dict:
+def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: dict, documentos: dict, jev: dict) -> dict:
     revisao = {}
     for r in ler_csv(RAIZ / "dados" / "referencia" / "revisao_escrituras.csv"):
         revisao.setdefault(r["codigo"], []).append(r)
@@ -203,8 +203,10 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
                     continue
                 por_cat[cat] = por_cat.get(cat, 0) + 1
                 d_id = f"d:{u['cnpj']}:{i}"
+                cl = jev.get(f"{u['cnpj']}|{d['tipo']}|{d.get('data', '')}|{d['titulo'][:60]}", {})
                 no(d_id, tipo="doc", categoria=cat, subtipo=d["tipo"], rotulo=d["titulo"][:90], data=d.get("data", ""),
-                   fonte=d.get("fonte", ""), url=d.get("url", ""), grupo=g)
+                   fonte=d.get("fonte", ""), url=d.get("url", ""), grupo=g,
+                   evento=cl.get("evento"), impacto=cl.get("impacto"), confianca=cl.get("evento_confianca"), status_jev=cl.get("status"))
                 links.append({"source": em_id, "target": d_id, "tipo": "doc"})
         no(em_id, tipo="emissor", rotulo=u["emissor_atual_snd"].title(), grupo=g, cnpj=u["cnpj"],
            detalhe=f"CNPJ {u['cnpj']}" + (f" · nome ANBIMA: {u['emissor_anbima'].title()}" if u["emissor_anbima"] != u["emissor_atual_snd"] else ""))
@@ -387,7 +389,9 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
       ge.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
       ge.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill','var(--surface)').attr('stroke','var(--ink)').attr('stroke-width',1.5);
       ge.filter(n=>n.tipo==='emissor').append('text').attr('class','mais').attr('text-anchor','middle').attr('dy',3).attr('font-size',8).attr('font-weight',700).attr('fill','var(--ink)').text('+');
-      ge.filter(n=>n.tipo==='doc').append('path').attr('d', n => d3.symbol(formaDoc(n.categoria), n.categoria==='analise'?70:58)()).attr('fill', n => corDoc(n.categoria)).attr('stroke','var(--surface)').attr('stroke-width',1);
+      ge.filter(n=>n.tipo==='doc').append('path').attr('d', n => d3.symbol(formaDoc(n.categoria), n.categoria==='analise'?70:58)()).attr('fill', n => corDoc(n.categoria))
+        .attr('stroke', n => n.status_jev==='automatico' && n.impacto==='negativo' ? 'var(--div-pos-2)' : n.status_jev==='automatico' && n.impacto==='positivo' ? 'var(--div-neg-2)' : 'var(--surface)')
+        .attr('stroke-width', n => n.status_jev==='automatico' && n.impacto!=='neutro' ? 2.2 : 1);
       ge.filter(n=>n.tipo==='serie').append('circle').attr('r',0).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2).transition().duration(300).attr('r', raio);
       return ge;
     });
@@ -423,7 +427,9 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     no.on('mouseenter', (e,n) => { const v = viz(); realcar(new Set([n.id, ...(v.get(n.id)||[])]));
         if (n.tipo==='bolha') { const r = resumo[n.grupo]; mostrar(e, '<b>'+nomeGrupo(n.grupo)+'</b>'+linha('Emissores', r.emissores)+linha('Séries', r.series)+linha('Desvio mediano', r.mediana==null?'–':sinal(r.mediana)+' bps')+'<span class="fraco">clique para abrir</span>'); }
         else if (n.tipo==='serie') mostrar(e, textoSerie(n));
-        else if (n.tipo==='doc') mostrar(e, '<b>'+nomeDoc[n.subtipo]+'</b> <span class="fraco">'+(n.data||'')+' · '+n.fonte+'</span><br>'+n.rotulo+'<br><span class="fraco">clique para abrir o original</span>');
+        else if (n.tipo==='doc') mostrar(e, '<b>'+nomeDoc[n.subtipo]+'</b> <span class="fraco">'+(n.data||'')+' · '+n.fonte+'</span><br>'+n.rotulo
+          + (n.evento ? linha('Evento (JEV)', n.evento.replace(/_/g,' ')) + linha('Impacto para o credor', n.impacto) + linha('Confiança', fmt(n.confianca,2) + (n.status_jev==='a_revisar'?' · a revisar':'')) : '')
+          + '<br><span class="fraco">clique para abrir o original</span>');
         else mostrar(e, '<b>'+n.rotulo+'</b><br><span class="fraco">'+nomeGrupo(n.grupo)+'</span><br>'+(n.detalhe||'')+(n.tipo==='emissor'?'<br><span class="fraco">clique para '+(abertosE.has(n.id)?'recolher':'ver as emissões')+'</span>':'')); })
       .on('mousemove', mover).on('mouseleave', () => { realcar(null); esconder(); })
       .on('click', (e,n) => { e.stopPropagation(); esconder();
@@ -449,7 +455,8 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     const series = todos.filter(m => m.tipo==='serie' && paiSerie.get(m.id)===n.id);
     const esc = t => String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
     const bloco = (titulo, itens) => itens.length ? '<div><h4>'+titulo+'</h4><ul>'+itens.join('')+'</ul></div>' : '';
-    const item = d => '<li><span>'+(d.data||'')+'</span><a href="'+esc(d.url)+'" target="_blank" rel="noopener">'+esc(d.titulo)+'</a> <span class="fraco">'+esc(d.fonte)+'</span></li>';
+    const selo = j => !j ? '' : ' <span class="selo" title="classificação JEV, confiança '+j.confianca+'">'+(j.impacto==='negativo'?'▼ ':j.impacto==='positivo'?'▲ ':'')+j.evento.replace(/_/g,' ')+(j.status==='a_revisar'?' · a revisar':'')+'</span>';
+    const item = d => '<li><span>'+(d.data||'')+'</span><a href="'+esc(d.url)+'" target="_blank" rel="noopener">'+esc(d.titulo)+'</a> <span class="fraco">'+esc(d.fonte)+'</span>'+selo(d.jev)+'</li>';
     const lista = t => docs.filter(d => t.includes(d.tipo)).map(item);
     f.innerHTML = '<div class="kicker">'+esc(nomeGrupo(n.grupo))+' · CNPJ '+n.cnpj+'</div><h3>'+esc(n.rotulo)+'</h3><p class="muted pequeno" style="margin:0">'+esc(n.detalhe)+'</p>'
       + '<div class="ficha-grade">'
@@ -571,7 +578,15 @@ def gerar_projeto() -> str:
                                     "n_hist": int(j["n_dias_hist"] or 0)}
     arq_docs = RAIZ / "dados" / "derivados" / "documentos.json"
     documentos = json.loads(arq_docs.read_text(encoding="utf-8"))["emissores"] if arq_docs.exists() else {}
-    grafo = montar_grafo(series, universo, desvios, clausulas, documentos)
+    arq_jev = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
+    jev = json.loads(arq_jev.read_text(encoding="utf-8")) if arq_jev.exists() else {}
+    # a ficha também mostra a classificação: anexa ao próprio documento
+    for cnpj, ls in documentos.items():
+        for d in ls:
+            cl = jev.get(f"{cnpj}|{d['tipo']}|{d.get('data', '')}|{d['titulo'][:60]}")
+            if cl and cl.get("evento"):
+                d["jev"] = {"evento": cl["evento"], "impacto": cl["impacto"], "confianca": round(cl["evento_confianca"], 2), "status": cl["status"]}
+    grafo = montar_grafo(series, universo, desvios, clausulas, documentos, jev)
 
     validas = [s for s in series if s["status"] in ("ok", "ok DI+")]
     dados_series, di = [], {}
@@ -669,7 +684,7 @@ def gerar_projeto() -> str:
 <button id="abrirTudo">abrir todos os grupos</button><button id="abrirEmissoes">abrir tudo até as emissões</button><button id="fecharTudo">recolher</button>
 <label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
-<div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
+<div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
 <div class="legenda" style="border-top:0;padding-top:0">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>· · ponte entre grupos</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
 <div id="ficha" class="painel"></div>
@@ -730,6 +745,7 @@ def gerar_projeto() -> str:
 <li><b>Variação histórica</b>: diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026). Ganha significado com o tempo.</li>
 <li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "escritura" = acionista, fiadora ou interveniente citada no preâmbulo da escritura (lida e a revisar); "inferido" = regra explícita, a confirmar. Emissor identificado pelo CNPJ do SND.</li>
 <li><b>Documentos</b>: só título, data, fonte e link, de fontes públicas (CVM IPE, agentes fiduciários, Google Notícias e páginas públicas de casas de análise). O conteúdo fica na fonte original. Análises filtradas por termos de crédito (debênture, rating, dívida, resultado).</li>
+<li><b>Classificação de eventos (JEV)</b>: o modelo System One da TypeSafe lê o título de cada fato relevante, comunicado, aviso, notícia e análise e devolve tipo de evento, impacto para o credor e relevância, com confiança. Validação em 50 documentos (02/10/2026): 89% de acerto no tipo de evento quando a confiança é ≥ 0,8 e 36% abaixo disso; só o primeiro grupo é exibido como classificação, o resto aparece "a revisar". Títulos sem conteúdo não são enviados. O critério de impacto segue o do JEV (pagamento em dia, captação e leilão vencido tendem a positivo) e está em calibração.</li>
 <li><b>Cláusulas</b> (coluna "Escritura"): presença de fiança, cessão fiduciária, cross-default e covenant de dívida líquida/EBITDA, localizada por regras de texto nas escrituras públicas (Pentágono e CVM IPE). Evidência a revisar, não leitura jurídica.</li>
 </ul>
 </section>
