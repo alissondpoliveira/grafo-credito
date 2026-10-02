@@ -167,7 +167,7 @@ def coletar(dia: date) -> str:
     destino_bruto.write_bytes(bruto)
     destino_csv.parent.mkdir(parents=True, exist_ok=True)
     with destino_csv.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=COLUNAS)
+        w = csv.DictWriter(f, fieldnames=COLUNAS, lineterminator="\n")
         w.writeheader()
         w.writerows(registros)
     return f"{len(registros)} séries"
