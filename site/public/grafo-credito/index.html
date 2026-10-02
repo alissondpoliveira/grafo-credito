@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grafo de Crédito</title>
+<meta name="description" content="Grafo de Crédito: debêntures de transmissão de energia, taxas ANBIMA e spread sobre NTN-B.">
+<style>
+:root{--bg:#fbfaf8;--fg:#1d1d1f;--muted:#6b6b70;--line:#e4e2dd;--accent:#1f4e79;--chip:#eef2f6}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececee;--muted:#9a9aa0;--line:#2b2b2f;--accent:#8fb8e0;--chip:#1f2630}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:56px 16px 80px}
+.estreito{max-width:640px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .5rem;letter-spacing:-.01em}
+h2{font-size:1.15rem;margin:2.5rem 0 .75rem}
+p{margin:.5rem 0 1rem}
+a{color:var(--accent)}
+.muted{color:var(--muted)}
+nav{font-size:.9rem;margin-bottom:2.5rem}
+nav a{margin-right:1rem;text-decoration:none}
+.links a{margin-right:1.25rem}
+.tabela{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.86rem;font-variant-numeric:tabular-nums}
+th,td{padding:.5rem .65rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-weight:600;color:var(--muted);background:var(--chip);position:sticky;top:0}
+td.t,th.t{text-align:left}
+tr:last-child td{border-bottom:0}
+.chip{display:inline-block;padding:.05rem .5rem;border-radius:99px;background:var(--chip);font-size:.78rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1.25rem 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem}
+.card b{display:block;font-size:1.4rem}
+ol li{margin-bottom:.35rem}
+footer{margin-top:3rem;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Alisson Prata Oliveira</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></nav>
+<h1>Grafo de Crédito</h1>
+<p class="muted" style="max-width:680px">Memória viva dos emissores de debêntures do crédito privado brasileiro, organizada como grafo: emissões, garantias, covenants, grupo econômico, demonstrações financeiras e preços de mercado. Piloto: transmissoras de energia elétrica.</p>
+
+<div class="cards">
+<div class="card"><span class="muted">Data de referência</span><b>01/10/2026</b></div>
+<div class="card"><span class="muted">Séries no universo</span><b>93</b></div>
+<div class="card"><span class="muted">Emissores</span><b>41</b></div>
+<div class="card"><span class="muted">Grupos / isoladas</span><b>8 / 22</b></div>
+<div class="card"><span class="muted">Spread mediano IPCA+</span><b>13 bps</b></div>
+</div>
+
+<h2>Universo de transmissão</h2>
+<p class="muted">Taxas indicativas ANBIMA. Spread = taxa indicativa menos a taxa indicativa da NTN-B de referência apontada pela própria ANBIMA, em pontos-base (método provisório, ainda sem interpolação por duration). O grupo de risco foi inferido pelo nome do emissor e ainda será confirmado nos documentos de cada emissão.</p>
+<div class="tabela"><table>
+<thead><tr><th class="t">Código</th><th class="t">Emissor</th><th class="t">Grupo de risco</th><th class="t">Remuneração</th><th>Vencimento</th><th>Taxa indicativa (%)</th><th>NTN-B ref. (%)</th><th>Spread (bps)</th><th>Duration (anos)</th><th>PU (R$)</th></tr></thead>
+<tbody>
+<tr><td class="t">ALUP18</td><td class="t">Alupar Investimento S/A</td><td class="t"><span class="chip">Alupar</span></td><td class="t">IPCA + 6,4986%</td><td>15/10/2034</td><td>7,3957</td><td>7,6266</td><td>-23</td><td>5,52</td><td>1.074,25</td></tr>
+<tr><td class="t">EEELA3</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">DI + 0,49%</td><td>10/09/2029</td><td>0,4181</td><td>–</td><td>–</td><td>2,08</td><td>1.009,48</td></tr>
+<tr><td class="t">EEELA5</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">DI + 0,45%</td><td>15/05/2030</td><td>0,4700</td><td>–</td><td>–</td><td>2,84</td><td>1.016,58</td></tr>
+<tr><td class="t">CPFGA2</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 6,0265%</td><td>15/05/2031</td><td>7,5746</td><td>7,6485</td><td>-7</td><td>3,17</td><td>1.170,36</td></tr>
+<tr><td class="t">EEELA0</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 6,1774%</td><td>15/10/2033</td><td>7,6868</td><td>7,6392</td><td>5</td><td>4,91</td><td>1.094,87</td></tr>
+<tr><td class="t">EEELA1</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 6,0994%</td><td>15/04/2034</td><td>7,7667</td><td>7,6266</td><td>14</td><td>5,24</td><td>1.051,43</td></tr>
+<tr><td class="t">EEELA4</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 7,7082%</td><td>15/02/2035</td><td>7,7764</td><td>7,6266</td><td>15</td><td>5,69</td><td>1.075,43</td></tr>
+<tr><td class="t">EEELB5</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 6,9249%</td><td>15/05/2035</td><td>7,7865</td><td>7,6266</td><td>16</td><td>5,82</td><td>1.030,52</td></tr>
+<tr><td class="t">EEELB1</td><td class="t">Cpfl Transmissao S.A</td><td class="t"><span class="chip">CPFL</span></td><td class="t">IPCA + 6,1572%</td><td>15/04/2039</td><td>7,9729</td><td>7,5800</td><td>39</td><td>7,90</td><td>996,36</td></tr>
+<tr><td class="t">EDPA11</td><td class="t">Edp Transmissao Alianca Sc S.A.</td><td class="t"><span class="chip">EDP</span></td><td class="t">IPCA + 8,3431%</td><td>15/10/2044</td><td>7,6580</td><td>7,6049</td><td>5</td><td>6,39</td><td>1.422,83</td></tr>
+<tr><td class="t">EDPR13</td><td class="t">Edp Transmissao Goias S.A.</td><td class="t"><span class="chip">EDP</span></td><td class="t">DI + 0,52%</td><td>10/12/2030</td><td>0,6333</td><td>–</td><td>–</td><td>2,16</td><td>1.041,69</td></tr>
+<tr><td class="t">EDPR23</td><td class="t">Edp Transmissao Goias S.A.</td><td class="t"><span class="chip">EDP</span></td><td class="t">DI + 0,6%</td><td>10/12/2032</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td class="t">MGSP12</td><td class="t">Edp Transmissao Sp-Mg S.A.</td><td class="t"><span class="chip">EDP</span></td><td class="t">IPCA + 4,45%</td><td>15/07/2039</td><td>7,7627</td><td>7,6266</td><td>14</td><td>5,34</td><td>1.144,53</td></tr>
+<tr><td class="t">EDPT11</td><td class="t">Edp Transmissão S.A.</td><td class="t"><span class="chip">EDP</span></td><td class="t">IPCA + 7,0267%</td><td>15/05/2033</td><td>7,6347</td><td>7,6485</td><td>-1</td><td>3,16</td><td>850,18</td></tr>
+<tr><td class="t">ETEN12</td><td class="t">Energisa Transmissao De Energia S.A</td><td class="t"><span class="chip">Energisa</span></td><td class="t">IPCA + 4,2297%</td><td>15/10/2027</td><td>6,0678</td><td>5,6227</td><td>45</td><td>1,00</td><td>1.419,46</td></tr>
+<tr><td class="t">ETEN21</td><td class="t">Energisa Transmissao De Energia S.A</td><td class="t"><span class="chip">Energisa</span></td><td class="t">IPCA + 5,141%</td><td>15/12/2028</td><td>6,2124</td><td>5,6227</td><td>59</td><td>1,13</td><td>1.509,83</td></tr>
+<tr><td class="t">ETEN22</td><td class="t">Energisa Transmissao De Energia S.A</td><td class="t"><span class="chip">Energisa</span></td><td class="t">IPCA + 4,4744%</td><td>15/10/2030</td><td>7,7415</td><td>7,4300</td><td>31</td><td>2,75</td><td>1.327,86</td></tr>
+<tr><td class="t">EQUA11</td><td class="t">Equatorial Transmissao S.A</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,9173%</td><td>15/03/2036</td><td>8,0982</td><td>7,6195</td><td>48</td><td>4,04</td><td>999,64</td></tr>
+<tr><td class="t">EQTS11</td><td class="t">Equatorial Transmissora 1 Spe S.A</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/01/2033</td><td>8,0437</td><td>7,6485</td><td>40</td><td>2,94</td><td>968,61</td></tr>
+<tr><td class="t">EQTN11</td><td class="t">Equatorial Transmissora 2 Spe S/A</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/01/2033</td><td>7,7875</td><td>7,4300</td><td>36</td><td>2,90</td><td>977,46</td></tr>
+<tr><td class="t">EQSP11</td><td class="t">Equatorial Transmissora 3 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,8%</td><td>15/01/2033</td><td>8,0910</td><td>7,6485</td><td>44</td><td>2,99</td><td>969,20</td></tr>
+<tr><td class="t">EQSP21</td><td class="t">Equatorial Transmissora 3 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,65%</td><td>15/01/2034</td><td>8,1027</td><td>7,6485</td><td>45</td><td>3,34</td><td>857,99</td></tr>
+<tr><td class="t">EQTC11</td><td class="t">Equatorial Transmissora 5 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/04/2039</td><td>8,2496</td><td>7,6266</td><td>62</td><td>5,84</td><td>1.176,77</td></tr>
+<tr><td class="t">ETSP12</td><td class="t">Equatorial Transmissora 7 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/04/2039</td><td>8,2471</td><td>7,6266</td><td>62</td><td>5,85</td><td>1.176,93</td></tr>
+<tr><td class="t">EQTR11</td><td class="t">Equatorial Transmissora 8 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/04/2039</td><td>8,2595</td><td>7,6266</td><td>63</td><td>5,84</td><td>1.176,14</td></tr>
+<tr><td class="t">EQTR21</td><td class="t">Equatorial Transmissora 8 Spe S.A.</td><td class="t"><span class="chip">Equatorial</span></td><td class="t">IPCA + 4,85%</td><td>15/04/2039</td><td>8,2679</td><td>7,6266</td><td>64</td><td>5,84</td><td>1.175,61</td></tr>
+<tr><td class="t">IEAS11</td><td class="t">Interligacao Eletrica Aimores S.A</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,5%</td><td>15/06/2030</td><td>0,7520</td><td>–</td><td>–</td><td>2,87</td><td>1.034,96</td></tr>
+<tr><td class="t">IEPS11</td><td class="t">Interligacao Eletrica Paraguacu S.A</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,5%</td><td>15/06/2030</td><td>0,7520</td><td>–</td><td>–</td><td>2,87</td><td>1.034,96</td></tr>
+<tr><td class="t">CTEE19</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 2,83%</td><td>15/11/2028</td><td>0,3883</td><td>–</td><td>–</td><td>0,97</td><td>1.088,37</td></tr>
+<tr><td class="t">TRPLA5</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,73%</td><td>15/03/2029</td><td>0,6721</td><td>–</td><td>–</td><td>2,13</td><td>1.007,71</td></tr>
+<tr><td class="t">CTEE18</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 3,5%</td><td>15/12/2029</td><td>7,2666</td><td>7,3602</td><td>-9</td><td>2,06</td><td>1.364,10</td></tr>
+<tr><td class="t">ISAEB1</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,55%</td><td>15/01/2030</td><td>0,5104</td><td>–</td><td>–</td><td>2,65</td><td>1.031,17</td></tr>
+<tr><td class="t">TRPLA3</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 1,5%</td><td>15/03/2030</td><td>1,0548</td><td>–</td><td>–</td><td>2,78</td><td>1.019,22</td></tr>
+<tr><td class="t">ISAEB3</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,42%</td><td>15/07/2030</td><td>0,4450</td><td>–</td><td>–</td><td>2,96</td><td>1.029,05</td></tr>
+<tr><td class="t">ISAEC1</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,6%</td><td>15/01/2031</td><td>0,5242</td><td>–</td><td>–</td><td>3,25</td><td>1.032,74</td></tr>
+<tr><td class="t">TRPLB5</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,8%</td><td>17/03/2031</td><td>0,7363</td><td>–</td><td>–</td><td>3,10</td><td>1.008,49</td></tr>
+<tr><td class="t">TRPLA6</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,8%</td><td>20/05/2031</td><td>0,7388</td><td>–</td><td>–</td><td>3,06</td><td>1.055,43</td></tr>
+<tr><td class="t">CTEE1B</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 5,771%</td><td>15/10/2031</td><td>7,5528</td><td>7,6195</td><td>-7</td><td>4,27</td><td>1.225,04</td></tr>
+<tr><td class="t">ISAEB8</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 7,4118%</td><td>15/03/2033</td><td>7,5819</td><td>7,6392</td><td>-6</td><td>4,88</td><td>1.057,23</td></tr>
+<tr><td class="t">ISAEA8</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 7,4118%</td><td>15/06/2033</td><td>7,6164</td><td>7,6392</td><td>-2</td><td>4,95</td><td>1.075,07</td></tr>
+<tr><td class="t">TRPLA4</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,2607%</td><td>15/10/2033</td><td>7,6549</td><td>7,6266</td><td>3</td><td>5,24</td><td>1.097,61</td></tr>
+<tr><td class="t">ISAED1</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">DI + 0,84%</td><td>15/01/2035</td><td>0,5982</td><td>–</td><td>–</td><td>4,73</td><td>1.042,49</td></tr>
+<tr><td class="t">ISAEA9</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,7%</td><td>15/06/2035</td><td>7,5087</td><td>7,3738</td><td>13</td><td>8,64</td><td>1.065,40</td></tr>
+<tr><td class="t">TRPLA7</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,7119%</td><td>15/10/2036</td><td>7,5525</td><td>7,3738</td><td>18</td><td>9,22</td><td>1.151,52</td></tr>
+<tr><td class="t">ISAEB0</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,6598%</td><td>15/10/2037</td><td>7,6289</td><td>7,5800</td><td>5</td><td>7,62</td><td>1.000,88</td></tr>
+<tr><td class="t">TRPLB4</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,4364%</td><td>15/10/2038</td><td>7,6675</td><td>7,5800</td><td>9</td><td>7,65</td><td>1.076,36</td></tr>
+<tr><td class="t">CTEE2B</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 5,864%</td><td>15/10/2039</td><td>7,7136</td><td>7,5800</td><td>13</td><td>8,24</td><td>1.138,35</td></tr>
+<tr><td class="t">TRPLB7</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,6052%</td><td>15/10/2039</td><td>7,7385</td><td>7,5800</td><td>16</td><td>8,04</td><td>1.033,12</td></tr>
+<tr><td class="t">ISAEC0</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,6382%</td><td>15/10/2040</td><td>7,5986</td><td>7,3738</td><td>22</td><td>8,66</td><td>991,67</td></tr>
+<tr><td class="t">ISAEB2</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,4618%</td><td>15/03/2041</td><td>7,5889</td><td>7,3738</td><td>22</td><td>9,32</td><td>925,32</td></tr>
+<tr><td class="t">ISAEC2</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 6,4618%</td><td>15/03/2041</td><td>7,5263</td><td>7,3738</td><td>15</td><td>9,34</td><td>930,36</td></tr>
+<tr><td class="t">CTEE29</td><td class="t">Isa Energia Brasil S.A.</td><td class="t"><span class="chip">ISA</span></td><td class="t">IPCA + 5,3%</td><td>15/05/2044</td><td>7,6974</td><td>7,6049</td><td>9</td><td>6,51</td><td>996,11</td></tr>
+<tr><td class="t">NMCH11</td><td class="t">Neoenergia Morro Do Chapeu Transmissao E Energia S.A.</td><td class="t"><span class="chip">Neoenergia</span></td><td class="t">IPCA + 6,5599%</td><td>15/12/2038</td><td>8,0958</td><td>7,6392</td><td>46</td><td>4,64</td><td>1.145,94</td></tr>
+<tr><td class="t">TAEEE2</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">DI + 0,4%</td><td>03/01/2028</td><td>0,2376</td><td>–</td><td>–</td><td>1,24</td><td>1.035,19</td></tr>
+<tr><td class="t">TAEEA5</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">DI + 0,63%</td><td>15/03/2029</td><td>0,3804</td><td>–</td><td>–</td><td>2,13</td><td>1.011,76</td></tr>
+<tr><td class="t">TAEEA6</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">DI + 0,55%</td><td>15/09/2031</td><td>0,3872</td><td>–</td><td>–</td><td>3,41</td><td>1.011,97</td></tr>
+<tr><td class="t">TAEEA8</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 7,1499%</td><td>15/07/2032</td><td>7,4193</td><td>7,6195</td><td>-20</td><td>4,32</td><td>1.122,97</td></tr>
+<tr><td class="t">TAEEA9</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">DI + 0,6%</td><td>23/10/2032</td><td>0,4814</td><td>–</td><td>–</td><td>3,77</td><td>1.068,09</td></tr>
+<tr><td class="t">TAEEA4</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 5,8741%</td><td>15/09/2033</td><td>7,5531</td><td>7,6266</td><td>-7</td><td>5,72</td><td>1.049,40</td></tr>
+<tr><td class="t">TAEEB8</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 7,0564%</td><td>15/07/2035</td><td>7,4461</td><td>7,6266</td><td>-18</td><td>5,81</td><td>1.110,31</td></tr>
+<tr><td class="t">TAEEB4</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 6,0653%</td><td>15/09/2035</td><td>7,6589</td><td>7,6049</td><td>5</td><td>6,89</td><td>1.035,73</td></tr>
+<tr><td class="t">TAEED2</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 5,85%</td><td>15/04/2037</td><td>7,5815</td><td>7,6049</td><td>-2</td><td>7,05</td><td>1.100,56</td></tr>
+<tr><td class="t">TAEEC4</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 6,2709%</td><td>15/09/2038</td><td>7,6414</td><td>7,5800</td><td>6</td><td>7,87</td><td>1.037,56</td></tr>
+<tr><td class="t">TAEEA7</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 7,169%</td><td>15/01/2040</td><td>7,5962</td><td>7,5800</td><td>2</td><td>7,54</td><td>1.177,10</td></tr>
+<tr><td class="t">TAEEB0</td><td class="t">Transmissora Aliança De Energia Elétrica S.A.</td><td class="t"><span class="chip">Taesa</span></td><td class="t">IPCA + 6,4712%</td><td>15/12/2040</td><td>7,3465</td><td>7,2431</td><td>10</td><td>11,80</td><td>989,70</td></tr>
+<tr><td class="t">TRGO11</td><td class="t">Argo Transmissao De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,0176%</td><td>15/12/2031</td><td>7,6035</td><td>7,4300</td><td>17</td><td>2,49</td><td>1.041,25</td></tr>
+<tr><td class="t">BLMN12</td><td class="t">Belo Monte Transmissora De Energia Spe S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,1358%</td><td>15/12/2031</td><td>7,3374</td><td>7,4300</td><td>-9</td><td>2,14</td><td>1.013,95</td></tr>
+<tr><td class="t">CTRR11</td><td class="t">Cantareira Transmissora De Energia S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,9094%</td><td>15/08/2032</td><td>7,0987</td><td>7,4300</td><td>-33</td><td>2,73</td><td>698,60</td></tr>
+<tr><td class="t">EDFT11</td><td class="t">Edf Oiti Transmissora S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,8209%</td><td>15/05/2049</td><td>8,1704</td><td>7,6049</td><td>57</td><td>6,46</td><td>1.197,79</td></tr>
+<tr><td class="t">EDTE12</td><td class="t">Edte - Empresa Diamantina De Transmissao De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 5,2939%</td><td>15/12/2028</td><td>7,2467</td><td>7,3602</td><td>-11</td><td>1,51</td><td>1.023,91</td></tr>
+<tr><td class="t">ELTE12</td><td class="t">Empresa Litoranea De Transmissao De Energia S.A. - Elte</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,4232%</td><td>15/07/2039</td><td>7,5329</td><td>7,6266</td><td>-9</td><td>5,46</td><td>936,99</td></tr>
+<tr><td class="t">SPRZ11</td><td class="t">Esperanza Transmissora De Energia S.A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,7968%</td><td>15/09/2030</td><td>7,4929</td><td>7,3602</td><td>13</td><td>1,88</td><td>594,50</td></tr>
+<tr><td class="t">ETBA12</td><td class="t">Etb - Empresa De Transmissao Baiana S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 5,3382%</td><td>15/02/2029</td><td>7,2865</td><td>7,3602</td><td>-7</td><td>1,86</td><td>1.053,43</td></tr>
+<tr><td class="t">EXTZ11</td><td class="t">Extremoz Transmissora Do Nordeste Etn S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,0291%</td><td>15/01/2029</td><td>8,1143</td><td>7,3602</td><td>75</td><td>1,48</td><td>510,31</td></tr>
+<tr><td class="t">JTEE11</td><td class="t">Janauba Transmissora De Energia Eletrica  S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 4,5%</td><td>15/07/2033</td><td>7,5182</td><td>7,6485</td><td>-13</td><td>3,22</td><td>903,46</td></tr>
+<tr><td class="t">JTEE12</td><td class="t">Janauba Transmissora De Energia Eletrica  S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 4,8295%</td><td>15/12/2044</td><td>7,5472</td><td>7,6049</td><td>-6</td><td>6,89</td><td>1.316,42</td></tr>
+<tr><td class="t">LTTE15</td><td class="t">Linhas De Taubate Trans.De Energia S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 5,09%</td><td>15/10/2038</td><td>8,0389</td><td>7,6392</td><td>40</td><td>4,66</td><td>1.109,68</td></tr>
+<tr><td class="t">MSGT12</td><td class="t">Mata De Santa Genebra Transmissão S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 4,95%</td><td>15/11/2030</td><td>7,3098</td><td>7,3602</td><td>-5</td><td>1,85</td><td>840,70</td></tr>
+<tr><td class="t">MSGT13</td><td class="t">Mata De Santa Genebra Transmissão S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,0605%</td><td>15/11/2031</td><td>8,3917</td><td>7,4300</td><td>96</td><td>2,69</td><td>980,30</td></tr>
+<tr><td class="t">MSGT23</td><td class="t">Mata De Santa Genebra Transmissão S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,0762%</td><td>15/11/2037</td><td>7,8287</td><td>7,6049</td><td>22</td><td>6,24</td><td>1.079,52</td></tr>
+<tr><td class="t">MSGT33</td><td class="t">Mata De Santa Genebra Transmissão S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,2339%</td><td>15/11/2041</td><td>8,0118</td><td>7,5800</td><td>43</td><td>8,10</td><td>1.012,40</td></tr>
+<tr><td class="t">TPNO12</td><td class="t">Matrincha Transmissora De Energia  Tp Norte Sa</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,5826%</td><td>15/06/2029</td><td>7,1738</td><td>7,3602</td><td>-19</td><td>1,36</td><td>632,22</td></tr>
+<tr><td class="t">TPNO13</td><td class="t">Matrincha Transmissora De Energia  Tp Norte Sa</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 4,9335%</td><td>15/12/2038</td><td>7,7092</td><td>7,6049</td><td>10</td><td>6,51</td><td>1.077,31</td></tr>
+<tr><td class="t">ODYA11</td><td class="t">Odoya Transmissora De Energia S.A..</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,7968%</td><td>15/09/2031</td><td>7,5855</td><td>7,4300</td><td>16</td><td>2,42</td><td>713,86</td></tr>
+<tr><td class="t">PRTE12</td><td class="t">Paranaiba Transmissora De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,9045%</td><td>15/03/2028</td><td>6,5058</td><td>5,6227</td><td>88</td><td>1,00</td><td>320,86</td></tr>
+<tr><td class="t">PTAZ11</td><td class="t">Parintins Amazonas Transmissora De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 5,6904%</td><td>15/04/2046</td><td>7,9395</td><td>7,5800</td><td>36</td><td>8,26</td><td>1.110,36</td></tr>
+<tr><td class="t">RALM11</td><td class="t">Rialma Transmissora De Energia V S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,8293%</td><td>15/12/2048</td><td>8,8148</td><td>7,5800</td><td>123</td><td>8,15</td><td>1.169,32</td></tr>
+<tr><td class="t">RALM21</td><td class="t">Rialma Transmissora De Energia V S/A</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 7,8293%</td><td>15/12/2048</td><td>8,9117</td><td>7,5800</td><td>133</td><td>8,12</td><td>1.084,48</td></tr>
+<tr><td class="t">IBPB11</td><td class="t">Serra De Ibiapaba Transmissora De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 5,9%</td><td>15/11/2040</td><td>8,0574</td><td>7,6266</td><td>43</td><td>5,72</td><td>1.164,57</td></tr>
+<tr><td class="t">TRCC11</td><td class="t">Tcc - Transmissora Caminho Do Café S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,5333%</td><td>15/09/2028</td><td>7,2919</td><td>7,3602</td><td>-7</td><td>1,63</td><td>956,82</td></tr>
+<tr><td class="t">TRGP13</td><td class="t">Tecp - Transmissora De Energia Central Paulistana S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,9928%</td><td>15/01/2038</td><td>7,6924</td><td>7,5800</td><td>11</td><td>7,59</td><td>1.026,34</td></tr>
+<tr><td class="t">TPEN11</td><td class="t">Tpe - Transmissora Paraíso De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 6,5333%</td><td>15/09/2028</td><td>7,2551</td><td>7,3602</td><td>-11</td><td>1,63</td><td>957,36</td></tr>
+<tr><td class="t">XNGU17</td><td class="t">Xingu Rio Transmissora De Energia S.A.</td><td class="t"><span class="chip">Isolada (a identificar)</span></td><td class="t">IPCA + 4,8304%</td><td>15/12/2034</td><td>7,6015</td><td>7,6195</td><td>-2</td><td>3,99</td><td>1.044,67</td></tr>
+</tbody></table></div>
+
+<h2>Como o projeto avança</h2>
+<ol>
+<li>Coleta diária das taxas ANBIMA de debêntures e títulos públicos, guardando histórico próprio. <span class="chip">em produção</span></li>
+<li>Universo piloto de transmissoras e grupos de risco. <span class="chip">em andamento</span></li>
+<li>Grafo de emissores, grupos, garantias e cláusulas de cross-default.</li>
+<li>Spread justo por comparáveis e resíduo de cada emissão.</li>
+<li>Simulador de abertura e fechamento de spread (impacto no PU e break-even de carry).</li>
+<li>Probabilidade de default implícita no spread versus fundamentos.</li>
+</ol>
+
+<footer>
+Fonte: ANBIMA, mercado secundário de debêntures e de títulos públicos (01/10/2026). A taxa indicativa é referência de preço justo, não necessariamente negócio fechado.
+Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.
+</footer>
+</main>
+</body>
+</html>
