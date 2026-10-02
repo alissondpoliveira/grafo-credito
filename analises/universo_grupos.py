@@ -1,4 +1,4 @@
-"""Reconstrói o universo de transmissão por série, com emissor atual (SND/CNPJ) e grupo de risco.
+"""Reconstrói o universo ampliado por série, com segmento, emissor atual (SND/CNPJ) e grupo de risco.
 
 Hierarquia de evidência do grupo de risco:
   1. 'CVM FRE'   : acionista controlador PJ declarado no Formulário de Referência (fato documentado)
@@ -10,6 +10,7 @@ Uso: python analises/universo_grupos.py   (requer dados/snd/caracteristicas.csv 
 
 import csv
 import io
+import re
 import urllib.request
 import zipfile
 from collections import defaultdict
@@ -19,7 +20,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 SND = RAIZ / "dados" / "snd" / "caracteristicas.csv"
 DEB = RAIZ / "dados" / "anbima" / "debentures" / "normalizado"
-ANTIGO = RAIZ / "dados" / "referencia" / "universo_transmissao.csv"
+CANDIDATOS = RAIZ / "dados" / "referencia" / "universo_candidatos.csv"
 DESTINO = RAIZ / "dados" / "referencia" / "universo_series.csv"
 CONTROLADORES = RAIZ / "dados" / "referencia" / "controladores_cvm.csv"
 URL_FRE = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FRE/DADOS/fre_cia_aberta_{}.zip"
@@ -28,7 +29,6 @@ URL_FRE = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FRE/DADOS/fre_cia_abert
 GRUPO_POR_CONTROLADOR = {
     "INTERCONEXI": "ISA",
     "ISA CAPITAL": "ISA",
-    "COMPANHIA ENERGÉTICA DE MINAS GERAIS": "Taesa (Cemig + ISA)",
     "CAMBESA": "Alupar",
     "ARGO ENERGIA": "Argo",
     "ARGEB": "Argo",
@@ -38,6 +38,24 @@ GRUPO_POR_CONTROLADOR = {
     "CPFL ENERGIA": "CPFL",
     "AXIA ENERGIA": "Axia (ex-Eletrobras)",
 }
+
+# Grandes grupos de infraestrutura: palavra-chave -> grupo. Procurada nos controladores da CVM (fonte 'CVM FRE')
+# e, se não houver controlador declarado, no nome do emissor (fonte 'inferido').
+GRUPOS_CONHECIDOS = [
+    ("ENERGISA", "Energisa"), ("EQUATORIAL", "Equatorial"), ("NEOENERGIA", "Neoenergia"), ("IBERDROLA", "Neoenergia"),
+    ("CPFL", "CPFL"), ("STATE GRID", "State Grid"), ("CEMIG", "Cemig"), ("COPEL", "Copel"), ("ENEL", "Enel"),
+    ("ELETROPAULO", "Enel"), ("EDP", "EDP"), ("ENGIE", "Engie"), ("AES", "AES"), ("AUREN", "Auren"), ("VOTORANTIM", "Votorantim"),
+    ("ELETROBRAS", "Axia (ex-Eletrobras)"), ("AXIA", "Axia (ex-Eletrobras)"), ("FURNAS", "Axia (ex-Eletrobras)"),
+    ("ELETRONORTE", "Axia (ex-Eletrobras)"), ("LIGHT", "Light"), ("ENEVA", "Eneva"), ("OMEGA", "Serena"), ("SERENA", "Serena"),
+    ("CESP", "Auren"), ("THREE GORGES", "CTG"), ("ECHOENERGIA", "Echoenergia"), ("ALUPAR", "Alupar"), ("TAESA", "Taesa (Cemig + ISA)"),
+    ("TRANSMISSORA ALIANCA", "Taesa (Cemig + ISA)"), ("ISA", "ISA"),
+    ("SABESP", "Sabesp"), ("COPASA", "Copasa"), ("SANEPAR", "Sanepar"), ("AEGEA", "Aegea"), ("IGUA", "Iguá"), ("BRK", "BRK"),
+    ("CASAN", "Casan"), ("CORSAN", "Aegea"), ("COMGAS", "Compass"), ("COMPASS", "Compass"),
+    ("CCR", "Motiva (ex-CCR)"), ("MOTIVA", "Motiva (ex-CCR)"), ("ECORODOVIAS", "EcoRodovias"), ("ECOVIAS", "EcoRodovias"), ("ECO", "EcoRodovias"),
+    ("ARTERIS", "Arteris"), ("EPR", "EPR"), ("RUMO", "Rumo"), ("COSAN", "Rumo"), ("VLI", "VLI"), ("MRS", "MRS"),
+    ("LOCALIZA", "Localiza"), ("SIMPAR", "Simpar"), ("MOVIDA", "Simpar"), ("VAMOS", "Simpar"), ("JSL", "Simpar"),
+    ("UNIDAS", "Unidas"), ("SANTOS BRASIL", "Santos Brasil"), ("HIDROVIAS", "Hidrovias do Brasil"), ("PATRIA", "Pátria"),
+]
 
 # Inferências explícitas para emissores sem FRE (fonte = 'inferido'); cada uma diz o porquê
 INFERIDOS = {
@@ -51,11 +69,8 @@ INFERIDOS = {
     "EDP TRANSMISSAO": ("EDP", "nome do emissor"),
 }
 
-# Emissor atual não é transmissora pura: fora do piloto pela decisão de 02/10/2026
-FORA_DO_PILOTO = {
-    "COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO": "emissor atual é a CHESF (integrada geração + transmissão)",
-    "CPFL COMERCIALIZACAO": "emissor atual é comercializadora de energia, não transmissora",
-}
+# Com o universo ampliado (02/10/2026), integradas e comercializadoras viraram segmentos próprios: nada fica de fora
+FORA_DO_PILOTO: dict[str, str] = {}
 
 
 def baixar_controladores(cnpjs: set[str]) -> dict[str, list[tuple[str, str]]]:
@@ -88,9 +103,9 @@ def baixar_controladores(cnpjs: set[str]) -> dict[str, list[tuple[str, str]]]:
 
 
 def main() -> None:
-    antigos = {u["emissor"] for u in csv.DictReader(ANTIGO.open(encoding="utf-8"))}
+    candidatos = {c["codigo"]: c for c in csv.DictReader(CANDIDATOS.open(encoding="utf-8"))}
     ultimo = sorted(DEB.rglob("*.csv"))[-1]
-    series = [s for s in csv.DictReader(ultimo.open(encoding="utf-8")) if s["emissor"] in antigos]
+    series = [s for s in csv.DictReader(ultimo.open(encoding="utf-8")) if s["codigo"] in candidatos]
     snd = {c["Codigo do Ativo"]: c for c in csv.DictReader(SND.open(encoding="utf-8"))}
 
     cnpjs = {snd[s["codigo"]]["CNPJ"].zfill(14) for s in series if s["codigo"] in snd}
@@ -115,11 +130,26 @@ def main() -> None:
         up = emissor_atual.upper()
 
         grupo, fonte, motivo = "Isolada (a identificar)", "", ""
-        nomes_ctrl = [c[0].upper() for c in ctrl.get(cnpj, [])]
-        for chave, g in GRUPO_POR_CONTROLADOR.items():
-            if any(chave.upper() in n for n in nomes_ctrl):
-                grupo, fonte, motivo = g, "CVM FRE", "controlador PJ declarado"
+        import unicodedata
+        sem = lambda x: unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().upper()
+        casa = lambda chave, texto: re.search(rf"(?<![A-Z]){re.escape(sem(chave).strip())}(?![A-Z])", sem(texto)) is not None
+        entradas = ctrl.get(cnpj, [])
+        diretos = [c[0] for c in entradas if not c[2]]
+        indiretos = [c[0] for c in entradas if c[2]]
+        tem_ctrl = bool(entradas)
+        # 1. o nome do próprio emissor (marca do grupo); com controle declarado na CVM, a fonte é documental
+        for chave, g in GRUPOS_CONHECIDOS:
+            if casa(chave, emissor_atual):
+                grupo, fonte, motivo = g, ("CVM FRE" if tem_ctrl else "inferido"), ("nome do emissor; controle declarado na CVM" if tem_ctrl else "nome do emissor")
                 break
+        # 2. controladores diretos, depois a cadeia indireta (mapa específico primeiro, depois a lista geral)
+        for nomes in (diretos, indiretos):
+            if fonte:
+                break
+            for chave, g in list(GRUPO_POR_CONTROLADOR.items()) + GRUPOS_CONHECIDOS:
+                if any(casa(chave, n) for n in nomes):
+                    grupo, fonte, motivo = g, "CVM FRE", "controlador PJ declarado" + (" (indireto)" if nomes is indiretos else "")
+                    break
         rev = revisao.get(s["codigo"])
         if not fonte and rev:
             grupo, fonte = rev[0]["grupo_risco"], "escritura"
@@ -129,10 +159,17 @@ def main() -> None:
                 if chave in up:
                     grupo, fonte, motivo = g, "inferido", porque
                     break
+        if not fonte:
+            for chave, g in GRUPOS_CONHECIDOS:
+                if re.search(rf"{re.escape(chave.strip())}", up):
+                    grupo, fonte, motivo = g, "inferido", "nome do emissor"
+                    break
 
         fora = next((m for k, m in FORA_DO_PILOTO.items() if k in up), "")
         linhas.append({
             "codigo": s["codigo"],
+            "segmento": candidatos[s["codigo"]]["segmento"],
+            "macro": candidatos[s["codigo"]]["macro"],
             "emissor_anbima": s["emissor"],
             "emissor_atual_snd": emissor_atual,
             "cnpj": cnpj,

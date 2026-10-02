@@ -167,6 +167,14 @@ def sem_acento(t: str) -> str:
     return unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
 
 
+SEGMENTOS_NOMES = {
+    "transmissao": "Transmissão", "geracao": "Geração", "distribuicao": "Distribuição", "integrada_gt": "Integradas G+T",
+    "energia_diversificada": "Holdings de energia", "comercializacao": "Comercialização", "saneamento": "Saneamento",
+    "distribuicao_gas": "Distribuição de gás", "rodovias": "Rodovias", "ferrovias": "Ferrovias", "portos": "Portos",
+    "aeroportos": "Aeroportos", "mobilidade_urbana": "Mobilidade urbana", "logistica": "Logística", "locacao": "Locação de veículos",
+}
+
+
 def ler_csv(p: Path) -> list[dict]:
     return list(csv.DictReader(p.open(encoding="utf-8"))) if p.exists() else []
 
@@ -192,7 +200,8 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
 
     for s in series:
         u = universo[s["codigo"]]
-        g = u["grupo_risco"]
+        seg = u.get("segmento", "transmissao")
+        g = f"{seg}|{u['grupo_risco']}"
         em_id = "e:" + u["cnpj"]
         if em_id not in vistos:
             # documentos do emissor (até 4 mais recentes por categoria) entram como nós filhos
@@ -205,13 +214,13 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
                 d_id = f"d:{u['cnpj']}:{i}"
                 cl = jev.get(f"{u['cnpj']}|{d['tipo']}|{d.get('data', '')}|{d['titulo'][:60]}", {})
                 no(d_id, tipo="doc", categoria=cat, subtipo=d["tipo"], rotulo=d["titulo"][:90], data=d.get("data", ""),
-                   fonte=d.get("fonte", ""), url=d.get("url", ""), grupo=g,
+                   fonte=d.get("fonte", ""), url=d.get("url", ""), grupo=g, segmento=seg,
                    evento=cl.get("evento"), impacto=cl.get("impacto"), confianca=cl.get("evento_confianca"), status_jev=cl.get("status"))
                 links.append({"source": em_id, "target": d_id, "tipo": "doc"})
-        no(em_id, tipo="emissor", rotulo=u["emissor_atual_snd"].title(), grupo=g, cnpj=u["cnpj"],
+        no(em_id, tipo="emissor", rotulo=u["emissor_atual_snd"].title(), grupo=g, segmento=seg, cnpj=u["cnpj"],
            detalhe=f"CNPJ {u['cnpj']}" + (f" · nome ANBIMA: {u['emissor_anbima'].title()}" if u["emissor_anbima"] != u["emissor_atual_snd"] else ""))
         d = desvios.get(s["codigo"], {})
-        no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g,
+        no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g, segmento=seg,
            spread=d.get("spread"), justo=d.get("justo"), desvio=d.get("desvio"), dp=d.get("dp"), classe=d.get("classe"),
            justo_pares=d.get("justo_pares"), ajuste=d.get("ajuste"), pares=d.get("pares"), justo_reg=d.get("justo_reg"),
            status=s["status"])
@@ -220,17 +229,17 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
         if u["fonte_grupo"] == "CVM FRE":
             for c in controladores.get(u["cnpj"], []):
                 c_id = "c:" + (c["cnpj_controlador"] or c["controlador"])
-                no(c_id, tipo="controlador", rotulo=c["controlador"], grupo=g, detalhe="controlador declarado na CVM")
+                no(c_id, tipo="controlador", rotulo=c["controlador"], grupo=g, segmento=seg, detalhe="controlador declarado na CVM")
                 alvo = em_id
                 if c["socio_de"]:
                     alvo = "c:" + (c["cnpj_socio_de"] or c["socio_de"])
-                    no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, detalhe="controlador declarado na CVM")
+                    no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, segmento=seg, detalhe="controlador declarado na CVM")
                 links.append({"source": c_id, "target": alvo, "tipo": "controla"})
         elif u["fonte_grupo"] == "escritura":
             pendentes_escritura.append((s, u, em_id, g))
         elif u["fonte_grupo"] == "inferido":
             g_id = "g:" + g
-            no(g_id, tipo="grupo", rotulo=g, grupo=g, detalhe="grupo inferido, a confirmar na escritura")
+            no(g_id, tipo="grupo", rotulo=u["grupo_risco"], grupo=g, segmento=seg, detalhe="grupo inferido, a confirmar na escritura")
             links.append({"source": g_id, "target": em_id, "tipo": "inferido"})
 
         # ligações de risco lidas nas escrituras (status 'a revisar' até revisão humana)
@@ -240,7 +249,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
             existente = next((n for n in nos if n["tipo"] in ("controlador", "emissor") and sem_acento(n["rotulo"]).upper().startswith(alvo_nome)), None)
             f_id = existente["id"] if existente else "f:" + cl["fiadora"].upper()
             if not existente:
-                no(f_id, tipo="garantidor", rotulo=cl["fiadora"], grupo=g, detalhe="fiadora citada na escritura (a revisar)")
+                no(f_id, tipo="garantidor", rotulo=cl["fiadora"], grupo=g, segmento=seg, detalhe="fiadora citada na escritura (a revisar)")
             links.append({"source": f_id, "target": "s:" + s["codigo"], "tipo": "garante"})
         if cl and cl.get("cross_default") == "S" and any(x in cl.get("cross_default_abrange", "") for x in ("Controladora", "Fiadora", "Acionista")):
             for c in controladores.get(u["cnpj"], []):
@@ -250,12 +259,13 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
     # partes citadas nas escrituras: reaproveita o nó do controlador da CVM quando é a mesma empresa
     chave = lambda t: re.sub(r"[^A-Z]", "", sem_acento(t).upper().replace("IEB-", "").replace(" S/A", "").replace(" S.A.", ""))[:22]
     for s, u, em_id, g in pendentes_escritura:
+        seg = u.get("segmento", "transmissao")
         for r in revisao.get(s["codigo"], []):
             existente = next((n for n in nos if n["tipo"] == "controlador" and chave(n["rotulo"]) == chave(r["parte"])), None)
             p_id = existente["id"] if existente else "c:" + sem_acento(r["parte"]).upper()
             if not existente:
                 no(p_id, tipo="controlador" if "acionista" in r["papel"] or "interveniente" in r["papel"] else "garantidor",
-                   rotulo=r["parte"].title(), grupo=g, detalhe=f'{r["papel"]} na escritura (a revisar)')
+                   rotulo=r["parte"].title(), grupo=g, segmento=seg, detalhe=f'{r["papel"]} na escritura (a revisar)')
             links.append({"source": p_id, "target": em_id, "tipo": "escritura"})
             if "fiador" in r["papel"] or "garantidor" in r["papel"]:
                 links.append({"source": p_id, "target": "s:" + s["codigo"], "tipo": "garante"})
@@ -284,7 +294,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
      + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') + linha('Justo pela regressão', fmt(n.justo_reg,0)+' bps')
      + (n.pares ? '<br><span class="fraco">pares: '+n.pares+'</span>' : '') : '<br>'+n.status);
 
-// ---------- mapa de controle e risco: grupo -> empresas -> emissões ----------
+// ---------- mapa: segmento -> grupos -> empresas -> emissões e documentos ----------
 (function(){
   const svg = d3.select('#grafo'); const W = 1120, H = 700;
   svg.attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio','xMidYMid meet');
@@ -295,99 +305,105 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
 
   const todos = D.grafo.nodes, porId = new Map(todos.map(n => [n.id, n]));
   const ISOL = 'Isolada (a identificar)';
-  const nomeGrupo = x => x===ISOL ? 'Isoladas' : x;
-  // emissor de cada série
+  const nomeSeg = s => (D.segmentos[s] || s.replace(/_/g,' '));
+  const nomeGrupo = k => { const x = k.split('|')[1] || k; return x===ISOL ? 'Isoladas' : x; };
+  const segDe = k => k.split('|')[0];
   const paiSerie = new Map(); D.grafo.links.forEach(l => { if (l.tipo==='emitiu' || l.tipo==='doc') paiSerie.set(l.target, l.source); });
   const filho = n => n.tipo==='serie' || n.tipo==='doc';
-  const grupos = [...new Set(todos.map(n => n.grupo))];
-  const resumo = Object.fromEntries(grupos.map(x => { const ss = todos.filter(n => n.grupo===x && n.tipo==='serie');
-    const ds = ss.map(n=>n.desvio).filter(v=>v!=null).sort((a,b)=>a-b);
-    return [x, {series: ss.length, emissores: todos.filter(n=>n.grupo===x && n.tipo==='emissor').length, mediana: ds.length ? ds[Math.floor(ds.length/2)] : null}]; }));
-  grupos.sort((a,b) => (a===ISOL) - (b===ISOL) || resumo[b].series - resumo[a].series);
-  const ancora = {};
-  // grupos abertos dividem o centro; bolas fechadas ficam num anel em volta (anel mais largo quando há algo aberto)
-  function posicionarAncoras(){
-    const abertos = grupos.filter(x => abertosG.has(x)), fechados = grupos.filter(x => !abertosG.has(x));
-    const anel = abertos.length ? fechados : fechados.filter(x => x!==ISOL);
-    const rx = abertos.length ? 420 : 320, ry = abertos.length ? 285 : 240;
-    anel.forEach((x,i) => { const a = -Math.PI/2 + 2*Math.PI*i/Math.max(anel.length,1); ancora[x] = [W/2+rx*Math.cos(a), H/2+ry*Math.sin(a)]; });
-    if (!abertos.length) ancora[ISOL] = [W/2, H/2];
-    abertos.forEach((x,i) => { const a = 2*Math.PI*i/abertos.length; const d = abertos.length>1 ? 150 : 0; ancora[x] = [W/2+d*Math.cos(a), H/2+d*.7*Math.sin(a)]; });
-  }
-  const abertosG = new Set(), abertosE = new Set();
-  posicionarAncoras();
-  const raioBolha = x => 14 + 5.5*Math.sqrt(resumo[x].series);
-  const raio = n => n.tipo==='bolha' ? raioBolha(n.grupo) : ({controlador:6, grupo:7, garantidor:6, emissor:6.5, serie:4.4, doc:5})[n.tipo];
+  const segmentos = [...new Set(todos.map(n => n.segmento))];
+  const gruposDe = s => [...new Set(todos.filter(n => n.segmento===s).map(n => n.grupo))];
+  const resumoDe = filtro => { const ss = todos.filter(n => n.tipo==='serie' && filtro(n)); const ds = ss.map(n=>n.desvio).filter(v=>v!=null).sort((a,b)=>a-b);
+    return {series: ss.length, emissores: todos.filter(n => n.tipo==='emissor' && filtro(n)).length, grupos: new Set(ss.map(n=>n.grupo)).size, mediana: ds.length ? ds[Math.floor(ds.length/2)] : null}; };
+  const resumo = {}; segmentos.forEach(s => resumo['S:'+s] = resumoDe(n => n.segmento===s));
+  [...new Set(todos.map(n=>n.grupo))].forEach(k => resumo['G:'+k] = resumoDe(n => n.grupo===k));
+  segmentos.sort((a,b) => resumo['S:'+b].series - resumo['S:'+a].series);
+
   const corDoc = c => ({oficial:'var(--doc-oficial)', escritura:'var(--doc-oficial)', noticia:'var(--doc-noticia)', analise:'var(--doc-analise)'})[c];
   const formaDoc = c => ({oficial:d3.symbolTriangle, escritura:d3.symbolSquare, noticia:d3.symbolDiamond, analise:d3.symbolStar})[c];
   const nomeDoc = {fato_relevante:'Fato relevante', comunicado:'Comunicado ao mercado', aviso_debenturistas:'Aviso aos debenturistas', escritura:'Escritura', noticia:'Notícia', analise:'Análise'};
+  const raioBolha = id => (id.startsWith('S:') ? 16 : 11) + (id.startsWith('S:') ? 3.2 : 4.5) * Math.sqrt(resumo[id].series);
+  const raio = n => n.tipo==='bolha' ? raioBolha(n.id) : ({controlador:6, grupo:7, garantidor:6, emissor:6.5, serie:4.4, doc:5})[n.tipo];
 
-  const pos = new Map(); grupos.forEach(x => pos.set('G:'+x, {x: ancora[x][0], y: ancora[x][1]}));
-
-  // representante visível de qualquer nó: bolha do grupo fechado, emissor fechado ou o próprio nó
+  const abertosS = new Set(), abertosG = new Set(), abertosE = new Set();
   const rep = id => { const n = porId.get(id); if (!n) return id;
+    if (!abertosS.has(n.segmento)) return 'S:'+n.segmento;
     if (!abertosG.has(n.grupo)) return 'G:'+n.grupo;
     if (filho(n) && !abertosE.has(paiSerie.get(id))) return paiSerie.get(id);
     return id; };
 
   function visiveis(){
     const nos = [];
-    grupos.forEach(x => { if (!abertosG.has(x)) nos.push({id:'G:'+x, tipo:'bolha', grupo:x, rotulo:nomeGrupo(x)}); });
-    todos.forEach(n => { if (!abertosG.has(n.grupo)) return; if (filho(n) && !abertosE.has(paiSerie.get(n.id))) return; nos.push(n); });
+    segmentos.forEach(s => { if (!abertosS.has(s)) nos.push({id:'S:'+s, tipo:'bolha', nivel:'segmento', segmento:s, grupo:'', rotulo:nomeSeg(s)});
+      else gruposDe(s).forEach(k => { if (!abertosG.has(k)) nos.push({id:'G:'+k, tipo:'bolha', nivel:'grupo', segmento:s, grupo:k, rotulo:nomeGrupo(k)}); }); });
+    todos.forEach(n => { if (!abertosS.has(n.segmento) || !abertosG.has(n.grupo)) return; if (filho(n) && !abertosE.has(paiSerie.get(n.id))) return; nos.push(n); });
     const ids = new Set(nos.map(n=>n.id)), vistos = new Map();
     D.grafo.links.forEach(l => { const s = rep(l.source.id||l.source), t = rep(l.target.id||l.target);
       if (s===t || !ids.has(s) || !ids.has(t)) return;
-      const ponte = s.startsWith('G:') && t.startsWith('G:'), k = s<t ? s+'|'+t : t+'|'+s;
-      if (!vistos.has(k)) vistos.set(k, {source:s, target:t, tipo: ponte ? 'ponte' : (s.startsWith('G:')||t.startsWith('G:')) ? 'ponte' : l.tipo}); });
+      const k = s<t ? s+'|'+t : t+'|'+s, bolha = s.startsWith('S:')||s.startsWith('G:')||t.startsWith('S:')||t.startsWith('G:');
+      if (!vistos.has(k)) vistos.set(k, {source:s, target:t, tipo: bolha ? 'ponte' : l.tipo}); });
     return {nos, links:[...vistos.values()]};
   }
 
+  // âncoras: grupos abertos no centro; bolhas de grupo dos segmentos abertos num anel interno; segmentos fechados no anel externo
+  const ancora = {};
+  function posicionarAncoras(nos){
+    const abertos = [...abertosG], bolhasG = nos.filter(n => n.nivel==='grupo'), bolhasS = nos.filter(n => n.nivel==='segmento');
+    abertos.forEach((k,i) => { const a = 2*Math.PI*i/abertos.length, d = abertos.length>1 ? 140 : 0; ancora[k] = [W/2+d*Math.cos(a), H/2+d*.7*Math.sin(a)]; });
+    const anel = (lista, rx, ry, desloc) => lista.forEach((n,i) => { const a = -Math.PI/2 + desloc + 2*Math.PI*i/Math.max(lista.length,1); ancora[n.id] = [W/2+rx*Math.cos(a), H/2+ry*Math.sin(a)]; });
+    if (!abertosS.size) anel(bolhasS, 340, 240, 0);
+    else { anel(bolhasG, abertos.length ? 300 : 230, abertos.length ? 215 : 170, 0); anel(bolhasS, 470, 300, Math.PI/bolhasS.length); }
+  }
+  const alvo = n => n.tipo==='bolha' ? (ancora[n.id] || [W/2,H/2]) : (ancora[n.grupo] || ancora['G:'+n.grupo] || [W/2,H/2]);
+
   const sim = d3.forceSimulation().alphaDecay(.03).velocityDecay(.35)
-    .force('link', d3.forceLink().id(d=>d.id).distance(l => l.tipo==='ponte'?160 : l.tipo==='emitiu'?30 : l.tipo==='doc'?44 : 46).strength(l => l.tipo==='ponte'?.02 : l.tipo==='emitiu'?.9 : .35))
-    .force('charge', d3.forceManyBody().strength(n => n.tipo==='bolha'?-300 : n.tipo==='serie'?-40 : -110).distanceMax(280))
-    .force('x', d3.forceX(n => ancora[n.grupo][0]).strength(n => n.tipo==='bolha'?.3:.2))
-    .force('y', d3.forceY(n => ancora[n.grupo][1]).strength(n => n.tipo==='bolha'?.3:.2))
-    .force('colide', d3.forceCollide().radius(n => raio(n)+(n.tipo==='bolha'?8:2.5)));
+    .force('link', d3.forceLink().id(d=>d.id).distance(l => l.tipo==='ponte'?170 : l.tipo==='emitiu'?30 : l.tipo==='doc'?44 : 46).strength(l => l.tipo==='ponte'?.015 : l.tipo==='emitiu'?.9 : .35))
+    .force('charge', d3.forceManyBody().strength(n => n.tipo==='bolha'?-260 : n.tipo==='serie'?-40 : -110).distanceMax(280))
+    .force('x', d3.forceX(n => alvo(n)[0]).strength(n => n.tipo==='bolha'?.35:.2))
+    .force('y', d3.forceY(n => alvo(n)[1]).strength(n => n.tipo==='bolha'?.35:.2))
+    .force('colide', d3.forceCollide().radius(n => raio(n)+(n.tipo==='bolha'?14:2.5)));
 
   let no = camNo.selectAll('g'), link = camLink.selectAll('line'), rot = camRot.selectAll('text'), hull = camHull.selectAll('path'), hullRot = camHull.selectAll('text');
   let rotulos = 'controle';
-  const visRot = n => n.tipo==='bolha' || n.tipo==='serie' ? false : rotulos==='todos' || (rotulos==='controle' && n.tipo!=='emissor') || (n.tipo==='emissor' && abertosE.has(n.id));
+  const visRot = n => n.tipo==='bolha' || n.tipo==='serie' || n.tipo==='doc' ? false : rotulos==='todos' || (rotulos==='controle' && n.tipo!=='emissor') || (n.tipo==='emissor' && abertosE.has(n.id));
+  const pos = new Map();
 
   function desenhar(){
-    hull.attr('d', x => { const pts = sim.nodes().filter(n=>n.grupo===x && n.tipo!=='bolha').flatMap(n => { const r=raio(n)+12; return [[n.x-r,n.y],[n.x+r,n.y],[n.x,n.y-r],[n.x,n.y+r]]; }); const h = d3.polygonHull(pts); return h ? 'M'+h.join('L')+'Z' : null; });
-    hullRot.each(function(x){ const ns = sim.nodes().filter(n=>n.grupo===x && n.tipo!=='bolha'); if (!ns.length) return; d3.select(this).attr('x', d3.mean(ns,n=>n.x)).attr('y', d3.min(ns,n=>n.y)-16); });
+    hull.attr('d', k => { const pts = sim.nodes().filter(n=>n.grupo===k && n.tipo!=='bolha').flatMap(n => { const r=raio(n)+12; return [[n.x-r,n.y],[n.x+r,n.y],[n.x,n.y-r],[n.x,n.y+r]]; }); const h = d3.polygonHull(pts); return h ? 'M'+h.join('L')+'Z' : null; });
+    hullRot.each(function(k){ const ns = sim.nodes().filter(n=>n.grupo===k && n.tipo!=='bolha'); if (!ns.length) return; d3.select(this).attr('x', d3.mean(ns,n=>n.x)).attr('y', d3.min(ns,n=>n.y)-16); });
     link.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
     no.attr('transform', n => `translate(${n.x},${n.y})`);
     rot.attr('x', n => n.x).attr('y', n => n.y);
   }
 
   function atualizar(origem){
-    posicionarAncoras();
     const {nos, links} = visiveis();
-    // nós novos nascem na posição de quem foi aberto
-    nos.forEach(n => { if (n.x==null || !pos.has(n.id)) { const p = pos.get(origem) || pos.get('G:'+n.grupo) || {x:ancora[n.grupo][0], y:ancora[n.grupo][1]};
-      n.x = p.x + (Math.random()-.5)*20; n.y = p.y + (Math.random()-.5)*20; } });
+    posicionarAncoras(nos);
+    nos.forEach(n => { if (n.x==null || !pos.has(n.id)) { const p = pos.get(origem) || {x:alvo(n)[0], y:alvo(n)[1]};
+      n.x = p.x + (Math.random()-.5)*24; n.y = p.y + (Math.random()-.5)*24; } });
     sim.nodes(nos); sim.force('link').links(links);
+    sim.force('x').x(n => alvo(n)[0]); sim.force('y').y(n => alvo(n)[1]);
 
     const abertos = [...abertosG];
-    hull = camHull.selectAll('path').data(abertos, x=>x).join('path').attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-linejoin','round')
-      .attr('stroke-dasharray', x => x===ISOL?'3 3':null).style('cursor','pointer').on('click', (e,x) => { e.stopPropagation(); fecharGrupo(x); });
-    hullRot = camHull.selectAll('text').data(abertos, x=>x).join('text').text(x => (x===ISOL?'ISOLADAS · GRUPO A IDENTIFICAR':x.toUpperCase())+'  ×')
-      .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.08em').attr('fill','var(--ink-2)').attr('text-anchor','middle').style('cursor','pointer')
-      .on('click', (e,x) => { e.stopPropagation(); fecharGrupo(x); });
+    hull = camHull.selectAll('path').data(abertos, k=>k).join('path').attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-linejoin','round')
+      .attr('stroke-dasharray', k => k.endsWith(ISOL)?'3 3':null).style('cursor','pointer').on('click', (e,k) => { e.stopPropagation(); fecharGrupo(k); });
+    hullRot = camHull.selectAll('text').data(abertos, k=>k).join('text').text(k => (nomeGrupo(k)+' · '+nomeSeg(segDe(k))).toUpperCase()+'  ×')
+      .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.06em').attr('fill','var(--ink-2)').attr('text-anchor','middle').style('cursor','pointer')
+      .on('click', (e,k) => { e.stopPropagation(); fecharGrupo(k); });
 
     link = camLink.selectAll('line').data(links, l => (l.source.id||l.source)+'|'+(l.target.id||l.target)).join('line')
       .attr('stroke', l => l.tipo==='cross'?'var(--div-pos-2)':'var(--edge)')
-      .attr('stroke-width', l => l.tipo==='ponte'?2 : l.tipo==='emitiu'?.8 : 1.3)
+      .attr('stroke-width', l => l.tipo==='ponte'?1.8 : l.tipo==='emitiu'?.8 : 1.3)
       .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : l.tipo==='escritura'?'8 2 2 2' : l.tipo==='ponte'?'2 4' : null);
 
     no = camNo.selectAll('g.no').data(nos, n=>n.id).join(enter => {
       const ge = enter.append('g').attr('class','no').style('cursor','pointer');
-      ge.filter(n=>n.tipo==='bolha').append('circle').attr('r', 0).attr('fill','var(--surface-2)').attr('stroke','var(--line-2)').attr('stroke-width',1.5)
+      const b = ge.filter(n=>n.tipo==='bolha');
+      b.append('circle').attr('r', 0).attr('fill', n => n.nivel==='segmento' ? 'var(--surface-2)' : 'var(--surface)')
+        .attr('stroke', n => n.nivel==='segmento' ? 'var(--ink-3)' : 'var(--line-2)').attr('stroke-width', n => n.nivel==='segmento' ? 1.6 : 1.4)
         .transition().duration(350).attr('r', n => raio(n));
-      ge.filter(n=>n.tipo==='bolha').append('text').attr('class','rb').attr('text-anchor','middle').attr('dy', n => raio(n)+15).attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text(n=>n.rotulo);
-      ge.filter(n=>n.tipo==='bolha').append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+28).attr('font-size',9.5).attr('fill','var(--ink-3)')
-        .text(n => resumo[n.grupo].emissores+' emissores · '+resumo[n.grupo].series+' séries');
+      b.append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+15).attr('font-size', n => n.nivel==='segmento'?12:10.5).attr('font-weight',600).attr('fill','var(--ink)').text(n=>n.rotulo);
+      b.append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+28).attr('font-size',9.5).attr('fill','var(--ink-3)')
+        .text(n => { const r = resumo[n.id]; return n.nivel==='segmento' ? r.grupos+' grupos · '+r.series+' séries' : r.emissores+' emissores · '+r.series+' séries'; });
       ge.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
         .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
       ge.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
@@ -400,60 +416,50 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
       return ge;
     });
     no.select('text.mais').text(n => abertosE.has(n.id) ? '−' : '+');
-
     rot = camRot.selectAll('text').data(nos.filter(n => n.tipo!=='bolha' && n.tipo!=='serie' && n.tipo!=='doc'), n=>n.id).join('text')
       .text(n => n.rotulo.length>30 ? n.rotulo.slice(0,29)+'…' : n.rotulo).attr('font-size',8.5).attr('fill','var(--ink-2)')
       .attr('dx', n=>raio(n)+3).attr('dy',3).style('pointer-events','none').attr('paint-order','stroke').attr('stroke','var(--surface)').attr('stroke-width',3);
-    aplicarRot();
-    ligarEventos();
-    sim.alpha(1).restart();
+    aplicarRot(); ligarEventos(); sim.alpha(1).restart();
     clearTimeout(enquadrar.t); enquadrar.t = setTimeout(enquadrar, 900);
-  }
-  // zoom automático: aproxima o que está aberto; tudo recolhido volta à vista inteira
-  function enquadrar(){
-    const foco = sim.nodes().filter(n => n.tipo!=='bolha');
-    if (!foco.length) { svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity); return; }
-    const x0 = d3.min(foco,n=>n.x)-60, x1 = d3.max(foco,n=>n.x)+160, y0 = d3.min(foco,n=>n.y)-50, y1 = d3.max(foco,n=>n.y)+40;
-    const k = Math.max(1, Math.min(2.2, .9*Math.min(W/(x1-x0), H/(y1-y0))));
-    svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity.translate(W/2 - k*(x0+x1)/2, H/2 - k*(y0+y1)/2).scale(k));
   }
   const aplicarRot = () => rot.attr('display', n => visRot(n)?null:'none');
   sim.on('tick', () => { sim.nodes().forEach(n => pos.set(n.id, {x:n.x, y:n.y})); desenhar(); });
 
-  function abrirGrupo(x){ abertosG.add(x); atualizar('G:'+x); }
-  function fecharGrupo(x){ abertosG.delete(x); todos.filter(n=>n.grupo===x && n.tipo==='emissor').forEach(n=>abertosE.delete(n.id)); pos.set('G:'+x, centro(x)); atualizar(); }
-  const centro = x => { const ns = sim.nodes().filter(n=>n.grupo===x); return ns.length ? {x:d3.mean(ns,n=>n.x), y:d3.mean(ns,n=>n.y)} : {x:ancora[x][0], y:ancora[x][1]}; };
+  function enquadrar(){
+    const foco = sim.nodes().filter(n => n.tipo!=='bolha' || (abertosS.size && n.nivel==='grupo'));
+    if (!foco.length || !abertosS.size) { svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity); return; }
+    const x0 = d3.min(foco,n=>n.x)-70, x1 = d3.max(foco,n=>n.x)+170, y0 = d3.min(foco,n=>n.y)-50, y1 = d3.max(foco,n=>n.y)+50;
+    const k = Math.max(1, Math.min(2.2, .9*Math.min(W/(x1-x0), H/(y1-y0))));
+    svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity.translate(W/2 - k*(x0+x1)/2, H/2 - k*(y0+y1)/2).scale(k));
+  }
+  function abrirSegmento(s){ abertosS.add(s); atualizar('S:'+s); }
+  function abrirGrupo(k){ abertosS.add(segDe(k)); abertosG.add(k); atualizar('G:'+k); }
+  function fecharGrupo(k){ abertosG.delete(k); todos.filter(n=>n.grupo===k && n.tipo==='emissor').forEach(n=>abertosE.delete(n.id)); atualizar(); }
+  function fecharSegmento(s){ abertosS.delete(s); [...abertosG].filter(k=>segDe(k)===s).forEach(fecharGrupo); atualizar(); }
   function alternarEmissor(id){ abertosE.has(id) ? abertosE.delete(id) : abertosE.add(id); atualizar(id); }
 
   const viz = () => { const m = new Map(); sim.force('link').links().forEach(l => [[l.source.id,l.target.id],[l.target.id,l.source.id]].forEach(([a,b]) => { if(!m.has(a)) m.set(a,new Set()); m.get(a).add(b); })); return m; };
   function realcar(ids){ no.attr('opacity', n => !ids||ids.has(n.id)?1:.15); rot.attr('opacity', n => !ids||ids.has(n.id)?1:.15); link.attr('opacity', l => !ids||(ids.has(l.source.id)&&ids.has(l.target.id))?1:.08); }
   function ligarEventos(){
     no.on('mouseenter', (e,n) => { const v = viz(); realcar(new Set([n.id, ...(v.get(n.id)||[])]));
-        if (n.tipo==='bolha') { const r = resumo[n.grupo]; mostrar(e, '<b>'+nomeGrupo(n.grupo)+'</b>'+linha('Emissores', r.emissores)+linha('Séries', r.series)+linha('Desvio mediano', r.mediana==null?'–':sinal(r.mediana)+' bps')+'<span class="fraco">clique para abrir</span>'); }
+        if (n.tipo==='bolha') { const r = resumo[n.id]; mostrar(e, '<b>'+(n.nivel==='segmento'?nomeSeg(n.segmento):nomeGrupo(n.grupo)+' · '+nomeSeg(n.segmento))+'</b>'
+          + (n.nivel==='segmento'?linha('Grupos', r.grupos):'') + linha('Emissores', r.emissores)+linha('Séries', r.series)+linha('Desvio mediano', r.mediana==null?'–':sinal(r.mediana)+' bps')
+          + '<span class="fraco">clique para abrir'+(n.nivel==='segmento' && abertosS.has(n.segmento)?'':'')+'</span>'); }
         else if (n.tipo==='serie') mostrar(e, textoSerie(n));
         else if (n.tipo==='doc') mostrar(e, '<b>'+nomeDoc[n.subtipo]+'</b> <span class="fraco">'+(n.data||'')+' · '+n.fonte+'</span><br>'+n.rotulo
           + (n.evento ? linha('Evento (JEV)', n.evento.replace(/_/g,' ')) + linha('Impacto para o credor', n.impacto) + linha('Confiança', fmt(n.confianca,2) + (n.status_jev==='a_revisar'?' · a revisar':'')) : '')
           + '<br><span class="fraco">clique para abrir o original</span>');
-        else mostrar(e, '<b>'+n.rotulo+'</b><br><span class="fraco">'+nomeGrupo(n.grupo)+'</span><br>'+(n.detalhe||'')+(n.tipo==='emissor'?'<br><span class="fraco">clique para '+(abertosE.has(n.id)?'recolher':'ver as emissões')+'</span>':'')); })
+        else mostrar(e, '<b>'+n.rotulo+'</b><br><span class="fraco">'+nomeGrupo(n.grupo)+' · '+nomeSeg(n.segmento)+'</span><br>'+(n.detalhe||'')+(n.tipo==='emissor'?'<br><span class="fraco">clique para '+(abertosE.has(n.id)?'recolher':'ver emissões e documentos')+'</span>':'')); })
       .on('mousemove', mover).on('mouseleave', () => { realcar(null); esconder(); })
       .on('click', (e,n) => { e.stopPropagation(); esconder();
-        if (n.tipo==='bolha') abrirGrupo(n.grupo);
+        if (n.tipo==='bolha') n.nivel==='segmento' ? abrirSegmento(n.segmento) : abrirGrupo(n.grupo);
         else if (n.tipo==='emissor') { alternarEmissor(n.id); mostrarFicha(n); }
         else if (n.tipo==='doc') { if (n.url) window.open(n.url, '_blank', 'noopener'); }
         else if (n.tipo==='serie') { selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } })
       .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
   }
 
-  // controles
-  const selG = document.getElementById('filtroGrupo');
-  ['Todos os grupos', ...grupos].forEach(x => { const o=document.createElement('option'); o.value=x; o.textContent=nomeGrupo(x); selG.appendChild(o); });
-  selG.addEventListener('change', () => { const x = selG.value; if (x==='Todos os grupos') { realcar(null); return; } if (!abertosG.has(x)) abrirGrupo(x); setTimeout(() => realcar(new Set(sim.nodes().filter(n=>n.grupo===x).map(n=>n.id))), 400); });
-  document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
-  document.getElementById('abrirTudo').addEventListener('click', () => { grupos.forEach(x => abertosG.add(x)); atualizar(); });
-  document.getElementById('abrirEmissoes').addEventListener('click', () => { grupos.forEach(x => abertosG.add(x)); todos.filter(n=>n.tipo==='emissor').forEach(n=>abertosE.add(n.id)); atualizar(); });
-  document.getElementById('fecharTudo').addEventListener('click', () => { abertosG.clear(); abertosE.clear(); grupos.forEach(x => pos.set('G:'+x, {x:ancora[x][0], y:ancora[x][1]})); atualizar(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
-
-  // ficha do emissor: tudo que o sistema sabe dele, com link para a fonte original
+  // ficha do emissor
   function mostrarFicha(n){
     const f = document.getElementById('ficha'), docs = (D.docs[n.cnpj] || []);
     const series = todos.filter(m => m.tipo==='serie' && paiSerie.get(m.id)===n.id);
@@ -462,7 +468,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     const selo = j => !j ? '' : ' <span class="selo" title="classificação JEV, confiança '+j.confianca+'">'+(j.impacto==='negativo'?'▼ ':j.impacto==='positivo'?'▲ ':'')+j.evento.replace(/_/g,' ')+(j.status==='a_revisar'?' · a revisar':'')+'</span>';
     const item = d => '<li><span>'+(d.data||'')+'</span><a href="'+esc(d.url)+'" target="_blank" rel="noopener">'+esc(d.titulo)+'</a> <span class="fraco">'+esc(d.fonte)+'</span>'+selo(d.jev)+'</li>';
     const lista = t => docs.filter(d => t.includes(d.tipo)).map(item);
-    f.innerHTML = '<div class="kicker">'+esc(nomeGrupo(n.grupo))+' · CNPJ '+n.cnpj+'</div><h3>'+esc(n.rotulo)+'</h3><p class="muted pequeno" style="margin:0">'+esc(n.detalhe)+'</p>'
+    f.innerHTML = '<div class="kicker">'+esc(nomeSeg(n.segmento))+' · '+esc(nomeGrupo(n.grupo))+' · CNPJ '+n.cnpj+'</div><h3>'+esc(n.rotulo)+'</h3><p class="muted pequeno" style="margin:0">'+esc(n.detalhe)+'</p>'
       + '<div class="ficha-grade">'
       + bloco('Emissões', series.map(m => '<li><span>'+m.rotulo+'</span>'+(m.spread!=null ? fmt(m.spread,0)+' bps · justo '+fmt(m.justo,0)+' · desvio '+sinal(m.desvio)+' bps'+(m.pares?'<br><span class="fraco">pares: '+m.pares+'</span>':'') : esc(m.status))+'</li>'))
       + bloco('Fatos relevantes', lista(['fato_relevante'])) + bloco('Comunicados e avisos', lista(['comunicado','aviso_debenturistas']))
@@ -471,12 +477,26 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     f.style.display = 'block';
   }
 
+  // controles
+  const selG = document.getElementById('filtroGrupo');
+  const op = (v, t) => { const o = document.createElement('option'); o.value = v; o.textContent = t; selG.appendChild(o); };
+  op('', 'Abrir segmento ou grupo…');
+  segmentos.forEach(s => { op('S:'+s, nomeSeg(s)); gruposDe(s).filter(k => !k.endsWith(ISOL)).sort((a,b)=>resumo['G:'+b].series-resumo['G:'+a].series).forEach(k => op('G:'+k, '   '+nomeGrupo(k))); });
+  selG.addEventListener('change', () => { const v = selG.value; if (!v) return; v.startsWith('S:') ? abrirSegmento(v.slice(2)) : abrirGrupo(v.slice(2)); });
+  document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
+  document.getElementById('abrirTudo').addEventListener('click', () => { segmentos.forEach(s => abertosS.add(s)); atualizar(); });
+  document.getElementById('abrirEmissoes').addEventListener('click', () => { const s = segmentos[0]; abertosS.add(s); gruposDe(s).forEach(k => abertosG.add(k)); atualizar(); });
+  document.getElementById('fecharTudo').addEventListener('click', () => { abertosS.clear(); abertosG.clear(); abertosE.clear(); pos.clear(); atualizar(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); });
+
   atualizar();
 })();
 
 // ---------- desvio em relação aos pares (barras divergentes) ----------
+let classeAtual = 'IPCA+';
 function desenharDesvio(classe){
-  const dados = D.desvios.filter(d => d.classe===classe && d.desvio!=null).sort((a,b)=>b.desvio-a.desvio);
+  classeAtual = classe;
+  const segSel = document.getElementById('segDesvio').value;
+  const dados = D.desvios.filter(d => d.classe===classe && d.desvio!=null && (!segSel || d.segmento===segSel)).sort((a,b)=>b.desvio-a.desvio);
   const svg = d3.select('#desvio'); svg.selectAll('*').remove();
   const W = 1080, lin = 15, M = {t:24, r:70, b:8, l:150}, H = M.t + dados.length*lin + M.b;
   svg.attr('viewBox', `0 0 ${W} ${H}`);
@@ -494,6 +514,13 @@ function desenharDesvio(classe){
     .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => { if (D.fluxos[d.codigo]||D.di[d.codigo]) { selecionar(d.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } });
 }
 document.querySelectorAll('[data-classe]').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('[data-classe]').forEach(x=>x.classList.toggle('ativo', x===b)); desenharDesvio(b.dataset.classe); }));
+(function(){ const sd = document.getElementById('segDesvio'), st = document.getElementById('segTabela');
+  const segs = [...new Set(D.desvios.map(d => d.segmento))].sort((a,b) => D.desvios.filter(d=>d.segmento===b).length - D.desvios.filter(d=>d.segmento===a).length);
+  [sd, st].forEach(sel => { const o = document.createElement('option'); o.value=''; o.textContent='Todos os segmentos'; sel.appendChild(o);
+    segs.forEach(x => { const o = document.createElement('option'); o.value = x; o.textContent = D.segmentos[x] || x; sel.appendChild(o); }); });
+  sd.addEventListener('change', () => desenharDesvio(classeAtual));
+  st.addEventListener('change', () => document.querySelectorAll('#tab tbody tr').forEach(tr => tr.style.display = !st.value || tr.dataset.segmento===st.value ? '' : 'none'));
+})();
 desenharDesvio('IPCA+');
 
 // ---------- simulador ----------
@@ -614,7 +641,8 @@ def gerar_projeto() -> str:
         })
         if s["status"] == "ok DI+":
             di[s["codigo"]] = True
-    lista_desvios = [{"codigo": c, "emissor": universo[c]["emissor_atual_snd"].title(), "grupo": universo[c]["grupo_risco"], **v}
+    lista_desvios = [{"codigo": c, "emissor": universo[c]["emissor_atual_snd"].title(), "grupo": universo[c]["grupo_risco"],
+                      "segmento": universo[c].get("segmento", ""), **v}
                      for c, v in desvios.items()]
 
     ipca = [d for d in desvios.values() if d["classe"] == "IPCA+"]
@@ -633,7 +661,8 @@ def gerar_projeto() -> str:
         fonte = {"CVM FRE": "CVM", "inferido": "inferido", "escritura": "escritura"}.get(u["fonte_grupo"], "")
         dp = d.get("dp")
         cor = "var(--surface)" if dp is None else "var(--div-neg-2)" if dp <= -1.5 else "var(--div-neg-1)" if dp <= -.5 else "var(--div-0)" if dp < .5 else "var(--div-pos-1)" if dp < 1.5 else "var(--div-pos-2)"
-        abre = f'<tr data-codigo="{html.escape(s["codigo"])}">' if valida else "<tr>"
+        segm = u.get("segmento", "")
+        abre = (f'<tr data-codigo="{html.escape(s["codigo"])}" data-segmento="{segm}">' if valida else f'<tr data-segmento="{segm}">')
         celula = lambda v, c=0, sinal=False: f'<td data-v="{"" if v is None else v}">{("+" if sinal and v is not None and v > 0 else "") + num(v, c)}</td>'
         trs.append(
             abre
@@ -646,6 +675,7 @@ def gerar_projeto() -> str:
             + f'<td class="t">{html.escape(u["grupo_risco"])}</td>'
         )
         trs[-1] += (
+            f'<td class="t">{SEGMENTOS_NOMES.get(u.get("segmento", ""), u.get("segmento", ""))}</td>'
             f'<td class="t">{d.get("classe") or s["indexador_tipo"]}</td>'
             f'<td class="t">{ {"S": "sim", "N": "não"}.get(s["incentivada"], "–") }</td>'
             f'<td class="t">{html.escape(s["garantia"] or "–")}</td>'
@@ -671,33 +701,35 @@ def gerar_projeto() -> str:
         coef_html = f"""<div class="painel tabela" style="max-height:none"><table class="coef">
 <thead><tr><th class="t">Variável</th><th>Coeficiente (bps)</th><th>Erro padrão (HC1)</th><th>t</th><th>VIF</th></tr></thead>
 <tbody>{linhas}</tbody></table></div>
+<p class="pequeno" style="margin-top:.75rem"><b>Efeito da isenção medido no mercado:</b> no Z-spread sem ajuste, as debêntures incentivadas pagam {num(modelo.get("isencao", {}).get("coef_bps"), 0)} bps em relação às tributadas com o mesmo perfil (erro padrão {num(modelo.get("isencao", {}).get("erro_padrao_hc1"), 0)} bps; {modelo.get("isencao", {}).get("n_tributadas", "–")} tributadas e {modelo.get("isencao", {}).get("n_isentas", "–")} isentas). O gross-up de 15% aplicado no spread comparável equivale a cerca de 240 bps.</p>
 <p class="fraco pequeno">IPCA+: n = {modelo["n"]}, R² = {num(modelo["r2"], 2)}, desvio padrão dos resíduos = {num(modelo["dp_residuos_bps"], 0)} bps. DI+: desvio medido contra a mediana das {modelo["di"]["n"]} séries ({num(modelo["di"]["mediana_bps"], 0)} bps). Especificação provisória.</p>"""
 
     dia = date.fromisoformat(data_ref).strftime("%d/%m/%Y")
-    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos, "di": di, "desvios": lista_desvios, "docs": documentos},
+    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos, "di": di, "desvios": lista_desvios, "docs": documentos, "segmentos": SEGMENTOS_NOMES},
                           ensure_ascii=False, separators=(",", ":"))
     escala = '<span class="escala">abaixo dos pares <b><i style="background:var(--div-neg-2)"></i><i style="background:var(--div-neg-1)"></i><i style="background:var(--div-0)"></i><i style="background:var(--div-pos-1)"></i><i style="background:var(--div-pos-2)"></i></b> acima dos pares</span>'
 
     corpo = f"""<main>
 <nav><a href="/">Alisson Prata Oliveira</a><span><a href="#mapa">Mapa</a><a href="#desvios">Desvios</a><a href="#simulador">Simulador</a><a href="#tabela">Tabela</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></span></nav>
 
-<div class="kicker">Crédito privado · Transmissão de energia · {dia}</div>
+<div class="kicker">Crédito privado · Energia, saneamento e transporte · {dia}</div>
 <h1>Grafo de Crédito</h1>
-<p class="dek">Quem controla quem, quem emitiu o quê e quanto cada debênture paga acima ou abaixo do que seus pares sugerem. Piloto com as transmissoras de energia elétrica, atualizado todo dia útil com dados da ANBIMA, do SND e da CVM.</p>
+<p class="dek">Quem controla quem, quem emitiu o quê e quanto cada debênture paga acima ou abaixo do que seus pares sugerem. Universo de energia (transmissão, geração, distribuição, integradas), saneamento e infraestrutura de transporte, atualizado todo dia útil com dados da ANBIMA, do SND, da CVM e da ANEEL.</p>
 
 <div class="tiles">
-<div class="tile"><span>Séries no piloto</span><b>{len(series)}</b><small>{len(validas)} precificadas</small></div>
+<div class="tile"><span>Séries no universo</span><b>{len(series)}</b><small>{len(validas)} precificadas</small></div>
 <div class="tile"><span>Emissores</span><b>{n_emissores}</b><small>{n_cvm} com controle na CVM</small></div>
 <div class="tile"><span>Grupos de risco</span><b>{n_grupos}</b><small>mais as isoladas</small></div>
+<div class="tile"><span>Segmentos</span><b>{len({u.get("segmento") for u in universo.values()})}</b><small>pares só dentro do segmento</small></div>
 <div class="tile"><span>Spread comparável mediano</span><b>{num(mediana, 0)} bps</b><small>IPCA+, gross-up 15% nas isentas</small></div>
 <div class="tile"><span>Fora da faixa dos pares</span><b>{fora}</b><small>séries com |desvio| ≥ 1,5 dp</small></div>
 </div>
 
 <section id="mapa">
-<div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada bola é um grupo de risco, do tamanho do número de séries. Clique numa bola para abrir as empresas do grupo; clique num emissor para abrir as emissões (coloridas pelo desvio em relação aos pares) e os documentos dele (fatos relevantes, escrituras, notícias e análises), com a ficha completa abaixo do mapa. Clique num documento para abrir o original e no nome do grupo para recolher. Linhas pontilhadas entre bolas são empresas compartilhadas entre grupos.</p></div></div>
+<div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada bola grande é um segmento; dentro dele, cada bola é um grupo de risco, do tamanho do número de séries. Clique num segmento para ver os grupos. Clique numa bola para abrir as empresas do grupo; clique num emissor para abrir as emissões (coloridas pelo desvio em relação aos pares) e os documentos dele (fatos relevantes, escrituras, notícias e análises), com a ficha completa abaixo do mapa. Clique num documento para abrir o original e no nome do grupo para recolher. Linhas pontilhadas entre bolas são empresas compartilhadas entre grupos.</p></div></div>
 <div class="painel">
 <div class="controles"><label>Abrir grupo <select id="filtroGrupo"></select></label>
-<button id="abrirTudo">abrir todos os grupos</button><button id="abrirEmissoes">abrir tudo até as emissões</button><button id="fecharTudo">recolher</button>
+<button id="abrirTudo">abrir todos os segmentos</button><button id="abrirEmissoes">abrir o maior segmento</button><button id="fecharTudo">recolher</button>
 <label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
 <div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
@@ -708,7 +740,7 @@ def gerar_projeto() -> str:
 
 <section id="desvios">
 <div class="cab"><div><h2>Desvio em relação aos pares</h2><p class="muted pequeno">Spread observado menos o spread justo dos pares (mediana das 8 séries mais comparáveis de outros emissores, mesmo segmento e mesma classe), já com o ajuste por eventos. À direita, a série paga mais que o perfil dela sugere; à esquerda, menos. A cor marca o tamanho do desvio em desvios-padrão dos resíduos.</p></div>
-<div><button data-classe="IPCA+" class="ativo">IPCA+</button> <button data-classe="DI+">DI+</button></div></div>
+<div><select id="segDesvio" aria-label="Segmento"></select> <button data-classe="IPCA+" class="ativo">IPCA+</button> <button data-classe="DI+">DI+</button></div></div>
 <div class="painel" style="padding:8px 4px"><svg id="desvio" role="img" aria-label="Barras divergentes do desvio de spread de cada série"></svg></div>
 </section>
 
@@ -738,9 +770,9 @@ def gerar_projeto() -> str:
 </section>
 
 <section id="tabela">
-<div class="cab"><div><h2>Tabela</h2><p class="muted pequeno">Clique no cabeçalho para ordenar; clique numa linha para simular.</p></div></div>
+<div class="cab"><div><h2>Tabela</h2><p class="muted pequeno">Clique no cabeçalho para ordenar; clique numa linha para simular.</p></div><div><select id="segTabela" aria-label="Segmento"></select></div></div>
 <div class="painel tabela"><table id="tab">
-<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Classe</th><th class="t">Isenta</th><th class="t">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th>Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th>Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t">Escritura / status</th></tr></thead>
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t">Isenta</th><th class="t">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th>Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th>Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>

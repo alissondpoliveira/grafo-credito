@@ -47,10 +47,12 @@ def tabela(texto: str, inicio_cabecalho: str) -> list[dict]:
     ]
 
 
+CANDIDATOS = RAIZ / "dados" / "referencia" / "universo_candidatos.csv"
+
+
 def series_do_universo() -> list[str]:
-    emissores = {u["emissor"] for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
-    ultimo = sorted(DEB.rglob("*.csv"))[-1]
-    return sorted({s["codigo"] for s in csv.DictReader(ultimo.open(encoding="utf-8")) if s["emissor"] in emissores})
+    """Séries do universo ampliado (energia, saneamento e infraestrutura de transporte)."""
+    return sorted({c["codigo"] for c in csv.DictReader(CANDIDATOS.open(encoding="utf-8"))})
 
 
 def main(codigos: list[str]) -> None:

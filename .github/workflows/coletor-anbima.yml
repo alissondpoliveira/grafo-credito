@@ -37,6 +37,10 @@ jobs:
         continue-on-error: true
         run: python coletor/bcb_ipca.py
 
+      - name: Classificar universo por segmento (energia, saneamento, transporte)
+        continue-on-error: true
+        run: python analises/universo_amplo.py
+
       - name: Atualizar características e agenda (SND)
         continue-on-error: true
         run: python coletor/snd_debentures.py
