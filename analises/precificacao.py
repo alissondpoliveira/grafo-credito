@@ -242,6 +242,10 @@ def main(data_ref_txt: str | None) -> None:
         arq_deb = [a for a in sorted(DEB.rglob("*.csv")) if (ETTJ / a.stem[:4] / f"{a.stem}_parametros.csv").exists()][-1]
     data_ref = date.fromisoformat(arq_deb.stem)
     curvas = ler_curvas(arq_deb.stem)
+    # taxa indicativa da NTN-B por vencimento, para o spread simples sobre a NTN-B de referência da ANBIMA
+    arq_tit = RAIZ / "dados" / "anbima" / "titulos_publicos" / "normalizado" / arq_deb.stem[:4] / f"{arq_deb.stem}.csv"
+    ntnb = {t["vencimento"]: float(t["taxa_indicativa"]) for t in csv.DictReader(arq_tit.open(encoding="utf-8"))
+            if t["titulo"] == "NTN-B" and t["taxa_indicativa"]} if arq_tit.exists() else {}
     universo = {u["codigo"]: u for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
     caracs = {c["Codigo do Ativo"]: c for c in csv.DictReader((SND / "caracteristicas.csv").open(encoding="utf-8"))}
     agenda = {}
@@ -270,6 +274,9 @@ def main(data_ref_txt: str | None) -> None:
             "taxa_indicativa": s["taxa_indicativa"],
             "desvio_padrao": s["desvio_padrao"],
             "pu_anbima": s["pu"],
+            "vencimento": s["vencimento"], "ntnb_referencia": s["ntnb_referencia"],
+            "spread_ntnb_bps": (float(s["taxa_indicativa"]) - ntnb[s["ntnb_referencia"]]) * 100
+                               if s["indexador_tipo"] == "IPCA_MAIS" and s["taxa_indicativa"] and s["ntnb_referencia"] in ntnb else "",
             "duration_anbima_anos": s["duration_anos"],
         }
         status = ""

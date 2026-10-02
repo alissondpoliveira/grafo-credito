@@ -1,5 +1,7 @@
 codigo,emissor_anbima,emissor_snd,macro,segmento,fonte_segmento,setor_cvm
+AALM12,AURA ALMAS MINERACAO S.A.,AURA ALMAS MINERACAO S.A.,corporativo,mineracao_siderurgia,CVM (CNPJ),Emp. Adm. Part. - Extração Mineral
 ABSP12,AGUAS DE BOMBINHAS SANEAMENTO SPE S.A.,AGUAS DE BOMBINHAS SANEAMENTO SPE S.A.,saneamento_gas,saneamento,nome do emissor,
+ACOV15,ACO VERDE DO BRASIL S/A,ACO VERDE DO BRASIL S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
 ADPA21,AGUAS DO PARA A SPE S.A.,AGUAS DO PARA A SPE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 AEGE16,EQUIPAV SANEAMENTO S.A.,EQUIPAV SANEAMENTO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 AEGE17,EQUIPAV SANEAMENTO S.A.,EQUIPAV SANEAMENTO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -13,8 +15,16 @@ AEGPB7,AEGEA SANEAMENTO E PARTICIPAÇÕES S/A,AEGEA SANEAMENTO E PARTICIPACOES S
 AERI11,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A.,energia,geracao,nome do emissor,"Máquinas, Equipamentos, Veículos e Peças"
 AERI12,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A.,energia,geracao,nome do emissor,"Máquinas, Equipamentos, Veículos e Peças"
 AESLA8,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+ALGAA2,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+ALGTA5,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+ALGTA6,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+ALPA22,ALPARGATAS S.A.,ALPARGATAS S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+AMBP16,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,corporativo,servicos_ambientais,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 ANHBA5,CONCESSIONÁRIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ANHBA6,CONCESSIONÁRIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+ANIM15,ANIMA HOLDING S/A,ANIMA HOLDING S/A,corporativo,educacao,CVM (CNPJ),Educação
+ANIM17,ANIMA HOLDING S/A,ANIMA HOLDING S/A,corporativo,educacao,CVM (CNPJ),Educação
+ANIM18,ANIMA HOLDING S/A,ANIMA HOLDING S/A,corporativo,educacao,CVM (CNPJ),Educação
 APFL18,AUTOPISTA FLUMINENSE S/A,AUTOPISTA FLUMINENSE S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 APPSB2,AUTOPISTA PLANALTO SUL S/A,AUTOPISTA PLANALTO SUL S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 APRB28,AUTOPISTA REGIS BITTENCOURT S/A,AUTOPISTA REGIS BITTENCOURT S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
@@ -26,24 +36,63 @@ ARML26,ARMAC LOCACAO LOGISTICA E SERVICOS S.A.,ARMAC LOCACAO LOGISTICA E SERVICO
 ARTRA1,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ARTRA4,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ARTRA5,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+ASAI18,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAI19,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAI22,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAI28,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAIA0,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAIA1,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAIA2,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+ASAIA3,SENDAS DISTRIBUIDORA S/A,SENDAS  DISTRIBUIDORA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 AURE13,AUREN ENERGIA S.A.,AUREN ENERGIA S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 AXIAA0,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 AXIAB0,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+AZZA11,AZZAS 2154 S.A.,AZZAS 2154 S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+AZZA12,AZZAS 2154 S.A.,AZZAS 2154 S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+AZZA13,AZZAS 2154 S.A.,AZZAS 2154 S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+BCBF16,BCBF PARTICIPAÇÕES S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+BCPSA4,CLARO S/A,CLARO S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BCPSA6,CLARO S/A,CLARO S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BKBR19,BK BRASIL OPERAÇÃO E ASSESSORIA A RESTAURANTES S/A,ZAMP S.A.,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
+BRIT11,BRISANET PARTICIPACOES S.A.,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BRIT12,BRISANET PARTICIPACOES S.A.,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BRKMA6,BRASKEM S/A,BRASKEM S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+BRKMA8,BRASKEM S/A,BRASKEM S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+BRKMB6,BRASKEM S/A,BRASKEM S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+BRKMB8,BRASKEM S/A,BRASKEM S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
 BRKPA0,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 BRKPA2,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 BRKPA3,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 BRKPA4,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 BRKPA5,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+BRMLA1,BR MALLS PARTICIPAÇÕES S/A,BR MALLS PARTICIPACOES S/A,corporativo,varejo,CVM (CNPJ),Emp. Adm. Part. - Comércio (Atacado e Varejo)
+BRMLB1,BR MALLS PARTICIPAÇÕES S/A,BR MALLS PARTICIPACOES S/A,corporativo,varejo,CVM (CNPJ),Emp. Adm. Part. - Comércio (Atacado e Varejo)
+BRST14,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BSA312,"B3 S/A - BRASIL, BOLSA, BALCÃO",B3 S.A. - BRASIL BOLSA BALCAO,corporativo,financeiro,CVM (CNPJ),Bolsas de Valores/Mercadorias e Futuros
+BSA318,"B3 S/A - BRASIL, BOLSA, BALCÃO",B3 S.A. - BRASIL BOLSA BALCAO,corporativo,financeiro,CVM (CNPJ),Bolsas de Valores/Mercadorias e Futuros
+BSA319,"B3 S/A - BRASIL, BOLSA, BALCÃO",B3 S.A. - BRASIL BOLSA BALCAO,corporativo,financeiro,CVM (CNPJ),Bolsas de Valores/Mercadorias e Futuros
+BSA3A0,"B3 S/A - BRASIL, BOLSA, BALCÃO",B3 S.A. - BRASIL BOLSA BALCAO,corporativo,financeiro,CVM (CNPJ),Bolsas de Valores/Mercadorias e Futuros
+BTGH18,BTG PACTUAL HOLDING S/A,BTG PACTUAL HOLDING S.A.,corporativo,outros_corporativo,nome do emissor,
 CAEC13,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CAEC22,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CAEC32,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+CAMLA1,CAMIL ALIMENTOS S/A,CAMIL ALIMENTOS S/A,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
+CAMLB1,CAMIL ALIMENTOS S/A,CAMIL ALIMENTOS S/A,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
 CASN13,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CASN14,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CBAN22,CONCESSIONÁRIA ROTA DAS BANDEIRAS S/A,CONCESSIONARIA ROTA DAS BANDEIRAS S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+CBOH11,CBO HOLDING S.A.,OCEANPACT SERVICOS MARITIMOS S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+CBRDB8,COMPANHIA BRASILEIRA DE DISTRIBUIÇÃO,COMPANHIA BRASILEIRA DE DISTRIBUICAO,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 CDAR11,UNIDAS LOCADORA S.A.,UNIDAS LOCADORA S.A..,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 CDES12,VPORTS AUTORIDADE PORTUARIA S/A,VPORTS AUTORIDADE PORTUARIA S/A,transporte,portos,nome do emissor,
+CDGS26,COPA ENERGIA S A,COPA ENERGIA S A,corporativo,oleo_gas,nome do emissor,
+CEAB13,C E A MODAS S.A.,C E A MODAS S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+CEAB14,C E A MODAS S.A.,C E A MODAS S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+CEAB22,C E A MODAS S.A.,C E A MODAS S.A.,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
 CEAP15,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,energia,distribuicao,nome do emissor,
 CEAP16,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,energia,distribuicao,nome do emissor,
+CEBD14,CEB DISTRIBUICAO S/A,NEOENERGIA DISTRIBUICAO BRASILIA S.A,energia,distribuicao,nome do emissor,
+CEBD25,CEB DISTRIBUICAO S/A,NEOENERGIA DISTRIBUICAO BRASILIA S.A,energia,distribuicao,nome do emissor,
 CEEBA3,CIA DE ELETRICIDADE DO ESTADO DA BAHIA - COELBA,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEEBA6,CIA DE ELETRICIDADE DO ESTADO DA BAHIA - COELBA,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEEBA7,CIA DE ELETRICIDADE DO ESTADO DA BAHIA - COELBA,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -55,6 +104,11 @@ CEED18,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA
 CEEDA0,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEEDA1,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEMTE2,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEA1,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEA3,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEA4,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEB1,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEB2,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CERO19,CENTRAIS ELETRICAS DE RONDONIA S/A CERON,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
 CEROA2,CENTRAIS ELETRICAS DE RONDONIA S/A CERON,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
 CEROB2,CENTRAIS ELETRICAS DE RONDONIA S/A CERON,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
@@ -71,8 +125,18 @@ CHSF12,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,COMPANHIA HIDRO ELETRIC
 CHSF14,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CHSF24,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CHTH11,CHINA THREE GORGES BRASIL ENERGIA S.A.,CHINA THREE GORGES BRASIL ENERGIA S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
+CIEL17,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
+CIEL18,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
+CIEL19,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
+CLCD16,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
+CLCD17,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
+CLCD18,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
+CLCD19,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLII12,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 CLIS11,CLI SUL S/A,CLI SUL S/A,transporte,portos,CVM (CNPJ),Serviços Transporte e Logística
+CLMOA2,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S/A,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,corporativo,outros_corporativo,nome do emissor,
+CLMOA4,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S/A,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,corporativo,outros_corporativo,nome do emissor,
+CMED13,CIMED & CO S.A.,CIMED & CO S.A.,corporativo,outros_corporativo,nome do emissor,
 CMGD18,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CMGDA0,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CMGDA1,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -83,10 +147,19 @@ CMGDB3,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM 
 CMGTA0,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CMGTA2,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CMGTC3,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
+CMPH14,CM HOSPITALAR S.A.,CM HOSPITALAR S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 CMTR19,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CNLM16,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,transporte,mobilidade_urbana,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 CNLM17,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,transporte,mobilidade_urbana,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+COCEA2,COMPANHIA ENERGÉTICA DO CEARÁ - COELCE,COMPANHIA ENERGETICA DO CEARA-COELCE,energia,energia_diversificada,CVM (CNPJ),Energia Elétrica
+COGNA4,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+COGNA5,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+COGNB2,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
 COLNA3,RODOVIAS DAS COLINAS S/A,RODOVIAS DAS COLINAS S.A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+CPFGA3,CPFL GERAÇÃO DE ENERGIA S/A,CPFL COMERCIALIZACAO BRASIL S/A,corporativo,outros_corporativo,nome do emissor,
+CPFPA6,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPA8,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPB8,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPGT17,COPEL GERAÇÃO E TRANSMISSÃO S/A,COPEL GERACAO E TRANSMISSAO S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CPGT18,COPEL GERAÇÃO E TRANSMISSÃO S/A,COPEL GERACAO E TRANSMISSAO S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CPGT19,COPEL GERAÇÃO E TRANSMISSÃO S/A,COPEL GERACAO E TRANSMISSAO S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
@@ -101,14 +174,39 @@ CPLDA2,COPEL DISTRIBUICAO S/A,COPEL  DISTRIBUICAO S/A,energia,distribuicao,CVM (
 CPLDB0,COPEL DISTRIBUICAO S/A,COPEL  DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPREA0,CPFL ENERGIAS RENOVÁVEIS,CPFL ENERGIAS RENOVAVEIS S.A,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 CPTE12,CACHOEIRA PAULISTA TRANS. DE ENERGIA S/A,CACHOEIRA PAULISTA TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
+CSAN15,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSAN18,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSAN23,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSAN24,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANA0,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANA2,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANB0,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANB1,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANB2,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANC1,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSANC2,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+CSED12,CRUZEIRO DO SUL EDUCACIONAL S/A,CRUZEIRO DO SUL EDUCACIONAL S.A.,corporativo,educacao,CVM (CNPJ),Educação
+CSED13,CRUZEIRO DO SUL EDUCACIONAL S/A,CRUZEIRO DO SUL EDUCACIONAL S.A.,corporativo,educacao,CVM (CNPJ),Educação
 CSMGA7,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGA8,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGA9,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGB0,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGD1,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGD2,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+CSNAA1,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAA2,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSRNA2,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CTEE19,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 CTNSA2,ENERGISA TOCANTINS - DISTRIBUIDORA DE ENERGIA S.A,ENERGISA TOCANTINS DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
+CVCB14,CVC BRASIL OPERADORA E AGENCIA DE VIAGENS S.A.,CVC BRASIL OPERADORA E AGENCIA DE VIAGENS S.A.,corporativo,servicos_lazer,CVM (CNPJ),Hospedagem e Turismo
+DASAB2,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DASAB4,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DASAB5,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DASAC2,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DASAC5,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DASAD3,DIAGNÓSTICOS DA AMÉRICA S/A,DIAGNOSTICOS DA AMERICA S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+DGCD11,EDGE COMERCIALIZACAO S.A.,EDGE COMERCIALIZACAO S.A.,corporativo,outros_corporativo,nome do emissor,
+DXCO13,DEXCO S.A,DEXCO S.A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
 EBENA6,EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EBENA7,EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EBENA9,EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -130,6 +228,7 @@ ELET15,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,i
 ELET17,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELET24,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELET25,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+ELFA12,ELFA MEDICAMENTOS SA,ELFA MEDICAMENTOS SA,corporativo,saude,CVM (CNPJ),Serviços Médicos
 ELPLA6,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELPLB8,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELTN16,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
@@ -169,37 +268,128 @@ ESCEA6,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,EDP ESPIRITO SANTO DISTRIBU
 ESCEB4,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ESCEB6,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ESSDA2,ENERGISA SUL-SUDESTE - DISTRIBUICAO DE ENERGIA S.A,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+EUFA17,EUROFARMA LABORATÓRIOS S/A,EUROFARMA LABORATORIOS S.A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+EUFA18,EUROFARMA LABORATÓRIOS S/A,EUROFARMA LABORATORIOS S.A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+EUFA19,EUROFARMA LABORATÓRIOS S/A,EUROFARMA LABORATORIOS S.A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
 FENS12,FERROVIA NORTE SUL S/A,FERROVIA NORTE SUL S/A,transporte,ferrovias,CVM (CNPJ),Serviços Transporte e Logística
+FISI15,FISIA COMERCIO DE PRODUTOS ESPORTIVOS S.A.,FISIA COMERCIO DE PRODUTOS ESPORTIVOS S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 FLCLA4,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 FLCLA8,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+FLRY18,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRY19,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRY27,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRY29,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRYA0,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRYA1,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FLRYB0,FLEURY S/A,FLEURY S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+FRAS15,FRAS-LE S/A,FRAS-LE S.A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+FRAS16,FRAS-LE S/A,FRAS-LE S.A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+GGBRA7,GERDAU S/A,GERDAU S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+GGBRA8,GERDAU S/A,GERDAU S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+GGBRA9,GERDAU S/A,GERDAU S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
 GRRB16,AGUAS GUARIROBA S/A,AGUAS GUARIROBA  S/A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+GSHC15,GSH CORP PARTICIPACOES S.A.,GSH CORP PARTICIPACOES S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+GSHC17,GSH CORP PARTICIPACOES S.A.,GSH CORP PARTICIPACOES S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+GUAR17,GUARARAPES CONFECCOES S/A,GUARARAPES CONFECCOES S.A..,corporativo,varejo,CVM (CNPJ),Têxtil e Vestuário
+HAPV15,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+HAPV17,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+HAPV18,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+HAPV19,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+HAPV28,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+HAPVA0,HAPVIDA PARTICIPACOES E INVESTIMENTOS S/A,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
 HBSA14,HIDROVIAS DO BRASIL S.A.,HIDROVIAS DO BRASIL S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 HBSA24,HIDROVIAS DO BRASIL S.A.,HIDROVIAS DO BRASIL S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+HGLB13,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,corporativo,telecom,nome do emissor,
+HSPE15,HOSPITAL ESPERANÇA S/A,HOSPITAL ESPERANCA S/A,corporativo,saude,nome do emissor,
+HYPEA6,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+HYPEA7,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+HYPEA8,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+HYPEA9,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+HYPEB1,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+HYPEC0,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
 IEAS11,INTERLIGACAO ELETRICA AIMORES S.A,INTERLIGACAO ELETRICA AIMORES S.A,energia,transmissao,nome do emissor,
 IEPS11,INTERLIGACAO ELETRICA PARAGUACU S.A,INTERLIGACAO ELETRICA PARAGUACU S.A,energia,transmissao,nome do emissor,
+IGTAA3,IGUATEMI EMPRESA DE SHOPPING CENTERS S/A,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+IGTAB0,IGUATEMI EMPRESA DE SHOPPING CENTERS S/A,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+INEL12,INSPIRALI EDUCACAO S/A,INSPIRALI EDUCACAO S/A,corporativo,educacao,CVM (CNPJ),Educação
+IOCHA3,IOCHPE-MAXION S/A,IOCHPE-MAXION S/A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+IOCHA4,IOCHPE-MAXION S/A,IOCHPE-MAXION S/A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+IOCHA5,IOCHPE-MAXION S/A,IOCHPE-MAXION S/A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+IOCHA6,IOCHPE-MAXION S/A,IOCHPE-MAXION S/A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+IOCHA7,IOCHPE-MAXION S/A,IOCHPE-MAXION S/A,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+IPIPA6,IPIRANGA PRODUTOS DE PETRÓLEO S/A,IPIRANGA  PRODUTOS DE PETROLEO S.A.,corporativo,oleo_gas,nome do emissor,
 ISAEB1,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEB3,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEC1,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAED1,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISPE12,IGUA SERGIPE S.A.,IGUA SERGIPE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 ISPE13,IGUA SERGIPE S.A.,IGUA SERGIPE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+ITSA17,ITAUSA S/A,ITAUSA S/A,corporativo,financeiro,CVM (CNPJ),Emp. Adm. Part. - Intermediação Financeira
+ITSA18,ITAUSA S/A,ITAUSA S/A,corporativo,financeiro,CVM (CNPJ),Emp. Adm. Part. - Intermediação Financeira
+JHSFA1,JHSF PARTICIPAÇÕES S/A,JHSF PARTICIPACOES S/A,corporativo,outros_corporativo,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
+JHSFA3,JHSF PARTICIPAÇÕES S/A,JHSF PARTICIPACOES S/A,corporativo,outros_corporativo,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
 JSLGA5,JSL S/A,JSL S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 JSMLA5,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+KRSA12,KORA SAUDE PARTICIPACOES S.A.,KORA SAUDE PARTICIPACOES S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
 LCAMC2,COMPANHIA DE LOCAÇÃO DAS AMÉRICAS,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+LETS18,LETS RENT A CAR S/A,LETS RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+LMTP18,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTP26,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTPA0,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTPA1,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTPA2,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTPB1,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LMTPB2,LM TRANSPORTES INTERESTADUAIS SERVIÇOS E COMÉRCIOS S.A.,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,transporte,logistica,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+LOGGB1,LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES S/A,LOG COMMERCIAL PROPERTIES E PARTICIPACOES S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
 LORTB2,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+LVTC12,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+LVTC22,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+MATD12,HOSPITAL MATER DEI S.A.,HOSPITAL MATER DEI S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+MATD13,HOSPITAL MATER DEI S.A.,HOSPITAL MATER DEI S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+MDRO18,MADERO INDUSTRIA E COMERCIO S.A.,MADERO INDUSTRIA E COMERCIO S.A.,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
+MEAL14,INTERNATIONAL MEAL COMPANY ALIMENTAÇÃO S.A.,INTERNATIONAL MEAL COMPANY ALIMENTACAO S/A,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
+MGLUA0,MAGAZINE LUIZA S/A,MAGAZINE LUIZA S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+MILS18,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MILS19,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MILS29,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MILSA0,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MILSA1,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MILSB0,MILLS ESTR. E SERVIÇOS DE ENGENHARIA S/A,MILLS LOCACAO SERVICOS E LOGISTICA SA,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MNLT11,MNLT S.A.,MNLT S.A.,corporativo,outros_corporativo,CVM (CNPJ),Emp. Adm. Part. - Sem Setor Principal
+MNRVA1,MINERVA S/A,MINERVA S/A,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
 MOVI27,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 MOVI34,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 MOVIA2,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 MOVIA3,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+MRFGA1,MARFRIG GLOBAL FOODS S.A.,MARFRIG GLOBAL FOODS S.A.,corporativo,alimentos_bebidas,CVM (CNPJ),Alimentos
 MTRO12,COMPANHIA DO METROPOLITANO DE SAO PAULO,COMPANHIA DO METROPOLITANO DE SAO PAULO - METRO,transporte,mobilidade_urbana,CVM (CNPJ),Serviços Transporte e Logística
+MULPA0,MULTIPLAN EMPREENDIMENTOS IMOBILIÁRIOS S/A,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
+MULPB1,MULTIPLAN EMPREENDIMENTOS IMOBILIÁRIOS S/A,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
+MULTA4,MULTIPLAN EMPREENDIMENTOS IMOBILIÁRIOS S/A,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
+MULTA5,MULTIPLAN EMPREENDIMENTOS IMOBILIÁRIOS S/A,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
+MULTB5,MULTIPLAN EMPREENDIMENTOS IMOBILIÁRIOS S/A,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
 MVLV19,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 MVLVA1,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 MVLVA3,MOVIDA PARTICIPACOES S/A,MOVIDA PARTICIPACOES S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+NATUA3,NATURA COSMÉTICOS S/A,NATURA COSMETICOS S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+NIGP12,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD16,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD17,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD18,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD26,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD35,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSD36,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSDA0,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSDA2,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
 OMGE15,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 OMGE16,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 OMGE17,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 OMGE26,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 OMGE27,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+ONCO19,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+ONCO29,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
+OPCT16,OCEANPACT SERVICOS MARITIMOS S.A.,OCEANPACT SERVICOS MARITIMOS S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+OPCT17,OCEANPACT SERVICOS MARITIMOS S.A.,OCEANPACT SERVICOS MARITIMOS S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
 ORMA16,ORIZON MEIO AMBIENTE S.A.,ORIZON MEIO AMBIENTE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 ORMA17,ORIZON MEIO AMBIENTE S.A.,ORIZON MEIO AMBIENTE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 OVSAA3,UNIDAS LOCACOES E SERVICOS S.A.,UNIDAS LOCACOES E SERVICOS S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
@@ -207,16 +397,55 @@ OVSAA8,UNIDAS LOCACOES E SERVICOS S.A.,UNIDAS LOCACOES E SERVICOS S/A,transporte
 OVSAA9,UNIDAS LOCACOES E SERVICOS S.A.,UNIDAS LOCACOES E SERVICOS S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 OVSAB0,UNIDAS LOCACOES E SERVICOS S.A.,UNIDAS LOCACOES E SERVICOS S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 OVSAB1,UNIDAS LOCACOES E SERVICOS S.A.,UNIDAS LOCACOES E SERVICOS S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+OZNH11,OZN HEALTH SPE S.A,OZN HEALTH SPE S.A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+PALFA4,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFA5,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFA6,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFA8,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 PASS12,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,saneamento_gas,distribuicao_gas,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 PASS13,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,saneamento_gas,distribuicao_gas,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 PASS14,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,saneamento_gas,distribuicao_gas,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 PASS24,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,saneamento_gas,distribuicao_gas,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+PEJA21,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PFOR15,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PFOR16,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PFOR25,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PFOR26,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PGMN18,EMPREENDIMENTOS PAGUE MENOS S/A,EMPREENDIMENTOS PAGUE MENOS S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 PLSB2A,AUTOPISTA LITORAL SUL S/A.,AUTOPISTA LITORAL SUL S/A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 PRLG17,PROLAGOS S/A - C.S.PUBL. DE ÁGUA E ESGOTO,PROLAGOS S/A - CONCESSIONARIA DE SERVICOS PUBLICOS DE AGUA E ESGOTO,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 PSAN13,PARSAN S.A.,PARSAN S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 PSAN23,PARSAN S.A.,PARSAN S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+QUAL16,QUALICORP S/A,QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.,corporativo,financeiro,CVM (CNPJ),Seguradoras e Corretoras
+QUAL17,QUALICORP S/A,QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.,corporativo,financeiro,CVM (CNPJ),Seguradoras e Corretoras
+QUAL18,QUALICORP S/A,QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.,corporativo,financeiro,CVM (CNPJ),Seguradoras e Corretoras
 QUNT11,QUANTUM PARTICIPACOES S.A.,QUANTUM PARTICIPACOES S.A.,energia,energia_diversificada,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 QYAN11,MANTIQUEIRA HOLDING S.A.,MANTIQUEIRA HOLDING S.A.,energia,energia_diversificada,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+RADL15,RAIA DROGASIL S/A,RAIA DROGASIL S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RADL19,RAIA DROGASIL S/A,RAIA DROGASIL S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RADLA0,RAIA DROGASIL S/A,RAIA DROGASIL S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RADLA1,RAIA DROGASIL S/A,RAIA DROGASIL S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RAIZ14,RAIZEN S.A.,RAIZEN S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RDORA5,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORB3,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORB5,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORB9,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORC3,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORC4,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORC7,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORC9,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORD3,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORD4,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORD7,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORE4,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORF1,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORF8,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORG6,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORG9,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORH6,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RDORI6,REDE DOR SÃO LUIZ S/A,REDE DOR SAO LUIZ S/A,corporativo,saude,CVM (CNPJ),Serviços Médicos
+RECV12,PETRORECONCAVO S.A.,PETRORECONCAVO S.A.,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+RECV13,PETRORECONCAVO S.A.,PETRORECONCAVO S.A.,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
 RENTA5,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 RENTC4,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 RENTC8,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
@@ -231,6 +460,11 @@ RENTE9,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ)
 RENTF2,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 RENTH7,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 RENTQ8,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+RNDNA0,RANDON S.A. IMPLEMENTOS E PARTICIPACOES,RANDONCORP S.A.,corporativo,industria,CVM (nome),"Máquinas, Equipamentos, Veículos e Peças"
+RNDNA1,RANDON S.A. IMPLEMENTOS E PARTICIPACOES,RANDONCORP S.A.,corporativo,industria,CVM (nome),"Máquinas, Equipamentos, Veículos e Peças"
+RNDNA2,RANDON S.A. IMPLEMENTOS E PARTICIPACOES,RANDONCORP S.A.,corporativo,industria,CVM (nome),"Máquinas, Equipamentos, Veículos e Peças"
+RNDNB0,RANDON S.A. IMPLEMENTOS E PARTICIPACOES,RANDONCORP S.A.,corporativo,industria,CVM (nome),"Máquinas, Equipamentos, Veículos e Peças"
+RNDNB2,RANDON S.A. IMPLEMENTOS E PARTICIPACOES,RANDONCORP S.A.,corporativo,industria,CVM (nome),"Máquinas, Equipamentos, Veículos e Peças"
 RODB11,RODOVIAS DO BRASIL HOLDING S.A.,RODOVIAS DO BRASIL HOLDING S.A.,transporte,rodovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 RSAN15,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 RSAN25,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -239,6 +473,8 @@ SAELB6,ENERGISA PARAIBA - DISTR.DE ENERGIA S/A,ENERGISA PARAIBA - DISTRIBUIDORA 
 SAPRB1,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SAPRB4,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SAPRC1,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+SBFC13,SBF COMERCIO DE PRODUTOS ESPORTIVOS S.A.,SBF COMERCIO DE PRODUTOS ESPORTIVOS S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+SBIOA4,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SBSPA1,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPB1,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPC1,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -249,12 +485,26 @@ SBSPE7,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO
 SBSPL8,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPM8,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SIMH16,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+SLFT13,SELF IT ACADEMIAS HOLDING S.A.,SELF IT ACADEMIAS  HOLDING S.A.,corporativo,servicos_lazer,CVM (CNPJ),Emp. Adm. Part. - Brinquedos e Lazer
+SMFT18,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTA0,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTA1,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTA2,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTA3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTA5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTB3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTB5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTC3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
+SMFTC5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SNGO10,SANEAMENTO DE GOIÁS - SANEAGO,SANEAMENTO DE GOIAS S/A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SNGOA1,SANEAMENTO DE GOIÁS - SANEAGO,SANEAMENTO DE GOIAS S/A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SNGOA2,SANEAMENTO DE GOIÁS - SANEAGO,SANEAMENTO DE GOIAS S/A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SNGOA3,SANEAMENTO DE GOIÁS - SANEAGO,SANEAMENTO DE GOIAS S/A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 STBP15,SANTOS BRASIL PARTICIPAÇÕES S/A,SANTOS BRASIL PARTICIPACOES S/A,transporte,portos,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 STBP25,SANTOS BRASIL PARTICIPAÇÕES S/A,SANTOS BRASIL PARTICIPACOES S/A,transporte,portos,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
+SUMI39,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+SUZBA1,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
+SUZBB1,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
 SVEA14,SOLVI ESSENCIS AMBIENTAL S.A.,SOLVI ESSENCIS AMBIENTAL S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SVEA15,SOLVI ESSENCIS AMBIENTAL S.A.,SOLVI ESSENCIS AMBIENTAL S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SVEA16,SOLVI ESSENCIS AMBIENTAL S.A.,SOLVI ESSENCIS AMBIENTAL S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -265,6 +515,9 @@ TAEEA9,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TRANSMISSORA ALIANCA DE E
 TAEEC1,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TAEEE1,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TAEEE2,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+TBSP12,TIM BRASIL SERVICOS E PARTICIPACOES S.A,TIM BRASIL SERVICOS E PARTICIPACOES S.A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TBSP22,TIM BRASIL SERVICOS E PARTICIPACOES S.A,TIM BRASIL SERVICOS E PARTICIPACOES S.A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TEPA14,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 TFLE19,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 TFLEA3,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 TFLEA4,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
@@ -277,6 +530,12 @@ TFLEC0,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serv
 TFLED0,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 TFLEE1,LOCALIZA FLEET S.A.,LOCALIZA FLEET S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 TIET19,AES TIETE ENERGIA S/A,AUREN OPERACOES S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+TIGR12,TIGRE S.A PARTICIPACOES,TIGRE S.A PARTICIPACOES,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+TIGR21,TIGRE S.A PARTICIPACOES,TIGRE S.A PARTICIPACOES,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+TLPP27,TELEFÔNICA BRASIL S/A,TELEFONICA BRASIL S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TOTS16,TOTVS SA,TOTVS SA,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
+TOTS17,TOTVS SA,TOTVS SA,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
+TRES11,TRES TENTOS AGROINDUSTRIAL S.A,TRES TENTOS AGROINDUSTRIAL S.A,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 TRPLA3,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 TRPLA5,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 TRPLA6,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
@@ -284,6 +543,23 @@ TRPLB5,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (
 TSSG13,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,saneamento_gas,distribuicao_gas,nome do emissor,
 TSSG14,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,saneamento_gas,distribuicao_gas,nome do emissor,
 TUPW11,TUPI ENERGIAS RENOVAVEIS S.A,TUPI ENERGIAS RENOVAVEIS S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+TUPY15,TUPY S/A,TUPY S/A,corporativo,mineracao_siderurgia,CVM (nome),Metalurgia e Siderurgia
+TUPY25,TUPY S/A,TUPY S/A,corporativo,mineracao_siderurgia,CVM (nome),Metalurgia e Siderurgia
+TUPY35,TUPY S/A,TUPY S/A,corporativo,mineracao_siderurgia,CVM (nome),Metalurgia e Siderurgia
+UNIP18,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIP19,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIP29,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIP39,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIPA0,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIPB0,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UNIPC0,UNIPAR CARBOCLORO S/A,UNIPAR CARBOCLORO S/A,corporativo,quimica,CVM (CNPJ),Petroquímicos e Borracha
+UQFN14,UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+UQFN15,UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
+USIM28,USINAS SIDERURGICAS DE MINAS GERAIS S/A - USIMINAS,USINAS SIDERURGICAS DE MG S/A - USIMINAS,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+USIM29,USINAS SIDERURGICAS DE MINAS GERAIS S/A - USIMINAS,USINAS SIDERURGICAS DE MG S/A - USIMINAS,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+USIM39,USINAS SIDERURGICAS DE MINAS GERAIS S/A - USIMINAS,USINAS SIDERURGICAS DE MG S/A - USIMINAS,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+USIMA0,USINAS SIDERURGICAS DE MINAS GERAIS S/A - USIMINAS,USINAS SIDERURGICAS DE MG S/A - USIMINAS,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+USIMB0,USINAS SIDERURGICAS DE MINAS GERAIS S/A - USIMINAS,USINAS SIDERURGICAS DE MG S/A - USIMINAS,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
 VAMO13,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 VAMO14,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 VAMO17,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
@@ -291,6 +567,18 @@ VAMO23,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO 
 VAMO24,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 VAMOA0,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 VAMOA1,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+VBBR15,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VBBR16,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VBBR17,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VBBR18,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VBBR24,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VBBR26,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
+VEBMA6,VOTORANTIM CIMENTOS S/A,VOTORANTIM CIMENTOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+VEBMA8,VOTORANTIM CIMENTOS S/A,VOTORANTIM CIMENTOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+VEBMA9,VOTORANTIM CIMENTOS S/A,VOTORANTIM CIMENTOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+VEBMB0,VOTORANTIM CIMENTOS S/A,VOTORANTIM CIMENTOS S/A,corporativo,imobiliario_construcao,CVM (CNPJ),"Construção Civil, Mat. Constr. e Decoração"
+VERO14,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VIVA11,VIVARA PARTICIPACOES S.A.,VIVARA PARTICIPACOES S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 VIXL15,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 VIXL18,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 VIXL19,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
@@ -298,7 +586,27 @@ VIXL25,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serv
 VIXL26,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 VIXL35,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 VIXL45,VIX LOGÍSTICA S/A,VIX LOGISTICA S/A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+VLIDA0,VALID SOLUCOES S/A,VALID SOLUCOES S/A,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
+VLIDA1,VALID SOLUCOES S/A,VALID SOLUCOES S/A,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
+VLIDB1,VALID SOLUCOES S/A,VALID SOLUCOES S/A,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
+VLME11,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+VLME12,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
+VVEO15,CM HOSPITALAR S.A.,CM HOSPITALAR S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+VVEO16,CM HOSPITALAR S.A.,CM HOSPITALAR S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+WIZC12,WIZ SOLUCOES E CORRETAGEM DE SEGUROS S.A.,WIZ SOLUCOES E CORRETAGEM DE SEGUROS S.A.,corporativo,financeiro,CVM (CNPJ),Seguradoras e Corretoras
+YDUQ17,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+YDUQ18,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+YDUQA0,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+YDUQA1,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+YDUQA2,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+YDUQA3,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
+BHIAA0,GRUPO CASAS BAHIA S.A.,GRUPO CASAS BAHIA S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+BHIAC0,GRUPO CASAS BAHIA S.A.,GRUPO CASAS BAHIA S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+KLBNA2,KLABIN S/A,KLABIN S/A,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
+RADL14,RAIA DROGASIL S/A,RAIA DROGASIL S/A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+UNDAC3,UNIDAS S/A,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 ACRC21,ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A.,ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A.,energia,comercializacao,nome do emissor,
+AEAB11,AES CAJUINA AB1 HOLDINGS S.A.,CAJUINA AB1 HOLDINGS S.A,corporativo,outros_corporativo,nome do emissor,
 AESLA5,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 AESLA7,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 AESLA9,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -307,13 +615,19 @@ AESLB7,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A
 AESLC2,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 AESLD2,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 AESOA1,AES TIETE ENERGIA S/A,AUREN OPERACOES S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+AGEO15,AGEO TERMINAIS E ARMAZENS GERAIS S/A,AGEO TERMINAIS E ARMAZENS GERAIS S/A,corporativo,outros_corporativo,nome do emissor,
 AGIZ11,AGUAS DA IMPERATRIZ S.A.,AGUAS DA IMPERATRIZ S.A.,saneamento_gas,saneamento,nome do emissor,
 AHGD13,ATHON GERACAO DISTRIBUIDA S/A,ATHON GERACAO DISTRIBUIDA S/A,energia,geracao,nome do emissor,
+ALGAB1,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+ALGAC2,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 ALGE16,ALIANCA GERACAO DE ENERGIA S.A,ALIANCA GERACAO DE ENERGIA S/A,energia,geracao,nome do emissor,
+ALGTA4,ALGAR TELECOM S/A,ALGAR TELECOM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 ALIG12,ALIANCA GERACAO DE ENERGIA S.A,ALIANCA GERACAO DE ENERGIA S/A,energia,geracao,nome do emissor,
 ALIG13,ALIANCA GERACAO DE ENERGIA S.A,ALIANCA GERACAO DE ENERGIA S/A,energia,geracao,nome do emissor,
 ALIG15,ALIANCA GERACAO DE ENERGIA S.A,ALIANCA GERACAO DE ENERGIA S/A,energia,geracao,nome do emissor,
 ALUP18,ALUPAR INVESTIMENTO S/A,ALUPAR INVESTIMENTO S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+ANET11,AMERICA NET S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+ANET12,AMERICA NET S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 ANHBB6,CONCESSIONÁRIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 APFD19,AUTOPISTA FERNAO DIAS S/A,AUTOPISTA FERNAO DIAS S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 APPSA2,AUTOPISTA PLANALTO SUL S/A,AUTOPISTA PLANALTO SUL S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
@@ -322,6 +636,8 @@ ARTR19,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transpo
 ARTRA7,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ARTRA8,ARTERIS S/A,ARTERIS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ASAB11,ASA BRANCA HOLDING S.A.,ASA BRANCA HOLDING S.A.,energia,energia_diversificada,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+ASCP13,CONCESS. ROD. A. S. E C. PINTO S/A - ECOPISTAS,CONCESSIONARIA DAS RODOVIAS AYRTON SENNA E CARVALHO PINTO S/A - ECOPISTAS,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+ASCP23,CONCESS. ROD. A. S. E C. PINTO S/A - ECOPISTAS,CONCESSIONARIA DAS RODOVIAS AYRTON SENNA E CARVALHO PINTO S/A - ECOPISTAS,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 ASER12,AGUAS DO SERTAO S.A.,AGUAS DO SERTAO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 ASSR21,ASSURUA 5 ENERGIA S.A,ASSURUA 4 E 5 HOLDING ENERGIA S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ATHT11,ATHON GERACAO DISTRIBUIDA III S.A.,ATHON GERACAO DISTRIBUIDA III S.A.,energia,geracao,nome do emissor,
@@ -335,11 +651,21 @@ AXIA28,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,i
 AXIA38,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 AXIAA1,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 BARU11,BARUERI ENERGIA RENOVAVEL S.A.,BARUERI ENERGIA RENOVAVEL S.A.,energia,geracao,nome do emissor,
+BCPSA5,CLARO S/A,CLARO S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BCPSA7,CLARO S/A,CLARO S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BHSA11,BARREIRAS HOLDING S.A.,BARREIRAS HOLDING S.A.,corporativo,outros_corporativo,nome do emissor,
+BION17,BIOENERGETICA VALE DO PARACATU S/A.,BIOENERGETICA VALE DO PARACATU S/A.,corporativo,agro_acucar_etanol,nome do emissor,
 BLMN12,BELO MONTE TRANSMISSORA DE ENERGIA SPE S.A.,BELO MONTE TRANSMISSORA DE ENERGIA SPE S.A.,energia,transmissao,nome do emissor,
 BRKP28,BRK AMBIENTAL PARTICIPACOES S/A,BRK AMBIENTAL PARTICIPACOES S/A,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+BRST11,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BRST15,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BTCL12,BRAZIL TOWER CESSAO DE INFRA-ESTRUTURAS S.A.,BRAZIL TOWER CESSAO DE INFRA-ESTRUTURAS S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BTEL23,V.TAL - REDE NEUTRA DE TELECOMUNICACOES S.A.,V.TAL - REDE NEUTRA DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+BTEL33,V.TAL - REDE NEUTRA DE TELECOMUNICACOES S.A.,V.TAL - REDE NEUTRA DE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 CAEC12,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CAJS11,CONCESSIONARIA AGUAS DE JUTURNAIBA S/A,CONCESSIONARIA AGUAS DE JUTURNAIBA S/A,saneamento_gas,saneamento,nome do emissor,
 CAJS12,CONCESSIONARIA AGUAS DE JUTURNAIBA S/A,CONCESSIONARIA AGUAS DE JUTURNAIBA S/A,saneamento_gas,saneamento,nome do emissor,
+CART13,CONCESSIONÁRIA AUTO RAPOSO TAVARES S/A,CONCESSIONARIA AUTO RAPOSO TAVARES S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 CASN23,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CASN24,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CASN34,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,COMPANHIA CATARINENSE DE AGUAS E SANEAMENTO - CASAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -373,9 +699,16 @@ CEED15,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA
 CEED17,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEED19,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEED21,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEA7,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEA8,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEB3,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEB7,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEC1,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CEPEC2,COMPANHIA ENERGÉTICA DE PERNAMBUCO - CELPE,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CEROA4,CENTRAIS ELETRICAS DE RONDONIA S/A CERON,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
 CEROB4,CENTRAIS ELETRICAS DE RONDONIA S/A CERON,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
 CERR18,CERRADINHO BIOENERGIA S/A,CERRADINHO BIOENERGIA S.A.,energia,geracao,nome do emissor,"Agricultura (Açúcar, Álcool e Cana)"
+CERT11,CONCESSIONARIA ECOVIAS RAPOSO-CASTELO S.A,CONCESSIONARIA ECOVIAS RAPOSO-CASTELO S.A,corporativo,outros_corporativo,nome do emissor,
 CESE32,CELSE - CENTRAIS ELETRICAS DE SERGIPE S.A.,ENEVA S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 CESPA2,CESP-COMPANHIA ENERGETICA DE SAO PAULO,CESP - COMPANHIA ENERGETICA DE SAO PAULO,energia,geracao,CVM (CNPJ),Energia Elétrica
 CESPA3,CESP-COMPANHIA ENERGETICA DE SAO PAULO,CESP - COMPANHIA ENERGETICA DE SAO PAULO,energia,geracao,CVM (CNPJ),Energia Elétrica
@@ -397,6 +730,10 @@ CGOSA2,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,EQUATORIAL GOIAS DISTRIBUI
 CGOSB0,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CHSF13,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CJEN13,TESC-TERMINAL SANTA CATARINA S/A,TESC - TERMINAL SANTA CATARINA S/A,transporte,portos,CVM (CNPJ),Serviços Transporte e Logística
+CLAG13,COLOMBO AGROINDUSTRIA SA,COLOMBO AGROINDUSTRIA SA,corporativo,agro_acucar_etanol,nome do emissor,
+CLAG15,COLOMBO AGROINDUSTRIA SA,COLOMBO AGROINDUSTRIA SA,corporativo,agro_acucar_etanol,nome do emissor,
+CLCD26,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
+CLCD27,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLIS13,CLI SUL S/A,CLI SUL S/A,transporte,portos,CVM (CNPJ),Serviços Transporte e Logística
 CLTM14,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,transporte,mobilidade_urbana,nome do emissor,
 CMGD28,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -408,11 +745,27 @@ CMGDB4,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM 
 CMGDB6,CEMIG DISTRIBUIÇÃO S/A,CEMIG DISTRIBUICAO S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CMGTA1,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CMGTB1,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
+CMIN11,CSN MINERACAO S.A.,CSN MINERACAO S.A.,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+CMIN12,CSN MINERACAO S.A.,CSN MINERACAO S.A.,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+CMIN21,CSN MINERACAO S.A.,CSN MINERACAO S.A.,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+CMIN22,CSN MINERACAO S.A.,CSN MINERACAO S.A.,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
 CMTR29,CEMIG GERAÇÃO E TRANSMISSÃO S/A,CEMIG GERACAO E TRANSMISSAO S/A,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CNRD12,CONCESSIONARIA DA RODOVIA MS 306 S.A.,CONCESSIONARIA DA RODOVIA MS 306 S.A.,transporte,rodovias,nome do emissor,
+COCE18,COMPANHIA ENERGÉTICA DO CEARÁ - COELCE,COMPANHIA ENERGETICA DO CEARA-COELCE,energia,energia_diversificada,CVM (CNPJ),Energia Elétrica
+COCEB2,COMPANHIA ENERGÉTICA DO CEARÁ - COELCE,COMPANHIA ENERGETICA DO CEARA-COELCE,energia,energia_diversificada,CVM (CNPJ),Energia Elétrica
+COMR14,COMERC PARTICIPACOES S.A.,COMERC ENERGIA S.A.,energia,energia_diversificada,CVM (CNPJ),Energia Elétrica
+COMR15,COMERC PARTICIPACOES S.A.,COMERC ENERGIA S.A.,energia,energia_diversificada,CVM (CNPJ),Energia Elétrica
 COMT11,CONCESSIONARIA DE RODOVIA SUL - MATOGROSSENSE S.A,CONCESSIONARIA DE RODOVIA SUL - MATOGROSSENSE S.A,transporte,rodovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 CONF11,CONFLUENCIA ENERGIA S/A,CONFLUENCIA ENERGIA S/A,energia,geracao,nome do emissor,
-CPFGA2,CPFL TRANSMISSAO S.A,,energia,transmissao,CVM (nome),Energia Elétrica
+CONX12,TRIPLE PLAY BRASIL PARTICIPACOES S.A.,ALARES INTERNET PARTICIPACOES S/A,corporativo,telecom,CVM (CNPJ),Emp. Adm. Part. - Telecomunicações
+CPFGA2,CPFL TRANSMISSAO S.A,CPFL COMERCIALIZACAO BRASIL S/A,corporativo,outros_corporativo,nome do emissor,
+CPFPA2,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPA5,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPA7,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPA9,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPB0,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPB1,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CPFPB7,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPGS16,COMPANHIA PARANAENSE DE GAS COMPAGAS,COMPANHIA PARANAENSE DE GAS COMPAGAS,saneamento_gas,distribuicao_gas,nome do emissor,
 CPGT27,COPEL GERAÇÃO E TRANSMISSÃO S/A,COPEL GERACAO E TRANSMISSAO S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CPGT28,COPEL GERAÇÃO E TRANSMISSÃO S/A,COPEL GERACAO E TRANSMISSAO S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
@@ -435,13 +788,27 @@ CRNP13,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,CONCESSIONARIA DE RODOV
 CRNP23,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 CRTA12,CONCESSIONARIA ROTA DO OESTE S.A.,CONCESSIONARIA ROTA DO OESTE S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 CRTR12,CONCESSIONARIA RODOVIAS DO TRIANGULO SPE S.A.,EPR TRIANGULO S.A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+CSAN33,COSAN S.A.,COSAN S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 CSMGA6,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGB8,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGB9,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGC0,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGE1,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 CSMGE2,CIA DE SANEAMENTO DE M.GERAIS COPASA MG,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+CSNAA4,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAA5,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAA6,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAB4,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAB5,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAB6,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
+CSNAC4,COMPANHIA SIDERÚRGICA NACIONAL,COMPANHIA SIDERURGICA NACIONAL,corporativo,mineracao_siderurgia,CVM (CNPJ),Metalurgia e Siderurgia
 CSNP12,COMPANHIA ENERGÉTICA SINOP S.A.,COMPANHIA ENERGETICA SINOP S.A,energia,geracao,CVM (CNPJ),Energia Elétrica
+CSRN29,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CSRNA1,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CSRNA4,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CSRNB2,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CSRNB3,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+CSRNC0,COMPANHIA ENERGÉTICA DO R. G. N. - COSERN,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CTEE18,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 CTEE1B,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 CTEE29,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
@@ -449,11 +816,14 @@ CTEE2B,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (
 CTGE11,COMPANHIA DE GERACAO E TRANSMISSAO DE ENERGIA ELETRICA DO SUL DO BRASIL ELETROSUL,AXIA ENERGIA SUL S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CTGE13,COMPANHIA DE GERACAO E TRANSMISSAO DE ENERGIA ELETRICA DO SUL DO BRASIL ELETROSUL,AXIA ENERGIA SUL S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 CTGE15,COMPANHIA DE GERACAO E TRANSMISSAO DE ENERGIA ELETRICA DO SUL DO BRASIL ELETROSUL,AXIA ENERGIA SUL S.A.,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
-CTNSA3,ENERGISA TOCANTINS - DISTRIBUIDORA DE ENERGIA S.A,ENERGISA TOCANTINS DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
+CTNSA3,ENERGISA TOCANTINS - DISTRIBUIDORA DE ENERGIA S.A,,energia,distribuicao,nome do emissor,
 CTNSA5,ENERGISA TOCANTINS - DISTRIBUIDORA DE ENERGIA S.A,ENERGISA TOCANTINS DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,nome do emissor,
 CTRR11,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,energia,transmissao,nome do emissor,
 CUTI11,CUTIA EMPREENDIMENTOS EÓLICOS S.A.,CUTIA EMPREENDIMENTOS EOLICOS S.A.,energia,geracao,nome do emissor,
 CYAR11,AMBIENTAL CEARA 1 SPE S.A.,AMBIENTAL CEARA 1 SPE S.A.,saneamento_gas,saneamento,nome do emissor,
+DESK17,DESKTOP S/A,DESKTOP S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+DESK18,DESKTOP S/A,DESKTOP S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
+DESK19,DESKTOP S/A,DESKTOP S/A,corporativo,telecom,CVM (CNPJ),Telecomunicações
 EBAS13,EMPRESA BAIANA DE AGUAS E SANEAMENTO SA,EMPRESA BAIANA DE AGUAS E SANEAMENTO SA,saneamento_gas,saneamento,nome do emissor,
 EBENA8,EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ECER12,CONCESSIONARIA ECOVIAS DO CERRADO S.A.,CONCESSIONARIA ECOVIAS DO CERRADO S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
@@ -484,12 +854,16 @@ EGIEB1,ENGIE BRASIL ENERGIA S.A.,ENGIE BRASIL ENERGIA SA,energia,geracao,CVM (CN
 EGIEB2,ENGIE BRASIL ENERGIA S.A.,ENGIE BRASIL ENERGIA SA,energia,geracao,CVM (CNPJ),Energia Elétrica
 EGIEB4,ENGIE BRASIL ENERGIA S.A.,ENGIE BRASIL ENERGIA SA,energia,geracao,CVM (CNPJ),Energia Elétrica
 EGIEB5,ENGIE BRASIL ENERGIA S.A.,ENGIE BRASIL ENERGIA SA,energia,geracao,CVM (CNPJ),Energia Elétrica
+EGVG11,ENEL GREEN POWER VOLTA GRANDE S.A.,ENEL GREEN POWER VOLTA GRANDE S.A,corporativo,outros_corporativo,nome do emissor,
+EGVG21,ENEL GREEN POWER VOLTA GRANDE S.A.,ENEL GREEN POWER VOLTA GRANDE S.A,corporativo,outros_corporativo,nome do emissor,
 EKTRA6,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EKTRA8,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EKTRB3,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EKTRB6,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EKTRC0,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 EKTRC1,ELEKTRO REDES S.A.,ELEKTRO REDES S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+EKTT11,EKTT 9 SERV DE TRANS DE E E SPE S.A.,EKTT 9 SERV DE TRANS DE E E SPE S.A.,corporativo,outros_corporativo,nome do emissor,
+ELDC15,ELDORADO BRASIL CELULOSE S.A.,ELDORADO BRASIL CELULOSE S.A.,corporativo,papel_celulose,CVM (nome),Papel e Celulose
 ELET14,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELET16,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELET23,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
@@ -501,6 +875,12 @@ ELTE12,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,EMPRESA LITORANEA
 ELTN15,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 ELTN27,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 ELTN37,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
+ENAT11,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ENAT12,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ENAT13,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ENAT14,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ENAT24,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ENAT33,ENAUTA PARTICIPACOES S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
 ENERA1,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ENERB4,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ENERB7,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -583,10 +963,16 @@ ETEN12,ENERGISA TRANSMISSAO DE ENERGIA S.A,ENERGISA TRANSMISSAO DE ENERGIA S.A.,
 ETEN21,ENERGISA TRANSMISSAO DE ENERGIA S.A,ENERGISA TRANSMISSAO DE ENERGIA S.A.,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ETEN22,ENERGISA TRANSMISSAO DE ENERGIA S.A,ENERGISA TRANSMISSAO DE ENERGIA S.A.,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ETSP12,EQUATORIAL TRANSMISSORA 7 SPE S.A.,BELEM TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
+EUBE11,ENGIE SOLUCOES CIDADES INTELIGENTES E INFRAESTRUTURA DE UBERLANDIA S.A,ENGIE SOLUCOES CIDADES INTELIGENTES E INFRAESTRUTURA DE UBERLANDIA S.A,corporativo,outros_corporativo,nome do emissor,
 EXTZ11,EXTREMOZ TRANSMISSORA DO NORDESTE ETN S.A.,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
+FBRI13,FIBRASIL INFRAESTRUTURA FIBRA OTICA S.A.,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,corporativo,telecom,nome do emissor,
+FEPS11,FARO ENERGY PROJ. SOL. HOL. IV S.A,FARO ENERGY PROJ. SOL. HOL. IV S.A,corporativo,outros_corporativo,nome do emissor,
 FGEN13,FERREIRA GOMES ENERGIA S/A,FERREIRA GOMES ENERGIA S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 FLCLA9,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 FLCLB9,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+FRAG14,FERRARI AGROINDUSTRIA S/A,FERRARI AGROINDUSTRIA S/A,corporativo,agro_acucar_etanol,nome do emissor,
+FRAG16,FERRARI AGROINDUSTRIA S/A,FERRARI AGROINDUSTRIA S/A,corporativo,agro_acucar_etanol,nome do emissor,
+FSII14,FS I INDUSTRIA DE ETANOL S.A,FS I INDUSTRIA DE ETANOL S.A,corporativo,agro_acucar_etanol,nome do emissor,
 FURN21,FURNAS CENTRAIS ELETRICAS S/A,FURNAS CENTRAIS ELETRICAS S/A,energia,integrada_gt,nome do emissor,
 GASC15,RUMO MALHA PAULISTA S/A,RUMO MALHA PAULISTA S/A,transporte,ferrovias,CVM (CNPJ),Serviços Transporte e Logística
 GASC16,RUMO MALHA PAULISTA S/A,RUMO MALHA PAULISTA S/A,transporte,ferrovias,CVM (CNPJ),Serviços Transporte e Logística
@@ -606,10 +992,13 @@ GSTS24,AGUAS DE TERESINA SANEAMENTO SPE S.A.,AGUAS DE TERESINA SANEAMENTO  SPE  
 HARG11,HOLDING DO ARAGUAIA S.A.,HOLDING DO ARAGUAIA S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 HBSA11,HIDROVIAS DO BRASIL S.A.,HIDROVIAS DO BRASIL S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 HBSA21,HIDROVIAS DO BRASIL S.A.,HIDROVIAS DO BRASIL S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+HGLB23,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,corporativo,telecom,nome do emissor,
+HSBH11,HELEXIA SBH4 S.A.,HELEXIA SBH4 S.A.,corporativo,outros_corporativo,nome do emissor,
 HVSP11,HELIO VALGAS SOLAR PARTICIPACOES S.A.,HELIO VALGAS SOLAR PARTICIPACOES S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 HZTC14,ORIZON MEIO AMBIENTE S.A.,ORIZON MEIO AMBIENTE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 IBPB11,SERRA DE IBIAPABA TRANSMISSORA DE ENERGIA S.A.,SERRA DE IBIAPABA TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,nome do emissor,
 IGSN15,IGUA SANEAMENTO S.A,IGUA SANEAMENTO S.A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+IPIPA5,IPIRANGA PRODUTOS DE PETRÓLEO S/A,IPIRANGA  PRODUTOS DE PETROLEO S.A.,corporativo,oleo_gas,nome do emissor,
 IRJS14,IGUA RIO DE JANEIRO S.A.,IGUA RIO DE JANEIRO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 IRJS15,IGUA RIO DE JANEIRO S.A.,IGUA RIO DE JANEIRO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 ISAEA8,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
@@ -622,9 +1011,17 @@ ISAEC2,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (
 ITPE13,COMPANHIA AGUAS DE ITAPEMA,COMPANHIA AGUAS DE ITAPEMA,saneamento_gas,saneamento,nome do emissor,
 ITPO14,ITAPOA TERMINAIS PORTUÁRIOS S/A,ITAPOA TERMINAIS PORTUARIOS S.A.,transporte,portos,nome do emissor,
 ITPO15,ITAPOA TERMINAIS PORTUÁRIOS S/A,ITAPOA TERMINAIS PORTUARIOS S.A.,transporte,portos,nome do emissor,
+IVIAA0,CONC. RODOV. INTERI. PAULISTA S/A,CONCESSIONARIA DE RODOVIAS DO INTERIOR PAULISTA S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+JALL11,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+JALL13,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+JALL14,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+JALL15,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+JALL21,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+JALL24,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JSMLB5,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 JTEE11,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA  S/A,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,energia,transmissao,nome do emissor,
 JTEE12,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA  S/A,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,energia,transmissao,nome do emissor,
+KLBNA5,KLABIN S/A,KLABIN S/A,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
 LCAMD1,COMPANHIA DE LOCAÇÃO DAS AMÉRICAS,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 LCAMD3,COMPANHIA DE LOCAÇÃO DAS AMÉRICAS,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 LGEN11,LAGOA 1 ENERGIA RENOVAVEL S.A.,LAGOA 1 ENERGIA RENOVAVEL S.A.,energia,geracao,nome do emissor,
@@ -659,6 +1056,8 @@ NEOE26,NEOENERGIA S/A,NEOENERGIA S/A,energia,energia_diversificada,CVM (CNPJ),Em
 NMCH11,NEOENERGIA MORRO DO CHAPEU TRANSMISSAO E ENERGIA S.A.,NEOENERGIA MORRO DO CHAPEU TRANSMISSAO E ENERGIA S.A.,energia,transmissao,nome do emissor,
 NNAE12,SPE NOVO NORTE AEROPORTOS S.A.,SPE NOVO NORTE AEROPORTOS S.A.,transporte,aeroportos,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 NTEN11,NORTE ENERGIA S/A,NORTE ENERGIA S/A,energia,geracao,CVM (CNPJ),Energia Elétrica
+NTSD19,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+NTSDA1,NOVA TRANSPORTE DO SUDESTE S.A. - NTS,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
 ODYA11,ODOYA TRANSMISSORA DE ENERGIA S.A..,ARGO V TRANSMISSAO DE ENERGIA S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 OMGE12,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 OMGE22,OMEGA GERAÇÃO S/A,SERENA GERACAO S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
@@ -667,18 +1066,49 @@ OMNG12,OMEGA ENERGIA E IMPLANTACAO 2 S.A.,DELTA 3 ENERGIA S.A,energia,energia_di
 ONZE21,BLOCO DE ONZE AEROPORTOS DO BRASIL S.A,BLOCO DE ONZE AEROPORTOS DO BRASIL S.A,transporte,aeroportos,nome do emissor,
 ORIG11,ORIGEM ENERGIA S.A,ORIGEM ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
 ORIG12,ORIGEM ENERGIA S.A,ORIGEM ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
+ORVR16,HAZTEC INVESTIMENTOS E PARTICIPAÇÕES S/A,ORIZON VALORIZACAO DE RESIDUOS S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+PALF38,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFA3,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFA7,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFB3,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
+PALFB6,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 PASN12,PARANAGUA SANEAMENTO S/A,PARANAGUA SANEAMENTO S/A,saneamento_gas,saneamento,nome do emissor,
 PAXA12,PAX INVESTIMENTOS EM AEROPORTOS S.A,PAX INVESTIMENTOS EM AEROPORTOS S.A,transporte,aeroportos,nome do emissor,
+PEJA11,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PEJA22,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PEJA23,PRIO FORTE S.A,PRIO FORTE S.A.,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR17,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR18,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR26,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR27,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR28,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
+PETR38,PETRÓLEO BRASILEIRO S/A - PETROBRAS,PETROLEO BRASILEIRO S/A - PETROBRAS,corporativo,oleo_gas,CVM (CNPJ),Petróleo e Gás
 PLSB1A,AUTOPISTA LITORAL SUL S/A.,AUTOPISTA LITORAL SUL S/A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+POTE11,POTENGI HOLDINGS S.A.,POTENGI HOLDINGS S.A.,corporativo,outros_corporativo,nome do emissor,
+POTE12,POTENGI HOLDINGS S.A.,POTENGI HOLDINGS S.A.,corporativo,outros_corporativo,nome do emissor,
 PRAS11,PIRAPORA SOLAR HOLDING S.A.,PIRAPORA SOLAR HOLDING S.A.,energia,geracao,nome do emissor,
 PRPO12,PIRAPORA II SOLAR HOLDING S.A.,PIRAPORA II SOLAR HOLDING S.A.,energia,geracao,nome do emissor,
 PRSS11,PAX INVESTIMENTOS EM AEROPORTOS S.A,PRS AEROPORTOS S.A.,transporte,aeroportos,nome do emissor,
 PRTE12,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,nome do emissor,
 PTAZ11,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,nome do emissor,
+QMCT14,QMC TELECOM DO BRASIL CESSAO DE INFRAESTRUTURA S.A,QMC TELECOM DO BRASIL CESSAO DE INFRAESTRUTURA S/A,corporativo,telecom,nome do emissor,
+QUAT13,ACUCAREIRA QUATA S/A,ACUCAREIRA QUATA S/A,corporativo,agro_acucar_etanol,nome do emissor,
+RAIZ13,RAIZEN S.A.,RAIZEN S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
+RAIZ23,RAIZEN S.A.,RAIZEN S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 RALM11,RIALMA TRANSMISSORA DE ENERGIA V S/A,RIALMA TRANSMISSORA DE ENERGIA V S/A,energia,transmissao,nome do emissor,
 RALM21,RIALMA TRANSMISSORA DE ENERGIA V S/A,RIALMA TRANSMISSORA DE ENERGIA V S/A,energia,transmissao,nome do emissor,
+RATL11,CONCESSIONARIA ROTA DO ATLANTICO S.A,CONCESSIONARIA ROTA DO ATLANTICO S.A.,corporativo,outros_corporativo,nome do emissor,
+RDOE18,CONCESSIONÁRIA DO RODOANEL OESTE S/A,CONCESSIONARIA DO RODOANEL OESTE S/A,corporativo,outros_corporativo,nome do emissor,
 RDSM12,CONCESSIONARIA RODOVIAS DO SUL DE MINAS SPE S.A.,CONCESSIONARIA RODOVIAS DO SUL DE MINAS SPE S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+RDVE11,RDVE SUBHOLDING S.A.,RDVE SUBHOLDING S.A.,corporativo,outros_corporativo,nome do emissor,
+RECV11,PETRORECONCAVO S.A.,PETRORECONCAVO S.A.,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+RECV14,PETRORECONCAVO S.A.,PETRORECONCAVO S.A.,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
+RECV24,PETRORECONCAVO S.A.,PETRORECONCAVO S.A.,corporativo,oleo_gas,CVM (CNPJ),Emp. Adm. Part. - Petróleo e Gás
 RENTD1,LOCALIZA RENT A CAR,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+RESA14,RAIZEN ENERGIA S/A,RAIZEN ENERGIA S/A,corporativo,agro_acucar_etanol,nome do emissor,"Agricultura (Açúcar, Álcool e Cana)"
+RESA15,RAIZEN ENERGIA S/A,RAIZEN ENERGIA S/A,corporativo,agro_acucar_etanol,nome do emissor,"Agricultura (Açúcar, Álcool e Cana)"
+RESA17,RAIZEN ENERGIA S/A,RAIZEN ENERGIA S/A,corporativo,agro_acucar_etanol,nome do emissor,"Agricultura (Açúcar, Álcool e Cana)"
+RESA27,RAIZEN ENERGIA S/A,RAIZEN ENERGIA S/A,corporativo,agro_acucar_etanol,nome do emissor,"Agricultura (Açúcar, Álcool e Cana)"
 RIGEA3,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 RIPR22,RIO PARANA ENERGIA S/A,RIO PARANA ENERGIA S/A,energia,geracao,CVM (CNPJ),Energia Elétrica
 RIS412,AGUAS DO RIO 4 SPE S.A,AGUAS DO RIO 4 SPE S.A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -691,6 +1121,9 @@ RISP22,SPE SANEAMENTO RIO 1 S.A,AGUAS DO RIO 1 SPE S.A,saneamento_gas,saneamento
 RISP24,SPE SANEAMENTO RIO 1 S.A,AGUAS DO RIO 1 SPE S.A,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 RLMS13,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 RMSA12,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+ROTY13,CONCESSIONARIA ROTA SOROCABANA SA,CONCESSIONARIA ROTA SOROCABANA SA,corporativo,outros_corporativo,nome do emissor,
+RPTA14,CONCESSIONÁRIA AUTO RAPOSO TAVARES S/A,CONCESSIONARIA AUTO RAPOSO TAVARES S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+RRRP13,3R PETROLEUM OLEO E GAS S.A.,BRAVA ENERGIA S.A.,energia,energia_diversificada,nome do emissor,Petróleo e Gás
 RSAN16,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 RSAN26,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 RSAN34,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -715,6 +1148,7 @@ SAPR10,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO P
 SAPRA2,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SAPRA3,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SAPRB3,COMPANHIA DE SANEAMENTO DO PARANA - SANEPAR,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+SAUC16,S/A USINA CORURIPE ACUCAR E ALCOOL,S/A USINA CORURIPE ACUCAR E ALCOOL,corporativo,agro_acucar_etanol,nome do emissor,
 SAVI13,SANTA VITÓRIA DO PALMAR ENERGIAS RENOVÁVEIS S.A.,SANTA VITORIA DO PALMAR ENERGIAS RENOVAVEIS S.A.,energia,geracao,nome do emissor,
 SBSPB6,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPC6,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
@@ -726,12 +1160,26 @@ SBSPF9,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO
 SBSPI8,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPJ8,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
 SBSPK8,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,saneamento_gas,saneamento,CVM (CNPJ),"Saneamento, Serv. Água e Gás"
+SDOM12,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,corporativo,agro_acucar_etanol,nome do emissor,
+SERI11,SERRA DO SERIDO F2 HOLDING S.A.,SERRA DO SERIDO F2 HOLDING S.A.,corporativo,outros_corporativo,nome do emissor,
+SMTO14,SAO MARTINHO S/A,SAO MARTINHO S/A,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+SMTO15,SAO MARTINHO S/A,SAO MARTINHO S/A,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
+SMTO24,SAO MARTINHO S/A,SAO MARTINHO S/A,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 SPRZ11,ESPERANZA TRANSMISSORA DE ENERGIA S.A,ARGO VI TRANSMISSAO DE ENERGIA S.A,energia,transmissao,CVM (CNPJ),Energia Elétrica
+SRBS11,SRBT SUBHOLDING S.A,SRBT SUBHOLDING S.A,corporativo,outros_corporativo,nome do emissor,
 SRNA11,SERENA ENERGIA S.A,SERENA ENERGIA S.A,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 SRTI11,SERTÃO I SOLAR ENERGIA SPE S.A.,SERTAO I SOLAR ENERGIA SPE S.A.,energia,geracao,nome do emissor,
 STBP35,SANTOS BRASIL PARTICIPAÇÕES S/A,SANTOS BRASIL PARTICIPACOES S/A,transporte,portos,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 STBP45,SANTOS BRASIL PARTICIPAÇÕES S/A,SANTOS BRASIL PARTICIPACOES S/A,transporte,portos,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 STRZ11,VENTOS DE SANTA TEREZA 07 ENERGIAS RENOVAVEIS S.A.,VENTOS DE SANTA TEREZA 07 ENERGIAS RENOVAVEIS S.A.,energia,geracao,nome do emissor,
+SUMI17,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+SUMI18,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+SUMI19,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+SUMI37,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+SUZB19,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
+SUZB29,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
+SUZBA0,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
+SUZBC1,SUZANO S.A.,SUZANO S.A.,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose
 TAEE17,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TAEE18,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TAEE26,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
@@ -747,9 +1195,15 @@ TAEEC2,TRANS. ALIANÇA DE ENERGIA ELÉTRICA S/A,TRANSMISSORA ALIANCA DE ENERGIA 
 TAEEC4,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TAEED2,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TRANSMISSORA ALIANCA DE ENERGIA ELETRICA S/A,energia,transmissao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TBEG11,TIBAGI ENERGIA SPE S/A,TIBAGI ENERGIA SPE S/A,energia,geracao,nome do emissor,
+TCII11,AES TUCANO HOLDING II S.A,TUCANO HOLDING II S.A,corporativo,outros_corporativo,nome do emissor,
+TEPA11,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TEPA12,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TEPA13,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,BRASIL TECNOLOGIA E PARTICIPACAO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 TIET18,AES TIETE ENERGIA S/A,AUREN OPERACOES S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TIET29,AES TIETE ENERGIA S/A,AUREN OPERACOES S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 TIET39,AES TIETE ENERGIA S/A,AUREN OPERACOES S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+TIMS12,TIM S.A.,TIM S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+TNHL11,TUCANO HOLDING III S.A,TUCANO HOLDING III S.A,corporativo,outros_corporativo,nome do emissor,
 TPEN11,TPE - TRANSMISSORA PARAÍSO DE ENERGIA S.A.,TPE  - TRANSMISSORA PARAISO DE ENERGIA S.A.,energia,transmissao,nome do emissor,
 TPNO12,MATRINCHA TRANSMISSORA DE ENERGIA  TP NORTE SA,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,energia,transmissao,nome do emissor,
 TPNO13,MATRINCHA TRANSMISSORA DE ENERGIA  TP NORTE SA,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,energia,transmissao,nome do emissor,
@@ -760,18 +1214,41 @@ TRPLA4,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (
 TRPLA7,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 TRPLB4,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 TRPLB7,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
+TRRG12,TRSP - TERMINAL DE REGASEIFICACAO DE GNL DE SAO PAULO S.A.,TRSP - TERMINAL DE REGASEIFICACAO DE GNL DE SAO PAULO S.A.,corporativo,outros_corporativo,nome do emissor,
 TSSG21,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,saneamento_gas,distribuicao_gas,nome do emissor,
 TUPW21,TUPI ENERGIAS RENOVAVEIS S.A,TUPI ENERGIAS RENOVAVEIS S.A.,energia,geracao,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
+TVVH11,TVV TERMINAL DE VILA VELHA S.A.,TVV TERMINAL DE VILA VELHA S.A.,corporativo,outros_corporativo,nome do emissor,
 UHSM12,UHE SAO SIMAO ENERGIA S/A,UHE SAO SIMAO ENERGIA S/A,energia,geracao,nome do emissor,
+ULFT14,ULTRAFERTIL S/A,ULTRAFERTIL S/A.,corporativo,quimica,CVM (nome),Petroquímicos e Borracha
 UNEG11,UTE GNA I GERACAO DE ENERGIA S.A.,UTE GNA I GERACAO DE ENERGIA S.A.,energia,geracao,nome do emissor,
+UNTE11,UNIFIQUE TELECOMUNICACOES S.A.,UNIFIQUE TELECOMUNICACOES S.A.,corporativo,telecom,CVM (CNPJ),Emp. Adm. Part. - Telecomunicações
+USAS11,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
+USAS12,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
+USAS22,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
+USNA12,USINA SANTA FE S.A.,USINA SANTA FE S.A.,corporativo,agro_acucar_etanol,nome do emissor,
+USNA13,USINA SANTA FE S.A.,USINA SANTA FE S.A.,corporativo,agro_acucar_etanol,nome do emissor,
 UTPS11,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 UTPS12,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 UTPS21,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 UTPS22,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
+VALE48,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALEA0,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALEB0,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALEB1,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALEC0,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALEC1,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
+VALED1,VALE S/A,VALE S/A,corporativo,mineracao_siderurgia,CVM (CNPJ),Extração Mineral
 VAMO33,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 VAMO34,"VAMOS LOCACAO DE CAMINHOES, MAQUINAS E EQUIPAMENTOS S.A.",VAMOS LOCACAO DE CAMINHOES MAQUINAS E EQUIPAMENTOS S.A.,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
+VBBRA0,VIBRA ENERGIA S.A,VIBRA ENERGIA S.A,corporativo,varejo,nome do emissor,Comércio (Atacado e Varejo)
 VBRR11,VIA BRASIL BR 163 CONCESSIONARIA DE RODOVIAS S.A.,VIA BRASIL BR 163 CONCESSIONARIA DE RODOVIAS S.A.,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 VDBF12,VDB F2 GERACAO DE ENERGIA S.A.,VDB F2 GERACAO DE ENERGIA S.A.,energia,geracao,nome do emissor,
+VERO12,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VERO13,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VERO24,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VERO25,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VERO35,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
+VERO44,VERO S.A.,VERO S.A.,corporativo,telecom,CVM (CNPJ),Telecomunicações
 VIALA5,RODOVIAS INTEGRADAS DO OESTE S/A,RODOVIAS INTEGRADAS DO OESTE S/A,transporte,rodovias,nome do emissor,
 VLIM13,VLI MULTIMODAL S/A,VLI MULTIMODAL S.A.,transporte,ferrovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 VLIM14,VLI MULTIMODAL S/A,VLI MULTIMODAL S.A.,transporte,ferrovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
@@ -786,4 +1263,6 @@ VLIM28,VLI MULTIMODAL S/A,VLI MULTIMODAL S.A.,transporte,ferrovias,CVM (CNPJ),Em
 VLIM29,VLI MULTIMODAL S/A,VLI MULTIMODAL S.A.,transporte,ferrovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 VPLT12,VIAPAULISTA S.A.,VIAPAULISTA  S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
 VRDN12,VIARONDON CONCESSIONÁRIA DE RODOVIA S/A,VIARONDON CONCESSIONARIA DE RODOVIA S/A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
+WDPR11,WINDEPAR HOLDING S. A.,WINDEPAR HOLDING S.  A.,corporativo,outros_corporativo,nome do emissor,
+WNTY12,WINITY S.A.,WINITY S.A.,corporativo,outros_corporativo,nome do emissor,
 XNGU17,XINGU RIO TRANSMISSORA DE ENERGIA S.A.,XINGU RIO TRANSMISSORA DE ENERGIA S.A.,energia,transmissao,nome do emissor,

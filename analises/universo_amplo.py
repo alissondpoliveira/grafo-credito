@@ -22,6 +22,38 @@ SND = RAIZ / "dados" / "snd" / "caracteristicas.csv"
 DESTINO = RAIZ / "dados" / "referencia" / "universo_candidatos.csv"
 URL_CVM = "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv"
 
+# OPÇÃO A (02/10/2026): mercado completo de debêntures. Fora de infraestrutura, o segmento vem do setor CVM;
+# para emissor sem registro, de palavras-chave no nome; o que sobrar vira "outros_corporativo".
+CORP_CVM = {
+    "Comércio (Atacado e Varejo)": "varejo", "Têxtil e Vestuário": "varejo",
+    "Serviços Médicos": "saude", "Farmacêutico e Higiene": "saude",
+    "Telecomunicações": "telecom", "Comunicação e Informática": "tecnologia_midia",
+    "Agricultura (Açúcar, Álcool e Cana)": "agro_acucar_etanol", "Alimentos": "alimentos_bebidas", "Bebidas e Fumo": "alimentos_bebidas",
+    "Petróleo e Gás": "oleo_gas", "Extração Mineral": "mineracao_siderurgia", "Metalurgia e Siderurgia": "mineracao_siderurgia",
+    "Papel e Celulose": "papel_celulose", "Petroquímicos e Borracha": "quimica", "Química": "quimica",
+    "Construção Civil, Mat. Constr. e Decoração": "imobiliario_construcao", "Construção Civil, Materiais de Construção e Decoração": "imobiliario_construcao",
+    "Educação": "educacao", "Hospedagem e Turismo": "servicos_lazer", "Brinquedos e Lazer": "servicos_lazer",
+    "Máquinas, Equipamentos, Veículos e Peças": "industria", "Intermediação Financeira": "financeiro",
+    "Bancos": "financeiro", "Arrendamento Mercantil": "financeiro", "Securitização de Recebíveis": "financeiro",
+    "Factoring": "financeiro", "Seguradoras e Corretoras": "financeiro", "Bolsas de Valores/Mercadorias e Futuros": "financeiro",
+    "Sem Setor Principal": "outros_corporativo",
+}
+CORP_NOME = [
+    ("servicos_ambientais", r"AMBIPAR|ORIZON|\bESTRE\b|RESIDUO"),
+    ("imobiliario_construcao", r"SHOPPING|IMOBILI|INCORPORA|CONSTRU|EMPREEND|REALTY|PROPERT|MULTIPLAN|IGUATEMI|ALLOS|CYRELA|\bMRV\b|DIRECIONAL"),
+    ("saude", r"HOSPITAL|SAUDE|DIAGNOST|LABORAT|FARMA|DROGARIA|REDE D.?OR|HAPVIDA|DASA|FLEURY|ONCOCLINICAS|KORA"),
+    ("varejo", r"VAREJ|LOJAS|MAGAZINE|SUPERMERC|ATACAD|COMERCIO|CARREFOUR|ASSAI|\bGPA\b|RENNER"),
+    ("telecom", r"TELECOM|TELEFON|FIBRA|\bTIM\b|\bCLARO\b|\bOI\b|V\.TAL|UNIFIQUE|ALGAR|DESKTOP|TORRES"),
+    ("agro_acucar_etanol", r"AGRO|ACUCAR|ETANOL|BIOENERG|USINA|SAO MARTINHO|JALLES|RAIZEN"),
+    ("alimentos_bebidas", r"ALIMENT|FRIGORIF|\bJBS\b|\bBRF\b|MARFRIG|MINERVA|\bM DIAS\b|CAMIL|AMBEV|BEBIDA"),
+    ("oleo_gas", r"PETRO|\bGAS\b|OLEO|COMBUSTIV|VIBRA|ULTRAPAR|COSAN|COPA ENERGIA|PRIO|BRAVA"),
+    ("mineracao_siderurgia", r"MINERA|SIDERUR|\bACO\b|METALUR|\bVALE\b|GERDAU|USIMINAS|\bCSN\b|CBA"),
+    ("papel_celulose", r"CELULOSE|PAPEL|SUZANO|KLABIN|IRANI"),
+    ("educacao", r"EDUCAC|ENSINO|COGNA|YDUQS|ANIMA|CRUZEIRO DO SUL|VITRU"),
+    ("financeiro", r"BANCO|FINANC|CREDITO|SECURITIZ|LEASING|ARRENDAMENTO|SEGUR|CAPITAL|INVEST"),
+    ("outros_corporativo", r"."),
+]
+
 MACRO_CVM = {
     "Energia Elétrica": "energia",
     "Emp. Adm. Part. - Energia Elétrica": "energia",
@@ -110,9 +142,18 @@ def main() -> None:
                 if re.search(padrao, sem_acento(nome)):
                     macro, fonte = m, "nome do emissor"
                     break
-        if not macro or FORA.search(sem_acento(nome)):
-            continue
-        seg = next(sub for sub, padrao in SUB[macro] if re.search(padrao, sem_acento(nome)))
+        if macro and FORA.search(sem_acento(nome)):
+            macro = None  # nome com "energia" que não é do setor elétrico: vai para o segmento corporativo dele
+        if macro:
+            seg = next(sub for sub, padrao in SUB[macro] if re.search(padrao, sem_acento(nome)))
+        else:
+            macro = "corporativo"
+            setor_base = re.sub(r"^Emp\. Adm\. Part\. - ", "", setor)
+            if setor_base in CORP_CVM and not re.search(r"AMBIPAR", sem_acento(nome)):
+                seg = CORP_CVM[setor_base]
+            else:
+                seg = next(sub for sub, padrao in CORP_NOME if re.search(padrao, sem_acento(nome)))
+                fonte = fonte or "nome do emissor"
         saida.append({"codigo": s["codigo"], "emissor_anbima": s["emissor"], "emissor_snd": c.get("Empresa", ""),
                       "macro": macro, "segmento": seg, "fonte_segmento": fonte, "setor_cvm": setor})
 

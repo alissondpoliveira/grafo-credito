@@ -56,6 +56,11 @@ def series_do_universo() -> list[str]:
 
 
 def main(codigos: list[str]) -> None:
+    parcial = bool(codigos)
+    if codigos == ["faltantes"]:
+        existentes = {c["Codigo do Ativo"] for c in csv.DictReader((DESTINO / "caracteristicas.csv").open(encoding="utf-8"))} if (DESTINO / "caracteristicas.csv").exists() else set()
+        codigos = [c for c in series_do_universo() if c not in existentes]
+        print(f"{len(codigos)} séries sem características no SND")
     codigos = codigos or series_do_universo()
     caracs, agendas, falhas = [], [], []
     for cod in codigos:
@@ -74,7 +79,13 @@ def main(codigos: list[str]) -> None:
 
     DESTINO.mkdir(parents=True, exist_ok=True)
     hoje = date.today().isoformat()
-    for nome, linhas in (("caracteristicas", caracs), ("agenda", agendas)):
+    # mescla: séries coletadas agora substituem as antigas; as demais continuam como estavam
+    coletados = {c["Codigo do Ativo"] for c in caracs}
+    for nome, linhas, chave in (("caracteristicas", caracs, "Codigo do Ativo"), ("agenda", agendas, "Ativo")):
+        arq = DESTINO / f"{nome}.csv"
+        if arq.exists() and parcial:
+            antigos = [{k: v for k, v in l.items() if k != "data_coleta"} for l in csv.DictReader(arq.open(encoding="utf-8")) if l.get(chave) not in coletados]
+            linhas[:0] = antigos
         if not linhas:
             continue
         campos = list(dict.fromkeys(k for l in linhas for k in l if k))

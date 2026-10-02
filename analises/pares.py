@@ -35,8 +35,10 @@ JEV = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
 SAIDA = RAIZ / "dados" / "derivados" / "pares"
 
 K = 8
+MAX_POR_EMISSOR = 2
 PESOS = {"estrutura": 3.0, "fase": 3.0, "patrocinador": 2.0, "garantia": 1.0, "incentivada": 1.0,
-         "duration": 1.0, "tail": 1.0, "tamanho": 0.5}
+         "duration": 1.0, "tail": 1.0, "tamanho": 0.5, "alavancagem": 1.0}
+FUNDAMENTOS = RAIZ / "dados" / "cvm" / "fundamentos.csv"
 EVENTOS = {"credito_negativo": 25.0, "negativo": 8.0, "operacional_positivo": -5.0}
 TETO_TIPO = {"credito_negativo": 40.0, "negativo": 20.0, "operacional_positivo": -10.0}
 MEIA_VIDA, JANELA, TETO = 60, 180, 40.0
@@ -90,6 +92,10 @@ def main() -> None:
     cnpj = {u["codigo"]: u["cnpj"] for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
     snd = {c["Codigo do Ativo"]: c for c in csv.DictReader(SND.open(encoding="utf-8"))}
     ajustes = ajuste_eventos(data_ref)
+    fund = {x["cnpj"]: x for x in csv.DictReader(FUNDAMENTOS.open(encoding="utf-8"))} if FUNDAMENTOS.exists() else {}
+    def alav(cn):
+        v = fund.get(cn, {}).get("dl_ebitda")
+        return math.log1p(max(float(v), 0.0)) if v not in (None, "") else None
 
     base = []
     for s in series:
@@ -105,6 +111,7 @@ def main() -> None:
             "spread": float(j["spread_bps"]), "estrutura": a.get("estrutura"), "fase": a.get("fase"), "patrocinador": a.get("patrocinador"),
             "garantia": s["garantia"], "incentivada": s["incentivada"], "duration": float(s["duration_mod_anos"]),
             "tail": float(j["tail_anos"]) if j.get("tail_anos") not in ("", None) else None, "tamanho": math.log(vol) if vol else None,
+            "alavancagem": alav(cnpj.get(s["codigo"], "")),
         })
 
     def distancia(a: dict, b: dict) -> float:
@@ -112,6 +119,8 @@ def main() -> None:
         d += PESOS["duration"] * min(2.0, abs(a["duration"] - b["duration"]) / 2)
         if a["tail"] is not None and b["tail"] is not None:
             d += PESOS["tail"] * min(1.5, abs(a["tail"] - b["tail"]) / 8)
+        if a["alavancagem"] is not None and b["alavancagem"] is not None:
+            d += PESOS["alavancagem"] * min(1.0, abs(a["alavancagem"] - b["alavancagem"]))  # ln(1 + DL/EBITDA)
         if a["tamanho"] is not None and b["tamanho"] is not None:
             d += PESOS["tamanho"] * min(1.0, abs(a["tamanho"] - b["tamanho"]))
         return d
@@ -125,7 +134,14 @@ def main() -> None:
         if len(candidatos) < 3 and a["faixa"] == "high_yield":
             candidatos, entre_segmentos = [b for b in base if mesma(b)], True  # poucos high yield no segmento
         candidatos.sort(key=lambda b: distancia(a, b))
-        pares = candidatos[:K]
+        # no máximo MAX_POR_EMISSOR séries de um mesmo emissor entre os pares (evita um emissor grande dominar a mediana)
+        pares, por_emissor = [], {}
+        for b in candidatos:
+            if por_emissor.get(b["cnpj"], 0) < MAX_POR_EMISSOR:
+                pares.append(b)
+                por_emissor[b["cnpj"]] = por_emissor.get(b["cnpj"], 0) + 1
+            if len(pares) == K:
+                break
         if len(pares) < 3:
             continue
         justo = median(p["spread"] for p in pares)
@@ -153,7 +169,7 @@ def main() -> None:
         w = csv.DictWriter(f, fieldnames=list(linhas[0].keys()), lineterminator="\n")
         w.writeheader()
         w.writerows(linhas)
-    (SAIDA / "parametros.json").write_text(json.dumps({"K": K, "pesos": PESOS, "eventos_bps": EVENTOS, "tetos_por_tipo_bps": TETO_TIPO, "meia_vida_dias": MEIA_VIDA,
+    (SAIDA / "parametros.json").write_text(json.dumps({"K": K, "max_por_emissor": MAX_POR_EMISSOR, "pesos": PESOS, "eventos_bps": EVENTOS, "tetos_por_tipo_bps": TETO_TIPO, "meia_vida_dias": MEIA_VIDA,
                                                         "janela_dias": JANELA, "teto_bps": TETO, "confianca_minima": CONFIANCA_MINIMA},
                                                        ensure_ascii=False, indent=1), encoding="utf-8")
     com_aj = [l for l in linhas if l["ajuste_eventos_bps"]]

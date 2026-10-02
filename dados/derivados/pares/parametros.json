@@ -1,5 +1,6 @@
 {
  "K": 8,
+ "max_por_emissor": 2,
  "pesos": {
   "estrutura": 3.0,
   "fase": 3.0,
@@ -8,7 +9,8 @@
   "incentivada": 1.0,
   "duration": 1.0,
   "tail": 1.0,
-  "tamanho": 0.5
+  "tamanho": 0.5,
+  "alavancagem": 1.0
  },
  "eventos_bps": {
   "credito_negativo": 25.0,

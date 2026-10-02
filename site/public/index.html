@@ -85,6 +85,16 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .regua-marcas{display:flex;justify-content:space-between;font-size:.7rem;color:var(--ink-3);margin-top:-4px;font-variant-numeric:tabular-nums}
 #curva{width:100%;height:auto;aspect-ratio:2.2/1;display:block;margin-top:10px;touch-action:none}
 #trilha a{color:var(--accent);text-decoration:none}#trilha a:hover{text-decoration:underline}#trilha span{color:var(--ink)}
+.busca-caixa{position:relative;margin-top:22px;max-width:720px}
+#busca{width:100%;padding:.7rem .9rem;font-size:1rem;border-radius:8px;border:1px solid var(--line-2);background:var(--surface)}
+#resultados{position:absolute;z-index:15;left:0;right:0;top:100%;margin:4px 0 0;padding:4px;list-style:none;background:var(--surface);border:1px solid var(--line-2);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;max-height:380px;overflow:auto}
+#resultados li{padding:.45rem .6rem;border-radius:6px;cursor:pointer;font-size:.86rem}
+#resultados li:hover,#resultados li.foco{background:var(--surface-2)}
+#ativo{margin-top:28px}
+.ativo-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:14px}
+.ativo-grade div{padding:10px 12px;box-shadow:inset -1px -1px 0 var(--line)}
+.ativo-grade small{display:block;color:var(--ink-2);font-size:.74rem}.ativo-grade b{font-size:1.1rem;font-variant-numeric:tabular-nums}
+.ativo-grade em{display:block;font-style:normal;font-size:.72rem;color:var(--ink-3)}
 #ficha{margin-top:12px;padding:16px;display:none}
 #ficha h3{margin:0 0 .2rem;font-family:Newsreader,Georgia,serif;font-size:1.2rem}
 .ficha-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}

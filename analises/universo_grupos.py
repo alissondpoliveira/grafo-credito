@@ -165,6 +165,13 @@ def main() -> None:
                     grupo, fonte, motivo = g, "inferido", "nome do emissor"
                     break
 
+        # corporativas fora de infraestrutura sem grupo conhecido: o próprio emissor é o grupo de risco
+        if not fonte and candidatos[s["codigo"]]["macro"] == "corporativo":
+            palavras = [p for p in re.sub(r"[^A-Z0-9 ]", " ", sem(emissor_atual)).split()
+                        if p not in {"S", "A", "SA", "LTDA", "CIA", "COMPANHIA", "DE", "DO", "DA", "E", "PARTICIPACOES"}]
+            grupo = " ".join(palavras[:2]).title() or emissor_atual.title()
+            fonte, motivo = ("CVM FRE" if tem_ctrl else "inferido"), "o próprio emissor (corporativa sem grupo identificado)"
+
         fora = next((m for k, m in FORA_DO_PILOTO.items() if k in up), "")
         linhas.append({
             "codigo": s["codigo"],

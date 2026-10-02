@@ -57,6 +57,14 @@ jobs:
         continue-on-error: true
         run: python coletor/aneel_concessoes.py
 
+      - name: Balanços CVM (DFP) e CRI/CRA (CVM), semanal às segundas
+        continue-on-error: true
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ ! -f dados/cvm/fundamentos.csv ]; then
+            python coletor/cvm_dfp.py
+            python coletor/cvm_cri_cra.py
+          fi
+
       - name: Documentos, notícias e análises por emissor
         continue-on-error: true
         run: python coletor/documentos.py

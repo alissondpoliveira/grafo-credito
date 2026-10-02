@@ -105,6 +105,16 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .regua-marcas{display:flex;justify-content:space-between;font-size:.7rem;color:var(--ink-3);margin-top:-4px;font-variant-numeric:tabular-nums}
 #curva{width:100%;height:auto;aspect-ratio:2.2/1;display:block;margin-top:10px;touch-action:none}
 #trilha a{color:var(--accent);text-decoration:none}#trilha a:hover{text-decoration:underline}#trilha span{color:var(--ink)}
+.busca-caixa{position:relative;margin-top:22px;max-width:720px}
+#busca{width:100%;padding:.7rem .9rem;font-size:1rem;border-radius:8px;border:1px solid var(--line-2);background:var(--surface)}
+#resultados{position:absolute;z-index:15;left:0;right:0;top:100%;margin:4px 0 0;padding:4px;list-style:none;background:var(--surface);border:1px solid var(--line-2);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;max-height:380px;overflow:auto}
+#resultados li{padding:.45rem .6rem;border-radius:6px;cursor:pointer;font-size:.86rem}
+#resultados li:hover,#resultados li.foco{background:var(--surface-2)}
+#ativo{margin-top:28px}
+.ativo-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:14px}
+.ativo-grade div{padding:10px 12px;box-shadow:inset -1px -1px 0 var(--line)}
+.ativo-grade small{display:block;color:var(--ink-2);font-size:.74rem}.ativo-grade b{font-size:1.1rem;font-variant-numeric:tabular-nums}
+.ativo-grade em{display:block;font-style:normal;font-size:.72rem;color:var(--ink-3)}
 #ficha{margin-top:12px;padding:16px;display:none}
 #ficha h3{margin:0 0 .2rem;font-family:Newsreader,Georgia,serif;font-size:1.2rem}
 .ficha-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
@@ -471,7 +481,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
         if (n.tipo==='bolha') n.nivel==='segmento' ? abrirSegmento(n.segmento) : abrirGrupo(n.grupo);
         else if (n.tipo==='emissor') { alternarEmissor(n.id); mostrarFicha(n); }
         else if (n.tipo==='doc') { if (n.url) window.open(n.url, '_blank', 'noopener'); }
-        else if (n.tipo==='serie') { selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } })
+        else if (n.tipo==='serie') { abrirAtivo(n.rotulo); } })
       .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
   }
 
@@ -500,6 +510,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   segmentos.forEach(s => { op('S:'+s, nomeSeg(s)); gruposDe(s).filter(k => !k.endsWith(ISOL)).sort((a,b)=>resumo['G:'+b].series-resumo['G:'+a].series).forEach(k => op('G:'+k, '   '+nomeGrupo(k))); });
   selG.addEventListener('change', () => { const v = selG.value; if (!v) return; v.startsWith('S:') ? abrirSegmento(v.slice(2)) : abrirGrupo(v.slice(2)); });
   document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
+  window.mapa = { abrirGrupo, abrirSegmento, ficha: mostrarFicha, emissor: cnpj => porId.get('e:'+cnpj) };
   atualizar(); trilha();
 })();
 
@@ -523,7 +534,7 @@ function desenharDesvio(classe){
   gr.append('text').attr('x', d => d.desvio>=0 ? x(d.desvio)+5 : x(d.desvio)-5).attr('y', lin/2+3.5).attr('text-anchor', d=>d.desvio>=0?'start':'end').attr('font-size',9.5).attr('fill','var(--ink-2)').text(d => sinal(d.desvio));
   gr.append('rect').attr('x',0).attr('width',W).attr('height',lin).attr('fill','transparent').style('cursor','pointer')
     .on('mouseenter', (e,d) => mostrar(e, '<b>'+d.codigo+'</b> · '+d.emissor+'<br><span class="fraco">'+d.grupo+'</span>' + linha(classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(d.spread,0)+' bps') + linha(classe==='DI+'?'Mediana DI+':'Spread justo', fmt(d.justo,0)+' bps') + linha('Desvio', sinal(d.desvio)+' bps ('+sinal(d.dp,1)+' dp)') + linha('Variação no histórico', d.var_hist==null?'–':sinal(d.var_hist)+' bps ('+d.n_hist+' dias)')))
-    .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => { if (D.fluxos[d.codigo]||D.di[d.codigo]) { selecionar(d.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } });
+    .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => abrirAtivo(d.codigo));
 }
 document.querySelectorAll('[data-classe]').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('[data-classe]').forEach(x=>x.classList.toggle('ativo', x===b)); desenharDesvio(b.dataset.classe); }));
 (function(){ const sd = document.getElementById('segDesvio'), st = document.getElementById('segTabela');
@@ -598,6 +609,138 @@ document.querySelectorAll('#tab th').forEach((th, i) => th.addEventListener('cli
   const val = r => { const t = r.cells[i].dataset.v ?? r.cells[i].textContent; const n = parseFloat(t); return isNaN(n) ? t : n; };
   linhas.sort((a,b) => { const x=val(a), y=val(b); return (x>y?1:x<y?-1:0)*(asc?1:-1); }).forEach(r => corpo.appendChild(r));
 }));
+
+// ---------- CRI e CRA (carregados sob demanda) ----------
+let _cri = null;
+window.carregarCri = () => _cri || (_cri = fetch('cri_cra.json', {cache:'no-cache'}).then(r => r.json()));
+(function(){
+  const sec = document.getElementById('crisec'); if (!sec) return;
+  const fT = document.getElementById('criTipo'), fS = document.getElementById('criSit'), fL = document.getElementById('criLastro'), fQ = document.getElementById('criBusca'), corpo = document.getElementById('criCorpo'), info = document.getElementById('criInfo');
+  let dados = [];
+  const semA = t => String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  function render(){
+    const q = semA(fQ.value);
+    const r = dados.filter(x => (!fT.value || x.t===fT.value) && (!fS.value || x.st===fS.value) && (!fL.value || x.lg===fL.value)
+      && (!q || semA([x.c,x.i,x.s,x.lg,x.tl,x.dv.map(d=>(D.nomes_cnpj[d[0]]||d[0])).join(' ')].join(' ')).includes(q)));
+    info.textContent = r.length+' séries/classes · '+r.filter(x=>x.st==='Em atraso').length+' em atraso';
+    corpo.innerHTML = r.slice(0, 300).map(x => '<tr><td class="t">'+x.t+'</td><td class="t">'+x.c+'</td><td class="t">'+x.s+'</td><td class="t">'+x.cl+'</td><td class="t">'+(x.st==='Em atraso'?'<span class="selo hy">em atraso</span>':x.st)+'</td><td class="t">'+(x.r||'–')+'</td><td class="t">'+(x.v||'')+'</td><td class="t">'+(x.lg||'–')+'</td><td>'+(x.ltv==null?'–':fmt(x.ltv,0)+'%')+'</td><td>'+(x.in==null?'–':fmt(x.in,1)+'%')+'</td><td class="t">'+(x.rt||'–')+'</td><td class="t pequeno">'+x.dv.map(d => (D.nomes_cnpj[d[0]] ? '<b>'+D.nomes_cnpj[d[0]]+'</b>' : d[0])+' ('+d[1]+')').join('; ')+'</td></tr>').join('');
+  }
+  carregarCri().then(cc => { dados = cc;
+    [...new Set(cc.map(x=>x.lg).filter(Boolean))].sort().forEach(v => { const o = document.createElement('option'); o.value=v; o.textContent=v; fL.appendChild(o); });
+    [fT,fS,fL].forEach(e => e.onchange = render); fQ.oninput = render; render(); });
+})();
+
+// ---------- busca e ficha do ativo ----------
+(function(){
+  const sem = t => String(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  const A = D.ativos;
+  // índice: séries, emissores e grupos, com texto normalizado para busca tolerante (código, nome, grupo, segmento, ISIN)
+  const idx = [];
+  Object.values(A).forEach(a => idx.push({tipo:'serie', chave:a.codigo, rotulo:a.codigo, sub:a.emissor+' · '+(D.segmentos[a.segmento]||a.segmento), texto:sem([a.codigo,a.isin,a.emissor,a.grupo,a.segmento,a.indexador].join(' '))}));
+  const emis = {}; Object.values(A).forEach(a => { (emis[a.cnpj] = emis[a.cnpj] || {cnpj:a.cnpj, nome:a.emissor, grupo:a.grupo, segmento:a.segmento, n:0}).n++; });
+  Object.values(emis).forEach(e => idx.push({tipo:'emissor', chave:e.cnpj, rotulo:e.nome, sub:e.n+' séries · '+e.grupo, texto:sem([e.nome,e.cnpj,e.grupo].join(' '))}));
+  const grs = {}; Object.values(A).forEach(a => { const k = a.segmento+'|'+a.grupo; (grs[k] = grs[k] || {k, grupo:a.grupo, segmento:a.segmento, n:0}).n++; });
+  Object.values(grs).filter(g => !g.grupo.startsWith('Isolada')).forEach(g => idx.push({tipo:'grupo', chave:g.k, rotulo:g.grupo, sub:(D.segmentos[g.segmento]||g.segmento)+' · '+g.n+' séries', texto:sem([g.grupo,g.segmento].join(' '))}));
+
+  const caixa = document.getElementById('busca'), lista = document.getElementById('resultados');
+  let atual = [], foco = -1;
+  function buscar(q){
+    const toks = sem(q).split(/\s+/).filter(Boolean); if (!toks.length) return [];
+    const peso = {serie:0, emissor:1, grupo:2, cri:3};
+    return idx.filter(i => toks.every(t => i.texto.includes(t)))
+      .map(i => ({...i, s: (sem(i.rotulo).startsWith(toks[0]) ? 0 : 1)*10 + peso[i.tipo] + (sem(i.chave)===toks.join('') ? -20 : 0)}))
+      .sort((a,b) => a.s-b.s || a.rotulo.localeCompare(b.rotulo)).slice(0, 12);
+  }
+  function mostrarLista(){
+    lista.innerHTML = atual.map((r,i) => '<li class="'+(i===foco?'foco':'')+'" data-i="'+i+'"><span class="selo">'+({serie:'série',emissor:'emissor',grupo:'grupo',cri:'CRI/CRA'})[r.tipo]+'</span> <b>'+r.rotulo+'</b> <span class="fraco">'+r.sub+'</span></li>').join('');
+    lista.style.display = atual.length ? 'block' : 'none';
+    lista.querySelectorAll('li').forEach(li => li.onmousedown = e => { e.preventDefault(); escolher(atual[+li.dataset.i]); });
+  }
+  function escolher(r){
+    lista.style.display = 'none'; caixa.value = r.rotulo;
+    if (r.tipo==='serie') abrirAtivo(r.chave);
+    else if (r.tipo==='emissor') { const n = (window.mapa && window.mapa.emissor(r.chave)); if (n) { window.mapa.abrirGrupo(n.grupo); window.mapa.ficha(n); document.getElementById('ficha').scrollIntoView({behavior:'smooth'}); } }
+    else if (r.tipo==='cri') { const q = document.getElementById('criBusca'); q.value = r.chave; q.dispatchEvent(new Event('input')); document.getElementById('crisec').scrollIntoView({behavior:'smooth'}); }
+    else { window.mapa && window.mapa.abrirGrupo(r.chave); document.getElementById('mapa').scrollIntoView({behavior:'smooth'}); }
+  }
+  carregarCri().then(cc => cc.forEach(x => idx.push({tipo:'cri', chave:x.c, rotulo:x.c, sub:x.t+' · '+x.s+' · '+(x.lg||''), texto:sem([x.c,x.i,x.s,x.t,x.lg].join(' '))})));
+  caixa.addEventListener('input', () => { atual = buscar(caixa.value); foco = -1; mostrarLista(); });
+  caixa.addEventListener('keydown', e => {
+    if (e.key==='ArrowDown') { foco = Math.min(foco+1, atual.length-1); mostrarLista(); e.preventDefault(); }
+    else if (e.key==='ArrowUp') { foco = Math.max(foco-1, 0); mostrarLista(); e.preventDefault(); }
+    else if (e.key==='Enter' && atual.length) { escolher(atual[Math.max(foco,0)]); }
+    else if (e.key==='Escape') { lista.style.display='none'; }
+  });
+  caixa.addEventListener('blur', () => setTimeout(() => lista.style.display='none', 150));
+
+  // ficha do ativo
+  const fmtv = (v,c=0,suf='') => v==null||isNaN(v) ? '–' : fmt(v,c)+suf;
+  const cel = (rot, val, nota) => '<div><small>'+rot+'</small><b>'+val+'</b>'+(nota?'<em>'+nota+'</em>':'')+'</div>';
+  window.abrirAtivo = function(cod){
+    const a = A[cod]; if (!a) return;
+    const el = document.getElementById('ativo');
+    const mesmos = Object.values(A).filter(x => x.segmento===a.segmento && x.classe===a.classe && x.spread!=null);
+    const ord = mesmos.map(x=>x.spread).sort((x,y)=>x-y);
+    const med = ord.length ? ord[Math.floor(ord.length/2)] : null;
+    const pct = ord.length && a.spread!=null ? Math.round(100*ord.filter(v=>v<=a.spread).length/ord.length) : null;
+    const pares = (a.pares||'').split(' ').filter(Boolean).map(c => A[c]).filter(Boolean);
+    const rotSpread = a.classe==='DI+' ? 'Spread sobre o CDI' : 'Spread comparável (Z, gross-up 15% se isenta)';
+    const docs = (D.docs[a.cnpj]||[]).slice(0, 8);
+    const hist = a.hist || [];
+    el.innerHTML =
+      '<div class="cab"><div><div class="kicker">'+(D.segmentos[a.segmento]||a.segmento)+' · '+a.grupo+'</div>'
+      + '<h2 style="margin:0">'+a.codigo+' <span class="muted" style="font-size:1rem;font-family:Inter">'+a.emissor+'</span>'+(a.faixa==='high_yield'?' <span class="selo hy">high yield</span>':'')+'</h2>'
+      + '<p class="muted pequeno" style="margin:.2rem 0 0">'+[a.indexador, 'vence '+(a.vencimento||'–'), a.isenta==='S'?'incentivada (isenta)':'tributada', 'garantia '+(a.garantia||'–'), a.isin].filter(Boolean).join(' · ')+(a.motivo_faixa?'<br>'+a.motivo_faixa:'')+'</p></div>'
+      + '<div><button id="ativoSimular">simular choque</button> <button id="ativoFechar">fechar</button></div></div>'
+      + '<div class="ativo-grade">'
+      + cel(rotSpread, fmtv(a.spread,0,' bps'))
+      + (a.classe==='IPCA+' ? cel('Z-spread de mercado (sem gross-up)', fmtv(a.z_mercado,0,' bps')) + cel('Spread sobre a NTN-B de referência', fmtv(a.spread_ntnb,0,' bps'), a.ntnb_ref ? 'NTN-B '+a.ntnb_ref : '') : '')
+      + cel('Justo pelos pares', fmtv(a.justo_pares,0,' bps'), pares.length+' pares')
+      + cel('Ajuste por eventos', a.ajuste ? (a.ajuste>0?'+':'')+fmt(a.ajuste,1)+' bps' : '–')
+      + cel('Desvio em relação aos pares', a.desvio==null?'–':sinal(a.desvio)+' bps', a.dp==null?'':sinal(a.dp,1)+' dp')
+      + cel('Mediana do segmento', fmtv(med,0,' bps'), pct==null?'':'esta série está no percentil '+pct)
+      + cel('Justo pela regressão', fmtv(a.justo_reg,0,' bps'))
+      + cel('Taxa indicativa ANBIMA', fmtv(a.taxa,4,'%'))
+      + cel('PU ANBIMA', a.pu==null?'–':'R$ '+fmt(a.pu,2))
+      + cel('Duration modificada', fmtv(a.dmod,2,' anos'))
+      + cel('Choque de +100 bps', fmtv(a.choque100,2,'%'))
+      + '</div>'
+      + (hist.length > 1 ? '<h3>Histórico do spread</h3><svg id="ativoHist" style="width:100%;height:auto;aspect-ratio:6/1"></svg>' : '')
+      + '<h3>Pares comparáveis</h3>'
+      + (pares.length ? '<div class="tabela" style="max-height:none"><table><thead><tr><th class="t">Série</th><th class="t">Emissor</th><th class="t">Grupo</th><th>Spread (bps)</th><th>Desvio (bps)</th><th>Duration</th><th class="t">Garantia</th></tr></thead><tbody>'
+        + pares.map(p => '<tr data-cod="'+p.codigo+'"><td class="t">'+p.codigo+'</td><td class="t">'+p.emissor+'</td><td class="t">'+p.grupo+'</td><td>'+fmtv(p.spread,0)+'</td><td>'+(p.desvio==null?'–':sinal(p.desvio))+'</td><td>'+fmtv(p.dmod,2)+'</td><td class="t">'+(p.garantia||'–')+'</td></tr>').join('')
+        + '</tbody></table></div>' : '<p class="fraco pequeno">Sem pares suficientes no mesmo segmento, classe e faixa.</p>')
+      + (() => { const fu = D.fundamentos[a.cnpj]; if (!fu) return '<h3>Fundamentos</h3><p class="fraco pequeno">Emissor sem demonstrações na CVM (não registrado ou sem DFP recente).</p>';
+          const bi = v => v==null ? '–' : 'R$ '+fmt(v/1e9,2)+' bi';
+          return '<h3>Fundamentos (CVM, exercício '+fu.exercicio.slice(0,4)+')</h3><div class="ativo-grade">'
+            + cel('Dívida líquida / EBITDA', fu.dl_ebitda==null?'–':fmt(fu.dl_ebitda,2)+'x') + cel('EBITDA / despesa financeira', fu.cobertura_juros==null?'–':fmt(fu.cobertura_juros,2)+'x')
+            + cel('Receita', bi(fu.receita)) + cel('EBITDA', bi(fu.ebitda)) + cel('Dívida líquida', bi(fu.divida_liquida)) + cel('Lucro líquido', bi(fu.lucro_liquido)) + '</div>'; })()
+      + '<div id="ativoCri"></div>'
+      + (a.motivos ? '<h3>Eventos que ajustam o justo</h3><p class="pequeno muted">'+a.motivos.split(' | ').join('<br>')+'</p>' : '')
+      + (a.clausulas ? '<h3>Escritura</h3><p class="pequeno muted">'+a.clausulas+'</p>' : '')
+      + (docs.length ? '<h3>Documentos recentes do emissor</h3><ul class="pequeno" style="padding-left:1rem">'+docs.map(d => '<li><span class="fraco">'+(d.data||'')+'</span> <a href="'+d.url+'" target="_blank" rel="noopener">'+String(d.titulo).replace(/</g,'&lt;')+'</a> <span class="fraco">'+(d.fonte||'')+'</span></li>').join('')+'</ul>' : '');
+    el.style.display = 'block';
+    carregarCri().then(cc => { const meus = cc.filter(x => x.dv.some(d => d[0]===a.cnpj)); const box = document.getElementById('ativoCri'); if (!box || !meus.length) return;
+      box.innerHTML = '<h3>Exposição do emissor em CRI e CRA (devedor ou cedente)</h3><div class="tabela" style="max-height:260px"><table><thead><tr><th class="t">Tipo</th><th class="t">Código</th><th class="t">Securitizadora</th><th class="t">Classe</th><th class="t">Situação</th><th class="t">Remuneração</th><th class="t">Vencimento</th><th>Inadimplência</th></tr></thead><tbody>'
+        + meus.map(x => '<tr><td class="t">'+x.t+'</td><td class="t">'+x.c+'</td><td class="t">'+x.s+'</td><td class="t">'+x.cl+'</td><td class="t">'+x.st+'</td><td class="t">'+(x.r||'–')+'</td><td class="t">'+(x.v||'')+'</td><td>'+(x.in==null?'–':fmt(x.in,1)+'%')+'</td></tr>').join('') + '</tbody></table></div>'; });
+    el.querySelectorAll('tr[data-cod]').forEach(tr => tr.onclick = () => abrirAtivo(tr.dataset.cod));
+    document.getElementById('ativoFechar').onclick = () => { el.style.display='none'; };
+    document.getElementById('ativoSimular').onclick = () => { if (D.series.find(s=>s.codigo===cod)) { selecionar(cod); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } };
+    if (hist.length > 1) {
+      const sv = d3.select('#ativoHist'), W = 900, H = 150, M = {t:10,r:40,b:22,l:44}; sv.attr('viewBox', `0 0 ${W} ${H}`);
+      const x = d3.scalePoint().domain(hist.map(h=>h[0])).range([M.l, W-M.r]), y = d3.scaleLinear().domain(d3.extent(hist, h=>h[1])).nice().range([H-M.b, M.t]);
+      y.ticks(3).forEach(t => { sv.append('line').attr('x1',M.l).attr('x2',W-M.r).attr('y1',y(t)).attr('y2',y(t)).attr('stroke','var(--line)'); sv.append('text').attr('x',M.l-6).attr('y',y(t)+3).attr('text-anchor','end').attr('font-size',10).attr('fill','var(--ink-3)').text(fmt(t,0)); });
+      hist.forEach(h => sv.append('text').attr('x',x(h[0])).attr('y',H-6).attr('text-anchor','middle').attr('font-size',10).attr('fill','var(--ink-3)').text(h[0].slice(8,10)+'/'+h[0].slice(5,7)));
+      sv.append('path').attr('d', d3.line().x(h=>x(h[0])).y(h=>y(h[1]))(hist)).attr('fill','none').attr('stroke','var(--ink)').attr('stroke-width',2);
+      sv.selectAll('circle').data(hist).join('circle').attr('cx',h=>x(h[0])).attr('cy',h=>y(h[1])).attr('r',3.5).attr('fill','var(--ink)')
+        .on('mouseenter',(e,h)=>mostrar(e,'<b>'+h[0]+'</b>'+linha('Spread',fmt(h[1],0)+' bps'))).on('mousemove',mover).on('mouseleave',esconder);
+    }
+    el.scrollIntoView({behavior:'smooth'});
+  };
+  // cliques em séries no mapa, na tabela e no gráfico de desvios abrem a ficha do ativo
+  document.querySelectorAll('tbody tr[data-codigo]').forEach(tr => tr.onclick = () => abrirAtivo(tr.dataset.codigo));
+  const p = new URLSearchParams(location.search).get('ativo'); if (p && A[p]) setTimeout(() => abrirAtivo(p), 300);
+})();
 """
 
 
@@ -654,6 +797,46 @@ def gerar_projeto() -> str:
         })
         if s["status"] == "ok DI+":
             di[s["codigo"]] = True
+    historico: dict[str, list] = {}
+    for a_csv in sorted(PREC.glob("????-??-??.csv")):
+        for h in ler_csv(a_csv):
+            v = h.get("zspread_comparavel_bps") if h["status"] == "ok" else h.get("spread_di_bps") if h["status"] == "ok DI+" else ""
+            if v:
+                historico.setdefault(h["codigo"], []).append([a_csv.stem, round(float(v), 1)])
+    snd_c = {c["Codigo do Ativo"]: c for c in ler_csv(RAIZ / "dados" / "snd" / "caracteristicas.csv")}
+    ativos = {}
+    for s_ in series:
+        c, u, d = s_["codigo"], universo[s_["codigo"]], desvios.get(s_["codigo"], {})
+        cl = clausulas.get(c, {})
+        ativos[c] = {
+            "codigo": c, "isin": snd_c.get(c, {}).get("ISIN", ""), "emissor": u["emissor_atual_snd"].title(), "cnpj": u["cnpj"],
+            "grupo": u["grupo_risco"], "segmento": u.get("segmento", ""), "faixa": d.get("faixa", "principal"), "motivo_faixa": d.get("motivo_faixa", ""),
+            "classe": d.get("classe") or s_["indexador_tipo"], "indexador": snd_c.get(c, {}).get("indice", "") + (" + " + snd_c.get(c, {}).get("Juros Criterio Novo - Taxa", "") + "%" if snd_c.get(c, {}).get("Juros Criterio Novo - Taxa") else ""),
+            "isenta": s_["incentivada"], "garantia": s_["garantia"], "vencimento": s_.get("vencimento", ""),
+            "taxa": f(s_["taxa_indicativa"]), "pu": f(s_["pu_anbima"]), "dmod": f(s_.get("duration_mod_anos")),
+            "z_mercado": f(s_.get("zspread_bps")), "spread_ntnb": f(s_.get("spread_ntnb_bps")), "ntnb_ref": s_.get("ntnb_referencia", ""),
+            "spread": d.get("spread"), "justo_pares": d.get("justo_pares"), "ajuste": d.get("ajuste"), "motivos": d.get("motivos", ""),
+            "justo_reg": d.get("justo_reg"), "desvio": d.get("desvio"), "dp": d.get("dp"), "pares": d.get("pares", ""),
+            "choque100": f(s_.get("choque_100_pct")), "clausulas": cl.get("resumo", ""), "hist": historico.get(c, []),
+        }
+    # fundamentos (CVM DFP) por emissor e exposição como devedor/cedente em CRI e CRA
+    fundamentos = {}
+    for x in ler_csv(RAIZ / "dados" / "cvm" / "fundamentos.csv"):
+        fundamentos[x["cnpj"]] = {k: (f(x[k]) if k not in ("cnpj", "nome", "exercicio", "demonstracao") else x[k])
+                                  for k in ("exercicio", "receita", "ebitda", "divida_liquida", "dl_ebitda", "cobertura_juros", "lucro_liquido")}
+    certs = ler_csv(RAIZ / "dados" / "cri_cra" / "certificados.csv")
+    devs = ler_csv(RAIZ / "dados" / "cri_cra" / "devedores.csv")
+    por_cert = {}
+    for d_ in devs:
+        por_cert.setdefault(d_["certificado"], []).append(d_)
+    cri_cra = []
+    for c_ in certs:
+        cri_cra.append({"t": c_["tipo"], "c": c_["codigo_cetip"], "i": c_["isin"], "s": c_["securitizadora"].title()[:40], "cl": c_["classe"],
+                        "st": c_["situacao"], "v": c_["vencimento"], "r": c_["remuneracao"], "vl": f(c_["valor_certificados"]),
+                        "rt": c_["rating"], "lg": c_["segmento_lastro"], "tl": c_["tipo_lastro"][:60], "ltv": f(c_["ltv"]),
+                        "in": f(c_["inadimplencia_pct"]), "dv": [[x["cnpj"], x["papel"], f(x["percentual"])] for x in por_cert.get(c_["certificado"], [])][:6],
+                        "ref": c_["data_referencia"]})
+    nomes_cnpj = {u["cnpj"]: u["emissor_atual_snd"].title() for u in universo.values()}
     lista_desvios = [{"codigo": c, "emissor": universo[c]["emissor_atual_snd"].title(), "grupo": universo[c]["grupo_risco"],
                       "segmento": universo[c].get("segmento", ""), **v}
                      for c, v in desvios.items()]
@@ -719,16 +902,23 @@ def gerar_projeto() -> str:
 <p class="fraco pequeno">IPCA+: n = {modelo["n"]}, R² = {num(modelo["r2"], 2)}, desvio padrão dos resíduos = {num(modelo["dp_residuos_bps"], 0)} bps. DI+: desvio medido contra a mediana das {modelo["di"]["n"]} séries ({num(modelo["di"]["mediana_bps"], 0)} bps). Especificação provisória.</p>"""
 
     dia = date.fromisoformat(data_ref).strftime("%d/%m/%Y")
-    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos, "di": di, "desvios": lista_desvios, "docs": documentos, "segmentos": SEGMENTOS_NOMES},
+    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos, "di": di, "desvios": lista_desvios, "docs": documentos,
+                           "segmentos": SEGMENTOS_NOMES, "ativos": ativos, "fundamentos": fundamentos, "nomes_cnpj": nomes_cnpj},
                           ensure_ascii=False, separators=(",", ":"))
+    (PUBLICO / "grafo-credito" / "cri_cra.json").write_text(json.dumps(cri_cra, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (PUBLICO / "grafo-credito").mkdir(parents=True, exist_ok=True)
+    (PUBLICO / "grafo-credito" / "dados.json").write_text(dados_js, encoding="utf-8")
     escala = '<span class="escala">abaixo dos pares <b><i style="background:var(--div-neg-2)"></i><i style="background:var(--div-neg-1)"></i><i style="background:var(--div-0)"></i><i style="background:var(--div-pos-1)"></i><i style="background:var(--div-pos-2)"></i></b> acima dos pares</span>'
 
     corpo = f"""<main>
-<nav><a href="/">Alisson Prata Oliveira</a><span><a href="#mapa">Mapa</a><a href="#desvios">Desvios</a><a href="#simulador">Simulador</a><a href="#tabela">Tabela</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></span></nav>
+<nav><a href="/">Alisson Prata Oliveira</a><span><a href="#busca">Busca</a><a href="#mapa">Mapa</a><a href="#desvios">Desvios</a><a href="#simulador">Simulador</a><a href="#tabela">Tabela</a><a href="#crisec">CRI e CRA</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></span></nav>
 
 <div class="kicker">Crédito privado · Energia, saneamento e transporte · {dia}</div>
 <h1>Grafo de Crédito</h1>
 <p class="dek">Quem controla quem, quem emitiu o quê e quanto cada debênture paga acima ou abaixo do que seus pares sugerem. Universo de energia (transmissão, geração, distribuição, integradas), saneamento e infraestrutura de transporte, atualizado todo dia útil com dados da ANBIMA, do SND, da CVM e da ANEEL.</p>
+
+<div class="busca-caixa"><input id="busca" type="search" autocomplete="off" placeholder="Buscar por código ANBIMA, ISIN, empresa, grupo ou segmento…" aria-label="Buscar ativo">
+<ul id="resultados" role="listbox"></ul></div>
 
 <div class="tiles">
 <div class="tile"><span>Séries no universo</span><b>{len(series)}</b><small>{len(validas)} precificadas</small></div>
@@ -739,6 +929,8 @@ def gerar_projeto() -> str:
 <div class="tile"><span>Faixa high yield</span><b>{sum(1 for d in desvios.values() if d.get("faixa") == "high_yield")}</b><small>séries com Z ≥ 300 bps ou evento de crédito</small></div>
 <div class="tile"><span>Fora da faixa dos pares</span><b>{fora}</b><small>séries com |desvio| ≥ 1,5 dp</small></div>
 </div>
+
+<section id="ativo" class="painel" style="display:none;padding:18px"></section>
 
 <section id="mapa">
 <div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada bola grande é um segmento; dentro dele, cada bola é um grupo de risco, do tamanho do número de séries. Clique num segmento para ver os grupos. Clique numa bola para abrir as empresas do grupo; clique num emissor para abrir as emissões (coloridas pelo desvio em relação aos pares) e os documentos dele (fatos relevantes, escrituras, notícias e análises), com a ficha completa abaixo do mapa. Clique num documento para abrir o original e no nome do grupo para recolher. Linhas pontilhadas entre bolas são empresas compartilhadas entre grupos.</p></div></div>
@@ -793,6 +985,13 @@ def gerar_projeto() -> str:
 </tbody></table></div>
 </section>
 
+<section id="crisec">
+<div class="cab"><div><h2>CRI e CRA</h2><p class="muted pequeno">Certificados de recebíveis imobiliários e do agronegócio, pelo Informe Mensal das securitizadoras à CVM: situação, remuneração, lastro, LTV, inadimplência dos créditos, rating e devedores. Devedores que também emitem debêntures aparecem em negrito e na ficha do ativo. Sem preço diário de mercado: a ANBIMA não publica taxas de CRI/CRA em arquivo aberto.</p></div>
+<div><select id="criTipo"><option value="">CRI e CRA</option><option>CRI</option><option>CRA</option></select> <select id="criSit"><option value="">Toda situação</option><option>Adimplente</option><option>Em atraso</option></select> <select id="criLastro"><option value="">Todo lastro</option></select></div></div>
+<input id="criBusca" type="search" placeholder="Filtrar por código, ISIN, securitizadora ou devedor…" style="width:100%;max-width:520px;margin-bottom:8px"> <span id="criInfo" class="pequeno fraco"></span>
+<div class="painel tabela"><table><thead><tr><th class="t">Tipo</th><th class="t">Código</th><th class="t">Securitizadora</th><th class="t">Classe</th><th class="t">Situação</th><th class="t">Remuneração</th><th class="t">Vencimento</th><th class="t">Lastro</th><th>LTV</th><th>Inadimplência</th><th class="t">Rating</th><th class="t">Devedores / cedentes</th></tr></thead><tbody id="criCorpo"></tbody></table></div>
+</section>
+
 <section>
 <div class="cab"><div><h2>Modelo de spread justo</h2><p class="muted pequeno">Regressão cross-section do spread comparável das séries IPCA+ validadas, com erros padrão robustos. O spread justo de cada série é o valor ajustado; o desvio é o resíduo.</p></div></div>
 {coef_html}
@@ -819,9 +1018,9 @@ def gerar_projeto() -> str:
 <footer>Fontes: ANBIMA (taxas de debêntures e títulos públicos, ETTJ), SND/debentures.com.br (características e agenda), CVM (Formulário de Referência e IPE), agentes fiduciários (escrituras). Data de referência {dia}. A taxa indicativa é referência de preço justo, não necessariamente negócio fechado. Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.</footer>
 </main>
 <div id="tip" class="tip"></div>
-<script>window.DADOS = {dados_js};</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script>{JS}</script>"""
+<script>function iniciar(){{""" + JS + """}
+fetch('dados.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { window.DADOS = d; iniciar(); });</script>"""
     return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo)
 
 
