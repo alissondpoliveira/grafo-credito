@@ -1,0 +1,56 @@
+{
+ "data_referencia": "2026-10-01",
+ "n": 70,
+ "r2": 0.36939152990431656,
+ "dp_residuos_bps": 39.62901008074008,
+ "especificacao": "provisória, a validar",
+ "coeficientes": [
+  {
+   "variavel": "constante",
+   "descricao": "Constante",
+   "coef": 320.55076574330104,
+   "erro_padrao_hc1": 29.729833717413207,
+   "vif": null
+  },
+  {
+   "variavel": "duration_mod",
+   "descricao": "Duration modificada (anos)",
+   "coef": 11.737132976611887,
+   "erro_padrao_hc1": 2.895804043734495,
+   "vif": 1.385945336814889
+  },
+  {
+   "variavel": "garantia_real",
+   "descricao": "Garantia real (1 = sim)",
+   "coef": -9.565488678373052,
+   "erro_padrao_hc1": 12.805780331972334,
+   "vif": 1.1981831196785218
+  },
+  {
+   "variavel": "controle_documentado",
+   "descricao": "Controlador declarado na CVM (1 = sim)",
+   "coef": -42.21477775676757,
+   "erro_padrao_hc1": 11.849319240313237,
+   "vif": 1.2285197071541516
+  },
+  {
+   "variavel": "ln_volume",
+   "descricao": "ln(volume emitido, R$ milhões)",
+   "coef": -14.365041709652958,
+   "erro_padrao_hc1": 4.412073572141228,
+   "vif": 1.2401673031207663
+  },
+  {
+   "variavel": "dispersao",
+   "descricao": "Dispersão das contribuições ANBIMA (bps)",
+   "coef": -1.6478579472074764,
+   "erro_padrao_hc1": 0.9007308056098144,
+   "vif": 1.1054303998777206
+  }
+ ],
+ "di": {
+  "n": 18,
+  "mediana_bps": 51.730000000000004,
+  "dp_bps": 19.514203918560536
+ }
+}

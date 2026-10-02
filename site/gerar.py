@@ -1,7 +1,7 @@
 """Gera o site estático (alissonprata.io) a partir dos dados do repositório.
 
 Saída em site/public/: index.html (página pessoal) e grafo-credito/index.html
-(grafo do universo, simulador de choque de spread e tabela de precificação).
+(mapa de controle e risco, desvio em relação aos pares, simulador, tabela e modelo).
 
 Uso: python site/gerar.py
 """
@@ -16,61 +16,90 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 PUBLICO = RAIZ / "site" / "public"
 PREC = RAIZ / "dados" / "derivados" / "precificacao"
+JUSTO = RAIZ / "dados" / "derivados" / "spread_justo"
 UNIVERSO = RAIZ / "dados" / "referencia" / "universo_series.csv"
 CONTROLADORES = RAIZ / "dados" / "referencia" / "controladores_cvm.csv"
+CLAUSULAS = RAIZ / "dados" / "referencia" / "clausulas_escrituras.csv"
 
+FONTES = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">'
+
+# Tokens: superfícies e tintas neutras + par divergente azul/vermelho da paleta de referência (dataviz)
 CSS = """
-:root{--bg:#fbfaf8;--fg:#1d1d1f;--muted:#6b6b70;--line:#e4e2dd;--accent:#1f4e79;--chip:#eef2f6;--panel:#ffffff;--edge:#b9b6ae}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141416;--fg:#ececee;--muted:#9a9aa0;--line:#2b2b2f;--accent:#8fb8e0;--chip:#1f2630;--panel:#1b1b1e;--edge:#4a4a50}}
+:root{color-scheme:light;
+ --bg:#f7f6f3;--surface:#fcfcfb;--surface-2:#f0efec;--ink:#0b0b0b;--ink-2:#52514e;--ink-3:#8a8984;--line:#e2e0da;--line-2:#d3d1ca;
+ --accent:#1c5cab;--hull:rgba(82,81,78,.06);--hull-line:rgba(82,81,78,.28);--edge:#b5b3ab;
+ --div-neg-2:#1c5cab;--div-neg-1:#86b6ef;--div-0:#d9d7d1;--div-pos-1:#f0a3a2;--div-pos-2:#c7302f;}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;
+ --bg:#121211;--surface:#1a1a19;--surface-2:#232321;--ink:#ffffff;--ink-2:#c3c2b7;--ink-3:#8a8984;--line:#2c2c2a;--line-2:#3a3a37;
+ --accent:#6da7ec;--hull:rgba(195,194,183,.06);--hull-line:rgba(195,194,183,.25);--edge:#4d4c48;
+ --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;}}
+:root[data-theme="dark"]{color-scheme:dark;
+ --bg:#121211;--surface:#1a1a19;--surface-2:#232321;--ink:#ffffff;--ink-2:#c3c2b7;--ink-3:#8a8984;--line:#2c2c2a;--line-2:#3a3a37;
+ --accent:#6da7ec;--hull:rgba(195,194,183,.06);--hull-line:rgba(195,194,183,.25);--edge:#4d4c48;
+ --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:1080px;margin:0 auto;padding:56px 16px 80px}
-.estreito{max-width:640px}
-h1{font-size:2rem;line-height:1.2;margin:0 0 .5rem;letter-spacing:-.01em}
-h2{font-size:1.15rem;margin:2.75rem 0 .75rem}
-p{margin:.5rem 0 1rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:1120px;margin:0 auto;padding:40px 16px 80px}
+.estreito{max-width:640px;padding-top:72px}
+h1,h2,.serif{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+h1{font-size:2.6rem;line-height:1.1;margin:.25rem 0 .75rem}
+h2{font-size:1.45rem;margin:0 0 .35rem}
+h3{font-size:.95rem;margin:1.25rem 0 .4rem}
+p{margin:.4rem 0 .9rem}
 a{color:var(--accent)}
-.muted{color:var(--muted)}
-.pequeno{font-size:.86rem}
-nav{font-size:.9rem;margin-bottom:2.5rem}
-nav a{margin-right:1rem;text-decoration:none}
-.links a{margin-right:1.25rem}
-.tabela{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
-table{border-collapse:collapse;width:100%;font-size:.84rem;font-variant-numeric:tabular-nums}
-th,td{padding:.45rem .6rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
-th{font-weight:600;color:var(--muted);background:var(--chip);position:sticky;top:0}
+.kicker{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.dek{color:var(--ink-2);font-size:1.05rem;max-width:720px}
+.muted{color:var(--ink-2)}.fraco{color:var(--ink-3)}.pequeno{font-size:.82rem}
+nav{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:28px}
+nav a{color:var(--ink-2);text-decoration:none;margin-left:1.1rem}nav a:first-child{margin-left:0;color:var(--ink);font-weight:600}
+section{margin-top:48px}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.cab p{margin:0;max-width:640px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
+.tile{background:var(--surface);padding:14px 16px}
+.tile span{display:block;font-size:.76rem;color:var(--ink-2)}
+.tile b{display:block;font-size:1.55rem;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
+.tile small{color:var(--ink-3);font-size:.74rem}
+.painel{background:var(--surface);border:1px solid var(--line);border-radius:10px}
+#grafo{width:100%;height:auto;aspect-ratio:16/10;display:block;touch-action:none;border-radius:10px}
+.controles{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line)}
+.controles label{font-size:.8rem;color:var(--ink-2);display:inline-flex;gap:6px;align-items:center}
+select,input,button{font:inherit;font-size:.85rem;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:6px;padding:.35rem .55rem}
+button{cursor:pointer;background:var(--surface-2)}
+button.ativo{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--ink-2);padding:10px 12px;border-top:1px solid var(--line)}
+.legenda i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.escala{display:inline-flex;align-items:center;gap:6px}.escala b{display:inline-flex}.escala b i{width:18px;height:10px;border-radius:2px;margin:0 1px 0 0}
+.tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:8px;padding:8px 10px;font-size:.8rem;line-height:1.45;max-width:300px;display:none;z-index:20;box-shadow:0 6px 24px rgba(0,0,0,.14)}
+.tip b{font-weight:600}.tip .l{display:flex;justify-content:space-between;gap:14px;font-variant-numeric:tabular-nums}.tip .l span:first-child{color:var(--ink-2)}
+#desvio{width:100%;display:block}
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:0}
+.sim>div{padding:16px}.sim>div:first-child{border-right:1px solid var(--line)}
+@media (max-width:760px){.sim{grid-template-columns:1fr}.sim>div:first-child{border-right:0;border-bottom:1px solid var(--line)}}
+.sim label{display:block;font-size:.78rem;color:var(--ink-2);margin:.7rem 0 .25rem}.sim label:first-child{margin-top:0}
+.sim select,.sim input{width:100%}
+.botoes{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6rem}
+.res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.res div{background:var(--surface);padding:10px 12px}
+.res small{color:var(--ink-2);display:block;font-size:.74rem}
+.res b{font-size:1.15rem;font-weight:600;font-variant-numeric:tabular-nums}
+.tabela{overflow:auto;max-height:640px}
+table{border-collapse:collapse;width:100%;font-size:.8rem;font-variant-numeric:tabular-nums}
+th,td{padding:.42rem .6rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-weight:600;color:var(--ink-2);background:var(--surface-2);position:sticky;top:0;cursor:pointer;user-select:none;z-index:1}
+th:hover{color:var(--ink)}
 td.t,th.t{text-align:left}
-tr:last-child td{border-bottom:0}
-tbody tr{cursor:pointer}
-tbody tr:hover{background:var(--chip)}
-.chip{display:inline-block;padding:.05rem .5rem;border-radius:99px;background:var(--chip);font-size:.76rem}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1.25rem 0}
-.card{border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;background:var(--panel)}
-.card b{display:block;font-size:1.35rem}
-#grafo{width:100%;height:auto;aspect-ratio:5/3;max-height:640px;border:1px solid var(--line);border-radius:8px;background:var(--panel);display:block;touch-action:none}
-.legenda{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.8rem;color:var(--muted);margin:.5rem 0}
-.legenda span{display:inline-flex;align-items:center;gap:.35rem}
-.bolinha{width:10px;height:10px;border-radius:50%;display:inline-block}
-.tip{position:fixed;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.4rem .6rem;font-size:.8rem;max-width:280px;display:none;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px;border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--panel)}
-@media (max-width:760px){.sim{grid-template-columns:1fr}}
-.sim label{display:block;font-size:.82rem;color:var(--muted);margin:.6rem 0 .2rem}
-.sim select,.sim input{width:100%;padding:.45rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
-.botoes{display:flex;flex-wrap:wrap;gap:6px;margin-top:.5rem}
-.botoes button{padding:.3rem .6rem;border:1px solid var(--line);border-radius:6px;background:var(--chip);color:var(--fg);font:inherit;font-size:.82rem;cursor:pointer}
-.res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.res div{border:1px solid var(--line);border-radius:6px;padding:.5rem .7rem}
-.res small{color:var(--muted);display:block;font-size:.76rem}
-.res b{font-size:1.1rem;font-variant-numeric:tabular-nums}
-ol li,ul li{margin-bottom:.35rem}
-footer{margin-top:3rem;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+tbody tr[data-codigo]{cursor:pointer}tbody tr:hover{background:var(--surface-2)}
+.marca{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.selo{display:inline-block;padding:0 .4rem;border-radius:4px;font-size:.7rem;border:1px solid var(--line-2);color:var(--ink-2)}
+.coef td:first-child{text-align:left}
+ul.metodo li{margin-bottom:.45rem;color:var(--ink-2)}ul.metodo b{color:var(--ink)}
+footer{margin-top:56px;font-size:.78rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
+.links a{margin-right:1.25rem}
 """
 
-CORES = ["#4e79a7", "#f28e2b", "#59a14f", "#e15759", "#76b7b2", "#edc948", "#b07aa1", "#ff9da7", "#9c755f", "#2f8f9d"]
-COR_ISOLADA = "#9a9aa0"
 
-
-def pagina(titulo: str, descricao: str, corpo: str, extra_head: str = "") -> str:
+def pagina(titulo: str, descricao: str, corpo: str) -> str:
     return f"""<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -78,8 +107,8 @@ def pagina(titulo: str, descricao: str, corpo: str, extra_head: str = "") -> str
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(titulo)}</title>
 <meta name="description" content="{html.escape(descricao)}">
+{FONTES}
 <style>{CSS}</style>
-{extra_head}
 </head>
 <body>
 {corpo}
@@ -96,16 +125,21 @@ def num(v, casas=2):
 
 def gerar_home() -> str:
     corpo = """<main class="estreito">
+<div class="kicker">Pesquisa em crédito e mercado</div>
 <h1>Alisson Prata Oliveira</h1>
-<p class="muted">Planejador financeiro CFP®, candidato ao CFA Level II e engenheiro de produção (UFTM). No mercado financeiro desde 2019.</p>
+<p class="dek">Planejador financeiro CFP®, candidato ao CFA Level II e engenheiro de produção (UFTM). No mercado financeiro desde 2019.</p>
 
+<section>
 <h2>Financial Syntax</h2>
-<p>Financial Syntax é onde publico análises de mercado escritas para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+<p class="muted">Financial Syntax é onde publico análises de mercado escritas para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+</section>
 
+<section>
 <h2>Projetos</h2>
-<p><a href="/grafo-credito">Grafo de Crédito</a>: memória viva dos emissores de debêntures do crédito privado brasileiro, começando pelas transmissoras de energia.</p>
+<p class="muted"><a href="/grafo-credito">Grafo de Crédito</a>: memória viva dos emissores de debêntures do crédito privado brasileiro, começando pelas transmissoras de energia.</p>
+</section>
 
-<p class="links" style="margin-top:2rem">
+<p class="links" style="margin-top:2.5rem">
 <a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>
 <a href="https://github.com/alissondpoliveira">GitHub</a>
 </p>
@@ -113,9 +147,13 @@ def gerar_home() -> str:
     return pagina("Alisson Prata Oliveira", "Alisson Prata Oliveira: análise de mercado e crédito privado.", corpo)
 
 
-def montar_grafo(series: list[dict], universo: dict, cores: dict) -> dict:
+def ler_csv(p: Path) -> list[dict]:
+    return list(csv.DictReader(p.open(encoding="utf-8"))) if p.exists() else []
+
+
+def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: dict) -> dict:
     controladores = {}
-    for c in csv.DictReader(CONTROLADORES.open(encoding="utf-8")):
+    for c in ler_csv(CONTROLADORES):
         controladores.setdefault(c["cnpj_companhia"], []).append(c)
 
     nos, links, vistos = [], [], set()
@@ -128,245 +166,358 @@ def montar_grafo(series: list[dict], universo: dict, cores: dict) -> dict:
     for s in series:
         u = universo[s["codigo"]]
         g = u["grupo_risco"]
-        cor = cores.get(g, COR_ISOLADA)
         em_id = "e:" + u["cnpj"]
-        no(em_id, tipo="emissor", rotulo=u["emissor_atual_snd"].title(), grupo=g, cor=cor,
-           detalhe=f"CNPJ {u['cnpj']} · nome ANBIMA: {u['emissor_anbima'].title()}")
-        z = s.get("zspread_bps")
-        no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g, cor=cor,
-           detalhe=(f"Z-spread {num(z, 0)} bps · duration {num(s.get('duration_mod_anos'), 2)}" if z else s["status"]),
-           z=float(z) if z else None)
+        no(em_id, tipo="emissor", rotulo=u["emissor_atual_snd"].title(), grupo=g,
+           detalhe=f"CNPJ {u['cnpj']}" + (f" · nome ANBIMA: {u['emissor_anbima'].title()}" if u["emissor_anbima"] != u["emissor_atual_snd"] else ""))
+        d = desvios.get(s["codigo"], {})
+        no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g,
+           spread=d.get("spread"), justo=d.get("justo"), desvio=d.get("desvio"), dp=d.get("dp"), classe=d.get("classe"),
+           status=s["status"])
         links.append({"source": em_id, "target": "s:" + s["codigo"], "tipo": "emitiu"})
 
         if u["fonte_grupo"] == "CVM FRE":
-            # cadeia declarada: cada controlador aponta para quem ele controla (outra holding ou o emissor)
             for c in controladores.get(u["cnpj"], []):
                 c_id = "c:" + (c["cnpj_controlador"] or c["controlador"])
-                no(c_id, tipo="controlador", rotulo=c["controlador"], grupo=g, cor=cor, detalhe="controlador declarado no Formulário de Referência (CVM)")
+                no(c_id, tipo="controlador", rotulo=c["controlador"], grupo=g, detalhe="controlador declarado na CVM")
+                alvo = em_id
                 if c["socio_de"]:
                     alvo = "c:" + (c["cnpj_socio_de"] or c["socio_de"])
-                    no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, cor=cor, detalhe="controlador declarado no Formulário de Referência (CVM)")
-                else:
-                    alvo = em_id
+                    no(alvo, tipo="controlador", rotulo=c["socio_de"], grupo=g, detalhe="controlador declarado na CVM")
                 links.append({"source": c_id, "target": alvo, "tipo": "controla"})
         elif u["fonte_grupo"] == "inferido":
             g_id = "g:" + g
-            no(g_id, tipo="grupo", rotulo=g, grupo=g, cor=cor, detalhe="grupo inferido, a confirmar na escritura")
-            links.append({"source": g_id, "target": em_id, "tipo": "inferido", "motivo": u["motivo_grupo"]})
+            no(g_id, tipo="grupo", rotulo=g, grupo=g, detalhe="grupo inferido, a confirmar na escritura")
+            links.append({"source": g_id, "target": em_id, "tipo": "inferido"})
 
-    # liga grupos inferidos aos controladores documentados do mesmo grupo
+        # garantidores e controladores citados na escritura (quando já lidos)
+        cl = clausulas.get(s["codigo"])
+        if cl and cl.get("fiadora"):
+            f_id = "f:" + cl["fiadora"].upper()
+            no(f_id, tipo="garantidor", rotulo=cl["fiadora"], grupo=g, detalhe="fiadora citada na escritura")
+            links.append({"source": f_id, "target": "s:" + s["codigo"], "tipo": "garante"})
+
     for n in [n for n in nos if n["tipo"] == "grupo"]:
         for c in [c for c in nos if c["tipo"] == "controlador" and c["grupo"] == n["grupo"]]:
-            links.append({"source": n["id"], "target": c["id"], "tipo": "inferido", "motivo": "mesmo grupo de risco"})
+            links.append({"source": n["id"], "target": c["id"], "tipo": "inferido"})
     unicos = {(l["source"], l["target"], l["tipo"]): l for l in links}
     return {"nodes": nos, "links": list(unicos.values())}
 
 
 JS = r"""
 const D = window.DADOS;
-const fmt = (v, c=2) => v==null||isNaN(v) ? '–' : v.toLocaleString('pt-BR',{minimumFractionDigits:c,maximumFractionDigits:c});
+const fmt = (v, c=2) => v==null||isNaN(v) ? '–' : Number(v).toLocaleString('pt-BR',{minimumFractionDigits:c,maximumFractionDigits:c});
+const sinal = (v, c=0) => v==null||isNaN(v) ? '–' : (v>0?'+':'')+fmt(v,c);
+const tip = document.getElementById('tip');
+const mostrar = (e, h) => { tip.innerHTML = h; tip.style.display = 'block'; mover(e); };
+const mover = e => { const x = Math.min(e.clientX+14, innerWidth-tip.offsetWidth-8); tip.style.left = x+'px'; tip.style.top = (e.clientY+14)+'px'; };
+const esconder = () => tip.style.display = 'none';
+const linha = (a, b) => '<div class="l"><span>'+a+'</span><span>'+b+'</span></div>';
+// desvio em desvios-padrão -> cinco degraus do par divergente (neutro no meio)
+const corDesvio = dp => dp==null||isNaN(dp) ? 'var(--surface)' : dp<=-1.5?'var(--div-neg-2)': dp<=-.5?'var(--div-neg-1)': dp<.5?'var(--div-0)': dp<1.5?'var(--div-pos-1)':'var(--div-pos-2)';
+const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span><br><span class="fraco">'+n.grupo+'</span>'
+  + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps') + linha(n.classe==='DI+'?'Mediana DI+':'Spread justo (pares)', fmt(n.justo,0)+' bps') + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') : '<br>'+n.status);
 
-// ---------- grafo ----------
+// ---------- mapa de controle e risco ----------
 (function(){
-  const svg = d3.select('#grafo'), tip = document.getElementById('tip');
-  const W = () => 1000, H = 600;
-  svg.attr('viewBox', '0 0 1000 600').attr('preserveAspectRatio', 'xMidYMid meet');
+  const svg = d3.select('#grafo'); const W = 1120, H = 700;
+  svg.attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio','xMidYMid meet');
   const g = svg.append('g');
-  svg.call(d3.zoom().scaleExtent([0.2, 4]).on('zoom', e => g.attr('transform', e.transform)));
-  const raio = n => n.tipo==='controlador'?8 : n.tipo==='grupo'?10 : n.tipo==='emissor'?6 : 3.2;
-  // cada grupo de risco ganha uma região própria num círculo; isoladas ficam num anel externo
-  const grupos = [...new Set(D.grafo.nodes.map(n=>n.grupo).filter(g=>g && !g.startsWith('Isolada')))];
-  const ancora = {}; grupos.forEach((g,i) => { const a = 2*Math.PI*i/grupos.length; ancora[g] = [500+250*Math.cos(a), 300+190*Math.sin(a)]; });
-  const ax = n => ancora[n.grupo] ? ancora[n.grupo][0] : 500, ay = n => ancora[n.grupo] ? ancora[n.grupo][1] : 300;
-  const forca = n => ancora[n.grupo] ? .14 : .07;
-  D.grafo.nodes.forEach(n => { n.x = ax(n) + (Math.random()-.5)*60; n.y = ay(n) + (Math.random()-.5)*60; });
-  const sim = d3.forceSimulation(D.grafo.nodes)
-    .force('link', d3.forceLink(D.grafo.links).id(d=>d.id).distance(l => l.tipo==='emitiu'?14:34).strength(l => l.tipo==='emitiu'?1:.35))
-    .force('charge', d3.forceManyBody().strength(n => n.tipo==='serie'?-14 : n.tipo==='emissor'?-60 : -110).distanceMax(220))
-    .force('x', d3.forceX(ax).strength(forca)).force('y', d3.forceY(ay).strength(forca))
-    .force('colide', d3.forceCollide().radius(n => raio(n)+1.5));
-  const link = g.append('g').selectAll('line').data(D.grafo.links).join('line')
-    .attr('stroke', 'var(--edge)').attr('stroke-opacity', l => l.tipo==='emitiu'?.55:.9)
-    .attr('stroke-width', l => l.tipo==='emitiu'?.7:1.3).attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3':null);
-  const node = g.append('g').selectAll('circle').data(D.grafo.nodes).join('circle')
-    .attr('r', raio).attr('fill', n => n.tipo==='serie'?'var(--panel)':n.cor)
-    .attr('stroke', n => n.cor).attr('stroke-width', n => n.tipo==='serie'?1.6:0)
-    .style('cursor','pointer')
-    .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y})
-                   .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y})
-                   .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
-  const rot = g.append('g').selectAll('text').data(D.grafo.nodes.filter(n=>n.tipo!=='serie')).join('text')
-    .attr('display', n => n.tipo==='emissor' ? 'none' : null)
-    .text(n => n.rotulo.length>28 ? n.rotulo.slice(0,27)+'…' : n.rotulo)
-    .attr('font-size', n => n.tipo==='emissor'?8:9.5).attr('fill','var(--muted)').attr('dx', n=>raio(n)+3).attr('dy', 3)
-    .style('pointer-events','none');
-  const viz = new Map(); D.grafo.links.forEach(l => {[[l.source,l.target],[l.target,l.source]].forEach(([a,b]) => {const k=a.id||a; if(!viz.has(k))viz.set(k,new Set()); viz.get(k).add(b.id||b);});});
-  node.on('mouseenter', (e, n) => {
-      const v = viz.get(n.id)||new Set();
-      node.attr('opacity', m => m.id===n.id||v.has(m.id)?1:.15);
-      rot.attr('opacity', m => m.id===n.id||v.has(m.id)?1:.15).attr('display', m => m.tipo!=='emissor'||m.id===n.id||v.has(m.id)?null:'none');
-      link.attr('opacity', l => l.source.id===n.id||l.target.id===n.id?1:.08);
-      tip.style.display='block'; tip.innerHTML = '<b>'+n.rotulo+'</b><br><span class="muted">'+(n.grupo||'')+'</span><br>'+(n.detalhe||'');
-    })
-    .on('mousemove', e => {tip.style.left=(e.clientX+12)+'px'; tip.style.top=(e.clientY+12)+'px';})
-    .on('mouseleave', () => {node.attr('opacity',1); rot.attr('opacity',1).attr('display', m => m.tipo==='emissor'?'none':null); link.attr('opacity',1); tip.style.display='none';})
-    .on('click', (e, n) => { if(n.tipo==='serie'){ selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); }});
+  svg.call(d3.zoom().scaleExtent([.4, 5]).on('zoom', e => g.attr('transform', e.transform)));
+  const nos = D.grafo.nodes, links = D.grafo.links;
+  const raio = n => ({controlador:6, grupo:7, garantidor:6, emissor:5.5, serie:4.2})[n.tipo];
+  const grupos = [...new Set(nos.map(n=>n.grupo).filter(x=>!x.startsWith('Isolada')))];
+  const tam = Object.fromEntries(grupos.map(x => [x, nos.filter(n=>n.grupo===x).length]));
+  grupos.sort((a,b)=>tam[b]-tam[a]);
+  const ancora = {}; grupos.forEach((x,i) => { const a = -Math.PI/2 + 2*Math.PI*i/grupos.length; ancora[x] = [W/2+330*Math.cos(a), H/2+250*Math.sin(a)]; });
+  const ax = n => ancora[n.grupo] ? ancora[n.grupo][0] : W/2, ay = n => ancora[n.grupo] ? ancora[n.grupo][1] : H/2;
+  nos.forEach(n => { n.x = ax(n)+(Math.random()-.5)*40; n.y = ay(n)+(Math.random()-.5)*40; });
+  const sim = d3.forceSimulation(nos)
+    .force('link', d3.forceLink(links).id(d=>d.id).distance(l => l.tipo==='emitiu'?13:30).strength(l => l.tipo==='emitiu'?1:.4))
+    .force('charge', d3.forceManyBody().strength(n => n.tipo==='serie'?-12:-55).distanceMax(180))
+    .force('x', d3.forceX(ax).strength(n => ancora[n.grupo]?.16:.08)).force('y', d3.forceY(ay).strength(n => ancora[n.grupo]?.16:.08))
+    .force('colide', d3.forceCollide().radius(n => raio(n)+2));
+  for (let i=0;i<450;i++) sim.tick(); sim.stop();
+
+  const camHull = g.append('g'), camLink = g.append('g'), camNo = g.append('g'), camRot = g.append('g');
+  const hullDe = x => { const pts = nos.filter(n=>n.grupo===x).flatMap(n => { const r=raio(n)+12; return [[n.x-r,n.y],[n.x+r,n.y],[n.x,n.y-r],[n.x,n.y+r]]; }); return d3.polygonHull(pts); };
+  const contornos = nos.some(n=>n.grupo.startsWith('Isolada')) ? [...grupos, 'Isolada (a identificar)'] : grupos;
+  const hull = camHull.selectAll('path').data(contornos).join('path').attr('stroke-dasharray', x => x.startsWith('Isolada')?'3 3':null).attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-width',1).attr('stroke-linejoin','round');
+  const hullRot = camHull.selectAll('text').data(contornos).join('text').text(x=>x.startsWith('Isolada')?'ISOLADAS · GRUPO A IDENTIFICAR':x.toUpperCase())
+    .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.08em').attr('fill','var(--ink-2)').attr('text-anchor','middle');
+  const link = camLink.selectAll('line').data(links).join('line').attr('stroke','var(--edge)')
+    .attr('stroke-width', l => l.tipo==='emitiu'?.7 : l.tipo==='garante'?1.6 : 1.2)
+    .attr('stroke-dasharray', l => l.tipo==='inferido'?'4 3' : l.tipo==='garante'?'1 2.5' : null);
+  const no = camNo.selectAll('g').data(nos).join('g').style('cursor','pointer');
+  no.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
+    .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
+  no.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
+  no.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill','var(--surface)').attr('stroke','var(--ink)').attr('stroke-width',1.4);
+  no.filter(n=>n.tipo==='serie').append('circle').attr('r',raio).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2);
+  const rot = camRot.selectAll('text').data(nos.filter(n=>n.tipo!=='serie')).join('text')
+    .text(n => n.rotulo.length>30 ? n.rotulo.slice(0,29)+'…' : n.rotulo).attr('font-size',8.5).attr('fill','var(--ink-2)')
+    .attr('dx', n=>raio(n)+3).attr('dy',3).style('pointer-events','none')
+    .attr('paint-order','stroke').attr('stroke','var(--surface)').attr('stroke-width',3);
+
+  let rotulos = 'controle';
+  const visRot = n => rotulos==='todos' || (rotulos==='controle' && n.tipo!=='emissor');
   const desenhar = () => {
+    hull.attr('d', x => { const h = hullDe(x); return h ? 'M'+h.join('L')+'Z' : null; });
+    hullRot.each(function(x){ const ns = nos.filter(n=>n.grupo===x); d3.select(this).attr('x', d3.mean(ns,n=>n.x)).attr('y', d3.min(ns,n=>n.y)-16); });
     link.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
-    node.attr('cx',n=>n.x).attr('cy',n=>n.y); rot.attr('x',n=>n.x).attr('y',n=>n.y);
+    no.attr('transform', n => `translate(${n.x},${n.y})`); rot.attr('x',n=>n.x).attr('y',n=>n.y);
   };
-  sim.stop(); for (let i=0; i<400; i++) sim.tick(); desenhar();  // layout pronto antes de aparecer
+  const aplicarRot = () => rot.attr('display', n => visRot(n)?null:'none');
+  desenhar(); aplicarRot();
   sim.on('tick', desenhar);
+  no.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.25).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+
+  const viz = new Map(); links.forEach(l => [[l.source.id,l.target.id],[l.target.id,l.source.id]].forEach(([a,b]) => { if(!viz.has(a)) viz.set(a,new Set()); viz.get(a).add(b); }));
+  const realcar = ids => { no.attr('opacity', n => !ids||ids.has(n.id)?1:.12); rot.attr('opacity', n => !ids||ids.has(n.id)?1:.12).attr('display', n => ids&&ids.has(n.id) ? null : visRot(n)?null:'none'); link.attr('opacity', l => !ids||(ids.has(l.source.id)&&ids.has(l.target.id))?1:.06); hull.attr('opacity', x => !ids||[...ids].some(i=>nos.find(n=>n.id===i)?.grupo===x)?1:.3); };
+  no.on('mouseenter', (e,n) => { const ids = new Set([n.id, ...(viz.get(n.id)||[])]); realcar(ids);
+        mostrar(e, n.tipo==='serie' ? textoSerie(n) : '<b>'+n.rotulo+'</b><br><span class="fraco">'+n.grupo+'</span><br>'+(n.detalhe||'')); })
+    .on('mousemove', mover).on('mouseleave', () => { realcar(null); esconder(); aplicarRot(); })
+    .on('click', (e,n) => { if (n.tipo==='serie') { selecionar(n.rotulo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } });
+  const selG = document.getElementById('filtroGrupo');
+  ['Todos os grupos', ...grupos, 'Isolada (a identificar)'].forEach(x => { const o=document.createElement('option'); o.value=x; o.textContent=x; selG.appendChild(o); });
+  selG.addEventListener('change', () => { const x = selG.value; realcar(x==='Todos os grupos'?null:new Set(nos.filter(n=>n.grupo===x).map(n=>n.id))); });
+  document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
 })();
+
+// ---------- desvio em relação aos pares (barras divergentes) ----------
+function desenharDesvio(classe){
+  const dados = D.desvios.filter(d => d.classe===classe && d.desvio!=null).sort((a,b)=>b.desvio-a.desvio);
+  const svg = d3.select('#desvio'); svg.selectAll('*').remove();
+  const W = 1080, lin = 15, M = {t:24, r:70, b:8, l:150}, H = M.t + dados.length*lin + M.b;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const lim = Math.max(30, d3.max(dados, d => Math.abs(d.desvio)));
+  const x = d3.scaleLinear().domain([-lim, lim]).range([M.l, W-M.r]).nice();
+  x.ticks(6).forEach(t => { svg.append('line').attr('x1',x(t)).attr('x2',x(t)).attr('y1',M.t-6).attr('y2',H-M.b).attr('stroke','var(--line)').attr('stroke-width', t===0?1.2:1);
+    svg.append('text').attr('x',x(t)).attr('y',M.t-10).attr('text-anchor','middle').attr('font-size',10).attr('fill','var(--ink-3)').text(sinal(t)); });
+  const gr = svg.append('g').selectAll('g').data(dados).join('g').attr('transform',(d,i)=>`translate(0,${M.t+i*lin})`);
+  gr.append('rect').attr('x', d => Math.min(x(0), x(d.desvio))).attr('y', 2).attr('height', lin-4).attr('width', d => Math.max(1, Math.abs(x(d.desvio)-x(0)))).attr('rx', 2).attr('fill', d => corDesvio(d.dp));
+  gr.append('text').attr('x', M.l-8).attr('y', lin/2+3.5).attr('text-anchor','end').attr('font-size',10.5).attr('fill','var(--ink)').text(d => d.codigo);
+  gr.append('text').attr('x', M.l-62).attr('y', lin/2+3.5).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text(d => d.grupo.startsWith('Isolada')?'isolada':d.grupo.split(' ')[0]);
+  gr.append('text').attr('x', d => d.desvio>=0 ? x(d.desvio)+5 : x(d.desvio)-5).attr('y', lin/2+3.5).attr('text-anchor', d=>d.desvio>=0?'start':'end').attr('font-size',9.5).attr('fill','var(--ink-2)').text(d => sinal(d.desvio));
+  gr.append('rect').attr('x',0).attr('width',W).attr('height',lin).attr('fill','transparent').style('cursor','pointer')
+    .on('mouseenter', (e,d) => mostrar(e, '<b>'+d.codigo+'</b> · '+d.emissor+'<br><span class="fraco">'+d.grupo+'</span>' + linha(classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(d.spread,0)+' bps') + linha(classe==='DI+'?'Mediana DI+':'Spread justo', fmt(d.justo,0)+' bps') + linha('Desvio', sinal(d.desvio)+' bps ('+sinal(d.dp,1)+' dp)') + linha('Variação no histórico', d.var_hist==null?'–':sinal(d.var_hist)+' bps ('+d.n_hist+' dias)')))
+    .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => { if (D.fluxos[d.codigo]||D.di[d.codigo]) { selecionar(d.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); } });
+}
+document.querySelectorAll('[data-classe]').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('[data-classe]').forEach(x=>x.classList.toggle('ativo', x===b)); desenharDesvio(b.dataset.classe); }));
+desenharDesvio('IPCA+');
 
 // ---------- simulador ----------
 const sel = document.getElementById('serie'), choque = document.getElementById('choque');
-D.series.filter(s => D.fluxos[s.codigo]).forEach(s => { const o=document.createElement('option'); o.value=s.codigo; o.textContent=s.codigo+' · '+s.emissor; sel.appendChild(o); });
-function preco(f, y){ let p=0; for(let i=0;i<f.t.length;i++) p += f.cf[i]/Math.pow(1+y, f.t[i]); return p; }
+D.series.forEach(s => { const o=document.createElement('option'); o.value=s.codigo; o.textContent=s.codigo+' · '+s.emissor+(s.classe==='DI+'?' (DI+)':''); sel.appendChild(o); });
+const preco = (f, y) => f.t.reduce((p,t,i) => p + f.cf[i]/Math.pow(1+y, t), 0);
 function calcular(){
-  const s = D.series.find(x => x.codigo===sel.value), f = D.fluxos[sel.value]; if(!s||!f) return;
-  const ds = (parseFloat(choque.value)||0)/1e4, p0 = preco(f, f.y), p1 = preco(f, f.y+ds);
-  const cheio = (p1/p0-1)*100, aprox = (-s.dmod*ds + .5*s.convex*ds*ds)*100;
-  document.getElementById('r_pu').textContent = 'R$ '+fmt(s.pu,2);
-  document.getElementById('r_pu_novo').textContent = 'R$ '+fmt(s.pu*p1/p0,2);
-  document.getElementById('r_var').textContent = fmt(cheio,2)+'%';
+  const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
+  const f = D.fluxos[s.codigo], ds = (parseFloat(choque.value)||0)/1e4;
+  const aprox = (-s.dmod*ds + (s.convex? .5*s.convex*ds*ds : 0))*100;
+  const cheio = f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : null;
+  const v = cheio!=null ? cheio : aprox;
+  document.getElementById('r_pu').textContent = s.pu ? 'R$ '+fmt(s.pu,2) : '–';
+  document.getElementById('r_pu_novo').textContent = s.pu ? 'R$ '+fmt(s.pu*(1+v/100),2) : '–';
+  document.getElementById('r_var').textContent = cheio!=null ? fmt(cheio,2)+'%' : 'n/d (DI+)';
   document.getElementById('r_aprox').textContent = fmt(aprox,2)+'%';
   document.getElementById('r_dur').textContent = fmt(s.dmod,2)+' anos';
-  document.getElementById('r_z').textContent = fmt(s.zc,0)+' bps' + (s.zgu!=null ? ' (mercado '+fmt(s.z,0)+')' : '');
-  document.getElementById('r_be6').textContent = fmt(s.be6,1)+' bps';
-  document.getElementById('r_be12').textContent = fmt(s.be12,1)+' bps';
+  document.getElementById('r_z').textContent = fmt(s.spread,0)+' bps' + (s.classe==='DI+'?' sobre CDI':'');
+  document.getElementById('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
+  document.getElementById('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
 }
 function selecionar(c){ sel.value=c; calcular(); }
 sel.addEventListener('change', calcular); choque.addEventListener('input', calcular);
 document.querySelectorAll('.botoes button').forEach(b => b.addEventListener('click', () => { choque.value=b.dataset.v; calcular(); }));
-document.querySelectorAll('tbody tr[data-codigo]').forEach(tr => tr.addEventListener('click', () => { selecionar(tr.dataset.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); }));
 if (sel.options.length) { sel.value = sel.options[0].value; calcular(); }
+
+// ---------- tabela: ordenar e abrir no simulador ----------
+document.querySelectorAll('tbody tr[data-codigo]').forEach(tr => tr.addEventListener('click', () => { selecionar(tr.dataset.codigo); document.getElementById('simulador').scrollIntoView({behavior:'smooth'}); }));
+document.querySelectorAll('#tab th').forEach((th, i) => th.addEventListener('click', () => {
+  const corpo = document.querySelector('#tab tbody'), linhas = [...corpo.rows], asc = th.dataset.asc !== '1'; th.dataset.asc = asc?'1':'0';
+  const val = r => { const t = r.cells[i].dataset.v ?? r.cells[i].textContent; const n = parseFloat(t); return isNaN(n) ? t : n; };
+  linhas.sort((a,b) => { const x=val(a), y=val(b); return (x>y?1:x<y?-1:0)*(asc?1:-1); }).forEach(r => corpo.appendChild(r));
+}));
 """
 
 
 def gerar_projeto() -> str:
-    arq = sorted(p for p in PREC.glob("*.csv"))[-1]
+    arq = sorted(PREC.glob("????-??-??.csv"))[-1]
     data_ref = arq.stem
-    series = list(csv.DictReader(arq.open(encoding="utf-8")))
+    series = ler_csv(arq)
     fluxos = json.loads((PREC / f"{data_ref}_fluxos.json").read_text(encoding="utf-8"))
-    universo = {u["codigo"]: u for u in csv.DictReader(UNIVERSO.open(encoding="utf-8"))}
+    universo = {u["codigo"]: u for u in ler_csv(UNIVERSO)}
+    justos = {j["codigo"]: j for j in ler_csv(JUSTO / f"{data_ref}.csv")}
+    modelo = json.loads((JUSTO / f"{data_ref}_modelo.json").read_text(encoding="utf-8")) if (JUSTO / f"{data_ref}_modelo.json").exists() else None
+    clausulas = {c["codigo"]: c for c in ler_csv(CLAUSULAS)}
 
-    grupos = sorted({universo[s["codigo"]]["grupo_risco"] for s in series} - {"Isolada (a identificar)"})
-    cores = {g: CORES[i % len(CORES)] for i, g in enumerate(grupos)}
-    grafo = montar_grafo(series, universo, cores)
+    f = lambda v: float(v) if v not in ("", None) else None
+    desvios = {}
+    for s in series:
+        j = justos.get(s["codigo"])
+        if j:
+            desvios[s["codigo"]] = {"classe": j["classe"], "spread": f(j["spread_bps"]), "justo": f(j["spread_justo_bps"]),
+                                    "desvio": f(j["desvio_bps"]), "dp": f(j["desvio_em_dp"]), "var_hist": f(j["variacao_hist_bps"]),
+                                    "n_hist": int(j["n_dias_hist"] or 0)}
+    grafo = montar_grafo(series, universo, desvios, clausulas)
 
-    ok = [s for s in series if s["status"] == "ok"]
-    zs = [float(s["zspread_bps"]) for s in ok]
-    zcomp = [float(s["zspread_comparavel_bps"]) for s in ok]
+    validas = [s for s in series if s["status"] in ("ok", "ok DI+")]
+    dados_series, di = [], {}
+    for s in validas:
+        d = desvios.get(s["codigo"], {})
+        dados_series.append({
+            "codigo": s["codigo"], "emissor": s["emissor_atual"].title(), "classe": d.get("classe"),
+            "pu": f(s["pu_anbima"]), "dmod": f(s["duration_mod_anos"]), "convex": f(s.get("convexidade")),
+            "spread": d.get("spread"), "desvio": d.get("desvio"), "dp": d.get("dp"), "be12": f(s.get("breakeven_12m_bps")),
+        })
+        if s["status"] == "ok DI+":
+            di[s["codigo"]] = True
+    lista_desvios = [{"codigo": c, "emissor": universo[c]["emissor_atual_snd"].title(), "grupo": universo[c]["grupo_risco"], **v}
+                     for c, v in desvios.items()]
+
+    ipca = [d for d in desvios.values() if d["classe"] == "IPCA+"]
     n_emissores = len({universo[s["codigo"]]["cnpj"] for s in series})
     n_cvm = len({universo[s["codigo"]]["cnpj"] for s in series if universo[s["codigo"]]["fonte_grupo"] == "CVM FRE"})
+    n_grupos = len({universo[s["codigo"]]["grupo_risco"] for s in series} - {"Isolada (a identificar)"})
+    mediana = statistics.median(d["spread"] for d in ipca) if ipca else None
+    fora = sum(1 for d in ipca if d["dp"] is not None and abs(d["dp"]) >= 1.5)
 
-    dados_series = [{
-        "codigo": s["codigo"], "emissor": s["emissor_atual"].title(), "pu": float(s["pu_anbima"]) if s["pu_anbima"] else None,
-        "dmod": float(s["duration_mod_anos"]), "convex": float(s["convexidade"]), "z": float(s["zspread_bps"]),
-        "zgu": float(s["zspread_grossup_bps"]) if s["zspread_grossup_bps"] else None,
-        "zc": float(s["zspread_comparavel_bps"]),
-        "be6": float(s["breakeven_6m_bps"]), "be12": float(s["breakeven_12m_bps"]),
-    } for s in ok]
-
-    ordenadas = sorted(series, key=lambda s: (universo[s["codigo"]]["grupo_risco"].startswith("Isolada"), universo[s["codigo"]]["grupo_risco"], s["emissor_atual"], s["codigo"]))
     trs = []
-    for s in ordenadas:
-        u = universo[s["codigo"]]
-        cor = cores.get(u["grupo_risco"], COR_ISOLADA)
+    ordem = sorted(series, key=lambda s: (desvios.get(s["codigo"], {}).get("desvio") is None, -(desvios.get(s["codigo"], {}).get("desvio") or 0)))
+    for s in ordem:
+        u, d = universo[s["codigo"]], desvios.get(s["codigo"], {})
+        valida = s["status"] in ("ok", "ok DI+")
+        cl = clausulas.get(s["codigo"], {})
         fonte = {"CVM FRE": "CVM", "inferido": "inferido"}.get(u["fonte_grupo"], "")
-        incent = {"S": "sim", "N": "não"}.get(s["incentivada"], "–")
-        ok_s = s["status"] == "ok"
-        abre = f'<tr data-codigo="{html.escape(s["codigo"])}">' if ok_s else "<tr>"
+        dp = d.get("dp")
+        cor = "var(--surface)" if dp is None else "var(--div-neg-2)" if dp <= -1.5 else "var(--div-neg-1)" if dp <= -.5 else "var(--div-0)" if dp < .5 else "var(--div-pos-1)" if dp < 1.5 else "var(--div-pos-2)"
+        abre = f'<tr data-codigo="{html.escape(s["codigo"])}">' if valida else "<tr>"
+        celula = lambda v, c=0, sinal=False: f'<td data-v="{"" if v is None else v}">{("+" if sinal and v is not None and v > 0 else "") + num(v, c)}</td>'
         trs.append(
-            abre +
-            f'<td class="t">{html.escape(s["codigo"])}</td>'
-            f'<td class="t">{html.escape(s["emissor_atual"].title())}</td>'
-            f'<td class="t"><span class="bolinha" style="background:{cor}"></span> {html.escape(u["grupo_risco"])} <span class="muted pequeno">{fonte}</span></td>'
-            f'<td class="t">{incent}</td>'
+            abre
+            + f'<td class="t"><span class="marca" style="background:{cor}"></span>{html.escape(s["codigo"])}</td>'
+            + f'<td class="t">{html.escape(u["emissor_atual_snd"].title())}</td>'
+            + f'<td class="t">{html.escape(u["grupo_risco"])} <span class="selo">{fonte}</span></td>' if fonte else
+            abre
+            + f'<td class="t"><span class="marca" style="background:{cor}"></span>{html.escape(s["codigo"])}</td>'
+            + f'<td class="t">{html.escape(u["emissor_atual_snd"].title())}</td>'
+            + f'<td class="t">{html.escape(u["grupo_risco"])}</td>'
+        )
+        trs[-1] += (
+            f'<td class="t">{d.get("classe") or s["indexador_tipo"]}</td>'
+            f'<td class="t">{ {"S": "sim", "N": "não"}.get(s["incentivada"], "–") }</td>'
             f'<td class="t">{html.escape(s["garantia"] or "–")}</td>'
-            f'<td>{num(s["taxa_indicativa"], 4)}</td>'
-            f'<td><b>{num(s.get("zspread_comparavel_bps"), 0)}</b></td>'
-            f'<td>{num(s.get("zspread_bps"), 0)}</td>'
-            f'<td>{num(s.get("duration_mod_anos"), 2)}</td>'
-            f'<td>{num(s.get("choque_100_pct"), 2)}</td>'
-            f'<td>{num(s["pu_anbima"], 2)}</td>'
-            f'<td class="t pequeno muted">{"" if ok_s else html.escape(s["status"])}</td>'
-            "</tr>"
+            + celula(d.get("spread"))
+            + celula(d.get("justo"))
+            + celula(d.get("desvio"), 0, True)
+            + celula(dp, 1, True)
+            + celula(d.get("var_hist"), 0, True)
+            + celula(f(s.get("duration_mod_anos")), 2)
+            + celula(f(s.get("choque_100_pct")), 2)
+            + f'<td class="t pequeno fraco">{html.escape(cl.get("resumo", "")) if cl else ""}{"" if valida else html.escape(s["status"])}</td>'
+            + "</tr>"
         )
 
-    legenda = "".join(f'<span><i class="bolinha" style="background:{c}"></i>{html.escape(g)}</span>' for g, c in cores.items())
-    legenda += f'<span><i class="bolinha" style="background:{COR_ISOLADA}"></i>Isolada (a identificar)</span>'
+    coef_html = ""
+    if modelo:
+        linhas = "".join(
+            f'<tr><td>{html.escape(c["descricao"])}</td><td>{num(c["coef"], 2)}</td><td>{num(c["erro_padrao_hc1"], 2)}</td>'
+            f'<td>{num(c["coef"] / c["erro_padrao_hc1"], 2) if c["erro_padrao_hc1"] else "–"}</td><td>{num(c["vif"], 2) if c["vif"] else "–"}</td></tr>'
+            for c in modelo["coeficientes"]
+        )
+        coef_html = f"""<div class="painel tabela" style="max-height:none"><table class="coef">
+<thead><tr><th class="t">Variável</th><th>Coeficiente (bps)</th><th>Erro padrão (HC1)</th><th>t</th><th>VIF</th></tr></thead>
+<tbody>{linhas}</tbody></table></div>
+<p class="fraco pequeno">IPCA+: n = {modelo["n"]}, R² = {num(modelo["r2"], 2)}, desvio padrão dos resíduos = {num(modelo["dp_residuos_bps"], 0)} bps. DI+: desvio medido contra a mediana das {modelo["di"]["n"]} séries ({num(modelo["di"]["mediana_bps"], 0)} bps). Especificação provisória.</p>"""
+
     dia = date.fromisoformat(data_ref).strftime("%d/%m/%Y")
-    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos}, ensure_ascii=False, separators=(",", ":"))
+    dados_js = json.dumps({"grafo": grafo, "series": dados_series, "fluxos": fluxos, "di": di, "desvios": lista_desvios},
+                          ensure_ascii=False, separators=(",", ":"))
+    escala = '<span class="escala">abaixo dos pares <b><i style="background:var(--div-neg-2)"></i><i style="background:var(--div-neg-1)"></i><i style="background:var(--div-0)"></i><i style="background:var(--div-pos-1)"></i><i style="background:var(--div-pos-2)"></i></b> acima dos pares</span>'
 
     corpo = f"""<main>
-<nav><a href="/">Alisson Prata Oliveira</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></nav>
-<h1>Grafo de Crédito</h1>
-<p class="muted" style="max-width:700px">Memória viva dos emissores de debêntures do crédito privado brasileiro, organizada como grafo: quem controla quem, quem emitiu o quê e quanto cada emissão paga sobre a curva real. Piloto: transmissoras de energia elétrica.</p>
+<nav><a href="/">Alisson Prata Oliveira</a><span><a href="#mapa">Mapa</a><a href="#desvios">Desvios</a><a href="#simulador">Simulador</a><a href="#tabela">Tabela</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código e dados</a></span></nav>
 
-<div class="cards">
-<div class="card"><span class="muted">Data de referência</span><b>{dia}</b></div>
-<div class="card"><span class="muted">Séries no piloto</span><b>{len(series)}</b></div>
-<div class="card"><span class="muted">Emissores</span><b>{n_emissores}</b></div>
-<div class="card"><span class="muted">Controle confirmado na CVM</span><b>{n_cvm} emissores</b></div>
-<div class="card"><span class="muted">Spread comparável mediano</span><b>{num(statistics.median(zcomp), 0)} bps</b></div>
-<div class="card"><span class="muted">Z-spread de mercado mediano</span><b>{num(statistics.median(zs), 0)} bps</b></div>
+<div class="kicker">Crédito privado · Transmissão de energia · {dia}</div>
+<h1>Grafo de Crédito</h1>
+<p class="dek">Quem controla quem, quem emitiu o quê e quanto cada debênture paga acima ou abaixo do que seus pares sugerem. Piloto com as transmissoras de energia elétrica, atualizado todo dia útil com dados da ANBIMA, do SND e da CVM.</p>
+
+<div class="tiles">
+<div class="tile"><span>Séries no piloto</span><b>{len(series)}</b><small>{len(validas)} precificadas</small></div>
+<div class="tile"><span>Emissores</span><b>{n_emissores}</b><small>{n_cvm} com controle na CVM</small></div>
+<div class="tile"><span>Grupos de risco</span><b>{n_grupos}</b><small>mais as isoladas</small></div>
+<div class="tile"><span>Spread comparável mediano</span><b>{num(mediana, 0)} bps</b><small>IPCA+, gross-up 15% nas isentas</small></div>
+<div class="tile"><span>Fora da faixa dos pares</span><b>{fora}</b><small>séries com |desvio| ≥ 1,5 dp</small></div>
 </div>
 
-<h2>Grafo do universo</h2>
-<p class="muted pequeno">Passe o mouse para ver as ligações de um nó; arraste para reorganizar; role para dar zoom; clique numa série para levá-la ao simulador. Nós cheios grandes são controladores (CVM) ou grupos inferidos, nós cheios médios são emissores, círculos vazados são séries.</p>
-<div class="legenda">{legenda}<span>── controle declarado na CVM</span><span>- - grupo inferido</span></div>
-<svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures"></svg>
-<div id="tip" class="tip"></div>
+<section id="mapa">
+<div class="cab"><div><h2>Mapa de controle e risco</h2><p class="muted pequeno">Cada contorno é um grupo de risco. Quadrados são controladores declarados na CVM; anéis são emissores; pontos são séries, coloridos pelo desvio em relação aos pares. Passe o mouse para ver as ligações, arraste os nós, role para dar zoom, clique numa série para simular.</p></div></div>
+<div class="painel">
+<div class="controles"><label>Destacar <select id="filtroGrupo"></select></label>
+<label>Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
+<svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
+<div class="legenda">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>── controle declarado</span><span>- - grupo inferido</span><span>··· fiança na escritura</span></div>
+</div>
+</section>
 
-<h2 id="simulador">Simulador de abertura e fechamento de spread</h2>
-<div class="sim">
+<section id="desvios">
+<div class="cab"><div><h2>Desvio em relação aos pares</h2><p class="muted pequeno">Spread observado menos spread justo estimado pelos pares, em bps. À direita, a série paga mais que o perfil dela sugere; à esquerda, menos. A cor marca o tamanho do desvio em desvios-padrão dos resíduos.</p></div>
+<div><button data-classe="IPCA+" class="ativo">IPCA+</button> <button data-classe="DI+">DI+</button></div></div>
+<div class="painel" style="padding:8px 4px"><svg id="desvio" role="img" aria-label="Barras divergentes do desvio de spread de cada série"></svg></div>
+</section>
+
+<section id="simulador">
+<div class="cab"><div><h2>Simulador de abertura e fechamento de spread</h2><p class="muted pequeno">IPCA+: reprecificação completa do fluxo remanescente (agenda SND) pela taxa indicativa mais o choque. DI+: aproximação pela duration.</p></div></div>
+<div class="painel sim">
 <div>
 <label for="serie">Série</label><select id="serie"></select>
 <label for="choque">Choque no spread (bps)</label><input id="choque" type="number" step="5" value="100">
 <div class="botoes"><button data-v="-100">−100</button><button data-v="-50">−50</button><button data-v="50">+50</button><button data-v="100">+100</button><button data-v="200">+200</button></div>
-<p class="muted pequeno" style="margin-top:1rem">Reprecificação completa: desconta o fluxo remanescente (juros e amortizações da agenda SND) pela taxa indicativa mais o choque. A aproximação usa duration modificada e convexidade.</p>
 </div>
-<div class="res">
+<div><div class="res">
 <div><small>PU ANBIMA</small><b id="r_pu">–</b></div>
 <div><small>PU após o choque</small><b id="r_pu_novo">–</b></div>
-<div><small>Variação (reprecificação completa)</small><b id="r_var">–</b></div>
-<div><small>Variação (duration + convexidade)</small><b id="r_aprox">–</b></div>
+<div><small>Variação, reprecificação completa</small><b id="r_var">–</b></div>
+<div><small>Variação, duration + convexidade</small><b id="r_aprox">–</b></div>
 <div><small>Duration modificada</small><b id="r_dur">–</b></div>
-<div><small>Spread comparável (gross-up 15% se isenta)</small><b id="r_z">–</b></div>
-<div><small>Break-even de abertura em 6 meses</small><b id="r_be6">–</b></div>
+<div><small>Spread (comparável ou sobre CDI)</small><b id="r_z">–</b></div>
+<div><small>Desvio em relação aos pares</small><b id="r_desvio">–</b></div>
 <div><small>Break-even de abertura em 12 meses</small><b id="r_be12">–</b></div>
+</div></div>
 </div>
-</div>
+</section>
 
-<h2>Tabela de precificação</h2>
-<p class="muted pequeno">Z-spread: spread constante somado à curva zero-cupom real (ETTJ IPCA, ANBIMA) que reproduz o preço da série. Spread comparável: Z-spread após gross-up de 15% nas incentivadas. Choque +100: variação do PU com reprecificação completa. Clique numa linha para simular.</p>
-<div class="tabela"><table>
-<thead><tr><th class="t">Código</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Incentivada</th><th class="t">Garantia</th><th>Taxa indicativa (%)</th><th>Spread comparável (bps)</th><th>Z-spread mercado (bps)</th><th>Duration mod.</th><th>Choque +100 (%)</th><th>PU (R$)</th><th class="t"></th></tr></thead>
+<section id="tabela">
+<div class="cab"><div><h2>Tabela</h2><p class="muted pequeno">Clique no cabeçalho para ordenar; clique numa linha para simular.</p></div></div>
+<div class="painel tabela"><table id="tab">
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t">Grupo de risco</th><th class="t">Classe</th><th class="t">Isenta</th><th class="t">Garantia</th><th>Spread (bps)</th><th>Justo (bps)</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th>Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
+</section>
 
+<section>
+<div class="cab"><div><h2>Modelo de spread justo</h2><p class="muted pequeno">Regressão cross-section do spread comparável das séries IPCA+ validadas, com erros padrão robustos. O spread justo de cada série é o valor ajustado; o desvio é o resíduo.</p></div></div>
+{coef_html}
+</section>
+
+<section>
 <h2>Método e limites</h2>
-<ul class="pequeno">
-<li><b>Fluxo de pagamentos</b> montado da agenda de eventos do SND. Validação: a duration recalculada bate com a da ANBIMA (mediana de erro perto de zero); séries que não batem ficam fora do Z-spread e aparecem marcadas.</li>
-<li><b>Emissor atual</b> é o do SND (por CNPJ). Os nomes da ANBIMA estão desatualizados em várias séries após trocas de controle.</li>
-<li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "inferido" = regra explícita (cadeia societária ou nome), a confirmar na escritura.</li>
-<li><b>Spread comparável</b>: para debêntures incentivadas (isentas de IR para pessoa física, Lei 12.431), a taxa nominal passa por gross-up de 15% antes do cálculo do Z-spread, usando a inflação implícita da ETTJ na duration de cada série; para as demais, é o próprio Z-spread. Coloca isentas e tributadas na mesma base de um investidor pessoa física. O Z-spread de mercado, sem ajuste, aparece ao lado.</li>
-<li><b>Break-even</b>: quanto o spread pode abrir no horizonte até a perda de preço igualar o carry do Z-spread de mercado no período. Z-spread negativo gera break-even negativo.</li>
-<li>Debêntures DI+ do universo ainda não entram no Z-spread nem no simulador.</li>
+<ul class="metodo pequeno">
+<li><b>Fluxo de pagamentos</b> da agenda de eventos do SND; validação contra a duration ANBIMA. Séries que não batem ficam fora e aparecem marcadas.</li>
+<li><b>Spread comparável</b>: Z-spread sobre a curva zero-cupom real (ETTJ IPCA, ANBIMA), com gross-up de 15% na taxa nominal das debêntures incentivadas (isentas para pessoa física), usando a inflação implícita na duration de cada série.</li>
+<li><b>Spread justo</b>: modelo provisório com duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</li>
+<li><b>DI+</b>: a taxa indicativa ANBIMA já é o spread sobre o CDI; desvio contra a mediana das DI+ do piloto (amostra pequena).</li>
+<li><b>Variação histórica</b>: diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026). Ganha significado com o tempo.</li>
+<li><b>Grupo de risco</b>: "CVM" = controlador pessoa jurídica declarado no Formulário de Referência; "inferido" = regra explícita, a confirmar na escritura. Emissor identificado pelo CNPJ do SND.</li>
 </ul>
+</section>
 
-<footer>
-Fontes: ANBIMA (taxas de debêntures e títulos públicos, ETTJ), SND/debentures.com.br (características e agenda), CVM (Formulário de Referência). Data de referência {dia}. A taxa indicativa é referência de preço justo, não necessariamente negócio fechado.
-Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.
-</footer>
+<footer>Fontes: ANBIMA (taxas de debêntures e títulos públicos, ETTJ), SND/debentures.com.br (características e agenda), CVM (Formulário de Referência e IPE), agentes fiduciários (escrituras). Data de referência {dia}. A taxa indicativa é referência de preço justo, não necessariamente negócio fechado. Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.</footer>
 </main>
+<div id="tip" class="tip"></div>
 <script>window.DADOS = {dados_js};</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>{JS}</script>"""
-    return pagina("Grafo de Crédito", "Grafo de Crédito: transmissoras de energia, Z-spread sobre a curva real e simulador de choque de spread.", corpo)
+    return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo)
 
 
 def main() -> None:

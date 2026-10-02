@@ -268,12 +268,21 @@ def main(data_ref_txt: str | None) -> None:
             "emissor_snd": c.get("Empresa", ""),
             "cnpj_snd": c.get("CNPJ", ""),
             "taxa_indicativa": s["taxa_indicativa"],
+            "desvio_padrao": s["desvio_padrao"],
             "pu_anbima": s["pu"],
             "duration_anbima_anos": s["duration_anos"],
         }
         status = ""
+        if s["indexador_tipo"] == "DI_MAIS" and s["taxa_indicativa"] and s["duration_anos"]:
+            # DI+: a taxa indicativa já é o spread sobre o CDI; a duration ANBIMA serve de spread duration
+            d_spread = float(s["duration_anos"])
+            ds = {f"choque_{b}_aprox_pct": -d_spread * b / 1e4 * 100 for b in CHOQUES_BPS}
+            linhas.append({**base, "status": "ok DI+", "spread_di_bps": float(s["taxa_indicativa"]) * 100,
+                           "duration_mod_anos": d_spread, **ds,
+                           **{f"choque_{b}_pct": ds[f"choque_{b}_aprox_pct"] for b in CHOQUES_BPS}})
+            continue
         if s["indexador_tipo"] != "IPCA_MAIS":
-            status = "fora do escopo (não IPCA+)"
+            status = "fora do escopo (não IPCA+ nem DI+)"
         elif not s["taxa_indicativa"]:
             status = "sem taxa indicativa"
         elif not c:

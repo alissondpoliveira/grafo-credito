@@ -1,9 +1,9 @@
-__pycache__/
 *.pyc
-.venv/
-.env
 .DS_Store
-privado/
-analises/saidas/
 .claude/
+.env
+.venv/
+__pycache__/
+analises/saidas/
 escrituras/
+privado/

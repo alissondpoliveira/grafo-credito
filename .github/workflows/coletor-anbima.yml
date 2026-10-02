@@ -48,6 +48,11 @@ jobs:
       - name: Precificar universo
         run: python analises/precificacao.py
 
+      - name: Spread justo e desvio em relação aos pares
+        run: |
+          pip install --quiet numpy
+          python analises/spread_justo.py
+
       - name: Gerar site
         run: python site/gerar.py
 

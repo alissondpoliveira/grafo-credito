@@ -44,7 +44,11 @@ def docs_pentagono(codigo: str) -> list[dict]:
         titulo = html.unescape(titulo)
         if re.search(r"escritura|aditamento", titulo, re.I):
             docs.append({"fonte": "Pentágono", "titulo": titulo, "url": PENTAGONO_ARQ.format(ident), "data": titulo[:10]})
-    return docs
+    # várias cópias registradas do mesmo documento: fica com a escritura sem registro (tem texto) e o aditamento mais recente
+    esc = sorted([d for d in docs if not re.search(r"aditamento", d["titulo"], re.I)],
+                 key=lambda d: (bool(re.search(r"registrad", d["titulo"], re.I)), d["data"]))
+    adit = sorted([d for d in docs if re.search(r"aditamento", d["titulo"], re.I)], key=lambda d: d["data"], reverse=True)
+    return esc[:2] + adit[:1]
 
 
 def indice_ipe(cnpjs: set[str]) -> dict[str, list[dict]]:
@@ -65,6 +69,17 @@ def indice_ipe(cnpjs: set[str]) -> dict[str, list[dict]]:
     return saida
 
 
+def da_emissao(docs: list[dict], emissao: str) -> list[dict]:
+    """Documentos do IPE cobrem todas as emissões da companhia; fica só com os da emissão da série."""
+    import unicodedata
+    n = str(int(emissao)) if emissao and emissao.isdigit() else ""
+    if not n:
+        return []
+    alvo = re.compile(rf"(?<!\d){n}\s*(?:ª|a|º|o|_|\s)?\s*_?\s*(?:emiss|\(|$)", re.I)
+    sem = lambda t: unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().replace("_", " ")
+    return [d for d in docs if alvo.search(sem(d["titulo"]))]
+
+
 def nome_arquivo(doc: dict) -> str:
     base = re.sub(r"[^A-Za-z0-9._-]+", "_", f"{doc['data']}_{doc['titulo']}")[:110]
     return base if base.lower().endswith(".pdf") else base + ".pdf"
@@ -74,7 +89,9 @@ def main(codigos: list[str]) -> None:
     universo = [u for u in csv.DictReader(UNIVERSO.open(encoding="utf-8")) if u["no_piloto"] == "S"]
     if codigos:
         universo = [u for u in universo if u["codigo"] in codigos]
-    agentes = {c["Codigo do Ativo"]: c.get("Agente Fiduciario", "") for c in csv.DictReader(SND.open(encoding="utf-8"))}
+    snd = list(csv.DictReader(SND.open(encoding="utf-8")))
+    agentes = {c["Codigo do Ativo"]: c.get("Agente Fiduciario", "") for c in snd}
+    emissoes = {c["Codigo do Ativo"]: c.get("Emissao", "") for c in snd}
     ipe = indice_ipe({u["cnpj"] for u in universo})
 
     linhas = []
@@ -88,7 +105,7 @@ def main(codigos: list[str]) -> None:
                 print(f"{cod}: falha Pentágono ({e})")
             time.sleep(0.5)
         if not docs:
-            docs = ipe.get(u["cnpj"], [])
+            docs = da_emissao(ipe.get(u["cnpj"], []), emissoes.get(cod, ""))
         if not docs:
             linhas.append({"codigo": cod, "cnpj": u["cnpj"], "agente_fiduciario": agentes.get(cod, ""), "fonte": "", "titulo": "",
                            "url": "", "arquivo": "", "status": "não localizado"})
