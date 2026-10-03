@@ -1146,5 +1146,17 @@
  "27157474000106|5|DFs": {
   "fase": "operacional",
   "confianca": 0.96
+ },
+ "32681371000172|14|Distribuição de dividendos": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "28925264000175|2|Leilão de Reserva de Capacidade na forma": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "02502844000166|6|Alteração do Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.99
  }
 }
