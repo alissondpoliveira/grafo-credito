@@ -8,7 +8,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 12528708000107,AERIS INDUSTRIA E COMERCIO DE EQUIPAMENTOS PARA GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02016440000162,RGE SUL DISTRIBUIDORA DE ENERGIA S/A,CPFL,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 71208516000174,ALGAR TELECOM S.A.,Algar Telecom,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
-61079117000105,ALPARGATAS S.A.,Alpargatas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 12648266000124,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,Ambipar Empreendimentos,servicos_ambientais,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 02451848000162,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 09288252000132,ANIMA HOLDING S/A,Anima Holding,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
@@ -41,7 +40,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grupo_inferido
 45242914000105,C E A MODAS S.A.,C Modas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-07522669000192,NEOENERGIA DISTRIBUICAO BRASILIA S.A,Neoenergia,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 08467115000100,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 03467321000199,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
@@ -256,7 +254,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 48127012000108,EPR TRIANGULO S.A,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 19527586000175,COMPANHIA ENERGETICA SINOP S.A,Axia (ex-Eletrobras),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grande_grupo
 02016507000169,AXIA ENERGIA SUL S.A.,Axia (ex-Eletrobras),integrada_gt,project_finance,13,operacional,JEV (comunicados e notícias),operacional,0.89,grande_grupo
-,ENERGISA TOCANTINS - DISTRIBUIDORA DE ENERGIA S.A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grupo_inferido
 20732109000120,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 10979076000164,CUTIA EMPREENDIMENTOS EOLICOS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 48569940000122,AMBIENTAL CEARA 1 SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -277,7 +274,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 20626892000148,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 12091809000155,BRAVA ENERGIA S.A.,Isolada (a identificar),energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,nao_identificado
 28925264000175,COMPANHIA ENERGETICA JAGUARA..,Engie,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
-28942127000149,COMPANHIA ENERGETICA MIRANDA,Engie,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+28942127000149,COMPANHIA ENERGETICA MIRANDA,Engie,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 13017462000163,ENERGISA SERGIPE - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26664057000189,ENTREVIAS CONCESSIONARIA DE RODOVIAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,nao_identificado
 51137031000120,EPR LITORAL PIONEIRO S.A.,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -299,7 +296,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 46710597000169,FS I INDUSTRIA DE ETANOL S.A,Fs I,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23274194000119,FURNAS CENTRAIS ELETRICAS S/A,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
-27157474000106,AGUAS DE TERESINA SANEAMENTO  SPE  S.A.,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+27157474000106,AGUAS DE TERESINA SANEAMENTO  SPE  S.A.,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 18903785000178,HOLDING DO ARAGUAIA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 52609844000138,HELEXIA SBH4 S.A.,Helexia Sbh4,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 32431519000110,HELIO VALGAS SOLAR PARTICIPACOES S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado

@@ -1138,5 +1138,13 @@
  "33592510000154|15|Atualização de projeções": {
   "fase": "operacional",
   "confianca": 0.96
+ },
+ "28942127000149|1|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "27157474000106|5|DFs": {
+  "fase": "operacional",
+  "confianca": 0.96
  }
 }
