@@ -95,6 +95,9 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ativo-grade div{padding:10px 12px;box-shadow:inset -1px -1px 0 var(--line)}
 .ativo-grade small{display:block;color:var(--ink-2);font-size:.74rem}.ativo-grade b{font-size:1.1rem;font-variant-numeric:tabular-nums}
 .ativo-grade em{display:block;font-style:normal;font-size:.72rem;color:var(--ink-3)}
+.aviso-sel{position:absolute;left:12px;bottom:12px;background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:.45rem .7rem;font-size:.82rem;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.aviso-sel a{color:var(--accent)}
+#tab tbody tr.sel{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--ink)}
 #ficha{margin-top:12px;padding:16px;display:none}
 #ficha h3{margin:0 0 .2rem;font-family:Newsreader,Georgia,serif;font-size:1.2rem}
 .ficha-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
@@ -135,7 +138,8 @@ footer{margin-top:56px;font-size:.78rem;color:var(--ink-3);border-top:1px solid 
 <div class="controles"><label>Abrir grupo <select id="filtroGrupo"></select></label>
 <span id="trilha" class="pequeno"></span>
 <label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
-<svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
+<div style="position:relative"><svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
+<div id="avisoSel" class="aviso-sel" style="display:none"></div></div>
 <div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
 <div class="legenda" style="border-top:0;padding-top:0"><span class="escala">abaixo dos pares <b><i style="background:var(--div-neg-2)"></i><i style="background:var(--div-neg-1)"></i><i style="background:var(--div-0)"></i><i style="background:var(--div-pos-1)"></i><i style="background:var(--div-pos-2)"></i></b> acima dos pares</span><span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>· · ponte entre grupos</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
@@ -1621,7 +1625,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
       ge.filter(n=>n.tipo==='doc').append('path').attr('d', n => d3.symbol(formaDoc(n.categoria), n.categoria==='analise'?70:58)()).attr('fill', n => corDoc(n.categoria))
         .attr('stroke', n => n.status_jev==='automatico' && n.impacto==='negativo' ? 'var(--div-pos-2)' : n.status_jev==='automatico' && n.impacto==='positivo' ? 'var(--div-neg-2)' : 'var(--surface)')
         .attr('stroke-width', n => n.status_jev==='automatico' && n.impacto!=='neutro' ? 2.2 : 1);
-      ge.filter(n=>n.tipo==='serie').append('circle').attr('r',0).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2).transition().duration(300).attr('r', raio);
+      ge.filter(n=>n.tipo==='serie').append('circle').attr('class','pt').attr('r',0).attr('fill', n => corDesvio(n.dp)).attr('stroke','var(--surface)').attr('stroke-width',1.2).transition().duration(300).attr('r', raio);
       return ge;
     });
     no.select('text.mais').text(n => abertosE.has(n.id) ? '−' : '+');
@@ -1677,7 +1681,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
         if (n.tipo==='bolha') n.nivel==='segmento' ? abrirSegmento(n.segmento) : abrirGrupo(n.grupo);
         else if (n.tipo==='emissor') { alternarEmissor(n.id); mostrarFicha(n); }
         else if (n.tipo==='doc') { if (n.url) window.open(n.url, '_blank', 'noopener'); }
-        else if (n.tipo==='serie') { abrirAtivo(n.rotulo); } })
+        else if (n.tipo==='serie') { abrirAtivo(n.rotulo, 'mapa'); } })
       .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
   }
 
@@ -1706,7 +1710,20 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   segmentos.forEach(s => { op('S:'+s, nomeSeg(s)); gruposDe(s).filter(k => !k.endsWith(ISOL)).sort((a,b)=>resumo['G:'+b].series-resumo['G:'+a].series).forEach(k => op('G:'+k, '   '+nomeGrupo(k))); });
   selG.addEventListener('change', () => { const v = selG.value; if (!v) return; v.startsWith('S:') ? abrirSegmento(v.slice(2)) : abrirGrupo(v.slice(2)); });
   document.querySelectorAll('[data-rot]').forEach(b => b.addEventListener('click', () => { rotulos = b.dataset.rot; document.querySelectorAll('[data-rot]').forEach(x=>x.classList.toggle('ativo', x===b)); aplicarRot(); }));
-  window.mapa = { abrirGrupo, abrirSegmento, ficha: mostrarFicha, emissor: cnpj => porId.get('e:'+cnpj) };
+  // seleção vinda de qualquer lugar: abre segmento, grupo e emissor da série e destaca o ponto
+  function marcar(){ no.select('circle.pt').attr('stroke', n => n.rotulo===window.ativoSel ? 'var(--ink)' : 'var(--surface)').attr('stroke-width', n => n.rotulo===window.ativoSel ? 3 : 1.2)
+    .attr('r', n => n.rotulo===window.ativoSel ? raio(n)+2.5 : raio(n)); }
+  function focar(cod){
+    const n = porId.get('s:'+cod); if (!n) return;
+    const pai = paiSerie.get(n.id); let mudou = false;
+    if (!abertosS.has(n.segmento)) { abertosS.clear(); abertosS.add(n.segmento); [...abertosG].filter(k=>segDe(k)!==n.segmento).forEach(k=>abertosG.delete(k)); pos.clear(); mudou = true; }
+    if (!abertosG.has(n.grupo)) { abertosG.add(n.grupo); mudou = true; }
+    if (pai && !abertosE.has(pai)) { abertosE.add(pai); mudou = true; }
+    if (mudou) { atualizar(pai); trilha(); }
+    marcar();
+  }
+  sim.on('end.marcar', marcar);
+  window.mapa = { abrirGrupo, abrirSegmento, ficha: mostrarFicha, emissor: cnpj => porId.get('e:'+cnpj), focar, marcar };
   atualizar(); trilha();
 })();
 
@@ -1724,7 +1741,9 @@ function desenharDesvio(classe){
   x.ticks(6).forEach(t => { svg.append('line').attr('x1',x(t)).attr('x2',x(t)).attr('y1',M.t-6).attr('y2',H-M.b).attr('stroke','var(--line)').attr('stroke-width', t===0?1.2:1);
     svg.append('text').attr('x',x(t)).attr('y',M.t-10).attr('text-anchor','middle').attr('font-size',10).attr('fill','var(--ink-3)').text(sinal(t)); });
   const gr = svg.append('g').selectAll('g').data(dados).join('g').attr('transform',(d,i)=>`translate(0,${M.t+i*lin})`);
-  gr.append('rect').attr('x', d => Math.min(x(0), x(d.desvio))).attr('y', 2).attr('height', lin-4).attr('width', d => Math.max(1, Math.abs(x(d.desvio)-x(0)))).attr('rx', 2).attr('fill', d => corDesvio(d.dp));
+  gr.append('rect').attr('class','barra').attr('x', d => Math.min(x(0), x(d.desvio))).attr('y', 2).attr('height', lin-4).attr('width', d => Math.max(1, Math.abs(x(d.desvio)-x(0)))).attr('rx', 2).attr('fill', d => corDesvio(d.dp))
+    .attr('stroke', d => d.codigo===window.ativoSel ? 'var(--ink)' : 'none').attr('stroke-width', 2);
+  gr.filter(d => d.codigo===window.ativoSel).append('text').attr('x', 4).attr('y', lin/2+3.5).attr('font-size',10).attr('font-weight',700).attr('fill','var(--ink)').text('▶');
   gr.append('text').attr('x', M.l-8).attr('y', lin/2+3.5).attr('text-anchor','end').attr('font-size',10.5).attr('fill','var(--ink)').text(d => d.codigo);
   gr.append('text').attr('x', M.l-62).attr('y', lin/2+3.5).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text(d => d.grupo.startsWith('Isolada')?'isolada':d.grupo.split(' ')[0]);
   gr.append('text').attr('x', d => d.desvio>=0 ? x(d.desvio)+5 : x(d.desvio)-5).attr('y', lin/2+3.5).attr('text-anchor', d=>d.desvio>=0?'start':'end').attr('font-size',9.5).attr('fill','var(--ink-2)').text(d => sinal(d.desvio));
@@ -1791,8 +1810,8 @@ function desenharCurva(){
     .call(d3.drag().on('start drag', e => definir(x.invert(e.x), 'curva')))
     .on('click', e => definir(x.invert(d3.pointer(e)[0]), 'curva'));
 }
-function selecionar(c){ sel.value=c; calcular(); desenharCurva(); }
-sel.addEventListener('change', () => { calcular(); desenharCurva(); });
+function selecionar(c){ if (![...sel.options].some(o => o.value===c)) return false; sel.value=c; calcular(); desenharCurva(); return true; }
+sel.addEventListener('change', () => { calcular(); desenharCurva(); if (window.abrirAtivo) abrirAtivo(sel.value, 'simulador'); });
 regua.addEventListener('input', () => definir(+regua.value, 'regua'));
 choque.addEventListener('input', () => definir(+choque.value || 0, 'campo'));
 document.querySelectorAll('.botoes button').forEach(b => b.addEventListener('click', () => definir(+b.dataset.v, 'botao')));
@@ -1872,8 +1891,17 @@ window.carregarCri = () => _cri || (_cri = fetch('/grafo-credito/cri_cra.json', 
   // ficha do ativo
   const fmtv = (v,c=0,suf='') => v==null||isNaN(v) ? '–' : fmt(v,c)+suf;
   const cel = (rot, val, nota) => '<div><small>'+rot+'</small><b>'+val+'</b>'+(nota?'<em>'+nota+'</em>':'')+'</div>';
-  window.abrirAtivo = function(cod){
+  window.abrirAtivo = function(cod, origem){
     const a = A[cod]; if (!a) return;
+    window.ativoSel = cod;
+    // propaga a seleção: simulador, tabela, gráfico de desvios, mapa e endereço da página
+    if (origem !== 'simulador') selecionar(cod);
+    document.querySelectorAll('#tab tbody tr').forEach(tr => tr.classList.toggle('sel', tr.dataset.codigo===cod));
+    if (typeof desenharDesvio === 'function') { const cls = a.classe==='DI+' ? 'DI+' : 'IPCA+'; if (cls !== classeAtual) document.querySelectorAll('[data-classe]').forEach(b => b.classList.toggle('ativo', b.dataset.classe===cls)); desenharDesvio(cls); }
+    if (window.mapa && origem !== 'mapa') window.mapa.focar(cod); else if (window.mapa) window.mapa.marcar();
+    try { history.replaceState(null, '', location.pathname + '?ativo=' + encodeURIComponent(cod)); } catch(e) {}
+    const aviso = document.getElementById('avisoSel');
+    if (aviso) { aviso.innerHTML = '<b>'+cod+'</b> '+a.emissor+' · <a href="#ativo">ver ficha</a> · <a href="#simulador">simular</a>'; aviso.style.display = 'block'; }
     const el = document.getElementById('ativo');
     const mesmos = Object.values(A).filter(x => x.segmento===a.segmento && x.classe===a.classe && x.spread!=null);
     const ord = mesmos.map(x=>x.spread).sort((x,y)=>x-y);
@@ -1931,7 +1959,7 @@ window.carregarCri = () => _cri || (_cri = fetch('/grafo-credito/cri_cra.json', 
       sv.selectAll('circle').data(hist).join('circle').attr('cx',h=>x(h[0])).attr('cy',h=>y(h[1])).attr('r',3.5).attr('fill','var(--ink)')
         .on('mouseenter',(e,h)=>mostrar(e,'<b>'+h[0]+'</b>'+linha('Spread',fmt(h[1],0)+' bps'))).on('mousemove',mover).on('mouseleave',esconder);
     }
-    el.scrollIntoView({behavior:'smooth'});
+    if (origem !== 'mapa' && origem !== 'simulador') el.scrollIntoView({behavior:'smooth'});
   };
   // cliques em séries no mapa, na tabela e no gráfico de desvios abrem a ficha do ativo
   document.querySelectorAll('tbody tr[data-codigo]').forEach(tr => tr.onclick = () => abrirAtivo(tr.dataset.codigo));
