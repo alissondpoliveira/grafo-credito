@@ -12,7 +12,7 @@ import re
 import unicodedata
 import json
 import statistics
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -30,15 +30,15 @@ CSS = """
 :root{color-scheme:light;
  --bg:#f7f6f3;--surface:#fcfcfb;--surface-2:#f0efec;--ink:#0b0b0b;--ink-2:#52514e;--ink-3:#8a8984;--line:#e2e0da;--line-2:#d3d1ca;
  --accent:#1c5cab;--hull:rgba(82,81,78,.06);--hull-line:rgba(82,81,78,.28);--edge:#b5b3ab;
- --div-neg-2:#1c5cab;--div-neg-1:#86b6ef;--div-0:#d9d7d1;--div-pos-1:#f0a3a2;--div-pos-2:#c7302f;--doc-oficial:#4a3aa7;--doc-noticia:#eda100;--doc-analise:#e87ba4;}
+ --div-neg-2:#1c5cab;--div-neg-1:#86b6ef;--div-0:#d9d7d1;--div-pos-1:#f0a3a2;--div-pos-2:#c7302f;--doc-oficial:#4a3aa7;--doc-noticia:#eda100;--m-energia:#eda100;--m-infra:#4a3aa7;--m-commod:#008300;--m-consumo:#e87ba4;}
 @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;
  --bg:#121211;--surface:#1a1a19;--surface-2:#232321;--ink:#ffffff;--ink-2:#c3c2b7;--ink-3:#8a8984;--line:#2c2c2a;--line-2:#3a3a37;
  --accent:#6da7ec;--hull:rgba(195,194,183,.06);--hull-line:rgba(195,194,183,.25);--edge:#4d4c48;
- --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;--doc-oficial:#9085e9;--doc-noticia:#c98500;--doc-analise:#d55181;}}
+ --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;--doc-oficial:#9085e9;--doc-noticia:#c98500;--m-energia:#c98500;--m-infra:#9085e9;--m-commod:#008300;--m-consumo:#d55181;}}
 :root[data-theme="dark"]{color-scheme:dark;
  --bg:#121211;--surface:#1a1a19;--surface-2:#232321;--ink:#ffffff;--ink-2:#c3c2b7;--ink-3:#8a8984;--line:#2c2c2a;--line-2:#3a3a37;
  --accent:#6da7ec;--hull:rgba(195,194,183,.06);--hull-line:rgba(195,194,183,.25);--edge:#4d4c48;
- --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;--doc-oficial:#9085e9;--doc-noticia:#c98500;--doc-analise:#d55181;}
+ --div-neg-2:#3987e5;--div-neg-1:#1c4f8f;--div-0:#4a4a46;--div-pos-1:#8f3534;--div-pos-2:#e66767;--doc-oficial:#9085e9;--doc-noticia:#c98500;--m-energia:#c98500;--m-infra:#9085e9;--m-commod:#008300;--m-consumo:#d55181;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:1120px;margin:0 auto;padding:40px 16px 80px}
@@ -118,6 +118,17 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .aviso-sel{position:absolute;left:12px;bottom:12px;background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:.45rem .7rem;font-size:.82rem;box-shadow:0 4px 14px rgba(0,0,0,.1)}
 .aviso-sel a{color:var(--accent)}
 #tab tbody tr.sel{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--ink)}
+.boleta{border:1px solid var(--line-2);border-radius:10px;padding:14px 16px;margin:14px 0 6px;background:var(--surface)}
+.boleta .linha{font-size:1.02rem;line-height:1.55}
+.boleta .linha b{font-variant-numeric:tabular-nums}
+.boleta .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 18px;margin-top:12px}
+.boleta .kpi .r{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+.boleta .kpi .v{font-size:1.25rem;font-weight:650;font-variant-numeric:tabular-nums}
+.boleta .kpi .s{font-size:.76rem;color:var(--ink-2)}
+.carac{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0 22px;margin-top:6px}
+.carac div{display:flex;justify-content:space-between;gap:10px;font-size:.82rem;padding:.3rem 0;border-bottom:1px solid var(--line)}
+.carac div span:first-child{color:var(--ink-3)}.carac div span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.legenda-macro i{width:12px;height:12px}
 #ficha{margin-top:12px;padding:16px;display:none}
 #ficha h3{margin:0 0 .2rem;font-family:Newsreader,Georgia,serif;font-size:1.2rem}
 .ficha-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
@@ -194,6 +205,89 @@ SEGMENTOS_NOMES = {
     "alimentos_bebidas": "Alimentos e bebidas", "tecnologia_midia": "Tecnologia e mídia", "servicos_ambientais": "Serviços ambientais",
     "outros_corporativo": "Outros corporativos",
 }
+
+
+PERIODO = {1: "mensal", 3: "trimestral", 6: "semestral", 12: "anual"}
+
+
+def montar_ponta(snd_c: dict) -> dict:
+    """Visão de mesa por série: taxa ANBIMA do dia (compra, venda, indicativa), negócios do SND com taxa
+    implícita aproximada, agenda de juros e amortização e características da emissão (SND)."""
+    dias = sorted((RAIZ / "dados" / "anbima" / "debentures" / "normalizado").glob("*/*.csv"))
+    anbima: dict[str, dict] = {}  # codigo -> {data: linha}
+    for arq in dias:
+        for l in ler_csv(arq):
+            if l["taxa_indicativa"]:
+                anbima.setdefault(l["codigo"], {})[l["data_referencia"]] = l
+    hoje = dias[-1].stem if dias else ""
+    agenda: dict[str, list] = {}
+    for l in ler_csv(RAIZ / "dados" / "snd" / "agenda.csv"):
+        pg = l["Data do Pagamento"] or l["Data do Evento"]
+        if len(pg) == 10:
+            iso = pg[6:] + "-" + pg[3:5] + "-" + pg[:2]
+            if iso >= hoje:
+                ev_nome = "Amortização" if l["Evento"].startswith("Amortiza") else l["Evento"]
+                agenda.setdefault(l["Ativo"], []).append([iso, ev_nome, l["Taxa/Percentual"].replace(".", "").replace(",", ".")])
+    negocios: dict[str, list] = {}
+    for l in ler_csv(RAIZ / "dados" / "snd" / "negocios.csv"):
+        negocios.setdefault(l["codigo"], []).append(l)
+
+    def num(v):
+        try:
+            return float(str(v).replace(",", ".")) if v not in ("", None, "-") else None
+        except ValueError:
+            return None
+
+    def dmy(v):
+        return v[6:] + "-" + v[3:5] + "-" + v[:2] if v and len(v) == 10 and v[2] == "/" else ""
+
+    out = {}
+    for cod, c in snd_c.items():
+        hist = anbima.get(cod, {})
+        ult = hist[max(hist)] if hist else None
+        tipo = ult["indexador_tipo"] if ult else ""
+        tx_em = num(ult["taxa_emissao"]) if ult else num(c.get("Juros Criterio Novo - Taxa"))
+        dmod = num(ult["duration_anos"]) if ult else None
+        # taxa implícita do negócio: âncora na ANBIMA do mesmo dia quando houver; senão na taxa de emissão (PU par)
+        negs = []
+        for n in sorted(negocios.get(cod, []), key=lambda x: x["data"])[-8:][::-1]:
+            pct, tx = num(n["pct_pu_curva"]), None
+            if pct and dmod and tipo in ("IPCA_MAIS", "DI_MAIS", "PREFIXADO"):
+                a = hist.get(n["data"])
+                if a and num(a["pct_pu_par"]):
+                    tx = num(a["taxa_indicativa"]) - (pct / num(a["pct_pu_par"]) - 1) / dmod * 100
+                elif tx_em is not None:
+                    tx = tx_em - (pct / 100 - 1) / dmod * 100
+            negs.append([n["data"], int(n["quantidade"]), int(n["negocios"]), num(n["pu_medio"]), pct, None if tx is None else round(tx, 4)])
+        corte = (date.fromisoformat(hoje) - timedelta(days=180)).isoformat() if hoje else ""
+        ult180 = [n for n in negocios.get(cod, []) if n["data"] >= corte]
+        ev = sorted(agenda.get(cod, []))
+        amort = [e for e in ev if e[1].startswith("Amortiza")]
+        cada = num(c.get("Juros Criterio Novo - Cada"))
+        un = c.get("Juros Criterio Novo - Unidade", "")
+        per = (PERIODO.get(int(cada), f"a cada {int(cada)} meses") if un == "MES" else f"a cada {int(cada)} {un.lower()}") if cada else ""
+        qtd_em, vne = num(c.get("Quantidade Emitida")), num(c.get("Valor Nominal na Emissao"))
+        qtd_mer = num(c.get("Quantidade em Mercado"))
+        out[cod] = {
+            "data": max(hist) if hist else "", "tipo": tipo, "texto_emissao": ult["indexador_texto"] if ult else "",
+            "tx_em": tx_em, "compra": num(ult["taxa_compra"]) if ult else None, "venda": num(ult["taxa_venda"]) if ult else None,
+            "ind": num(ult["taxa_indicativa"]) if ult else None, "int_min": num(ult["intervalo_min"]) if ult else None,
+            "int_max": num(ult["intervalo_max"]) if ult else None, "pct_par": num(ult["pct_pu_par"]) if ult else None,
+            "dur": dmod, "ntnb": ult["ntnb_referencia"] if ult else "",
+            "emissao": c.get("Emissao", "").lstrip("0"), "serie": c.get("Serie", ""), "dt_emissao": dmy(c.get("Data de Emissao", "")),
+            "inicio_rent": dmy(c.get("Data do Inicio da Rentabilidade", "")), "venc": dmy(c.get("Data de Vencimento", "")),
+            "juros_per": per, "carencia_juros": dmy(c.get("Juros Criterio Novo - Carencia", "")),
+            "prox_juros": next((e[0] for e in ev if e[1] == "Juros"), ""),
+            "amort": [[e[0], num(e[2])] for e in amort][:1], "n_amort": len(amort),
+            "volume_emitido": qtd_em * vne if qtd_em and vne else None, "qtd_mercado": qtd_mer, "vne": vne,
+            "vna": num(c.get("Valor Nominal Atual")), "incentivada": c.get("Deb. Incent. (Lei 12.431)", ""),
+            "resgate": c.get("Resgate Antecipado", ""), "fiduciario": c.get("Agente Fiduciario", ""),
+            "coordenador": c.get("Coordenador Lider", ""),
+            "negocios": negs, "dias180": len({n["data"] for n in ult180}),
+            "vol180": sum(int(n["quantidade"]) * (num(n["pu_medio"]) or 0) for n in ult180),
+            "agenda": ev[:10],
+        }
+    return out
 
 
 def ler_csv(p: Path) -> list[dict]:
@@ -340,6 +434,13 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
   [...new Set(todos.map(n=>n.grupo))].forEach(k => resumo['G:'+k] = resumoDe(n => n.grupo===k));
   segmentos.sort((a,b) => resumo['S:'+b].series - resumo['S:'+a].series);
 
+  // macrossetor de cada segmento: só cor de contexto (bolhas, contornos de grupo, emissores); séries seguem o desvio
+  const MACRO = {energia:['transmissao','geracao','distribuicao','integrada_gt','energia_diversificada','comercializacao'],
+    infra:['saneamento','distribuicao_gas','servicos_ambientais','rodovias','ferrovias','portos','aeroportos','mobilidade_urbana','logistica','locacao'],
+    commod:['agro_acucar_etanol','oleo_gas','mineracao_siderurgia','industria','quimica','papel_celulose']};
+  const macroDe = seg => Object.keys(MACRO).find(k => MACRO[k].includes(seg)) || 'consumo';
+  const corM = seg => 'var(--m-'+macroDe(seg)+')';
+  const tinta = (seg, p) => 'color-mix(in srgb, '+corM(seg)+' '+p+'%, var(--surface))';
   const corDoc = c => ({oficial:'var(--doc-oficial)', escritura:'var(--doc-oficial)', noticia:'var(--doc-noticia)', analise:'var(--doc-analise)'})[c];
   const formaDoc = c => ({oficial:d3.symbolTriangle, escritura:d3.symbolSquare, noticia:d3.symbolDiamond, analise:d3.symbolStar})[c];
   const nomeDoc = {fato_relevante:'Fato relevante', comunicado:'Comunicado ao mercado', aviso_debenturistas:'Aviso aos debenturistas', escritura:'Escritura', noticia:'Notícia', analise:'Análise'};
@@ -372,7 +473,9 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     const abertos = [...abertosG], bolhasG = nos.filter(n => n.nivel==='grupo'), bolhasS = nos.filter(n => n.nivel==='segmento');
     abertos.forEach((k,i) => { const a = 2*Math.PI*i/abertos.length, d = abertos.length>1 ? 140 : 0; ancora[k] = [W/2+d*Math.cos(a), H/2+d*.7*Math.sin(a)]; });
     const anel = (lista, rx, ry, desloc) => lista.forEach((n,i) => { const a = -Math.PI/2 + desloc + 2*Math.PI*i/Math.max(lista.length,1); ancora[n.id] = [W/2+rx*Math.cos(a), H/2+ry*Math.sin(a)]; });
-    if (!abertosS.size) anel(bolhasS, 390, 255, 0);
+    // segmentos do mesmo macrossetor ficam vizinhos no anel (arcos de cor contínua)
+    const ordemM = ['energia','infra','commod','consumo'];
+    if (!abertosS.size) anel([...bolhasS].sort((x,y) => ordemM.indexOf(macroDe(x.segmento)) - ordemM.indexOf(macroDe(y.segmento)) || resumo['S:'+y.segmento].series - resumo['S:'+x.segmento].series), 390, 255, 0);
     else anel(bolhasG, abertos.length ? 400 : 300, abertos.length ? 265 : 215, 0);
   }
   const alvo = n => n.tipo==='bolha' ? (ancora[n.id] || [W/2,H/2]) : (ancora[n.grupo] || ancora['G:'+n.grupo] || [W/2,H/2]);
@@ -406,7 +509,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     sim.force('x').x(n => alvo(n)[0]); sim.force('y').y(n => alvo(n)[1]);
 
     const abertos = [...abertosG];
-    hull = camHull.selectAll('path').data(abertos, k=>k).join('path').attr('fill','var(--hull)').attr('stroke','var(--hull-line)').attr('stroke-linejoin','round')
+    hull = camHull.selectAll('path').data(abertos, k=>k).join('path').attr('fill', k => tinta(segDe(k), 9)).attr('stroke', k => tinta(segDe(k), 70)).attr('stroke-width',1.4).attr('stroke-linejoin','round')
       .attr('stroke-dasharray', k => k.endsWith(ISOL)?'3 3':null).style('cursor','pointer').on('click', (e,k) => { e.stopPropagation(); fecharGrupo(k); });
     hullRot = camHull.selectAll('text').data(abertos, k=>k).join('text').text(k => (nomeGrupo(k)+' · '+nomeSeg(segDe(k))).toUpperCase()+'  ×')
       .attr('font-size',10.5).attr('font-weight',700).attr('letter-spacing','.06em').attr('fill','var(--ink-2)').attr('text-anchor','middle').style('cursor','pointer')
@@ -420,8 +523,8 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
     no = camNo.selectAll('g.no').data(nos, n=>n.id).join(enter => {
       const ge = enter.append('g').attr('class','no').style('cursor','pointer');
       const b = ge.filter(n=>n.tipo==='bolha');
-      b.append('circle').attr('r', 0).attr('fill', n => n.nivel==='segmento' ? 'var(--surface-2)' : 'var(--surface)')
-        .attr('stroke', n => n.nivel==='segmento' ? 'var(--ink-3)' : 'var(--line-2)').attr('stroke-width', n => n.nivel==='segmento' ? 1.6 : 1.4)
+      b.append('circle').attr('r', 0).attr('fill', n => tinta(n.segmento, n.nivel==='segmento' ? 30 : 16))
+        .attr('stroke', n => corM(n.segmento)).attr('stroke-width', n => n.nivel==='segmento' ? 2 : 1.4)
         .transition().duration(350).attr('r', n => raio(n));
       b.append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+15).attr('font-size', n => n.nivel==='segmento'?12:10.5).attr('font-weight',600).attr('fill','var(--ink)').text(n=>n.rotulo);
       b.append('text').attr('text-anchor','middle').attr('dy', n => raio(n)+28).attr('font-size',9.5).attr('fill','var(--ink-3)')
@@ -429,7 +532,7 @@ const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||''
       ge.filter(n=>n.tipo==='controlador'||n.tipo==='grupo').append('rect').attr('x',n=>-raio(n)).attr('y',n=>-raio(n)).attr('width',n=>2*raio(n)).attr('height',n=>2*raio(n)).attr('rx',2)
         .attr('fill', n => n.tipo==='grupo'?'var(--surface)':'var(--ink-2)').attr('stroke','var(--ink-2)').attr('stroke-width',1.2).attr('stroke-dasharray', n=>n.tipo==='grupo'?'2 2':null);
       ge.filter(n=>n.tipo==='garantidor').append('path').attr('d', d3.symbol(d3.symbolDiamond, 90)()).attr('fill','var(--ink-2)');
-      ge.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill','var(--surface)').attr('stroke','var(--ink)').attr('stroke-width',1.5);
+      ge.filter(n=>n.tipo==='emissor').append('circle').attr('r',raio).attr('fill', n => tinta(n.segmento, 25)).attr('stroke', n => corM(n.segmento)).attr('stroke-width',2);
       ge.filter(n=>n.tipo==='emissor').append('text').attr('class','mais').attr('text-anchor','middle').attr('dy',3).attr('font-size',8).attr('font-weight',700).attr('fill','var(--ink)').text('+');
       ge.filter(n=>n.tipo==='doc').append('path').attr('d', n => d3.symbol(formaDoc(n.categoria), n.categoria==='analise'?70:58)()).attr('fill', n => corDoc(n.categoria))
         .attr('stroke', n => n.status_jev==='automatico' && n.impacto==='negativo' ? 'var(--div-pos-2)' : n.status_jev==='automatico' && n.impacto==='positivo' ? 'var(--div-neg-2)' : 'var(--surface)')
@@ -720,11 +823,47 @@ window.carregarCri = () => _cri || (_cri = fetch('/grafo-credito/cri_cra.json', 
     const rotSpread = a.classe==='DI+' ? 'Spread sobre o CDI' : 'Spread comparável (Z, gross-up 15% se isenta)';
     const docs = (D.docs[a.cnpj]||[]).slice(0, 8);
     const hist = a.hist || [];
+    const P = a.ponta || {};
+    const dt = v => v ? v.slice(8,10)+'/'+v.slice(5,7)+'/'+v.slice(0,4) : '–';
+    const txt = v => { if (v==null) return '–'; const k = P.tipo || ''; return k==='IPCA_MAIS' ? 'IPCA + '+fmt(v,2)+'%' : k==='DI_MAIS' ? 'DI + '+fmt(v,2)+'%' : k==='PCT_DI' ? fmt(v,2)+'% do DI' : fmt(v,2)+'%'; };
+    const anosAte = v => v ? (new Date(v) - new Date(P.data||Date.now()))/(365.25*864e5) : null;
+    const mi = v => v==null ? '–' : v>=1e9 ? 'R$ '+fmt(v/1e9,2)+' bi' : 'R$ '+fmt(v/1e6,1)+' mi';
+    const ultNeg = (P.negocios||[])[0];
+    const tit = v => !v ? '–' : v.toLowerCase().replace(/(^|[\s(])([a-zà-ú])/g, (m,p1,p2) => p1+p2.toUpperCase()).replace(/(S\/A|S\.A\.?|Dtvm|Ltda\.?|Cv|Btg)/gi, m => m.toUpperCase());
+    const amortTxt = !P.n_amort ? 'no vencimento (bullet)' : P.n_amort===1 ? 'parcela única em '+dt(P.amort[0][0]) : P.n_amort+' parcelas, a próxima em '+dt(P.amort[0][0])+(P.amort[0][1]!=null?' ('+fmt(P.amort[0][1],2)+'%)':'');
+    const boleta = !P.data && !P.venc ? '' : '<div class="boleta">'
+      + '<div class="linha"><b>'+a.codigo+'</b> '+(P.ind!=null?'a <b>'+txt(P.ind)+'</b> na indicativa ANBIMA de '+dt(P.data):'sem taxa indicativa ANBIMA')
+      + (ultNeg ? ', último negócio em '+dt(ultNeg[0])+(ultNeg[5]!=null?' a ~<b>'+txt(ultNeg[5])+'</b>':'') : ', sem negócio registrado no SND')
+      + '. Emitida a '+(P.texto_emissao||a.indexador||'–')+', vence em <b>'+dt(P.venc)+'</b>'+(anosAte(P.venc)!=null?' ('+fmt(anosAte(P.venc),1)+' anos)':'')
+      + ', juros '+(P.juros_per ? P.juros_per.replace(/al$/,'ais') : '–')+(P.prox_juros?' (próximo em '+dt(P.prox_juros)+')':'')+', amortização '+amortTxt+'. '
+      + (P.incentivada==='S'?'Incentivada (Lei 12.431, isenta para PF).':'Tributada.')+'</div>'
+      + '<div class="kpis">'
+      + '<div class="kpi"><div class="r">Indicativa ANBIMA</div><div class="v">'+txt(P.ind)+'</div><div class="s">'+(P.int_min!=null?'intervalo '+fmt(P.int_min,2)+' a '+fmt(P.int_max,2):'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Compra / venda ANBIMA</div><div class="v">'+(P.compra!=null?fmt(P.compra,2)+' / '+fmt(P.venda,2):'–')+'</div><div class="s">média das taxas informadas</div></div>'
+      + '<div class="kpi"><div class="r">Último negócio (SND)</div><div class="v">'+(ultNeg&&ultNeg[5]!=null?'~'+txt(ultNeg[5]):ultNeg?'R$ '+fmt(ultNeg[3],2):'–')+'</div><div class="s">'+(ultNeg?dt(ultNeg[0])+' · '+ultNeg[2]+' negócios · '+fmt(ultNeg[1],0)+' títulos':'')+'</div></div>'
+      + '<div class="kpi"><div class="r">PU indicativo</div><div class="v">'+(a.pu==null?'–':'R$ '+fmt(a.pu,2))+'</div><div class="s">'+(P.pct_par!=null?fmt(P.pct_par,2)+'% do PU par':'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Duration</div><div class="v">'+fmtv(P.dur ?? a.dmod,2,' anos')+'</div><div class="s">'+(P.ntnb?'NTN-B de referência '+P.ntnb:'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Liquidez 180 dias</div><div class="v">'+(P.dias180||0)+' dias</div><div class="s">'+(P.vol180?'volume '+mi(P.vol180):'sem negócios')+'</div></div>'
+      + '</div></div>'
+      + '<div class="carac">'
+      + [['Emissão / série', (P.emissao||'–')+'ª / '+(P.serie||'–')], ['Data de emissão', dt(P.dt_emissao)], ['Início da rentabilidade', dt(P.inicio_rent)], ['Vencimento', dt(P.venc)],
+         ['Remuneração de emissão', P.texto_emissao||a.indexador||'–'], ['Pagamento de juros', (P.juros_per||'–')+(P.carencia_juros?', desde '+dt(P.carencia_juros):'')], ['Próximo juros', dt(P.prox_juros)],
+         ['Amortização', amortTxt], ['Volume emitido', mi(P.volume_emitido)], ['Saldo em mercado (aprox.)', P.qtd_mercado&&a.pu?mi(P.qtd_mercado*a.pu):'–'],
+         ['Valor nominal (emissão / atual)', P.vne?'R$ '+fmt(P.vne,2)+' / R$ '+fmt(P.vna,2):'–'], ['Garantia', a.garantia||'–'], ['Lei 12.431', P.incentivada==='S'?'sim':'não'],
+         ['Resgate antecipado', P.resgate==='S'?'previsto':P.resgate==='N'?'não previsto':'–'], ['Agente fiduciário', tit(P.fiduciario)], ['Coordenador líder', tit(P.coordenador)], ['ISIN', a.isin||'–']]
+        .map(x => '<div><span>'+x[0]+'</span><span>'+x[1]+'</span></div>').join('') + '</div>'
+      + ((P.negocios||[]).length ? '<h3>Negócios recentes (SND)</h3><div class="tabela" style="max-height:260px"><table><thead><tr><th class="t">Data</th><th>Negócios</th><th>Títulos</th><th>PU médio (R$)</th><th>% do PU par</th><th>Taxa implícita aprox.</th></tr></thead><tbody>'
+          + P.negocios.map(n => '<tr><td class="t">'+dt(n[0])+'</td><td>'+n[2]+'</td><td>'+fmt(n[1],0)+'</td><td>'+fmtv(n[3],2)+'</td><td>'+fmtv(n[4],2)+'</td><td>'+(n[5]==null?'–':txt(n[5]))+'</td></tr>').join('')
+          + '</tbody></table></div><p class="fraco pequeno">Taxa implícita: aproximação pela duration a partir do % do PU par do negócio, ancorada na taxa ANBIMA do mesmo dia quando disponível, senão na taxa de emissão. Inferência, não taxa registrada.</p>' : '')
+      + ((P.agenda||[]).length ? '<h3>Próximos eventos (agenda SND)</h3><div class="tabela" style="max-height:220px"><table><thead><tr><th class="t">Pagamento</th><th class="t">Evento</th><th>Taxa / percentual</th></tr></thead><tbody>'
+          + P.agenda.map(e => '<tr><td class="t">'+dt(e[0])+'</td><td class="t">'+e[1]+'</td><td>'+(e[2]&&e[2]!=='-'?fmt(+e[2],4):'–')+'</td></tr>').join('') + '</tbody></table></div>' : '');
     el.innerHTML =
       '<div class="cab"><div><div class="kicker">'+(D.segmentos[a.segmento]||a.segmento)+' · '+a.grupo+'</div>'
       + '<h2 style="margin:0">'+a.codigo+' <span class="muted" style="font-size:1rem;font-family:Inter">'+a.emissor+'</span>'+(a.faixa==='high_yield'?' <span class="selo hy">high yield</span>':'')+'</h2>'
       + '<p class="muted pequeno" style="margin:.2rem 0 0">'+[a.indexador, 'vence '+(a.vencimento||'–'), a.isenta==='S'?'incentivada (isenta)':'tributada', 'garantia '+(a.garantia||'–'), a.isin].filter(Boolean).join(' · ')+(a.motivo_faixa?'<br>'+a.motivo_faixa:'')+'</p></div>'
       + '<div><button id="ativoSimular">simular choque</button> <button id="ativoFechar">fechar</button></div></div>'
+      + boleta
+      + '<h3>Spread e valor relativo</h3>'
       + '<div class="ativo-grade">'
       + cel(rotSpread, fmtv(a.spread,0,' bps'))
       + (a.classe==='IPCA+' ? cel('Z-spread de mercado (sem gross-up)', fmtv(a.z_mercado,0,' bps')) + cel('Spread sobre a NTN-B de referência', fmtv(a.spread_ntnb,0,' bps'), a.ntnb_ref ? 'NTN-B '+a.ntnb_ref : '') : '')
@@ -837,6 +976,7 @@ def gerar_projeto() -> str:
             if v:
                 historico.setdefault(h["codigo"], []).append([a_csv.stem, round(float(v), 1)])
     snd_c = {c["Codigo do Ativo"]: c for c in ler_csv(RAIZ / "dados" / "snd" / "caracteristicas.csv")}
+    ponta = montar_ponta(snd_c)
     ativos = {}
     for s_ in series:
         c, u, d = s_["codigo"], universo[s_["codigo"]], desvios.get(s_["codigo"], {})
@@ -851,6 +991,7 @@ def gerar_projeto() -> str:
             "spread": d.get("spread"), "justo_pares": d.get("justo_pares"), "ajuste": d.get("ajuste"), "motivos": d.get("motivos", ""),
             "justo_reg": d.get("justo_reg"), "desvio": d.get("desvio"), "dp": d.get("dp"), "pares": d.get("pares", ""),
             "choque100": f(s_.get("choque_100_pct")), "clausulas": cl.get("resumo", ""), "hist": historico.get(c, []),
+            "ponta": ponta.get(c),
         }
     # fundamentos (CVM DFP) por emissor e exposição como devedor/cedente em CRI e CRA
     fundamentos = {}
@@ -973,7 +1114,8 @@ def gerar_projeto() -> str:
 <label style="margin-left:auto">Rótulos <button data-rot="controle" class="ativo">controladores</button><button data-rot="todos">todos</button><button data-rot="nenhum">nenhum</button></label></div>
 <div style="position:relative"><svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
 <div id="avisoSel" class="aviso-sel" style="display:none"></div></div>
-<div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
+<div class="legenda legenda-macro"><span><i style="background:var(--m-energia)"></i>energia</span><span><i style="background:var(--m-infra)"></i>saneamento, transporte e logística</span><span><i style="background:var(--m-commod)"></i>commodities e indústria</span><span><i style="background:var(--m-consumo)"></i>consumo, serviços, telecom e financeiro</span><span class="fraco">cor das bolhas, grupos e emissores = macrossetor; cor das séries = desvio de spread</span></div>
+<div class="legenda" style="border-top:0;padding-top:0"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span></div>
 <div class="legenda" style="border-top:0;padding-top:0">{escala}<span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>· · ponte entre grupos</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </div>
 <div id="ficha" class="painel"></div>
