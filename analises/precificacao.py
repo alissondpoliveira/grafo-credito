@@ -137,8 +137,11 @@ def fator_ipca(inicio: date, fim: date) -> float:
     return fator
 
 
-def montar_fluxo(carac: dict, eventos: list[dict], data_ref: date, vna_corrigido: bool = True) -> tuple[list[tuple[date, float]], str]:
-    """Fluxo real por unidade de saldo atual (saldo = 1 na data de referência)."""
+def montar_fluxo(carac: dict, eventos: list[dict], data_ref: date, vna_corrigido: bool = True,
+                 fator_di=None) -> tuple[list[tuple[date, float]], str]:
+    """Fluxo por unidade de saldo atual (saldo = 1 na data de referência).
+    IPCA+: fluxo real. DI+ (fator_di informado): fluxo nominal projetado, juros = saldo x (fator DI x fator spread - 1),
+    com fator_di(d0, d1) = DI acumulado projetado entre as datas (curva prefixada ANBIMA)."""
     taxa = br(carac["Juros Criterio Novo - Taxa"]) / 100
     cada = int(carac["Juros Criterio Novo - Cada"] or 0)
     tipo_amort = carac.get("Tipo de Amortizacao", "")
@@ -184,7 +187,8 @@ def montar_fluxo(carac: dict, eventos: list[dict], data_ref: date, vna_corrigido
     for e in evs:
         d_ev, d_pg = dt(e["Data do Evento"]), dt(e["Data do Pagamento"] or e["Data do Evento"])
         if e["Evento"] == "Juros":
-            valor = saldo * ((1 + taxa) ** (du(ultimo, d_ev) / 252) - 1)
+            fdi = fator_di(ultimo, d_ev) if fator_di else 1.0
+            valor = saldo * ((1 + taxa) ** (du(ultimo, d_ev) / 252) * fdi - 1)
             ultimo = d_ev
         elif e["Evento"] == "Amortização":
             pct = br(e["Taxa/Percentual"]) / 100
@@ -281,12 +285,48 @@ def main(data_ref_txt: str | None) -> None:
         }
         status = ""
         if s["indexador_tipo"] == "DI_MAIS" and s["taxa_indicativa"] and s["duration_anos"]:
-            # DI+: a taxa indicativa já é o spread sobre o CDI; a duration ANBIMA serve de spread duration
-            d_spread = float(s["duration_anos"])
-            ds = {f"choque_{b}_aprox_pct": -d_spread * b / 1e4 * 100 for b in CHOQUES_BPS}
-            linhas.append({**base, "status": "ok DI+", "spread_di_bps": float(s["taxa_indicativa"]) * 100,
-                           "duration_mod_anos": d_spread, **ds,
-                           **{f"choque_{b}_pct": ds[f"choque_{b}_aprox_pct"] for b in CHOQUES_BPS}})
+            # DI+: a taxa indicativa é o spread sobre o CDI, em composição exponencial (1 + DI) x (1 + spread).
+            # Projeta o DI pela curva prefixada ANBIMA, monta o fluxo nominal e desconta a (1 + DI) x (1 + spread).
+            # O choque mexe só no fator (1 + spread)^t, então a reprecificação completa é exata dados os pesos.
+            sp = float(s["taxa_indicativa"]) / 100
+            dur_anbima = float(s["duration_anos"])
+            pre = curvas["PREFIXADOS"]
+            acum = lambda d: (1 + svensson(pre, max(du(data_ref, d), 0) / 252)) ** (max(du(data_ref, d), 0) / 252)
+            r0 = svensson(pre, 1 / 252)
+
+            def fator_di(d0, d1):
+                passado = (1 + r0) ** (du(d0, data_ref) / 252) if d0 < data_ref else 1.0  # DI já corrido, aproximado pelo CDI de hoje
+                return passado * acum(d1) / acum(max(d0, data_ref))
+
+            fl = None
+            if c:
+                f_nom, erro = montar_fluxo(c, agenda.get(s["codigo"], []), data_ref, vna_corrigido=False, fator_di=fator_di)
+                if not erro:
+                    # fluxo "deflacionado pelo DI": cf / DI acumulado; o preço passa a ser sum cf' / (1 + spread)^t
+                    fl = [(du(data_ref, d) / 252, cf / acum(d)) for d, cf in f_nom]
+            extra, status_di = {}, "ok DI+"
+            if fl:
+                p0 = preco(fl, sp)
+                dmac = duration_mac(fl, sp)
+                if abs(dmac - dur_anbima) / dur_anbima <= 0.02:
+                    h = 1e-4
+                    convex = (preco(fl, sp + h) + preco(fl, sp - h) - 2 * p0) / (h * h * p0)
+                    dmod = dmac / (1 + sp)
+                    extra = {"n_fluxos": len(fl), "duration_mac_modelo_anos": dmac, "erro_duration_pct": (dmac - dur_anbima) / dur_anbima * 100,
+                             "duration_mod_anos": dmod, "convexidade": convex,
+                             **{f"choque_{b}_pct": (preco(fl, sp + b / 1e4) / p0 - 1) * 100 for b in CHOQUES_BPS},
+                             **{f"choque_{b}_aprox_pct": (-dmod * b / 1e4 + 0.5 * convex * (b / 1e4) ** 2) * 100 for b in CHOQUES_BPS},
+                             **{f"breakeven_{m}m_bps": sp * m / 12 / dmod * 1e4 for m in HORIZONTES_MESES}}
+                    fluxos_json[s["codigo"]] = {"y": sp, "t": [round(x, 6) for x, _ in fl], "cf": [round(v, 8) for _, v in fl]}
+            if not extra:
+                # sem fluxo validado: spread duration aproximada = duration de Macaulay ANBIMA / (1 + spread)
+                status_di = "ok DI+ aprox"
+                dmod = dur_anbima / (1 + sp)
+                extra = {"duration_mod_anos": dmod,
+                         **{f"choque_{b}_pct": -dmod * b / 1e4 * 100 for b in CHOQUES_BPS},
+                         **{f"choque_{b}_aprox_pct": -dmod * b / 1e4 * 100 for b in CHOQUES_BPS},
+                         **{f"breakeven_{m}m_bps": sp * m / 12 / dmod * 1e4 for m in HORIZONTES_MESES}}
+            linhas.append({**base, "status": "ok DI+", "metodo_di": status_di, "spread_di_bps": sp * 1e4, **extra})
             continue
         if s["indexador_tipo"] != "IPCA_MAIS":
             status = "fora do escopo (não IPCA+ nem DI+)"

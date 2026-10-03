@@ -118,6 +118,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .aviso-sel{position:absolute;left:12px;bottom:12px;background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:.45rem .7rem;font-size:.82rem;box-shadow:0 4px 14px rgba(0,0,0,.1)}
 .aviso-sel a{color:var(--accent)}
 #tab tbody tr.sel{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--ink)}
+.res span{display:block;margin-top:2px}
 .boleta{border:1px solid var(--line-2);border-radius:10px;padding:14px 16px;margin:14px 0 6px;background:var(--surface)}
 .boleta .linha{font-size:1.02rem;line-height:1.55}
 .boleta .linha b{font-variant-numeric:tabular-nums}
@@ -677,25 +678,36 @@ desenharDesvio('IPCA+');
 const sel = document.getElementById('serie'), choque = document.getElementById('choque');
 D.series.forEach(s => { const o=document.createElement('option'); o.value=s.codigo; o.textContent=s.codigo+' · '+s.emissor+(s.classe==='DI+'?' (DI+)':''); sel.appendChild(o); });
 const preco = (f, y) => f.t.reduce((p,t,i) => p + f.cf[i]/Math.pow(1+y, t), 0);
+const txtTaxa = (s, v) => v==null ? '' : (s.classe==='DI+' ? 'DI + ' : 'IPCA + ')+fmt(v,2)+'%';
 function calcular(){
   const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
-  const f = D.fluxos[s.codigo], ds = (parseFloat(choque.value)||0)/1e4;
-  const aprox = (-s.dmod*ds + (s.convex? .5*s.convex*ds*ds : 0))*100;
+  const f = D.fluxos[s.codigo], bps = parseFloat(choque.value)||0, ds = bps/1e4;
+  const soDur = -s.dmod*ds*100, conv = s.convex ? .5*s.convex*ds*ds*100 : null;
+  const aprox = soDur + (conv||0);
   const cheio = f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : null;
   const v = cheio!=null ? cheio : aprox;
-  document.getElementById('r_pu').textContent = s.pu ? 'R$ '+fmt(s.pu,2) : '–';
-  document.getElementById('r_pu_novo').textContent = s.pu ? 'R$ '+fmt(s.pu*(1+v/100),2) : '–';
-  document.getElementById('r_var').textContent = cheio!=null ? fmt(cheio,2)+'%' : 'n/d (DI+)';
-  document.getElementById('r_aprox').textContent = fmt(aprox,2)+'%';
-  document.getElementById('r_dur').textContent = fmt(s.dmod,2)+' anos';
-  document.getElementById('r_z').textContent = fmt(s.spread,0)+' bps' + (s.classe==='DI+'?' sobre CDI':'');
+  const $ = id => document.getElementById(id);
+  $('r_pu').textContent = s.pu ? 'R$ '+fmt(s.pu,2) : '–';
+  $('r_taxa').textContent = s.taxa!=null ? 'a '+txtTaxa(s, s.taxa) : '';
+  $('r_pu_novo').textContent = s.pu ? 'R$ '+fmt(s.pu*(1+v/100),2) : '–';
+  $('r_taxa_nova').textContent = s.taxa!=null ? 'a '+txtTaxa(s, s.taxa+bps/100) : '';
+  $('r_var').textContent = cheio!=null ? sinal(cheio,2)+'%' : 'sem fluxo validado';
+  $('r_var_rs').textContent = s.pu ? (v<0?'− ':'+ ')+'R$ '+fmt(Math.abs(s.pu*v/100),2)+' por título'+(cheio==null?' (pela aproximação)':'') : '';
+  $('r_so_dur').textContent = sinal(soDur,2)+'%';
+  $('r_conv').textContent = conv==null ? '–' : sinal(conv,2)+'%';
+  $('r_conv_info').textContent = s.convex ? 'convexidade '+fmt(s.convex,1)+'; sempre a favor do investidor' : '';
+  $('r_aprox').textContent = sinal(aprox,2)+'%';
+  $('r_resid').textContent = cheio!=null ? 'diferença para o fluxo: '+fmt(Math.abs(cheio-aprox)*100,1)+' bps de preço' : '';
+  $('r_dur').textContent = fmt(s.dmod,2)+' anos';
+  $('r_z').textContent = s.classe==='DI+' ? fmt(s.spread,0)+' bps sobre o CDI' : fmt(s.z,0)+' bps (Z de mercado)';
+  $('r_z_info').textContent = s.classe==='DI+' ? '' : 'comparável '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?' com gross-up de 15% (isenta)':'');
   document.getElementById('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
   document.getElementById('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
 }
 // régua e curva preço x choque: os três controles (régua, ponto arrastável, campo) ficam sincronizados
 const regua = document.getElementById('regua'), reguaValor = document.getElementById('regua_valor');
 const variacao = (s, bps) => { const f = D.fluxos[s.codigo], ds = bps/1e4;
-  return f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : (-s.dmod*ds)*100; };
+  return f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : (-s.dmod*ds + (s.convex? .5*s.convex*ds*ds : 0))*100; };
 function definir(bps, origem){
   bps = Math.max(-300, Math.min(300, Math.round(bps/5)*5));
   if (origem!=='campo') choque.value = bps; if (origem!=='regua') regua.value = bps;
@@ -704,19 +716,24 @@ function definir(bps, origem){
 function desenharCurva(){
   const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
   const svg = d3.select('#curva'); svg.selectAll('*').remove();
-  const W = 440, H = 200, M = {t:12, r:12, b:22, l:40}; svg.attr('viewBox', `0 0 ${W} ${H}`);
-  const pts = d3.range(-300, 301, 10).map(b => [b, variacao(s, b)]);
+  const W = 440, H = 210, M = {t:14, r:12, b:22, l:58}; svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const pu0 = s.pu || 100, puDe = v => pu0*(1+v/100);
+  const pts = d3.range(-300, 301, 10).map(b => [b, puDe(variacao(s, b))]);
+  const reta = [[-300, puDe(s.dmod*3)], [300, puDe(-s.dmod*3)]];
   const x = d3.scaleLinear().domain([-300, 300]).range([M.l, W-M.r]);
-  const y = d3.scaleLinear().domain(d3.extent(pts, p=>p[1])).nice().range([H-M.b, M.t]);
+  const y = d3.scaleLinear().domain(d3.extent([...pts, ...reta], p=>p[1])).nice().range([H-M.b, M.t]);
   y.ticks(4).forEach(t => { svg.append('line').attr('x1',M.l).attr('x2',W-M.r).attr('y1',y(t)).attr('y2',y(t)).attr('stroke','var(--line)');
-    svg.append('text').attr('x',M.l-6).attr('y',y(t)+3).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text(fmt(t,0)+'%'); });
+    svg.append('text').attr('x',M.l-6).attr('y',y(t)+3).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text('R$ '+fmt(t,0)); });
+  svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(reta)).attr('fill','none').attr('stroke','var(--ink-3)').attr('stroke-width',1.2).attr('stroke-dasharray','4 3');
+  svg.append('text').attr('x', W-M.r).attr('y', y(reta[1][1])+12).attr('text-anchor','end').attr('font-size',9).attr('fill','var(--ink-3)').text('só duration');
   [-300,-150,0,150,300].forEach(t => svg.append('text').attr('x',x(t)).attr('y',H-6).attr('text-anchor','middle').attr('font-size',9.5).attr('fill','var(--ink-3)').text((t>0?'+':'')+t));
   svg.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',M.t).attr('y2',H-M.b).attr('stroke','var(--line-2)');
   svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(pts)).attr('fill','none').attr('stroke','var(--ink)').attr('stroke-width',2);
-  const b = +choque.value || 0, v = variacao(s, b);
+  const b = +choque.value || 0, vp = variacao(s, b), v = puDe(vp);
   svg.append('line').attr('x1',x(b)).attr('x2',x(b)).attr('y1',y(v)).attr('y2',H-M.b).attr('stroke','var(--ink-3)').attr('stroke-dasharray','3 3');
+  svg.append('line').attr('x1',M.l).attr('x2',x(b)).attr('y1',y(v)).attr('y2',y(v)).attr('stroke','var(--ink-3)').attr('stroke-dasharray','3 3');
   svg.append('circle').attr('cx',x(b)).attr('cy',y(v)).attr('r',7).attr('fill', b<0?'var(--div-neg-2)':b>0?'var(--div-pos-2)':'var(--div-0)').attr('stroke','var(--surface)').attr('stroke-width',2);
-  svg.append('text').attr('x', x(b) + (b>150?-10:10)).attr('y', y(v)-10).attr('text-anchor', b>150?'end':'start').attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text(fmt(v,2)+'%');
+  svg.append('text').attr('x', x(b) + (b>150?-10:10)).attr('y', y(v)-10).attr('text-anchor', b>150?'end':'start').attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text('R$ '+fmt(v,2)+' ('+sinal(vp,2)+'%)');
   // arrastar em qualquer ponto do gráfico move o choque
   svg.append('rect').attr('x',M.l).attr('y',0).attr('width',W-M.l-M.r).attr('height',H).attr('fill','transparent').style('cursor','ew-resize')
     .call(d3.drag().on('start drag', e => definir(x.invert(e.x), 'curva')))
@@ -966,6 +983,7 @@ def gerar_projeto() -> str:
             "codigo": s["codigo"], "emissor": s["emissor_atual"].title(), "classe": d.get("classe"),
             "pu": f(s["pu_anbima"]), "dmod": f(s["duration_mod_anos"]), "convex": f(s.get("convexidade")),
             "spread": d.get("spread"), "desvio": d.get("desvio"), "dp": d.get("dp"), "be12": f(s.get("breakeven_12m_bps")),
+            "taxa": f(s["taxa_indicativa"]), "z": f(s.get("zspread_bps")), "isenta": s.get("incentivada", ""),
         })
         if s["status"] == "ok DI+":
             di[s["codigo"]] = True
@@ -1128,7 +1146,7 @@ def gerar_projeto() -> str:
 </section>
 
 <section id="simulador">
-<div class="cab"><div><h2>Simulador de abertura e fechamento de spread</h2><p class="muted pequeno">IPCA+: reprecificação completa do fluxo remanescente (agenda SND) pela taxa indicativa mais o choque. DI+: aproximação pela duration.</p></div></div>
+<div class="cab"><div><h2>Simulador de abertura e fechamento de spread</h2><p class="muted pequeno">O choque soma bps à taxa indicativa ANBIMA e o fluxo remanescente (agenda SND) é descontado de novo. IPCA+: fluxo real descontado à taxa real. DI+: fluxo projetado pela curva prefixada ANBIMA e descontado a (1 + DI) × (1 + spread). A linha tracejada é o que daria só a duration.</p></div></div>
 <div class="painel sim">
 <div>
 <label for="serie">Série</label><select id="serie"></select>
@@ -1140,12 +1158,14 @@ def gerar_projeto() -> str:
 <div class="botoes"><button data-v="-100">−100</button><button data-v="-50">−50</button><button data-v="50">+50</button><button data-v="100">+100</button><button data-v="200">+200</button></div>
 </div>
 <div><div class="res">
-<div><small>PU ANBIMA</small><b id="r_pu">–</b></div>
-<div><small>PU após o choque</small><b id="r_pu_novo">–</b></div>
-<div><small>Variação, reprecificação completa</small><b id="r_var">–</b></div>
-<div><small>Variação, duration + convexidade</small><b id="r_aprox">–</b></div>
-<div><small>Duration modificada</small><b id="r_dur">–</b></div>
-<div><small>Spread (comparável ou sobre CDI)</small><b id="r_z">–</b></div>
+<div><small>PU ANBIMA (hoje)</small><b id="r_pu">–</b><span class="pequeno muted" id="r_taxa"></span></div>
+<div><small>PU após o choque</small><b id="r_pu_novo">–</b><span class="pequeno muted" id="r_taxa_nova"></span></div>
+<div><small>Variação do preço (fluxo reprecificado)</small><b id="r_var">–</b><span class="pequeno muted" id="r_var_rs"></span></div>
+<div><small>Só duration: − duration × choque</small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
+<div><small>Ajuste de convexidade: + ½ × convexidade × choque²</small><b id="r_conv">–</b><span class="pequeno muted" id="r_conv_info"></span></div>
+<div><small>Duration + convexidade (aproximação)</small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
+<div><small>Duration modificada</small><b id="r_dur">–</b><span class="pequeno muted">cada 100 bps ≈ essa % do preço</span></div>
+<div><small>Spread</small><b id="r_z">–</b><span class="pequeno muted" id="r_z_info"></span></div>
 <div><small>Desvio em relação aos pares</small><b id="r_desvio">–</b></div>
 <div><small>Break-even de abertura em 12 meses</small><b id="r_be12">–</b></div>
 </div></div>
