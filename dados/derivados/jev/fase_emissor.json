@@ -610,5 +610,533 @@
  "28019100000189|1|Comunicado Conta Escrow": {
   "fase": "operacional",
   "confianca": 0.84
+ },
+ "08213823000107|15|Resultados 4T25/2025": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "07636657000199|15|Aprovação da 6ª Emissão de Debêntures Si": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "71208516000174|15|Alienação da Operação de IOT": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "61079117000105|15|4ª (quarta) emissão de debêntures simple": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09288252000132|15|Fato Relevante - Aquisição da FMU": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "06057223000171|15|Celebração ou Extinção de Contrato": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "16590234000176|15|Reorganização Societária - Incorporação,": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "05197443000138|15|Processo Sucessório da Administração": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "40432544000147|10|Claro compra controle da Desktop por R$ ": {
+  "fase": "transicao",
+  "confianca": 0.27
+ },
+ "13574594000196|15|Fato Relevante - Grupamento de Ações": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04601397000128|15|Atualização sobre o Percentual Mínimo de": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "42150391000170|15|Braskem comunica que foi informada de de": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "06977745000191|5|Aprovação do Resgate Antecipado Facultat": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "09346601000125|15|Eleição do Diretor-Presidente da B3": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "10923227000162|1|Eneva (ENEV3) compra ações e debêntures ": {
+  "fase": "operacional",
+  "confianca": 0.73
+ },
+ "64904295000103|15|Conclusão Da Aquisição Pela Camilatam Da": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "09114805000130|15|Closing da combinação de negócios com a ": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "47508411000156|15|Term Sheet das debêntures do Plano de Re": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "03237583000167|5|Copa Energia avança no Ranking 100 Open ": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "45242914000105|14|Aprovação 4º programa de recompra de açõ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "10835932000108|8|Eleição de Diretora Financeira e de Rela": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "01027058000191|15|10ª Emissão de Debêntures Simples, Não C": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08336783000190|5|Celesc (CLSC3; CLSC4) aprova empréstimo ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "16619378000108|1|Cimed faz reforço de caixa de R$ 500 mi": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "12420164000157|15|Prorrogação do prazo para subscrição de ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07047251000170|15|Enquadramento ao benefício fiscal Sudene": {
+  "fase": "operacional",
+  "confianca": 0.93
+ },
+ "02800026000140|15|Eleição Diretor Estatutário": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04973790000142|2|CPFL Energia (CPFE3) aprova cancelamento": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "04172213000151|11|Renovação da Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "50746577000115|15|Notícias divulgadas na imprensa": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "62984091000102|15|Extensão automática de prazo para o enqu": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "33042730000104|15|Eleição do Presidente do Conselho": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "08324196000181|15|Eleição Diretora Presidente": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "10760260000119|15|7ª emissão de debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "61486650000183|15|Reorganização Societária - Incorporação ": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "97837181000147|15|Encerramento de Atividades - Urussanga (": {
+  "fase": "operacional",
+  "confianca": 0.4
+ },
+ "09053134000145|15|Alteração de Controle": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "61190096000192|11|Celebração, Alteração ou Rescisão de Aco": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "59546515000134|8|Extensão Contrato de Distribuição Nike": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "60840055000131|15|Fechamento da Aquisição de Femme pelo Fl": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "88610126000129|15|Oferta Pública de Aquisição de Ações": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "33611500000119|15|Cancelamento de ações em tesouraria": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "08397078000101|10|Mudança de Controle da Companhia": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "08402943000152|15|Percentual mínimo de ações em circulação": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02932074000191|15|Aumento de capital da Companhia": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51218147000193|9|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "35822503000127|13|Alteração de membros da Diretoria Execut": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "61156113000175|15|Aprovação da aquisição de participação a": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "61532644000115|15|Pagamento de juros sobre capital próprio": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "08294224000165|15|Captação da 19ª Emissão de Debêntures Si": {
+  "fase": "transicao",
+  "confianca": 0.58
+ },
+ "13270520000166|15|Deferimento do processamento da RE da Co": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "00873894000124|4|Segunda emissão de Notas Comerciais da L": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "00389481000179|12|Incidente em sistemas de TI": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "09041168000110|15|Venda de ativo": {
+  "fase": "operacional",
+  "confianca": 0.74
+ },
+ "05917486000140|13|Celebração, Alteração ou Rescisão de Aco": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "16676520000159|15|Extensão Waiver B3": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "13783221000478|14|5ª Emissão de Nota Comercial Escritural": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "17314329000120|15|Esclarecimentos em atendimento ao ofício": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "47960950000121|15|Bonificação de Ações": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "27093558000115|15|Mudança de Controle da Companhia": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "67620377000114|15|Decisão denegatória Coprodec": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "03853896000140|15|Fato Relevante Conjunto - Sadia Halal": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "07816890000153|15|Declaração de Juros sobre o Capital Próp": {
+  "fase": "operacional",
+  "confianca": 0.26
+ },
+ "71673990000177|15|Mudança de liderança da Companhia": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04992714000184|15|Fato Relevante - 13ª Emissão de Debêntur": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "12104241000402|15|Pedido de convocação de Assembleia Geral": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "18080368000172|4|Renovação Anual do Rating_OZN": {
+  "fase": "operacional",
+  "confianca": 0.75
+ },
+ "33050196000188|9|Renovação da Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08926302000105|7|Liquidação da 6ª Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "06626253000151|15|Aquisição de Ações de Emissão da Própria": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "11992680000193|15|Sucessao da Presidencia Executiva": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "61585865000151|15|Alienação da 4Bio Medicamentos S.A.": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "33453598000123|15|Conclusão do desinvestimento das operaçõ": {
+  "fase": "operacional",
+  "confianca": 0.93
+ },
+ "06047087000139|15|Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "03342704000130|15|Processo de Sucessão de Diretor Estatutá": {
+  "fase": "operacional",
+  "confianca": 0.75
+ },
+ "89086144001198|3|Fras-le (FRAS3) anuncia OPA com troca de": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "06347409000165|12|Extensão Contrato de Distribuição Nike": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "07594978000178|15|Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "07714104000107|15|Encerramento da distribuição da 10ª Emis": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "16404287000155|15|JV com Kimberly-Clark - Conclusão da Tra": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "02600854000134|5|Information Regarding The Public Offer A": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "35764708000101|15|Aprovou a proposta de distribuição de di": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "84684455000163|15|Aquisição e alienação de ações de emissã": {
+  "fase": "operacional",
+  "confianca": 0.25
+ },
+ "02558157000162|15|Incorporação Fibrasil": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "53113791000122|15|7ª (sétima) emissão de debêntures simple": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "94813102000170|15|Aprovação Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "84683374000300|10|Tupy (TUPY3) registra mudanças no consel": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "33958695000178|15|6º Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "60665981000118|8|Emissão de 6ª Debentures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "60894730000105|15|Alteração na projeção de investimentos": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "34274233000102|15|Fato Relevante referente a emissão da 11": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "01637895000132|15|Negociações com o Conselho Administrativ": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "31748174000160|15|Eleição de Diretor": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "33839910000111|15|Aprovação de Programa de Recompra": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "33113309000147|15|Aquisição de empresa": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "41570356000148|6|Fato Relevante 11.10.2025": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "42278473000103|15|Mudanças na Administração": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08807432000110|15|Fusão entre Yduqs e Afya": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "33041260065290|15|Deferimento de Tutela de Urgência na Rec": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "89637490000145|15|Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.81
+ },
+ "03798096000173|3|Terminais Ageo captam R$ 450 milhões em ": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "10841050000155|3|Autorização para celebração de Termo Adi": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "08793343000162|1|Bioenergética Vale do Paracatu irá capta": {
+  "fase": "operacional",
+  "confianca": 0.23
+ },
+ "14292540000109|5|Finalização da Estruturação": {
+  "fase": "operacional",
+  "confianca": 0.27
+ },
+ "02041460000193|15|Aceite Proposta Leilão UPI V.tal": {
+  "fase": "operacional",
+  "confianca": 0.75
+ },
+ "10531501000158|10|Alteração de sua Diretoria estatutária.": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "44330975000153|2|Colombo Agroindústria terá assembleia ex": {
+  "fase": "operacional",
+  "confianca": 0.9
+ },
+ "08902291000115|15|Aditamento do Programa de Recompra 2026": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "25369840000157|15|Modificação de Projeções Divulgadas": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "23438929000100|15|Aquisição da Oquei": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "|1|BNDES aprova R$ 1,05 bilhão para distrib": {
+  "fase": "operacional",
+  "confianca": 0.84
+ },
+ "08170849000115|15|Aquisição de Participação Remanescente -": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "25176391000120|1|Fitch afirma rating ‘AAA (bra)’ da Enel ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07401436000212|4|Eldorado Brasil Celulose encerra distrib": {
+  "fase": "operacional",
+  "confianca": 0.39
+ },
+ "12091809000155|15|Encerramento da Transação para Venda de ": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "36030967000163|1|Azevedo & Travassos Investimentos fecha ": {
+  "fase": "operacional",
+  "confianca": 0.73
+ },
+ "36619747000170|2|Telefônica Brasil (VIVT3) conclui compra": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "54846951000105|6|Ferrari mais que dobra lucro em 2025/26 ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "03207703000183|9|Liquidação da 11ª Emissão de Debêntures ": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "02635522000195|15|Projeções Safra 2026/27": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "11421994000136|15|Aquisição de participação adicional na c": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "33000167000101|15|Petrobras informa sobre adesão à nova su": {
+  "fase": "operacional",
+  "confianca": 0.93
+ },
+ "13733490000187|2|QMC Telecom tem rating elevado pela Fitc": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "08070508000178|11|Conclusão do desinvestimento das operaçõ": {
+  "fase": "operacional",
+  "confianca": 0.87
+ },
+ "12229415000110|1|Usina Coruripe realiza primeira emissão ": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "47063128000168|1|Usina São Domingos divulga dados finance": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51466860000156|15|Guidance de Produção e Capex - Safra 202": {
+  "fase": "operacional",
+  "confianca": 0.72
+ },
+ "02421421000111|15|Information Regarding The Public Offer A": {
+  "fase": "operacional",
+  "confianca": 0.99
+ },
+ "02476026000136|1|Eurofarma, Athena Saúde e Ultrafértil fa": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "02255187000108|15|Aplicabilidade do Art. 256 da Lei 6.404/": {
+  "fase": "operacional",
+  "confianca": 0.25
+ },
+ "50376938000189|3|Trajetória diferenciada de Norberto Bell": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "33592510000154|15|Atualização de projeções": {
+  "fase": "operacional",
+  "confianca": 0.96
  }
 }
