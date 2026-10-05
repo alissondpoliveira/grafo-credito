@@ -829,7 +829,9 @@ function calcular(){
   $('r_conv_info').textContent = s.convex ? 'convexidade '+fmt(s.convex,1)+'; sempre a favor do investidor' : '';
   $('r_aprox').textContent = sinal(aprox,2)+'%';
   $('r_resid').textContent = cheio!=null ? 'diferença para o fluxo: '+fmt(Math.abs(cheio-aprox)*100,1)+' bps de preço' : '';
-  $('r_dur').textContent = fmt(s.dmod,2)+' anos';
+  // modificada = Macaulay / (1 + taxa): lê-se como % do preço por 1 ponto (100 bps) de taxa
+  $('r_dur').textContent = fmt(s.dmod,2);
+  $('r_dur_info').textContent = '≈ '+fmt(s.dmod,2)+'% do preço a cada 100 bps' + (s.taxa!=null ? ' · Macaulay '+fmt(s.dmod*(1+s.taxa/100),2)+' anos' : '');
   $('r_z').textContent = s.classe==='DI+' ? fmt(s.spread,0)+' bps sobre o CDI' : fmt(s.z,0)+' bps (Z de mercado)';
   $('r_z_info').textContent = s.classe==='DI+' ? '' : 'comparável '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?' com gross-up de 15% (isenta)':'');
   document.getElementById('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
@@ -1123,7 +1125,7 @@ function mostrarRecentes(){
       + '<div class="kpi"><div class="r">Compra / venda ANBIMA</div><div class="v">'+(P.compra!=null?fmt(P.compra,2)+' / '+fmt(P.venda,2):'–')+'</div><div class="s">média das taxas informadas</div></div>'
       + '<div class="kpi"><div class="r">Último negócio (SND)</div><div class="v">'+(ultNeg&&ultNeg[5]!=null?'~'+txt(ultNeg[5]):ultNeg?'R$ '+fmt(ultNeg[3],2):'–')+'</div><div class="s">'+(ultNeg?dt(ultNeg[0])+' · '+ultNeg[2]+' negócios · '+fmt(ultNeg[1],0)+' títulos':'')+'</div></div>'
       + '<div class="kpi"><div class="r">PU indicativo</div><div class="v">'+(a.pu==null?'–':'R$ '+fmt(a.pu,2))+'</div><div class="s">'+(P.pct_par!=null?fmt(P.pct_par,2)+'% do PU par':'')+'</div></div>'
-      + '<div class="kpi"><div class="r">Duration</div><div class="v">'+fmtv(P.dur ?? a.dmod,2,' anos')+'</div><div class="s">'+(P.ntnb?'NTN-B de referência '+P.ntnb:'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Duration modificada</div><div class="v">'+fmtv(a.dmod,2)+'</div><div class="s">'+(a.dmod!=null?'≈ '+fmt(a.dmod,2)+'% do preço por 100 bps':'')+(P.dur!=null?' · Macaulay '+fmt(P.dur,2)+' anos':'')+(P.ntnb?' · NTN-B '+P.ntnb:'')+'</div></div>'
       + '<div class="kpi"><div class="r">Liquidez 180 dias</div><div class="v">'+(P.dias180||0)+' dias</div><div class="s">'+(P.vol180?'volume '+mi(P.vol180):'sem negócios')+'</div></div>'
       + '</div></div>';
     const carac = !P.venc ? '' : '<h3>Características</h3><div class="carac">'
@@ -1158,7 +1160,7 @@ function mostrarRecentes(){
         + '<div class="ativo-grade" id="msRes"></div>'
         + '<h3>Choques padrão</h3><div class="tabela"><table><thead><tr><th class="t">Choque</th><th>PU (R$)</th><th>Variação</th><th>R$ por título</th></tr></thead><tbody>'
         + [-200,-100,-50,50,100,200].map(b => { const vp = variacao(s,b); return '<tr><td class="t">'+(b>0?'+':'')+b+' bps</td><td>'+fmt(s.pu*(1+vp/100),2)+'</td><td>'+sinal(vp,2)+'%</td><td>'+sinal(s.pu*vp/100,2)+'</td></tr>'; }).join('')
-        + '</tbody></table></div><p class="fraco pequeno">Fluxo remanescente reprecificado com a taxa indicativa mais o choque. Duration '+fmt(s.dmod,2)+' anos'+(s.convex?', convexidade '+fmt(s.convex,1):'')+'.</p></div>';
+        + '</tbody></table></div><p class="fraco pequeno">Fluxo remanescente reprecificado com a taxa indicativa mais o choque. Duration modificada '+fmt(s.dmod,2)+' (≈ '+fmt(s.dmod,2)+'% do preço por 100 bps)'+(s.convex?', convexidade '+fmt(s.convex,1):'')+'.</p></div>';
     const passos = '<div class="passos"><h3>Próximos passos</h3><ol class="lista-clicavel">'
       + (s ? '<li tabindex="0" data-passo="simular"><span>Simular abertura ou fechamento do spread</span><span>→</span></li>' : '')
       + (pares.length ? '<li tabindex="0" data-passo="par"><span>Comparar com o par mais próximo: '+pares[0].codigo+' ('+esc(pares[0].emissor)+')</span><span>→</span></li>' : '')
@@ -1514,7 +1516,7 @@ def gerar_projeto() -> str:
 <span class="espaco"></span><span id="fInfo" class="pequeno fraco" aria-live="polite"></span><button id="fColunas" aria-pressed="false">Mais colunas</button>
 </div>
 <div class="tabela"><table id="tab">
-<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta</th><th class="t extra">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th class="extra">Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th class="extra">Variação hist. (bps)</th><th>Duration</th><th>Choque +100 (%)</th><th class="t extra">Escritura / status</th></tr></thead>
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta</th><th class="t extra">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th class="extra">Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th class="extra">Variação hist. (bps)</th><th title="Duration modificada: % do preço por 100 bps de taxa">Duration mod.</th><th>Choque +100 (%)</th><th class="t extra">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
@@ -1541,7 +1543,7 @@ def gerar_projeto() -> str:
 <div><small>Só duration: − duration × choque</small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
 <div><small>Ajuste de convexidade: + ½ × convexidade × choque²</small><b id="r_conv">–</b><span class="pequeno muted" id="r_conv_info"></span></div>
 <div><small>Duration + convexidade (aproximação)</small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
-<div><small>Duration modificada</small><b id="r_dur">–</b><span class="pequeno muted">cada 100 bps ≈ essa % do preço</span></div>
+<div><small>Duration modificada</small><b id="r_dur">–</b><span class="pequeno muted" id="r_dur_info"></span></div>
 <div><small>Spread</small><b id="r_z">–</b><span class="pequeno muted" id="r_z_info"></span></div>
 <div><small>Desvio em relação aos pares</small><b id="r_desvio">–</b></div>
 <div><small>Break-even de abertura em 12 meses</small><b id="r_be12">–</b></div>
