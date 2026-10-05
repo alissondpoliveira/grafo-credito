@@ -224,9 +224,14 @@ body.gaveta-aberta .gaveta{transform:none}
 .info{display:inline-grid;place-items:center;position:relative;width:15px;height:15px;margin:0 0 0 5px;padding:0;border:1px solid var(--ink-3);border-radius:50%;background:none;color:var(--ink-3);font:italic 600 10px/1 Georgia,serif;text-transform:none;letter-spacing:0;vertical-align:1px;cursor:help;flex:none}
 .info::after{content:'';position:absolute;inset:-7px}
 .info:hover,.info:focus-visible,.info[aria-describedby]{color:var(--accent);border-color:var(--accent)}
-.info-pop{position:fixed;z-index:70;display:none;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.info-pop{position:fixed;z-index:70;display:none;max-height:calc(100vh - 16px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .info-pop b{display:block;font-size:.86rem;margin-bottom:.2rem}.info-pop p{margin:.35rem 0 0}
 .formula{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.74rem;background:var(--surface-2);border-radius:6px;padding:6px 8px;margin:.4rem 0;color:var(--ink)}
+.eqs{background:var(--surface-2);border-radius:8px;padding:4px 10px;margin:.5rem 0;overflow-x:auto}
+.eqs .katex-display{margin:.45rem 0;text-align:left}
+.eqs .katex{font-size:1.02em;color:var(--ink)}
+.eq-nota{font-size:.74rem;color:var(--ink-2);margin:.1rem 0 .4rem !important}
+.glossario dd .eqs{margin:.45rem 0}
 .glossario{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:4px 28px;margin:0}
 .glossario div{padding:.6rem 0;border-bottom:1px solid var(--line)}
 .glossario dt{font-weight:600;font-size:.88rem}.glossario dd{margin:.15rem 0 0;font-size:.82rem;color:var(--ink-2)}
