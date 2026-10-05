@@ -241,6 +241,16 @@ body.gaveta-aberta .gaveta{transform:none}
 .passos h3{margin:0 0 .5rem}
 .passos .lista-clicavel li{border-top:0;border-bottom:1px solid var(--line)}
 .passos .lista-clicavel li>span:last-child{color:var(--accent)}
+.info{display:inline-grid;place-items:center;position:relative;width:15px;height:15px;margin:0 0 0 5px;padding:0;border:1px solid var(--ink-3);border-radius:50%;background:none;color:var(--ink-3);font:italic 600 10px/1 Georgia,serif;text-transform:none;letter-spacing:0;vertical-align:1px;cursor:help;flex:none}
+.info::after{content:'';position:absolute;inset:-7px}
+.info:hover,.info:focus-visible,.info[aria-describedby]{color:var(--accent);border-color:var(--accent)}
+.info-pop{position:fixed;z-index:70;display:none;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.info-pop b{display:block;font-size:.86rem;margin-bottom:.2rem}.info-pop p{margin:.35rem 0 0}
+.formula{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.74rem;background:var(--surface-2);border-radius:6px;padding:6px 8px;margin:.4rem 0;color:var(--ink)}
+.glossario{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:4px 28px;margin:0}
+.glossario div{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.glossario dt{font-weight:600;font-size:.88rem}.glossario dd{margin:.15rem 0 0;font-size:.82rem;color:var(--ink-2)}
+.glossario dd span{display:block;margin-top:.3rem}
 .mini-sim label{display:block;font-size:.8rem;color:var(--ink-2);margin-bottom:.2rem}
 @media (min-width:1280px){
  body.gaveta-aberta .fundo{opacity:0;pointer-events:none}
@@ -286,6 +296,11 @@ def pagina(titulo: str, descricao: str, corpo: str) -> str:
 </body>
 </html>
 """
+
+
+def I(k: str) -> str:
+    """Botão "i" do glossário; o texto da explicação vem do GLOSS no JavaScript."""
+    return f'<button type="button" class="info" data-info="{k}" aria-label="Explicação">i</button>'
 
 
 def num(v, casas=2):
@@ -526,6 +541,75 @@ JS = r"""
 const D = window.DADOS;
 const fmt = (v, c=2) => v==null||isNaN(v) ? '–' : Number(v).toLocaleString('pt-BR',{minimumFractionDigits:c,maximumFractionDigits:c});
 const sinal = (v, c=0) => v==null||isNaN(v) ? '–' : (v>0?'+':'')+fmt(v,c);
+// ---------- glossário: teoria por trás de cada indicador (botão "i") ----------
+const GLOSS = {
+  taxa: {t:'Taxa indicativa ANBIMA', d:'Taxa que a ANBIMA divulga todo dia útil como referência de preço justo de cada debênture, a partir das taxas informadas por instituições do mercado, com filtros de consistência. Não é necessariamente um negócio fechado.', f:'IPCA+: taxa real ao ano, base 252 dias úteis. DI+: spread ao ano sobre o CDI, em composição (1 + CDI) × (1 + spread).', l:'Taxa maior significa preço menor. É a base de todos os cálculos de spread e de choque do site.'},
+  compra_venda: {t:'Taxas de compra e de venda ANBIMA', d:'Médias das taxas de compra e de venda informadas pelas instituições à ANBIMA no dia.', l:'A distância entre as duas é uma medida do custo de entrar e sair do papel. Distância grande sugere pouca liquidez ou divergência entre as casas.'},
+  ultimo_negocio: {t:'Último negócio e taxa implícita', d:'Negócio registrado no SND (debentures.com.br): data, número de negócios, quantidade e PU médio. O SND não publica a taxa negociada, então a taxa mostrada é uma estimativa.', f:'taxa ≈ taxa ANBIMA do dia − (% do PU par do negócio ÷ % do PU par ANBIMA − 1) ÷ duration modificada. Sem ANBIMA no dia, a âncora é a taxa de emissão.', l:'Inferência de primeira ordem. Negócios pequenos podem sair longe da indicativa.'},
+  pu: {t:'PU (preço unitário)', d:'Valor presente, por título, do fluxo remanescente de juros e amortizações, descontado à taxa indicativa. Inclui os juros acumulados desde o último pagamento (PU cheio).', f:'PU = Σ fluxo(t) ÷ (1 + taxa)^(dias úteis ÷ 252)'},
+  pct_par: {t:'% do PU par', d:'PU de mercado dividido pelo PU calculado à taxa de emissão (valor do papel na curva).', l:'Acima de 100%, o mercado pede taxa menor que a de emissão (o crédito melhorou ou os juros caíram). Abaixo de 100%, pede taxa maior.'},
+  dmod: {t:'Duration modificada', d:'Sensibilidade do preço a uma mudança na taxa.', f:'Dmod = duration de Macaulay ÷ (1 + taxa). Variação do preço ≈ − Dmod × Δtaxa.', l:'5,93 significa que o preço cai cerca de 5,93% se a taxa subir 100 bps (e sobe parecido se cair). Vale bem para choques pequenos; nos grandes, entra a convexidade.'},
+  dmac: {t:'Duration de Macaulay', d:'Prazo médio dos fluxos de pagamento, ponderado pelo valor presente de cada um. Medida em anos.', f:'Dmac = Σ t × VP(fluxo t) ÷ PU', l:'Num título bullet sem cupom é igual ao prazo. Amortizações e juros intermediários puxam a duration para baixo do vencimento.'},
+  convexidade: {t:'Convexidade', d:'Curvatura da relação entre preço e taxa. Corrige o erro que a duration comete por tratar essa relação como reta.', f:'C = [P(y + h) + P(y − h) − 2P] ÷ (h² × P), calculada numericamente com h = 1 bp. Variação ≈ − Dmod × Δ + ½ × C × Δ².', l:'É positiva em títulos sem opção: quando a taxa sobe o preço cai menos que a reta, quando a taxa cai o preço sobe mais. Cresce com o quadrado do prazo.'},
+  reprec: {t:'Reprecificação completa', d:'Desconta de novo cada fluxo remanescente com a taxa indicativa mais o choque e compara com o PU de hoje. É o número exato dentro do modelo, sem aproximação de Taylor.', f:'Variação = Σ fluxo ÷ (1 + y + Δ)^t ÷ Σ fluxo ÷ (1 + y)^t − 1. DI+: fluxo projetado pela curva prefixada ANBIMA e descontado a (1 + DI) × (1 + spread + Δ).', l:'O PU após o choque é o PU de hoje × (1 + variação).'},
+  so_dur: {t:'Aproximação só pela duration', d:'Aproximação de primeira ordem: usa só a inclinação da curva preço × taxa no ponto de hoje.', f:'Variação ≈ − Dmod × Δ', l:'Exagera a queda numa abertura e subestima a alta num fechamento. O erro cresce com o tamanho do choque.'},
+  aprox: {t:'Duration + convexidade', d:'Aproximação de segunda ordem (série de Taylor) da variação do preço.', f:'Variação ≈ − Dmod × Δ + ½ × C × Δ²', l:'A diferença para a reprecificação completa mostra o que ainda falta (termos de ordem maior).'},
+  z: {t:'Z-spread de mercado', d:'Prêmio constante que, somado a cada vértice da curva zero-cupom real (ETTJ IPCA da ANBIMA), faz o valor presente do fluxo igualar o PU de mercado.', f:'PU = Σ fluxo(t) ÷ (1 + r_IPCA(t) + Z)^t', l:'Mede o prêmio de crédito e de liquidez sobre o título público ao longo da curva inteira, e não só num vértice. É o spread que a carteira de fato carrega.'},
+  spread_comp: {t:'Spread comparável (gross-up de 15%)', d:'Z-spread ajustado para pôr debêntures incentivadas (isentas de IR para pessoa física) na mesma base das tributadas. Sem ajuste, a isenta parece mais barata do que é.', f:'nominal = (1 + taxa real) × (1 + inflação implícita) − 1; nominal bruta = nominal ÷ (1 − 15%); volta para taxa real e recalcula o Z.', l:'Para as isentas, inclui o valor da isenção e não é carrego. Para comparar carrego, use o Z de mercado.'},
+  spread_ntnb: {t:'Spread sobre a NTN-B de referência', d:'Diferença simples entre a taxa indicativa da debênture e a taxa da NTN-B que a ANBIMA indica como referência (vencimento próximo da duration).', l:'É a leitura usada na mesa. O Z-spread é mais preciso porque usa a curva inteira.'},
+  spread_di: {t:'Spread sobre o CDI', d:'Para debêntures DI+, a própria taxa indicativa ANBIMA: o prêmio ao ano acima do CDI.', f:'Fator = (1 + CDI) × (1 + spread), em base 252.', l:'O risco de juros é pequeno (o CDI acompanha a Selic); o preço reage quase só ao spread.'},
+  spread_tab: {t:'Spread', d:'IPCA+: spread comparável (Z-spread com gross-up de 15% nas isentas). DI+: spread sobre o CDI.', l:'Não compare diretamente uma linha IPCA+ com uma DI+: as bases são diferentes.'},
+  justo_pares: {t:'Spread justo pelos pares', d:'Mediana do spread das séries mais comparáveis de outros emissores: até 8 pares, no máximo 2 por emissor, obrigatoriamente no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield).', f:'Proximidade ponderada por estrutura (project finance ou corporativa), fase do ativo, patrocinador, garantia, isenção, duration, folga até o fim da concessão, tamanho e alavancagem.', l:'É o spread que o perfil do papel sugere, segundo o mercado de hoje.'},
+  ajuste: {t:'Ajuste por eventos', d:'Bps somados ao justo dos pares quando o emissor tem evento recente classificado pelo JEV com confiança de pelo menos 0,8.', f:'Crédito negativo +25 bps, outro impacto negativo +8, avanço operacional −5; meia-vida de 60 dias, janela de 180; tetos por tipo e de ±40 bps por emissor.', l:'Valores provisórios e conservadores, a recalibrar por estudo de evento.'},
+  desvio: {t:'Desvio em relação aos pares', d:'Spread observado menos o spread justo (mediana dos pares mais o ajuste por eventos).', l:'Positivo: o papel paga mais do que o perfil sugere, o que pode ser oportunidade ou um risco que os pares não capturam. Negativo: paga menos. Não é recomendação; parte do desvio é prêmio de liquidez.'},
+  desvio_dp: {t:'Desvio em desvios-padrão', d:'Desvio em bps dividido pelo desvio-padrão dos resíduos do modelo.', l:'Permite comparar segmentos com dispersões diferentes. Acima de 1,5 dp em módulo, a série está fora da faixa dos pares.'},
+  mediana: {t:'Mediana do segmento e percentil', d:'Mediana do spread das séries do mesmo segmento e da mesma classe. O percentil diz quantas séries do segmento pagam menos ou o mesmo que esta.', l:'Percentil 90: só 10% do segmento paga mais.'},
+  justo_reg: {t:'Spread justo pela regressão', d:'Segunda leitura do valor relativo: regressão cross-section do spread comparável das séries IPCA+ em duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA, com efeitos de segmento.', f:'Mínimos quadrados com erros padrão robustos (HC1). O justo é o valor ajustado; o desvio é o resíduo.', l:'Especificação provisória. Quando discorda muito dos pares, vale olhar o porquê.'},
+  be12: {t:'Break-even de abertura em 12 meses', d:'Quanto o spread pode abrir em um ano até consumir o carrego do próprio spread.', f:'Break-even ≈ spread de mercado ÷ duration modificada', l:'Abertura maior que isso em 12 meses deixa o papel atrás do título público (IPCA+) ou do CDI (DI+). Aproximação: ignora o encurtamento da duration ao longo do ano.'},
+  liquidez: {t:'Liquidez em 180 dias', d:'Número de dias com negócio registrado no SND nos últimos 180 dias corridos e volume financeiro (quantidade × PU médio).', l:'Poucos dias com negócio indicam que a taxa indicativa depende mais das contribuições do que de negócios.'},
+  hy: {t:'Faixa high yield', d:'Séries IPCA+ com Z de mercado de pelo menos 300 bps, DI+ com spread de pelo menos 300 bps sobre o CDI, ou de emissor com evento de crédito negativo nos últimos 12 meses.', l:'Ficam fora da regressão e só se comparam com outras high yield, para não distorcer os pares da faixa principal.'},
+  var_hist: {t:'Variação histórica', d:'Diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026).', l:'Ganha significado com o tempo de coleta.'},
+  choque100: {t:'Choque de +100 bps', d:'Variação do PU se a taxa subir 100 bps, pela reprecificação completa do fluxo.', l:'Próximo de − duration modificada %, um pouco menor em módulo por causa da convexidade.'},
+  dl_ebitda: {t:'Dívida líquida ÷ EBITDA', d:'Dívida bruta menos caixa, dividida pelo EBITDA do último exercício (DFP na CVM).', l:'Quantos anos de geração operacional pagariam a dívida líquida. Escrituras costumam fixar um teto para esse indicador (covenant).'},
+  cobertura: {t:'EBITDA ÷ despesa financeira', d:'Quantas vezes a geração operacional do ano cobre a despesa financeira.', l:'Abaixo de 1x, o EBITDA não paga os juros do período.'},
+  volume: {t:'Volume emitido', d:'Quantidade emitida × valor nominal na emissão, pelo SND.'},
+  saldo: {t:'Saldo em mercado', d:'Quantidade em mercado × PU ANBIMA de hoje. Aproximação do valor de mercado da série em circulação.'},
+  lei12431: {t:'Debênture incentivada (Lei 12.431)', d:'Debênture de projeto de infraestrutura considerado prioritário. O rendimento é isento de IR para pessoa física.', l:'Por isso paga taxa menor que uma tributada de mesmo risco; o site corrige isso com o gross-up de 15% no spread comparável.'},
+  garantia: {t:'Espécie da garantia', d:'Garantia registrada no SND: real (bens dados em garantia), flutuante, quirografária (sem garantia específica, concorre com os credores comuns) ou subordinada.', l:'Em caso de recuperação, a espécie define a ordem de recebimento.'},
+  grupo: {t:'Grupo de risco', d:'Empresas sob o mesmo controlador final. Fontes: controle declarado no Formulário de Referência da CVM, partes citadas na escritura (acionista, fiadora, interveniente) ou regra inferida, a confirmar.', l:'Eventos de um emissor podem afetar o crédito de todo o grupo.'},
+  jev: {t:'Classificação de eventos (JEV)', d:'O modelo System One da TypeSafe lê o título de cada documento e devolve o tipo de evento, o impacto para o credor e a confiança.', l:'Só classificações com confiança de pelo menos 0,8 são usadas no ajuste e exibidas como automáticas; o resto fica "a revisar".'},
+  ltv: {t:'LTV (loan-to-value)', d:'Saldo da dívida dividido pelo valor da garantia, informado pela securitizadora no Informe Mensal.', l:'Quanto menor, maior a folga da garantia sobre a dívida.'},
+  inad: {t:'Inadimplência dos créditos', d:'Créditos vinculados inadimplentes divididos pelo total de créditos vinculados ao certificado.', l:'Mede a qualidade do lastro, não do certificado: subordinação e garantias absorvem parte da perda.'},
+};
+const infoBtn = k => GLOSS[k] ? '<button type="button" class="info" data-info="'+k+'" aria-label="O que é: '+GLOSS[k].t+'">i</button>' : '';
+(function(){
+  const pop = document.createElement('div'); pop.className = 'info-pop'; pop.setAttribute('role','tooltip'); pop.id = 'infoPop'; document.body.appendChild(pop);
+  let fixo = null;
+  function abrir(b){
+    const g = GLOSS[b.dataset.info]; if (!g) return;
+    pop.innerHTML = '<b>'+g.t+'</b><p>'+g.d+'</p>'+(g.f?'<p class="formula">'+g.f+'</p>':'')+(g.l?'<p><span class="fraco">Como ler:</span> '+g.l+'</p>':'');
+    pop.style.display = 'block'; b.setAttribute('aria-describedby','infoPop');
+    const r = b.getBoundingClientRect(), w = Math.min(340, innerWidth-16), h = pop.offsetHeight;
+    pop.style.width = w+'px'; pop.style.left = Math.max(8, Math.min(r.left + r.width/2 - w/2, innerWidth - w - 8))+'px';
+    pop.style.top = (r.bottom + 8 + h > innerHeight && r.top - 8 - h > 0 ? r.top - 8 - pop.offsetHeight : r.bottom + 8)+'px';
+  }
+  function fechar(){ pop.style.display = 'none'; fixo = null; }
+  document.addEventListener('mouseover', e => { const b = e.target.closest('.info'); if (b && !fixo) abrir(b); });
+  document.addEventListener('mouseout', e => { const b = e.target.closest('.info'); if (b && !fixo && !b.contains(e.relatedTarget)) fechar(); });
+  document.addEventListener('focusin', e => { const b = e.target.closest('.info'); if (b) abrir(b); });
+  document.addEventListener('focusout', e => { if (e.target.closest('.info') && !fixo) fechar(); });
+  // clique ou toque fixa a explicação (no celular não há hover); não dispara ordenação de tabela nem abertura de ficha
+  document.addEventListener('click', e => { const b = e.target.closest('.info');
+    if (b) { e.preventDefault(); e.stopPropagation(); if (fixo===b) fechar(); else { abrir(b); fixo = b; } return; }
+    if (fixo && !e.target.closest('.info-pop')) fechar(); }, true);
+  document.addEventListener('keydown', e => { if (e.key==='Escape' && pop.style.display==='block') { fechar(); e.stopPropagation(); } }, true);
+  addEventListener('scroll', () => { if (!fixo) fechar(); }, true);
+  document.getElementById('gaveta').addEventListener('transitionend', () => { if (fixo) abrir(fixo); });
+  document.querySelectorAll('.info[data-info]').forEach(b => { const g = GLOSS[b.dataset.info]; if (g) b.setAttribute('aria-label', 'O que é: '+g.t); });
+  // glossário completo na aba Método
+  const gl = document.getElementById('glossario');
+  if (gl) gl.innerHTML = Object.values(GLOSS).sort((a,b) => a.t.localeCompare(b.t,'pt')).map(g => '<div><dt>'+g.t+'</dt><dd>'+g.d+(g.f?'<span class="formula">'+g.f+'</span>':'')+(g.l?'<span class="fraco">Como ler: '+g.l+'</span>':'')+'</dd></div>').join('');
+})();
 const tip = document.getElementById('tip');
 const mostrar = (e, h) => { tip.innerHTML = h; tip.style.display = 'block'; mover(e); };
 const mover = e => { const x = Math.min(e.clientX+14, innerWidth-tip.offsetWidth-8); tip.style.left = x+'px'; tip.style.top = (e.clientY+14)+'px'; };
@@ -1055,7 +1139,7 @@ function mostrarRecentes(){
 
   // ficha do ativo
   const fmtv = (v,c=0,suf='') => v==null||isNaN(v) ? '–' : fmt(v,c)+suf;
-  const cel = (rot, val, nota) => '<div><small>'+rot+'</small><b>'+val+'</b>'+(nota?'<em>'+nota+'</em>':'')+'</div>';
+  const cel = (rot, val, nota, k) => '<div><small>'+rot+(k?infoBtn(k):'')+'</small><b>'+val+'</b>'+(nota?'<em>'+nota+'</em>':'')+'</div>';
   const dtBR = v => v ? v.slice(8,10)+'/'+v.slice(5,7)+'/'+v.slice(0,4) : '–';
   const esc = t => String(t ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
   const nomeSegA = x => D.segmentos[x] || x;
@@ -1071,7 +1155,7 @@ function mostrarRecentes(){
     const fu = D.fundamentos[cnpj]; if (!fu) return '<p class="fraco pequeno">Emissor sem demonstrações na CVM (não registrado ou sem DFP recente).</p>';
     const bi = v => v==null ? '–' : 'R$ '+fmt(v/1e9,2)+' bi';
     return '<p class="pequeno muted" style="margin:0">CVM, exercício '+fu.exercicio.slice(0,4)+'</p><div class="ativo-grade">'
-      + cel('Dívida líquida / EBITDA', fu.dl_ebitda==null?'–':fmt(fu.dl_ebitda,2)+'x') + cel('EBITDA / despesa financeira', fu.cobertura_juros==null?'–':fmt(fu.cobertura_juros,2)+'x')
+      + cel('Dívida líquida / EBITDA', fu.dl_ebitda==null?'–':fmt(fu.dl_ebitda,2)+'x', '', 'dl_ebitda') + cel('EBITDA / despesa financeira', fu.cobertura_juros==null?'–':fmt(fu.cobertura_juros,2)+'x', '', 'cobertura')
       + cel('Receita', bi(fu.receita)) + cel('EBITDA', bi(fu.ebitda)) + cel('Dívida líquida', bi(fu.divida_liquida)) + cel('Lucro líquido', bi(fu.lucro_liquido)) + '</div>';
   }
   function preencherCri(cnpj){
@@ -1121,21 +1205,21 @@ function mostrarRecentes(){
       + ', juros '+(P.juros_per ? P.juros_per.replace(/al$/,'ais') : '–')+(P.prox_juros?' (próximo em '+dt(P.prox_juros)+')':'')+', amortização '+amortTxt+'. '
       + (P.incentivada==='S'?'Incentivada (Lei 12.431, isenta para PF).':'Tributada.')+'</div>'
       + '<div class="kpis">'
-      + '<div class="kpi"><div class="r">Indicativa ANBIMA</div><div class="v">'+txt(P.ind)+'</div><div class="s">'+(P.int_min!=null?'intervalo '+fmt(P.int_min,2)+' a '+fmt(P.int_max,2):'')+'</div></div>'
-      + '<div class="kpi"><div class="r">Compra / venda ANBIMA</div><div class="v">'+(P.compra!=null?fmt(P.compra,2)+' / '+fmt(P.venda,2):'–')+'</div><div class="s">média das taxas informadas</div></div>'
-      + '<div class="kpi"><div class="r">Último negócio (SND)</div><div class="v">'+(ultNeg&&ultNeg[5]!=null?'~'+txt(ultNeg[5]):ultNeg?'R$ '+fmt(ultNeg[3],2):'–')+'</div><div class="s">'+(ultNeg?dt(ultNeg[0])+' · '+ultNeg[2]+' negócios · '+fmt(ultNeg[1],0)+' títulos':'')+'</div></div>'
-      + '<div class="kpi"><div class="r">PU indicativo</div><div class="v">'+(a.pu==null?'–':'R$ '+fmt(a.pu,2))+'</div><div class="s">'+(P.pct_par!=null?fmt(P.pct_par,2)+'% do PU par':'')+'</div></div>'
-      + '<div class="kpi"><div class="r">Duration modificada</div><div class="v">'+fmtv(a.dmod,2)+'</div><div class="s">'+(a.dmod!=null?'≈ '+fmt(a.dmod,2)+'% do preço por 100 bps':'')+(P.dur!=null?' · Macaulay '+fmt(P.dur,2)+' anos':'')+(P.ntnb?' · NTN-B '+P.ntnb:'')+'</div></div>'
-      + '<div class="kpi"><div class="r">Liquidez 180 dias</div><div class="v">'+(P.dias180||0)+' dias</div><div class="s">'+(P.vol180?'volume '+mi(P.vol180):'sem negócios')+'</div></div>'
+      + '<div class="kpi"><div class="r">Indicativa ANBIMA'+infoBtn('taxa')+'</div><div class="v">'+txt(P.ind)+'</div><div class="s">'+(P.int_min!=null?'intervalo '+fmt(P.int_min,2)+' a '+fmt(P.int_max,2):'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Compra / venda ANBIMA'+infoBtn('compra_venda')+'</div><div class="v">'+(P.compra!=null?fmt(P.compra,2)+' / '+fmt(P.venda,2):'–')+'</div><div class="s">média das taxas informadas</div></div>'
+      + '<div class="kpi"><div class="r">Último negócio (SND)'+infoBtn('ultimo_negocio')+'</div><div class="v">'+(ultNeg&&ultNeg[5]!=null?'~'+txt(ultNeg[5]):ultNeg?'R$ '+fmt(ultNeg[3],2):'–')+'</div><div class="s">'+(ultNeg?dt(ultNeg[0])+' · '+ultNeg[2]+' negócios · '+fmt(ultNeg[1],0)+' títulos':'')+'</div></div>'
+      + '<div class="kpi"><div class="r">PU indicativo'+infoBtn('pu')+'</div><div class="v">'+(a.pu==null?'–':'R$ '+fmt(a.pu,2))+'</div><div class="s">'+(P.pct_par!=null?fmt(P.pct_par,2)+'% do PU par':'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Duration modificada'+infoBtn('dmod')+'</div><div class="v">'+fmtv(a.dmod,2)+'</div><div class="s">'+(a.dmod!=null?'≈ '+fmt(a.dmod,2)+'% do preço por 100 bps':'')+(P.dur!=null?' · Macaulay '+fmt(P.dur,2)+' anos':'')+(P.ntnb?' · NTN-B '+P.ntnb:'')+'</div></div>'
+      + '<div class="kpi"><div class="r">Liquidez 180 dias'+infoBtn('liquidez')+'</div><div class="v">'+(P.dias180||0)+' dias</div><div class="s">'+(P.vol180?'volume '+mi(P.vol180):'sem negócios')+'</div></div>'
       + '</div></div>';
     const carac = !P.venc ? '' : '<h3>Características</h3><div class="carac">'
       + [['Emissão / série', (P.emissao||'–')+'ª / '+(P.serie||'–')], ['Data de emissão', dt(P.dt_emissao)], ['Início da rentabilidade', dt(P.inicio_rent)], ['Vencimento', dt(P.venc)],
          ['Remuneração de emissão', P.texto_emissao||a.indexador||'–'], ['Pagamento de juros', (P.juros_per||'–')+(P.carencia_juros?', desde '+dt(P.carencia_juros):'')], ['Próximo juros', dt(P.prox_juros)],
-         ['Amortização', amortTxt], ['Volume emitido', mi(P.volume_emitido)], ['Saldo em mercado (aprox.)', P.qtd_mercado&&a.pu?mi(P.qtd_mercado*a.pu):'–'],
-         ['Valor nominal (emissão / atual)', P.vne?'R$ '+fmt(P.vne,2)+' / R$ '+fmt(P.vna,2):'–'], ['Garantia', a.garantia||'–'], ['Lei 12.431', P.incentivada==='S'?'sim':'não'],
+         ['Amortização', amortTxt], ['Volume emitido'+infoBtn('volume'), mi(P.volume_emitido)], ['Saldo em mercado (aprox.)'+infoBtn('saldo'), P.qtd_mercado&&a.pu?mi(P.qtd_mercado*a.pu):'–'],
+         ['Valor nominal (emissão / atual)', P.vne?'R$ '+fmt(P.vne,2)+' / R$ '+fmt(P.vna,2):'–'], ['Garantia'+infoBtn('garantia'), a.garantia||'–'], ['Lei 12.431'+infoBtn('lei12431'), P.incentivada==='S'?'sim':'não'],
          ['Resgate antecipado', P.resgate==='S'?'previsto':P.resgate==='N'?'não previsto':'–'], ['Agente fiduciário', tit(P.fiduciario)], ['Coordenador líder', tit(P.coordenador)], ['ISIN', a.isin||'–']]
         .map(x => '<div><span>'+x[0]+'</span><span>'+x[1]+'</span></div>').join('') + '</div>';
-    const negs = ((P.negocios||[]).length ? '<h3>Negócios recentes (SND)</h3><div class="tabela" style="max-height:260px"><table><thead><tr><th class="t">Data</th><th>Negócios</th><th>Títulos</th><th>PU médio (R$)</th><th>% do PU par</th><th>Taxa implícita aprox.</th></tr></thead><tbody>'
+    const negs = ((P.negocios||[]).length ? '<h3>Negócios recentes (SND)</h3><div class="tabela" style="max-height:260px"><table><thead><tr><th class="t">Data</th><th>Negócios</th><th>Títulos</th><th>PU médio (R$)</th><th>% do PU par'+infoBtn('pct_par')+'</th><th>Taxa implícita aprox.'+infoBtn('ultimo_negocio')+'</th></tr></thead><tbody>'
           + P.negocios.map(n => '<tr><td class="t">'+dt(n[0])+'</td><td>'+n[2]+'</td><td>'+fmt(n[1],0)+'</td><td>'+fmtv(n[3],2)+'</td><td>'+fmtv(n[4],2)+'</td><td>'+(n[5]==null?'–':txt(n[5]))+'</td></tr>').join('')
           + '</tbody></table></div><p class="fraco pequeno">Taxa implícita: aproximação pela duration a partir do % do PU par do negócio, ancorada na taxa ANBIMA do mesmo dia quando disponível, senão na taxa de emissão. Inferência, não taxa registrada.</p>' : '');
     const agenda = ((P.agenda||[]).length ? '<h3>Próximos eventos (agenda SND)</h3><div class="tabela" style="max-height:220px"><table><thead><tr><th class="t">Pagamento</th><th class="t">Evento</th><th>Taxa / percentual</th></tr></thead><tbody>'
@@ -1143,22 +1227,22 @@ function mostrarRecentes(){
     const s = D.series.find(x => x.codigo===cod);
     const outras = Object.values(A).filter(x => x.cnpj===a.cnpj && x.codigo!==cod);
     const valor = '<div class="ativo-grade" style="margin-top:4px">'
-      + cel(rotSpread, fmtv(a.spread,0,' bps'))
-      + (a.classe==='IPCA+' ? cel('Z-spread de mercado', fmtv(a.z_mercado,0,' bps'), 'sem gross-up') + cel('Spread sobre a NTN-B', fmtv(a.spread_ntnb,0,' bps'), a.ntnb_ref ? 'NTN-B '+a.ntnb_ref : '') : '')
-      + cel('Justo pelos pares', fmtv(a.justo_pares,0,' bps'), pares.length+' pares')
-      + cel('Ajuste por eventos', a.ajuste ? (a.ajuste>0?'+':'')+fmt(a.ajuste,1)+' bps' : '–')
-      + cel('Desvio em relação aos pares', a.desvio==null?'–':sinal(a.desvio)+' bps', a.dp==null?'':sinal(a.dp,1)+' dp')
-      + cel('Mediana do segmento', fmtv(med,0,' bps'), pct==null?'':'esta série está no percentil '+pct)
-      + cel('Justo pela regressão', fmtv(a.justo_reg,0,' bps'))
+      + cel(rotSpread, fmtv(a.spread,0,' bps'), '', a.classe==='DI+' ? 'spread_di' : 'spread_comp')
+      + (a.classe==='IPCA+' ? cel('Z-spread de mercado', fmtv(a.z_mercado,0,' bps'), 'sem gross-up', 'z') + cel('Spread sobre a NTN-B', fmtv(a.spread_ntnb,0,' bps'), a.ntnb_ref ? 'NTN-B '+a.ntnb_ref : '', 'spread_ntnb') : '')
+      + cel('Justo pelos pares', fmtv(a.justo_pares,0,' bps'), pares.length+' pares', 'justo_pares')
+      + cel('Ajuste por eventos', a.ajuste ? (a.ajuste>0?'+':'')+fmt(a.ajuste,1)+' bps' : '–', '', 'ajuste')
+      + cel('Desvio em relação aos pares', a.desvio==null?'–':sinal(a.desvio)+' bps', a.dp==null?'':sinal(a.dp,1)+' dp', 'desvio')
+      + cel('Mediana do segmento', fmtv(med,0,' bps'), pct==null?'':'esta série está no percentil '+pct, 'mediana')
+      + cel('Justo pela regressão', fmtv(a.justo_reg,0,' bps'), '', 'justo_reg')
       + '</div>'
-      + (hist.length > 1 ? '<h3>Histórico do spread</h3><svg id="ativoHist" style="width:100%;height:auto;aspect-ratio:4/1"></svg>' : '')
-      + '<h3>Pares comparáveis</h3>'
+      + (hist.length > 1 ? '<h3>Histórico do spread'+infoBtn('var_hist')+'</h3><svg id="ativoHist" style="width:100%;height:auto;aspect-ratio:4/1"></svg>' : '')
+      + '<h3>Pares comparáveis'+infoBtn('justo_pares')+'</h3>'
       + (pares.length ? '<ol class="lista-clicavel">'+pares.map(liSerie).join('')+'</ol><p class="fraco pequeno">Mesmo segmento, classe e faixa; à direita, o desvio de cada par. Clique para abrir.</p>' : '<p class="fraco pequeno">Sem pares suficientes no mesmo segmento, classe e faixa.</p>')
       + (a.motivos ? '<h3>Eventos que ajustam o justo</h3><p class="pequeno muted">'+a.motivos.split(' | ').join('<br>')+'</p>' : '');
     const mini = !s ? '<p class="fraco pequeno">Série sem preço validado; simulação indisponível.</p>'
       : '<div class="mini-sim"><label for="msR">Choque no spread: <b id="msV"></b></label><input id="msR" type="range" min="-300" max="300" step="5" value="'+(+choque.value||100)+'" aria-label="Choque no spread em bps"><div class="regua-marcas"><span>−300</span><span>0</span><span>+300</span></div>'
         + '<div class="ativo-grade" id="msRes"></div>'
-        + '<h3>Choques padrão</h3><div class="tabela"><table><thead><tr><th class="t">Choque</th><th>PU (R$)</th><th>Variação</th><th>R$ por título</th></tr></thead><tbody>'
+        + '<h3>Choques padrão'+infoBtn('reprec')+'</h3><div class="tabela"><table><thead><tr><th class="t">Choque</th><th>PU (R$)</th><th>Variação</th><th>R$ por título</th></tr></thead><tbody>'
         + [-200,-100,-50,50,100,200].map(b => { const vp = variacao(s,b); return '<tr><td class="t">'+(b>0?'+':'')+b+' bps</td><td>'+fmt(s.pu*(1+vp/100),2)+'</td><td>'+sinal(vp,2)+'%</td><td>'+sinal(s.pu*vp/100,2)+'</td></tr>'; }).join('')
         + '</tbody></table></div><p class="fraco pequeno">Fluxo remanescente reprecificado com a taxa indicativa mais o choque. Duration modificada '+fmt(s.dmod,2)+' (≈ '+fmt(s.dmod,2)+'% do preço por 100 bps)'+(s.convex?', convexidade '+fmt(s.convex,1):'')+'.</p></div>';
     const passos = '<div class="passos"><h3>Próximos passos</h3><ol class="lista-clicavel">'
@@ -1173,7 +1257,7 @@ function mostrarRecentes(){
       + (outras.length ? '<h3>Outras séries do emissor</h3><ol class="lista-clicavel">'+outras.map(liSerie).join('')+'</ol>' : '')
       + '<h3>Documentos do emissor</h3>'+htmlDocs(D.docs[a.cnpj]||[]);
     const cab = '<div class="kicker">'+esc(nomeSegA(a.segmento))+' · '+esc(a.grupo)+'</div>'
-      + '<h2 id="gavTitulo">'+a.codigo+(a.faixa==='high_yield'?' <span class="selo hy">high yield</span>':'')+'<small>'+esc(a.emissor)+'</small></h2>'
+      + '<h2 id="gavTitulo">'+a.codigo+(a.faixa==='high_yield'?' <span class="selo hy">high yield</span>'+infoBtn('hy'):'')+'<small>'+esc(a.emissor)+'</small></h2>'
       + '<p class="linha-info">'+[a.indexador, 'vence '+dtBR(a.vencimento), a.isenta==='S'?'incentivada (isenta)':'tributada', 'garantia '+(a.garantia||'–')].filter(Boolean).join(' · ')+(a.motivo_faixa?'<br>'+esc(a.motivo_faixa):'')+'</p>'
       + '<div class="gav-acoes">'+(s?'<button data-acao="sim">Simular no painel</button>':'')+'<button data-acao="mapa">Ver no mapa</button><button data-acao="link">Copiar link</button></div>';
     const mostrarAba = abrirGaveta('ativo', cab, [
@@ -1196,8 +1280,8 @@ function mostrarRecentes(){
     gavCab.querySelectorAll('[data-acao]').forEach(b => b.onclick = () => acoes[b.dataset.acao](b));
     if (s) { const r = document.getElementById('msR'), v = document.getElementById('msV'), res = document.getElementById('msRes');
       const upd = () => { const b = +r.value, vp = variacao(s, b); v.textContent = (b>0?'+':'')+b+' bps';
-        res.innerHTML = cel('PU hoje', 'R$ '+fmt(s.pu,2), 'a '+txtTaxa(s, s.taxa)) + cel('PU após o choque', 'R$ '+fmt(s.pu*(1+vp/100),2), 'a '+txtTaxa(s, s.taxa+b/100))
-          + cel('Variação do preço', sinal(vp,2)+'%', (vp<0?'− ':'+ ')+'R$ '+fmt(Math.abs(s.pu*vp/100),2)+' por título') + cel('Só duration', sinal(-s.dmod*b/100,2)+'%', 'a diferença é a convexidade'); };
+        res.innerHTML = cel('PU hoje', 'R$ '+fmt(s.pu,2), 'a '+txtTaxa(s, s.taxa), 'pu') + cel('PU após o choque', 'R$ '+fmt(s.pu*(1+vp/100),2), 'a '+txtTaxa(s, s.taxa+b/100), 'reprec')
+          + cel('Variação do preço', sinal(vp,2)+'%', (vp<0?'− ':'+ ')+'R$ '+fmt(Math.abs(s.pu*vp/100),2)+' por título', 'reprec') + cel('Só duration', sinal(-s.dmod*b/100,2)+'%', 'a diferença é a convexidade', 'so_dur'); };
       r.oninput = upd; upd(); }
     if (hist.length > 1) {
       const sv = d3.select('#ativoHist'), W = 480, H = 120, M = {t:10,r:14,b:22,l:40}; sv.attr('viewBox', `0 0 ${W} ${H}`);
@@ -1456,19 +1540,19 @@ def gerar_projeto() -> str:
 <h2 class="sec">Maiores desvios hoje</h2>
 <p class="pequeno muted" style="margin-top:-.4rem">Faixa principal, sem high yield, ordenados em desvios-padrão dos resíduos. Clique para abrir a ficha.</p>
 <div class="ranking">
-<div class="painel"><h3>Acima dos pares <span class="fraco">pagam mais que o perfil sugere</span></h3><ol id="rkAcima"></ol></div>
-<div class="painel"><h3>Abaixo dos pares <span class="fraco">pagam menos que o perfil sugere</span></h3><ol id="rkAbaixo"></ol></div>
+<div class="painel"><h3>Acima dos pares{I('desvio_dp')} <span class="fraco">pagam mais que o perfil sugere</span></h3><ol id="rkAcima"></ol></div>
+<div class="painel"><h3>Abaixo dos pares{I('desvio_dp')} <span class="fraco">pagam menos que o perfil sugere</span></h3><ol id="rkAbaixo"></ol></div>
 </div>
 
 <h2 class="sec">O universo</h2>
 <div class="tiles">
 <div class="tile"><span>Séries no universo</span><b>{num(len(series), 0)}</b><small>{num(len(validas), 0)} precificadas</small></div>
 <div class="tile"><span>Emissores</span><b>{n_emissores}</b><small>{n_cvm} com controle na CVM</small></div>
-<div class="tile"><span>Grupos de risco</span><b>{n_grupos}</b><small>mais as isoladas</small></div>
+<div class="tile"><span>Grupos de risco{I('grupo')}</span><b>{n_grupos}</b><small>mais as isoladas</small></div>
 <div class="tile"><span>Segmentos</span><b>{n_seg}</b><small>pares só dentro do segmento</small></div>
-<div class="tile"><span>Spread comparável mediano</span><b>{num(mediana, 0)} bps</b><small>IPCA+, gross-up 15% nas isentas</small></div>
-<div class="tile"><span>Faixa high yield</span><b>{n_hy}</b><small>Z ≥ 300 bps ou evento de crédito</small></div>
-<div class="tile"><span>Fora da faixa dos pares</span><b>{fora}</b><small>|desvio| ≥ 1,5 dp</small></div>
+<div class="tile"><span>Spread comparável mediano{I('spread_comp')}</span><b>{num(mediana, 0)} bps</b><small>IPCA+, gross-up 15% nas isentas</small></div>
+<div class="tile"><span>Faixa high yield{I('hy')}</span><b>{n_hy}</b><small>Z ≥ 300 bps ou evento de crédito</small></div>
+<div class="tile"><span>Fora da faixa dos pares{I('desvio_dp')}</span><b>{fora}</b><small>|desvio| ≥ 1,5 dp</small></div>
 </div>
 </section>
 
@@ -1483,7 +1567,7 @@ def gerar_projeto() -> str:
 <svg id="grafo" role="img" aria-label="Grafo de controladores, emissores e séries de debêntures agrupados por grupo de risco"></svg>
 <div class="legenda legenda-macro"><span><i style="background:var(--m-energia)"></i>energia</span><span><i style="background:var(--m-infra)"></i>saneamento, transporte e logística</span><span><i style="background:var(--m-commod)"></i>commodities e indústria</span><span><i style="background:var(--m-consumo)"></i>consumo, serviços, telecom e financeiro</span>{escala}</div>
 <details class="legenda-det"><summary>Legenda completa: documentos e ligações</summary>
-<div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV)</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span></div>
+<div class="legenda"><span><i style="background:var(--doc-oficial);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)"></i>fato relevante, comunicado, aviso (CVM)</span><span><i style="background:var(--doc-oficial);border-radius:1px"></i>escritura</span><span><i style="background:var(--doc-noticia);transform:rotate(45deg);border-radius:1px"></i>notícia</span><span><i style="background:var(--doc-analise);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>análise (casas de research)</span><span><i style="background:var(--surface);border:2px solid var(--div-pos-2)"></i>impacto negativo (JEV){I('jev')}</span><span><i style="background:var(--surface);border:2px solid var(--div-neg-2)"></i>impacto positivo (JEV)</span></div>
 <div class="legenda" style="border-top:0;padding-top:0"><span>■ controlador (CVM)</span><span>⬚ grupo inferido</span><span>○ emissor</span><span>· · ponte entre grupos</span><span>── controle declarado (CVM)</span><span>—·— parte citada na escritura</span><span>- - grupo inferido</span><span>··· fiança (escritura)</span><span style="color:var(--div-pos-2)">— — cross-default alcança a controladora (escritura)</span></div>
 </details>
 </div>
@@ -1491,7 +1575,7 @@ def gerar_projeto() -> str:
 </section>
 
 <section class="vista" id="v-valor" hidden>
-<div class="vista-cab"><div><h2>Valor relativo</h2><p>Spread observado menos o spread justo dos pares, já com o ajuste por eventos. À direita, a série paga mais do que o perfil dela sugere; à esquerda, menos. Clique numa barra para abrir a ficha.</p></div>
+<div class="vista-cab"><div><h2>Valor relativo{I('desvio')}</h2><p>Spread observado menos o spread justo dos pares, já com o ajuste por eventos. À direita, a série paga mais do que o perfil dela sugere; à esquerda, menos. Clique numa barra para abrir a ficha.</p></div>
 <details class="ajuda"><summary>Como é calculado</summary><p>Spread justo = mediana das 8 séries mais comparáveis de outros emissores, no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield). A cor marca o tamanho do desvio em desvios-padrão dos resíduos. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</p></details></div>
 <div class="painel">
 <div class="barra-filtros"><select id="segDesvio" aria-label="Segmento"></select>
@@ -1516,7 +1600,7 @@ def gerar_projeto() -> str:
 <span class="espaco"></span><span id="fInfo" class="pequeno fraco" aria-live="polite"></span><button id="fColunas" aria-pressed="false">Mais colunas</button>
 </div>
 <div class="tabela"><table id="tab">
-<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta</th><th class="t extra">Garantia</th><th>Spread (bps)</th><th>Justo pares (bps)</th><th class="extra">Ajuste eventos</th><th>Desvio (bps)</th><th>Desvio (dp)</th><th class="extra">Variação hist. (bps)</th><th title="Duration modificada: % do preço por 100 bps de taxa">Duration mod.</th><th>Choque +100 (%)</th><th class="t extra">Escritura / status</th></tr></thead>
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco{I('grupo')}</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta{I('lei12431')}</th><th class="t extra">Garantia{I('garantia')}</th><th>Spread (bps){I('spread_tab')}</th><th>Justo pares (bps){I('justo_pares')}</th><th class="extra">Ajuste eventos{I('ajuste')}</th><th>Desvio (bps){I('desvio')}</th><th>Desvio (dp){I('desvio_dp')}</th><th class="extra">Variação hist. (bps){I('var_hist')}</th><th>Duration mod.{I('dmod')}</th><th>Choque +100 (%){I('choque100')}</th><th class="t extra">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
@@ -1537,16 +1621,16 @@ def gerar_projeto() -> str:
 <div class="botoes"><button data-v="-100">−100</button><button data-v="-50">−50</button><button data-v="50">+50</button><button data-v="100">+100</button><button data-v="200">+200</button></div>
 </div>
 <div><div class="res">
-<div><small>PU ANBIMA (hoje)</small><b id="r_pu">–</b><span class="pequeno muted" id="r_taxa"></span></div>
-<div><small>PU após o choque</small><b id="r_pu_novo">–</b><span class="pequeno muted" id="r_taxa_nova"></span></div>
-<div><small>Variação do preço (fluxo reprecificado)</small><b id="r_var">–</b><span class="pequeno muted" id="r_var_rs"></span></div>
-<div><small>Só duration: − duration × choque</small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
-<div><small>Ajuste de convexidade: + ½ × convexidade × choque²</small><b id="r_conv">–</b><span class="pequeno muted" id="r_conv_info"></span></div>
-<div><small>Duration + convexidade (aproximação)</small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
-<div><small>Duration modificada</small><b id="r_dur">–</b><span class="pequeno muted" id="r_dur_info"></span></div>
-<div><small>Spread</small><b id="r_z">–</b><span class="pequeno muted" id="r_z_info"></span></div>
-<div><small>Desvio em relação aos pares</small><b id="r_desvio">–</b></div>
-<div><small>Break-even de abertura em 12 meses</small><b id="r_be12">–</b></div>
+<div><small>PU ANBIMA (hoje){I('pu')}</small><b id="r_pu">–</b><span class="pequeno muted" id="r_taxa"></span></div>
+<div><small>PU após o choque{I('reprec')}</small><b id="r_pu_novo">–</b><span class="pequeno muted" id="r_taxa_nova"></span></div>
+<div><small>Variação do preço (fluxo reprecificado){I('reprec')}</small><b id="r_var">–</b><span class="pequeno muted" id="r_var_rs"></span></div>
+<div><small>Só duration: − duration × choque{I('so_dur')}</small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
+<div><small>Ajuste de convexidade: + ½ × convexidade × choque²{I('convexidade')}</small><b id="r_conv">–</b><span class="pequeno muted" id="r_conv_info"></span></div>
+<div><small>Duration + convexidade (aproximação){I('aprox')}</small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
+<div><small>Duration modificada{I('dmod')}</small><b id="r_dur">–</b><span class="pequeno muted" id="r_dur_info"></span></div>
+<div><small>Spread{I('spread_tab')}</small><b id="r_z">–</b><span class="pequeno muted" id="r_z_info"></span></div>
+<div><small>Desvio em relação aos pares{I('desvio')}</small><b id="r_desvio">–</b></div>
+<div><small>Break-even de abertura em 12 meses{I('be12')}</small><b id="r_be12">–</b></div>
 </div>
 <p class="pequeno" style="margin:.8rem 0 0"><button id="simFicha">Abrir a ficha desta série</button></p></div>
 </div>
@@ -1560,7 +1644,7 @@ def gerar_projeto() -> str:
 <div class="barra-filtros"><input id="criBusca" type="search" placeholder="Filtrar por código, ISIN, securitizadora ou devedor" aria-label="Filtrar CRI e CRA">
 <select id="criTipo" aria-label="Tipo"><option value="">CRI e CRA</option><option>CRI</option><option>CRA</option></select> <select id="criSit" aria-label="Situação"><option value="">Toda situação</option><option>Adimplente</option><option>Em atraso</option></select> <select id="criLastro" aria-label="Lastro"><option value="">Todo lastro</option></select>
 <span class="espaco"></span><span id="criInfo" class="pequeno fraco" aria-live="polite"></span></div>
-<div class="tabela"><table><thead><tr><th class="t">Tipo</th><th class="t">Código</th><th class="t">Securitizadora</th><th class="t">Classe</th><th class="t">Situação</th><th class="t">Remuneração</th><th class="t">Vencimento</th><th class="t">Lastro</th><th>LTV</th><th>Inadimplência</th><th class="t">Rating</th><th class="t">Devedores / cedentes</th></tr></thead><tbody id="criCorpo"></tbody></table></div>
+<div class="tabela"><table><thead><tr><th class="t">Tipo</th><th class="t">Código</th><th class="t">Securitizadora</th><th class="t">Classe</th><th class="t">Situação</th><th class="t">Remuneração</th><th class="t">Vencimento</th><th class="t">Lastro</th><th>LTV{I('ltv')}</th><th>Inadimplência{I('inad')}</th><th class="t">Rating</th><th class="t">Devedores / cedentes</th></tr></thead><tbody id="criCorpo"></tbody></table></div>
 </div>
 </div>
 </section>
@@ -1570,6 +1654,9 @@ def gerar_projeto() -> str:
 <h3>Modelo de spread justo</h3>
 <p class="muted pequeno">Regressão cross-section do spread comparável das séries IPCA+ validadas, com erros padrão robustos. O spread justo de cada série é o valor ajustado; o desvio é o resíduo.</p>
 {coef_html}
+<h3>Glossário dos indicadores</h3>
+<p class="muted pequeno">A mesma explicação aparece no botão "i" ao lado de cada número do site.</p>
+<dl id="glossario" class="glossario"></dl>
 <h3>Regras</h3>
 <ul class="metodo pequeno">
 <li><b>Fluxo de pagamentos</b> da agenda de eventos do SND; validação contra a duration ANBIMA. Séries que não batem ficam fora e aparecem marcadas.</li>
