@@ -233,6 +233,8 @@ body.gaveta-aberta .gaveta{transform:none}
 .sim .choque-cab label{margin:0;font-size:.84rem;color:var(--ink)}
 .choque-cab b{font-size:1.15rem;font-variant-numeric:tabular-nums}
 .choque-exato{display:flex;gap:6px;align-items:center;margin-top:4px}
+.choque-exato .passo{width:34px;height:34px;padding:0;font-size:1.1rem;font-weight:600;line-height:1;flex:none}
+.choque-exato .passo:disabled{opacity:.5;cursor:not-allowed}
 .sim .choque-exato input{width:90px}
 .cenarios{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.9rem 0 .4rem}
 .cenarios button{font-size:.78rem;padding:.3rem .55rem}
@@ -1646,16 +1648,14 @@ body.gaveta-aberta .gaveta{transform:none}
 <div class="choque-cab"><label for="reguaCurva">Curva de juros<button type="button" class="info" data-info="choque_curva" aria-label="Explicação">i</button> <span class="fraco" id="curvaRot">juros reais (NTN-B)</span></label><b id="curva_valor" class="serif">0 bps</b></div>
 <input id="reguaCurva" type="range" min="-300" max="300" step="5" value="0" aria-label="Choque na curva de juros em bps">
 <div class="regua-marcas"><span>−300 fecha</span><span>0</span><span>abre +300</span></div>
-<div class="choque-exato"><input id="choqueCurva" type="number" step="5" value="0" aria-label="Choque na curva, valor exato em bps"><span class="fraco pequeno">bps</span><span class="pequeno muted" id="curvaNota"></span></div>
+<div class="choque-exato"><button type="button" class="passo" data-alvo="curva" data-d="-25" aria-label="Fechar a curva em 25 bps">−</button><input id="choqueCurva" type="number" step="5" value="0" aria-label="Choque na curva, valor exato em bps"><button type="button" class="passo" data-alvo="curva" data-d="25" aria-label="Abrir a curva em 25 bps">+</button><span class="fraco pequeno">bps</span><span class="pequeno muted" id="curvaNota"></span></div>
 </div>
 <div class="choque-bloco">
 <div class="choque-cab"><label for="regua">Spread de crédito<button type="button" class="info" data-info="spread_tab" aria-label="Explicação">i</button></label><b id="regua_valor" class="serif">+100 bps</b></div>
 <input id="regua" type="range" min="-300" max="300" step="5" value="100" aria-label="Choque no spread de crédito em bps">
 <div class="regua-marcas"><span>−300 fecha</span><span>0</span><span>abre +300</span></div>
-<div class="choque-exato"><input id="choque" type="number" step="5" value="100" aria-label="Choque no spread, valor exato em bps"><span class="fraco pequeno">bps</span></div>
+<div class="choque-exato"><button type="button" class="passo" data-alvo="spread" data-d="-25" aria-label="Fechar o spread em 25 bps">−</button><input id="choque" type="number" step="5" value="100" aria-label="Choque no spread, valor exato em bps"><button type="button" class="passo" data-alvo="spread" data-d="25" aria-label="Abrir o spread em 25 bps">+</button><span class="fraco pequeno">bps, botões de 25 em 25</span></div>
 </div>
-<div class="cenarios" role="group" aria-label="Cenários prontos"><span class="pequeno muted">Cenários</span>
-<button data-c="-100" data-s="50">Spread +50, curva −100</button><button data-c="100" data-s="100">Estresse: os dois +100</button><button data-c="-50" data-s="-25">Rali: curva −50, spread −25</button><button data-c="100" data-s="0">Só curva +100</button><button data-c="0" data-s="100">Só spread +100</button><button data-c="0" data-s="0">Zerar</button></div>
 <svg id="curva" role="img" aria-label="PU em função do choque de spread, com e sem o choque de curva; arraste para ajustar o spread"></svg>
 <p class="pequeno fraco" style="margin:.2rem 0 0">Eixo horizontal: choque no spread. Linha cheia: com o choque de curva escolhido; cinza: curva de hoje; tracejada: só duration.</p>
 </div>
@@ -2179,7 +2179,7 @@ const variacao = (s, bps) => { const f = D.fluxos[s.codigo], ds = bps/1e4;
 // DI+: a curva de DI corrige juros e desconto na mesma medida, então só o spread mexe no preço
 const variacao2 = (s, dc, ds) => variacao(s, (ehDI(s) ? 0 : dc) + ds);
 const lim = b => Math.max(-300, Math.min(300, Math.round(b/5)*5));
-function atualizarSim(){ calcular(); desenharCurva(); desenharMapaChoques(); marcarCenario(); }
+function atualizarSim(){ calcular(); desenharCurva(); desenharMapaChoques(); }
 function definir(bps, origem){
   bps = lim(bps);
   if (origem!=='campo') choque.value = bps; if (origem!=='regua') regua.value = bps;
@@ -2194,10 +2194,9 @@ function definirDuplo(dc, ds){
   choqueC = lim(dc); campoC.value = choqueC; reguaC.value = choqueC; document.getElementById('curva_valor').textContent = fmtBps(choqueC);
   definir(ds, 'botao');
 }
-function marcarCenario(){ document.querySelectorAll('.cenarios button').forEach(b => b.classList.toggle('ativo', +b.dataset.c===choqueC && +b.dataset.s===(+choque.value||0))); }
 function estadoDI(){
   const s = serieAtual(); if (!s) return; const di = ehDI(s);
-  reguaC.disabled = di; campoC.disabled = di; document.getElementById('blocoCurva').classList.toggle('desativado', di);
+  reguaC.disabled = di; campoC.disabled = di; document.querySelectorAll('.passo[data-alvo="curva"]').forEach(b => b.disabled = di); document.getElementById('blocoCurva').classList.toggle('desativado', di);
   document.getElementById('curvaRot').textContent = di ? 'curva de DI' : 'juros reais (NTN-B)';
   document.getElementById('curvaNota').textContent = di ? 'pós-fixado: sem efeito relevante no preço' : '';
 }
@@ -2264,7 +2263,8 @@ regua.addEventListener('input', () => definir(+regua.value, 'regua'));
 choque.addEventListener('input', () => definir(+choque.value || 0, 'campo'));
 reguaC.addEventListener('input', () => definirCurva(+reguaC.value, 'regua'));
 campoC.addEventListener('input', () => definirCurva(+campoC.value || 0, 'campo'));
-document.querySelectorAll('.cenarios button').forEach(b => b.addEventListener('click', () => definirDuplo(+b.dataset.c, +b.dataset.s)));
+// − e +: 25 bps por clique na curva ou no spread
+document.querySelectorAll('.choque-exato .passo').forEach(b => b.addEventListener('click', () => { const d = +b.dataset.d; if (b.dataset.alvo==='curva') definirCurva(choqueC + d, 'botao'); else definir((+choque.value||0) + d, 'botao'); }));
 addEventListener('resize', () => { clearTimeout(window._rsim); window._rsim = setTimeout(() => { calcular(); desenharMapaChoques(); }, 150); });
 if (sel.options.length) { sel.value = sel.options[0].value; estadoDI(); definir(100, 'inicio'); }
 
