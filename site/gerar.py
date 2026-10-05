@@ -353,11 +353,18 @@ def gerar_home() -> str:
 </section>
 
 <section>
+<h2>Mercado</h2>
+<p class="muted">Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
+<p style="margin-top:.6rem"><a href="https://mercado.alissonprata.io/">Abrir o Mercado →</a></p>
+</section>
+
+<section>
 <h2>Projetos</h2>
 <p class="muted"><a href="/grafo-credito">Grafo de Crédito</a>: memória viva dos emissores de debêntures do crédito privado brasileiro, começando pelas transmissoras de energia.</p>
 </section>
 
 <p class="links" style="margin-top:2.5rem">
+<a href="https://mercado.alissonprata.io/">Mercado</a>
 <a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>
 <a href="https://github.com/alissondpoliveira">GitHub</a>
 </p>
@@ -1676,7 +1683,7 @@ def gerar_projeto() -> str:
 <a class="marca-site" href="#inicio" data-vista="inicio" title="Taxas ANBIMA do último dia útil coletado ({dia_semana}); site atualizado em {gerado_longo} (horário de Brasília). Atualização automática todo dia útil à noite."><b>Grafo de Crédito</b><span>mercado de {dia_semana} · atualizado {gerado_curto} <em id="statusDados" class="status-dados">carregando…</em></span></a>
 <div class="busca-caixa"><input id="busca" type="search" autocomplete="off" placeholder="Buscar código, ISIN, empresa ou grupo" aria-label="Buscar ativo, emissor ou grupo"><kbd class="atalho" aria-hidden="true">/</kbd>
 <ul id="resultados" role="listbox"></ul></div>
-<div class="barra-acoes"><button id="tema" class="icone" aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">◐</button><a class="link-sobre" href="/">Sobre</a></div>
+<div class="barra-acoes"><button id="tema" class="icone" aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">◐</button><a class="link-sobre" href="https://mercado.alissonprata.io/">Mercado</a><a class="link-sobre" href="/" style="margin-left:.9rem">Sobre</a></div>
 </div>
 <nav class="abas" aria-label="Seções">
 <a href="#inicio" data-vista="inicio">Visão geral</a><a href="#mapa" data-vista="mapa">Mapa</a><a href="#valor" data-vista="valor">Valor relativo</a><a href="#ativos" data-vista="ativos">Ativos</a><a href="#simulador" data-vista="simulador">Simulador</a><a href="#cri" data-vista="cri">CRI e CRA</a><a href="#metodo" data-vista="metodo">Método</a>
