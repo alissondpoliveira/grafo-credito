@@ -312,7 +312,7 @@ def num(v, casas=2):
 def gerar_home() -> str:
     corpo = """<main class="estreito">
 <div class="kicker">Pesquisa em crédito e mercado</div>
-<h1>Alisson Prata Oliveira</h1>
+<h1>Alisson Prata</h1>
 <p class="dek">Planejador financeiro CFP®, candidato ao CFA Level II e engenheiro de produção (UFTM). No mercado financeiro desde 2019.</p>
 
 <section>
@@ -330,7 +330,7 @@ def gerar_home() -> str:
 <a href="https://github.com/alissondpoliveira">GitHub</a>
 </p>
 </main>"""
-    return pagina("Alisson Prata Oliveira", "Alisson Prata Oliveira: análise de mercado e crédito privado.", corpo)
+    return pagina("Alisson Prata", "Alisson Prata: análise de mercado e crédito privado.", corpo)
 
 
 def sem_acento(t: str) -> str:
