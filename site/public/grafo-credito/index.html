@@ -227,6 +227,21 @@ body.gaveta-aberta .gaveta{transform:none}
 .info-pop{position:fixed;z-index:70;display:none;max-height:calc(100vh - 16px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .info-pop b{display:block;font-size:.86rem;margin-bottom:.2rem}.info-pop p{margin:.35rem 0 0}
 .formula{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.74rem;background:var(--surface-2);border-radius:6px;padding:6px 8px;margin:.4rem 0;color:var(--ink)}
+.choque-bloco{margin-top:.9rem;padding:10px 12px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.choque-bloco.desativado{opacity:.55}
+.choque-cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sim .choque-cab label{margin:0;font-size:.84rem;color:var(--ink)}
+.choque-cab b{font-size:1.15rem;font-variant-numeric:tabular-nums}
+.choque-exato{display:flex;gap:6px;align-items:center;margin-top:4px}
+.sim .choque-exato input{width:90px}
+.cenarios{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.9rem 0 .4rem}
+.cenarios button{font-size:.78rem;padding:.3rem .55rem}
+.cenarios button.ativo{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.res .res-largo{grid-column:1/-1}
+#cascata{width:100%;display:block;margin-top:8px}
+.mapa-choques{margin-top:14px;padding:14px 16px}
+.cab-mini{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin-bottom:6px}.cab-mini h3{margin:0}
+#mapaChoques{width:100%;max-width:760px;display:block}
 .eqs{background:var(--surface-2);border-radius:8px;padding:4px 10px;margin:.5rem 0;overflow-x:auto}
 .eqs .katex-display{margin:.45rem 0;text-align:left}
 .eqs .katex{font-size:1.02em;color:var(--ink)}
@@ -1622,23 +1637,34 @@ body.gaveta-aberta .gaveta{transform:none}
 </section>
 
 <section class="vista" id="v-simulador" hidden>
-<div class="vista-cab"><div><h2>Simulador de abertura e fechamento de spread</h2><p>Escolha a série e arraste a régua ou o ponto do gráfico. O fluxo remanescente é descontado de novo com a taxa indicativa mais o choque.</p></div>
-<details class="ajuda"><summary>Como é calculado</summary><p>IPCA+: fluxo real da agenda SND descontado à taxa real. DI+: fluxo projetado pela curva prefixada ANBIMA e descontado a (1 + DI) × (1 + spread). A linha tracejada é o que daria só a duration; a diferença para a curva cheia é a convexidade.</p></details></div>
+<div class="vista-cab"><div><h2>Simulador de curva e spread</h2><p>Combine um choque na curva de juros com um choque no spread de crédito e veja o efeito no preço. Os dois se somam na taxa do papel; o preço responde à soma, com um pequeno termo de cruzamento pela convexidade.</p></div>
+<details class="ajuda"><summary>Como é calculado</summary><p>IPCA+: o fluxo real da agenda SND é descontado de novo à taxa indicativa mais o choque na curva de juros reais (NTN-B) mais o choque no spread. DI+: fluxo projetado pela curva prefixada ANBIMA e descontado a (1 + DI) × (1 + spread). Um deslocamento paralelo da curva de DI muda os juros projetados e o desconto na mesma medida, e o efeito no preço é desprezível; por isso o choque de curva fica desativado no DI+.</p></details></div>
 <div class="painel sim">
 <div>
 <label for="serie">Série</label><select id="serie"></select>
-<label for="regua">Choque no spread: <b id="regua_valor" class="serif" style="font-size:1.05rem">+100 bps</b></label>
-<input id="regua" type="range" min="-300" max="300" step="5" value="100" aria-label="Choque no spread em bps">
-<div class="regua-marcas"><span>−300</span><span>−150</span><span>0</span><span>+150</span><span>+300</span></div>
-<svg id="curva" role="img" aria-label="PU em função do choque de spread; arraste para ajustar"></svg>
-<label for="choque">Valor exato (bps)</label><input id="choque" type="number" step="5" value="100">
-<div class="botoes"><button data-v="-100">−100</button><button data-v="-50">−50</button><button data-v="50">+50</button><button data-v="100">+100</button><button data-v="200">+200</button></div>
+<div class="choque-bloco" id="blocoCurva">
+<div class="choque-cab"><label for="reguaCurva">Curva de juros<button type="button" class="info" data-info="choque_curva" aria-label="Explicação">i</button> <span class="fraco" id="curvaRot">juros reais (NTN-B)</span></label><b id="curva_valor" class="serif">0 bps</b></div>
+<input id="reguaCurva" type="range" min="-300" max="300" step="5" value="0" aria-label="Choque na curva de juros em bps">
+<div class="regua-marcas"><span>−300 fecha</span><span>0</span><span>abre +300</span></div>
+<div class="choque-exato"><input id="choqueCurva" type="number" step="5" value="0" aria-label="Choque na curva, valor exato em bps"><span class="fraco pequeno">bps</span><span class="pequeno muted" id="curvaNota"></span></div>
+</div>
+<div class="choque-bloco">
+<div class="choque-cab"><label for="regua">Spread de crédito<button type="button" class="info" data-info="spread_tab" aria-label="Explicação">i</button></label><b id="regua_valor" class="serif">+100 bps</b></div>
+<input id="regua" type="range" min="-300" max="300" step="5" value="100" aria-label="Choque no spread de crédito em bps">
+<div class="regua-marcas"><span>−300 fecha</span><span>0</span><span>abre +300</span></div>
+<div class="choque-exato"><input id="choque" type="number" step="5" value="100" aria-label="Choque no spread, valor exato em bps"><span class="fraco pequeno">bps</span></div>
+</div>
+<div class="cenarios" role="group" aria-label="Cenários prontos"><span class="pequeno muted">Cenários</span>
+<button data-c="-100" data-s="50">Spread +50, curva −100</button><button data-c="100" data-s="100">Estresse: os dois +100</button><button data-c="-50" data-s="-25">Rali: curva −50, spread −25</button><button data-c="100" data-s="0">Só curva +100</button><button data-c="0" data-s="100">Só spread +100</button><button data-c="0" data-s="0">Zerar</button></div>
+<svg id="curva" role="img" aria-label="PU em função do choque de spread, com e sem o choque de curva; arraste para ajustar o spread"></svg>
+<p class="pequeno fraco" style="margin:.2rem 0 0">Eixo horizontal: choque no spread. Linha cheia: com o choque de curva escolhido; cinza: curva de hoje; tracejada: só duration.</p>
 </div>
 <div><div class="res">
 <div><small>PU ANBIMA (hoje)<button type="button" class="info" data-info="pu" aria-label="Explicação">i</button></small><b id="r_pu">–</b><span class="pequeno muted" id="r_taxa"></span></div>
-<div><small>PU após o choque<button type="button" class="info" data-info="reprec" aria-label="Explicação">i</button></small><b id="r_pu_novo">–</b><span class="pequeno muted" id="r_taxa_nova"></span></div>
-<div><small>Variação do preço (fluxo reprecificado)<button type="button" class="info" data-info="reprec" aria-label="Explicação">i</button></small><b id="r_var">–</b><span class="pequeno muted" id="r_var_rs"></span></div>
-<div><small>Só duration: − duration × choque<button type="button" class="info" data-info="so_dur" aria-label="Explicação">i</button></small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
+<div><small>PU após os choques<button type="button" class="info" data-info="reprec" aria-label="Explicação">i</button></small><b id="r_pu_novo">–</b><span class="pequeno muted" id="r_taxa_nova"></span></div>
+<div class="res-largo"><small>Variação do preço (fluxo reprecificado)<button type="button" class="info" data-info="reprec" aria-label="Explicação">i</button></small><b id="r_var">–</b><span class="pequeno muted" id="r_var_rs"></span>
+<svg id="cascata" role="img" aria-label="Decomposição da variação do PU entre curva, spread e cruzamento"></svg></div>
+<div><small>Só duration: − duration × choque total<button type="button" class="info" data-info="so_dur" aria-label="Explicação">i</button></small><b id="r_so_dur">–</b><span class="pequeno muted">erra porque trata a curva preço × taxa como reta</span></div>
 <div><small>Ajuste de convexidade: + ½ × convexidade × choque²<button type="button" class="info" data-info="convexidade" aria-label="Explicação">i</button></small><b id="r_conv">–</b><span class="pequeno muted" id="r_conv_info"></span></div>
 <div><small>Duration + convexidade (aproximação)<button type="button" class="info" data-info="aprox" aria-label="Explicação">i</button></small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
 <div><small>Duration modificada<button type="button" class="info" data-info="dmod" aria-label="Explicação">i</button></small><b id="r_dur">–</b><span class="pequeno muted" id="r_dur_info"></span></div>
@@ -1647,6 +1673,11 @@ body.gaveta-aberta .gaveta{transform:none}
 <div><small>Break-even de abertura em 12 meses<button type="button" class="info" data-info="be12" aria-label="Explicação">i</button></small><b id="r_be12">–</b></div>
 </div>
 <p class="pequeno" style="margin:.8rem 0 0"><button id="simFicha">Abrir a ficha desta série</button></p></div>
+</div>
+<div class="painel mapa-choques">
+<div class="cab-mini"><h3>Mapa de cenários<button type="button" class="info" data-info="cruzamento" aria-label="Explicação">i</button></h3><span class="pequeno muted">Variação do PU, em %, para cada combinação de choque na curva (colunas) e no spread (linhas). Clique numa célula para aplicar os dois choques.</span></div>
+<svg id="mapaChoques" role="img" aria-label="Mapa de calor da variação do PU por choque de curva e de spread"></svg>
+<p class="pequeno fraco" id="mapaNota" style="margin:.3rem 0 0"></p>
 </div>
 </section>
 
@@ -1744,6 +1775,8 @@ const GLOSS = {
   grupo: {t:'Grupo de risco', d:'Empresas sob o mesmo controlador final. Fontes: controle declarado no Formulário de Referência da CVM, partes citadas na escritura (acionista, fiadora, interveniente) ou regra inferida, a confirmar.', l:'Eventos de um emissor podem afetar o crédito de todo o grupo.'},
   jev: {t:'Classificação de eventos (JEV)', d:'O modelo System One da TypeSafe lê o título de cada documento e devolve o tipo de evento, o impacto para o credor e a confiança.', l:'Só classificações com confiança de pelo menos 0,8 são usadas no ajuste e exibidas como automáticas; o resto fica "a revisar".'},
   ltv: {fx:['\\text{LTV} = \\frac{\\text{Saldo da dívida}}{\\text{Valor da garantia}}'], t:'LTV (loan-to-value)', d:'Saldo da dívida dividido pelo valor da garantia, informado pela securitizadora no Informe Mensal.', l:'Quanto menor, maior a folga da garantia sobre a dívida.'},
+  cruzamento: {fx:['\\Delta P_{\\text{total}} = \\Delta P_{\\text{curva}} + \\Delta P_{\\text{spread}} + \\Delta P_{\\text{cruz.}}','\\Delta P_{\\text{cruz.}} \\approx C\\,\\Delta c\\,\\Delta s'], fn:'Δc = choque na curva, Δs = choque no spread, C = convexidade, em decimal.', t:'Cruzamento curva × spread', d:'Parte da variação do preço que não aparece quando os choques são simulados um de cada vez. O preço responde à soma dos choques na taxa, e a curvatura (convexidade) faz o efeito conjunto diferir da soma dos efeitos isolados.', l:'Choques no mesmo sentido (os dois abrindo) deixam o cruzamento positivo e amortecem a queda; em sentidos opostos, ele é negativo. Costuma ser pequeno perto dos efeitos isolados.'},
+  choque_curva: {fx:['y_{\\text{novo}} = y + \\Delta c + \\Delta s'], t:'Choque na curva de juros', d:'Deslocamento paralelo da curva de juros base. Nas debêntures IPCA+, a curva de juros reais (NTN-B, ETTJ IPCA da ANBIMA). O spread de crédito fica parado, e a taxa do papel muda pelo mesmo número de bps.', l:'Curva fechando (negativo) sobe o preço; abrindo, derruba. No DI+, o CDI corrige os juros e o desconto juntos e um deslocamento paralelo da curva de DI quase não muda o preço; por isso o controle fica desativado.'},
   inad: {fx:['\\frac{\\text{Créditos inadimplentes}}{\\text{Créditos vinculados}}'], t:'Inadimplência dos créditos', d:'Créditos vinculados inadimplentes divididos pelo total de créditos vinculados ao certificado.', l:'Mede a qualidade do lastro, não do certificado: subordinação e garantias absorvem parte da perda.'},
 };
 // fórmulas tipografadas com KaTeX (cdnjs), carregado na primeira explicação aberta; sem ele, fica o texto
@@ -2084,75 +2117,156 @@ const sel = document.getElementById('serie'), choque = document.getElementById('
 D.series.forEach(s => { const o=document.createElement('option'); o.value=s.codigo; o.textContent=s.codigo+' · '+s.emissor+(s.classe==='DI+'?' (DI+)':''); sel.appendChild(o); });
 const preco = (f, y) => f.t.reduce((p,t,i) => p + f.cf[i]/Math.pow(1+y, t), 0);
 const txtTaxa = (s, v) => v==null ? '' : (s.classe==='DI+' ? 'DI + ' : 'IPCA + ')+fmt(v,2)+'%';
+// dupla simulação: choque na curva de juros (dc) e no spread de crédito (ds), em bps. A taxa do papel muda pela soma.
+const ehDI = x => x.classe==='DI+';
+const serieAtual = () => D.series.find(x => x.codigo===sel.value);
+const fmtBps = b => (b>0?'+':'')+fmt(b,0)+' bps';
+let choqueC = 0;
+const reguaC = document.getElementById('reguaCurva'), campoC = document.getElementById('choqueCurva');
 function calcular(){
-  const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
-  const f = D.fluxos[s.codigo], bps = parseFloat(choque.value)||0, ds = bps/1e4;
-  const soDur = -s.dmod*ds*100, conv = s.convex ? .5*s.convex*ds*ds*100 : null;
-  const aprox = soDur + (conv||0);
-  const cheio = f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : null;
-  const v = cheio!=null ? cheio : aprox;
+  const s = serieAtual(); if(!s) return;
+  const di = ehDI(s), dc = di ? 0 : choqueC, sb = parseFloat(choque.value)||0, tot = dc + sb, dy = tot/1e4;
+  const f = D.fluxos[s.codigo];
+  const vT = variacao2(s, dc, sb), vC = variacao2(s, dc, 0), vS = variacao2(s, 0, sb), vX = vT - vC - vS;
+  const soDur = -s.dmod*dy*100, conv = s.convex ? .5*s.convex*dy*dy*100 : null, aprox = soDur + (conv||0);
   const $ = id => document.getElementById(id);
   $('r_pu').textContent = s.pu ? 'R$ '+fmt(s.pu,2) : '–';
   $('r_taxa').textContent = s.taxa!=null ? 'a '+txtTaxa(s, s.taxa) : '';
-  $('r_pu_novo').textContent = s.pu ? 'R$ '+fmt(s.pu*(1+v/100),2) : '–';
-  $('r_taxa_nova').textContent = s.taxa!=null ? 'a '+txtTaxa(s, s.taxa+bps/100) : '';
-  $('r_var').textContent = cheio!=null ? sinal(cheio,2)+'%' : 'sem fluxo validado';
-  $('r_var_rs').textContent = s.pu ? (v<0?'− ':'+ ')+'R$ '+fmt(Math.abs(s.pu*v/100),2)+' por título'+(cheio==null?' (pela aproximação)':'') : '';
+  $('r_pu_novo').textContent = s.pu ? 'R$ '+fmt(s.pu*(1+vT/100),2) : '–';
+  $('r_taxa_nova').textContent = s.taxa!=null ? 'a '+txtTaxa(s, s.taxa+tot/100)+(di ? '' : ' (curva '+fmtBps(dc)+', spread '+fmtBps(sb)+')') : '';
+  $('r_var').textContent = sinal(vT,2)+'%' + (f ? '' : ' (aproximação)');
+  $('r_var_rs').textContent = s.pu ? (vT<0?'− ':'+ ')+'R$ '+fmt(Math.abs(s.pu*vT/100),2)+' por título' : '';
   $('r_so_dur').textContent = sinal(soDur,2)+'%';
   $('r_conv').textContent = conv==null ? '–' : sinal(conv,2)+'%';
   $('r_conv_info').textContent = s.convex ? 'convexidade '+fmt(s.convex,1)+'; sempre a favor do investidor' : '';
   $('r_aprox').textContent = sinal(aprox,2)+'%';
-  $('r_resid').textContent = cheio!=null ? 'diferença para o fluxo: '+fmt(Math.abs(cheio-aprox)*100,1)+' bps de preço' : '';
-  // modificada = Macaulay / (1 + taxa): lê-se como % do preço por 1 ponto (100 bps) de taxa
+  $('r_resid').textContent = f ? 'diferença para o fluxo: '+fmt(Math.abs(vT-aprox)*100,1)+' bps de preço' : '';
   $('r_dur').textContent = fmt(s.dmod,2);
   $('r_dur_info').textContent = '≈ '+fmt(s.dmod,2)+'% do preço a cada 100 bps' + (s.taxa!=null ? ' · Macaulay '+fmt(s.dmod*(1+s.taxa/100),2)+' anos' : '');
-  $('r_z').textContent = s.classe==='DI+' ? fmt(s.spread,0)+' bps sobre o CDI' : fmt(s.z,0)+' bps (Z de mercado)';
-  $('r_z_info').textContent = s.classe==='DI+' ? '' : 'comparável '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?' com gross-up de 15% (isenta)':'');
-  document.getElementById('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
-  document.getElementById('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
+  $('r_z').textContent = di ? fmt(s.spread,0)+' → '+fmt(s.spread+sb,0)+' bps' : fmt(s.z,0)+' → '+fmt(s.z+sb,0)+' bps';
+  $('r_z_info').textContent = di ? 'sobre o CDI' : 'Z de mercado; comparável hoje '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?' (gross-up de 15%, isenta)':'');
+  $('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
+  $('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
+  desenharCascata(s, vC, vS, vX, vT, di);
 }
-// régua e curva preço x choque: os três controles (régua, ponto arrastável, campo) ficam sincronizados
+// cascata: PU hoje -> curva -> spread -> cruzamento -> PU final (soma exata)
+function desenharCascata(s, vC, vS, vX, vT, di){
+  const el = document.getElementById('cascata'), larg = el.parentNode.clientWidth; const svg = d3.select(el); svg.selectAll('*').remove();
+  if (!larg || !s.pu) return;
+  const pu0 = s.pu, W = Math.max(300, larg - 24), estreito = W < 460, lin = 26, M = {t:4, r: estreito?118:150, b:4, l: estreito?84:118};
+  let acc = pu0;
+  const efeitos = [[di ? 'Curva (sem efeito no DI+)' : 'Curva de juros', vC], ['Spread de crédito', vS], ['Cruzamento', vX]].map(([r, v]) => { const d = pu0*v/100, o = {r, a:acc, b:acc+d, d, v}; acc += d; return o; });
+  const linhas = [{r:'PU hoje', tot:true, b:pu0}, ...efeitos, {r:'PU final', tot:true, b:acc, v:vT}];
+  const vals = [pu0, ...efeitos.map(e => e.b)], lo = d3.min(vals), hi = d3.max(vals), pad = Math.max((hi-lo)*.2, pu0*.004);
+  const x = d3.scaleLinear().domain([lo-pad, hi+pad]).range([M.l, W-M.r]);
+  const H = M.t + linhas.length*lin + M.b; svg.attr('viewBox', `0 0 ${W} ${H}`);
+  linhas.forEach((l, i) => {
+    const y = M.t + i*lin, g = svg.append('g');
+    g.append('text').attr('x', 0).attr('y', y+lin/2+4).attr('font-size', 11).attr('fill', l.tot ? 'var(--ink)' : 'var(--ink-2)').attr('font-weight', l.tot ? 600 : 400).text(estreito ? l.r.replace(' (sem efeito no DI+)','').replace('Spread de crédito','Spread').replace('Curva de juros','Curva') : l.r);
+    if (l.tot) g.append('rect').attr('x', M.l).attr('y', y+5).attr('width', Math.max(2, x(l.b)-M.l)).attr('height', lin-10).attr('rx', 3).attr('fill', 'var(--line-2)');
+    else g.append('rect').attr('x', x(Math.min(l.a, l.b))).attr('y', y+5).attr('width', Math.max(1.5, Math.abs(x(l.b)-x(l.a)))).attr('height', lin-10).attr('rx', 3)
+      .attr('fill', Math.abs(l.d) < 1e-9 ? 'var(--div-0)' : l.d < 0 ? 'var(--div-pos-2)' : 'var(--div-neg-2)');
+    if (i < linhas.length-1) g.append('line').attr('x1', x(l.tot ? l.b : l.b)).attr('x2', x(l.tot ? l.b : l.b)).attr('y1', y+lin-5).attr('y2', y+lin+5).attr('stroke', 'var(--ink-3)').attr('stroke-dasharray', '2 2');
+    g.append('text').attr('x', W-M.r+8).attr('y', y+lin/2+4).attr('font-size', 11).attr('fill', 'var(--ink)').attr('font-weight', l.tot ? 600 : 400).style('font-variant-numeric','tabular-nums')
+      .text(l.tot ? 'R$ '+fmt(l.b,2)+(l.v!=null?'  '+sinal(l.v,2)+'%':'') : sinal(l.v,2)+'%  '+(l.d<0?'−':'+')+'R$ '+fmt(Math.abs(l.d),2));
+  });
+  svg.append('text').attr('x', M.l).attr('y', H-1).attr('font-size', 0).text('');
+}
+// régua e curva preço x choque de spread; o choque de curva desloca a curva inteira
 const regua = document.getElementById('regua'), reguaValor = document.getElementById('regua_valor');
 const variacao = (s, bps) => { const f = D.fluxos[s.codigo], ds = bps/1e4;
   return f ? (preco(f, f.y+ds)/preco(f, f.y)-1)*100 : (-s.dmod*ds + (s.convex? .5*s.convex*ds*ds : 0))*100; };
+// DI+: a curva de DI corrige juros e desconto na mesma medida, então só o spread mexe no preço
+const variacao2 = (s, dc, ds) => variacao(s, (ehDI(s) ? 0 : dc) + ds);
+const lim = b => Math.max(-300, Math.min(300, Math.round(b/5)*5));
+function atualizarSim(){ calcular(); desenharCurva(); desenharMapaChoques(); marcarCenario(); }
 function definir(bps, origem){
-  bps = Math.max(-300, Math.min(300, Math.round(bps/5)*5));
+  bps = lim(bps);
   if (origem!=='campo') choque.value = bps; if (origem!=='regua') regua.value = bps;
-  reguaValor.textContent = (bps>0?'+':'')+bps+' bps'; calcular(); desenharCurva();
+  reguaValor.textContent = fmtBps(bps); atualizarSim();
+}
+function definirCurva(bps, origem){
+  choqueC = lim(bps);
+  if (origem!=='campo') campoC.value = choqueC; if (origem!=='regua') reguaC.value = choqueC;
+  document.getElementById('curva_valor').textContent = fmtBps(choqueC); atualizarSim();
+}
+function definirDuplo(dc, ds){
+  choqueC = lim(dc); campoC.value = choqueC; reguaC.value = choqueC; document.getElementById('curva_valor').textContent = fmtBps(choqueC);
+  definir(ds, 'botao');
+}
+function marcarCenario(){ document.querySelectorAll('.cenarios button').forEach(b => b.classList.toggle('ativo', +b.dataset.c===choqueC && +b.dataset.s===(+choque.value||0))); }
+function estadoDI(){
+  const s = serieAtual(); if (!s) return; const di = ehDI(s);
+  reguaC.disabled = di; campoC.disabled = di; document.getElementById('blocoCurva').classList.toggle('desativado', di);
+  document.getElementById('curvaRot').textContent = di ? 'curva de DI' : 'juros reais (NTN-B)';
+  document.getElementById('curvaNota').textContent = di ? 'pós-fixado: sem efeito relevante no preço' : '';
 }
 function desenharCurva(){
-  const s = D.series.find(x => x.codigo===sel.value); if(!s) return;
+  const s = serieAtual(); if(!s) return;
   const svg = d3.select('#curva'); svg.selectAll('*').remove();
   const W = 440, H = 210, M = {t:14, r:12, b:22, l:58}; svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const di = ehDI(s), dc = di ? 0 : choqueC;
   const pu0 = s.pu || 100, puDe = v => pu0*(1+v/100);
-  const pts = d3.range(-300, 301, 10).map(b => [b, puDe(variacao(s, b))]);
-  const reta = [[-300, puDe(s.dmod*3)], [300, puDe(-s.dmod*3)]];
+  const pts = d3.range(-300, 301, 10).map(b => [b, puDe(variacao2(s, dc, b))]);
+  const hoje = d3.range(-300, 301, 10).map(b => [b, puDe(variacao(s, b))]);
+  const reta = [[-300, puDe(-s.dmod*(dc-300)/100)], [300, puDe(-s.dmod*(dc+300)/100)]];
   const x = d3.scaleLinear().domain([-300, 300]).range([M.l, W-M.r]);
-  const y = d3.scaleLinear().domain(d3.extent([...pts, ...reta], p=>p[1])).nice().range([H-M.b, M.t]);
+  const y = d3.scaleLinear().domain(d3.extent([...pts, ...reta, ...(dc ? hoje : [])], p=>p[1])).nice().range([H-M.b, M.t]);
   y.ticks(4).forEach(t => { svg.append('line').attr('x1',M.l).attr('x2',W-M.r).attr('y1',y(t)).attr('y2',y(t)).attr('stroke','var(--line)');
     svg.append('text').attr('x',M.l-6).attr('y',y(t)+3).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text('R$ '+fmt(t,0)); });
-  svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(reta)).attr('fill','none').attr('stroke','var(--ink-3)').attr('stroke-width',1.2).attr('stroke-dasharray','4 3');
-  svg.append('text').attr('x', W-M.r).attr('y', y(reta[1][1])+12).attr('text-anchor','end').attr('font-size',9).attr('fill','var(--ink-3)').text('só duration');
   [-300,-150,0,150,300].forEach(t => svg.append('text').attr('x',x(t)).attr('y',H-6).attr('text-anchor','middle').attr('font-size',9.5).attr('fill','var(--ink-3)').text((t>0?'+':'')+t));
   svg.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',M.t).attr('y2',H-M.b).attr('stroke','var(--line-2)');
+  svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(reta)).attr('fill','none').attr('stroke','var(--ink-3)').attr('stroke-width',1.2).attr('stroke-dasharray','4 3');
+  if (dc) { svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(hoje)).attr('fill','none').attr('stroke','var(--line-2)').attr('stroke-width',2);
+    svg.append('text').attr('x', x(-300)+4).attr('y', y(hoje[0][1]) + (dc<0 ? 14 : -6)).attr('font-size',9).attr('fill','var(--ink-3)').text('curva de hoje'); }
   svg.append('path').attr('d', d3.line().x(p=>x(p[0])).y(p=>y(p[1]))(pts)).attr('fill','none').attr('stroke','var(--ink)').attr('stroke-width',2);
-  const b = +choque.value || 0, vp = variacao(s, b), v = puDe(vp);
+  const b = +choque.value || 0, vp = variacao2(s, dc, b), v = puDe(vp);
   svg.append('line').attr('x1',x(b)).attr('x2',x(b)).attr('y1',y(v)).attr('y2',H-M.b).attr('stroke','var(--ink-3)').attr('stroke-dasharray','3 3');
   svg.append('line').attr('x1',M.l).attr('x2',x(b)).attr('y1',y(v)).attr('y2',y(v)).attr('stroke','var(--ink-3)').attr('stroke-dasharray','3 3');
-  svg.append('circle').attr('cx',x(b)).attr('cy',y(v)).attr('r',7).attr('fill', b<0?'var(--div-neg-2)':b>0?'var(--div-pos-2)':'var(--div-0)').attr('stroke','var(--surface)').attr('stroke-width',2);
+  svg.append('circle').attr('cx',x(b)).attr('cy',y(v)).attr('r',7).attr('fill', vp>0?'var(--div-neg-2)':vp<0?'var(--div-pos-2)':'var(--div-0)').attr('stroke','var(--surface)').attr('stroke-width',2);
   svg.append('text').attr('x', x(b) + (b>150?-10:10)).attr('y', y(v)-10).attr('text-anchor', b>150?'end':'start').attr('font-size',11).attr('font-weight',600).attr('fill','var(--ink)').text('R$ '+fmt(v,2)+' ('+sinal(vp,2)+'%)');
-  // arrastar em qualquer ponto do gráfico move o choque
   svg.append('rect').attr('x',M.l).attr('y',0).attr('width',W-M.l-M.r).attr('height',H).attr('fill','transparent').style('cursor','ew-resize')
     .call(d3.drag().on('start drag', e => definir(x.invert(e.x), 'curva')))
     .on('click', e => definir(x.invert(d3.pointer(e)[0]), 'curva'));
 }
-function selecionar(c){ if (![...sel.options].some(o => o.value===c)) return false; sel.value=c; calcular(); desenharCurva(); return true; }
-sel.addEventListener('change', () => { calcular(); desenharCurva(); if (window.abrirAtivo) abrirAtivo(sel.value, 'simulador'); });
+// mapa de calor: variação do PU por choque de curva (colunas) e de spread (linhas); clique aplica os dois
+function desenharMapaChoques(){
+  const s = serieAtual(), el = document.getElementById('mapaChoques'); if (!s) return;
+  const larg = el.parentNode.clientWidth; const svg = d3.select(el); svg.selectAll('*').remove(); if (!larg) return;
+  const di = ehDI(s), passos = d3.range(-200, 201, 50), n = passos.length;
+  const W = Math.min(760, Math.max(320, larg - 32)), estreito = W < 520, M = {t:30, r:6, b:6, l: estreito ? 46 : 70};
+  const cw = (W-M.l-M.r)/n, ch = Math.max(24, Math.min(34, cw*.72)), H = M.t + n*ch + M.b;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const cel = passos.flatMap(sb => passos.map(dc => ({dc, sb, v: variacao2(s, dc, sb)})));
+  const m = d3.max(cel, d => Math.abs(d.v)) || 1;
+  const cor = v => v <= -.6*m ? 'var(--div-pos-2)' : v <= -.2*m ? 'var(--div-pos-1)' : v < .2*m ? 'var(--div-0)' : v < .6*m ? 'var(--div-neg-1)' : 'var(--div-neg-2)';
+  const xi = dc => M.l + (dc+200)/50*cw, yi = sb => M.t + (200-sb)/50*ch;
+  svg.append('text').attr('x', M.l + (W-M.l-M.r)/2).attr('y', 10).attr('text-anchor','middle').attr('font-size', 10.5).attr('fill','var(--ink-2)').text(di ? 'curva de DI (bps): sem efeito no pós-fixado' : 'curva de juros (bps): fecha ← → abre');
+  passos.forEach(dc => svg.append('text').attr('x', xi(dc)+cw/2).attr('y', M.t-6).attr('text-anchor','middle').attr('font-size', 10).attr('fill','var(--ink-3)').text((dc>0?'+':'')+dc));
+  passos.forEach(sb => svg.append('text').attr('x', M.l-6).attr('y', yi(sb)+ch/2+3.5).attr('text-anchor','end').attr('font-size', 10).attr('fill','var(--ink-3)').text((estreito ? '' : 'spread ')+(sb>0?'+':'')+sb));
+  const g = svg.append('g').selectAll('g').data(cel).join('g').attr('transform', d => `translate(${xi(d.dc)},${yi(d.sb)})`).style('cursor','pointer');
+  g.append('rect').attr('x', 1).attr('y', 1).attr('width', cw-2).attr('height', ch-2).attr('rx', 3).attr('fill', d => cor(d.v));
+  g.append('text').attr('x', cw/2).attr('y', ch/2+3.5).attr('text-anchor','middle').attr('font-size', estreito ? 9 : 10).style('font-variant-numeric','tabular-nums')
+    .attr('fill', d => Math.abs(d.v) >= .6*m ? '#fff' : 'var(--ink)').text(d => sinal(d.v, 1));
+  g.on('mouseenter', (e,d) => mostrar(e, '<b>Curva '+fmtBps(d.dc)+' · spread '+fmtBps(d.sb)+'</b>'+linha('Variação do PU', sinal(d.v,2)+'%')+linha('PU', 'R$ '+fmt(s.pu*(1+d.v/100),2))+'<br><span class="fraco">clique para aplicar</span>'))
+   .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => { esconder(); definirDuplo(d.dc, d.sb); });
+  // marcador da combinação escolhida (posição contínua, mesmo fora da grade de 50 bps)
+  const dcA = di ? 0 : choqueC, sbA = +choque.value || 0;
+  if (Math.abs(dcA) <= 225 && Math.abs(sbA) <= 225) svg.append('rect').attr('x', xi(dcA)+1).attr('y', yi(sbA)+1).attr('width', cw-2).attr('height', ch-2).attr('rx', 3)
+    .attr('fill','none').attr('stroke','var(--ink)').attr('stroke-width', 2.5).style('pointer-events','none');
+  document.getElementById('mapaNota').textContent = di ? 'No DI+ as colunas são iguais: o choque de curva não altera o preço.' :
+    'Leitura: a diagonal que desce da esquerda para a direita junta combinações com o mesmo choque total na taxa (por exemplo, curva −200 com spread +200); ao longo dela o preço quase não muda, e a pequena diferença é o cruzamento.';
+}
+function selecionar(c){ if (![...sel.options].some(o => o.value===c)) return false; sel.value=c; estadoDI(); atualizarSim(); return true; }
+sel.addEventListener('change', () => { estadoDI(); atualizarSim(); if (window.abrirAtivo) abrirAtivo(sel.value, 'simulador'); });
 document.getElementById('simFicha').onclick = () => abrirAtivo(sel.value);
 regua.addEventListener('input', () => definir(+regua.value, 'regua'));
 choque.addEventListener('input', () => definir(+choque.value || 0, 'campo'));
-document.querySelectorAll('.botoes button').forEach(b => b.addEventListener('click', () => definir(+b.dataset.v, 'botao')));
-if (sel.options.length) { sel.value = sel.options[0].value; definir(100, 'inicio'); }
+reguaC.addEventListener('input', () => definirCurva(+reguaC.value, 'regua'));
+campoC.addEventListener('input', () => definirCurva(+campoC.value || 0, 'campo'));
+document.querySelectorAll('.cenarios button').forEach(b => b.addEventListener('click', () => definirDuplo(+b.dataset.c, +b.dataset.s)));
+addEventListener('resize', () => { clearTimeout(window._rsim); window._rsim = setTimeout(() => { calcular(); desenharMapaChoques(); }, 150); });
+if (sel.options.length) { sel.value = sel.options[0].value; estadoDI(); definir(100, 'inicio'); }
 
 // ---------- tabela: ordenar e abrir no simulador ----------
 (function(){
@@ -2208,6 +2322,7 @@ function irPara(v, o={}){
   document.querySelectorAll('.abas a').forEach(a => a.setAttribute('aria-current', a.dataset.vista===v ? 'page' : 'false'));
   if (location.hash !== '#'+v) history[o.substituir ? 'replaceState' : 'pushState'](o.substituir ? history.state : null, '', location.pathname + location.search + '#' + v);
   if (v==='valor') desenharDesvio(classeAtual);
+  if (v==='simulador') { calcular(); desenharMapaChoques(); }
   if (mudou && !o.manterRolagem) window.scrollTo({top:0});
   const ab = document.querySelector('.abas a[data-vista="'+v+'"]'); if (ab && ab.scrollIntoView) ab.scrollIntoView({block:'nearest', inline:'nearest'});
 }

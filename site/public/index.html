@@ -227,6 +227,21 @@ body.gaveta-aberta .gaveta{transform:none}
 .info-pop{position:fixed;z-index:70;display:none;max-height:calc(100vh - 16px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .info-pop b{display:block;font-size:.86rem;margin-bottom:.2rem}.info-pop p{margin:.35rem 0 0}
 .formula{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.74rem;background:var(--surface-2);border-radius:6px;padding:6px 8px;margin:.4rem 0;color:var(--ink)}
+.choque-bloco{margin-top:.9rem;padding:10px 12px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.choque-bloco.desativado{opacity:.55}
+.choque-cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sim .choque-cab label{margin:0;font-size:.84rem;color:var(--ink)}
+.choque-cab b{font-size:1.15rem;font-variant-numeric:tabular-nums}
+.choque-exato{display:flex;gap:6px;align-items:center;margin-top:4px}
+.sim .choque-exato input{width:90px}
+.cenarios{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.9rem 0 .4rem}
+.cenarios button{font-size:.78rem;padding:.3rem .55rem}
+.cenarios button.ativo{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.res .res-largo{grid-column:1/-1}
+#cascata{width:100%;display:block;margin-top:8px}
+.mapa-choques{margin-top:14px;padding:14px 16px}
+.cab-mini{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin-bottom:6px}.cab-mini h3{margin:0}
+#mapaChoques{width:100%;max-width:760px;display:block}
 .eqs{background:var(--surface-2);border-radius:8px;padding:4px 10px;margin:.5rem 0;overflow-x:auto}
 .eqs .katex-display{margin:.45rem 0;text-align:left}
 .eqs .katex{font-size:1.02em;color:var(--ink)}
