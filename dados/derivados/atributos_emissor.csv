@@ -187,7 +187,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 94813102000170,TRES TENTOS AGROINDUSTRIAL S.A,Tres Tentos,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grupo_inferido
+84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 33958695000178,UNIPAR CARBOCLORO S/A,Unipar Carbocloro,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 60665981000118,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,Uniao Quimica,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 60894730000105,USINAS SIDERURGICAS DE MG S/A - USIMINAS,Usinas Siderurgicas,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -289,7 +289,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 28201130000101,ENERGISA TRANSMISSAO DE ENERGIA S.A.,Energisa,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 36030967000163,ENGIE SOLUCOES CIDADES INTELIGENTES E INFRAESTRUTURA DE UBERLANDIA S.A,Engie,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
+36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 48904104000157,FARO ENERGY PROJ. SOL. HOL. IV S.A,Faro Energy,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
