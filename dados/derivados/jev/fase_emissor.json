@@ -1394,5 +1394,17 @@
  "12300288000107|14|Eleição do Novo Diretor-Presidente": {
   "fase": "operacional",
   "confianca": 0.97
+ },
+ "10647979000148|6|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "06981176000158|14|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04368898000106|14|Fato Relevante 01/26 - 6º Ciclo de Revis": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }

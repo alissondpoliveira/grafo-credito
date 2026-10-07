@@ -145,7 +145,7 @@ COGNA4,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp
 COGNA5,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
 COGNB2,COGNA EDUCACAO S.A,COGNA EDUCACAO S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
 COLNA3,RODOVIAS DAS COLINAS S/A,RODOVIAS DAS COLINAS S.A,transporte,rodovias,CVM (CNPJ),Serviços Transporte e Logística
-CPFGA3,CPFL GERAÇÃO DE ENERGIA S/A,CPFL COMERCIALIZACAO BRASIL S/A,corporativo,outros_corporativo,nome do emissor,
+CPFGA3,CPFL GERAÇÃO DE ENERGIA S/A,CPFL TRANSMISSAO S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 CPFPA6,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPFPA8,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPFPB8,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -316,7 +316,7 @@ ITSA18,ITAUSA S/A,ITAUSA S/A,corporativo,financeiro,CVM (CNPJ),Emp. Adm. Part. -
 JHSFA1,JHSF PARTICIPAÇÕES S/A,JHSF PARTICIPACOES S/A,corporativo,outros_corporativo,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
 JHSFA3,JHSF PARTICIPAÇÕES S/A,JHSF PARTICIPACOES S/A,corporativo,outros_corporativo,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
 JSLGA5,JSL S/A,JSL S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
-JSMLA5,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+JSMLA5,SIMPAR S.A.,JSL S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 KRSA12,KORA SAUDE PARTICIPACOES S.A.,KORA SAUDE PARTICIPACOES S.A.,corporativo,saude,CVM (CNPJ),Serviços Médicos
 LCAMC2,COMPANHIA DE LOCAÇÃO DAS AMÉRICAS,LOCALIZA RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
 LETS18,LETS RENT A CAR S/A,LETS RENT A CAR S/A,transporte,locacao,CVM (CNPJ),Serviços Transporte e Logística
@@ -745,7 +745,7 @@ COMR15,COMERC PARTICIPACOES S.A.,COMERC ENERGIA S.A.,energia,energia_diversifica
 COMT11,CONCESSIONARIA DE RODOVIA SUL - MATOGROSSENSE S.A,CONCESSIONARIA DE RODOVIA SUL - MATOGROSSENSE S.A,transporte,rodovias,CVM (CNPJ),Emp. Adm. Part. - Serviços Transporte e Logística
 CONF11,CONFLUENCIA ENERGIA S/A,CONFLUENCIA ENERGIA S/A,energia,geracao,nome do emissor,
 CONX12,TRIPLE PLAY BRASIL PARTICIPACOES S.A.,ALARES INTERNET PARTICIPACOES S/A,corporativo,telecom,CVM (CNPJ),Emp. Adm. Part. - Telecomunicações
-CPFGA2,CPFL TRANSMISSAO S.A,CPFL COMERCIALIZACAO BRASIL S/A,corporativo,outros_corporativo,nome do emissor,
+CPFGA2,CPFL TRANSMISSAO S.A,CPFL TRANSMISSAO S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 CPFPA2,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPFPA5,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 CPFPA7,COMPANHIA PIRATININGA DE FORÇA E LUZ,COMPANHIA PIRATININGA DE FORCA E LUZ,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -1005,7 +1005,7 @@ JALL14,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CV
 JALL15,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL21,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL24,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
-JSMLB5,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
+JSMLB5,SIMPAR S.A.,JSL S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 JTEE11,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA  S/A,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,energia,transmissao,nome do emissor,
 JTEE12,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA  S/A,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,energia,transmissao,nome do emissor,
 KLBNA5,KLABIN S/A,KLABIN S/A,corporativo,papel_celulose,CVM (CNPJ),Papel e Celulose

@@ -58,7 +58,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 06147451001104,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,Calamo Distribuidora,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 16619378000108,CIMED & CO S.A.,Cimed Co,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 06981180000116,CEMIG DISTRIBUICAO S/A,Cemig,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 12420164000157,CM HOSPITALAR S.A.,Cm Hospitalar,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 07682638000107,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,Motiva (ex-CCR),mobilidade_urbana,project_finance,0,transicao,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 07047251000170,COMPANHIA ENERGETICA DO CEARA-COELCE,Enel,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.93,grande_grupo
