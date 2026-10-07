@@ -1358,5 +1358,41 @@
  "84683374000300|10|Tupy (TUPY3) registra renúncia de vice-p": {
   "fase": "operacional",
   "confianca": 0.97
+ },
+ "02451848000162|11|Reconhecimento do desequilíbrio econômic": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03237583000167|6|Pedro Turqueto, da Copa Energia: “Gás do": {
+  "fase": "operacional",
+  "confianca": 0.56
+ },
+ "08336783000190|5|Celesc (CLSC3; CLSC4) registra lucro de ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09149503000106|5|Comunicado Pós Resultado do Bookbuilding": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "89086144001198|4|Fras-le (FRAS3) anuncia OPA com troca de": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "18903785000178|3|Comunicado ao Mercado": {
+  "fase": "construcao",
+  "confianca": 0.22
+ },
+ "03207703000183|8|Liquidação da 11ª Emissão de Debêntures ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "27821748000101|1|ONS autoriza operação comercial de trech": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "12300288000107|14|Eleição do Novo Diretor-Presidente": {
+  "fase": "operacional",
+  "confianca": 0.97
  }
 }
