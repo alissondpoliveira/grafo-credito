@@ -39,7 +39,6 @@ CATEGORIAS_IPE = {"Fato Relevante": "fato_relevante", "Comunicado ao Mercado": "
                   "Aviso aos Debenturistas": "aviso_debenturistas"}
 # casas de análise com conteúdo público indexado (título e link apenas)
 CASAS = {
-    "XP": "conteudos.xpi.com.br",
     "BTG Pactual": "content.btgpactual.com",
     "Itaú": "itau.com.br",
     "Inter": "inter.co",

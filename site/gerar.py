@@ -209,6 +209,7 @@ h2.sec{font-size:1.25rem;margin:2.2rem 0 .7rem}
 .chip{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:.2rem .65rem;font-size:.8125rem;cursor:pointer;color:var(--ink)}
 .chip:hover{border-color:var(--ink-3)}
 .tabela{max-height:calc(100vh - 230px)}
+.educ{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--line-2);border-left:3px solid #b26a00;border-radius:8px;padding:9px 14px;font-size:.8125rem;color:var(--ink-2);margin:0 0 18px}
 #tab td:first-child,#tab th:first-child{position:sticky;left:0;z-index:2;background:var(--surface)}
 #tab th:first-child{z-index:3;background:var(--surface-2)}
 #tab tbody tr:hover td:first-child{background:var(--surface-2)}
@@ -604,9 +605,9 @@ const GLOSS = {
   spread_tab: {t:'Spread', d:'IPCA+: spread comparável (Z-spread com gross-up de 15% nas isentas). DI+: spread sobre o CDI.', l:'Não compare diretamente uma linha IPCA+ com uma DI+: as bases são diferentes.'},
   justo_pares: {fx:['\\text{justo} = \\operatorname{mediana}\\{\\,s_1, s_2, \\dots, s_k\\,\\},\\quad k \\le 8'], fn:'Pares escolhidos por distância ponderada: estrutura 3, fase 3, patrocinador 2, garantia, isenção, duration, folga da concessão e alavancagem 1, tamanho 0,5.', t:'Spread justo pelos pares', d:'Mediana do spread das séries mais comparáveis de outros emissores: até 8 pares, no máximo 2 por emissor, obrigatoriamente no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield).', f:'Proximidade ponderada por estrutura (project finance ou corporativa), fase do ativo, patrocinador, garantia, isenção, duration, folga até o fim da concessão, tamanho e alavancagem.', l:'É o spread que o perfil do papel sugere, segundo o mercado de hoje.'},
   ajuste: {fx:['a(t) = a_0 \\cdot 2^{-\\,\\text{dias}/60}'], fn:'a₀ = +25 (crédito negativo), +8 (outro negativo), −5 (avanço operacional); janela de 180 dias; teto de ±40 bps por emissor.', t:'Ajuste por eventos', d:'Bps somados ao justo dos pares quando o emissor tem evento recente classificado pelo JEV com confiança de pelo menos 0,8.', f:'Crédito negativo +25 bps, outro impacto negativo +8, avanço operacional −5; meia-vida de 60 dias, janela de 180; tetos por tipo e de ±40 bps por emissor.', l:'Valores provisórios e conservadores, a recalibrar por estudo de evento.'},
-  desvio: {fx:['d = s - \\left(\\text{justo}_{\\text{pares}} + a\\right)'], t:'Desvio em relação aos pares', d:'Spread observado menos o spread justo (mediana dos pares mais o ajuste por eventos).', l:'Positivo: o papel paga mais do que o perfil sugere, o que pode ser oportunidade ou um risco que os pares não capturam. Negativo: paga menos. Não é recomendação; parte do desvio é prêmio de liquidez.'},
+  desvio: {fx:['d = s - \\left(\\text{justo}_{\\text{pares}} + a\\right)'], t:'Desvio em relação aos pares', d:'Spread observado menos o spread justo (mediana dos pares mais o ajuste por eventos).', l:'Positivo: o spread da série está acima do justo estimado pelos pares; negativo, abaixo. A diferença pode vir de risco que os pares não capturam, de liquidez ou de erro do modelo. É uma medida descritiva, não recomendação.'},
   desvio_dp: {fx:['z = \\frac{d}{\\sigma_{\\text{resíduos}}}'], fn:'|z| ≥ 1,5: fora da faixa dos pares.', t:'Desvio em desvios-padrão', d:'Desvio em bps dividido pelo desvio-padrão dos resíduos do modelo.', l:'Permite comparar segmentos com dispersões diferentes. Acima de 1,5 dp em módulo, a série está fora da faixa dos pares.'},
-  mediana: {t:'Mediana do segmento e percentil', d:'Mediana do spread das séries do mesmo segmento e da mesma classe. O percentil diz quantas séries do segmento pagam menos ou o mesmo que esta.', l:'Percentil 90: só 10% do segmento paga mais.'},
+  mediana: {t:'Mediana do segmento e percentil', d:'Mediana do spread das séries do mesmo segmento e da mesma classe. O percentil diz quantas séries do segmento têm spread menor ou igual ao desta.', l:'Percentil 90: só 10% do segmento tem spread maior.'},
   justo_reg: {fx:['s_i = \\beta_0 + \\beta_1 D_i + \\beta_2\\,\\text{garantia}_i + \\beta_3\\,\\text{CVM}_i + \\beta_4 \\ln(\\text{tamanho}_i) + \\beta_5\\,\\sigma^{\\text{ANBIMA}}_i + \\gamma_{\\text{seg}} + \\varepsilon_i'], fn:'Mínimos quadrados com erros padrão robustos (HC1); justo = valor ajustado, desvio = resíduo ε.', t:'Spread justo pela regressão', d:'Segunda leitura do valor relativo: regressão cross-section do spread comparável das séries IPCA+ em duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA, com efeitos de segmento.', f:'Mínimos quadrados com erros padrão robustos (HC1). O justo é o valor ajustado; o desvio é o resíduo.', l:'Especificação provisória. Quando discorda muito dos pares, vale olhar o porquê.'},
   be12: {fx:['\\text{BE}_{12m} \\approx \\frac{s}{D_{\\text{mod}}}'], fn:'s = spread de mercado (Z para IPCA+, spread sobre o CDI para DI+).', t:'Break-even de abertura em 12 meses', d:'Quanto o spread pode abrir em um ano até consumir o carrego do próprio spread.', f:'Break-even ≈ spread de mercado ÷ duration modificada', l:'Abertura maior que isso em 12 meses deixa o papel atrás do título público (IPCA+) ou do CDI (DI+). Aproximação: ignora o encurtamento da duration ao longo do ano.'},
   liquidez: {t:'Liquidez em 180 dias', d:'Número de dias com negócio registrado no SND nos últimos 180 dias corridos e volume financeiro (quantidade × PU médio).', l:'Poucos dias com negócio indicam que a taxa indicativa depende mais das contribuições do que de negócios.'},
@@ -1526,6 +1527,8 @@ def gerar_projeto() -> str:
                                     "faixa": j.get("faixa", "principal"), "motivo_faixa": j.get("motivo_faixa", "")}
     arq_docs = RAIZ / "dados" / "derivados" / "documentos.json"
     documentos = json.loads(arq_docs.read_text(encoding="utf-8"))["emissores"] if arq_docs.exists() else {}
+    # análises da XP (empregador do autor) não entram no site
+    documentos = {c: [d for d in ls if not (d["tipo"] == "analise" and d.get("fonte") == "XP")] for c, ls in documentos.items()}
     arq_jev = RAIZ / "dados" / "derivados" / "jev" / "classificacao.json"
     jev = json.loads(arq_jev.read_text(encoding="utf-8")) if arq_jev.exists() else {}
     # a ficha também mostra a classificação: anexa ao próprio documento
@@ -1693,12 +1696,13 @@ def gerar_projeto() -> str:
 </header>
 
 <main class="app" id="conteudo">
+<div class="educ" role="note"><span aria-hidden="true">⚠</span><span>Projeto educacional e pessoal, sem fim comercial, feito com dados públicos. Os modelos são simplificados e podem conter erros. Nada aqui é recomendação de investimento.</span></div>
 
 <section class="vista" id="v-inicio">
 <div class="heroi">
 <div class="kicker">Crédito privado · debêntures, CRI e CRA</div>
 <h1>Grafo de Crédito</h1>
-<p class="dek">Quem controla quem, quem emitiu o quê e quanto cada debênture paga acima ou abaixo dos pares. {num(len(series), 0)} séries de {n_emissores} emissores em {n_seg} segmentos, atualizado todo dia útil com dados públicos da ANBIMA, do SND, da CVM e da ANEEL.</p>
+<p class="dek">Quem controla quem, quem emitiu o quê e como o spread de cada debênture se compara ao de pares comparáveis. {num(len(series), 0)} séries de {n_emissores} emissores em {n_seg} segmentos, atualizado todo dia útil com dados públicos da ANBIMA, do SND, da CVM e da ANEEL.</p>
 </div>
 
 <div id="recentes" class="recentes" hidden><span class="fraco pequeno">Continuar de onde parou:</span> <span id="recentesLista"></span></div>
@@ -1706,16 +1710,16 @@ def gerar_projeto() -> str:
 <h2 class="sec">Por onde começar</h2>
 <ol class="jornada">
 <li><a href="#mapa" data-vista="mapa"><span class="passo">Onde está o risco?</span><b>Mapa de controle</b><span>Do segmento ao grupo de risco, à empresa e a cada emissão, com fatos relevantes e escrituras.</span><em>Abrir o mapa →</em></a></li>
-<li><a href="#valor" data-vista="valor"><span class="passo">Quem paga mais ou menos que os pares?</span><b>Valor relativo</b><span>Desvio de cada série em relação aos pares comparáveis, em bps e em desvios-padrão.</span><em>Ver os desvios →</em></a></li>
+<li><a href="#valor" data-vista="valor"><span class="passo">Como o spread se compara aos pares?</span><b>Valor relativo</b><span>Desvio de cada série em relação aos pares comparáveis, em bps e em desvios-padrão.</span><em>Ver os desvios →</em></a></li>
 <li><a href="#simulador" data-vista="simulador"><span class="passo">E se o spread mudar?</span><b>Simulador</b><span>Quanto o preço muda numa abertura ou num fechamento, com o fluxo reprecificado.</span><em>Simular →</em></a></li>
 </ol>
 <p class="pequeno muted">Já sabe o que procura? Use a busca no topo (atalho <kbd>/</kbd>) ou a <a href="#ativos" data-vista="ativos">tabela de ativos</a>. Todo caminho termina na ficha do papel: preço de hoje, características, pares, simulação e documentos do emissor.</p>
 
-<h2 class="sec">Maiores desvios hoje</h2>
+<h2 class="sec">Maiores diferenças em relação aos pares</h2>
 <p class="pequeno muted" style="margin-top:-.4rem">Faixa principal, sem high yield, ordenados em desvios-padrão dos resíduos. Clique para abrir a ficha.</p>
 <div class="ranking">
-<div class="painel"><h3>Acima dos pares{I('desvio_dp')} <span class="fraco">pagam mais que o perfil sugere</span></h3><ol id="rkAcima"></ol></div>
-<div class="painel"><h3>Abaixo dos pares{I('desvio_dp')} <span class="fraco">pagam menos que o perfil sugere</span></h3><ol id="rkAbaixo"></ol></div>
+<div class="painel"><h3>Acima dos pares{I('desvio_dp')} <span class="fraco">spread acima do justo pelos pares</span></h3><ol id="rkAcima"></ol></div>
+<div class="painel"><h3>Abaixo dos pares{I('desvio_dp')} <span class="fraco">spread abaixo do justo pelos pares</span></h3><ol id="rkAbaixo"></ol></div>
 </div>
 
 <h2 class="sec">O universo</h2>
@@ -1749,7 +1753,7 @@ def gerar_projeto() -> str:
 </section>
 
 <section class="vista" id="v-valor" hidden>
-<div class="vista-cab"><div><h2>Valor relativo{I('desvio')}</h2><p>Spread observado menos o spread justo dos pares, já com o ajuste por eventos. À direita, a série paga mais do que o perfil dela sugere; à esquerda, menos. Clique numa barra para abrir a ficha.</p></div>
+<div class="vista-cab"><div><h2>Valor relativo{I('desvio')}</h2><p>Spread observado menos o spread justo dos pares, já com o ajuste por eventos. À direita, o spread da série está acima do justo estimado pelos pares; à esquerda, abaixo. Clique numa barra para abrir a ficha.</p></div>
 <details class="ajuda"><summary>Como é calculado</summary><p>Spread justo = mediana das 8 séries mais comparáveis de outros emissores, no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield). A cor marca o tamanho do desvio em desvios-padrão dos resíduos. Desvio não é recomendação: parte dele é prêmio de liquidez que o modelo não mede.</p></details></div>
 <div class="painel">
 <div class="barra-filtros"><select id="segDesvio" aria-label="Segmento"></select>
