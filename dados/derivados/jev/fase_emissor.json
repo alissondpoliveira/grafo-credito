@@ -1458,5 +1458,21 @@
  "42310775000103|7|Fato Relevante DFs": {
   "fase": "operacional",
   "confianca": 0.77
+ },
+ "03237583000167|5|Pedro Turqueto, da Copa Energia: “Gás do": {
+  "fase": "operacional",
+  "confianca": 0.56
+ },
+ "04368898000106|15|Fato Relevante 01/26 - 6º Ciclo de Revis": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "00389481000179|11|Incidente em sistemas de TI": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "48127012000108|1|Conclusão Procedimento de Bookbuilding 2": {
+  "fase": "operacional",
+  "confianca": 0.82
  }
 }

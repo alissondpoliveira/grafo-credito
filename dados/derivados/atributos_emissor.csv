@@ -127,7 +127,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 13270520000166,KORA SAUDE PARTICIPACOES S.A.,Kora Saude,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.9,grande_grupo
 16670085000155,LOCALIZA RENT A CAR S/A,Localiza,locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 00873894000124,LETS RENT A CAR S/A,Isolada (a identificar),locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-00389481000179,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,Isolada (a identificar),logistica,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
+00389481000179,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,Isolada (a identificar),logistica,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,nao_identificado
 09041168000110,LOG COMMERCIAL PROPERTIES E PARTICIPACOES S/A,Log Commercial,imobiliario_construcao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 05917486000140,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,Livetech Bahia,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 16676520000159,HOSPITAL MATER DEI S.A.,Hospital Mater,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -251,7 +251,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08822767000108,CONCESSIONARIA DA RODOVIA MG-050 S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,nao_identificado
 49314049000108,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 19521322000104,CONCESSIONARIA ROTA DO OESTE S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,nao_identificado
-48127012000108,EPR TRIANGULO S.A,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+48127012000108,EPR TRIANGULO S.A,EPR,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.82,grande_grupo
 19527586000175,COMPANHIA ENERGETICA SINOP S.A,Axia (ex-Eletrobras),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grande_grupo
 02016507000169,AXIA ENERGIA SUL S.A.,Axia (ex-Eletrobras),integrada_gt,project_finance,13,operacional,JEV (comunicados e notícias),operacional,0.89,grande_grupo
 20732109000120,CANTAREIRA TRANSMISSORA DE ENERGIA S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
