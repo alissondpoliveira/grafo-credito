@@ -84,14 +84,14 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02302100000106,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,EDP,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 02509491000126,CONCESSIONARIA ECOVIAS DOS IMIGRANTES S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
-07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
 02474103000119,ENGIE BRASIL ENERGIA SA,Engie,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.9,grande_grupo
-02328280000197,ELEKTRO REDES S.A.,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
+02328280000197,ELEKTRO REDES S.A.,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 09053134000145,ELFA MEDICAMENTOS SA,Elfa Medicamentos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 61695227000193,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,Enel,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 00357038000116,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,Axia (ex-Eletrobras),integrada_gt,project_finance,13,operacional,JEV (comunicados e notícias),operacional,0.91,grande_grupo
-15413826000150,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+15413826000150,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 04423567000121,ENEVA S.A.,Eneva,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 00864214000106,ENERGISA SA,Energisa,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -143,7 +143,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 07816890000153,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,Multiplan Empreendimentos,imobiliario_construcao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 71673990000177,NATURA COSMETICOS S/A,Natura Cosmeticos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04992714000184,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,Nova Transportadora,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
-09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.91,grande_grupo
 12104241000402,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,Oncoclinicas Brasil,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 03279285000130,ORIZON MEIO AMBIENTE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 75609123000123,UNIDAS LOCACOES E SERVICOS S/A,Unidas,locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -342,15 +342,15 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 42596330000131,RDVE SUBHOLDING S.A.,Rdve Subholding,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08070508000178,RAIZEN ENERGIA S/A,Rumo,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
-42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
-42310775000103,AGUAS DO RIO 1 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,nao_identificado
+42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+42310775000103,AGUAS DO RIO 1 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 48851242000115,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,nao_identificado
 39580673000101,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,BRK,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo
 58484141000107,CONCESSIONARIA ROTA SOROCABANA SA,Concessionaria Rota,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02387241000160,RUMO S.A.,Rumo,ferrovias,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 12229415000110,S/A USINA CORURIPE ACUCAR E ALCOOL,Usina Coruripe,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grupo_inferido
 18156217000150,SANTA VITORIA DO PALMAR ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-47063128000168,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,Usina Sao,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+47063128000168,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,Usina Sao,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 43386975000102,SERRA DO SERIDO F2 HOLDING S.A.,Serra Serido,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 51466860000156,SAO MARTINHO S/A,Sao Martinho,agro_acucar_etanol,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo

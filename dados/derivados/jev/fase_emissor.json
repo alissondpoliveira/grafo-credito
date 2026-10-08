@@ -1406,5 +1406,57 @@
  "04368898000106|14|Fato Relevante 01/26 - 6º Ciclo de Revis": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "40432544000147|10|Brasil | Claro anuncia oferta de R$ 750 ": {
+  "fase": "transicao",
+  "confianca": 0.28
+ },
+ "61856571000117|9|Alteração de Diretor Financeiro e de Rel": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "07282377000120|10|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "02328280000197|9|Eleição de Diretora Executiva de Control": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "15413826000150|10|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "13783221000478|15|5ª Emissão de Nota Comercial Escritural": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "09149503000106|3|Comunicado Pós Resultado do Bookbuilding": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "03279285000130|12|Aquisição G4": {
+  "fase": "operacional",
+  "confianca": 0.74
+ },
+ "12009135000105|1|Vale e Cemig: Aliança emitirá debênture ": {
+  "fase": "operacional",
+  "confianca": 0.53
+ },
+ "09326342000170|10|10ª Emissão de debentures": {
+  "fase": "operacional",
+  "confianca": 0.62
+ },
+ "36619747000170|3|Telefônica Brasil aprova incorporação da": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "42644220000106|7|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "42310775000103|7|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.77
  }
 }
