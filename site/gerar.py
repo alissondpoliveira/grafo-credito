@@ -43,6 +43,25 @@ CSS = """
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:1120px;margin:0 auto;padding:40px 16px 80px}
 .estreito{max-width:640px;padding-top:72px}
+.home{max-width:880px;padding-top:72px}
+.topo-home .dek{font-size:1.15rem;max-width:680px}
+.cred{font-size:.875rem;color:var(--ink-3);margin-top:.2rem}
+.cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-top:14px}
+.cartao{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 20px 16px;display:flex;flex-direction:column}
+.cartao h3{font-family:Newsreader,Georgia,serif;font-size:1.3rem;font-weight:600;margin:.15rem 0 .4rem}
+.cartao h3 a{color:var(--ink);text-decoration:none}.cartao h3 a:hover{color:var(--accent)}
+.cartao p{color:var(--ink-2);margin:.2rem 0 .7rem}
+.cartao .mini{width:100%;height:64px;margin:.3rem 0 0;fill:var(--ink-3);opacity:.55}.cartao .mini .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 3}
+.cartao .leg{font-size:.75rem;color:var(--ink-3);margin:.15rem 0 .6rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:.2rem 0 .7rem;border-top:1px solid var(--line);padding-top:10px}
+.stats div{margin:0}.stats dt{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}.stats dd{margin:0;font-size:1.25rem;font-weight:600;font-variant-numeric:tabular-nums}
+.cartao .base{margin-top:auto}.cartao .meta{font-size:.8rem;color:var(--ink-3)}
+.acoes{margin:.3rem 0 0}.acoes a{font-weight:500;margin-right:1.1rem;text-decoration:none}.acoes a::after{content:" →"}
+.cartao.leve{background:transparent}
+.notas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px;margin-top:10px}
+.notas h3{font-size:.95rem;margin:0 0 .3rem}.notas p{color:var(--ink-2);font-size:.92rem;margin:0}
+.bio{color:var(--ink-2);max-width:680px}
+.rodape-home{margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
 h1,h2,.serif{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
 h1{font-size:2.6rem;line-height:1.1;margin:.25rem 0 .75rem}
 h2{font-size:1.45rem;margin:0 0 .35rem}
@@ -313,7 +332,11 @@ body.gaveta-aberta .gaveta{transform:none}
 """
 
 
-def pagina(titulo: str, descricao: str, corpo: str) -> str:
+FAVICON = ("data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c5cab'/%3E"
+           "%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E")
+
+
+def pagina(titulo: str, descricao: str, corpo: str, head_extra: str = "") -> str:
     return f"""<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -321,6 +344,8 @@ def pagina(titulo: str, descricao: str, corpo: str) -> str:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(titulo)}</title>
 <meta name="description" content="{html.escape(descricao)}">
+<link rel="icon" href="{FAVICON}">
+{head_extra}
 {FONTES}
 <style>{CSS}</style>
 </head>
@@ -342,37 +367,137 @@ def num(v, casas=2):
     return f"{float(v):,.{casas}f}".replace(",", "X").replace(".", ",").replace("X", ".").replace("-", "−")
 
 
+def _mini_hist(valores: list, minimo: float, maximo: float, marca: float | None = None, faixas: int = 28) -> str:
+    """Histograma pequeno em SVG para os cartões da página inicial (cor do texto secundário, linha de referência)."""
+    vs = [v for v in valores if v is not None and minimo <= v <= maximo]
+    if len(vs) < 10:
+        return ""
+    passo = (maximo - minimo) / faixas
+    cont = [0] * faixas
+    for v in vs:
+        cont[min(faixas - 1, int((v - minimo) / passo))] += 1
+    W, H, topo = 280, 64, max(cont)
+    lb = W / faixas
+    barras = "".join(f'<rect x="{i * lb + 1:.1f}" y="{H - 2 - c / topo * (H - 8):.1f}" width="{lb - 2:.1f}" height="{c / topo * (H - 8):.1f}" rx="1.5"/>'
+                     for i, c in enumerate(cont) if c)
+    linha = ""
+    if marca is not None and minimo < marca < maximo:
+        x = (marca - minimo) / (maximo - minimo) * W
+        linha = f'<line x1="{x:.1f}" x2="{x:.1f}" y1="0" y2="{H}" class="ref"/>'
+    return f'<svg class="mini" viewBox="0 0 {W} {H}" role="img" aria-hidden="true"><g>{barras}</g>{linha}</svg>'
+
+
+def _numeros_home() -> dict:
+    """Números dos dois projetos para os cartões. Falha de leitura deixa o cartão só com texto."""
+    out = {"grafo": None, "beneish": None}
+    try:
+        d = json.loads((PUBLICO / "grafo-credito" / "dados.json").read_text(encoding="utf-8"))
+        dias = sorted((RAIZ / "dados" / "anbima" / "debentures" / "normalizado").glob("*/*.csv"))
+        dia = dias[-1].stem if dias else ""
+        out["grafo"] = {"series": len(d["series"]), "emissores": len({x["emissor"] for x in d["series"]}),
+                        "grupos": len({x["grupo"] for x in d["desvios"]}), "data": dia[8:10] + "/" + dia[5:7] + "/" + dia[:4] if dia else "",
+                        "svg": _mini_hist([x.get("desvio") for x in d["desvios"]], -150, 150, 0)}
+    except Exception as exc:
+        print(f"home: números do Grafo indisponíveis ({exc})")
+    try:
+        import urllib.request
+        req = urllib.request.Request("https://beneish.alissonprata.io/dados.json", headers={"User-Agent": "alissonprata.io"})
+        b = json.load(urllib.request.urlopen(req, timeout=30))
+        ms = [e["mscore"] for e in b["empresas"] if e.get("mscore") is not None]
+        out["beneish"] = {"empresas": len(ms), "acima": sum(m > b["limiar"] for m in ms), "exercicio": b["exercicio"],
+                          "svg": _mini_hist(ms, -5, 1, b["limiar"])}
+    except Exception as exc:
+        print(f"home: números do M-Score indisponíveis ({exc})")
+    return out
+
+
 def gerar_home() -> str:
-    corpo = """<main class="estreito">
-<div class="kicker">Pesquisa em crédito e mercado</div>
+    n = _numeros_home()
+    fmtn = lambda v: f"{v:,}".replace(",", ".")
+    g, b = n["grafo"], n["beneish"]
+    stats_g = (f'<dl class="stats"><div><dt>Séries</dt><dd>{fmtn(g["series"])}</dd></div><div><dt>Emissores</dt><dd>{fmtn(g["emissores"])}</dd></div>'
+               f'<div><dt>Grupos de risco</dt><dd>{fmtn(g["grupos"])}</dd></div></dl>') if g else ""
+    stats_b = (f'<dl class="stats"><div><dt>Companhias</dt><dd>{fmtn(b["empresas"])}</dd></div><div><dt>Acima do limiar</dt><dd>{fmtn(b["acima"])}</dd></div>'
+               f'<div><dt>Exercício</dt><dd>{b["exercicio"]}</dd></div></dl>') if b else ""
+    leg_g = '<p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>' if g and g["svg"] else ""
+    leg_b = '<p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>' if b and b["svg"] else ""
+    corpo = f"""<main class="home">
+<header class="topo-home">
+<div class="kicker">Crédito privado · qualidade contábil · mercado brasileiro</div>
 <h1>Alisson Prata</h1>
-<p class="dek">Planejador financeiro CFP®, candidato ao CFA Level II e engenheiro de produção (UFTM). No mercado financeiro desde 2019.</p>
+<p class="dek">Construo ferramentas e escrevo análises sobre crédito privado, qualidade da informação contábil e mercado brasileiro, com dados públicos, memória de cálculo aberta e o limite de cada modelo declarado.</p>
+<p class="cred">CFP® · Candidato ao Level II do Programa CFA · Engenheiro de produção (UFTM)</p>
+</header>
 
-<section>
-<h2>Financial Syntax</h2>
-<p class="muted">Financial Syntax é onde publico análises de mercado escritas para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+<section aria-labelledby="t-proj">
+<h2 id="t-proj">Projetos</h2>
+<div class="cartoes">
+<article class="cartao">
+<div class="kicker">Crédito privado</div>
+<h3><a href="/grafo-credito">Grafo de Crédito</a></h3>
+<p>Quanto cada debênture paga acima da curva de juros, quem controla o emissor e como o spread se compara ao dos pares de mesmo setor, prazo e indexador.</p>
+<div class="base">{g["svg"] if g else ""}{leg_g}
+{stats_g}
+<p class="meta">ANBIMA, SND, CVM e ANEEL · atualizado todo dia útil{(" · mercado de " + g["data"]) if g and g["data"] else ""}</p>
+<p class="acoes"><a href="/grafo-credito">Abrir</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código</a></p></div>
+</article>
+<article class="cartao">
+<div class="kicker">Qualidade contábil</div>
+<h3><a href="https://beneish.alissonprata.io/">M-Score de Beneish</a></h3>
+<p>Quais companhias abertas não financeiras mostram nas demonstrações da CVM o padrão que o modelo de Beneish (1999) associa a lucro manipulado, e quais eventos dos documentos acompanham esse sinal.</p>
+<div class="base">{b["svg"] if b else ""}{leg_b}
+{stats_b}
+<p class="meta">DFP e IPE da CVM, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira</p>
+<p class="acoes"><a href="https://beneish.alissonprata.io/">Abrir</a><a href="https://github.com/alissondpoliveira/Evaluating-Quality-of-Financial-Reports">Código</a></p></div>
+</article>
+</div>
 </section>
 
-<section>
-<h2>Mercado</h2>
-<p class="muted">Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
-<p style="margin-top:.6rem"><a href="https://mercado.alissonprata.io/">Abrir o Mercado →</a></p>
+<section aria-labelledby="t-metodo">
+<h2 id="t-metodo">Como trabalho</h2>
+<div class="notas">
+<div><h3>O dado é conferido na fonte</h3><p>Cada número vem de base pública com data. Antes de confiar em um índice, confiro a conta no documento original: foi assim que apareceu, no M-Score, uma conta de tributos a recuperar lida como contas a receber, e empresas sem controladas que só publicam demonstração individual.</p></div>
+<div><h3>Todo modelo tem um limite escrito</h3><p>As réguas de Beneish vêm de empresas americanas das décadas de 1980 e 1990; por isso o site mostra, ao lado, a posição da empresa no setor brasileiro. O spread justo do Grafo não mede o prêmio de liquidez de cada papel, e a página diz isso.</p></div>
+<div><h3>Cada indicador mostra a fórmula</h3><p>Os sites têm um botão de explicação em cada número calculado, com a definição, a fórmula e como ler. O código está aberto, e as atualizações rodam sozinhas, com a data na página.</p></div>
+</div>
 </section>
 
-<section>
-<h2>Projetos</h2>
-<p class="muted"><a href="/grafo-credito">Grafo de Crédito</a>: mapa de controle, preço e valor relativo das debêntures do crédito privado brasileiro, com dados públicos da ANBIMA, do SND e da CVM.</p>
-<p class="muted"><a href="https://beneish.alissonprata.io/">M-Score de Beneish</a>: o modelo de Beneish (1999) aplicado às demonstrações anuais das companhias abertas não financeiras da CVM.</p>
-<p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial; podem conter erros e não são recomendação de investimento.</p>
+<section aria-labelledby="t-escrita">
+<h2 id="t-escrita">Escrita</h2>
+<div class="cartoes">
+<article class="cartao leve">
+<h3><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></h3>
+<p>Newsletter de análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+<p class="acoes"><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Ler no LinkedIn</a></p>
+</article>
+<article class="cartao leve">
+<h3><a href="https://mercado.alissonprata.io/">Mercado</a></h3>
+<p>Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
+<p class="acoes"><a href="https://mercado.alissonprata.io/">Abrir o Mercado</a></p>
+</article>
+</div>
 </section>
 
-<p class="links" style="margin-top:2.5rem">
-<a href="https://mercado.alissonprata.io/">Mercado</a>
-<a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>
-<a href="https://github.com/alissondpoliveira">GitHub</a>
-</p>
+<section aria-labelledby="t-sobre">
+<h2 id="t-sobre">Sobre</h2>
+<p class="bio">Sou engenheiro de produção pela UFTM, onde o trabalho de conclusão foi em otimização, e trabalho no mercado financeiro desde 2019. Sou planejador financeiro CFP® e estou no Level II do Programa CFA. Os projetos deste site são de estudo: uso dados abertos para entender como o crédito é precificado no Brasil e quanto a contabilidade de uma empresa merece confiança, e publico o caminho junto com o resultado.</p>
+</section>
+
+<footer class="rodape-home">
+<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></p>
+<p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial e sem vínculo institucional. Os modelos são simplificados, podem conter erros e nada aqui é recomendação de investimento.</p>
+</footer>
 </main>"""
-    return pagina("Alisson Prata", "Alisson Prata: análise de mercado e crédito privado.", corpo)
+    pessoa = {"@context": "https://schema.org", "@type": "Person", "name": "Alisson Prata", "url": "https://www.alissonprata.io/",
+              "description": "Análises e ferramentas sobre crédito privado, qualidade contábil e mercado brasileiro.",
+              "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira"]}
+    desc = "Alisson Prata: ferramentas e análises sobre crédito privado, qualidade contábil e mercado brasileiro, com dados públicos."
+    head = (f'<link rel="canonical" href="https://www.alissonprata.io/">'
+            f'<meta property="og:type" content="profile"><meta property="og:title" content="Alisson Prata">'
+            f'<meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="https://www.alissonprata.io/">'
+            f'<meta name="twitter:card" content="summary">'
+            f'<script type="application/ld+json">{json.dumps(pessoa, ensure_ascii=False)}</script>')
+    return pagina("Alisson Prata", desc, corpo, head)
 
 
 def sem_acento(t: str) -> str:
@@ -1885,8 +2010,8 @@ fetch('/grafo-credito/dados.json', {cache: 'no-cache'}).then(r => r.json()).then
 
 def main() -> None:
     (PUBLICO / "grafo-credito").mkdir(parents=True, exist_ok=True)
-    (PUBLICO / "index.html").write_text(gerar_home(), encoding="utf-8")
     (PUBLICO / "grafo-credito" / "index.html").write_text(gerar_projeto(), encoding="utf-8")
+    (PUBLICO / "index.html").write_text(gerar_home(), encoding="utf-8")
     print("site/public gerado")
 
 

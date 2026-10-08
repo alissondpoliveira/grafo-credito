@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Alisson Prata</title>
-<meta name="description" content="Alisson Prata: análise de mercado e crédito privado.">
+<meta name="description" content="Alisson Prata: ferramentas e análises sobre crédito privado, qualidade contábil e mercado brasileiro, com dados públicos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c5cab'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://www.alissonprata.io/"><meta property="og:type" content="profile"><meta property="og:title" content="Alisson Prata"><meta property="og:description" content="Alisson Prata: ferramentas e análises sobre crédito privado, qualidade contábil e mercado brasileiro, com dados públicos."><meta property="og:url" content="https://www.alissonprata.io/"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Alisson Prata", "url": "https://www.alissonprata.io/", "description": "Análises e ferramentas sobre crédito privado, qualidade contábil e mercado brasileiro.", "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -23,6 +25,25 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:1120px;margin:0 auto;padding:40px 16px 80px}
 .estreito{max-width:640px;padding-top:72px}
+.home{max-width:880px;padding-top:72px}
+.topo-home .dek{font-size:1.15rem;max-width:680px}
+.cred{font-size:.875rem;color:var(--ink-3);margin-top:.2rem}
+.cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-top:14px}
+.cartao{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 20px 16px;display:flex;flex-direction:column}
+.cartao h3{font-family:Newsreader,Georgia,serif;font-size:1.3rem;font-weight:600;margin:.15rem 0 .4rem}
+.cartao h3 a{color:var(--ink);text-decoration:none}.cartao h3 a:hover{color:var(--accent)}
+.cartao p{color:var(--ink-2);margin:.2rem 0 .7rem}
+.cartao .mini{width:100%;height:64px;margin:.3rem 0 0;fill:var(--ink-3);opacity:.55}.cartao .mini .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 3}
+.cartao .leg{font-size:.75rem;color:var(--ink-3);margin:.15rem 0 .6rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:.2rem 0 .7rem;border-top:1px solid var(--line);padding-top:10px}
+.stats div{margin:0}.stats dt{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}.stats dd{margin:0;font-size:1.25rem;font-weight:600;font-variant-numeric:tabular-nums}
+.cartao .base{margin-top:auto}.cartao .meta{font-size:.8rem;color:var(--ink-3)}
+.acoes{margin:.3rem 0 0}.acoes a{font-weight:500;margin-right:1.1rem;text-decoration:none}.acoes a::after{content:" →"}
+.cartao.leve{background:transparent}
+.notas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px;margin-top:10px}
+.notas h3{font-size:.95rem;margin:0 0 .3rem}.notas p{color:var(--ink-2);font-size:.92rem;margin:0}
+.bio{color:var(--ink-2);max-width:680px}
+.rodape-home{margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
 h1,h2,.serif{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
 h1{font-size:2.6rem;line-height:1.1;margin:.25rem 0 .75rem}
 h2{font-size:1.45rem;margin:0 0 .35rem}
@@ -293,34 +314,72 @@ body.gaveta-aberta .gaveta{transform:none}
 </style>
 </head>
 <body>
-<main class="estreito">
-<div class="kicker">Pesquisa em crédito e mercado</div>
+<main class="home">
+<header class="topo-home">
+<div class="kicker">Crédito privado · qualidade contábil · mercado brasileiro</div>
 <h1>Alisson Prata</h1>
-<p class="dek">Planejador financeiro CFP®, candidato ao CFA Level II e engenheiro de produção (UFTM). No mercado financeiro desde 2019.</p>
+<p class="dek">Construo ferramentas e escrevo análises sobre crédito privado, qualidade da informação contábil e mercado brasileiro, com dados públicos, memória de cálculo aberta e o limite de cada modelo declarado.</p>
+<p class="cred">CFP® · Candidato ao Level II do Programa CFA · Engenheiro de produção (UFTM)</p>
+</header>
 
-<section>
-<h2>Financial Syntax</h2>
-<p class="muted">Financial Syntax é onde publico análises de mercado escritas para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+<section aria-labelledby="t-proj">
+<h2 id="t-proj">Projetos</h2>
+<div class="cartoes">
+<article class="cartao">
+<div class="kicker">Crédito privado</div>
+<h3><a href="/grafo-credito">Grafo de Crédito</a></h3>
+<p>Quanto cada debênture paga acima da curva de juros, quem controla o emissor e como o spread se compara ao dos pares de mesmo setor, prazo e indexador.</p>
+<div class="base"><svg class="mini" viewBox="0 0 280 64" role="img" aria-hidden="true"><g><rect x="1.0" y="60.4" width="8.0" height="1.6" rx="1.5"/><rect x="11.0" y="60.4" width="8.0" height="1.6" rx="1.5"/><rect x="21.0" y="55.2" width="8.0" height="6.8" rx="1.5"/><rect x="31.0" y="53.7" width="8.0" height="8.3" rx="1.5"/><rect x="41.0" y="54.5" width="8.0" height="7.5" rx="1.5"/><rect x="51.0" y="50.1" width="8.0" height="11.9" rx="1.5"/><rect x="61.0" y="52.9" width="8.0" height="9.1" rx="1.5"/><rect x="71.0" y="52.1" width="8.0" height="9.9" rx="1.5"/><rect x="81.0" y="48.9" width="8.0" height="13.1" rx="1.5"/><rect x="91.0" y="47.3" width="8.0" height="14.7" rx="1.5"/><rect x="101.0" y="37.4" width="8.0" height="24.6" rx="1.5"/><rect x="111.0" y="39.8" width="8.0" height="22.2" rx="1.5"/><rect x="121.0" y="24.3" width="8.0" height="37.7" rx="1.5"/><rect x="131.0" y="6.0" width="8.0" height="56.0" rx="1.5"/><rect x="141.0" y="13.1" width="8.0" height="48.9" rx="1.5"/><rect x="151.0" y="28.6" width="8.0" height="33.4" rx="1.5"/><rect x="161.0" y="40.2" width="8.0" height="21.8" rx="1.5"/><rect x="171.0" y="46.5" width="8.0" height="15.5" rx="1.5"/><rect x="181.0" y="51.3" width="8.0" height="10.7" rx="1.5"/><rect x="191.0" y="52.1" width="8.0" height="9.9" rx="1.5"/><rect x="201.0" y="53.7" width="8.0" height="8.3" rx="1.5"/><rect x="211.0" y="52.9" width="8.0" height="9.1" rx="1.5"/><rect x="221.0" y="51.7" width="8.0" height="10.3" rx="1.5"/><rect x="231.0" y="56.4" width="8.0" height="5.6" rx="1.5"/><rect x="241.0" y="53.3" width="8.0" height="8.7" rx="1.5"/><rect x="251.0" y="59.6" width="8.0" height="2.4" rx="1.5"/><rect x="261.0" y="59.6" width="8.0" height="2.4" rx="1.5"/><rect x="271.0" y="60.4" width="8.0" height="1.6" rx="1.5"/></g><line x1="140.0" x2="140.0" y1="0" y2="64" class="ref"/></svg><p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>
+<dl class="stats"><div><dt>Séries</dt><dd>1.178</dd></div><div><dt>Emissores</dt><dd>359</dd></div><div><dt>Grupos de risco</dt><dd>165</dd></div></dl>
+<p class="meta">ANBIMA, SND, CVM e ANEEL · atualizado todo dia útil · mercado de 07/10/2026</p>
+<p class="acoes"><a href="/grafo-credito">Abrir</a><a href="https://github.com/alissondpoliveira/grafo-credito">Código</a></p></div>
+</article>
+<article class="cartao">
+<div class="kicker">Qualidade contábil</div>
+<h3><a href="https://beneish.alissonprata.io/">M-Score de Beneish</a></h3>
+<p>Quais companhias abertas não financeiras mostram nas demonstrações da CVM o padrão que o modelo de Beneish (1999) associa a lucro manipulado, e quais eventos dos documentos acompanham esse sinal.</p>
+<div class="base"><svg class="mini" viewBox="0 0 280 64" role="img" aria-hidden="true"><g><rect x="1.0" y="59.1" width="8.0" height="2.9" rx="1.5"/><rect x="11.0" y="61.0" width="8.0" height="1.0" rx="1.5"/><rect x="21.0" y="59.1" width="8.0" height="2.9" rx="1.5"/><rect x="31.0" y="60.0" width="8.0" height="2.0" rx="1.5"/><rect x="41.0" y="59.1" width="8.0" height="2.9" rx="1.5"/><rect x="51.0" y="59.1" width="8.0" height="2.9" rx="1.5"/><rect x="61.0" y="57.1" width="8.0" height="4.9" rx="1.5"/><rect x="71.0" y="53.2" width="8.0" height="8.8" rx="1.5"/><rect x="81.0" y="38.4" width="8.0" height="23.6" rx="1.5"/><rect x="91.0" y="33.5" width="8.0" height="28.5" rx="1.5"/><rect x="101.0" y="8.9" width="8.0" height="53.1" rx="1.5"/><rect x="111.0" y="6.0" width="8.0" height="56.0" rx="1.5"/><rect x="121.0" y="24.7" width="8.0" height="37.3" rx="1.5"/><rect x="131.0" y="47.3" width="8.0" height="14.7" rx="1.5"/><rect x="141.0" y="48.2" width="8.0" height="13.8" rx="1.5"/><rect x="151.0" y="56.1" width="8.0" height="5.9" rx="1.5"/><rect x="161.0" y="55.1" width="8.0" height="6.9" rx="1.5"/><rect x="171.0" y="57.1" width="8.0" height="4.9" rx="1.5"/><rect x="181.0" y="61.0" width="8.0" height="1.0" rx="1.5"/><rect x="201.0" y="60.0" width="8.0" height="2.0" rx="1.5"/><rect x="211.0" y="60.0" width="8.0" height="2.0" rx="1.5"/><rect x="221.0" y="60.0" width="8.0" height="2.0" rx="1.5"/><rect x="231.0" y="61.0" width="8.0" height="1.0" rx="1.5"/><rect x="261.0" y="60.0" width="8.0" height="2.0" rx="1.5"/></g><line x1="150.3" x2="150.3" y1="0" y2="64" class="ref"/></svg><p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>
+<dl class="stats"><div><dt>Companhias</dt><dd>301</dd></div><div><dt>Acima do limiar</dt><dd>35</dd></div><div><dt>Exercício</dt><dd>2025</dd></div></dl>
+<p class="meta">DFP e IPE da CVM, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira</p>
+<p class="acoes"><a href="https://beneish.alissonprata.io/">Abrir</a><a href="https://github.com/alissondpoliveira/Evaluating-Quality-of-Financial-Reports">Código</a></p></div>
+</article>
+</div>
 </section>
 
-<section>
-<h2>Mercado</h2>
-<p class="muted">Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
-<p style="margin-top:.6rem"><a href="https://mercado.alissonprata.io/">Abrir o Mercado →</a></p>
+<section aria-labelledby="t-metodo">
+<h2 id="t-metodo">Como trabalho</h2>
+<div class="notas">
+<div><h3>O dado é conferido na fonte</h3><p>Cada número vem de base pública com data. Antes de confiar em um índice, confiro a conta no documento original: foi assim que apareceu, no M-Score, uma conta de tributos a recuperar lida como contas a receber, e empresas sem controladas que só publicam demonstração individual.</p></div>
+<div><h3>Todo modelo tem um limite escrito</h3><p>As réguas de Beneish vêm de empresas americanas das décadas de 1980 e 1990; por isso o site mostra, ao lado, a posição da empresa no setor brasileiro. O spread justo do Grafo não mede o prêmio de liquidez de cada papel, e a página diz isso.</p></div>
+<div><h3>Cada indicador mostra a fórmula</h3><p>Os sites têm um botão de explicação em cada número calculado, com a definição, a fórmula e como ler. O código está aberto, e as atualizações rodam sozinhas, com a data na página.</p></div>
+</div>
 </section>
 
-<section>
-<h2>Projetos</h2>
-<p class="muted"><a href="/grafo-credito">Grafo de Crédito</a>: mapa de controle, preço e valor relativo das debêntures do crédito privado brasileiro, com dados públicos da ANBIMA, do SND e da CVM.</p>
-<p class="muted"><a href="https://beneish.alissonprata.io/">M-Score de Beneish</a>: o modelo de Beneish (1999) aplicado às demonstrações anuais das companhias abertas não financeiras da CVM.</p>
-<p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial; podem conter erros e não são recomendação de investimento.</p>
+<section aria-labelledby="t-escrita">
+<h2 id="t-escrita">Escrita</h2>
+<div class="cartoes">
+<article class="cartao leve">
+<h3><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></h3>
+<p>Newsletter de análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
+<p class="acoes"><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Ler no LinkedIn</a></p>
+</article>
+<article class="cartao leve">
+<h3><a href="https://mercado.alissonprata.io/">Mercado</a></h3>
+<p>Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
+<p class="acoes"><a href="https://mercado.alissonprata.io/">Abrir o Mercado</a></p>
+</article>
+</div>
 </section>
 
-<p class="links" style="margin-top:2.5rem">
-<a href="https://mercado.alissonprata.io/">Mercado</a>
-<a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>
-<a href="https://github.com/alissondpoliveira">GitHub</a>
-</p>
+<section aria-labelledby="t-sobre">
+<h2 id="t-sobre">Sobre</h2>
+<p class="bio">Sou engenheiro de produção pela UFTM, onde o trabalho de conclusão foi em otimização, e trabalho no mercado financeiro desde 2019. Sou planejador financeiro CFP® e estou no Level II do Programa CFA. Os projetos deste site são de estudo: uso dados abertos para entender como o crédito é precificado no Brasil e quanto a contabilidade de uma empresa merece confiança, e publico o caminho junto com o resultado.</p>
+</section>
+
+<footer class="rodape-home">
+<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></p>
+<p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial e sem vínculo institucional. Os modelos são simplificados, podem conter erros e nada aqui é recomendação de investimento.</p>
+</footer>
 </main>
 </body>
 </html>

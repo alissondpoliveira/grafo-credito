@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Grafo de Crédito</title>
 <meta name="description" content="Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c5cab'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -23,6 +25,25 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:1120px;margin:0 auto;padding:40px 16px 80px}
 .estreito{max-width:640px;padding-top:72px}
+.home{max-width:880px;padding-top:72px}
+.topo-home .dek{font-size:1.15rem;max-width:680px}
+.cred{font-size:.875rem;color:var(--ink-3);margin-top:.2rem}
+.cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-top:14px}
+.cartao{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 20px 16px;display:flex;flex-direction:column}
+.cartao h3{font-family:Newsreader,Georgia,serif;font-size:1.3rem;font-weight:600;margin:.15rem 0 .4rem}
+.cartao h3 a{color:var(--ink);text-decoration:none}.cartao h3 a:hover{color:var(--accent)}
+.cartao p{color:var(--ink-2);margin:.2rem 0 .7rem}
+.cartao .mini{width:100%;height:64px;margin:.3rem 0 0;fill:var(--ink-3);opacity:.55}.cartao .mini .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 3}
+.cartao .leg{font-size:.75rem;color:var(--ink-3);margin:.15rem 0 .6rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:.2rem 0 .7rem;border-top:1px solid var(--line);padding-top:10px}
+.stats div{margin:0}.stats dt{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}.stats dd{margin:0;font-size:1.25rem;font-weight:600;font-variant-numeric:tabular-nums}
+.cartao .base{margin-top:auto}.cartao .meta{font-size:.8rem;color:var(--ink-3)}
+.acoes{margin:.3rem 0 0}.acoes a{font-weight:500;margin-right:1.1rem;text-decoration:none}.acoes a::after{content:" →"}
+.cartao.leve{background:transparent}
+.notas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px;margin-top:10px}
+.notas h3{font-size:.95rem;margin:0 0 .3rem}.notas p{color:var(--ink-2);font-size:.92rem;margin:0}
+.bio{color:var(--ink-2);max-width:680px}
+.rodape-home{margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
 h1,h2,.serif{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
 h1{font-size:2.6rem;line-height:1.1;margin:.25rem 0 .75rem}
 h2{font-size:1.45rem;margin:0 0 .35rem}
@@ -297,7 +318,7 @@ body.gaveta-aberta .gaveta{transform:none}
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <header class="barra">
 <div class="barra-in">
-<a class="marca-site" href="#inicio" data-vista="inicio" title="Taxas ANBIMA do último dia útil coletado (qua. 07/10/2026); site atualizado em 08/10/2026 às 06:40 (horário de Brasília). Atualização automática todo dia útil à noite."><b>Grafo de Crédito</b><span>mercado de qua. 07/10/2026 · atualizado 08/10, 06:40 <em id="statusDados" class="status-dados">carregando…</em></span></a>
+<a class="marca-site" href="#inicio" data-vista="inicio" title="Taxas ANBIMA do último dia útil coletado (qua. 07/10/2026); site atualizado em 08/10/2026 às 15:57 (horário de Brasília). Atualização automática todo dia útil à noite."><b>Grafo de Crédito</b><span>mercado de qua. 07/10/2026 · atualizado 08/10, 15:57 <em id="statusDados" class="status-dados">carregando…</em></span></a>
 <div class="busca-caixa"><input id="busca" type="search" autocomplete="off" placeholder="Buscar código, ISIN, empresa ou grupo" aria-label="Buscar ativo, emissor ou grupo"><kbd class="atalho" aria-hidden="true">/</kbd>
 <ul id="resultados" role="listbox"></ul></div>
 <div class="barra-acoes"><button id="tema" class="icone" aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">◐</button><a class="link-sobre" href="https://mercado.alissonprata.io/">Mercado</a><a class="link-sobre" href="/" style="margin-left:.9rem">Sobre</a></div>
@@ -1735,7 +1756,7 @@ body.gaveta-aberta .gaveta{transform:none}
 </ul>
 </section>
 
-<footer><p class="atualizacao">Dados de mercado de qua. 07/10/2026. Site atualizado em 08/10/2026 às 06:40 (horário de Brasília); a coleta roda automaticamente todo dia útil à noite.</p>Fontes: ANBIMA (taxas de debêntures e títulos públicos, ETTJ), SND/debentures.com.br (características e agenda), CVM (Formulário de Referência e IPE), agentes fiduciários (escrituras). Data de referência 07/10/2026. A taxa indicativa é referência de preço justo, não necessariamente negócio fechado. Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.</footer>
+<footer><p class="atualizacao">Dados de mercado de qua. 07/10/2026. Site atualizado em 08/10/2026 às 15:57 (horário de Brasília); a coleta roda automaticamente todo dia útil à noite.</p>Fontes: ANBIMA (taxas de debêntures e títulos públicos, ETTJ), SND/debentures.com.br (características e agenda), CVM (Formulário de Referência e IPE), agentes fiduciários (escrituras). Data de referência 07/10/2026. A taxa indicativa é referência de preço justo, não necessariamente negócio fechado. Conteúdo de pesquisa e educacional. Não constitui recomendação de investimento.</footer>
 </main>
 <div id="fundo" class="fundo"></div>
 <aside id="gaveta" class="gaveta" role="dialog" aria-labelledby="gavTitulo" hidden>
