@@ -1486,5 +1486,13 @@
  "42353180000135|8|Procedimento arbitral": {
   "fase": "operacional",
   "confianca": 0.37
+ },
+ "84683374000300|10|Tupy (TUPY3) registra prejuízo de R$ 11 ": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "42353180000135|9|Procedimento arbitral": {
+  "fase": "operacional",
+  "confianca": 0.3
  }
 }
