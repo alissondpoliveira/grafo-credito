@@ -1474,5 +1474,17 @@
  "48127012000108|1|Conclusão Procedimento de Bookbuilding 2": {
   "fase": "operacional",
   "confianca": 0.82
+ },
+ "40432544000147|10|S&P eleva ratings da Desktop para 'AAA' ": {
+  "fase": "transicao",
+  "confianca": 0.38
+ },
+ "03237583000167|4|Copa Energia avança no Ranking 100 Open ": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "42353180000135|8|Procedimento arbitral": {
+  "fase": "operacional",
+  "confianca": 0.37
  }
 }
