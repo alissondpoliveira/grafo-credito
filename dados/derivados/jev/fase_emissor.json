@@ -1494,5 +1494,17 @@
  "42353180000135|9|Procedimento arbitral": {
   "fase": "operacional",
   "confianca": 0.3
+ },
+ "89086144001198|6|Randoncorp (RAPT4) registra prejuízo de ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|10|Tupy (TUPY3) aprova recompra de debêntur": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "12300288000107|12|Eleição do Novo Diretor-Presidente": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }

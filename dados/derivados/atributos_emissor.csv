@@ -105,8 +105,8 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 60840055000131,FLEURY S/A,Fleury,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 88610126000129,FRAS-LE S.A,Fras Le,industria,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
 33611500000119,GERDAU S/A,Gerdau,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-04089570000150,AGUAS GUARIROBA  S/A,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-08397078000101,GSH CORP PARTICIPACOES S.A.,Gsh Corp,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
+04089570000150,AGUAS GUARIROBA  S/A,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+08397078000101,GSH CORP PARTICIPACOES S.A.,Gsh Corp,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 08402943000152,GUARARAPES CONFECCOES S.A..,Guararapes Confeccoes,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 12648327000153,HIDROVIAS DO BRASIL S.A.,Hidrovias do Brasil,logistica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 27902165000105,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,Highline Brasil,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
@@ -141,7 +141,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 07816890000153,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,Multiplan Empreendimentos,imobiliario_construcao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 71673990000177,NATURA COSMETICOS S/A,Natura Cosmeticos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04992714000184,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,Nova Transportadora,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
-09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.91,grande_grupo
+09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
 12104241000402,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,Oncoclinicas Brasil,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 03279285000130,ORIZON MEIO AMBIENTE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 75609123000123,UNIDAS LOCACOES E SERVICOS S/A,Unidas,locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -186,7 +186,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 94813102000170,TRES TENTOS AGROINDUSTRIAL S.A,Tres Tentos,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
+84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 33958695000178,UNIPAR CARBOCLORO S/A,Unipar Carbocloro,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 60665981000118,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,Uniao Quimica,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 60894730000105,USINAS SIDERURGICAS DE MG S/A - USIMINAS,Usinas Siderurgicas,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
