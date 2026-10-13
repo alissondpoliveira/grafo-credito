@@ -1602,5 +1602,29 @@
  "34622881000102|1|Brasil | Winity Telecom anuncia entrada ": {
   "fase": "operacional",
   "confianca": 0.8
+ },
+ "40432544000147|10|Brasil | Claro estuda empacotar atendime": {
+  "fase": "operacional",
+  "confianca": 0.41
+ },
+ "09257877000137|7|Renúncia de Diretor Presidente": {
+  "fase": "transicao",
+  "confianca": 0.22
+ },
+ "02284062000106|1|Rede D’Or conclui compra do Hospital San": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "51218147000193|11|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "28438834000100|1|Neoenergia (NEOE3) busca “waiver” de deb": {
+  "fase": "operacional",
+  "confianca": 0.35
+ },
+ "08070508000178|10|Conclusão do desinvestimento das operaçõ": {
+  "fase": "operacional",
+  "confianca": 0.89
  }
 }
