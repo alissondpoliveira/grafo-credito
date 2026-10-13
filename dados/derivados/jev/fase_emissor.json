@@ -1506,5 +1506,101 @@
  "12300288000107|12|Eleição do Novo Diretor-Presidente": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "09325109000173|3|Comunicado Conta Escrow": {
+  "fase": "transicao",
+  "confianca": 0.11
+ },
+ "00001180000126|15|5ª operação de resgate ou conversão das ": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "40432544000147|10|Brasil | S&P eleva ratings da Desktop pa": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "10923227000162|2|BTG Pactual (BPAC5)": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "47508411000156|15|Fato Relevante": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "03237583000167|3|Copa Energia avança no Ranking 100 Open ": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "08336783000190|3|Celesc (CLSC3)": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12420164000157|15|Incidente na unidade da Cremer em Blumen": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "97837181000147|15|cisão parcial da Duratex Floresta Ltda.,": {
+  "fase": "operacional",
+  "confianca": 0.52
+ },
+ "92715812000131|13|Alteração de Controle Acionário": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "06272793000184|12|Renovação Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "17314329000120|15|Prorrogação do Reenquadramento da Cotaçã": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "43776517000180|15|Fato Relevante": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "06248349000123|1|ANP aprova base de ativos de transportad": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|10|Tupy aprova aquisição facultativa de deb": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "08322396000103|14|Descontinuidade Projeções": {
+  "fase": "operacional",
+  "confianca": 0.43
+ },
+ "44330975000153|3|Colombo Agroindústria terá assembleia ex": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "19642306000170|11|Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "08170849000115|15|Protocolo OPA": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "51137031000120|4|EPR Litoral Pioneiro inicia duplicação d": {
+  "fase": "transicao",
+  "confianca": 0.43
+ },
+ "54846951000105|5|Ferrari mais que dobra lucro em 2025/26 ": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "27157474000106|4|DFs": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "33000167000101|15|Fato Relevante": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "34622881000102|1|Brasil | Winity Telecom anuncia entrada ": {
+  "fase": "operacional",
+  "confianca": 0.8
  }
 }
