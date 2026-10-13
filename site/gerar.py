@@ -649,7 +649,7 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
         no("s:" + s["codigo"], tipo="serie", rotulo=s["codigo"], grupo=g, segmento=seg,
            spread=d.get("spread"), justo=d.get("justo"), desvio=d.get("desvio"), dp=d.get("dp"), classe=d.get("classe"),
            justo_pares=d.get("justo_pares"), ajuste=d.get("ajuste"), pares=d.get("pares"), justo_reg=d.get("justo_reg"),
-           faixa=d.get("faixa"), motivo_faixa=d.get("motivo_faixa"),
+           faixa=d.get("faixa"), motivo_faixa=d.get("motivo_faixa"), isenta=s.get("incentivada", ""),
            status=s["status"])
         links.append({"source": em_id, "target": "s:" + s["codigo"], "tipo": "emitiu"})
 
@@ -727,17 +727,17 @@ const GLOSS = {
   spread_comp: {fx:['i = (1+y_{\\text{real}})(1+\\pi) - 1','i_{\\text{bruta}} = \\frac{i}{1 - 0{,}15}','y_{\\text{bruta}} = \\frac{1 + i_{\\text{bruta}}}{1+\\pi} - 1'], fn:'π = inflação implícita no prazo da duration; com y bruta, recalcula-se o Z-spread.', t:'Spread comparável (gross-up de 15%)', d:'Z-spread ajustado para pôr debêntures incentivadas (isentas de IR para pessoa física) na mesma base das tributadas. Sem ajuste, a isenta parece mais barata do que é.', f:'nominal = (1 + taxa real) × (1 + inflação implícita) − 1; nominal bruta = nominal ÷ (1 − 15%); volta para taxa real e recalcula o Z.', l:'Para as isentas, inclui o valor da isenção e não é carrego. Para comparar carrego, use o Z de mercado.'},
   spread_ntnb: {fx:['s = y_{\\text{debênture}} - y_{\\text{NTN-B ref.}}'], t:'Spread sobre a NTN-B de referência', d:'Diferença simples entre a taxa indicativa da debênture e a taxa da NTN-B que a ANBIMA indica como referência (vencimento próximo da duration).', l:'É a leitura usada na mesa. O Z-spread é mais preciso porque usa a curva inteira.'},
   spread_di: {fx:['\\text{fator} = (1+\\text{CDI})^{du/252}\\,(1+s)^{du/252}'], t:'Spread sobre o CDI', d:'Para debêntures DI+, a própria taxa indicativa ANBIMA: o prêmio ao ano acima do CDI.', f:'Fator = (1 + CDI) × (1 + spread), em base 252.', l:'O risco de juros é pequeno (o CDI acompanha a Selic); o preço reage quase só ao spread.'},
-  spread_tab: {t:'Spread', d:'IPCA+: spread comparável (Z-spread com gross-up de 15% nas isentas). DI+: spread sobre o CDI.', l:'Não compare diretamente uma linha IPCA+ com uma DI+: as bases são diferentes.'},
-  justo_pares: {fx:['\\text{justo} = \\operatorname{mediana}\\{\\,s_1, s_2, \\dots, s_k\\,\\},\\quad k \\le 8'], fn:'Pares escolhidos por distância ponderada: estrutura 3, fase 3, patrocinador 2, garantia, isenção, duration, folga da concessão e alavancagem 1, tamanho 0,5.', t:'Spread justo pelos pares', d:'Mediana do spread das séries mais comparáveis de outros emissores: até 8 pares, no máximo 2 por emissor, obrigatoriamente no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield).', f:'Proximidade ponderada por estrutura (project finance ou corporativa), fase do ativo, patrocinador, garantia, isenção, duration, folga até o fim da concessão, tamanho e alavancagem.', l:'É o spread que o perfil do papel sugere, segundo o mercado de hoje.'},
+  spread_tab: {t:'Spread', d:'IPCA+: spread comparável (Z-spread com gross-up de 15% nas isentas; nas tributadas, o próprio Z-spread de mercado). DI+: spread sobre o CDI, sem gross-up (todas as DI+ do universo são tributadas).', l:'Não compare diretamente uma linha IPCA+ com uma DI+: as bases são diferentes.'},
+  justo_pares: {fx:['\\text{justo} = \\operatorname{mediana}\\{\\,s_1, s_2, \\dots, s_k\\,\\},\\quad k \\le 8'], fn:'Pares escolhidos por distância ponderada: estrutura 3, fase 3, patrocinador 2, garantia, isenção, duration, folga da concessão e alavancagem 1, tamanho 0,5.', t:'Spread justo pelos pares', d:'Mediana do spread das séries mais comparáveis de outros emissores: até 8 pares, no máximo 2 por emissor, obrigatoriamente no mesmo segmento, na mesma classe (IPCA+ ou DI+) e na mesma faixa (principal ou high yield).', f:'Proximidade ponderada por estrutura (project finance ou corporativa), fase do ativo, patrocinador, garantia, isenção, duration, folga até o fim da concessão, tamanho e alavancagem. Base: spread comparável, com gross-up de 15% nas séries isentas e sem ajuste nas tributadas; DI+ sem gross-up.', l:'É o spread que o perfil do papel sugere, segundo o mercado de hoje.'},
   ajuste: {fx:['a(t) = a_0 \\cdot 2^{-\\,\\text{dias}/60}'], fn:'a₀ = +25 (crédito negativo), +8 (outro negativo), −5 (avanço operacional); janela de 180 dias; teto de ±40 bps por emissor.', t:'Ajuste por eventos', d:'Bps somados ao justo dos pares quando o emissor tem evento recente classificado pelo JEV com confiança de pelo menos 0,8.', f:'Crédito negativo +25 bps, outro impacto negativo +8, avanço operacional −5; meia-vida de 60 dias, janela de 180; tetos por tipo e de ±40 bps por emissor.', l:'Valores provisórios e conservadores, a recalibrar por estudo de evento.'},
-  desvio: {fx:['d = s - \\left(\\text{justo}_{\\text{pares}} + a\\right)'], t:'Desvio em relação aos pares', d:'Spread observado menos o spread justo (mediana dos pares mais o ajuste por eventos).', l:'Positivo: o spread da série está acima do justo estimado pelos pares; negativo, abaixo. A diferença pode vir de risco que os pares não capturam, de liquidez ou de erro do modelo. É uma medida descritiva, não recomendação.'},
+  desvio: {fx:['d = s - \\left(\\text{justo}_{\\text{pares}} + a\\right)'], t:'Desvio em relação aos pares', d:'Spread observado menos o spread justo (mediana dos pares mais o ajuste por eventos). Base: spread comparável, com gross-up de 15% nas séries isentas e sem ajuste nas tributadas; DI+ sem gross-up.', l:'Positivo: o spread da série está acima do justo estimado pelos pares; negativo, abaixo. A diferença pode vir de risco que os pares não capturam, de liquidez ou de erro do modelo. É uma medida descritiva, não recomendação.'},
   desvio_dp: {fx:['z = \\frac{d}{\\sigma_{\\text{resíduos}}}'], fn:'|z| ≥ 1,5: fora da faixa dos pares.', t:'Desvio em desvios-padrão', d:'Desvio em bps dividido pelo desvio-padrão dos resíduos do modelo.', l:'Permite comparar segmentos com dispersões diferentes. Acima de 1,5 dp em módulo, a série está fora da faixa dos pares.'},
-  mediana: {t:'Mediana do segmento e percentil', d:'Mediana do spread das séries do mesmo segmento e da mesma classe. O percentil diz quantas séries do segmento têm spread menor ou igual ao desta.', l:'Percentil 90: só 10% do segmento tem spread maior.'},
-  justo_reg: {fx:['s_i = \\beta_0 + \\beta_1 D_i + \\beta_2\\,\\text{garantia}_i + \\beta_3\\,\\text{CVM}_i + \\beta_4 \\ln(\\text{tamanho}_i) + \\beta_5\\,\\sigma^{\\text{ANBIMA}}_i + \\gamma_{\\text{seg}} + \\varepsilon_i'], fn:'Mínimos quadrados com erros padrão robustos (HC1); justo = valor ajustado, desvio = resíduo ε.', t:'Spread justo pela regressão', d:'Segunda leitura do valor relativo: regressão cross-section do spread comparável das séries IPCA+ em duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA, com efeitos de segmento.', f:'Mínimos quadrados com erros padrão robustos (HC1). O justo é o valor ajustado; o desvio é o resíduo.', l:'Especificação provisória. Quando discorda muito dos pares, vale olhar o porquê.'},
+  mediana: {t:'Mediana do segmento e percentil', d:'Mediana do spread das séries do mesmo segmento e da mesma classe. O percentil diz quantas séries do segmento têm spread menor ou igual ao desta. Base: spread comparável, com gross-up de 15% nas séries isentas e sem ajuste nas tributadas; DI+ sem gross-up.', l:'Percentil 90: só 10% do segmento tem spread maior.'},
+  justo_reg: {fx:['s_i = \\beta_0 + \\beta_1 D_i + \\beta_2\\,\\text{garantia}_i + \\beta_3\\,\\text{CVM}_i + \\beta_4 \\ln(\\text{tamanho}_i) + \\beta_5\\,\\sigma^{\\text{ANBIMA}}_i + \\gamma_{\\text{seg}} + \\varepsilon_i'], fn:'Mínimos quadrados com erros padrão robustos (HC1); justo = valor ajustado, desvio = resíduo ε.', t:'Spread justo pela regressão', d:'Segunda leitura do valor relativo: regressão cross-section do spread comparável das séries IPCA+ em duration, garantia real, controle declarado na CVM, tamanho da emissão e dispersão das contribuições ANBIMA, com efeitos de segmento.', f:'Mínimos quadrados com erros padrão robustos (HC1). O justo é o valor ajustado; o desvio é o resíduo. Base: spread comparável, com gross-up de 15% nas séries isentas e sem ajuste nas tributadas; DI+ sem gross-up.', l:'Especificação provisória. Quando discorda muito dos pares, vale olhar o porquê.'},
   be12: {fx:['\\text{BE}_{12m} \\approx \\frac{s}{D_{\\text{mod}}}'], fn:'s = spread de mercado (Z para IPCA+, spread sobre o CDI para DI+).', t:'Break-even de abertura em 12 meses', d:'Quanto o spread pode abrir em um ano até consumir o carrego do próprio spread.', f:'Break-even ≈ spread de mercado ÷ duration modificada', l:'Abertura maior que isso em 12 meses deixa o papel atrás do título público (IPCA+) ou do CDI (DI+). Aproximação: ignora o encurtamento da duration ao longo do ano.'},
   liquidez: {t:'Liquidez em 180 dias', d:'Número de dias com negócio registrado no SND nos últimos 180 dias corridos e volume financeiro (quantidade × PU médio).', l:'Poucos dias com negócio indicam que a taxa indicativa depende mais das contribuições do que de negócios.'},
   hy: {t:'Faixa high yield', d:'Séries IPCA+ com Z de mercado de pelo menos 300 bps, DI+ com spread de pelo menos 300 bps sobre o CDI, ou de emissor com evento de crédito negativo nos últimos 12 meses.', l:'Ficam fora da regressão e só se comparam com outras high yield, para não distorcer os pares da faixa principal.'},
-  var_hist: {fx:['\\Delta s = s_{\\text{hoje}} - s_{\\text{1º dia}}'], t:'Variação histórica', d:'Diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026).', l:'Ganha significado com o tempo de coleta.'},
+  var_hist: {fx:['\\Delta s = s_{\\text{hoje}} - s_{\\text{1º dia}}'], t:'Variação histórica', d:'Diferença entre o spread de hoje e o do primeiro dia do histórico coletado (desde 24/09/2026). Base: spread comparável, com gross-up de 15% nas séries isentas e sem ajuste nas tributadas; DI+ sem gross-up.', l:'Ganha significado com o tempo de coleta.'},
   choque100: {fx:['\\frac{\\Delta P}{P}\\Big|_{\\Delta y \\,=\\, +100\\ \\text{bps}}'], fn:'Pela reprecificação completa do fluxo.', t:'Choque de +100 bps', d:'Variação do PU se a taxa subir 100 bps, pela reprecificação completa do fluxo.', l:'Próximo de − duration modificada %, um pouco menor em módulo por causa da convexidade.'},
   dl_ebitda: {fx:['\\frac{\\text{Dívida bruta} - \\text{Caixa}}{\\text{EBITDA}}'], t:'Dívida líquida ÷ EBITDA', d:'Dívida bruta menos caixa, dividida pelo EBITDA do último exercício (DFP na CVM).', l:'Quantos anos de geração operacional pagariam a dívida líquida. Escrituras costumam fixar um teto para esse indicador (covenant).'},
   cobertura: {fx:['\\frac{\\text{EBITDA}}{\\text{Despesa financeira}}'], t:'EBITDA ÷ despesa financeira', d:'Quantas vezes a geração operacional do ano cobre a despesa financeira.', l:'Abaixo de 1x, o EBITDA não paga os juros do período.'},
@@ -813,8 +813,12 @@ const esconder = () => tip.style.display = 'none';
 const linha = (a, b) => '<div class="l"><span>'+a+'</span><span>'+b+'</span></div>';
 // desvio em desvios-padrão -> cinco degraus do par divergente (neutro no meio)
 const corDesvio = dp => dp==null||isNaN(dp) ? 'var(--surface)' : dp<=-1.5?'var(--div-neg-2)': dp<=-.5?'var(--div-neg-1)': dp<.5?'var(--div-0)': dp<1.5?'var(--div-pos-1)':'var(--div-pos-2)';
+// Base de cada spread: o comparável IPCA+ tem gross-up de 15% nas isentas; Z de mercado, NTN-B e DI+ não têm.
+const baseSerie = x => !x ? '' : x.classe==='DI+' ? 'sem gross-up' : x.isenta==='S' ? 'com gross-up de 15% (isenta)' : 'sem gross-up (tributada)';
+const baseGrupo = lista => { const ip = lista.filter(x => x && x.classe!=='DI+'); if (!ip.length) return 'sem gross-up';
+  const k = ip.filter(x => x.isenta==='S').length; return k===ip.length ? 'todos com gross-up de 15% (isentos)' : k===0 ? 'todos sem gross-up (tributados)' : 'gross-up em '+k+' de '+ip.length+' (só nos isentos)'; };
 const textoSerie = n => '<b>'+n.rotulo+'</b> <span class="fraco">'+(n.classe||'')+'</span>'+(n.faixa==='high_yield'?' <span class="selo hy">high yield</span><br><span class="fraco">'+n.motivo_faixa+'</span>':'')+'<br><span class="fraco">'+String(n.grupo||'').split('|').pop()+'</span>'
-  + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps')
+  + (n.spread!=null ? linha(n.classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(n.spread,0)+' bps') + (n.classe!=='DI+' ? '<span class="fraco">'+(n.isenta==='S'?'com gross-up de 15% (isenta); justo, desvio e regressão na mesma base':'sem gross-up (tributada)')+'</span>' : '')
      + linha('Justo pelos pares', fmt(n.justo_pares,0)+' bps') + (n.ajuste ? linha('Ajuste por eventos', sinal(n.ajuste,1)+' bps') : '')
      + linha('Desvio', sinal(n.desvio)+' bps ('+sinal(n.dp,1)+' dp)') + linha('Justo pela regressão', fmt(n.justo_reg,0)+' bps')
      + (n.pares ? '<br><span class="fraco">pares: '+n.pares+'</span>' : '') : '<br>'+n.status);
@@ -1072,7 +1076,7 @@ function desenharDesvio(classe){
   if (!estreito) gs.append('text').attr('x', M.l-62).attr('y', lin/2+3.5).attr('text-anchor','end').attr('font-size',9.5).attr('fill','var(--ink-3)').text(d => d.grupo.startsWith('Isolada')?'isolada':d.grupo.split(' ')[0]);
   gs.append('text').attr('x', d => d.desvio>=0 ? x(d.desvio)+5 : x(d.desvio)-5).attr('y', lin/2+3.5).attr('text-anchor', d=>d.desvio>=0?'start':'end').attr('font-size',9.5).attr('fill','var(--ink-2)').text(d => sinal(d.desvio));
   gs.append('rect').attr('x',0).attr('width',W).attr('height',lin).attr('fill','transparent').style('cursor','pointer')
-    .on('mouseenter', (e,d) => mostrar(e, '<b>'+d.codigo+'</b> · '+d.emissor+'<br><span class="fraco">'+d.grupo+'</span>' + linha(classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(d.spread,0)+' bps') + linha(classe==='DI+'?'Mediana DI+':'Spread justo', fmt(d.justo,0)+' bps') + linha('Desvio', sinal(d.desvio)+' bps ('+sinal(d.dp,1)+' dp)') + linha('Variação no histórico', d.var_hist==null?'–':sinal(d.var_hist)+' bps ('+d.n_hist+' dias)') + '<br><span class="fraco">clique para abrir a ficha</span>'))
+    .on('mouseenter', (e,d) => mostrar(e, '<b>'+d.codigo+'</b> · '+d.emissor+'<br><span class="fraco">'+d.grupo+'</span>' + linha(classe==='DI+'?'Spread sobre CDI':'Spread comparável', fmt(d.spread,0)+' bps') + (classe!=='DI+' ? '<span class="fraco">'+baseSerie(D.ativos[d.codigo]||{classe:classe})+'</span>' : '') + linha(classe==='DI+'?'Mediana DI+':'Spread justo', fmt(d.justo,0)+' bps') + linha('Desvio', sinal(d.desvio)+' bps ('+sinal(d.dp,1)+' dp)') + linha('Variação no histórico', d.var_hist==null?'–':sinal(d.var_hist)+' bps ('+d.n_hist+' dias)') + '<br><span class="fraco">clique para abrir a ficha</span>'))
     .on('mousemove', mover).on('mouseleave', esconder).on('click', (e,d) => { esconder(); abrirAtivo(d.codigo); });
 }
 document.querySelectorAll('[data-ndesvio]').forEach(b => b.addEventListener('click', () => { modoDesvio = b.dataset.ndesvio; document.querySelectorAll('[data-ndesvio]').forEach(x=>x.classList.toggle('ativo', x===b)); desenharDesvio(classeAtual); }));
@@ -1117,8 +1121,10 @@ function calcular(){
   $('r_dur').textContent = fmt(s.dmod,2);
   $('r_dur_info').textContent = '≈ '+fmt(s.dmod,2)+'% do preço a cada 100 bps' + (s.taxa!=null ? ' · Macaulay '+fmt(s.dmod*(1+s.taxa/100),2)+' anos' : '');
   $('r_z').textContent = di ? fmt(s.spread,0)+' → '+fmt(s.spread+sb,0)+' bps' : fmt(s.z,0)+' → '+fmt(s.z+sb,0)+' bps';
-  $('r_z_info').textContent = di ? 'sobre o CDI' : 'Z de mercado; comparável hoje '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?' (gross-up de 15%, isenta)':'');
+  $('r_z_info').textContent = di ? 'sobre o CDI, sem gross-up' : 'Z de mercado, sem gross-up (o choque age sobre ele); comparável hoje '+fmt(s.spread,0)+' bps'+(s.isenta==='S'?', com gross-up de 15% (isenta)':', sem gross-up (tributada)');
   $('r_desvio').textContent = s.desvio==null?'–':sinal(s.desvio)+' bps ('+sinal(s.dp,1)+' dp)';
+  $('r_desvio_info').textContent = s.desvio==null ? '' : di ? 'sem gross-up' : 'base comparável, gross-up nas isentas';
+  $('r_be12_info').textContent = s.be12==null ? '' : 'sobre o spread de mercado, sem gross-up';
   $('r_be12').textContent = s.be12==null?'–':fmt(s.be12,1)+' bps';
   desenharCascata(s, vC, vS, vX, vT, di);
 }
@@ -1475,7 +1481,8 @@ function mostrarRecentes(){
     const med = ord.length ? ord[Math.floor(ord.length/2)] : null;
     const pct = ord.length && a.spread!=null ? Math.round(100*ord.filter(v=>v<=a.spread).length/ord.length) : null;
     const pares = (a.pares||'').split(' ').filter(Boolean).map(c => A[c]).filter(Boolean);
-    const rotSpread = a.classe==='DI+' ? 'Spread sobre o CDI' : 'Spread comparável (Z, gross-up 15% se isenta)';
+    const rotSpread = a.classe==='DI+' ? 'Spread sobre o CDI' : 'Spread comparável';
+    const bA = baseSerie(a), bPares = baseGrupo(pares), bSeg = baseGrupo(mesmos);
     const docs = (DET.docs[a.cnpj]||[]).slice(0, 8);
     const hist = a.hist || [];
     const P = DET.ponta[cod] || {};
@@ -1515,17 +1522,18 @@ function mostrarRecentes(){
     const s = D.series.find(x => x.codigo===cod);
     const outras = Object.values(A).filter(x => x.cnpj===a.cnpj && x.codigo!==cod);
     const valor = '<div class="ativo-grade" style="margin-top:4px">'
-      + cel(rotSpread, fmtv(a.spread,0,' bps'), '', a.classe==='DI+' ? 'spread_di' : 'spread_comp')
-      + (a.classe==='IPCA+' ? cel('Z-spread de mercado', fmtv(a.z_mercado,0,' bps'), 'sem gross-up', 'z') + cel('Spread sobre a NTN-B', fmtv(a.spread_ntnb,0,' bps'), a.ntnb_ref ? 'NTN-B '+a.ntnb_ref : '', 'spread_ntnb') : '')
-      + cel('Justo pelos pares', fmtv(a.justo_pares,0,' bps'), pares.length+' pares', 'justo_pares')
+      + cel(rotSpread, fmtv(a.spread,0,' bps'), bA, a.classe==='DI+' ? 'spread_di' : 'spread_comp')
+      + (a.classe==='IPCA+' ? cel('Z-spread de mercado', fmtv(a.z_mercado,0,' bps'), 'sem gross-up', 'z') + cel('Spread sobre a NTN-B', fmtv(a.spread_ntnb,0,' bps'), 'sem gross-up'+(a.ntnb_ref ? ' · NTN-B '+a.ntnb_ref : ''), 'spread_ntnb') : '')
+      + cel('Justo pelos pares', fmtv(a.justo_pares,0,' bps'), pares.length+' pares · '+bPares, 'justo_pares')
       + cel('Ajuste por eventos', a.ajuste ? (a.ajuste>0?'+':'')+fmt(a.ajuste,1)+' bps' : '–', '', 'ajuste')
-      + cel('Desvio em relação aos pares', a.desvio==null?'–':sinal(a.desvio)+' bps', a.dp==null?'':sinal(a.dp,1)+' dp', 'desvio')
-      + cel('Mediana do segmento', fmtv(med,0,' bps'), pct==null?'':'esta série está no percentil '+pct, 'mediana')
-      + cel('Justo pela regressão', fmtv(a.justo_reg,0,' bps'), '', 'justo_reg')
+      + cel('Desvio em relação aos pares', a.desvio==null?'–':sinal(a.desvio)+' bps', (a.dp==null?'':sinal(a.dp,1)+' dp · ')+(a.classe==='DI+'?'sem gross-up':'base comparável, gross-up nas isentas'), 'desvio')
+      + cel('Mediana do segmento', fmtv(med,0,' bps'), (pct==null?'':'esta série está no percentil '+pct+' · ')+bSeg, 'mediana')
+      + cel('Justo pela regressão', fmtv(a.justo_reg,0,' bps'), a.classe==='DI+' ? 'sem gross-up' : 'regressão sobre o comparável (gross-up nas isentas)', 'justo_reg')
       + '</div>'
-      + (hist.length > 1 ? '<h3>Histórico do spread'+infoBtn('var_hist')+'</h3><svg id="ativoHist" style="width:100%;height:auto;aspect-ratio:4/1"></svg>' : '')
+      + (a.classe==='IPCA+' ? '<p class="fraco pequeno">'+(a.isenta==='S' ? 'Esta série é isenta: o spread comparável, os pares, a mediana, a regressão e o desvio estão na base com gross-up de 15%, que põe isentas e tributadas na mesma base antes do IR. O Z-spread de mercado e o spread sobre a NTN-B são de mercado, sem gross-up.' : 'Esta série é tributada: o spread comparável dela é o próprio Z-spread de mercado, sem gross-up; os pares isentos entram na comparação com gross-up de 15%.')+'</p>' : '')
+      + (hist.length > 1 ? '<h3>Histórico do spread'+(a.classe==='DI+' ? ' sobre o CDI' : ' comparável')+infoBtn('var_hist')+'</h3><p class="fraco pequeno" style="margin-top:-.3rem">'+bA+'</p><svg id="ativoHist" style="width:100%;height:auto;aspect-ratio:4/1"></svg>' : '')
       + '<h3>Pares comparáveis'+infoBtn('justo_pares')+'</h3>'
-      + (pares.length ? '<ol class="lista-clicavel">'+pares.map(liSerie).join('')+'</ol><p class="fraco pequeno">Mesmo segmento, classe e faixa; à direita, o desvio de cada par. Clique para abrir.</p>' : '<p class="fraco pequeno">Sem pares suficientes no mesmo segmento, classe e faixa.</p>')
+      + (pares.length ? '<ol class="lista-clicavel">'+pares.map(x => liSerie(x).replace(' · vence ', (x.classe==='DI+' ? '' : x.isenta==='S' ? ' · isenta, com gross-up' : ' · tributada, sem gross-up')+' · vence ')).join('')+'</ol><p class="fraco pequeno">Mesmo segmento, classe e faixa; à direita, o desvio de cada par. O justo é a mediana do spread comparável dos pares: '+bPares+'. Clique para abrir.</p>' : '<p class="fraco pequeno">Sem pares suficientes no mesmo segmento, classe e faixa.</p>')
       + (a.motivos ? '<h3>Eventos que ajustam o justo</h3><p class="pequeno muted">'+a.motivos.split(' | ').join('<br>')+'</p>' : '');
     const mini = !s ? '<p class="fraco pequeno">Série sem preço validado; simulação indisponível.</p>'
       : '<div class="mini-sim"><label for="msR">Choque no spread: <b id="msV"></b></label><input id="msR" type="range" min="-300" max="300" step="5" value="'+(+choque.value||100)+'" aria-label="Choque no spread em bps"><div class="regua-marcas"><span>−300</span><span>0</span><span>+300</span></div>'
@@ -1841,7 +1849,7 @@ def gerar_projeto() -> str:
 <p class="pequeno muted">Já sabe o que procura? Use a busca no topo (atalho <kbd>/</kbd>) ou a <a href="#ativos" data-vista="ativos">tabela de ativos</a>. Todo caminho termina na ficha do papel: preço de hoje, características, pares, simulação e documentos do emissor.</p>
 
 <h2 class="sec">Maiores diferenças em relação aos pares</h2>
-<p class="pequeno muted" style="margin-top:-.4rem">Faixa principal, sem high yield, ordenados em desvios-padrão dos resíduos. Clique para abrir a ficha.</p>
+<p class="pequeno muted" style="margin-top:-.4rem">Faixa principal, sem high yield, ordenados em desvios-padrão dos resíduos. IPCA+ na base comparável, com gross-up de 15% nas isentas; DI+ sem gross-up. Clique para abrir a ficha.</p>
 <div class="ranking">
 <div class="painel"><h3>Acima dos pares{I('desvio_dp')} <span class="fraco">spread acima do justo pelos pares</span></h3><ol id="rkAcima"></ol></div>
 <div class="painel"><h3>Abaixo dos pares{I('desvio_dp')} <span class="fraco">spread abaixo do justo pelos pares</span></h3><ol id="rkAbaixo"></ol></div>
@@ -1903,7 +1911,7 @@ def gerar_projeto() -> str:
 <span class="espaco"></span><span id="fInfo" class="pequeno fraco" aria-live="polite"></span><button id="fLimpar" hidden>Limpar filtros</button><button id="fColunas" aria-pressed="false">Mais colunas</button>
 </div>
 <div class="tabela"><table id="tab">
-<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco{I('grupo')}</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta{I('lei12431')}</th><th class="t extra">Garantia{I('garantia')}</th><th>Spread (bps){I('spread_tab')}</th><th>Justo pares (bps){I('justo_pares')}</th><th class="extra">Ajuste eventos{I('ajuste')}</th><th>Desvio (bps){I('desvio')}</th><th>Desvio (dp){I('desvio_dp')}</th><th class="extra">Variação hist. (bps){I('var_hist')}</th><th>Duration mod.{I('dmod')}</th><th>Choque +100 (%){I('choque100')}</th><th class="t extra">Escritura / status</th></tr></thead>
+<thead><tr><th class="t">Série</th><th class="t">Emissor atual (SND)</th><th class="t extra">Grupo de risco{I('grupo')}</th><th class="t">Segmento</th><th class="t">Classe</th><th class="t extra">Isenta{I('lei12431')}</th><th class="t extra">Garantia{I('garantia')}</th><th>Spread (bps)<br><span class="fraco" style="font-weight:400">gross-up nas isentas</span>{I('spread_tab')}</th><th>Justo pares (bps)<br><span class="fraco" style="font-weight:400">mesma base</span>{I('justo_pares')}</th><th class="extra">Ajuste eventos{I('ajuste')}</th><th>Desvio (bps){I('desvio')}</th><th>Desvio (dp){I('desvio_dp')}</th><th class="extra">Variação hist. (bps){I('var_hist')}</th><th>Duration mod.{I('dmod')}</th><th>Choque +100 (%){I('choque100')}</th><th class="t extra">Escritura / status</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table>
@@ -1942,8 +1950,8 @@ def gerar_projeto() -> str:
 <div><small>Duration + convexidade (aproximação){I('aprox')}</small><b id="r_aprox">–</b><span class="pequeno muted" id="r_resid"></span></div>
 <div><small>Duration modificada{I('dmod')}</small><b id="r_dur">–</b><span class="pequeno muted" id="r_dur_info"></span></div>
 <div><small>Spread{I('spread_tab')}</small><b id="r_z">–</b><span class="pequeno muted" id="r_z_info"></span></div>
-<div><small>Desvio em relação aos pares{I('desvio')}</small><b id="r_desvio">–</b></div>
-<div><small>Break-even de abertura em 12 meses{I('be12')}</small><b id="r_be12">–</b></div>
+<div><small>Desvio em relação aos pares{I('desvio')}</small><b id="r_desvio">–</b><span class="pequeno muted" id="r_desvio_info"></span></div>
+<div><small>Break-even de abertura em 12 meses{I('be12')}</small><b id="r_be12">–</b><span class="pequeno muted" id="r_be12_info"></span></div>
 </div>
 <p class="pequeno" style="margin:.8rem 0 0"><button id="simFicha">Abrir a ficha desta série</button></p></div>
 </div>
