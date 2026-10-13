@@ -1,7 +1,8 @@
 """Gera o site estático (alissonprata.io) a partir dos dados do repositório.
 
-Saída em site/public/: index.html (página pessoal) e grafo-credito/index.html
-(mapa de controle e risco, desvio em relação aos pares, simulador, tabela e modelo).
+Saída em site/public/: index.html (página pessoal), grafo-credito/index.html
+(mapa de controle e risco, desvio em relação aos pares, simulador, tabela e modelo), artigos/
+(Financial Syntax, a partir de site/artigos/*.json; ver site/importar_linkedin.py), sitemap.xml e robots.txt.
 
 Uso: python site/gerar.py
 """
@@ -22,6 +23,9 @@ JUSTO = RAIZ / "dados" / "derivados" / "spread_justo"
 UNIVERSO = RAIZ / "dados" / "referencia" / "universo_series.csv"
 CONTROLADORES = RAIZ / "dados" / "referencia" / "controladores_cvm.csv"
 CLAUSULAS = RAIZ / "dados" / "referencia" / "clausulas_escrituras.csv"
+ARTIGOS = RAIZ / "site" / "artigos"
+SITE = "https://www.alissonprata.io"
+NEWSLETTER = "https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/"
 
 FONTES = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">'
 
@@ -421,6 +425,8 @@ def gerar_home() -> str:
                f'<div><dt>Exercício</dt><dd>{b["exercicio"]}</dd></div></dl>') if b else ""
     leg_g = '<p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>' if g and g["svg"] else ""
     leg_b = '<p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>' if b and b["svg"] else ""
+    recentes = "".join(f'<li><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></li>' for a in _artigos()[:3])
+    recentes = f'<ul class="recentes">{recentes}</ul>' if recentes else ""
     corpo = f"""<main class="home">
 <header class="topo-home">
 <div class="kicker">Crédito privado · qualidade contábil · mercado brasileiro</div>
@@ -466,9 +472,10 @@ def gerar_home() -> str:
 <h2 id="t-escrita">Escrita</h2>
 <div class="cartoes">
 <article class="cartao leve">
-<h3><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></h3>
+<h3><a href="/artigos">Financial Syntax</a></h3>
 <p>Newsletter de análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
-<p class="acoes"><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Ler no LinkedIn</a></p>
+{recentes}
+<p class="acoes"><a href="/artigos">Ler os artigos</a><a href="{NEWSLETTER}">Assinar no LinkedIn</a></p>
 </article>
 <article class="cartao leve">
 <h3><a href="https://mercado.alissonprata.io/">Mercado</a></h3>
@@ -484,7 +491,7 @@ def gerar_home() -> str:
 </section>
 
 <footer class="rodape-home">
-<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/">Financial Syntax</a></p>
+<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="/artigos">Financial Syntax</a></p>
 <p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial e sem vínculo institucional. Os modelos são simplificados, podem conter erros e nada aqui é recomendação de investimento.</p>
 </footer>
 </main>"""
@@ -496,7 +503,7 @@ def gerar_home() -> str:
             f'<meta property="og:type" content="profile"><meta property="og:title" content="Alisson Prata">'
             f'<meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="https://www.alissonprata.io/">'
             f'<meta name="twitter:card" content="summary">'
-            f'<script type="application/ld+json">{json.dumps(pessoa, ensure_ascii=False)}</script>')
+            f'<script type="application/ld+json">{json.dumps(pessoa, ensure_ascii=False)}</script><style>{CSS_ARTIGOS}</style>')
     return pagina("Alisson Prata", desc, corpo, head)
 
 
@@ -2016,10 +2023,137 @@ fetch('/grafo-credito/dados.json', {cache: 'no-cache'}).then(r => r.json()).then
     return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo)
 
 
+# ---------------------------------------------------------------- artigos (Financial Syntax)
+
+MESES = ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+
+CSS_ARTIGOS = """
+nav{flex-wrap:wrap;gap:6px 16px}nav .nav-dir a{margin:0 1.1rem 0 0;color:var(--ink-2);font-weight:400}nav .nav-dir a:last-child{margin-right:0}
+.recentes{margin:.1rem 0 .8rem;padding-left:1.1rem;font-size:.92rem}.recentes li{margin:.25rem 0}
+.recentes a{color:var(--ink);text-decoration:none}.recentes a:hover{color:var(--accent)}
+.lista-artigos{list-style:none;padding:0;margin:8px 0 0}
+.lista-artigos li{padding:18px 0;border-bottom:1px solid var(--line)}
+.lista-artigos h2{font-size:1.3rem;margin:.15rem 0 .3rem}.lista-artigos h2 a{color:var(--ink);text-decoration:none}.lista-artigos h2 a:hover{color:var(--accent)}
+.lista-artigos p{color:var(--ink-2);margin:0}
+.meta-artigo{font-size:.875rem;color:var(--ink-3);margin:0 0 28px}
+.texto{font-size:1.0625rem;line-height:1.75}
+.texto h2{font-size:1.35rem;line-height:1.3;margin:2.2rem 0 .6rem}
+.texto p{margin:0 0 1.1rem}.texto li{margin:.3rem 0}.texto li p{margin:0}
+.texto figure{margin:1.6rem 0}.texto img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);background:#fff}
+.texto blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--line-2);color:var(--ink-2)}
+.texto hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.texto a{overflow-wrap:anywhere}
+.origem{margin-top:40px;padding:14px 16px;background:var(--surface-2);border-radius:10px;font-size:.875rem;color:var(--ink-2)}
+"""
+
+
+def _artigos() -> list[dict]:
+    if not ARTIGOS.exists():
+        return []
+    return sorted((json.loads(p.read_text(encoding="utf-8")) for p in ARTIGOS.glob("*.json")), key=lambda a: a["publicado"], reverse=True)
+
+
+def _data_br(iso: str) -> str:
+    d = date.fromisoformat(iso)
+    return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
+
+
+def _topo() -> str:
+    return ('<nav><a href="/">Alisson Prata</a><span class="nav-dir"><a href="/artigos">Artigos</a>'
+            '<a href="/grafo-credito">Grafo de Crédito</a><a href="https://mercado.alissonprata.io/">Mercado</a></span></nav>')
+
+
+RODAPE_ARTIGOS = ('<footer><p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>'
+                  f'<a href="https://github.com/alissondpoliveira">GitHub</a><a href="{NEWSLETTER}">Assinar a Financial Syntax</a></p>'
+                  '<p>Conteúdo de estudo e opinião pessoal, sem vínculo institucional. Nada aqui é recomendação de investimento.</p></footer>')
+
+AUTOR = {"@type": "Person", "name": "Alisson Prata", "url": SITE + "/",
+         "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira"]}
+
+
+def gerar_artigo(a: dict) -> str:
+    url = f"{SITE}/artigos/{a['slug']}"
+    img = re.search(r'<img src="([^"]+)"', a["corpo"])
+    corpo = f"""<main class="estreito">
+{_topo()}
+<article>
+<div class="kicker"><a href="/artigos" style="color:inherit;text-decoration:none">{html.escape(a.get("serie") or "Artigo")}</a></div>
+<h1>{html.escape(a["titulo"])}</h1>
+<p class="meta-artigo">Alisson Prata, CFP® · <time datetime="{a["publicado"]}">{_data_br(a["publicado"])}</time></p>
+<div class="texto">
+{a["corpo"]}
+</div>
+<p class="origem">Publicado originalmente no LinkedIn em {_data_br(a["publicado"])}{", na newsletter Financial Syntax" if a.get("serie") else ""}. <a href="{html.escape(a["url_linkedin"])}">Ver no LinkedIn</a></p>
+</article>
+{RODAPE_ARTIGOS}
+</main>"""
+    dados = {"@context": "https://schema.org", "@type": "Article", "headline": a["titulo"], "description": a["resumo"],
+             "datePublished": a["publicado"], "dateModified": a["publicado"], "inLanguage": "pt-BR",
+             "author": AUTOR, "publisher": AUTOR, "mainEntityOfPage": url, "url": url,
+             }
+    if a.get("serie"):
+        dados["isPartOf"] = {"@type": "Periodical", "name": a["serie"], "url": SITE + "/artigos"}
+    if img:
+        dados["image"] = SITE + img.group(1)
+    head = (f'<link rel="canonical" href="{url}">'
+            f'<meta property="og:type" content="article"><meta property="og:title" content="{html.escape(a["titulo"])}">'
+            f'<meta property="og:description" content="{html.escape(a["resumo"])}"><meta property="og:url" content="{url}">'
+            + (f'<meta property="og:image" content="{SITE}{img.group(1)}">' if img else "")
+            + f'<meta property="article:published_time" content="{a["publicado"]}"><meta property="article:author" content="Alisson Prata">'
+            f'<meta name="twitter:card" content="{"summary_large_image" if img else "summary"}">'
+            f'<script type="application/ld+json">{json.dumps(dados, ensure_ascii=False)}</script>'
+            f'<style>{CSS_ARTIGOS}</style>')
+    return pagina(f"{a['titulo']} · Alisson Prata", a["resumo"], corpo, head)
+
+
+def gerar_lista_artigos(artigos: list[dict]) -> str:
+    itens = "".join(f"""<li><div class="kicker"><time datetime="{a["publicado"]}">{_data_br(a["publicado"])}</time>{" · " + html.escape(a["serie"]) if a.get("serie") else ""}</div>
+<h2><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></h2>
+<p>{html.escape(a["resumo"])}</p></li>""" for a in artigos)
+    desc = "Artigos de Alisson Prata, CFP®, e a newsletter Financial Syntax: análises de mercado com fonte, data e memória de cálculo."
+    corpo = f"""<main class="estreito">
+{_topo()}
+<header>
+<div class="kicker">Escrita</div>
+<h1>Artigos</h1>
+<p class="dek">Análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede. Os marcados com Financial Syntax saíram na newsletter de mesmo nome, no LinkedIn.</p>
+<p class="acoes"><a href="{NEWSLETTER}">Assinar a Financial Syntax no LinkedIn</a></p>
+</header>
+<ul class="lista-artigos">{itens}</ul>
+{RODAPE_ARTIGOS}
+</main>"""
+    dados = {"@context": "https://schema.org", "@type": "Blog", "name": "Artigos de Alisson Prata", "url": SITE + "/artigos", "author": AUTOR,
+             "blogPost": [{"@type": "BlogPosting", "headline": a["titulo"], "url": f"{SITE}/artigos/{a['slug']}", "datePublished": a["publicado"]} for a in artigos]}
+    head = (f'<link rel="canonical" href="{SITE}/artigos"><meta property="og:type" content="website"><meta property="og:title" content="Artigos · Alisson Prata">'
+            f'<meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="{SITE}/artigos">'
+            f'<script type="application/ld+json">{json.dumps(dados, ensure_ascii=False)}</script><style>{CSS_ARTIGOS}</style>')
+    return pagina("Artigos · Alisson Prata", desc, corpo, head)
+
+
+def gerar_sitemap(artigos: list[dict]) -> str:
+    hoje = date.today().isoformat()
+    urls = [(SITE + "/", hoje), (SITE + "/grafo-credito", hoje), (SITE + "/artigos", artigos[0]["publicado"] if artigos else hoje)]
+    urls += [(f"{SITE}/artigos/{a['slug']}", a["publicado"]) for a in artigos]
+    corpo = "".join(f"<url><loc>{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
+    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{corpo}</urlset>\n'
+
+
+def gerar_artigos() -> None:
+    artigos = _artigos()
+    for a in artigos:
+        (PUBLICO / "artigos" / a["slug"]).mkdir(parents=True, exist_ok=True)
+        (PUBLICO / "artigos" / a["slug"] / "index.html").write_text(gerar_artigo(a), encoding="utf-8")
+    if artigos:
+        (PUBLICO / "artigos" / "index.html").write_text(gerar_lista_artigos(artigos), encoding="utf-8")
+    (PUBLICO / "sitemap.xml").write_text(gerar_sitemap(artigos), encoding="utf-8")
+    (PUBLICO / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+
+
 def main() -> None:
     (PUBLICO / "grafo-credito").mkdir(parents=True, exist_ok=True)
     (PUBLICO / "grafo-credito" / "index.html").write_text(gerar_projeto(), encoding="utf-8")
     (PUBLICO / "index.html").write_text(gerar_home(), encoding="utf-8")
+    gerar_artigos()
     print("site/public gerado")
 
 
