@@ -1654,5 +1654,13 @@
  "54846951000105|6|Ferrari desembolsa R$ 161 milhões para a": {
   "fase": "operacional",
   "confianca": 0.88
+ },
+ "89086144001198|6|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "13733490000187|1|QMC Telecom levanta R$ 1,6 bilhão em deb": {
+  "fase": "operacional",
+  "confianca": 0.48
  }
 }
