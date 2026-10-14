@@ -1626,5 +1626,33 @@
  "08070508000178|10|Conclusão do desinvestimento das operaçõ": {
   "fase": "operacional",
   "confianca": 0.89
+ },
+ "15385166000140|10|Aumento de capital da subsidiária Aegea": {
+  "fase": "operacional",
+  "confianca": 0.37
+ },
+ "40432544000147|10|Anatel aprova compra da Oi Móvel por Viv": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "02284062000106|2|Rede D’Or conclui compra do Hospital San": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "89086144001198|7|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|10|Tupy: companhia aprova recompra de até R": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "07401436000212|4|Marco no setor: Eldorado emite primeira ": {
+  "fase": "transicao",
+  "confianca": 0.18
+ },
+ "54846951000105|6|Ferrari desembolsa R$ 161 milhões para a": {
+  "fase": "operacional",
+  "confianca": 0.88
  }
 }
