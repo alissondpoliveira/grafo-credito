@@ -37,7 +37,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 47508411000156,COMPANHIA BRASILEIRA DE DISTRIBUICAO,Brasileira Distribuicao,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 45736131000170,UNIDAS LOCADORA S.A..,Unidas,locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,grupo_inferido
+03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grupo_inferido
 45242914000105,C E A MODAS S.A.,C Modas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo

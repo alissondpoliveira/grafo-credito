@@ -1670,5 +1670,9 @@
  "54846951000105|5|Ferrari desembolsa R$ 161 milhões para a": {
   "fase": "operacional",
   "confianca": 0.85
+ },
+ "03279285000130|14|Aquisição G4": {
+  "fase": "operacional",
+  "confianca": 0.73
  }
 }
