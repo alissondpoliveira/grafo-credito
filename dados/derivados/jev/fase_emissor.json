@@ -1662,5 +1662,13 @@
  "13733490000187|1|QMC Telecom levanta R$ 1,6 bilhão em deb": {
   "fase": "operacional",
   "confianca": 0.48
+ },
+ "89086144001198|5|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "54846951000105|5|Ferrari desembolsa R$ 161 milhões para a": {
+  "fase": "operacional",
+  "confianca": 0.85
  }
 }
