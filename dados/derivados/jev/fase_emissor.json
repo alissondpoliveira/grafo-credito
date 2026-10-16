@@ -1686,5 +1686,21 @@
  "89086144001198|4|Randoncorp (RAPT3): Comunica alteração d": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "06977745000191|4|Aprovação do Resgate Antecipado Facultat": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "08336783000190|2|Celesc (CLSC3)": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51218147000193|12|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "44854238000150|8|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.66
  }
 }
