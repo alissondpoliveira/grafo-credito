@@ -1674,5 +1674,17 @@
  "03279285000130|14|Aquisição G4": {
   "fase": "operacional",
   "confianca": 0.73
+ },
+ "06981176000158|12|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "03279285000130|15|Aquisição G4": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "89086144001198|4|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
