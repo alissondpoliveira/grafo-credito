@@ -1710,5 +1710,13 @@
  "89086144001198|2|Randoncorp (RAPT3): Comunica alteração d": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "89086144001198|3|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "84683374000300|10|Tupy (TUPY3): Anuncia Aquisição de Debên": {
+  "fase": "operacional",
+  "confianca": 0.95
  }
 }
