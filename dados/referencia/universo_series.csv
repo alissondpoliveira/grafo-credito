@@ -1131,7 +1131,6 @@ SBSPF9,saneamento,saneamento_gas,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SA
 SBSPI8,saneamento,saneamento_gas,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,43776517000180,Sabesp,inferido,nome do emissor,S,
 SBSPJ8,saneamento,saneamento_gas,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,43776517000180,Sabesp,inferido,nome do emissor,S,
 SBSPK8,saneamento,saneamento_gas,CIA. DE SANEAMENTO BÁSICO DO ESTADO DE SP - SABESP,CIA SANEAMENTO BASICO EST. SP - SABESP,43776517000180,Sabesp,inferido,nome do emissor,S,
-SDOM12,agro_acucar_etanol,corporativo,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,47063128000168,Usina Sao,inferido,o próprio emissor (corporativa sem grupo identificado),S,
 SERI11,outros_corporativo,corporativo,SERRA DO SERIDO F2 HOLDING S.A.,SERRA DO SERIDO F2 HOLDING S.A.,43386975000102,Serra Serido,inferido,o próprio emissor (corporativa sem grupo identificado),S,
 SMTO14,agro_acucar_etanol,corporativo,SAO MARTINHO S/A,SAO MARTINHO S/A,51466860000156,Sao Martinho,CVM FRE,o próprio emissor (corporativa sem grupo identificado),S,
 SMTO15,agro_acucar_etanol,corporativo,SAO MARTINHO S/A,SAO MARTINHO S/A,51466860000156,Sao Martinho,CVM FRE,o próprio emissor (corporativa sem grupo identificado),S,

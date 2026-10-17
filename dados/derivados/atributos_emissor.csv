@@ -104,12 +104,12 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 60840055000131,FLEURY S/A,Fleury,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 88610126000129,FRAS-LE S.A,Fras Le,industria,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
 33611500000119,GERDAU S/A,Gerdau,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-04089570000150,AGUAS GUARIROBA  S/A,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+04089570000150,AGUAS GUARIROBA  S/A,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 08397078000101,GSH CORP PARTICIPACOES S.A.,Gsh Corp,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 08402943000152,GUARARAPES CONFECCOES S.A..,Guararapes Confeccoes,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 12648327000153,HIDROVIAS DO BRASIL S.A.,Hidrovias do Brasil,logistica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 27902165000105,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,Highline Brasil,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-02284062000106,HOSPITAL ESPERANCA S/A,Hospital Esperanca,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
+02284062000106,HOSPITAL ESPERANCA S/A,Hospital Esperanca,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 02932074000191,HYPERA S/A,Hypera,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
@@ -288,7 +288,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
 48904104000157,FARO ENERGY PROJ. SOL. HOL. IV S.A,Faro Energy,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grupo_inferido
+54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grupo_inferido
 46710597000169,FS I INDUSTRIA DE ETANOL S.A,Fs I,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23274194000119,FURNAS CENTRAIS ELETRICAS S/A,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
@@ -301,7 +301,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 42353180000135,IGUA RIO DE JANEIRO S.A.,Iguá,saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 06220197000150,COMPANHIA AGUAS DE ITAPEMA,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 01317277000105,ITAPOA TERMINAIS PORTUARIOS S.A.,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-03207703000183,CONCESSIONARIA DE RODOVIAS DO INTERIOR PAULISTA S/A,Arteris,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+03207703000183,CONCESSIONARIA DE RODOVIAS DO INTERIOR PAULISTA S/A,Arteris,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 02635522000195,JALLES MACHADO S.A.,Jalles Machado,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 26617923000180,JANAUBA TRANSMISSORA DE ENERGIA ELETRICA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 21540697000163,LAGOA 1 ENERGIA RENOVAVEL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -346,7 +346,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02387241000160,RUMO S.A.,Rumo,ferrovias,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 12229415000110,S/A USINA CORURIPE ACUCAR E ALCOOL,Usina Coruripe,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grupo_inferido
 18156217000150,SANTA VITORIA DO PALMAR ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-47063128000168,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,Usina Sao,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 43386975000102,SERRA DO SERIDO F2 HOLDING S.A.,Serra Serido,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 51466860000156,SAO MARTINHO S/A,Sao Martinho,agro_acucar_etanol,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 20514555000169,ARGO VI TRANSMISSAO DE ENERGIA S.A,Argo,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
@@ -380,5 +379,5 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 28019100000189,VIAPAULISTA  S/A,Arteris,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo
 10635691000153,VIARONDON CONCESSIONARIA DE RODOVIA S/A,Isolada (a identificar),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 23733733000130,WINDEPAR HOLDING S.  A.,Windepar Holding,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-34622881000102,WINITY S.A.,Winity,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.8,grupo_inferido
+34622881000102,WINITY S.A.,Winity,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23093056000133,XINGU RIO TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado

@@ -1702,5 +1702,13 @@
  "44854238000150|8|Alteração de membro da diretoria da Comp": {
   "fase": "operacional",
   "confianca": 0.66
+ },
+ "04089570000150|7|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "89086144001198|2|Randoncorp (RAPT3): Comunica alteração d": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
