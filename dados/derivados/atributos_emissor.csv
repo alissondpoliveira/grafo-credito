@@ -20,10 +20,10 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 00001180000126,AXIA ENERGIA S.A.,Axia (ex-Eletrobras),integrada_gt,corporativa,9,operacional,JEV (comunicados e notícias),operacional,0.82,grupo_inferido
 16590234000176,AZZAS 2154 S.A.,Azzas 2154,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.96,grupo_inferido
 05197443000138,HAPVIDA PARTICIPACOES E INVESTIMENTOS S.A.,Hapvida Investimentos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
-40432544000147,CLARO S/A,Claro,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
+40432544000147,CLARO S/A,Claro,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 13574594000196,ZAMP S.A.,Zamp,alimentos_bebidas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 04601397000128,BRISANET SERVICOS DE TELECOMUNICACOES S.A.,Brisanet Servicos,telecom,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-42150391000170,BRASKEM S/A,Braskem,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
+42150391000170,BRASKEM S/A,Braskem,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 24396489000120,BRK AMBIENTAL PARTICIPACOES S/A,BRK,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.89,grande_grupo
 06977745000191,BR MALLS PARTICIPACOES S/A,Br Malls,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 09346601000125,B3 S.A. - BRASIL BOLSA BALCAO,B3 Brasil,financeiro,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
@@ -36,12 +36,12 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 47508411000156,COMPANHIA BRASILEIRA DE DISTRIBUICAO,Brasileira Distribuicao,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 45736131000170,UNIDAS LOCADORA S.A..,Unidas,locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grupo_inferido
+03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,grupo_inferido
 45242914000105,C E A MODAS S.A.,C Modas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 08467115000100,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-03467321000199,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+03467321000199,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 05914650000166,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 60933603000178,CESP - COMPANHIA ENERGETICA DE SAO PAULO,Auren,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 61856571000117,COMPANHIA DE GAS DE SAO PAULO - COMGAS,Compass,distribuicao_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -71,7 +71,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 50746577000115,COSAN S.A.,Rumo,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.82,grande_grupo
 62984091000102,CRUZEIRO DO SUL EDUCACIONAL S.A.,Cruzeiro Sul,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.9,grande_grupo
 17281106000103,COMPANHIA DE SANEAMENTO DE MINAS GERAIS COPASA MG,Copasa,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grupo_inferido
-33042730000104,COMPANHIA SIDERURGICA NACIONAL,Siderurgica Nacional,mineracao_siderurgia,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+33042730000104,COMPANHIA SIDERURGICA NACIONAL,Siderurgica Nacional,mineracao_siderurgia,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 08324196000181,COMPANHIA ENERGETICA DO RIO GRANDE DO NORTE-COSERN,Neoenergia,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 02998611000104,ISA ENERGIA BRASIL S.A.,ISA,transmissao,corporativa,5,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
 25086034000171,ENERGISA TOCANTINS DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
@@ -82,8 +82,8 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02302100000106,EDP SAO PAULO DISTRIBUICAO DE ENERGIA S/A,EDP,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 02509491000126,CONCESSIONARIA ECOVIAS DOS IMIGRANTES S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
-07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
-92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,regra (ANEEL),operacional,,grande_grupo
+07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
 02474103000119,ENGIE BRASIL ENERGIA SA,Engie,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.9,grande_grupo
 02328280000197,ELEKTRO REDES S.A.,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 09053134000145,ELFA MEDICAMENTOS SA,Elfa Medicamentos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
@@ -95,7 +95,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04895728000180,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 03220438000173,EQUATORIAL ENERGIA S.A.,Equatorial,energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-08873873000110,ECORODOVIAS CONCESSOES E SERVICOS S/A,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
+08873873000110,ECORODOVIAS CONCESSOES E SERVICOS S/A,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
 28152650000171,EDP ESPIRITO SANTO DISTRIBUICAO DE ENERGIA SA,EDP,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 61190096000192,EUROFARMA LABORATORIOS S.A,Eurofarma Laboratorios,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 09257877000137,FERROVIA NORTE SUL S/A,VLI,ferrovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -109,11 +109,11 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08402943000152,GUARARAPES CONFECCOES S.A..,Guararapes Confeccoes,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 12648327000153,HIDROVIAS DO BRASIL S.A.,Hidrovias do Brasil,logistica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 27902165000105,HIGHLINE DO BRASIL II INFRAESTRUTURA DE TELECOMUNICACOES S.A,Highline Brasil,telecom,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-02284062000106,HOSPITAL ESPERANCA S/A,Hospital Esperanca,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
+02284062000106,HOSPITAL ESPERANCA S/A,Hospital Esperanca,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 02932074000191,HYPERA S/A,Hypera,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
-51218147000193,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,Iguatemi Empresa,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+51218147000193,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,Iguatemi Empresa,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 35822503000127,INSPIRALI EDUCACAO S/A,Inspirali Educacao,educacao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 61156113000175,IOCHPE-MAXION S/A,Iochpe Maxion,industria,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grupo_inferido
 33337122000127,IPIRANGA  PRODUTOS DE PETROLEO S.A.,Ipiranga Produtos,oleo_gas,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
@@ -137,9 +137,9 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 62070362000106,COMPANHIA DO METROPOLITANO DE SAO PAULO - METRO,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,nao_identificado
 07816890000153,MULTIPLAN EMPREENDIMENTOS IMOBILIARIOS S/A,Multiplan Empreendimentos,imobiliario_construcao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 71673990000177,NATURA COSMETICOS S/A,Natura Cosmeticos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-04992714000184,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,Nova Transportadora,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+04992714000184,NOVA TRANSPORTADORA DO SUDESTE S.A.  NTS,Nova Transportadora,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 09149503000106,SERENA GERACAO S.A.,Serena,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
-12104241000402,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,Oncoclinicas Brasil,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
+12104241000402,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,Oncoclinicas Brasil,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 03279285000130,ORIZON MEIO AMBIENTE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 75609123000123,UNIDAS LOCACOES E SERVICOS S/A,Unidas,locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 18080368000172,OZN HEALTH SPE S.A,Ozn Health,saude,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -155,16 +155,16 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 46568486000160,MANTIQUEIRA HOLDING S.A.,State Grid,energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 61585865000151,RAIA DROGASIL S/A,Raia Drogasil,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 33453598000123,RAIZEN S.A.,Rumo,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
-06047087000139,REDE DOR SAO LUIZ S/A,Rede Dor,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+06047087000139,REDE DOR SAO LUIZ S/A,Rede Dor,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 03342704000130,PETRORECONCAVO S.A.,Petroreconcavo,oleo_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-89086144001198,RANDONCORP S.A.,Randoncorp,industria,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
+89086144001198,RANDONCORP S.A.,Randoncorp,industria,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 41508382000146,RODOVIAS DO BRASIL HOLDING S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,nao_identificado
 92802784000190,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-09095183000140,ENERGISA PARAIBA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+09095183000140,ENERGISA PARAIBA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 76484013000145,COMPANHIA DE SANEAMENTO  DO PARANA - SANEPAR,Sanepar,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 06347409000165,SBF COMERCIO DE PRODUTOS ESPORTIVOS S.A.,Sbf Comercio,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 07594978000178,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,Smartfit Escola,servicos_lazer,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.82,grupo_inferido
-43776517000180,CIA SANEAMENTO BASICO EST. SP - SABESP,Sabesp,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
+43776517000180,CIA SANEAMENTO BASICO EST. SP - SABESP,Sabesp,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.92,grupo_inferido
 22902694000195,SELF IT ACADEMIAS  HOLDING S.A.,Self It,servicos_lazer,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 01616929000102,SANEAMENTO DE GOIAS S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02762121000104,SANTOS BRASIL PARTICIPACOES S/A,Santos Brasil,portos,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -288,7 +288,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
 48904104000157,FARO ENERGY PROJ. SOL. HOL. IV S.A,Faro Energy,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grupo_inferido
+54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grupo_inferido
 46710597000169,FS I INDUSTRIA DE ETANOL S.A,Fs I,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23274194000119,FURNAS CENTRAIS ELETRICAS S/A,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
@@ -322,7 +322,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 11421994000136,ORIZON VALORIZACAO DE RESIDUOS S.A.,Isolada (a identificar),saneamento,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 01691945000160,PARANAGUA SANEAMENTO S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 48533969000154,PAX INVESTIMENTOS EM AEROPORTOS S.A,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-33000167000101,PETROLEO BRASILEIRO S/A - PETROBRAS,Petroleo Brasileiro,oleo_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
+33000167000101,PETROLEO BRASILEIRO S/A - PETROBRAS,Petroleo Brasileiro,oleo_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
 42165941000125,POTENGI HOLDINGS S.A.,Potengi Holdings,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 25117259000148,PIRAPORA SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,nao_identificado
 27219024000192,PIRAPORA II SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,nao_identificado

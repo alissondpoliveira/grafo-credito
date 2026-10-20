@@ -1718,5 +1718,93 @@
  "84683374000300|10|Tupy (TUPY3): Anuncia Aquisição de Debên": {
   "fase": "operacional",
   "confianca": 0.95
+ },
+ "40432544000147|10|S&P sinaliza elevação de ratings da Desk": {
+  "fase": "operacional",
+  "confianca": 0.33
+ },
+ "42150391000170|15|Braskem comunica sobre correspondência e": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "47508411000156|15|Homologação Plano de Recuperação Extraju": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "03467321000199|12|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "16619378000108|2|Cimed&Co tem queda de 30% no lucro em 20": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "06981176000158|9|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "33042730000104|15|Fato Relevante - Assinatura de Term Shee": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "07282377000120|7|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "92715812000131|11|Alteração de Controle Acionário": {
+  "fase": "operacional",
+  "confianca": 0.8
+ },
+ "08873873000110|15|Reequilíbrio econômico-financeiro parcia": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "61190096000192|12|Celebração, Alteração ou Rescisão de Aco": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "21314559000166|15|Atingimento dos Guidances e Prévia de Re": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04992714000184|15|Fato Relevante_Liquidação_13ª Emissão": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "12104241000402|15|Atualização sobre o processo de Recupera": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "06047087000139|15|Acordos de Acionistas e Cotistas Família": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "43776517000180|15|ATUALIZAÇÃO DO CRONOGRAMA ESTIMADO DA IN": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "33113309000147|15|12ª Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "36128741000108|1|Concessionária Way 306 recebe aprovação ": {
+  "fase": "operacional",
+  "confianca": 0.25
+ },
+ "51137031000120|3|EPR Litoral Pioneiro inicia duplicação d": {
+  "fase": "transicao",
+  "confianca": 0.34
+ },
+ "18903785000178|3|Reequilíbrio econômico-financeiro parcia": {
+  "fase": "operacional",
+  "confianca": 0.52
+ },
+ "33000167000101|15|Petrobras assina acordos de equalizações": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "02255187000108|15|Pedido de Convocação de Assembleia Espec": {
+  "fase": "transicao",
+  "confianca": 0.43
  }
 }

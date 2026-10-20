@@ -1,0 +1,203 @@
+{
+ "data_referencia": "2026-10-19",
+ "n": 548,
+ "r2": 0.35309430107125483,
+ "dp_residuos_bps": 58.992612598765305,
+ "especificacao": "provisória, a validar",
+ "coeficientes": [
+  {
+   "variavel": "constante",
+   "descricao": "Constante (transmissão)",
+   "coef": 273.9749241262756,
+   "erro_padrao_hc1": 23.399561343411776,
+   "vif": null
+  },
+  {
+   "variavel": "duration_mod",
+   "descricao": "Duration modificada (anos)",
+   "coef": 9.887160017339113,
+   "erro_padrao_hc1": 1.2496368299298615,
+   "vif": 1.2356967613556327
+  },
+  {
+   "variavel": "garantia_real",
+   "descricao": "Garantia real (1 = sim)",
+   "coef": 11.358495538747711,
+   "erro_padrao_hc1": 8.805879681366838,
+   "vif": 1.3241735497438862
+  },
+  {
+   "variavel": "controle_documentado",
+   "descricao": "Controlador declarado na CVM (1 = sim)",
+   "coef": -4.332262768263718,
+   "erro_padrao_hc1": 7.031881155530269,
+   "vif": 1.554318095805434
+  },
+  {
+   "variavel": "ln_volume",
+   "descricao": "ln(volume emitido, R$ milhões)",
+   "coef": -10.380737704104394,
+   "erro_padrao_hc1": 4.371119851430375,
+   "vif": 1.9292742635795572
+  },
+  {
+   "variavel": "liquidez",
+   "descricao": "Dias com negócio nos últimos 180 dias (%)",
+   "coef": 0.2208974145997718,
+   "erro_padrao_hc1": 0.12978954445115737,
+   "vif": 1.7748300492293554
+  },
+  {
+   "variavel": "tail",
+   "descricao": "Folga até o fim da concessão (anos; só transmissão)",
+   "coef": -0.8786892647931817,
+   "erro_padrao_hc1": 0.8199671465933617,
+   "vif": 4.377057271577111
+  },
+  {
+   "variavel": "seg_aeroportos",
+   "descricao": "Segmento: aeroportos (vs transmissão)",
+   "coef": 57.01244699515135,
+   "erro_padrao_hc1": 20.282657498179404,
+   "vif": 1.2730264330915484
+  },
+  {
+   "variavel": "seg_agro_acucar_etanol",
+   "descricao": "Segmento: agro acucar etanol (vs transmissão)",
+   "coef": 126.4200009334275,
+   "erro_padrao_hc1": 20.924699772410975,
+   "vif": 2.2487225325917333
+  },
+  {
+   "variavel": "seg_distribuicao",
+   "descricao": "Segmento: distribuicao (vs transmissão)",
+   "coef": 44.37298654992076,
+   "erro_padrao_hc1": 14.401486904465171,
+   "vif": 7.634190474563324
+  },
+  {
+   "variavel": "seg_distribuicao_gas",
+   "descricao": "Segmento: distribuicao gas (vs transmissão)",
+   "coef": -0.6475879939025297,
+   "erro_padrao_hc1": 15.130247732371275,
+   "vif": 1.617590088848132
+  },
+  {
+   "variavel": "seg_energia_diversificada",
+   "descricao": "Segmento: energia diversificada (vs transmissão)",
+   "coef": 95.38079071818157,
+   "erro_padrao_hc1": 19.60963010302895,
+   "vif": 2.4718877489664095
+  },
+  {
+   "variavel": "seg_ferrovias",
+   "descricao": "Segmento: ferrovias (vs transmissão)",
+   "coef": 62.02063390939124,
+   "erro_padrao_hc1": 17.808995274486847,
+   "vif": 2.9758991303918503
+  },
+  {
+   "variavel": "seg_geracao",
+   "descricao": "Segmento: geracao (vs transmissão)",
+   "coef": 46.10910996977208,
+   "erro_padrao_hc1": 14.746601959293228,
+   "vif": 5.0263063485031925
+  },
+  {
+   "variavel": "seg_integrada_gt",
+   "descricao": "Segmento: integrada gt (vs transmissão)",
+   "coef": 15.755546483140806,
+   "erro_padrao_hc1": 14.925985706304271,
+   "vif": 2.438229485941145
+  },
+  {
+   "variavel": "seg_locacao",
+   "descricao": "Segmento: locacao (vs transmissão)",
+   "coef": -87.29098515516158,
+   "erro_padrao_hc1": 15.870752355216824,
+   "vif": 1.2939802217693779
+  },
+  {
+   "variavel": "seg_mineracao_siderurgia",
+   "descricao": "Segmento: mineracao siderurgia (vs transmissão)",
+   "coef": -57.848399704566255,
+   "erro_padrao_hc1": 15.742996331343669,
+   "vif": 1.4514454677357214
+  },
+  {
+   "variavel": "seg_mobilidade_urbana",
+   "descricao": "Segmento: mobilidade urbana (vs transmissão)",
+   "coef": 69.78076173394076,
+   "erro_padrao_hc1": 29.93321240657712,
+   "vif": 1.4267746499720972
+  },
+  {
+   "variavel": "seg_oleo_gas",
+   "descricao": "Segmento: oleo gas (vs transmissão)",
+   "coef": -6.571249918923435,
+   "erro_padrao_hc1": 22.559455456576,
+   "vif": 2.019662173168945
+  },
+  {
+   "variavel": "seg_outros",
+   "descricao": "Segmento: outros (vs transmissão)",
+   "coef": 34.325077205659454,
+   "erro_padrao_hc1": 26.32579505066318,
+   "vif": 1.4484709426556726
+  },
+  {
+   "variavel": "seg_outros_corporativo",
+   "descricao": "Segmento: outros corporativo (vs transmissão)",
+   "coef": 26.046643282344984,
+   "erro_padrao_hc1": 18.20955258047035,
+   "vif": 2.5410350671580293
+  },
+  {
+   "variavel": "seg_portos",
+   "descricao": "Segmento: portos (vs transmissão)",
+   "coef": -29.85977869368282,
+   "erro_padrao_hc1": 15.182562329952436,
+   "vif": 1.437020216777562
+  },
+  {
+   "variavel": "seg_rodovias",
+   "descricao": "Segmento: rodovias (vs transmissão)",
+   "coef": 110.52528848415358,
+   "erro_padrao_hc1": 19.56787467861232,
+   "vif": 3.667900292966685
+  },
+  {
+   "variavel": "seg_saneamento",
+   "descricao": "Segmento: saneamento (vs transmissão)",
+   "coef": 31.576201283587928,
+   "erro_padrao_hc1": 22.06670754422005,
+   "vif": 3.2630039636317583
+  },
+  {
+   "variavel": "seg_telecom",
+   "descricao": "Segmento: telecom (vs transmissão)",
+   "coef": 40.1053723102419,
+   "erro_padrao_hc1": 25.94641391645033,
+   "vif": 2.0250634228353435
+  }
+ ],
+ "isencao": {
+  "coef_bps": -13.735860585048679,
+  "erro_padrao_hc1": 24.251232187489244,
+  "r2": 0.3562377346689598,
+  "n_tributadas": 10,
+  "n_isentas": 538,
+  "leitura": "negativo = o mercado paga menos spread pela isenção; compare com o gross-up de 15% aplicado"
+ },
+ "high_yield": {
+  "corte_ipca_bps": 300.0,
+  "corte_di_bps": 300.0,
+  "janela_evento_dias": 365,
+  "n_series": 132
+ },
+ "di": {
+  "n": 553,
+  "mediana_bps": 96.42,
+  "dp_bps": 162.97240192661835
+ }
+}
