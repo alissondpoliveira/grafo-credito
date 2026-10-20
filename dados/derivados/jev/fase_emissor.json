@@ -1806,5 +1806,9 @@
  "02255187000108|15|Pedido de Convocação de Assembleia Espec": {
   "fase": "transicao",
   "confianca": 0.43
+ },
+ "08336783000190|2|Celesc (CLSC4)": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }
