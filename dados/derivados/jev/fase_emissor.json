@@ -1834,5 +1834,17 @@
  "08070508000178|12|Conclusão do desinvestimento das operaçõ": {
   "fase": "operacional",
   "confianca": 0.85
+ },
+ "28367479000118|4|Reorganização Societária - Incorporação,": {
+  "fase": "operacional",
+  "confianca": 0.59
+ },
+ "89086144001198|5|Randoncorp (RAPT4) vê receita de setembr": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|7|Tupy (TUPY3): Anuncia Aquisição de Debên": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
