@@ -1810,5 +1810,29 @@
  "08336783000190|2|Celesc (CLSC4)": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "06981176000158|10|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04172213000151|12|Renovação da Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "89086144001198|4|Randoncorp (RAPT4) vê receita de setembr": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "06248349000123|1|ANP adota critério polêmico para revisão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "28438834000100|2|Neoenergia conclui venda de participação": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "08070508000178|12|Conclusão do desinvestimento das operaçõ": {
+  "fase": "operacional",
+  "confianca": 0.85
  }
 }
