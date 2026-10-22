@@ -1846,5 +1846,29 @@
  "84683374000300|7|Tupy (TUPY3): Anuncia Aquisição de Debên": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "03237583000167|2|Copa Energia conclui hoje captação de R$": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "08336783000190|4|Celesc (CLSC3; CLSC4) registra rating ‘A": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "35822503000127|14|Alteração de membros da Diretoria Execut": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "89086144001198|7|Randoncorp (RAPT4) vê receita de setembr": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "18903785000178|4|Reequilíbrio econômico-financeiro parcia": {
+  "fase": "operacional",
+  "confianca": 0.58
+ },
+ "48127008000140|1|Tribunal de Contas suspende reajuste de ": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
