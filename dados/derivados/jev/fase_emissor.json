@@ -1870,5 +1870,9 @@
  "48127008000140|1|Tribunal de Contas suspende reajuste de ": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "51218147000193|8|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.95
  }
 }
