@@ -1874,5 +1874,17 @@
  "51218147000193|8|Transição CEO": {
   "fase": "operacional",
   "confianca": 0.95
+ },
+ "03467321000199|11|Acordo de Investimento e Outras Avenças ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "|2|Equatorial (EQTL3) registra reajuste méd": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "89086144001198|6|Randoncorp (RAPT4) vê receita de setembr": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }

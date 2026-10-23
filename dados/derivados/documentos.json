@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T07:57",
+ "gerado_em": "2026-10-23T02:11",
  "emissores": {
   "08213823000107": [
    {
@@ -258,17 +258,17 @@
    },
    {
     "tipo": "noticia",
+    "data": "2025-11-10",
+    "titulo": "Aço Verde do Brasil tem lucro de R$ 12,1 milhões no 3º trimestre, queda de 88,6%",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRjN0OUd5YTV1OWNMUHowX2FFWnVTNzgxdDB2MjRhOXA4dVpTZ2pKdV9YOVlpRERGNFFJUmFEN0JMbHJxdzRMMk5iMHlkLWJTNUFyNXo2QjVaOGJHUEIta0x5azFmRFJQZTc0Tkd2TjhTckZKUFNKVy1wNGJBN3lGa3RPUUpTSG15djRPRVR2aEJLYzVGUENPZjFpc2poT05Ya3ZRRGpfU19yYnRPTGlMSTQ0RzdhSmZjUWlEa2FBeG0ySk5RNVNxcXl0dURDeXZuTmEyQVdwONIB5gFBVV95cUxQbjhqRC1VR1duMVZFcHh5OE1HUnFkMTVQZVEyVG0tazF3a3RKck05cW5ZZkhSMXRhX2tSLVVlMGt3TVh0em9DeXNTSjY2RFQ0WmRDeEl1aVZGYVdQZDlrRUJoZ0I1Y1FkdTZ1d3llbEF6bDg3VkJTQXE3Z3Z3Znd3OWhnMUY0dTBaSjRldjFQUkJpX2dLS3cwbXQ3ZkRYTkxqYUNKbWFHRWR2Ui1Kc3BnX0k0SWw3MWgwVUV3U29NZWxZWWxJa3dPOHlWQ3VOLWVnMUc3SW1BdjIxamhmQ1IzXzAwNzE2dw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2025-06-04",
     "titulo": "Aço Verde do Brasil capta até R$ 300 mi em nova emissão de debêntures",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQT1JfZWRXRVh3S3o2SG5UZld4WkhhMGlUTDZqZ2d1UURXaklFM3pZQTJxdEw1dGdNdW51akg4amF6Tk4zWnpHV3ppcGNZRVlpMXhoVDJvMkZsMzJyLUQxTVcxVHB0VEZVQ01NRTFIVEhUTF9CRlg4Ni1kMlBPdGF0U2VZMnRsaXZIeDBZUXhhbkxaNnZVTVVoLTRvZ2J1bkZMZG5yX2VncFJLNjF0NzYyNUoyRDBRVm92blNkVTZzZzFkSm1q0gHTAUFVX3lxTE1pUWc3Y0tOTGw4SFJHUkR0MnhiV091NkloeURsOEFncW9wa1c4WFdvMmRxSy1RajZxN2ViTC1xVTZfSGFJTlhpQmtpdWN5VmNpb0FRbjEwajZneFdpaGFnbjR3ZlRnQkFKbklVSWd4Zm91MExvWFNDNXY5Zm5PNmZrc1RwOWx1Vmk0MlRfckRWTDhZUWMxSWxxQUNGajFkQjJrc0RXcmRrT0MtWXVsTHVyc0xuY2hudThnTjN1MExqeE83Mm4yMVlEQU5wdE1IdTVVdzA?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2024-06-26",
-    "titulo": "Aço Verde do Brasil faz 1ª emissão verde dentre siderúrgicas; Mudanças no Conselho da Auren (AURE3), e mais destaques | Café com ESG, 26/06",
-    "fonte": "XP Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQaDM5a1g5OTR4UVBDU0o2aERwZndDOEpreEZtckpXOXU3M3Vub2IxYlV1Z0ZCd3dyS3dtQUp4RURKZkVNZENmTGZpRmxIWWxlb1V3T3pLd3RFcnl5SWI0TG1LSmNmbXYyQjh0MTVCdU9TMlJ5RG1jYkNVMzlBVkpCYV8zb0o0UU56dmhhM2x0U0FDbkYzeUNITTZyZHlMUWJXSmk1YWlDT3Njb243VXIzTlNyVlNQR3BldVBiQmtqZUFIQWJ4c2FHMFpPalJoeUdBS0dxMFdfSmlPczI3TG5fMlhFcVRmSHlwdjlFdUQzbDE4dHdadGJnTnJn?oc=5"
    },
    {
     "tipo": "noticia",
@@ -371,13 +371,6 @@
     "titulo": "COMUNICADO DE ADIAMENTO DA ASSEMBLEIA GERAL DE DEBENTURISTAS DA DA 6ª EMISSÃO",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1322252&numSequencia=846978&numVersao=1"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2024-11-07",
-    "titulo": "Equipav quer captar R$ 1,2 bilhão com debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc3RkakF0cllPcm1Bc0FzLUNFOHNqazN0czNBU3lnSjRXQWhjZXBxZFl3Rk5ZbFRlS1JKSHlLMTg3dmltUEZReUl0Vy1fbnpmaHpfTVl0amJPb2VhaFYxMUFQSEwzcFF6RV9JRUctNDdCbHJJcFNFM3N1ZFpnSUduSmRQNGdhcG5GVFk4N05Id2JjR0w1cC1WSDBOaDFCRndzalVvUtIBswFBVV95cUxNbGhQWnQ5U2pJcDBYQjlZYmtjd0NJMFVwTWpZYnhDcENMaEd0WEhkTGdIak80U2lXRU1peFE5eWk5VE5Sc2R2MmJaeFdFUWpVVUl6VFNXeVdNMkxBbzhiaFlhSGlyeGcwQ0ZaeTE4NVFxRE51OEJ4eFJYcEtpZ3o5c3lwUXYxZi1yVFZUcDVTVzFuODdaNUgyWHdDcnJidHRLN1ZhRWlhOTR6cWNhSDFaTmlSaw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -1687,13 +1680,6 @@
     "titulo": "ARML3 - Armac - Resultados, Dividendos, Cotação e Indicadores",
     "fonte": "Investidor10",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBEX2pRdEtSLTRJQ3oxc21tR0tKQkRXYVNuajVYT0JTZEw4RENlUnhJMzRlUWlkbHAyS3pidHU4WkR2bmp5bl8taXU2RVhZT3NBM0E?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-07-28",
-    "titulo": "IPO Armac",
-    "fonte": "B3",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBWTFhRbkQ1VE51RzdpNTFXWnA4a1FnRF93b0ZCcHhJSkFNVHhpcjFXOGRJMDgyVVVBZkVURVFzdllVUmJFanBaVWNnaGpIZTZQZ0NaQmtoYUxwMHdtTlNuVVFFV2o0T01KQmhrZkRuN1Zwdw?oc=5"
    }
   ],
   "02919555000167": [
@@ -1864,6 +1850,13 @@
     "titulo": "Controladora da Arteris, que administra a Régis Bittencourt, diz que sonda interessados no negócio",
     "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE53S21vMGhMQlFabDVMYjUzVVNncURQd2swUkVyWDZtc3E5OWZ1a3l3NDhXUngzalJyUkJWbmZGT2F4b0E4ZDUtV3lMLUZNUHBWZ2E5dlUzMXI?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-04-12",
+    "titulo": "Arteris emite debêntures e arrecada R$ 1 bi",
+    "fonte": "LexLatin",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOelprYktvMndibW96U3Nhdk1QcVpHbUN5bGJReUlaY3hmVjk0WkJadENINWpLekFqSEEydE5lNUNYWkhodjBlRzc4MGpLUEdDQ05nWnI5RnBnNUdNNUNjcC13WGFZQ19XTW1sa2VhOHJvQUg5S0pPYzFhYWVWbEt5Zw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -2207,13 +2200,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-06-24",
-    "titulo": "Auren Operações incorpora-se à CESP em reorganização societária com custo estimado de R$ 10,5 mi",
-    "fonte": "atlaspublico.com.br",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdThma0tCVktYLVBWb3d2bTRuVW5OOW5RbWVfUVpNVmdDZkt5U1lKaHhlSWgyMkVrM1dONE1KbzA3QlVROFRrMlZIRGg4OWN0VGtzcmVXU3FvWXZqeFkwbFc5bDZRQm1mOUVCYVM1Mm9uZExSUHNRSUg2VmJtMTR1VHo0ZUZnajFGSmxFSVVCSGxLUTBfcmF0V2RscUpkU2RO?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-06-01",
     "titulo": "Auren extingue empresa de participações com “incorporação reversa” e encerra primeira etapa de reestruturação",
     "fonte": "Times Brasil | CNBC",
@@ -2260,6 +2246,13 @@
     "titulo": "Auren Energia obtém R$ 200 milhões do BNDES para eólicas no RN",
     "fonte": "MegaWhat",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOX0t6VVQ4OHdQNlZ2a1NhMjNpNzNvMU9uYmpmSUxkMVlualhiUEp0ZUstc1pDMi02dE1obUNXVGNDd2V3NTVqM0syaERfbWptS0hFY0lHblJHMzRSUkJaMThucG0zSng4a2ZiNUV2dG1vbG14ZWd3MlVXVzVud2p0NDNBNU1PWWRrb01Tejh3Wnh5aFBEclJIYUJHd083amgxa0ZJakhoNlVDM3czU3gzZ2Vmb2xlNFBWOF9J?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-04-24",
+    "titulo": "Auren Energia reduz dívida em R$ 1,2 bilhão",
+    "fonte": "MegaWhat",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOOTFBdGFXU1dvQjFaNS1WaURiUGFqdHN2aklTZzVjUjRGaklqc1A1QVNmaUVIbG1rak9uNEpoSFV4YXNHeGMwV0JXZDFrdjRhc3A4OFc0azI3LWxJTmhNV0dGN2lKNFU3MDA1aDl3QVdCZFdFS19tWU1STUhXZEh5MFAyRFhwTU12MGRCMHlCS3VpY3FZbEFCZVBaZGhZUmNL?oc=5"
    }
   ],
   "00001180000126": [
@@ -2454,6 +2447,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-09-26",
+    "titulo": "YDUQ3 anuncia fusão com Afya enquanto AXIA3 amplia captações",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbVAzekI3a0Q3WUotc0xVaG5HWGh5cG5fOGlPNW14aG1LWVlJMG1kLWJ1VkswZzNNRmFiQUxlRllOc0tpR3N2M2luZ1JneWpVU1BHbldmN2VLamRPNGUycDBsWTJGSUx6MlRPNXNfNXJIVllYLTFaeW9JUEJJNHdnS293TDBYTFNSV0NjNTZaWEpxTG5CLWFKOXFPOUZsSjg?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-09-24",
     "titulo": "Axia Energia capta R$ 1,4 bi com debêntures incentivadas",
     "fonte": "Valor Econômico",
@@ -2472,13 +2472,6 @@
     "titulo": "Axia Energia inicia oferta de R$ 1,5 bilhão em debêntures para projeto de transição energética",
     "fonte": "atlaspublico.com.br",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPREl2Nko4SjBIbWdzZU84NlpjRU5iOHhvdEdzNnNGQ3pmZXpTV0R1U2NrLVQ5TXFzdEttX2RPZGpHLWUydmhoc2VROWt6ZXp4bk50MU9NNnpQUXhqYzZ0b3VQUTJfZXlJSnl2T2xWYUV6bkNuU0ZKR0FzMHM5c2RDS2xVZWtGbzBuSTRGTndsZnBHbmFrNnJBTEtFTDRRVGJjMWowaUdhcw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-10",
-    "titulo": "AXIA3: Axia Energia anuncia recompra de até 3 milhões de debêntures",
-    "fonte": "BPMoney",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeXFjcUFlVXJMYlFSVGhveldORHRydXZVR2JKWm5ZMndBUC1kUDNpNDdPX2J4d3ZuaTVTelFTNjZ4VWxnZ3FfSGdFVlJ4b2l5ZjFzZjNManpGU0ZiWGFISWlWMjk2aXVLcW1YZkdLaXlpRXVTRnlrWHlaeE5jWVNZYXJBNTg1ZjhkVl9KbFZXTHp3MEdwMFhvY1VVRllnVG8?oc=5"
    },
    {
     "tipo": "analise",
@@ -2680,6 +2673,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-09-21",
+    "titulo": "Contratado pela @@azzas2154 , o @morgan.stanley deu até o fim do mês de setembro para que interessados na @adorofarm entreguem suas propostas não vinculantes pela rede, apurou o Pipeline. A marca é considerada a \"joia da coroa\" do grupo varejis",
+    "fonte": "Instagram",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55ZDZDR2syM1FIeWhLaUxXWVh2VW9YTENGRURsOE8taW5jWTE1MDhNWjhNS1NVYXNpSXFEU2Q4SnJuc2o5cEt1bVdQRElBeEtxakE?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-09-09",
     "titulo": "Momento B3: Azzas, Cosan, Enjoei, Petrorecôncavo e os principais destaques desta quarta-feira (09)",
     "fonte": "ADVFN",
@@ -2705,13 +2705,6 @@
     "titulo": "Oncoclínicas, Hapvida, Bradesco, Azzas, Taesa e mais ações para acompanhar hoje",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPczdXMlpQUWx3UExQWmNWUTJJSjA3UU1ic1dHZmE4R1RWWVZEZVlYRTh0RmFuUTB3akk0akw2TzI4QTVETG4zQVFHdjB5MW5DcEJSM29TLTVBVTlFVUxubnZLdmdyRXpQVlhkQkxQeDY0VkFReW5vejB1bm9FbHItQ2owQzVYRmFMTHdVOXBlQTRZV3JDZzFsbHBFTlpvLTBOMVN4eVFJbFBYWlI2N3NMYWU3WGzSAboBQVVfeXFMT0ZKaUdBQk9YX2tKdGp2SC1EeHo4blJyT3ZLaXoteTJydS15N0VmWlY1TkNpa3dsUldSZXpRSlhaT2VxcV9iMkVFdFpVNUk1T1ZST09fbVVuYnN3U0ctbHJWdUVEallnMHpBY0NuQjdaWmJJSnpSM085YkRvdVA2eW5oYW1wQ21qX0hNa2pucnlpdXVSeWR4RmtCWmE0UVgtMk5EZXh6TWRWMU52MThLX2tkVC1TNGozVTNn?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-26",
-    "titulo": "Azzas: BlackRock reduz participação para 4,87% e sinaliza foco apenas em investimento",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdGpuWWRPUTVVZVpYMUNwOFJoWTZ1enEyaFd5cjJFVk95VVpraVVOeTEwdWF2SmFwZW1EWEItdUlNcUlTQUs0eFlEUVpnbFFiMUQtNGwtZmEtN0NRVElNZmtlNkRCTVB1eTV2bWxjRlFXS1VranRxbW16ZXN2QjRSVW5XeVR0LS03eERad1VBbi16NUJVZVZqUjlzWlh5Mm50enIwZEtDalpnSXNoOVZjLVhLcHFBRjFjang0?oc=5"
    }
   ],
   "05197443000138": [
@@ -3134,13 +3127,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2024-01-25",
-    "titulo": "Zamp, controladora do Burger King, vai emitir R$ 500 milhões em debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQ3BEMG40WDRReWxfTjV3V2VadzlTcTFWeEpMblNyYVZCS3haMXVYcF9QLUh2eEVVamIxOXFaRU9VbVhCeFU0OVpMMjZCTEVOX2o2LVZWVE5QdXhiWndib0ZfdDI1MzhjTVBtYzBFVGdzQXVPUFNJV3l5ekxGa0Jra1pSU21zQlQtOUs2MG5ISGpfbkVxcU81QnVPWHhiSWRMOVNwTGFPbHVHTHVWNEplUEFXRzZrb2MzVVNGVExBVi04ZHdTbF9qStIB1wFBVV95cUxNOTR2eGxfdkpjMWRyZkJzbkNKeFQ0Y0hrM2dkVWg2Z3NIc2lidTdCVUlSejFlVnRjSzNrV3BkUmp3bGJVVDcwZHN4bGFLUVV1eW15UUZNckFmcGxCSTJiQVp3cGktdWdnZ0lpQWFnZFJOMGR2bGJubkM4a0xSMjZRMXdrcHBBRjAyV0VBaHdJeHBoY2RoaW5PY0RaYkd3Y0l0ZDY0c3FLajdCSlF3QTNJMHZGYVd3b0xFWmRjN29HSjBMR2JWWS1uQTVaT1JnNG1pT2t0ZnQ5SQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2022-09-21",
     "titulo": "Zamp: fundos com 22,5% do capital rejeitam oferta e Mubadala encara pílula de veneno",
     "fonte": "Exame",
@@ -3467,6 +3453,27 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-10-17",
+    "titulo": "Braskem (BRKM5): FIP Shine consolida controle após OPA; acionistas têm novo prazo para vender papéis",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVmFZOXBOeE5rUEZyYkJ6dFkwS2lMNUN0eWNLZlQwYjJNQ1NSZGVCMEpzVFZUNXpDVTRpbGZvMUNOOWFRU05rZ2llWmo5T05SM1VDNkk3U3VXZjBJX2pxY0J0YUFLWDR2SzJfanZQR1BVYTBGODNTOXRLaG9WS1RFVzgzbzFTcmFTT05EQTc1Vl9YX0pRSFQ3Qm05OWs2a0U0Y2tVRjRualBicnc2d2ZoeTFtZ2VVQ2J0MDF3eXpSeFRLSmtYSjlYZHZ1aEo?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-10-17",
+    "titulo": "Braskem: Shine passa a deter 34,33% do capital total após leilão de OPA",
+    "fonte": "Times Brasil | CNBC",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOY3VrYkhDQ2dnVHFQQU5rX3gzVk1helg0LXk0WHRMREV0czh2YVJaTzNLWnVYWS14b1JxMWhDV242OF9QRV9mbV9UR1JVdkpEcnUyTjl6TzhGck5FRGlGMDJhRGt1VVVpTDctRWZIeVk4LVpZZ2dBeHI3bk1MUi1lMGNPVEMtNnJkTlFCQnB3Q2dIamJNODZlTWNFUnFNWS1zRG5zaDUtaw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-26",
+    "titulo": "Por que o Citi não considera a OPA da Braskem (BRKM5) atrativa?",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZUFKWlNjLTZMNkpxMFRNajB5N2lEOFV0THhPU0dmNVJMQUlFbU9sMmpFcEF2dDBKQ1BqNnhmQ19XLWdON0NXUkRDdkpFekppVERJdjQ4QXJyRmdhenhTWk5BelBRYTNGLXZfeDhseFBTbHFUYlFMdW5hSUZEY3VJY0UxN2hpbVJZUllodm5JWlJmX1hEcG9CWWkyUFc?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-09-25",
     "titulo": "O que o minoritário recebe na OPA da Braskem? Citi vê pouca atratividade na oferta",
     "fonte": "Estadão",
@@ -3478,6 +3485,13 @@
     "titulo": "Ações da Braskem entram em leilão que não prevê pagamento em dinheiro",
     "fonte": "Economic News Brasil",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMmk4b0IzdVVhaHRKOVdPdXFwZmxYaHRiN01faVQ4SExGUVBkQzBSRXhfeFZjZC1xTzc2b3FpWVppeDJSdjRoUmh6TktYV1o2QUhWcmNvTXlRbGthN0tXS0MtcXc1a2dUZXN6aEZsM3RnMDhFaU9veEFoNjFNZzBSNWk4UmExMUU?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-23",
+    "titulo": "Ministério Público questiona estrutura da recuperação da Braskem e pede bloqueio de US$ 800 milhões",
+    "fonte": "NeoFeed",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQLW9zWUhMeWZRdVRWSmpmLTFkbEtiTDc5dHBFanZnZW5WakpFb2hZOXBfMjFYWkZ5U0hJX25ucTVNVi1qWDdoejN0dHhPNTJVbWhiMlVFTUdzMmVrVmk4QWFTajB3OVdqNV9vT01LMEJnQ3poRXZsYllHV01zMFRnR3JGMjFlZWU2R0VVV0xmQkVfN3JwSVJpVWlQVG5OWWZNTkpza0U2TEg2Z1JIU2ZzU1Z5OUMzcG4tOXRsbjVfV2RHMlpmRWZ3VVB5NA?oc=5"
    },
    {
     "tipo": "noticia",
@@ -3495,52 +3509,24 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-08-27",
+    "titulo": "Petrobras, Braskem, Yduqs, Vale, Oncoclínicas e mais ações para acompanhar hoje",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMm9McHB6VzJ3VlpvN0dyYWt4ZWwwenVYQV9JYmVJeUlzdnNsR2x4OHlnMzJqellXVDM3YVR1cVAzYXk3S2VldktIU19MR2Uwc09yaDhBSDBFUnpPbkZDNmR0WlNPNWtqOU9OY0tEX1Zfd3lSX2NWbFVfNC02bWFsLVVjbUtjeUVtYUU2bXp6aG5ZRmVXS0NUQlo3aEhYYmpwT1FHQ0t4Um5MaHNzaTZDbTZJTlPSAboBQVVfeXFMTkptaXRJdmgySkZYMkV0S0dGR3ZlVWpSbUJJYVg0RC1JcWljVWZYT1dpSWt3eGZYdGJRY20yb2t1eWVXNlVnUUYzM2E4RFdVaGlMTzNBT184enJrMGpIZjVOcmljS3ZKSXBiaG52Q3VHd25GbFYtRTVHNXhQM1pORUdwMjZtdFBkdkgxUUtSUWt5dGprZjZSTUdBejF1TTJOM1duV0tqT2pCS1FCendHTXFGN1FzUkNFYlpR?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-08-26",
     "titulo": "Caso Braskem: o que acontece com quem investiu em CRA, CRI e debêntures de empresas em crise?",
     "fonte": "O GLOBO",
     "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQS0U1c253NS1DUXdOLTVud09DclExMVVOa1pSWUdqYUNaa0ppTklqLVk4b2t1VGRvYmw1MXlxZXlQdUFRYkhvZjVqQ0psTHJCa2dSaDFkT3Vaeml4UU80Sm9KTXRPNk1hanE1ZEs3eWxhcGlyemhGUFR6Y2xPTkRMdFNYdFRVTXVTUnQ2QXV0SmNJSW5vV2ViMktIZWVfbG5IeTg3eEFTVUpuQUNyTEpJbjloZk5LUFhlUTFYLWhYZk5wcFdzZFBtUllfeUp3aHZWLUNnQnNnZkdIVVhONXVTb1RzRnpmS1NrbUpkc1pNSdIB_gFBVV95cUxQYmNhOVJYYzgwZzZMZ0FBQUNuVXVNMXN5OUJyVHJFYXNFZlg3SWpCWWgwa05SLXlzLVp6UVJadE9ReUZ2WUdnbExlUjVmR1p4YlkzSkM3d3pTMUxmaVg4VUNLdGdONmljdHlmNG1xaWxLTlNQOHJ6eXgtVTl2a24zVkxhNDVzdzBMZ1pvd1JBVmswNFppMHltbXR5U3FMZWhjVDNib3BTcjNXRUl0TVBpVXQyN3A4UFRKdEVvYVhHTi1HRTF5VnB6UktESjhPTjBZZTBaUnFmbFpqSkNhaEpoekNvRDhGRzM5d1RiV3ZFb243NUkyeEhIUzJUNDR0UQ?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2026-08-26",
-    "titulo": "Títulos de dívida da Braskem (BRKM5) perdem mais da metade do valor em meio à crise",
-    "fonte": "Valor Investe",
-    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNNDZkbXpIR1pHck14LWVHdnBNLUhCckpCbzR6SVRES0EtUF9BeFNnM3lZZ1ZhZzN5a3dyMnIycjB4RGdXQ3prWC03MmJBcUcwN3N0U3BVUjgxckVYdkptMHlIZGhkTmhobjc5REdGNndPanNlaW02TDZMOGFGRHBIMlZ4cjZSeW5CYUh4YVJ3b2tkUHdTbkhzbWFNV2dPLWxpZUdlZHpYbFQ2elllWDRkNHdHNHUzcU8tOVlMTzlNcU5ReFJpUm5zeVpNd2tHYktrd1BlQnlSeWx6b3JxMmpvdDNlcmpNb2ZySmdCWWVXeW12TzdPU1VBNFFYa1JPbzJSdUR4cmIyeWVvYmVRTzNBRldCNNIBogJBVV95cUxPbDVuVGtwdkFOd1NWeEg5WlVxeUEwUEVURGxocXlkd193Y3Rob3MwZTNnTGV5d3MwczdJMXR0aURFblktTmJXUHFqNExDQllxYmoxOGRXMk9NTmNLLW4xOThhY1dtZldJUktHRzIxVDVjR2hISmZxRlVRV3kySUJSTEZpbUxYM2RRdWoza1Raa3oxVjNxY2cwTHp0Vmd5cnRrWFZ2Yi1mbEQ0YndpQzVTVC1TZnM4aFNzTXlUXzUzNjJDV1ZDaUZIaFdBWm9MdmFjU2JZbjk2R1hNZmR6cHVadXZ3YUxUbE0yQTYzeHZCdm9wamhBVnhPNXFjYWdqYWpTUklQUnFRX3N2R3h5bmJDM3ZrbGVvaXNMSzRqN19NajdaZw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-25",
-    "titulo": "Recuperação da Braskem pode afetar fundos, COEs e debêntures",
-    "fonte": "Folha de S.Paulo",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTWZGOTVCR0J3SnF6bGpjSHZQX2hFYk0zTGdtRlFwRHJ5a1lwM25VVGF3Z2x5WUItcXRMMzlNT1VseWR4WlJ4RmgtYUNfdjhneXIxdjdxSE9JOHJ0OWpmN1VONVlBd2FYR1d0QjVSc2E5bmE1YU0tM21pZHg2U1g3Q20wSTdVTEo1VmVjdVB4dWdxai1HLW9yUThreElLV20xd0FadG5BWWhtOWFobzZVVg?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-25",
-    "titulo": "Braskem (BRKM5) tem R$ 3,2 bilhões em debêntures e CRAs em circulação",
-    "fonte": "Investidor10",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcXZvMjZSU25LaTJtZktZUjdJUE5yMklLblFub3hkV1ZQWU1CLWxKZjJ0eHZieHhYUnlpandWUmJ4UlVWclBYUmF6RXRJQUJMbXRRX0RrTlB1V1Z2SS1EanVXZmlkQTBoSGdzaEp0OV8tbVJPcVQ0SFBjbFpHVTVnMWRFT0lpczduMHBCYTF0MmlPblI5aFh6VEFtX3dUd0k2RjdIblBhMER4U0tUTnVOT9IBtgFBVV95cUxPc3ZjelduSmJRc195QU1ZMHg4VWVXYTBaRHFqMHdoMTl5WVdzVGk5Mkd2dFo2MkpXM0JYck0tZHM4aF9KNlp4UUlDcndIVHl5YXdlNTB2MmdoTHAtbWgzeFowTVB6d0pDc1ExS3pvWTJrbmo4eWZtbVVrSDl0YmFRMER4YXVGTXZFTWswNkM5Zlc4V0w0VHY5T0xuSTVVUkRNZEtIY2JnWUo3YWtZMWtEaW5BNzZrUQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-25",
-    "titulo": "Recuperação extrajudicial da Braskem deixa quase 10 mil investidores de renda fixa em compasso de espera: vou receber meu dinheiro?",
-    "fonte": "Seu Dinheiro",
-    "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNZHNacjJWSy1fbzBWNnFHc1RFd0Z1TEhVU0xxTHpmSXVqcGJvQklYaVpQM2s1TmJZTVRZRG11bVV1RUdEd3NrV2VHX0xReGl2OHFNTlBGSzUtc0tMQmtfeUpINlN3ZFBtVlM2Nmx4RXFYeDM3c1BGaVRqX0s5cGtadUJnV2J4eWg1U2NEYndlUU5FZmRCMmFua2trNEJUSGJ0YkM0NkdMSTduRFpPcmpsOC1lS0dacHZyWU9JOU9UVU5CNTctZlJOWTV0RkRGbjVDdVFCVEptYUNMOWhVTzMzTmo5T1FoVERtd20tSzVONGkxRTA3MUI3TjYyMnFqLXBPLW5ta1piQmFVTWM?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-24",
-    "titulo": "Braskem: investidor exposto à dívida pode perder com recuperação extrajudicial",
-    "fonte": "Monitor Mercantil",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOVhESHJUN1dJVXFWVi1PcG95Z1hCYW0xS2pKYTdRTkRTOWpfRTR2VHZDRWotNkhxUGdrQzVRdkVtRUVUM0FteGxNak5jb1ZCUGl2RWxJMW9WeG9TVXAwb0Z0dWRUZTdUelFTMXFnZ2V3OUI1czQxWk81NFlzWTdPVFd2RWJ3cDJIYkROSUdKM2RnV1RuWS16TXJaaTBDeFozbmJrU3MtOXBHWFhGWTg4NEtYV1Q?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2026-10-19",
     "titulo": "Braskem (BRKM5) tenta destravar dívida de US$ 11 bilhões com nova proposta a credores - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQLTBQRi1SRGtVUEpIUEROcWxoNFp4UGdMWUd2a2RsRFpEWTMxQUZrVC1kRzdLd2VaQzVGb2g4S3Q2aEZQcFg2ZEtCZmdGZUJqQUdDZGtjR0VIWVRVZlZPcThOeExyX2FEeTF1Zkk0VDcwcWplMWFHNnY5eGNTOGtuc2FWY3ZEYTZYLURyZ9IBjAFBVV95cUxQLTBQRi1SRGtVUEpIUEROcWxoNFp4UGdMWUd2a2RsRFpEWTMxQUZrVC1kRzdLd2VaQzVGb2g4S3Q2aEZQcFg2ZEtCZmdGZUJqQUdDZGtjR0VIWVRVZlZPcThOeExyX2FEeTF1Zkk0VDcwcWplMWFHNnY5eGNTOGtuc2FWY3ZEYTZYLURyZw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNblpNTmo5c0Z6YW1ZbHRUQm9fTl96VTFiSUU3VFhBNlN1RzVSWnhCVU5QRzZsUzhTSzBQTkNXQWZyWWszcHE1bHpwOHFlWjFmMDVaZ0t2RTF2MTJKaGVVaW5OVmhDSGoydHdFS0ZKM2R4UkxZUGVwcXJpbTZ3V0hqSjNISXliMWvSAYwBQVVfeXFMUC0wUEYtUkRrVVBKSFBETnFsaDRaeFBnTFlHdmtkbERaRFkzMUFGa1QtZEc3S3dlWkM1Rm9oOEt0NmhGUHBYNmRLQmZnRmVCakFHQ2RrY0dFSFlUVWZWT3E4TnhMcl9hRHkxdWZJNFQ3MHFqZTFhRzZ2OXhjUzhrbnNhVmN2RGE2WC1Ecmc?oc=5"
    },
    {
     "tipo": "analise",
@@ -4232,6 +4218,13 @@
     "titulo": "Camil aprova emissão de R$ 650 milhões em debêntures",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPc3l4a3pCOFJ1N21hV1IyVFJodnpwS1R2UG5iRHN0ZmJycXVQVzYzZGdoek1NdjAwSnFTY0hmWFpEQmtZczRNUC12eXdlMmw2YnFmM3dWNm50WEdBNUV3N3dYeGhLaFpiN0VvWW91M1E1M3lHRjh4Yi1DM3VOekFmUnZlVzgySWY4dGh1SzY3a0FUdEFLVGQyQ0c0SF9mVTBILTh3NHR2UU1UWlBDbHRma2FkVdIBwgFBVV95cUxNZkFuTDdlb24yX0NVUG9nMmp5bFpydEE1YVBSWVpra296QW4tT19zYlJvUWp5clU5YXQ1cEpPekNuY3hJYVNVYkRyY2k0Q19DSmg4QXVpUkFzblRTSXJCd1ZmZDZxRjVFYjJrbHJaTGpGb3pOV1VQcFZsQTdlNmdrT3N2MDk4UzFPZHVMVEZVUkdrM2tFTDU2WVVSeEd6ZDVOeWpyeWZ5cWNDNjg1VE5nZmUwTE5PN2dkeHZ3SkVoY2wxZw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2021-10-08",
+    "titulo": "Lucro da Camil diminui 23,2% no segundo trimestre fiscal, para R$ 106,5 milhões",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE90dnJ1UjJHbTV4QVcwVElGYXRJcE52QWdTaDNCSFFRNjB5R0YzYVNoRTllNHlwZ0ZKV2Y2cFV6Ym05dEFQSTlZNzhRcUJONUdySzhvbXFfcGQ?oc=5"
    }
   ],
   "82508433000117": [
@@ -4528,10 +4521,24 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-09-22",
+    "titulo": "Momento B3: Axia Energia, Oceanpact, Santander, Rede D'Or e os principais destaques desta terça-feira (22)",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPT0FNNUQ3VHUxc3AzN1JxdXkyM082a01JODhhSzhjRnlqdk9ub2dpVFdFRnk1T0hENFBOWWNFYnN1bTZtazk1STVyRmxRcm9vbHoyeU9JblJiQTlFTWVDcVR0a0ZZOUp2bmM4ZEs2NG81ZEtKcVUzdHNPX3RxQXVwMWRtdXBFQkZ2UUV2M3U0Q0pWOTRGR0dQTlNocGJDTUdfeGdHZ3UyRWE4Y2tkZEVzN1FGSU1aU1V5YlpGUDYyS1JsOFFZaDB5b0E2QXVVVXNJWnc?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-09-17",
     "titulo": "BNDESPar atinge 11% da OceanPact (OPCT3) após incorporação",
     "fonte": "Visno Invest",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTGhDMGROR3hyQTBQUE5nNFBReHd0SE1CQWh1ZGpCWlZpNTJZenBnU05veFBYVDlCLUR5ZC00NVFlTHJ2aUdTYUlYbTZ6ZlVsU1NlY3dhVFc0MjB3UW1HS0d1c2xjVEFWYjdza1JnMnROVFk0dEhmTENsOEFXXzhjd2VTQlRISU5DYUZ5SnNiaHNzMDNIYV9wMw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-01",
+    "titulo": "OceanPact (OPCT3) anuncia combinação de negócios com CBO",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbjV5dWtveTEyd1h4NlhwNmFidmJhMHZ2UlhCVzVEdDdFZ1dMcklBUzBIMFVaOEE0NkVkOXVFLU4tVnlkNzlZVlBYbzA3SVZ2XzVfdXloZGIyM1ByNWdIazBfTVRMbzdld0ItcXZwOXBhN3ZSaFFaeEN3LUlLWWZQbzJ4Y2R5ZG93c1VpSmw3ME9NM1ljM3pj?oc=5"
    },
    {
     "tipo": "noticia",
@@ -5153,13 +5160,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-06-30",
-    "titulo": "Energisa fecha acordo para entrada do Itaú na Denerge com aporte de R$ 1,4 bilhão | Junho 2026",
-    "fonte": "XP Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTFdNUTAtMXYwOUpUX09XUUxNMnhYcUp5c2Npd21KZkVpQWNSM2ZDUkJydHZFZzE2dkJwb3lvdUhMcGFHX2Z0M2tvemRaSXlxeC1rblJGQUZRU3RMSmQwYjJKdFlWVnVuV0NpUEpkMUdSNlNuNW5iN2t2eXl6ekxiZWxIdmlaOHpheUxRM0sxOHhrTDFJ?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-03-16",
     "titulo": "BNDES aprova R$ 1,05 bilhão para distribuidoras do Grupo Energisa no Norte e Centro-Oeste",
     "fonte": "Valor Econômico",
@@ -5775,7 +5775,7 @@
     "data": "2026-09-17",
     "titulo": "Celesc (CLSC4)",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4weGZvaklIY0lGbUZzVklyZi1sYW5ONURIc2pKNENUREdJc21PVkVqZkJoY2dSeVM5TVkyZGwyNnJpWWxscnJabG5Tb0ZZN2hjTnBMd3B6UEJnSk1OWktNbUZJRFdQUlFvbV91NTVhWF9LbVgza0FR?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5LdG1nd21iV1E1NC1ndW16ZzNMa1Q4ekx6NGd6MzRScTFndzEyMF9TSndBUzR1ZWttU2U1RjhUQkVDay1pWTBSY3N0amkzZkViYU1OSUZkZUZFdnFDeTg2VWhudzV2WVhtLWc?oc=5"
    },
    {
     "tipo": "noticia",
@@ -6050,7 +6050,7 @@
     "data": "2024-03-19",
     "titulo": "Cemig conclui uma das maiores emissões de sustainable bonds do mercado nacional",
     "fonte": "Agência Minas",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSy1YdGxrTEM2XzhYdGdfS0dDWlZuRjVlYmZYc3l1MFM4TFFWZk8xVEpTYmxubTdWcEtfNlNhZ3hORVpxMGFUa01yZzQ1T2Mxd1FrVGhpdGl5bkROVUJTbFlmYV9fMEpLWjF1N0dZOUNvdDNGVVFuei1HWVhJY3BRZkh6Vk9NYXFQdTh5V3hhRExCa0lhY1Ywb3F0R0ZCRlNkNWU0STQ0ZEprc05VdG81VndoWlR6NDVJbnVJSWFkNy1OOHhhUUdkaA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORlAyMk5mVHhwX1BTbzM0aHV4LS13NG1OSUdCcXRjOFVqc2xyZTNvSHk4c0pibHNVNVdWQXR5OTJlOTdXTUJLdXhycDRNNlJTU0p3SDNNMFNMVmpNZkNpdllkQzl0ZjhUMDdMdC1DRkNPRnR3Mkt1azVtV3lUTHRmbzBHd1ZncUZyNkhwVV9mYk4zLUpBRzRpUlB0ZTBpVjRqZ2FRc0gybUJUTThPaXRxSWk2ZUgwOXdXMWV5Sm8wbw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -6095,6 +6095,13 @@
     "titulo": "Notícia da Cemig, Porto, Totvs, Unifique, CPFL e outros destaques corporativos",
     "fonte": "Finance News",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZU9VYWY1cVRsdUtzZmZLRVJ3MHFfVVVvTkcyNy1HcFN5OHBERFpBQ2VReVlOZ0c5VkMtQmlFQlpVc1FWMFhLRWswbTlBVXEtUk8xLXh1MHVIZ1BGVkVScWhSQTNGZHVhNUkzeFpMTmNTcDVjeC02UndhUmtaTnRiTGtHTEs5TW5kNVJtbGhadmdMRUlRbE9RNm1QZkJMZnU0U0tDRS1TbFRfeDNYbkxV?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-10-04",
+    "titulo": "Moody’s Local Brasil afirma ratings da Cemig",
+    "fonte": "financenews.com.br",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWElWSEFoTzlDTy0yY2FxVnB2T3JtQmdDci12UVVrU21pbDYyWDFGN0VERDNSaW9MSXdGMHAtamJTZFRJd1BSQlNidkFLZ29IeUtoVlRGa1NLSzRMTjA0dmFNVTc3Y01GZTFpX3FmQmQ4UzZaaDBJZ1MzNlkxV0FPZURwSTVzQQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -6736,17 +6743,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-14",
-    "titulo": "BlackRock atinge 5% da Cogna (COGN3)",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9faWJ3eTZEbXBaekg1cGVJN1NNeFJoalVKSlE3Z0FNc19ma3o0MHpIWFp2UkxMYWh5RmNaSmx0eW1uOUp4di1BRXJTNGh1RklyMlhnTTNtenNvV1l1Znc4ZjBPRlhJeGNqZ1BaTkkxTHNYMDF2X1NkRUNIcw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-17",
+    "data": "2026-08-18",
     "titulo": "Cogna (COGN3)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5LMTNvQm1iQVJBNEt0Yk9jZUhoa0pkRjFQb2F6aVdvZVExc01GcXdpcjlvZ1BaaVZHdy1TLWRiMGdOQXJQSEhla0U3eE5SNjJ2aGN4bkVIVWkzNDdGWE5vemg5emVnSFRxTGc?oc=5"
+    "fonte": "TradeMap",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9hUjh3dUpDZlU4XzJuX1hMR2hXX0NtdDZ6Rk9wTEFUTVNEM1hpbU1PRnRfRl9oUkdsMUV2czlGUWQ5UFZUZWlxSGFGR0k?oc=5"
    },
    {
     "tipo": "noticia",
@@ -6761,6 +6761,13 @@
     "titulo": "Cogna (COGN3): prejuízo aumenta 39% no 3º trimestre, apesar de receita e Ebitda maiores",
     "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5uc2FCMmhUTlljaHRnaFBQbEpiSHN4ZmplNXNMZ0dzdnhGNVRiLVJiQ0JvcHNlRDBnb2RjbkIxV01QUlZKVGJFMnZ1THNManlnRkdtY2dXMko?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-06-30",
+    "titulo": "Cogna vai emitir R$ 500 milhões em debêntures como lastro de CRIs",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOOVJ3c1pLRm1vOGdXU2h0Si1xY3ZuSW5fbXhNRzZkREtiU3p2ZVZBeHJkeDVxTnJ3djI1Z2FuTEFwaFBQZjRwblp5NU5UaVhwWDBETkVDWWhtR244M3pMU21maGREdzBVRUp2Y0lFUll6UzlUNkM2bXhxTTRBcjNxMUhDd05uczVkSDI5UGFPaGlqRG5kTFFxLTR4Ulh0YVRoVU1nRWE0VWQ4elJlb2lIdmlnZVV4R21TQy1XN2lpSdIBzgFBVV95cUxPbV9XZU56bzctZ3gtLTl6T21XVTZuOW8wX2V1U3pKT2RGaVVIMDZqZmlSWkw3NUh5bHktZy1LWEFXLXJHQTlObkNZbl91Ql80dDNNSTVBSXM0dUt2d3BXalJERlZjNFI0ODlfZ2Z6czR5SmdPYmw0eE9lUjR3aGlOVDgtV1k1a1lTbWZiREdET3NCSTI5VnlQa1RTQUM5TElMaHR4MlZ6Um0yWG12emNnQWphM1FJbEp6cjNyY2RWVXVsamp3R3BHaFlFNXA5QQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -7839,6 +7846,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-07-13",
+    "titulo": "Cruzeiro do Sul (CSED3) anuncia 60 vagas anuais em Medicina",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQkdJM2NVV1FxUGhIYWZKWjhiNWxDY1BTR3ZXZVpZSHV0NUtZZ2x6bjhaZWZTMmdjMHExZHJjekRMNTRSRGRNTW5MaHQtTEJIcmI0MFZWY3hoV1J6MlJwSGktaXhpcGpOSk9RM1hVcEFUUzUwRzB6YjNqd1FDMEhYMUJrTHZ0SUZTOHNjcVZzcUd5Rjg1V0lIeHdDbw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2021-01-22",
     "titulo": "Cruzeiro do Sul pode movimentar R$ 1,37 bi em IPO",
     "fonte": "TradeMap",
@@ -8567,6 +8581,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2025-10-29",
+    "titulo": "Isa Energia Brasil (ISAE4) lucra R$ 550 milhões no 3T25, alta de 27%",
+    "fonte": "Investidor10",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYmRGQmctSUM0bnVnVXhfNWMzR3NQb2xUUjhRSGsyYzlwVHJQTmJoWVQyS3BrSmlDakZ1ZlpHb215TTRVT3BoOE1nbllDM1ptek5nNVBCUklZbzM1di1GRURWY0VyX1Y3VzB1dG5iTThfRWlMMXItYllOc2todlNaVE9tVjdEanhSSmZYdkJUNnB4eG1LMzN3Smd3YUZkUnQzdnNvSDZkbkZhWkk50gGyAUFVX3lxTFAySHJpOHFjeXJCdFBkMG9YSXJDRWZFZTdqNk1valpvbUUxaVphTTliRjF3elZBV0dQZUxWcFlMZExuVkNYbzFzSEEzRkhmU3NKRE5LU1dUYjFLQzQzeHc2bHVuLTVHNHc4c2RQeENFZWNiZ2ZIRFo0YjhjeTE0eTQ2MnFTSnZoaXpRc2VOVTc4VS1aVEZGX19EZ1hvU2RMWlUyX1p1bndMdk5nOUpqd1JBbkE?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2025-10-20",
     "titulo": "Isa Energia (ISAE4) confirma captação de R$ 2 bilhões em debêntures — mercado segue de olho na dívida da companhia",
     "fonte": "Seu Dinheiro",
@@ -9115,13 +9136,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-23",
-    "titulo": "DEXCO LORENA FIRF (54.936.545)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02VDZPanV4ZEVETUZHeXlUdl8wY0g2TVJ3MmdiRDRVeHZTLV9lTUNVcDh3SUI3amYtTW5uN1V1TEg5cnJXb1FscGlMb1NHa0NXajV1NjhrMVg?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-03-11",
     "titulo": "Dexco: Atualização de crédito - Março/2026",
     "fonte": "InvesTalk",
@@ -9154,6 +9168,13 @@
     "titulo": "Dexco (DXCO3) vale no mínimo 20% a mais? BTG Pactual acha que sim – e diz por quê",
     "fonte": "trademap.com.br",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WTkY0ZTlKdDd4eVVkY2s3eXhVYVVHMnBKc0EyQWVjX2t3LWdoTDR1cmd4VnZ2ejRncnR1aFp1ak1iemFPdnNya09DNTVVbVpybk1XS1JvRUc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-01-13",
+    "titulo": "Após ação cair 28,7% em um mês, Dexco (DXCO3) aprova recompra de papéis",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAtTG9ZdmU2YTZNbUREWHNpeGVLRl9vS3FIX0tUSkNnZXdadnVYZmFjRGVsQ1JmR09yaHNNalV1ZjZCcno0dUVZWWlSREJwd1lxSTF5eWlXdjM?oc=5"
    },
    {
     "tipo": "noticia",
@@ -9266,13 +9287,6 @@
     "fonte": "Pentágono",
     "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=72795",
     "serie": "EDPR13"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-10-03",
-    "titulo": "Governo de Goiás, por intermédio da CELGPAR, realiza leilão na B3 para alienação de participações societárias",
-    "fonte": "B3",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNVlFFX010cURpRnBRYTBjenVoMlN6ajlVOHFGTWRfdHp4cWswTmpJekJRVXJJYkhSd19SOUhIa0xiaWpJRDJUM3hzeHltZzBPUV9FVGZaTk9ENU1TWFp4X21ZUUQ5bUhfbFZTV1MzaWdOSEN3ZVRJTThkMlZRSkRfQW0xTnNqS2UySHZpV054N3J5OVVpYmxTOW1nUHhLbV9TNkRKeDNKZE5uSDlORnJoSlVtRzhqNFBLc3hxalRNUEQ1dUJwQjlWY2xPQlJwdWFvSmpFb24tWDdrT1lkdGRRTXNR?oc=5"
    }
   ],
   "07282377000120": [
@@ -9687,17 +9701,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-07-06",
-    "titulo": "Engie lança oferta de ações que pode movimentar até R$ 10,5 bi e leva Jirau para dentro da companhia",
-    "fonte": "MegaWhat",
-    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOQUNVdjlsTVdVbmE1b2JqVDNDTTVaNU8zdUdLd19oR01EbzZKSWJZMnFQWnEwcUxFekw1bDQ4ajZMNmp5SWtvLWlSbmtNTWpLQzU4ai1mMGs0Y2R4M3NielJSZ3lDd1JNbkVCNWx3QjMwRl9kdWZIS1N5YjFNWlFVTnRfVjFFR1c1N1ZzelgtUTBodTJNUDU2UVVjNERJU056M3lNdnl6Q19tZVZLMUZMcEstVHpWQkp5QnhpaWQwMHNjTEpjNW93amhZdmhWdWxWRFVEUkJnUTREUk1rcWhzLTBXUHowcjZ5OGRqUg?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-12-15",
-    "titulo": "Engie (EGIE3) autoriza análise e estudos para transferência de ações da Jirau",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS01qVEdCU2lScjFYQWFVVmR1SFVpR05qajFIZ1BONVFJOVNodVphbGhpQUFNNXNjS3E0QXNxdTA1N3IxdUFLaXQwX2VGNHQ5SmFVcllILUJpT0Z0cTNDME41alRYTFVFTDlLRG8yb2p1cnp1S2hDVUl0bWtVY2gxb0c5WGstOWZMd0VRX0k5Z01IMW9pd3VzMEhpN1pHaWVzZ3o3Rmo1NFhTSjhvZGY4V09jcFDSAboBQVVfeXFMT3NCcHU3ejVLX2llUDk3eW1lcmZBRTExWkVCWTBZaUliTDdtYUtKSWlXOE9ueUNzNTRraThvY2ZoNjFDbHZVM2Y2RXgtN2dXMHI5M3k0ZWVUU3pQQ0hBcWstMHZJTVJIemoxV3R2Ykw0bXI1bWp1UFlTOHNLbmNlQmk5VTh1NU50N3hjbHhKRmxRZHViYlR1R1hWZl8zaHhUZGdjTmpuUVFLeTN6Z0Z0aUwtU0hWOFBfOW1R?oc=5"
+    "data": "2026-02-27",
+    "titulo": "ENGIE Brasil Energia anuncia oferta pública de debêntures",
+    "fonte": "Clube FII News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVkhpbm1BaUdBRmxtLU9qYWFZdGo2SXRiNm1sdUFKcmVlamgyLUo3U05rN1hUZ0FJckxUcjU0NVRWUWhGdHBIbkN6d0hqdzNTeUREdmNZdVpIRmZIWEdxeWlsTVRSTDNxd1FDd09OUWdhRWlFbG1kWFM0bWRzVkliVXd5TnRfWVRUYTlZaDVuTlhRYmM?oc=5"
    },
    {
     "tipo": "noticia",
@@ -9715,10 +9722,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-04-02",
-    "titulo": "A inusitada comissão que o banco BV recebeu da Engie em emissão de R$ 2 bilhões",
-    "fonte": "NeoFeed",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYWxYVkpqX0xjQk91UlRCS1FTaUxSMGxWSk8zUTdDb29JaXlteWd6VnROdDJ3S0F0OHBHWWJ1QkE2UzNHbnRmLVZVMkd3SzF6Y2lrNGZwNTN6QzMydWI2Rk1oQVNaN3VydHA3eEhTMDJjZnlxVDZ6M25UeWFRNmRwWTFPd2toeWk4S0lYWjF5WGRURnhKWmVQLUtaWFVTZXR0YmRsN2c1ZkdadlZmYlk3VQ?oc=5"
+    "data": "2020-09-28",
+    "titulo": "Térmica Pampa Sul, da Engie, pede registro para oferta de R$ 582 mi em debêntures",
+    "fonte": "Forbes Brasil",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdVRtTktqc1VxSHFISkF6d2x2YlhfTkxHWVRaWlROMDlBMzFOUzN5QnhKMFVYb01Xb3pGTWJVSTBWWWgydTZiY1RFTGgzYVBpQkUzOFVkMjJaTU95YW1jbU1ndzFRRGhhYWJvSDN4SHIwVVpZX0J6eXgwU190TVdYNGotWnNWRVpZb1E4YXRRMGZLUlFZbnB4SFRnUjYxZEF0aW40WkcwV2NLTG01TmM1eUctajlxdlM3eEZTTDZMMA?oc=5"
    },
    {
     "tipo": "analise",
@@ -10518,20 +10525,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Brava, Eneva, Itaú, Mitre, Lavvi e mais ações para acompanhar hoje",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdE50dmpiajNocTBRNWV4Y0RpV2M0NW1oQU9Eank0UTRkUzV0VzlmaDN3QnA2czZyMUtaVUNDRXJ0VmFkeTJ5b1VrQTFtd1I0VFVuTmQyTFJ5Rzh0RVpLNUtqWkZSWngzQjNSWGg3a1Z2VTNzOXdfU2E1YVd0V0xyTFFscXZOTkFoR05nUzRTUzlZeXB3Y29LQkV0QjJ6WjZ6SnhN0gGoAUFVX3lxTFBDYTRMdjRfN1BsbVotalc0akFRNG1pMVFhbTdEbmxmZ3hYMGx2bXk4VWpFVVpDc1FLM2hWNFc0dWtqUUlfMTlDOFNsdnphWTJaUnhYY3hJVnE4RTRLXzhYRDYxV1pwSnBYV2pfa2F3d3R3TFI5QjI0OTJIaDQwb3Zjd1VXMHgtTHpqNW5mWFlUWFRENkF6eGpLMlhQS3hWdzFjdXFhUnNjZw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Eneva (ENEV3) recebe R$ 1,8 bi do Itaú, Klabin (KLBN11) alonga dívida e Brava (BRAV3) acha gás no RN",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5IYlplQXpaVFRZYWlEZHpaa3Bkby05YjB1UG95SmNnMkdkUnFNMGtkZXFIXzFIQmpxeUlvdUwtLS1RSkltVEREVG5BQTg0NnVVX2QwMlA0M2U?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-09-24",
     "titulo": "Eneva conclui etapa de programa de gestão de passivos ao alongar e diversificar dívida",
     "fonte": "Valor Econômico",
@@ -10553,20 +10546,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-24",
-    "titulo": "Eneva conclui operação de R$ 2,4 bilhões e alonga perfil da dívida",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQR0k3YlhaLW9vdWxXcWJzRlE0NFV1OG4tMHBzVTJmQjZLbi0zVFFwSFBrQlFiYjhuV3VqZGd2c3M0bldUSkJGUjNjNGI1Q2hHMDVBcGRiZ3hhbmlwb1BNRlB5M2pZVFYwQ2FiYVc1S2VEM09hSXRwcVVIYjlwa2RUTjdBQ2lwSndSaUhoVjg5UzlhNERUQ1lKUG9JZm5lVl8wTjk0?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-24",
-    "titulo": "Eneva conclui primeira etapa de liability management com captação de R$ 2,4 bi e alongamento de dívidas",
-    "fonte": "Cenário Energia",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUjVMVXFlcjU0VVQ3T1kzR05La0xFTlNUeXdndVUxVTg3QTJtVUhTRUlEVm9xbjhUZndxam96YmZyelhhRjR1dmxwTV9ZNWtVWGROdkYxbUNFREotRVJqU1Y1Zkl2c0h2ZDY4bUhxdld2WFRVajY0bWxzQ0ZzV3VVbmJWYzU0RWRUWVhYaktOSS0xYjdVb2hJ?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-09-22",
     "titulo": "S&P Atribui Nota BrAAA à 12ª Emissão De Debêntures Da Eneva",
     "fonte": "Cenário Energia",
@@ -10581,10 +10560,38 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-08",
-    "titulo": "Eneva (ENEV3) ou Cemig (CMIG4): qual ação comprar?",
-    "fonte": "EuQueroInvestir",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14cGFyU0ozUFF3TzZGanNSUTNnN1VyQ1NsVlZKOEx3bkJ3THdRNk4wUHM2QjA1QUxYcWtpSkNPaTRPa2txbDlidnNJWGlpSkczVWRLeVZhSTN5dVFhd2RBUWp3WV9tcXFqbHBnNTVLZWVGQkRh?oc=5"
+    "data": "2026-08-24",
+    "titulo": "Eneva vende R$2,4 bi em debêntures, sendo metade ao BTG Pactual",
+    "fonte": "CNN Brasil",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQU1FsTmotQnFYTTMzZmtOUldlTWVWOGZvcExaVXMxbjhjY05BbXd1YXNKdVZzblZUMmxMT1hMcENTeHdxT0hFdFpqVnY1V1lJTmV5R1cxN1I5aS1JSjR6bjZiMXUtM0lSMTlsdTlUY1g4NlJaM005QkE0ZE1BMjZNNUtuUTFqdzFhbWlSNHl6LTMwaG5hNVlVU0M2SHY?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-24",
+    "titulo": "Eneva movimenta R$ 2,4 bilhões em debêntures e BTG fica com metade da operação",
+    "fonte": "Balada IN",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWlWZzN5Z0JOcjFUX2JwNGZ2RjRib21jOE9sZ0Y5dWgxbkR3Q2U2U0NDZlNoSk1RVi1sZ1htcWtBcWhQQjZTRlFYZGJTQzdrc0VuYWlsQ2U1eTgxOEdBcWNxY1dRTXE0VGFWS3hDWUYxN1QxYmpWaGwxalhIMFBlSnpUeXVtY0kxVHdkYS1Vb1M3NGg4UDBDMFM4bi1famdzY0NDaE1jWkZvWS1WRTltamlnZ1c?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-02-10",
+    "titulo": "Eneva emitirá R$ 2,4 bilhões em debêntures após bookbuilding",
+    "fonte": "TAGD Advogados",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNM0o1ZjdmU1BOcERpVlU2RVpoanZ4S1lXekZOYzhJeDlpbE0zbjJXR2JGbWx0YjNNNE5yUG9PQTc0bmdieUJSaURsZW5SOGxnSHN5OVRkTm1QZ2JkcjI4eXc1ZEJQSnRRdEtWekw1Ui1Rd2o1RlVvbjIyVnY1eE4yXzhRdkpKZl9GRlE?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-02-10",
+    "titulo": "Eneva capta R$ 2,4 bilhões em debêntures e reforça posição financeira com emissão avaliada em “AAA(bra)”",
+    "fonte": "Cenário Energia",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNZlNQRkNqUUtUdHd0NTMyZXNZeGk0RVpPR2d4UUh4OXZXdlZuSWo0dlJNSm9tTUZ3QzZJZG44V2k4eWRXVGxSQjZvWDBmb1k1bmhHMjNKaTFRaDdtVUlXb0FudFJjTWZOWE9sWFNWU1FocmlCWkRGVXM4bnRhV3ZVRzFxa25FXzRKcXlGQldhZ09GaGN0c2dobUdIajliMkI0T1VKdlRkZmxaTmxzOXJhMWlCNE1TVkN6b29USEhLZ2lIYkN5WERta2k4Z1ZJTXVhWWgzdUU2dw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-02-09",
+    "titulo": "Eneva (ENEV3) conclui processo de emissão de debêntures de R$ 2,4 bi",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYVV5VGNZS1RMQ3lCWDZGalhOb29Qb1VoR1JyZ2RQdTlRanNubVpHUnh1TjRESHB6bjN1TVQ1a3pkc1J6UTl1WlAtakZiWlV1WkdyVmtmcHpkYTBXWnd1VlQwYzMzQnk0WS1UMzNvMURIbzZtaDRpREFJdmlHZ0t3bEx3T0JuaFJHRXZyQ2xNazIyZEtyMHVlQmp2ZTZ3WEd0VUpCZw?oc=5"
    },
    {
     "tipo": "analise",
@@ -10793,17 +10800,24 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-18",
+    "data": "2026-10-09",
     "titulo": "Energisa Mt (ENMT3)",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBDaEF1LXhMblp4UXROay1FM1I3bF81Z1VvMjFHSjI5a2gtZWxLUXBVb096WElaNzB3OW42VjMxbl9zWkFnakc1U2NOTWEwVHhpYzdWZXl3bE10VDN4bEVoZDAwRWNsU3JiSHc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1HZXN1YUgzRTRqSktwMTdCZmNsUVl2WTg4X044cnF5ODMtNFVnQ1U5cTNFb0x5eGdRbzQ2VjNJZnc4Y2h6Ukp4XzBMWjN2Ukx5MzFaRnpGdjh2S2tSbzlYYkhYMFF4enNFNzJ0dHJXWnN4UHdHcC00?oc=5"
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-19",
+    "data": "2026-09-17",
     "titulo": "Energisa (ENGI3)",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5qZkVjeWl5NGRFRVJ0TzJObl9lVWUtY3Z2VmY5UVNEZFhxVmFiZEF1aUZuUlVhTWFwMnI5d29Kbmx3Nmo2SVc3Z21VdGM?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1Ddmp3MkhpcmJ1REpKMXVkY3Y3NWs1VkRDNW9obWExU1I3MVFoX0RpS05ZakFmTXVURW5xb3E1bV9TdzE5T0hNWmpqT2MtaGFGank0WmlfaEE?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-12",
+    "titulo": "Energisa conclui venda de cinco ativos de transmissão por R$ 1,638 bilhão",
+    "fonte": "atlaspublico.com.br",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOd0w2VGd3VXRFd2xkc3MyRlpWaENHdGhWU0ktalFaMWI5RmN5VXdCV29CTUJWQWx6SWRQaHhxRVlmMUFOQWdPckRuQVlFMjV6MjNnaEk2Q19wejI5cERadFJ2SVBWY2pvclFaSGFQSGJNQ2xQMUZrNG9GMXJ0M2pmMk9uakx1dVdfM3oySnJqNWdCZ0piSDJJR08wOTE0YlVsNWZncjNjSQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -10855,18 +10869,11 @@
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnE4NC00SU91U2tWNTFtQU92YlJjRUtMS1hGRXNrcExVMU9scS0yakNmOW9Ma0pwRkJxNHpMNzNNaTV5S0d3V2ktTGcxalJzR0trRTZab0hDcEs4Z2xNdS1sY1JUb3NTdmZuTklmakhjVDZNdEtEb0kyN3BrTGpRR200b2hVbGVjaXFhUlRJTFpnaFRVdC1uaVdTYXVFSUVlS21KOXhhMEE2clU?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2026-03-16",
-    "titulo": "BNDES aprova R$ 1 bi para financiar investimentos de distribuidoras da Energisa",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMHhKTVZ5dkZVdzZFN0RVbFNFU3NFUmxRbWN2eXVLczgxUFRVZ1U0YXE0UXZLUFdmT3B5dWFCQXdDYTh4Wi1sUmVUSnRvOWlFYWIwcUhMYjNsdG5pY1BvVlR5dXR2REE2a0FmbmFKQzA2d2wxOWZFMUdfTFdmbXZkRXYtQWk5UW55SU56LTU5UEgycU95OTRNVUQ4UktCSTBqN2RZLU1sZVVwLTdVME5ZWF9vcEo0bHVf0gG-AUFVX3lxTE5ReWp4b0NSQ28zaUd5Q0ZrMmt5ckhjRkg1dVlWOXY3YTJIRTEtSEFSWHRnRW95VmlLSk1YbGduUjMxZjlnUmF5d0Y5TE9wZzNfZVhaUHk5YXRWMlUwR3NEbHRDZ2RmTVB1dWpnTnlIdjdqVjI0V3hTVVh6Mk1OTm8wMzNMVXlRa3lrQjh1WG11OVpaejZFOGc0eXdTbXhyWU1yU1BiQmp1bW01cTVJc3NFcDBRWHJkWHh0SGRpVEE?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2026-08-20",
     "titulo": "Energisa - Radar de Resultados 2T26",
     "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNN2FyUHctdlZyQzh3UkRHSFctcFozY2JUbXMtQzdEaDNWMGFCSW1MWWNhaWVqRU0xbnhZRTN6b3B6c21MM1dDNTZ3VW8wbFJFaTR6QWNoWHpicl83dVVlY1B5dDEwQnhjMHZfTHJyWXRpdkl2Nm41cDBTU0tyc3hjeFBULTM2bE9mcmJkWXN3aU04WC04YkRfWUV3OThILUFNM0RQZDRUaEpLUkZXUDN5enNWXzVMdjRmaGc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPcHFGMUhHbkE2TzdGa2xGNENyVHZUdDE5Um90cldFdlV2cmxsVmFkSmdnVENhLTV4QUhYUDM4UGhYbTkyNTRoQmhlbnc3VkZ6Y3VOZzJFLWNJblFKdHVnLXJ2NE5ZY2QwZGcyZlZxZlJSYXZRR1J3Tkp2OEdxekNFRHZ5Um1XamlEaTdTc0lnMGFMOFF5bGE0LTJTY29jb0dkQXBUVVVYc3BGLTl1YlhUTkRLbTRLM05pbXAyaUVqcHZ2OWl5Q3BBQXBpR1o?oc=5"
    },
    {
     "tipo": "analise",
@@ -10890,84 +10897,7 @@
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFJlNkJjZ2F3TlZsbmNrb1dpRjZYTVlZWkI1eUM5R0dybHNEcm5QRkxFWGx0bmpTakxrLXNyUVpmSXNzdGdjRGRkVFBxNkFYVGJGTXVwTnhmUnpuMVlRb25mU0VwRWxkSkQzMGhtRGZhV2hTcW5mdUN1RkhXaGRsOWt6QTRfblZzakU1WHlUMFpLT3I5ZGgxYW1Ta0NJTEtjc2h3b0cwTVBHWUlCeGdj?oc=5"
    }
   ],
-  "06272793000184": [
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-05-08",
-    "titulo": "Renovação Concessão",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1519278&numSequencia=1043984&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-04-02",
-    "titulo": "Mudança na composição do comitê de auditoria estatutário",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1501062&numSequencia=1025768&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-01-06",
-    "titulo": "Comunicado ao Mercado",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1464332&numSequencia=989038&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2025-11-12",
-    "titulo": "Exercício parcial das opções de compra",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1444346&numSequencia=969058&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2025-08-29",
-    "titulo": "Revisão Tarifária",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1418703&numSequencia=943415&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-09-30",
-    "titulo": "Instalação, mudança ou dissolução do Comitê de Auditoria Estatutário",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286478&numSequencia=811204&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-09-27",
-    "titulo": "Comunicado Referente a Relatório de Classificação de Risco",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286141&numSequencia=810867&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-09-25",
-    "titulo": "Esclarecimento sobre questionamento da CVM/B3",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285195&numSequencia=809921&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-08-28",
-    "titulo": "Reajuste Tarifário Anual",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1276458&numSequencia=801184&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-02-11",
-    "titulo": "Aviso de Resgate Antecipado Facultativo",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1333579&numSequencia=858305&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2024-05-27",
-    "titulo": "Anúncio de Encerramento de Oferta de Distribuição Pública de Debentures",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1243001&numSequencia=767727&numVersao=1"
-   },
+  "": [
    {
     "tipo": "noticia",
     "data": "2026-08-26",
@@ -10980,7 +10910,7 @@
     "data": "2021-01-04",
     "titulo": "BNDES aprova financiamento de R$ 2,1 bilhões à Equatorial",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBKY2RnVHc4cG9iMWtadm14V3d4ZjROM3ZoQTFmZWtielZKYVBtVnVneUR1dmlMUVN4N2drS2JlU0xselVoNGFZMVRhVHFQb0R5Rlg2NGRiRnU?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOeEVzdGZ5ZTZWZXV2VDB1VnNKSV9mM2NDdFU4U3oxLWJiY2trbmVDVExXQi1NRmRWcVphTjNoMjRWTzd6TkJtOUhDemtqZlRMUTViYTg2bnoxUVlUbFh6aEMxTm5BVWFmX3pWZ2wzd2tURnJUMmJUSThmc19Sd3d2TFlFYXlmdXlzMjRsbWsybDdZVFRMbU8xejFLR0JpZ0RlVEJJVWFVUkY5QnNUWmVnU3lSaV9zNHBDcXFpR1hJaGVOSk1LV2ZJeGxRWl9Vck1ncHB5YmU4eUdqT2RWWkhFNVdDQXhaRVVab2NLV254aTdHQkc4?oc=5"
    }
   ],
   "04895728000180": [
@@ -11275,13 +11205,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2021-10-25",
-    "titulo": "CEEE-D, controlada pela Equatorial Energia, finaliza PDV ao custo de R$ 145 milhões",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zX2JEak5OdkkxU1pZMjRhTW5wdGpQUDhRcXRibi05VFBBcW1Eb0EweHR3dUVkRU5zWEJOR3htRXdzOTdTLUo2cjBjSm9aWTI5SmU1TmVDQWs?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2019-11-06",
     "titulo": "Itaú assina acordo para ter fatia em ativos de distribuição da Equatorial Energia",
     "fonte": "Forbes Brasil",
@@ -11479,13 +11402,6 @@
     "titulo": "Comunicado ao Mercado referente à Oferta Pública da 17ª Emissão de Debêntures da EDP Espírito Santo",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561719&numSequencia=1086425&numVersao=1"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-26",
-    "titulo": "EDP Espírito Santo encerra oferta de debêntures de R$ 800 milhões com aporte da IFC",
-    "fonte": "atlaspublico.com.br",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORlY0UFkyYkZNUXV0aVpEREdrUzVRd0F1V01iNkZKeXV2RndCd01adGRYMDJIMXVhSGN2TGpOM1BjYVpmY000Z0QxVVRNb2ZFT1N1OTJydk1SNVhJblEyck9sQkNLbzJWMnNQYy04b25Bd2R0MXQ0Uno4YklOTmlJdzZ6T05zX1pNeEJEZ0hRQl96SWUta2hVWjhiYzhqOUtuYm5sY1d5aw?oc=5"
    }
   ],
   "61190096000192": [
@@ -11898,13 +11814,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-19",
-    "titulo": "Fleury (FLRY3)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1qZ0dOakdtMDNLbG10NXFwaElkZ2FSRDdHdDc2bk5SeHQzTm1TbTcxdUxucFkzZ216WlIyWTBhZExMeWU3cV9xaDR2US0?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-08-11",
     "titulo": "Fleury (FLRY3) aprova emissão de debêntures no valor de R$ 1,83 bilhão",
     "fonte": "InfoMoney",
@@ -11941,13 +11850,6 @@
    {
     "tipo": "noticia",
     "data": "2026-04-14",
-    "titulo": "Oncoclínicas busca opções após Porto e Fleury desistirem de negociações; ações derretem 8%",
-    "fonte": "ISTOÉ DINHEIRO",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBweGJvb3BCZVRseXFESWd1Z2xrLWRIOUtKZ2hsczJfb3NINzhHaXJyV1hORnRxcGU2WFUtR1NCY1FtUTluRG1BT3R5Z0Utdzc1WUFPd2MwYW5hS3BoYUxkMGdZd2haU3RNOW02WA?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-04-14",
     "titulo": "Após encerrar negociações com Fleury e Porto, Oncoclínicas diz que avalia alternativas",
     "fonte": "InvestNews",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQYlV4RjdMcUFSeU40czZMWkNRZ3lGVmV2U0ZwS2VYMjhoejFLLXRwTHp5SXRiYUIwNmlUcXZPVm92NHU3QUsxY1hjeTc3c1pfOU4xUnE0WE5YQWllVFQzMk1RUHpXWjFtWGhVRjgxV3hCblJiVERlZFdhdU5mczZjR1JXeGdQM1BweVRHdmpZNVhHdWx1ejRhTGExZzJMbl9USV9qSDNhQ3NOY2t4QlY5WU1YMHRIUlREU1hsLU9B0gHDAUFVX3lxTE9vTUpSN0c1WHpNekp0a3F5YXBHcXRiV2JHN0tJakRFU0loUEE4YnlycGhCNDR1VzhaU3RLeFRESDNUZlZOWXItNEFqVGk2NFgxcDF0M0hxdlBKQVE0SkRMelJLbWcwbm5DbVl1UEFwS0h1bzlmR1pVWERUNXFnUmhvRlh5RGp0OEk5OTFBb0d1Q1h5dGNJWmtmcG54MnN1RFlUNDU0di0tOWF4NGpnc19iYlQ0Z2VVeFZwRWFDU0p4Ny12NA?oc=5"
@@ -11965,6 +11867,20 @@
     "titulo": "Oncoclínicas: ação sobe 5% em dia volátil após Fleury e Porto encerrarem tratativas",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZjFGR2F5OXU5SUxoTHp6Z0pZVG5hWmJUbFpORmYwY3BHdTgzZXkxYkFsLUlwYk9TZ1lFaHhUdkhyTmNyTjZoWnpCSWdRWE5zaWIzMkltRjNmT0VscjcxLV9BN2J3RFpkeHI3UzdrSXNWUWR1VHhkdkc3c0d6S2t5eDNRSkw2Ri1sQ29OU3NiVXhMa3IwUE56WEFTS1RmSjBNNFNfZEN3UnFnZzZValFrVmFvU0wwdlM1bGF1Ny1xa2t0aHJja2ZwUEU2VThncmfSAdQBQVVfeXFMUFJKSjBFSkM0QVZvUVVfenFGUC1tMjhxZGo1QVFXU2pTaVQtNGE1MHl6WVI0MXI1cVJhdFVHdXpzZjFPYkZ6MVlNdGIyNHBIQ1VOLU1WVGw1SG1EODlNN0R3cFRMcjVTUjN4S0NfVVpINlZ2R2NNWllpb2l6cUFJLURCZVRIS0FxMHdnVC1uZ1otT09YUjk4XzQzR3k3OGR2TFhWRE0zdDVnV1RObC04dnV0bHlXbWtTaFBmT0t6QWRKUl9zcUh3UkxvTm1sYWlsRmhudmw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-14",
+    "titulo": "Por que Porto e Fleury desistiram de negócio com a Oncoclínicas?",
+    "fonte": "Exame",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWXN3dHl5Q1lBNUFsZ0hycUV6djJyQzVWSVVRaHQyeHE0OEozemtVZWo2M2YzaFN0aFJfSE5tSVEyQnVtMkZJWXNkdVB6Nm43NUl1VjNBTzdQamtwcDk0QTlYLXdLcW1hcmE0dmhUNy13RkZmOVFWOVVaWWZRSXVLcVZkNWg2TXRLY29Jako3OFp4WmE5RjJHR2VGUC1nY0U?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-04-13",
+    "titulo": "Exclusivo: Porto e Fleury desistem de proposta por Oncoclínicas, segundo fontes",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQQUxMZU5XM1Y4RXdRTG5FUHBZTGR1R243R0lDX0JEbm5yaTMzM0R0UDdZNTEtR2xaZ012Ti1mV0V6VkZDVS1GQ1B3UnRWT1pBbGFhMWtuSHRKd0RDWHlPakJlVlQ1Y2tKUmFSSjhxNFNvUEN4Vi13MGNoSWw2X2ZmSUJlcWs4eFJXZk56TUY2X2hqNFFtMDBUZzZZanNxTVF5WUtqUUVJVzJhRmUyU0VuYks4QXp6dFRyaFBUY2psWDlrdUtJaGtKS2wtazA3THV60gHfAUFVX3lxTE1Pc2pIclAyQ0tZcUZKT0F1VjdCVUpNcVBQTEt1WUJrT2ZjVURxTmxaX3hwc0JTY3p2dTRVeWtmXzl6ZVpxSXBUTTBPYncya3B2U1h5Q2NTUjNycTk1eE1Cc2lveV9JWFJGVUpzWG5ETkhYN0dIcmktdF9uanBDdWczbmZXSzc2RXlSV2VqX1EzSUF0MWRpcjBGcEZTNVpRMktfTXZhZDBXUEJRbkg5cl9PYldidnNEdFNUYlJobVBmVGZRMV9faWZzTnU0UENfdGVBVlVXa0xyYXZLbGY5dm8?oc=5"
    },
    {
     "tipo": "analise",
@@ -12114,48 +12030,6 @@
     "titulo": "Comunicado Receita - Abril/26",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1524839&numSequencia=1049545&numVersao=1"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Fras-Le (FRAS3)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4tc3BPdDhGY2phdXF5MkgtV3BiVkx0LXJCVVdvWlp0NVNxNVNzb0owVGlaanFRYVNnTW1jMW1sWkZLYXpWanpLMHVSZVlLRVMyLWFFbE00eVpEQ2c4dEZRS2hwSQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-08-20",
-    "titulo": "Fras-le lança nova linha de componentes estruturais",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5uSlIyUVVRUWNFdGpMcTYzMmxERG1pWm5ELUh0ejkwbUxwME4zUGsxSU5yQUNIVEY4MXh3T0lyX0l1RDNQa1lLbkNnRnZnTjM1anRBUE5nRmU?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-07-02",
-    "titulo": "Dona da Le Lis Blanc, Restoque pede acordo financeiro e cita Covid-19 como causa",
-    "fonte": "CNN Brasil",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOUxkcTgyWVY0UGgwMW9jUFlmcEhLUG9PaG5wTElTeFJLNTBNS3EzbXRpcWpqR25meWpiTzhYcmFtT29RUkhoZlI1NFV0YmdZMnZMZ19xc2xZMUl4eWhnZktMeEM4Mk4xbEl4bjBzelh1LWNDcmtKQXYxODlzelBudGthZDJMTEhOMDhndWt2SGdRQkcxbWJMYkFEeWUyci1aT0d4aE5DYUtleF96T2ZzUlI5ZVF1YkNkRmxhc2NGVmJqTHVvb245UE40czQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-05-25",
-    "titulo": "TNG, Le Postiche, Cavalera, Dudalina pedem recuperação judicial. Há outras empresas da moda em crise",
-    "fonte": "Jornal Opção",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQzFmR3BmWHcyTlpBdHhmamJvWlhlWThrR1FGVnI3T2JFU2FpMkhMdmlzUkhWQ3pUZ2NsQUotQko1aDVNbWVDU3VUMktqUmxNcW53Z0Raa2N1eUZLUC1TV2tmejk3d3ZWcExFSTlVUVlSY0Vhc1Yyb3g3Vlp2enc5d0pFRVF5cTFlbjdhLV9UUU1JOWEtbV9nR1dDMW9SaFQtYUZ1T3YzaGljY3Vla1ktLUp2bElSZU45UUtnQVFraFUzUEFoWmNLZFZFZ2RmbTFHdUpvLUl3UzhRbF9nZkMw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2020-06-05",
-    "titulo": "Restoque, dona da Le Lis Blanc e da Dudalina, pede recuperação extrajudicial por coronavírus",
-    "fonte": "Money Times",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeF8tX3VSUTB0SHdncFB6bERzS2dQTDBqVGVFcVl0XzV4NHAtdloyS1pXM2tVcVMtaWQ2YWQtZ2VEb1NFaFhTbFMzTEVrZWtXVEMwbFE2b3RiS1FNOVZDU0JESGhMcThBWloxb2g3UUNuS3I0eHB6UlFIQWU3cXYtMzFGZmx5MHVLdHhsZmFZbVF5ekpzTVU1NTJHZ2E3a0czaGRZTGY2ZDIzZGozTGNZQ2stdjhsNVc0cDl4QXJR?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2012-07-11",
-    "titulo": "Le Lis Blanc compra a marca Rosa Chá da Marisol",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnVxSEJDUXQ2aHB6a01HTUhxQUoxazg5dEIzcTE0cGNWV1VhUEtlMmd2dktIVnNPU0xUNkViLU5Oem1SMHlkalp3MEozWXd0THl6OGVDZW43YmJ6Tk9ObWI2Q2wtQTVwLXhSRjZfc3ZVX1BNMFZrNmlHWmVlQkR0Wk9TaHIyemNOLTNvZjlXWGhDN2FHdDlZd2JxNjd0Q21PLWxZREVmcXbSAbcBQVVfeXFMTmF6TnFIWHlET3V5T2JlNVBiMjl1Z28tVzdMdks2QWhwRFRFbVFKWUw4MUFTSWM3LVF4czdlZXRoZmFGSmstQVAzWTRtWHhZT0ZFMHlad2hlNjZ6N0lFSHdsYkVLMWItemRJcFhJYS1ldl9PaHU4Q1F0UTZiUUQzSk5FWXU1eWY5aElaZmt6dG5idzdmZWw3OEFwcUtYa09yLU9BUU9UR3pKMGIzZlRSSE9YX3JBT1R3?oc=5"
    },
    {
     "tipo": "analise",
@@ -12315,34 +12189,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Gerdau (GGBR3)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42eEZFamJWTXVuUW91dmJ2V1ZGUEdxOVZjSHozVFFBMU5yWVl4TTdEQzhZMlJvNHJLYjJWd2hDNy1jXzNvQjVHaGhMYnVpX2JuZnJ5elBzVjhGaDZEWmhiNUtnSE1RWVUwcUdoLUQtWGNmWEFlOHc?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-19",
-    "titulo": "Gerdau (GGBR4)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE56UWotemFCSDVRX3Y2bV81WDNuMG1TMndqZjVJczNUYmpOUkVyRUJvYVFjZjc0SXoyNXJLeGpwcFJwblR6R0xlM01iUHB2SUQ3NFpaZGpKb0J5QlMyVDB0bHRERFEtSE9GRlE?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-01",
-    "titulo": "Radar corporativo: Suzano, Gerdau, Eneva e outros destaques",
-    "fonte": "SpaceMoney",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPLWplSElZdVdRRVprMldsLUtxVUVVZ1ViRHZMeGF6T0gySU9FS3BJMGM0VXV4b1M0bnVHSzdSTVFUWFNHYkpuVjFVbURabFROeDY5UXhURUtZSms4eFRpanBndFdweml4ZzY1Yk9KMDhWRFNKRjdkMG9CblBrU3JjRkFtUGltbDhQRjNObGRHZ21meWF5RWdYOTJB?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-04",
-    "titulo": "Balanço Gerdau: lucro sobe 70% no 2T26 e dividendos de R$ 451 mi",
-    "fonte": "EuQueroInvestir",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1USEhrd25Nd3dMU1hvYTMzVTg4cUFOcW9ZdVlZZVR1RVIyM1ZJOENJdkZTVm9sSHFKM0NpWjJVamlwS0pwbmlpTUNueFZjSkFCeV9yQ3hSc2E2bHUtTHdTMm9JbnVQZ1k?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-04-28",
     "titulo": "Gerdau, Sabesp, Vale, Petrobras, Brava e mais ações para acompanhar hoje",
     "fonte": "InfoMoney",
@@ -12364,24 +12210,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-09-02",
-    "titulo": "Gerdau (GGBR4) e Randon (RAPT4) montam parceria para oferecer aluguel de caminhões e semirreboques",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1Oc3FuVzZXSURQYXYySERKVHh1WkY0eTROWHpkY0czNmMwbDA0eU5WR1pVSmJUMFVkckpWRGg4VkpsMFNnVVl0RFhIdjE5YklqNW55VXJmNzM?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-08-03",
-    "titulo": "Gerdau (GGBR4) alcança lucro 27,6% maior no segundo trimestre; veja o que explica o desempenho",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE41QUY3T3EtNmVqdW90NUNOU3FHYnQ4bnI0SGtsVThLcHdrcjR3UzcyUlZCQ1JXb2haNWpNOHZMWDJzWDJLZGZsMTZfX2F0WFhLdVRNeUw4UEU?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-07-01",
-    "titulo": "Gerdau (GGBR4) compra participação de 15% em construtora americana por US$ 19,3 milhões",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNeXhzcXNoVVJFZTB6eE1zNDVPU1c3NWRtUUtNUXhzMGctOE5pRl9mbVk2aVdOeUVwN3R0SmIzVUZuOUdPNzd2VFBCVUMzc2s3OF95RzZYbW83ZXB2SmRUNHJsUDEzRi1FN3NnSEllaE9ySHIyZHl2Q0RWcHBqbm5ZQUk5ZDM4VXRlMlhCVHZlc2xqTVFQWG9mSFhsdG9qclZwYlY2RU54UG9HMThfUEEtZUFfYUU2ZWp2ajFXUXA3OC13XzVucmpJaw?oc=5"
+    "data": "2008-05-21",
+    "titulo": "Gerdau compra 29% da Aços Villares",
+    "fonte": "O GLOBO",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM1lzLVd0WVo4ZWhiNnlCd3N0djh2RkVRTUlUdzB4QlVHRFpCcDdBTGNmX08tUFMtUUFXRVRtODI3N09MRFpPYWMxbnJRbUZMaTBLY2xVa0RONE5UM0JjME11Z0dCb2paWWV5b3kwbDIzNEJlVmdVaXVhZV9iVC1XNw?oc=5"
    },
    {
     "tipo": "analise",
@@ -12897,13 +12729,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-10",
-    "titulo": "Hidrovias do Brasil (HBSA3) registra lucro de R$ 100 mi no 2T26",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPN1hGQ1hucHJXUVRnV3FsSlpOaUViVFFhblRlZ0hiN0ZYdU5idHlQU0RiTjVDTndSQ1I4UnhQNzFad2N6X3NGS1FiSnJndjRUajA0bldfdE9EVklFQ2wySHMyTTlsNXE0eFkwQ1VUUU0wVXEtWjBQSEpVa3Z5N1d3dkxKMks3cFd2YTl4UXg0cU9qM0dsSnhfNG9XMkhIbXM?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-03-10",
     "titulo": "Hidrovias: Atualização de crédito - Março/2026",
     "fonte": "InvesTalk",
@@ -13242,6 +13067,13 @@
     "titulo": "Hypera Pharma (HYPE3): Resultados Fracos; de olho na tendência para o próximo semestre",
     "fonte": "BTG Pactual",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcEVxUEFIV2VPUUdXbU10WHlOckxQMm9fSXluTlU5X1pUVHk3di1xeVBYSFhmSUZUM1ZDWFJqd3Fkam1GbHcyNmhGWnhJclVqV0xXbE1Wdm1sV1A1SUROTGphVXN2cHpxdHRHSGVjTzI1VlBfMzczZ0ZUNXROV3ZJc194T3NjTkRVS1pXbA?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2024-02-01",
+    "titulo": "Equity Research Hypera Pharma (HYPE3): Resultado do 3T21",
+    "fonte": "BTG Pactual",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBaMlNweVJDSmlYTmpTNWd1SWF5Yk02SGVyM0daczJFOGszWnJIZ2dTQTBOSHNycnZPdXUzc1U1NzJ0WHFzNkFTcVNRYVNwNXo1YnFQYU95YndaS1EzakdxREczaGt4SngzcGFVdEloZ3Y0ZGtPTERyMm43eHk?oc=5"
    }
   ],
   "26707830000147": [],
@@ -13567,18 +13399,11 @@
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB4M0I4WVdhVTBDaV9LWWoxYWJOdk9WckNYVFFlYWpkV2pqM0FHcTRveWpVU3E0NnB5NGNPSV9GdzVGSVBSTXlsdGR6OUIxckFxWDdEUS1Bcjc?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2022-06-30",
-    "titulo": "Iochpe-Maxion (MYPK3) anuncia R$ 35… (30/06/2022, 11:05)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB6VVZOd3h0cHNiNDlmblZDV0dQX0VPa21SRVFNLTZPODhKdzVjRG9sakhFclB5c0VLSUdrbjN3Z3E1bmQwb0gxVHZGaTRCQ2p4dHFaaVFuSnM?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2026-04-30",
     "titulo": "Iochpe-Maxion (MYPK3): lucro cai mais de 60% no 1T26, mas resultado vem em linha - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1JSV8yRzBxbkU3dlJZOVV3Y2Y2OXVDT1g3UURoaGJnOC1DU1k0QlA5ZURDRU0xbDdRTndNaHdLZFlmMnNqTVVkNFZBVnhoWnE3OEcwRjFZT19wZlMzLWZvS2RoZHY0aE5vbHdaT1VQbXlPYk5FdTl3c2JRNk_SAYIBQVVfeXFMUEpxc0k5aTF1OWlfeURsRWN4dUJNQWktWnhWYVBPSUtMT2I2RGlTNVF5UEF1YnlYT0Z5ZE0xM0tRVnpETkM0cExIeXRCM1hSeEN5VG5TVkxBQTR0YmR1VGIxTEtVMWdaeWJqRWJlX19uT3lFMENSUnFGNENVeHRtTC1Hdw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1JSV8yRzBxbkU3dlJZOVV3Y2Y2OXVDT1g3UURoaGJnOC1DU1k0QlA5ZURDRU0xbDdRTndNaHdLZFlmMnNqTVVkNFZBVnhoWnE3OEcwRjFZT19wZlMzLWZvS2RoZHY0aE5vbHdaT1VQbXlPYk5FdTl3c2JRNk_SAdQBQVVfeXFMT1ZDT09lU1l0MHZkZDdlTVVxQUloUG1ONGZOU3JVUzU5clZCZ2Nmd1R6S29ySWxrWmRNd0ZIamtHdTNYWDZRZnVmdEZGMTUzSlNtbGU1S3lBTUxOanI4R0FSazZnMmU0MVRPSzB6WkFRRGV0eDlhQlNDYUFZMks2MW52VWM2MzhjS2RhS2RGb1B0YUcxSERCZmdncDYyUE1LWWJYN1ZhREJhOEt5R2ZSSTRtVlVWZWNLX3UteXVIN09ILXJGZlVmX3R5dGFBeldJSDV6OHU?oc=5"
    },
    {
     "tipo": "analise",
@@ -13676,17 +13501,17 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-10-31",
-    "titulo": "Fitch atribui rating ‘A+(bra)’ à Iguá Saneamento S.A.",
-    "fonte": "XP Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPU292cnQ5UHpZa050NFNISk5xS09KTnhRVkFGdUdTZkFJSXYxS2dHU3dDRzZTazkzWHRlVTZqVDJfeUdZYmY4VEt4d3hqZGU1dmpuWWNyR1gzX2wwOEpncnVESFJhS0stYmotcTZPTkxnUlpmUFltaGhpZUVKQWkydEpLV3g3TUpjZ2JtRjFRWVBHYkZnZ2VXeU5FNE8yVEVq?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-05-06",
     "titulo": "Iguá Saneamento inicia operação em Sergipe e amplia investimentos em infraestrutura",
     "fonte": "AJN1",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWUZNdEZCV3pvTDlUNGY0eGQxYy13cFlhY2RlY29GQjhIX2xMMGp4dzN1aWRZNDQySlA5QkNXUHhSMFZOS3IyZ2xPZy1XM3M2MF9UVGRLYVNvdG5MaS05S0xwcE00NFdCdThSRjRpaDZpX1BidDBQMXZOMXA1UTgxdnNnaVRZbkJxa1VlMVhVX3hlbmdVLV9kX0dKczJqQVlJZFNfQ0FVbw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-05-02",
+    "titulo": "Iguá Saneamento inicia operação em Sergipe",
+    "fonte": "Iguá Saneamento",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5iVHdzU181VkxhUGZVSUNXam1mX0RkMEsza2dEank1TnE5M2o2V0FZaDdnX014TF85RklhSTZjbnhaeF9wRnd1Vk00cDB1cksyMjZkcl9JQ0pXTGtoalZldERlUWZpNnRBQW5GYXdpanB2elk4OEVtcVhsdw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -13867,13 +13692,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-18",
-    "titulo": "Itaúsa (ITSA4)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5vRG81S0R3c0xGU2hpd0F3M0VZeEZoLXZLQ2tEYTljalNGWkpLMk9Xc0paZnZxcjJ4WG9qX04wNDI3dldNT2wzRC16bXY?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-08-11",
     "titulo": "JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar hoje",
     "fonte": "InfoMoney",
@@ -13927,6 +13745,13 @@
     "titulo": "Itaúsa (ITSA3) paga R$ 1,7 bilhão em JCP hoje; veja se você tem direito",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYndHUGdiMk1CRl92aXBIY2RDWDAzQkR1RGQ1R2dNenlGbFQxZmV4b2EyYzEyQm9zTS1DN1FtcHpIdTFGMGozdUZMS2VCMmNPUl9xUS1MWDRGQWFoZHM1R09EdzJBZ0w3SWQ3NU9YdG1zQnRPa1RLc250TFY0b0RxbkFoWHNxckYyeXVsZnE5UDA4cjlGRXBj0gGcAUFVX3lxTE9pUTlrUklTS1pJZ0czaEpsNEZjOWJyMU1RSk9EckRVeXRVc1BaWkpxOHNFeGtrX2FuT0NkMmJzMjlaNTFWUkQ1aXVGa2JyWWZzMWNZNkNLYkg1Z3Z5bmstVHYyeGQ1ek5yQXVoXzFlYmY2U3JjZ0cwemJxM1AxWFRZTmxBMzZaMnl6bWlCNkQxTm9CSTdoWndyTkZCQg?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2023-12-01",
+    "titulo": "Itaúsa (ITSA4), Americanas (AMER3) e CCR (CCRO3) agitam o mercado nesta sexta-feira (1); veja mais destaques - Suno",
+    "fonte": "Suno - Investimentos Inteligentes",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa1ZKSU0wTG9qckM2Rlp4NDY4UTc5Y3BUX2RmM0JXOFZxVFBKaW1SbDFOT2tUZ2hRYjFXLWZTREY2Rkh2OXlQM0QzcExyaWhOYmFCY1V6MzRtQ1E1cDlTaTZaTVJBdTNkYkZtRHYwRzV0S2hHNjVHSnRJSnYzWGlSd9IBtgJBVV95cUxPTDI3NjRGVmFZUHVLSTZFa3A1am9LS3M2YVl1aUp3VlNsSk9qRWsxdFNULUUwTGpUbkM5VnBkQ0FMRXYydnlLdXpwaFpMM3NKNmZxNDFpdnJwZXRqakxHQUlkb0p1YjZVVERZU19MOHdRWUpKaGIyTjh3RlBBNDlFQUE4MnZPdHJmVW1tUXNCRk9hMk1jN243ZDBWUEdEYWJ0OUpldlVkVHd3NGNEZ1dKdFMtb0J5dmV6YnlfLWJsWkc3T3QyaURVSVVkS1pGaGxQb2trV0YtT3ViQTFZc0VJbXhKYUdQNlpwNjdGOTVRRDFucUtPRjdtN2g5MWFfMlRpOEFXRjhXLUppYnBuVFlQQTNENVBIUlZZV283X0NUM3ZJTTNqRWhZMExuRjMxdk9xNHRVbEZn?oc=5"
    },
    {
     "tipo": "analise",
@@ -14100,13 +13925,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-07",
-    "titulo": "Fato relevante JHSF (JHSF3): captação de R$ 800 mi em debêntures",
-    "fonte": "ativovirtual.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdFdnTXNzMGp3UXhFS2V0SEFYSHZSN3dJRmprZzJuRzExZ3V5Uk11amgxODBJUW1WYzJqcEJqZzEtTEVhazZDVFJ3UjhnVUFYcW94LWFvRUdPSjZybDRwa0VxQ2poRVZ1azNzRy1wWi03N0ZFTEhlOXlOckE5QVhsaUc1ZlI1ak5IOFdRMS1JSmFteEc5X2VXcF9jOUJHaWVYWTRQU0QyWXdsWWs?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-09-01",
     "titulo": "JHSF capta R$ 800 milhões em debêntures para financiar CRI e alongar dívida",
     "fonte": "ADVFN",
@@ -14132,6 +13950,13 @@
     "titulo": "JHSF levanta R$ 937 milhões na maior captação da história da empresa",
     "fonte": "VEJA",
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRDJkODVZSXI3SHZGMUw3TGlUbXJuM3JMZ0tFX1FOaUo3bmN1M2daZ2pxMjFONXFmNElUTXFnQWROa18tYVZmTEo2dlNqLWpzLWVYR0NZR2VUcWV5aGhjQ2tDckhCZzlucm82MmgwcTdrZVZXeUVFeWxrVmx6aFY1c0NnaW1tcFVfNk9MclZ0bGk4XzI4bTEwck9LMjhsU1k4UU5BcmozUld2WE05YUo5Z09fcy10RFR6?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-03-25",
+    "titulo": "JHSF capta R$ 937,5 milhões em sua maior emissão de CRI",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObDlESW03LWpLRDRjR25kZlExTDJEMGNWVng4THlScGJzODgwNzFpYUprYnNnMmM4VzFmeGpuSWlUR1BTNzR4VjFKRDBsckdyNHNNSzdqZjBObEU2d2Z2dWNPWVBELXFCcEl3em9Uc1c5cWE4b2tidjVkWXo3OHNkN3NPdFFTTXFtSTFXZlpuRlNrbmp1ay1MZEl3emoyWlEyVHMxQnVvandKVFlOdEHSAbwBQVVfeXFMTS1YOGhlWDlxN0JyYVFRV2JxOEx3WEZDUFBKY1hCSmhNbl9mS3lKQTVnYlUtQ2dqX0JQNU02R1Ezam83VlA4R1Jnd0hwZTA0ODZIY1NOeW5oLURzdFNwSlN5dmIxYlRxY2ZGMHFHeGNWeHNpZGluMEgyQmhwZFA4LVI3VS1SMjNRekNFRnk3VzdGaF9HQWpxa3lZSWVhTlJqYllzUV9nZWFEWkwybnZFZEtZM3lGSTZsajRaS0I?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14347,6 +14172,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-03-11",
+    "titulo": "Recuperação extrajudicial da Raízen pode afetar outras empresas na bolsa, da JSL a MRS Logística",
+    "fonte": "InvestNews",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUEpOWXMtUUNpN0wxeDNxU0xhZ3lILXVxYVUzOWprYmlSRWpMLUM2Wmw3U3loV01remRIMm9GbFhtTHlicmk1OHVudWdVajdvc0M0Tk5mVjlybUdHYkwyY2VtVmtHeThsWUEzMGtaa0g0aGY5UkZkb0tIQUlNTHIwMllNS3FjSXZaSGNWdm1hem1EZlFUSG9WR3BSV0Y3dkxzcWI4NFpSeGVGZjdiUDUwMFlmRDdtVlpHQTVWdVAzWdIBxAFBVV95cUxPTW9WUktaWi01d09vZEN6MkZFSDJDalZDVkJnTmdPaXliQ1ozT0psc0d4VFd6VEcwZmtvQnZfNXpDcXItQzJYTzM2ZW9aSFl0Y2NtX3VLNHEyY01EdWNGWk9DNGhfWkJUX2xxbldNaENhUUZ1V2ZMclNzTi1lcDFhdllWUHNZeHlrNGlVXzcwRGRXek5iMDcydGNqdURmMTB6VUlsMS1XSkNxWWJoYlpSZ0tLTlU0alg2YnpYaUd5N0thcExI?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2024-01-18",
     "titulo": "Tauil & Chequer Advogados assessora a JSL",
     "fonte": "Migalhas",
@@ -14389,17 +14221,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-06-08",
-    "titulo": "Da JSL (JSLG3) à Santos Brasil (STBP3): conheça as empresas de logística listadas na Bolsa",
+    "data": "2022-08-03",
+    "titulo": "Ação da JSL (JSLG3) sobe após aumento na receita ofuscar queda no lucro do 2º trimestre",
     "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1sRTRDSW4zSENCbnZ6RVM5bDdsRXJobkptSE94b3A0SWkwczV6QUZkYnRhY3dYVVZSbXo5dFNiYWFraS1nUkxuOHNZenlUVjFDdlM0WjJzd1k?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-08-30",
-    "titulo": "Conselho da JSL aprova incorporação das ações da Fadel",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ZMGdUOUVibkhEdE9Lak0yaVFSckZWMVBqWmNMdVd6WENlekpUSXQyb2NJaEpYWmR1SU1xVFFvRHBzMTJuUkJlYV9HQ1l1NW55N0FwVEp6TEY?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lLXZIdnRVNzBmckhXQnZWb1gtQWRudGc1RUMtMUR2M2NBcHdFLVpuY3ZNenNEVXluMVRSbkxucG5qcUQwdjNXS0VNN0tmQXBrWFppcUNnaE0?oc=5"
    },
    {
     "tipo": "analise",
@@ -14414,13 +14239,6 @@
     "titulo": "JSL (JSLG3): Resultados do 4T24",
     "fonte": "BTG Pactual",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRzRkVV9qU19FQndpUzVaUEhERk1YQndwcXZsbWNpUnpKRDJ2a0RoYnhVLWYyTDBFdm53dDNNM2pHdHQ4V0lOMzM3ZDRCRE9YbW1MT2JPU0pzN0tXdjJWbFFLM3JZbUxZaWFWNUY0czhOeTZsYjlONWhGaGppSjc4OTlId1NHVjh2V0x5S1BZWnNfaGpQMVYzcnJrbElXMmRWMDhkdXc4TjhoUTB4NXlkbFpZU2EzeWk3M09qZllB?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2024-02-02",
-    "titulo": "Atualização de Crédito – JSL",
-    "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPY3BWWGxmX1hhVjNSOWdzR1Jmc3ZHUXFDN19NdHduRTF6bGVBdFgyZXUxeGNXRFkyYkpRQmgyRmE2Vnd2N0dTTkR4Q3VSM25VWmh6OHR3S2M5M3hkWHdPM2g3TXlsN0tob09qY2hEbzlzVTNfX3ItOXBnTUNySXU0eS1KS0MyYVBxNlo3bnh2RDBTUy1OSUtod0ZmbzdtWHkwSl9MbEdQaGRWWVZkcnRyMGxta1JqTjkyQVp5bm9MbGZ0RnB2NWc?oc=5"
    },
    {
     "tipo": "analise",
@@ -14638,7 +14456,7 @@
     "tipo": "noticia",
     "data": "2026-08-29",
     "titulo": "Simpar (SIMH3)",
-    "fonte": "trademap.com.br",
+    "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9FZ1gzTWZEQ1U5T3EzLVdCdzN5Znl2ajJkLWFraUhjS2g0RGp0WUJmMFdqVU5QaXFKdjdLVzhCQlNnOURRWEFZZ2NvR04?oc=5"
    },
    {
@@ -14647,13 +14465,6 @@
     "titulo": "Rápidas: Petrobras, Vale, Magazine Luiza, Renner, Sanepar, Alupar, Raízen, Smartfit, Simpar",
     "fonte": "financenews.com.br",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeDdGV3Z0V2tHUGI0b3NiUmpmZjlqSFM1NlBYQ2Vmc3RIZld2bnk1czRxU01KcmtvcTFEWGJWeDRiSmFNb1RLYkE3MG9Dd3RubFdzRDhwaUtjalRrRFhORGQ3ZWI4WVVwbGRjZ1ltMG9IWl9Xcldzd3oyRDF0c0lnZVF1cDlVOW9ndS1LczFPTUpMSGlOSUFIX0FKbzU2c3RaVXVzdkRWZ2NKYURIUlhPMWxjbXpfWVpMYnc?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-05-29",
-    "titulo": "Simpar (SIMH3) anuncia novo CEO para o Banco BBC",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRmVtdERrd3RGMGVWckdrNkZrQU5mU1BUUm5ybUFlMmo4bXpWcGt0dmg4NlFwS2lFRU0zaTlCMTAyWXRleTZwWEdWenY3ME8ySVNLeWhWbGRZZzN1RnprdXRzOHhUNGRFRDYwdHlOc2FxcUhlQzNHRlluNG83Z3ctN2xPVlBHU2szSlFvTA?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14691,6 +14502,13 @@
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOU2JEbHZlbFBnQlFnZEpNN0ZsUzRFdTVvLUtjOEpsMjVPNnEySk5Sd3RTS1FZMjJpX2ZweEZEaFF3V1RZTHgxQVFhMWxnTHNZZkg5SF8zUHR3U0ktNGFZRGphN19OY3RLLU1xVGNwcGFtbEJoLTlxQjRkZC1jNDYyYjZVLUpZYTFHWGR6cU5XYmphdWFVWHhhSVlR0gGfAUFVX3lxTFBiWDZjNmRtQzc1U055YVluR0NwN091QVFKZjRZeldRRHdrd2VncUNqVUF2RWdGVFlRQnZGSWlNNHFwa1ltZG54UV9RX000SHpDSjluN244QnNKcEVSVU1YdWh2OUlIQnZwUnY3MFRVR1hOU05pMTRBVzhta2tPRlBwdHBxdHBuNXdRS3dKeWtiYzFQQVR2aEVVYnU5OXNEcw?oc=5"
    },
    {
+    "tipo": "noticia",
+    "data": "2024-08-29",
+    "titulo": "Vamos (VAMO3) e outras empresas do grupo Simpar (SIMH3) têm ratings rebaixados pela Fitch — mas a culpa não é só das subsidiárias",
+    "fonte": "Seu Dinheiro",
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOVmU4TWpRNnZuWDFQVEFxbjNxMmtiZjJnV3NtNjY2cXdKaEpiM1hBMC1hSFItNE9GUmxXajNuZjBudWRTSk81LXhBSGJfSU8yTU0xQ1gyWjlIRTdVNExGbjljNW9rbzNnQVpwWkZUekpGNFNWRVM2WTI1Nm5MQXN2QnV6VzZYWGdwenpPVFVFRjI3UEV5WGxrY2pPZWlGWGNicFhRMWlfLU1PSkxaeVYxMkNvUHoxb3lCeHA5eDduakFpUkdDSGRaMVFlTW5UVjFlODFrakFTTWJXTG9odEFDVFliVFJhTFI2bmI0OUh4d1JlcjJrdk54bk5aYlpZN2dqNEE?oc=5"
+   },
+   {
     "tipo": "analise",
     "data": "2025-03-27",
     "titulo": "Simpar (SIMH3): Resultados do 4T24",
@@ -14702,7 +14520,7 @@
     "data": "2024-10-03",
     "titulo": "Credit Pack Simpar - Entendendo o negócio entre Vamos e Automob",
     "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbURwUVJKMlBMV2hmYUVyNFhxc1M5cXc0M0ZxQnM3eExnRGQ0Nk9DanF4SWhCTG9kaF9RQTJHR016VFdhX0JadklVeGlSbUNvQ1Q3QTdDeGplS2toYXlmRERDblhqbXh4anlJNWpwRzl3WG91SU1CTnBvMFhqdHlhb0VjakJOOUVtZ01Idg?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUEFHV2NKczBLUEVaMURFbFd0V2JLd0lXQWJGYndRYTFSajlkU1pWeXowRnFXNjIxalRrc3B4M1QxTWd4alBnSWF0ZWlOV2JtYXRoc2U1WXZmRGE5dlA4aXI4Szc3YU1yQTNoc3ZqbWc4TGs2YTI1RGpoWjBCNU5ZWUZEeVFtdXNoenZQMGVDSzRGYXNsNjhETEFoVXRuV1JxbUt0Vw?oc=5"
    },
    {
     "tipo": "analise",
@@ -15102,6 +14920,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2025-08-25",
+    "titulo": "Localiza vai emitir até R$ 3,1 bilhões em debêntures",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeXJ5cVBTY2hEeUE3WDdyLW10Ukg4aGFsVUh5c3ZvUzRIaDRHNk5VSnFSQUFhUTVkYkx1ZmFfYld4OFBpR1dfZlNUQlp0WGtMZ0JpbndNZzEzMlQyMkhUM3dTNk51cTliUWVzdTdjNUxUQllWU1U2M21nVnlMdG55dnpjdW1GM09UZDU5WlNJZkpxZjNJLW16WlpZZXpQdDNLeWV4d0FiMmrSAbcBQVVfeXFMUEgtMmV4NzR3YXdPVEcybHhBVlhMZ2c1ZTVQeTE2Z3U1Zk9tcXJ3clVrc0lFZ0NUNE1fWmRNMXZFOUtJak5JdE05NlpCTEhWT0NITGtZN2RON1hEUUszVDFqRHROWHd6UFEzdHFDY3F1MDV2OTBNTldXd0FweVE4dkpNYXlPMjBDblBHUFRKamc5YTZUQTctekRZc0pybHVqaXJnM2sza2xQNWUzejI1azI3b1QtUGJV?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2024-02-27",
     "titulo": "Petrobras (PETR4), Braskem (BRKM5) e Localiza (RENT3) agitam o mercado nesta terça-feira; veja mais destaques - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
@@ -15113,13 +14938,6 @@
     "titulo": "Localiza Fleet aprova emissão bilionária de debêntures",
     "fonte": "Estadão",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb3M4dng2SHBnYWlqSXI0REhqX0lOS2dHbHBKRFVyY0pJN2xSQWRMYVpUbHhUMGxDWnZTZnloNFVMeDBiaEdpckw2T3hqdm5kcHJNb2xoUjZOQUZ4TFV1UmFSY2tGY1p2RWpaWWRfYk5OVnRTbDREZjVoQlhXc2NCWmxSQWs4bWxGMkdqYTdGNXZsN3pVZHVzSXV1R3JqM29sVlBKeFE0d19vb01GZWRfMkNHd9IBuAFBVV95cUxOQ0dDNXVxS1Q0LU5Nek5aNjU3ZjlremZNdV9TUnEwQnNXaDFGQWFIMEQ3RkEyTnlKcUlqdVphQkR4OEpPaURTUFRRMUVVUzRHYTRJSnNJbjA2LUFxVUpna3NfUkNna3BFRmd3THVMS01adk05X0dmQWxqUloxdnFkZEtSZmtFZmFGZGxmbEw2NDdkRDVHa2E4REZUVDVQZDFLOXlGcGpvbzhVQmc5eU41WGdGbWJ4eFM2?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2023-09-29",
-    "titulo": "Localiza usa as empresas para ter R$ 1 bi do IFC",
-    "fonte": "Além do Fato",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMG45aTYxQThxbkJtT3ppYVV2Nl91RGlMd0lUTDZsc2l1MTN2Rl85ak1YcU14Y3NOV1kxR0FPZFRrbjI1dlhtMHNyYjlLdnh6d2NUNDhYaWRpTFRmSXg1dVJtQWhDdmx1R0dER2prY3U0NFpDaFVLNGN0bENVWllXZ0gzVUVQNUp0X1FyaXZvTEY?oc=5"
    },
    {
     "tipo": "noticia",
@@ -16556,13 +16374,6 @@
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQM01HbkF4M21HTTM3eHoyOS12dEp1OW9nNHdNYng4QUpsNmcwSVNPYzhlWlM0dDRkanUtYlVxaG1NWUxEMVg1aktvOGRBX0Q2bEl1MlczODdVUEJtNXNYYTVqd3RIdXl1a2lwdThXZGJ0S3E2Q1AydFI0d19lTVVxQXJpNUZDZ9IBiwFBVV95cUxObU1XVTJLd0txMktBODU1T01BamIydlc0dWtCMnFQLVh4WVgzcWpwNVZPaFZCaTQ1YzAzVHEtYjNnakxrd2ZHMkc2ZTk0Zm5NaXlXZFhCRWZSVlEydThQd1ItblBEUmRSSHB4VGptSmFZZ1VieVY4ckp3SXFVM0NudU0wSjFSSDFhd0VB?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2019-08-29",
-    "titulo": "Rating ‘brAA+ (sf)’ atribuído à 4ª emissão de CRAs – risco Marfrig",
-    "fonte": "XP Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLUU5SVpiR1Z4VXh4REFSR0dZLWFiMEV5MFhSY2E5dENySVNqRlNDUVlCallDWHJUTzg0dWtVV2RTXzQ1TDU4MFhfanpiWnJldy02V2JYbEZkZzdENEl5OWlNNGlHWFV0bXo3bjhTZWJsQ3hERUJOMUtaWFd3OXA1cHF3N19NbHdscWZFdE1KS2RsZG50Z0pUeEFyXzhvVzRHeVk3UmtuQUE5aC1WR2R4SQ?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2019-09-18",
     "titulo": "Marfrig informou que emitirá R$ 250 milhões em debêntures - Suno",
@@ -17018,6 +16829,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-07-02",
+    "titulo": "Advent atinge 6,6% da Natura (NATU3)",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9tM2hOZXU3QVphNl9hSnNjLVR2c3hjRnUwb2hFZDZKSTFEekJGZGZIUmhhNXFVZzd3aElmeU5LNlF6RjBBdzdXSF93ZEF4WnVOY19ielRtMGlZZ0hFemR4RDNWSklRb1hIbDZzd0JWNkZ6VFVyZ2szMWFR?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2024-07-10",
     "titulo": "Natura capta R$ 1,3 bilhão em títulos verdes",
     "fonte": "Valor Econômico",
@@ -17039,10 +16857,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-08-31",
-    "titulo": "Natura (NTCO3) aprova emissão de debêntures no valor de R$ 1,05 bilhão",
+    "data": "2019-12-17",
+    "titulo": "Natura terá novo ticker, BB renova acordo com Correios, precificação das ofertas de Marfrig e Unidas e mais destaques",
     "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaXlCeTNONHFBOXh5VTE2by16Wk5OU25SV1BNVWQydzR3bFFkYkczeGZEa09OZGhfX21fejMzM3pmVm1YUTE1TFBnZjZUUjRRVWFCNDBXZUY0dzFWdlUxNzJrbWFYc1V5WVRmaGNOZ0l6M2JlT2dId1FyZVlsMGlxNTNzbFJIU085YkV1MVVCR2NkUEpfRmtVRWJlZHM2ZWNnbHFpMXdkMmLSAa4BQVVfeXFMT2tYRjNub1NzNWkyWGg3TXU2YzBiSlhGQjEtSExfc0M5RFlPaVBiQ1JZclR3ZDBhVld5QlY2WXZneHBRMy1uYm11X3pLRDl4TTNuWTRSQTVjTWhWUDlBcmRLc25UNjRZbVJGRU1yazMzZDFkNlN0ZjREX3VEMjMxVTFxYXU1M09JQU1PYVFnclF5d25qM29VaF8zZTdSZ0V3NWhTYU9ZWU1DeDBDZU53?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPRmVhTnFFY3hSVGVpOUxUMWpOZmhjZ0VPUUhsQW82ZGstdGRJSUdmNFlOM1JEVmVuZExlRE9oTm83dnM4V1FKX05VUEtqTGFxelpUN3lUMlFPUGk1RWNlMEdDVHNBcTQyTWdCZkdZMDhMcHBxUHpXN3UwVXVwcHc3TnZtZjNMLUQ3VU1GVE1RYUR6RjA4alFqSkotMndRSEhjbHhCTXp4T1VPTlY1X19NLTBGSVBQdXQ4QVNBUXU0cDZNNjkwbTVWM3VsTlNEZjJlVTA0ajZKTFlfSGRJRnlHckg0cXotbV9tNWfSAe8BQVVfeXFMTXpzb0hyc2hyd3BRVFdiSzRucGJqX1BXcTZ3dnNST1dLSnl3WDI5bWpUNFIwNlByT1Y1SXZHTDA0TUtLSXdldTNaa01heTFQRS1ucGVncV9NM0NzX1AwWGFmR1JJV1M1WkwzcElCSFhUYVlxYjM4OGYzeEREUXdtdVAxRGxPR2xCQlhJN2p4UENfNGJQbVNMc3AzUDVLTzF6X0xtcmRPQ3Y1dkxIZVhlSGo4clhrQXpIVHhjX3FUYWtFRWtzZ1pzQVRJRU5ZeU1NMDlPYy1ZOS1xMDE2R25UZG4xTnJyS1ZyR3JHLUN3ZFk?oc=5"
    },
    {
     "tipo": "noticia",
@@ -17544,10 +17362,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-03",
+    "data": "2026-08-18",
     "titulo": "Orizon (ORVR3)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYkFvYlJvbDc0dFZEWkVEczczRk83aUI0TzcyOEswUzIydFlRZzFzcTNha2c1Rngyb24ydGIzMlltLUFXN3I4dWRiUk50WjlwcUJtMThrZGs1UVJGUTZUeFItRUd1dEp1UUJOTjZPRno5NXRQbFN6dlVZcGp0YlNTTmNKRXkyOHVublAw?oc=5"
+    "fonte": "TradeMap",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFAzd093RUdnNFlJa1VPTFctdWhaSTd1QTNjUDM0eEFSNEdzc2U5UEZkcV9RbUF1RW96RnlUbGxDSUx5MlVsSzJ5WHNldUM?oc=5"
    },
    {
     "tipo": "noticia",
@@ -17555,13 +17373,6 @@
     "titulo": "Orizon (ORVR3) anuncia compra de 51% de aterro em Rondonópolis",
     "fonte": "Visno Invest",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV3VPSXRFYUQ3WDJBRFFRUUFieUdBdmNrVWFKXy02Q3k3NlhhRjUtdHJRbDlQSkxVeHY5RXJoTmRIY2hPMEk0cTlEdVl2QWxjbEhPV2l3aDNfSHdBZmFvRHVnMmFnMWJlSXFONnNNV0Vmc1JIczlOZXRONHA2cUFOWUlHaUFMdUhsU3BIYlFsQWtLVTdJUnBmMmFxb29WUQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-12-19",
-    "titulo": "Orizon aprova emissões de debêntures de até R$ 400 milhões para reforçar estrutura financeira",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNzhmWXU0TGZOajJVZ1ZqS0xoZENrdThPZGxxZ0V6MXJuWjFMVDY1RUFzemRENkdpMjAybmg2ZC1lUVNNOGdCYTEwOHJDbnMwNDRhM0l0dzh3TjktQWVLQ2NwYU5nT1JIalo0WlppT2VhUXFHU2IxcVpiT3VkdmV5MVVlWEo5eUFvcE1pOVA0R0gxejZDVVQzN1hjMlFoMkstWm5IbllmRVlHcWxudlh2N1IxT2E3cnQ0LWp1QjBPaEdMN1o4aEQ4?oc=5"
    },
    {
     "tipo": "noticia",
@@ -17739,6 +17550,13 @@
     "titulo": "Resgate Antecipado Facultativo",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1472639&numSequencia=997345&numVersao=1"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-22",
+    "titulo": "Unidas anuncia 23ª emissão de debêntures no valor de R$ 900 milhões",
+    "fonte": "Clube FII News",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQN0Z2enJLOTFUanRhVTFZQ01aU05EU0ZmelpUUVRJUG5vdFRjTUJmSFZxSF9wYkdzaUFUY3QzT3doSWFkSG1GYVBvSkhuWUNhaTdPTXExOWxWeEFReWxVRWJrLXdUaFRKa2pqeEpYdjRfSl84MmE0VTAzZTZjSHhmZUl1WXIwVlk0cE1LVnQ0V09BY3NZVFJ4MWJyNHVFSHRxMURVeGV3?oc=5"
    },
    {
     "tipo": "noticia",
@@ -18515,13 +18333,6 @@
     "titulo": "Comunicado ao Mercado",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1468597&numSequencia=993303&numVersao=1"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-09-09",
-    "titulo": "Exclusivo: Brookfield avança na venda de ativos da Quantum; disputa atrai State Grid, GEB e consórcio Taesa-Cemig",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOWElFWVE1MUR3cnRUOWdoV2dOM3ZYQ3NxQUZGcXZ0OEEzcXNYU3ZXODlfRWlEV0trcElCQUFTbGJIU0VWNlo4dGhrdkd1NHpMR0NLOHE2dEQxRnp5dEVJOVlHa25XN0tIYjVUcWtYQ3ktV1NpSzZxMGs4TERKRVR0RzZPUVpoWFFZUUY2ajBDN1lGMmFqWHFaNmxkRmpwVW95dWQ0NzJYWUw0R3Btd1htVUZNTklQb3hxdGpYSHo3Nl9TNGNtQzFGcE1qQTJ3eFdEMWFvOUlnb1NUVnNlbHNXUVpnSXJtVlNMMUxkT0Q2MNIB_gFBVV95cUxQTHZnSmFvNlAyaHpkNGpOWnZWTURiUWN4V2xKclcycHFFTm1qbGlRdGNEOXBVemFpbGJBMmhjeFRUcGNWVjhMb3RWNk1kN08yRnRSY2NQSzZfZmlCOTE2LXpWbDd4N3pRV2hEeWpKSGhnVUpKaEdEQUE4dFZ0eWRVOWVBMlByQ2RKaWZaRmNLTDBSQXNucVZtN0NIaTBRdGVGdWVqSUllaFpHeVlPaFVhR2FYbklDUFFrQ2J3Wkg5NzM4WldYUm52TFZaZjg4bURJNExkbnJfV2ZfZEEzWThMYzJzajBoZWozMzZ1VXpZRTRTU0FPM3JaV0R6anpTUQ?oc=5"
    }
   ],
   "46568486000160": [
@@ -18697,10 +18508,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-05-20",
-    "titulo": "BB reduz preço-alvo de Raia Drogasil (RADL3) e Pague Menos (PGMN3) – veja o motivo",
+    "data": "2022-05-04",
+    "titulo": "Raia Drogasil (RADL3): inflação eleva despesas e lucro fica abaixo do previsto; veja balanço",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzTDAwb0QxUmZMVVB0YVgzeTd3cklSclE4MTcwYjZsSUpnZl80U2wyeThsR1N3OUdpeUUtMTd0eG0xZ2NPdjVKZVFhcEtBbzZ0b01YVVc5Vlc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9tajctQ0JQUjl1OW1DZmhPV09mdDY3WHpwQWFTQUhaR29MSnV5ZDJrQUxrOGZHQnBWcHoxVld3NzU4NS1SUEx2d0g5LWRGa3VpUkd4VnlsZFY?oc=5"
    },
    {
     "tipo": "analise",
@@ -18882,6 +18693,13 @@
    {
     "tipo": "noticia",
     "data": "2026-06-02",
+    "titulo": "O que vai acontecer com CRAs e debêntures da Raízen (RAIZ4)? Veja simulação da proposta de pagamento da companhia",
+    "fonte": "Seu Dinheiro",
+    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOcE15ZTFYX2c4M25OR0lRX2w5WW5mdWlkUkk5a3JVM2U2TkFlZDRnU2t4NXo1NzhxSzRab09lak5BR1JwUHFZZ1FsZWxpMnd2c2N1TjdYNThLdldEdGdOZVYyYkxRRk1tU216dFUwZ1N4VGxvbWxHX2dhcEhFVEtSUHNyc0ZNS05VMXpVRHoxdGlWSXpFbHFweHF5NmRLVkh3Y19mY2NESWJzblVkZEpiQlpYRlpwRGxJNUVhSnVBa2FUYXE0V0xiWGcwSFJNaVo3RTBVVzExQmkyaURDU05DeTdiNjBvLVVVanM0UEd6UWJ0QQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-02",
     "titulo": "Recuperação da Raízen (RAIZ4): companhia propõe plano para dívida de R$ 65 bi; veja os caminhos sugeridos para CRAs e debêntures",
     "fonte": "Money Times",
     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOWHZOTUF4ZWZUYV9udDhhNHRiVDZnYXhBakZpalRWcDJUOFlkdmdyMXZwZ25mU2VCVFdIeGxXNDJFaFZTRkhFZnVMMC1DeUNXWW9yaTJHNkpDZ0pZT2Jjcmd4dlpKSFRVc1JiczdVSExVS1NsT2hJeXpZang0QmZPNzQ0Z2E0VEVBTGRnNEV6RFVTWDhOTjh4WkZrZkpwWVlEdVUtZ0ZVc2tNNXFVMko5MmFzejIxYlh6X2FaNk5WNlJxemE5TFZiZkE2RjE1QmhuYVJnZW8zLUhSLUpVZUJ4R1B1V1V2amVR?oc=5"
@@ -18906,13 +18724,6 @@
     "titulo": "Bonds da Raízen disparam com termos do acordo de reestruturação extrajudicial",
     "fonte": "Bloomberg Línea Brasil",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRlhSVXZBMnF6TkhPb0dZVmJuVC1mbzJXNXJqSWIxVGlVelM1MFVfdGJubXlGalozaDBMMkxWSjVINDYtWVdXQUZQZ0twVXB5ZkF3Rm85SWk2eHUzUFR2VmF0MnFxcGN6d2E5U0V5cG91ck43cGhhTVlzOXlwS0hTeGEybkd0eTF6MUM1TzhjaG5LbkJyZGJVWkE0X0I3VWhiZFBSYVpIVW1oaUXSAb8BQVVfeXFMTUNyZnhfTlcwZng3a1BwZWJZOE9kUnlGOTlDTG1MM3NENlhOU3pBMlY1SU5QUGhnbVYtd005UDhvSzJXQno0YW9TdVZ6SjBrak13UUtpbERCdHpCVFpKdGFaWGdBanJFMDN4RzI5X1dkN3hfLUF6RGFtSGdmTG9IT25SM09EMGFrWnhqWnVMRkgtc3BWazA2MGVIQ3lGTUhUbUQya285OHNpU21aTUVna3pMUlg3NHhnRWU1STVUbFk?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-05-27",
-    "titulo": "Credores têm reuniões intensas com Raízen para fechar plano até dia 3",
-    "fonte": "Estadão",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxON3pweFdsRWtVNjZKdDRkcUlWRGw2ck9KRU5DZFI3X0NFaVN3WE5HVkNMVWk1TUpJYW1TMEI5SkxqWnQzZnBJRkZGUG05QXpCaU5LQWlIV1pNWmpoQURlN2wzanBuanNLVnlzamFZYVBDZWE4OHlEVmstM0U1TWhfZUdJa2liVmdWMThRYTVHc2xKNnU2NUFIalNxa1hteHFaeWt5QUZrVmd1eXZ2bjg5cHBJT1QySkY4TExld25XVdIBxAFBVV95cUxNWG1aRjczWWdDM2VWOTB4Z0ZMTUVlVlkzS2theXFXQzZMZmR0ZHVSY0dfX1hsTXVMMlRzRHFiUHZuaVcxcGJWb1c2Y01DTHpIajJ0WUVxdUhvY2hJdWxURWsxdWFMSVBsRWdzZ19ITVNfbHZncVBZY0ZKU1U0MGpIR0lVYzdNTXFwNFpMdGFsaDI0NjlRQjlZSTRLOU1pbS1va1J4SVF2a1dIWWdYQ2dOcVV6UjNDRlV5ZEZiQkoxcTZzVHdn?oc=5"
    },
    {
     "tipo": "noticia",
@@ -19155,13 +18966,6 @@
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYTZKVWFFQzB6eDQ0TnZHazJpTlBPeW1QOUNUY0M3YS1BTi1yWGtvWUlxd1lzcS14X2xEaXphVm51OXRuYlM1a0lpMFdMbnNHRy15dGozYjlNMzZyYUdfS0ppRmhkTmE2bkJYcFFfb3h1akRlS0hvZGNCVWRVdWZENUFMTXJiSzA?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2015-01-16",
-    "titulo": "Cade aprova a compra do Hospital Villa-Lobos pela Rede D’Or São Luiz",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRDVvUXVIRjRBUS1iZnhyUTNYdE9oY0ZXeFVCV09ETE90ZE8zb1diRS1paXRXdTFZdTJvLUxpLWpkUlVNM3ppV0V3S2RlQm5xWHhoQjVCTW5uWFJHXy1zRzhBZnBVRGFFTk1tdDlwSUVXRGxYRXJmRGxnSEJfd3paZlVIb25ObTI1UVlVRldlOGNodjNFNko1ZEE3STVCakVycVlfb1ZvTHMyOWhQVXRPbTRKRlpJY0huOEhTMllOcTZRbUHSAdIBQVVfeXFMTjdhb0pRa0VIcjJWZF9VZHFUY0pDN2E5OVcteVAzSm45QTV1RUpiREpCWndZRldfSlNIaEZxVXVzMHQzSU5ISnpqN25TTTRHa1NoTGtHUHBnT3FCSjNSQllFVXRzNVZOWjRZbnBhSlBtQmZNUUMyd3VrY2FvS2xLTUpHQlI4MW9ZRzJHcmZmZTdCTzl1TVR3Vk9Rbk9JVVd0SzIzRXdkWTg2MWRUOVNyZ3RrSlZFaXVCM2g4UHBjUGIxa05IalRMS0NWYU9wRnE1eG9R?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2023-07-19",
     "titulo": "CRI Rede D’Or São Luiz S.A. - 83ª Emissão",
@@ -19312,6 +19116,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-10-22",
+    "titulo": "PetroRecôncavo (RECV3): Mantém rating AA.br com perspectiva estável pela Moody’s",
+    "fonte": "Acionista.com.br",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZlRrNlVCckg4Rzd3OUZLeURhd2pZTVBiaDIyZEZIdVV0bXRGN0pOM0FsSkxRSnFudjNMUEZyazdTSVNSYXZqZklRemlIS0VOTmpTY0ZBLUJkdk1NOTNHcC15ZUh1QVVnM19veU5WcVV6S3FKbWE5bkpralp2ZllOQXE0Q21XX1Z2NS1CQ3RDS25DcGJzYzc4SnpkaUlFQTV3Qkp3UA?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-10-21",
     "titulo": "PetroReconcavo (RECV3) registra rating AA.br estável na Moody’s",
     "fonte": "Visno Invest",
@@ -19323,20 +19134,6 @@
     "titulo": "PetroReconcavo (RECV3) registra produção de 23,5 mil boe/dia em setembro",
     "fonte": "Visno Invest",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOTZIUmJtY19HdHdYQ0hzNF9vdnRqRXFPSkVCSDlmd0NUem1hRm1WdVNOeWtIc3JyVVZnNGNfOXJyOXlQMktkTUp2MHF5LUNJZXotdVNSd2hBQ21HRnQwdURqMjBWblFVZjM4Uk54Q3JVSEhhX1NZa3ExaEJqc051bUhzeU0xWTgwVnllTThUX2pJZUdoN0NfR29VR3lmZXFRdklTS1FGTEozYTQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-24",
-    "titulo": "PetroReconcavo (RECV3) anuncia sucessão de diretor estatutário",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOT25RWmxHT3dFdU1ycjJJTUdTMWtaMEpWRnQzWFJJcmkwX0ZjZTBMclRpSVFuM1h4RGVYYWpFcVRtR1dLQjZTMDFqQm9ZaFlReGZzX0R0bVZuX2paYU5WRlBWNjRhc1dYS0VRMjB3Y01LYXhXR2FWQnF6WXhfeXRiOUE2dHRyLV9WeVhKdEdmZmh0MzVJSEJlUmhCdWxKbUk?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-06",
-    "titulo": "PetroReconcavo lucra R$ 202,7 milhões no 2º trimestre, queda de 15%",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRkVLcWExcVFfLXp1ejc2aHBBeWwxYkRpNVVBWXkxdGhzb2prYXJibkRYOGprcnRxcjRQdGQxczlRT1hUa0xZR3BGUWdqNDZ2SkpFSUZsZVUxREQwbkxubGZ4SWRLMzhTLUVwVTNmRWR0bVFmOGJaWEF1a3VEakhlYThPZVJZXzdyaWp5WXVnejhudDRqQzZyVUFhcks2YU5oclNzY2dEeFItazdIcmNYeW45WVk3emZKeXA2MDhlU1NXYlkwU1E40gHWAUFVX3lxTFBPZXN6amJKOXhiQ0F3TUVTZDhFSlRjWVQ0TWpBMFB5NjdfbzYyVUsxd2Q4eHg1VnJIM1FoVFdkZEstTU9BMFcyelhGTHo1aUdnOVBSWV9kS2xMU1Q2bW5pMTcxZk1aYzZoc2Z0YU1lUUhBVjJhWm1sVFhMU0d6WDVVVm9id0NGZmZoNmsxaW9Xc0paY0NpZG1QT0dIRW56TE05VFZ4bVJmaUEyc2RFdDhZLXEwanByaXNCTG9GVVNINmZXaXRMNjFzaE0xVTZERE9JSVJ2WGc?oc=5"
    },
    {
     "tipo": "noticia",
@@ -19379,6 +19176,13 @@
     "titulo": "PetroReconcavo aprova emissão de R$ 750 milhões em debêntures para reforço de caixa",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZ3pFZVZxT1ZUblNlUnAyUU5EcER2akZIVXJCZkM1RjU1M2dGRlFYM25BdUNraXAtczVsWm5YV3ppNzZKMTk5bmFpQmJ1RXdhZmk4RUhjWU4wam9WQ09ndUswLUdXN05mM2gxM0RsQlFtMWVfX0xHZGxjUlRTVVBQWFZ4bGhLUDhlWTZaemQyRFNlS0lGNVFjVElpZUZiU2ZoRmF3SDB1aE9UUHFJelo0SlVENHo4amxZb0E?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-12-19",
+    "titulo": "PetroRecôncavo vai emitir R$ 750 mi em debêntures e anuncia R$ 300 mi dividendos",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUmt4ZjBnWTBFVGJQVWw3dlZmSTNwTVcxZ3ZPNHdTaGtCQ1o0SnU0REVmMGZTTnNkZkRvSEwzZ2NqSFdRTGM0OTBCaVJ1QUF0SGs2X0xsNUlURkRobXM2MElfek05X0sxZUwyRWR6QjJDZlU5UmMzbjJndkhzdU5NclNIRFIwU3dxem9WOUhGZjNxVjh5bFFqajl6Mjh2SVpncUpiTTcyY201M1V0TlFXUy1hQkhqWTBR0gG-AUFVX3lxTE5DNXJzYTAyeGQwNUdKVTFVSGItMDByaFhrZThvajVaOXF4M2xwYkhyVTl1Q1RlZ01uSm1RQVR0U3FNbXRGWTFWaGNNMmNUZVdaWEtMbTZGSExLdk1sRGxQd05OZzdMdm9ILU9HVE9xSlhpbGFkSWZZeWh6VE5XWDhpc0JqMnoxRGo3LVZNYl9FVmpiTXI5d3JudUFrcU5yTXFhOEtxN1dYamhjTkhqMU5UR2h4X0FGOEFOZm9PclE?oc=5"
    },
    {
     "tipo": "analise",
@@ -19437,13 +19241,6 @@
     "titulo": "Sabesp, CBA, OceanPact e Randoncorp anunciam novas emissões de debêntures",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRzVWdDlDelZhVWg3eUE1Q3VwTmNLcjRNVkgydTY2SDhIeUdBZGdWdDZLSmlPdU05RFVFWEYydDVFV2ZVMEo0R2FFanVSUXZHbDVxNzJ5dk10OXo3S1BKcGVtSzh3TFNxbmJKeHBqdXpUWFJSdmhtYWJGdkk5U0k5Z0NreWZNbmdtN19YT1QxdExwd3NULVFCXzRFRERFNEhfd1lEOWlQWmhCQVE5NzhF0gG0AUFVX3lxTFBKZ0RQWFFIZ0Zmb0JoalhKMGREYUlvMm1oMFhlSUoyLXE2OGgwcmItbkFqQlFkcTROYXNqbkg2MndGWktGeEFhdzItdWJiUnNsOHNpa0tRTEZONlVDWFN6NDZTMjcxdjF2ME5zUk1fS01aMDVXWXJaWGZTU0tNajN4VlVzZHpzRGE5U1pWeVZLZ00tNGQ1RnpqakY2TU5FZ3N6LXdYQUhWZ1FNWXExN1VJSXVVdg?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-05-08",
-    "titulo": "Randoncorp reverte lucro e tem prejuízo de mais de R$ 7 milhões no 1º trimestre",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPLTJVSXliTFlwU0dvSWRvYkh6R2lBNVJVZ3V6WDVaTVgzNlRwdTFNNVM0WUJwYXh1UEtQalZ5LWhHU1JWRTVNXzBXY3o3clpmd0F4eU5aNU5CRXZRemlnMFI0M0dueUNSVndyMHpXM2JBZ1NsZ2xjOVlUWkl3blhlS1hmT25PZXJNM0kzY2cwQmd6OHBtMVJBMzRBU3g3Q2EyT3FKYkJOV3dhS3RXcWRaOW56ZVR0aGpua0VGLWFIVzVuekVOT0tKWmU0OU8wR2MwYkHSAeABQVVfeXFMTk82TlZTWlkxOTRNSWw2ZEh5b1pKUDBEODR4SkVYM21jVnU1NVJoNm05N29VY3BNMUphSk0tZW9VeGJvYWtrbUc4cm1KX1NHVElaT0Fua1hrSkxqYnhKN1hWaHlTeXdFbzN3T0VNLWlOZmpyeTdubzV2dHVPN2p0ZHdMRFpGMG05QWoyaGtSc2hhTW84bVhUMlB0N3ZRMTd0cTJMN3E3cXBYX1RCS2dReDhIWVRXVzRIcU53NktuSk5Pa3VTdUM3M2swM3d1YWxuaUtFWFlkSklobDlDMlozbEk?oc=5"
    }
   ],
   "41508382000146": [
@@ -20474,13 +20271,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-07-09",
-    "titulo": "Santos Brasil Atualiza Laudo de Avaliação em Processo de OPA",
-    "fonte": "Clube FII News",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZlptZTNPUWZVQmQ2Rlh6NTlJWjZXM2U1cUE2WGxEb095c2VCWDFzU1FvY2NscEp0bUVfUzJCdUpCTmVIdFF1elVpVEgzTHhsYlF4N0tTdzAxa0dvWVZTLWFfVkNDNVdtQlY0R1kzenpwUEItcEIxOUxCU25UQ2ZFVk9BRlo5Ymp3cFNRaXNpOEVpT0tEa2c?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2024-08-16",
     "titulo": "Análise (Crédito): Santos Brasil Participações S.A.",
     "fonte": "XP Investimentos",
@@ -20908,14 +20698,14 @@
     "data": "2026-09-22",
     "titulo": "Suzano (SUZB3) quer reduzir dívida a US$ 11 bilhões e prevê dividendo mínimo; entenda o plano - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53dlZZOXAzdVlnNW5OTnBwNVI3OVRmM19XcVlNYjVHZkZoM3NpclR3My1VUG1UbVQ4d3hHX09jS3ZNVFZQMFlNWWMxbjk3bE5ZN0ZqeGpTNUF6d3I1VDBHaHNFOGRwb1U4RkRGNVZSYTV6UGFJdDJSczBGNHQ4QdIBowJBVV95cUxNMDlUYnhvWXZtQWJORS10cVZUdmt5QTZ4dzhJUnY1QzJ2SGtFWW40T0VabDJOa3lYVmZOSmNuOFg0MEF3ZXdKYlJ0NlhhVnFYMEdTUXZ6ck14TDFiMjFrMlY4LXF1d1RyVm9OZmlLUWNQUV9xMWVkdllnZlZUOWgwLVNJZVlEaTMtQ19Vb2N5cWlDUGxCSjBWQ0VUaGlya3ppVVEyRllucXc1V3hHTzVUUUpBVDA3ZWV1RTNISnVValBGUVhXSjFrMDJNMTlIaWhFdGFPR0JsTDNSVWJRSGFUcXc4eVZOaWQyam4yX0xyQjNBQnczNFE4UUwyeGt3Z1QwTGpSQTF5QVpDdGxtaXUzSW50SS1SSUpaTGZGcEgwWUQ0U2M?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53dlZZOXAzdVlnNW5OTnBwNVI3OVRmM19XcVlNYjVHZkZoM3NpclR3My1VUG1UbVQ4d3hHX09jS3ZNVFZQMFlNWWMxbjk3bE5ZN0ZqeGpTNUF6d3I1VDBHaHNFOGRwb1U4RkRGNVZSYTV6UGFJdDJSczBGNHQ4QdIB8wFBVV95cUxQcjJUNVF6eGp1TmFac1ZaeUJ0ejNDRE84X3hQam9IeXBMcV9WVVZTOExwaDdKRmU1QUI4SkZvdS1KcU93MjJNTVBORkJyZkVlVk5JZjlfUDNkV0ZJamxxLVR0dXZTUWJiNDAwLU1oWDlKdmMtX3BIbmJtamI1TlA1UG9QMjIteE5aTzRrTEt0WFM1RFpsYlBPaXZ2WDlSYm9vcjdlbHNBZFJESlBRZHZMdzBPQ0xfVks2RWFDQ0hOaGdEYkx2NW9MRXUycTJIbkNJZGNfN2dXWG1mdmtJRk5XVVQ2SzUwN0lZSHdhOXhrRVN3TzA?oc=5"
    },
    {
     "tipo": "analise",
     "data": "2026-09-08",
     "titulo": "Suzano (SUZB3) vê US$ 175 milhões em ganhos com joint venture e mira dívida menor; entenda - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWVdpTHpLM0otTms4SzlUUHRHV2Fxck9ORGdFSjlyeXBVbkhGWXN6cUtYVXJ1ektzV29wbl9FaFRpZE55UVpyMGFiMkk1WG9ZblRmQXRvcklvS3NPb0VsS2ZmM1hBSWttU0hobEM5ZkRhTVFXN3B3c2pfZjlDUjlLUEF3WjBVS1nSAYwBQVVfeXFMT2liNzFnV1VseXNyNjF3ZWV4eE54YjZWdmF3Ynl2T0tCTWNBRUhfVTJXUE1tV3Y1TnRfcUR1RVozUzVnLUdoYkRZMW81b2ZzdW8zbEFEaXFKclRpQ2V0bkEzelN1R1ZSMU9OVGVQdFdTNVRBclZwaERoak1JZHhSUUptMXllRVNrSzV6eDA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWVdpTHpLM0otTms4SzlUUHRHV2Fxck9ORGdFSjlyeXBVbkhGWXN6cUtYVXJ1ektzV29wbl9FaFRpZE55UVpyMGFiMkk1WG9ZblRmQXRvcklvS3NPb0VsS2ZmM1hBSWttU0hobEM5ZkRhTVFXN3B3c2pfZjlDUjlLUEF3WjBVS1nSAawCQVVfeXFMTl9CS29Hblo4LVpuQXd3U01FNFRlV3lVZ1l6RVM5bjFrcVVocjU5QVFEOXpkY0NYbWpCaDB3dWRIT3dzdUJXNDhjVzlTQm5mSDNqajRtcGEyUWhINVBYWDRtMi0wY1dFa2dKeEI2WnQwSDJYeVNyejR1dXpJVjNhcjlpdm16Z09IUnp1b25mWUFEeE1RSHN4X1ZLMFFVdEsxZ01lQWRkNWhCTTFZZ2t5ZzZpT3ZtYXVkUWdUWldJSzhranBzRTZoOXdCalZ6NU5mOEhtUWVQSll3U2QyZEM0b0lWS1Jqc0Z1dWRTWUFlY0RZUWlZWkh6ZFV1WGMzbnk0TFl0dEhsVkY1X3ZnZWpEcDVwNjdVaHJKZEdxNXZta2dld2JTQm5sX21FSlJ5?oc=5"
    },
    {
     "tipo": "analise",
@@ -21251,10 +21041,45 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-08-26",
+    "titulo": "Oncoclínicas, Hapvida, Bradesco, Azzas, Taesa e mais ações para acompanhar hoje",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPczdXMlpQUWx3UExQWmNWUTJJSjA3UU1ic1dHZmE4R1RWWVZEZVlYRTh0RmFuUTB3akk0akw2TzI4QTVETG4zQVFHdjB5MW5DcEJSM29TLTVBVTlFVUxubnZLdmdyRXpQVlhkQkxQeDY0VkFReW5vejB1bm9FbHItQ2owQzVYRmFMTHdVOXBlQTRZV3JDZzFsbHBFTlpvLTBOMVN4eVFJbFBYWlI2N3NMYWU3WGzSAboBQVVfeXFMT0ZKaUdBQk9YX2tKdGp2SC1EeHo4blJyT3ZLaXoteTJydS15N0VmWlY1TkNpa3dsUldSZXpRSlhaT2VxcV9iMkVFdFpVNUk1T1ZST09fbVVuYnN3U0ctbHJWdUVEallnMHpBY0NuQjdaWmJJSnpSM085YkRvdVA2eW5oYW1wQ21qX0hNa2pucnlpdXVSeWR4RmtCWmE0UVgtMk5EZXh6TWRWMU52MThLX2tkVC1TNGozVTNn?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-25",
+    "titulo": "Taesa (TAEE11) registra RAP adicional de R$ 5,8 mi em São Pedro",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcE5GbnNaNlk1cDFUM3BsUmEybTlSbzQ2XzV0dkV1WTRfMkoxekVNZ0N4WXFIZUtkV3cycHdkenp2Q1JtVTF2X090NkRmN0Nxc1BJS3VvNUFLREh1Z3lhM1hRZ1IySlowM0NRWEt2S0xtWU82R2xqd2xzVlRYOTdwYmplQXlxejJuYWQwbjZtdWxhb3pMbEVnTERwWUJjUQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-11",
+    "titulo": "JBS, BTG, Itaúsa, Taesa, Brava e mais ações para acompanhar hoje",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNR2hWR01PTWQ3RGtlZ2VmWUdFS0hlVmhZVHBuRV9mM18xNC1sWThjMm50T0dEdWhvcTJLWnliaVA2b0h2T1BkWnAwU1dJc09pYTl3OGZ3NlZGSlJZa1hSWXhLQmlKUG9jU3FXVzZpVFUzWWNUTTdrdFJtMTUtSWh5VUM1WnVYZm1mZ3kyakphOGl6MzY5VHhFRXJNN3JNSm500gGmAUFVX3lxTE9iN0JKVS1EanByQXBRTG1RMno3LUJBYW5UV0k0b1ZvSnhlcnkyTHVhbzNQck5YSFpiOGNLMUpxQTRfV1JGNXBHb0RncFNCODRxRXJYM25JUVhiS0NaenUtOG9xZGJGZWVDLWotS2hBVGZUZ0FMZVhodFpPLVJCZG90YTlabnFjS1lfcGNpeHhRMFRyemc5SzFPa1hOOHBwcHZRWFlSNFE?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-06",
+    "titulo": "Axia liquida emissão de R$ 1 bi e Taesa lança oferta de R$ 1,7 bi",
+    "fonte": "CanalEnergia",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaFlHdjVuRjNvdE1KdXc4Mk5CLV9OSDFzdjlsY0JDWjFNSWV1X2tuSXo4cmVuQVlnVDBfR3BZSnlDY0dZU1NtMzhlSFZXelVwSGtCaDhDbkxLcHlTNWplbWdqVk9hLVVjS1gwaDdNN3p6Smc5QWhUUWZyVElZekhfeUVVLVhKU2pSZGlHZzV5Q3VqZjZmNHA3ekxqcFBMQnlEOFR0YmJkV3hZcldmUEdoUFNB?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-06-17",
     "titulo": "TAESA Lança Debêntures De R$ 1,7 Bi Sem Rating E Projeta Aportes Em Capex",
     "fonte": "Cenário Energia",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObzRBXzNjSmJIRXJMcFFSdHlQS0I4NkFTZHdFSld0aTltYmpCT2tmV01TMkJ2eEp1V0hHRHF4RXFMVkd4ZEVUWFdGVklyU0ZmU3Q0Q3RxckdRZGV2OHdJeTlOWF95TzktOEFERGhldnZmdDdTME5YUmtQYVZCc0RtYWlGNG9iQXIzN1lsMGYzX052X3lKb0dLRXdKbmVfYkQ4WDNVY1gwTGxuWjQtN2hRazZDOA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-05-27",
+    "titulo": "Taesa (TAEE11) aprova R$ 0,30 por ação em dividendos de 2025",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNeklkSEtWYjZ1VEt4MGdhcmpWTTVvdEh6bGMwVEJkMnhEQjYtUEhvY2xvR0I4RHBBOFNRdUYxWFcxbzZUYjJWV2lwRWJneUJ4NWJNLXlXc3g0cmxJY1g1UmtHTWx0ZE9uV3E1Q0dReFF1V1liTUIzay1VZ0ZLWnNBQldwMm93V1o1UUd0em91bnB3SDZVVEk3ZXBR?oc=5"
    },
    {
     "tipo": "noticia",
@@ -21265,59 +21090,24 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-12-19",
-    "titulo": "Taesa (TAEE11) levanta R$ 600 milhões via debêntures",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOXzZzM2ZxelZOSFhuUl9MY2IzQ1p2d1FSU1dOWDlra0FOdmhCaEx1bURfLVdnUjllbUV6NmNKMFlRaFhMRG9qcVJEUzVZMDFNcHVCMTVVOHAxdERlOVdSZDdJbjhXRmM5Rkdidy1LSEhuTjR0SEYyT0h1NUtzNElPa3NiZkJtSkd2WmRhYjJ6OC16UdIBlwFBVV95cUxNWC1VOXJlczJnWnd5VmdnMVIzdG9KZ1htQUw3SHF6U1BMNGVGSTF4a1Z0MlZrSkhIWFNEUzl4eDhvUmJ3TEIyM2dCUUNzMDlnQ19BQmVMb0liTHpVV2QwUG5FVmFlemduRG5xY0pxM3ZlQVFBRkNLdEdpRkNDQmV6YWZfWkdtN3BjanR1ZFRqYXNQbmhXOFJN?oc=5"
+    "data": "2026-03-23",
+    "titulo": "Taesa: Atualização de crédito (Março/2026)",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQY0JMRVUzV1paUkdzQmFVQm9lVlY1dENVczBUQ25wUldEaW13WjlDYlJNSTJsbzVBYmVmd1Y1WVlQS2RwdkNTLVpJcWd0OHVtMnBnSTJDcHJVblZPSXFrVkI0Z1hRSjRjVFB0SlpialhIT25TTklLX2J2MG9iTFNoV1BWSnhoWGhWVHZCQlJuRXI0aEFm?oc=5"
    },
    {
     "tipo": "noticia",
-    "data": "2025-12-17",
-    "titulo": "Taesa anuncia oferta pública de debêntures",
-    "fonte": "CanalEnergia",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWVBGVUg5LXZGUUl5NzFwSTVmYlQzNGxBTGwxUXd6TXpKTjFHMGt5VHJQc084RHp2MVVfUjNsZ1FFeGpyaWZNZHNNbVlXS0ZlWGdwbzc1ZFNaOER3eXZCR1RNYlM3MElCUEtCUkhpMzlQUWhMbzVyZHFBN01CWXJnXzVwLUVUc1l3NWs4QVRWSGRmbldyTHlV?oc=5"
+    "data": "2026-03-23",
+    "titulo": "Sinal vermelho para Taesa (TAEE11): Ação pode cair 15%, diz Genial, que recomenda venda",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ0pVbl9XTGxJOWpGUlVNVHUyLWdLWm1nZXA2R2VKT29LTS1rbmRMMnpiX2NaWXdnSEJLelRhOHdBaG9jS1dYMVdoX3JtQVdTbkM4MzFqVUxKZHU2Wnc2LWt3MENnWTFUTXlrcmg5R1o0X1dVQmprR2FkUlY0TmpWTjJ4c3RRYWhyOEZxNmsxOFYyLW5lcm0xdW51OV91OGl4QTJVY1I4Q1g0TW1NLUxudlk1NkxYem1x?oc=5"
    },
    {
     "tipo": "noticia",
-    "data": "2025-12-13",
-    "titulo": "Taesa (TAEE11) paga R$ 72,71 por cada título de renda fixa; entenda as condições",
-    "fonte": "Investidor10",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTHlMYW9aYWZrQ2VzSklaNU1iRjRlMDFvbm5rd2Z6eXpzQjM2RzZESElXQTAyamdRVkRHMFJnUGZOT2RvMXp4MXZkMXVwUTZWaVBpWUtOQ2JLVVlJZ0tTSGx2ZkpuNUhvUzlDR0dyR29menJkNDk4bHlqeGdlRWk2UmlYeVJYQnlUMmJuNjdLRGNXVXIxODcyZ3dTMkZWVkpUN2hLdDlvdEdXNUlkOUtYM3d4VTNFWHhESGVHaVJB0gHDAUFVX3lxTE5MclUwNmxRMHlpeWw5aXhZTndDWkpEVG9tMFc1ajV4Z2s4LXVIYUhBUWdXMGNoZXVqR0YyT2pGVUlBWDRJUXF4YWtQMjkxOE9RZlVRVjV4MWZFei1OeTJ2M085WkpTamtFYkNVZFk4RDNONk1YY0xDV09XeHpUV2RRWW5FYVRkVXQ1SU1aMmpwZ0RTbU4xTTljX0ZGMXRTOFRxcWxwcUFRZXVyMzdlN08yaGVrdGJvX2M3OF9Lck5GS2pnSQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-11-18",
-    "titulo": "Taesa inicia ‘roadshow’ para emitir R$ 600 milhões em debêntures incentivadas",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPalIzXy1PMUlGSUtYVnpDemY5eEw3akFSNHhBMTFWRlZjOXlWN05kUTMyQmQ2NmI3RzVMdUJWRlg3YlpCb2RXQmI5dTFha2t5OGpkeWRPczRZRndrNHI1VFZYTUJrZFN0X2EwSmpoOFJvYUFmWjNrOHVzb2x0RWVTci1VUjIyeFlfTXB4YzJIR3NXNTR3Y3hRVXhzUEpPamhlZDVpVGhSTzlHVkFyandlSXA4TVFCc1pQMzJfbjl5SXVMUlJacVhiUVdB0gHYAUFVX3lxTFBRSjh0SkVDdTBxOEV1ellfZTBqcGlhbnBGa2FpTk1fckpHYThmT0ROUFN5WkhEWUM3M1hTci11TVJQYmJRckxUVVc1cnAwLWVPS3Y2bE5pM0oyUFVOQ0lDUm9fSTJmV2NCbGF1RklfckRqUlpJeVcyTVRKSEZhNnBJM19fOUZFMVIzajVWRU5YYnlhM1ctWGNzRmNjSThCallHYTItbS02elBlWFpWV3U1eTBmbzdzS1JLVmw4bXBvSGtxTGRJNlo0dVFUa3ZaQ0stN1NPZy1jOQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-10-14",
-    "titulo": "Taesa (TAEE11) paga remuneração de até R$ 33,58 por título de renda fixa",
-    "fonte": "Investidor10",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3RoOHdDZVNOMDZHOUVvNFhXT3RRNGpQOFRsOXdKMmVoX0JnSlRaWGExTUFza2RXZUtJLWtLVWRmSW9LTHl4SGdHb2lMV2FobDlMRnhvUmdmRkQ3b1ZtNDRKZ2paQUk5YWhkQ3JabHNTZlNfV2RISHNOV244bGYwNDlHd3ZWdlVhYjZZVC1NWXd0VHhqcERSUjA5QXhtX3ltWEZzWjFYUDFEcENtSVJmZFZGd0HSAboBQVVfeXFMTkY2dml6bW1FRVFNeTlMbERBZU5tQXRZM1pGSXU2ZnZyelI5QjhJaUdXbXlHUl9DVUFXX2phc2l6SjE2cDliU1ZEa0Ixb1BkSnZDeDBjaFhxalJLOUo2Qll2Z2JMSFVIRWJ5T19iOTRkV1ZKYzZWUHFzb3h4a1pqeldXUkMtUzhTQjdnMGtBTHBKZ3ljMWFzYTFiRmowbUh5Rm45NWFXeGtxV2V2OXVvMEZqc3hGc3RPZklB?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-09-29",
-    "titulo": "Demarest e Machado Meyer assessoram emissão de R$ 800 milhões em debêntures verdes da Taesa",
-    "fonte": "Demarest",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWi1IRlhKYlJqMnFBRGkyLVBpQW5DWElmdVBHZV9zSHFsZGJMeU84Z1lwQkRoQWNpam43YTJESGtXNmxJUXpWLXRUMVpQeTlvQlpVbl9lTUtXblF6MXlzb0ZwdDl5dmhIRThPbnJpX25zcGNsRnpMR1pTVk1GUnBNVU5mbUlyY0ZBS1BxdGo0T2JseVpwOFVtWlVLNXdEWGRnejEyNUJZUURGSW9aZmsxUlE2OURCRER3WUtZ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-01-24",
-    "titulo": "Taesa conclui emissão de R$ 650 milhões em debêntures para financiar projetos de transmissão de energia",
-    "fonte": "Cenário Energia",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNLWFxdEd5Q0ZNdkxXdGpNbFBKQjlDd18yLXBkcm5PbmlZQ0RPd3lQRi16Nl9oMUs3ZFlkRVRpUFVFa25MLVZPejFYUEJ4cjdrOW5pOWhKb0NwMVQ5Mi1Oek5saTdCWnhCVlR4MkozdFNOWnhsbTRhYllDTWo3MlV3eXJwMmtRbjd5WUo5aFpyMkRqUTFKMkd2c3RIdmlhMTVrU0owOXM4dFNBcmxRbGpNOUVyZjM2UGVxT2VacVZuMVl2eVBERE9CcGx1d3VJNlpoWXh0NnhSaGVMV09k?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-01-15",
-    "titulo": "Taesa Confirma Pagamento de R$ 336 Milhões em Debêntures e Encerramento da 1ª Série da 11ª Emissão",
-    "fonte": "Cenário Energia",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQ0pjWFFfMUoweW9MSGhpMEZHLWkwWWpQRVptZ3N1ZTdzRGczQUUxY0NqRUZhbXVwX2NtVnl1V29CZkpPRlRLWF9rS0lsTGRzVHNVMEJYd3RJckhlWDRjYlpKazZqN3VwR0xiNEV0TW1IMUhPczhCQWpPU2lKeU1COHh4bGY3LTVadG5CUWJyREdJem5MTjRudHhEQThyNTJUU0xidVRpRGVjU3IwSWx2SVpzOVBpOUp5bEZGUEwxaE5sU3VtMlpvdmo2V3dXZXk3VHI2RG9R?oc=5"
+    "data": "2026-03-23",
+    "titulo": "Taesa (TAEE11) pode cair 15%, segundo esta corretora que recomenda venda para as ações",
+    "fonte": "Seu Dinheiro",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSDFmeENPMW01VGQ1Nm81RjJ5NmpkR1hMVlFFMkJBSVhKR25VWmVDa3VXaklNRURlc25heFAxQjE0VDMzeU96aU9aRklHcG9uYlJ6ZEpvSVg3YWo3MERuYms0ZUx3b095Z0QwMk9ZdmZqX19HZVJGM2FXbEpYNUlzTWxSdnplZHdaOHIzR0NZZ0s0b2dzU05ieDdpYUVEOExqR3ItV18xUEVvWDFrNlFKbVIxUEtIVFBrOW5UeWZCSWxtRnpFX1BjMA?oc=5"
    },
    {
     "tipo": "analise",
@@ -21650,13 +21440,6 @@
    {
     "tipo": "noticia",
     "data": "2026-10-19",
-    "titulo": "Localiza (RENT3): Anuncia Fiança em Debêntures da Localiza Rent a Car S.A.",
-    "fonte": "Acionista.com.br",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR2E5Q3VtY0ptWG1IMG0xOE15Q3o0cml4QmdDc1RaeDdOdG9QZy1KeTcxLWhxQkNvSUtSVVAwY3FKOU1TVXFoZGdCWHhfbnVqMkxUalRwSXVKcERsbG5sWFFzQU1ReXlOWWZfZlNLUUhDOFJoUjZ5TTVoenhwY1RDQVVidVhTTVBKQ296aFpfU0ZkR25jUWpXTTVxNGQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-19",
     "titulo": "Localiza valida captação de R$ 1 bilhão em debêntures",
     "fonte": "SpaceMoney",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcEJIeVl1N04yU2FpYzZpZVFRNjdTdTBPX1lXYWRPQk1ZaTloU1Z0MzI1QkdCbkdGZlF3Yl9uY0pNTm1kNDdOcnZ0QVpRVVFRcUZhak16OFhVNU1Qc3M2dXRYSFN4MmVRNDNlLVFMR0lvV0JsV3ZLMURzTXBhMzBKRWhYeUNoLXhzcVE?oc=5"
@@ -21688,6 +21471,13 @@
     "titulo": "Localiza aprova emissão de R$ 1,25 bi em debêntures",
     "fonte": "CNN Brasil",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ1M5bjJyVkZqVlh5c1NZTlY2ZkJFYUFvNU5PbGNPNG1FZFZhbEJqdTYxbVFMZlFTcFhSNmdSWE5UY21CajdHSkg3MEc0VGE5Q21MTEllVXRmSDBTd2ZNU3pGNC1lSENkelN2M1VYVGcyNUN0d0FaY01aeXJaWHZLY0RrLUh3S2kyM2hJNVFXY00yZ2hwYllGQmxlQXFpN01UZjZ6Vg?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-08-25",
+    "titulo": "Localiza vai emitir até R$ 3,1 bilhões em debêntures",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeXJ5cVBTY2hEeUE3WDdyLW10Ukg4aGFsVUh5c3ZvUzRIaDRHNk5VSnFSQUFhUTVkYkx1ZmFfYld4OFBpR1dfZlNUQlp0WGtMZ0JpbndNZzEzMlQyMkhUM3dTNk51cTliUWVzdTdjNUxUQllWU1U2M21nVnlMdG55dnpjdW1GM09UZDU5WlNJZkpxZjNJLW16WlpZZXpQdDNLeWV4d0FiMmrSAbcBQVVfeXFMUEgtMmV4NzR3YXdPVEcybHhBVlhMZ2c1ZTVQeTE2Z3U1Zk9tcXJ3clVrc0lFZ0NUNE1fWmRNMXZFOUtJak5JdE05NlpCTEhWT0NITGtZN2RON1hEUUszVDFqRHROWHd6UFEzdHFDY3F1MDV2OTBNTldXd0FweVE4dkpNYXlPMjBDblBHUFRKamc5YTZUQTctekRZc0pybHVqaXJnM2sza2xQNWUzejI1azI3b1QtUGJV?oc=5"
    },
    {
     "tipo": "analise",
@@ -21784,13 +21574,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-06-24",
-    "titulo": "Auren Operações incorpora-se à CESP em reorganização societária com custo estimado de R$ 10,5 mi",
-    "fonte": "atlaspublico.com.br",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdThma0tCVktYLVBWb3d2bTRuVW5OOW5RbWVfUVpNVmdDZkt5U1lKaHhlSWgyMkVrM1dONE1KbzA3QlVROFRrMlZIRGg4OWN0VGtzcmVXU3FvWXZqeFkwbFc5bDZRQm1mOUVCYVM1Mm9uZExSUHNRSUg2VmJtMTR1VHo0ZUZnajFGSmxFSVVCSGxLUTBfcmF0V2RscUpkU2RO?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-06-01",
     "titulo": "Auren extingue empresa de participações com “incorporação reversa” e encerra primeira etapa de reestruturação",
     "fonte": "Times Brasil | CNBC",
@@ -21823,6 +21606,13 @@
     "titulo": "Auren (AURE3) faz resgate antecipado de R$ 2,2 bi em debêntures",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONFZfNTB4M0x5VU55YjNvczNYU0JBSGsyakp1MWZGUFAwMVJENl80aElxUDNRQ28zRDQ1SzcyZU9oU0M4djRkd213WTVmT3NUZTBqZjR4Tnc2R1hLN3Q3Smg1aHdxQXdaYTVTMlhndmw5a1JLSDZZNWFHMDZGdlZpd0c2V2JqcHJfbTMtUWJkRVRhRWlrQXFOdE0wT0FHUTDSAaQBQVVfeXFMTlVQTnBFRy1fQndWN25QZC1zMEdCRnF2Ni1GNWNCR3V6ejUwV0NobUV4LUFuOFliTXU1VnMzV3N1Yzg4SnhscmpKNExqVzdscXZLNTlQYjBDMUV1ZDFSRmhiemN6RUpBZVg2ZGtpbzQzV2VNUG45ZzE3U0d4WEtLa242RGZnT3pxbklVZ0M5UjBwejRQSFdlbk5aTlhhTVR0MDVEemE?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-06-11",
+    "titulo": "BB-BI analisa a Auren sob a ótica do crédito privado",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRjhIaFlIU3g5M2pZOEIwUUdwNjZaZ3lUaWQyaG9yUHg3RGFKTDRPTFhld1poTkswRElNMTU2UVgzcGxxOVluMHdyREtMYWRjNm56Z2RsOW04QUZjVEpuQ1hzdDBLTllkbXM4UjRhV0hOLUdKdjM5VHVXeUZWTkhKa25pOUFxVUtHUXZuY0ZvUFJpTzht?oc=5"
    }
   ],
   "84684455000163": [
@@ -22124,24 +21914,17 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-09-14",
-    "titulo": "Telefônica Brasil (VIVT3) aprova JCP de R$ 0,1564 por ação",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMVdUWGU2WG9tQUhYS01wc2RpTFdnSUJQdHgtOEdqM0MyTVdnbjlyMDJMOTF6aWtKNDRyTW9Na0ZMUi15MWdlcEpHMzktdWp5VEc4YVExdTJ1N2dZUXVSQ09aczNwbl9OQmluWlJITjN6R0RYbkJDRUhzd21icC0zTXBZajNEWU5LMU1GbFY5aEFJdHlxU0Zn?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-07-27",
-    "titulo": "Telefônica Brasil lucra R$ 1,6 bilhão no 2ª tri, alta de 17% em base anual",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUjhJekRiY2FJVWpKSlhOY1dRYUtSaXV0UlpZck15YWVTeEx2TE1uUGhIUGEtcEg2Z0NaWTFUODE1YjFIa3pnMThHZ2RkN2FwUUY0YU1ZQzhVWU1qaWxFZmxJbC1pWmttUHZpcmRadTN1Y3lOYk1BZlRfMHlzTnlkdjV1REo4UlhiVTlQUXdoczVUVFZJbFZzTWZxQVVQYkZCQWdSYjBTb2E0b3VkTnZnMm9Cd3pldEtaMkg3eFdKR0M4RzM4Q0stZ0t5WFpMS3Rj0gHfAUFVX3lxTFB6RHFuV0R4aS1kektGNG9PcVFTU2RsaWdheHFqd3RiUUJpbTE1dHNOMmVPdTI5QV9qY0Vva2RqNjByR09ZdklfSTcwUWxyaHp0eW52N1plZllTYWtnY2RDUlFrVzNoTURhOFdPSzlqZnlVdWFPNVRqd1hGZEd4a0x4YVBxeEdublB3QmlsZEhFZ25KWV9BRzVZWm1GdXJoMEdVX0hIaG9jZGdTVW96eXdReFNkTHB3VzdTQmt0RTExWlJmRGJ0TVZpZjl1dUE3dllRLVRLZ3JGaFhodGkzSFk?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-04-11",
     "titulo": "Telefônica Brasil assina termo que muda regime de concessão de telefonia fixa",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWHhDUkhZNzdIN2lHREpVMG4xaURqRnphQVRCeXg3NG1lQ0VlZFYxcUFmS2hBdW05dzRxaEZoVktILW1RczlLcmx1cF9DcWhGSmpsQXpzb1VyTDMzOHliYnhrSmtINzBENjlKTEdNRm9VYW56N0ExYVpMb0g4ZXRhMzg5Nm5FN1JHOGdjeUhHbW1kdWtBbXM1RmR6WGFWalRVQ2RFb3piRUJTeVVLU3hfRF83Y0tTdHMtSnpXOFJTcFNidFJscWY3Nms1TktLUdIB3AFBVV95cUxPQ0s5bWhmMGNOblZ1eVlmTG4yeEo5eEdZMUNZSmxiQlF0amxwQmlRNlB1dzRkM1RQWEliWTg2dnVBeWY2dnp6ZnBCMjZOTTBsR3lSbTlpWFF6dmlRRE5qOVRmd1gzZXRMbmZBdzloWVpab0hORUFoc3paZ3BvUm5Ed3lvNGt3Q2pwR1Y0M0NSR1hyR3gxOElxd3BueUUxa2pqQUF5c053NDdjbDFWY2Q5bFp6TGpJRGpjRVRSR3JZV01VbS1veng2cVNIbWVzZEdlX1hELV8wRDlCbTdt?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-07-27",
+    "titulo": "Telefônica (VIVT3): ações lideram quedas do Ibovespa após balanço mostrar lucro menor",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5sdm1nS0oySExCYWVsazN5dG4yZnFtSWJobUhBMVVmTWo2eWYyeXZqRjRmMzZZWE5RVGV5dHJla0JtUFZNdXBwSms3V1Q2Z2wwYnltSnZHcFA?oc=5"
    },
    {
     "tipo": "noticia",
@@ -22156,6 +21939,13 @@
     "titulo": "Telefônica Brasil: oferta de debêntures da empresa começa em 8 de julho",
     "fonte": "Safra",
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIbHlaLUs0ejJWOUdxUWlKZnRxY2tqVWluWnBRSTVwMGc2a0luV1djS0xrQ0U4ZHZXbFNvVlBxa2RZc1NET2QyS09URWZVUjdHUGdXMDFJQjRwUzVRWUhXTG1GTTlQem5Td0YtblhKV3FfOEFyRHVqVFdmOA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2021-12-13",
+    "titulo": "Telefônica (VIVT3) pagará R$ 1,5 bi em dividendos até o fim do ano",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAyQVJkQjZXRmlBRDJRUmdqOV9Ra0ZOV0dxUy1TWWhRNmI3QU1CYmhpZTN1eVdoU3Ywb3lhUVlSSXNtTkJiaTN5SHdzVHJIUTJyQXdKZXZLMng?oc=5"
    },
    {
     "tipo": "noticia",
@@ -22343,6 +22133,34 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-10-13",
+    "titulo": "BlackRock atinge 5% da TOTVS (TOTS3)",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE50SEZQWWFqRVlkenctWFBlZlBWaUt4LThiQW5zRnZPV19PekI2ZmRQVFNxRXdiNVNiejhpajJRRDVLdDlndWNlUVVMWmI4MWM4N2JrdW5qdEhxc3NhVlRTZWtDemJBMFkxTzRPMUh1dWpvUl9LdEp4RVhlNA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-10-05",
+    "titulo": "Notícia da Cemig, Porto, Totvs, Unifique, CPFL e outros destaques corporativos",
+    "fonte": "Finance News",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZU9VYWY1cVRsdUtzZmZLRVJ3MHFfVVVvTkcyNy1HcFN5OHBERFpBQ2VReVlOZ0c5VkMtQmlFQlpVc1FWMFhLRWswbTlBVXEtUk8xLXh1MHVIZ1BGVkVScWhSQTNGZHVhNUkzeFpMTmNTcDVjeC02UndhUmtaTnRiTGtHTEs5TW5kNVJtbGhadmdMRUlRbE9RNm1QZkJMZnU0U0tDRS1TbFRfeDNYbkxV?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-30",
+    "titulo": "Totvs Fundo Exclusivo Pgblvgbl FI FInanceiro Cic Rf Resp Limitada",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0QlluTmxQN1g3dmsxc0JPdTh4T2dQRmYxZjBwUjJMdko1aGM4dExrVmV3SHlPSFUyQXBuQTNub2xlLWtLc1lBSXVUUF9fVG1CZU1oNnAxNlk?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-17",
+    "titulo": "Totvs (TOTS3)",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96V1RpRmN5eExDWDlpMDFZUHZaTGctSXl5NGtLVFUwZnZnVE1LSHBrZU5yeGpEYUJ4QkNrVnNWX1RoNW5kcjhFWlpPdGNVeWZTSWhVWF90ZHdaMVQ1RW9YcGFCd2p4T1NxTEh3?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-08-14",
     "titulo": "Totvs (TOTS3) Levanta R$ 1,5 Bilhão para Trocar Dívida e Alongar Vencimentos",
     "fonte": "Forbes Brasil",
@@ -22357,6 +22175,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-07-16",
+    "titulo": "Light, Totvs, Brava, Axia, B3, Oncoclínicas e mais ações para acompanhar hoje",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSEUtRmFKcHZiSFk5NU9DRUp2NUE1STQ1UmZMQzdXb3JZR09FbjFlcF83WXRGRkFCTHlES0xmNUNRQzgzNnlMTTRnX3JKYVpNbXF1Vi1xWXphQ1ZFY19IZVVzbnc1UEl5QV9mTUFqdk5nOXg3UERpOG9SaWJXQ0dpUjItcDNsNVpEeTFYOTRVLTlKY00zZjdnS1J6dEloMDdaR3RCOGVqa1l6dXV6Z0ExYtIBtgFBVV95cUxQRXRnOEhjc1VVYnpnbHpDNjg3bEdLSlFKNXFWRGo2S0hLX2JkLXMwRC1Va1UxaUpYQ05kTDFkaGpoQ0hHN211SlBQQkJ6ZUZWUEh3Z3d4WTNBTV9VNHgzMXpUM0VYV2tmU1piYk1NbVNDakFJdTZ1TWJDWkd4NmNlMWpOb0ZrUjdCWkN2cUgtUlVqdFRlcGlEekp4TVY1Q2E0d2hwaXlYaTJ2WjNpeV9kVURFcjVlQQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-06-03",
     "titulo": "Morgan Stanley atinge 5% da TOTVS (TOTS3)",
     "fonte": "Visno Invest",
@@ -22364,45 +22189,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-01-07",
-    "titulo": "Totvs busca R$ 3 bilhões com debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV25TV3NrYmNYazFLTlR3SFFzQlR2NDNlMW1DMGpWNllYWU5EdXpOM3dGMnV2LTlJbzlsWHBmSHNPYVF6amNZT0FNYzhpTmNnNTU5YmNCMWRUZlFwQzhkWFpnV2xoUkp3OGU3QW5rdlJBMjVvRlhaV3BWblJ1X2taLWlkTUFLN0l6eWRGVFpubU14NGRFS1ZJY0RB0gGoAUFVX3lxTE1xSnB2bjg1N0V0dUIxaDFtS1pEZm9WVno2cldORHp6QjAwdnNWakF0R2RMdVYxLUo3UVBkN2FJNXJ1T053V0JGOXF1VkNqVy1KbWJadlVNWGJYMmYxcEw1T3RpeG1aOFNUcUxJYXR6ZG5HSnRwdXZjbXc4V2tHQlJqdE9qUzQ2bW9wQWZPdzlwXzctU0wybklxSnY2VGxjenNsWHYzUm5zQw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2023-02-15",
-    "titulo": "Totvs (TOTS3): margem decepciona no 4º trimestre e ação opera entre as maiores baixas da Bolsa",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBqYjYxVU9oUHlKcXc0R21SYTJ6TkdaZjJDNW1Wb2RRbjZEdU1RVXdWN3ExVGNwNl96a3kxaHlYM2dHMWtXSVBGYXBBcS15bnNPYzA1N2JHaVo?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-08-02",
-    "titulo": "Totvs (TOTS3) compra startup cearense de atendimento digital por R$ 6,7 milhões",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAwRXZCR2R3ZTRCYmE5VG1OVy1EREZSckRyR2RoMDVwWTUxMGhJS1EyejQ2clFaNWZfNHpkT3lLclFwdjRjc2oxeUtxOEFuNTdxRElkNHRCbFo?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-07-15",
-    "titulo": "Investidor da Totvs (TOTS3) terá alívio com balanço do 2º tri, prevê UBS-BB, que recomenda compra",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QSXN6REFEcERoY1NEaU9zYzJaUGRZeHBzUDZVNG1SdGNaYXgxN1JZSVNvdXN0YWpEZUMxR0ljQVI3ZHJwZkFvT2ZuN1JWaWwyZkhHdXE2aTA?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-10-04",
-    "titulo": "B3 conclui compra de 37,5% da Dimensa, subsidiária da Totvs",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAtcHpfdVpVdjJHcTBRdkc0NXU1eDJCWnZwQWpuMjFGeGlkdUJhOXh6OGNnMHVabWxxQ294YUxoVXkzN1Nub2pTcjdaQ1RKS2hIVFgxVGc1ZF8?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-09-13",
-    "titulo": "Totvs busca até R$ 2,5 bilhões em follow on para fazer mais aquisições",
-    "fonte": "NeoFeed",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMFNPXzA3LUpXbHl4VHNGM1lFVC1HRXhVU2lKNnBoRmFQYk5BZkVBUEthb19ibGJZMGJSYlVqb0dwdmxqUVVPNmNjTjVzbDRvZDZtNWxORVNCdWNNSl9FanBiWlEzTWRlN0pXQ0ZBZ1J1MktJZDloYVlUSXc4TzBTVW5ZTmgyb1JMMFNsak9yVGpreThOa3dMTUQwbW8xc0lkNGV1aDZB?oc=5"
+    "data": "2026-02-03",
+    "titulo": "Totvs vende Dimensa para Evertec por R$ 1,4 bilhão",
+    "fonte": "Times Brasil | CNBC",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNa1NaUlZXM0JKTmowNzBhRV9TdzM0ZU9UWWJYbk9za011MjY3STg5RzhxX2dhOFMzOUR2VWZkV3FFaE5BY0h6S1hZZnMxZHZ1bC1EcUZDazZ6dXB4aUJMc0p0S2RnNTJGa2xMUVZCZ3lYbTFwWHlaYzdReDNJN3BlZ2g4dGpqNDZRZ0w1dWlsRE1QdU55bjRqMjNja2k?oc=5"
    },
    {
     "tipo": "analise",
@@ -22581,13 +22371,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Tupy (TUPY3)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1BOEJZQXVEcGloMi0yVGV1WHFWeUlINnFJOFpVeDc2UURqUE1aSkpvMmxQRXI1Q2N0WUVGYlN4X0VPeUwzWHNXd2hBSFQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-10-13",
     "titulo": "Tupy: companhia aprova recompra de até R$ 250 milhões em debêntures",
     "fonte": "ADVFN",
@@ -22609,24 +22392,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-06",
-    "titulo": "Tupy (TUPY3) registra prejuízo de R$ 11 mi no 2T26",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxORmV2cXh6TzBEYUZUYmhLUHlVdjZkYkt5a005SzJmWUpKUzQ3YTBNQlZMR0tHc1oxNnMyTGREZWd2X1RHVjVfdTRaM1A4enplTXF6RG1vd1QzN0JteDh5VXZrYXdISXNpb2ZYdGlHZ1pQVWVKTk56a1dDekJTUE5sZlJUUUtKaHYwcG0tYlFR?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-12-30",
     "titulo": "Agenda de empresas: Casas Bahia conclui reestruturação de capital; Tupy convoca assembleia para discutir estatuto",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPekFZTVN0QUpBMUltYkZLNy14cS0tanBMMkJqMXFMWTNVWFBVXzNNd0I1TUR0ZW9oUVJBcjVDejd1VnJBQXZ1VzRQWEZGNVowMVpTcU1rb3BTUWsyVk1Ndjkwc3pFcFgtUFByeDdNOVBldDFwSjY3M3FGUnJvaTRmV0xNN3luZGd2aklFZzF5aWNHRGZsNnZhOGsyV1lTTjJDQ1ZqMzY1SnVxNEFOREFocHBxMWpfSng3UFdPdEdEOGptZkdRQUhnZ1hTQWdtVzN0aWxDUHRjX0VVRUxFX2RIM3BaZTE5UFM2bjUyNXFqNmZodjlza25ndmEwVklvZ9IBjAJBVV95cUxOTk1PeF9JTExNbUVnWW1rTm1VWWlGaDg3OWUxWmcyajIySzVoLXN1MC1keHpYblhRY0ljLTJya280OHZhd1p0TmxmZThOMzE3bmxYZ2h2Q3pUTzN4clN0WmQ5cldqVEI4cEYwT3h3bEhBR1YwUVBpQ0ZtZkZ3X0VDQ2xFQXhjMEhPcmRXT2hJRWt5cmo5TFZYUGJhTTFDX3ZjNlU3ZFZnZ3V2eTk1OHhpSlpFSjBQd0NzSm02SUtqWWRLTzhoaGhXVFB1NzhZRUpLYlktVFM2SUh1cWMxWXNmWFBvQXYyUzBpZGxkRDJVMzZ6T1kwUDNaS081Y1VUc3NwNTU0MVRULXFqOW1M?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-12-15",
-    "titulo": "Tupy (TUPY3) cria vice-presidência de Componentes Estruturais e extingue VPs Comercial e de Operações",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNemNmclpfQ2RhVTM0cXM4RGhSYVZEa2pTVmY5bkVmOGRVcUFyeUItTlVIcDNRa1l4N2ZRem9jZUZWS3ZuNmhjTkFldG5XTXBSeFk5N3dEbEltYUstYUhWbktoNFZnaXlXcW9kZlhaZm55RzRlb3hndk9KTUZHaVk3OENrdkdoRFNLY3JkTDlFYUoxbmRfNkpFem1uTXBBcnN5QzdWemtTbXprYXdKc2xlUXBWN3p2djJyTHJGeGpDV25hWFR0eHRhTEljQjg3NDNMWGhJ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -23184,6 +22953,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-10-21",
+    "titulo": "Vamos Locação anuncia prévia dos resultados do 3T26 com crescimento na receita",
+    "fonte": "Clube FII News",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcXplUFhWTGhCQ3Z5c2ptU0FjdVpIZ2JydHFYUTU5dFFEdHpMZFRNUEtiZXJ0WWpRU1RMbGExc0diN2x6ZndRSl9EbHhZSnNWOFgzV3JmVlFpb2oycEhsaE9QN0pYMHp6eGFHeWpGQXZVZW5sdDlIZlJwbXR0djFRVnhvdGtpOUMtRlUyQ1BESEN3VHVvOGJUbW1WUEZoLVRHVEI1Yw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-05-18",
     "titulo": "Momento B3: Lojas Marisa, Taurus, Ecorodovias, Vamos e os principais destaques desta segunda-feira (18)",
     "fonte": "ADVFN",
@@ -23455,7 +23231,7 @@
     "data": "2026-08-17",
     "titulo": "Vibra Energia tem 2T com forte geração de caixa e distribuição de juros sobre capital próprio",
     "fonte": "Itaú",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNS0Rld1RXQXdiTFFReUFtMk51MlQtWW4ybTJNcWo2b1AyVHhYU0Vmckd3eDE4bGdtdVBpdFpObzNwMmhQZHpKT0puS0toU1VtYklaZHEyWElNdnRES05WTnpnX3JOeDNzU2dvYTdoN2pBdmhjX3h5amN1SU5yeGpsV3ZCQ1Itek1sR0d0Tw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNSUxvdGU0Tjg3YnFxdXBtUUNLOXhCb1ZJNGNCdHowOE1NWlF1Z2NleUZPWWoxV3haRjc1bGhpVEpZdjBZU2NaVzlDWXpTWHRwVER2U2ZwbGk3cElQRUJHT2NRVEtuQzNGbTJKRFdHV0hTSWNzYkRUTmZEd2VidFpfTF9nM05kRGZ1UWJfYnN1S2NrZw?oc=5"
    },
    {
     "tipo": "analise",
@@ -23469,14 +23245,14 @@
     "data": "2026-04-22",
     "titulo": "Vibra Energia (VBBR3): BTG prevê resultados positivos no 1T e reforça compra - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOc2VfcVFaYXlEcUtONkdKNjk0aXV6U3FWY28xaVY2R2pHS0x0TEs4SU9adGUtRUNPN2FjdUdQMl9ZcXZ4OEtrUmZ4dTVFZDQ4X1N5ZW9URFUwSWNha05uQ3FwbTZKMUNBLWFVTFZBZlBtLWtHLU5SR3pkNnNHRmpkWmQzWGVVUjJReTM2NzA0Q1VyOHNvSmNiUDFR0gGfAUFVX3lxTE1IbDFtRHJmaHBDSkpwOThjWTVPV01INFRGWFB0UW5XT0x3QkRpVFQ0bTF2amZZYU15QVNxQWthMFVVdW5hRGZZUW54TlNjTkhZazZHT25WcGFEZTFUdW5OallnS2kyN2NQellBRWdiM1pCQ3cwTmlvTm1renk5MzRNQW5UVktFb0FNU0pRc2ltTVEzUHFidFF1ODgxamFjaw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOc2VfcVFaYXlEcUtONkdKNjk0aXV6U3FWY28xaVY2R2pHS0x0TEs4SU9adGUtRUNPN2FjdUdQMl9ZcXZ4OEtrUmZ4dTVFZDQ4X1N5ZW9URFUwSWNha05uQ3FwbTZKMUNBLWFVTFZBZlBtLWtHLU5SR3pkNnNHRmpkWmQzWGVVUjJReTM2NzA0Q1VyOHNvSmNiUDFR0gGaAkFVX3lxTE1fTm93YzdwWERvUkdLdGxhaWtBN0FDRXBDbW9QMndJaXpUc0dMcXlreVJSZUlzVE1vVlZ4bTdNeHBGNDc5TUdybHJmdlExVnQyTng1Zlk5TXhvenJ4czJtQkZ0QkRhZjdQaHFzVnh0emxBOG8xNEFZTzU1Sms5VUJDWFI0YkZiOEpmMmZPUnBqZHlaWHU1YmtuMVlPcTJIaVJ3cEtBbndWV2VTYk1YUDFPOGkyWjBMQVdZOHNObWd3MmZMZjE2Q29kc1NvbUFLU0NEQmltbmtzNnZFOFZpXy1xTkptbUZsRzYwM0dKcElCcVNlQWJFU1phdm9wUmVCXzdIa1BKLWkzcEZ2azAtbzB6Q2lVY3RZMjdfZw?oc=5"
    },
    {
     "tipo": "analise",
     "data": "2025-10-28",
     "titulo": "Vibra (VBBR3) mostra força em margens e sinergias com Comerc, mas BB-BI alerta para endividamento elevado - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTXBidEZrU0lxZkFlM2kwZGZSd1F6MlhrYXFxNkVuNF9jYXpMeGk3U1ByQUZub0xJLTBYTF9hSmpqcHFGUWpkUDU4bFA3VXFUX25NaThlaTRfM09xb2VCWDY2dUpXQ2dTdnFWM0U0TGJxMzFfQ3BKMzZsUlktUmM3bDVid2NCN2PSAfgDQVVfeXFMUE9OV3FMUFVpSWRVTjFTRF9OOE1PeHFmR3UycVNsVjhmdi1wZ3poVTVNclptbm12ZWJLd0laSWk5bHlpWDFkQV9CZXBsWmRGTlBQMHZseTJoOEFWY3ppUVlYVWJEOHctOFN3c1pTU1V0cU9ZSlNERU8tQjZQRG00RENvY1hZR2NmWE14S2dyQmNydlJkM2phLWJoUF9PZ2tvOFZpZmlPSTR6emloYmVVUGNvODh4V3hrcDJLSmR0QkRTX094aUsweWcxbU5DcTVNWHMyb3hyUFU3RWtGT3lVOEpzWWp5S1BYeXBhdU02RWRlLU1RRUhvQXk1SzZXb2RvcnNXVmlhT1Y2LUE5V1RDUEZ3bnprbWo1Ykx3SE1jNEdZOXYyN3BGYUMzSVJzeVQxUW42WTBaUjJuVnJHZWh0c09WMmpDSUo5eDRfSEdyT3EzMXlSdTlUVjZuRmpEOFp3WF9aYmRlc2xLcm9KSkZ3aUpXaExWdFpTcmlNU0tKSUtxU3ZueUJZZ01CUlN3Qlg4aHA0dXVEREo5YnBwcEpLX2FKM3ByQ0wwS01FbDNMU2pVYWREVmZXYmwxY2dSVzFwU25nWU80aVF5amEwOTlRMFJlZzlOaU50RlFfOG9ucVZycXd0YkY2VjdIcXExSG5vYmxqVWlxX2l2?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTXBidEZrU0lxZkFlM2kwZGZSd1F6MlhrYXFxNkVuNF9jYXpMeGk3U1ByQUZub0xJLTBYTF9hSmpqcHFGUWpkUDU4bFA3VXFUX25NaThlaTRfM09xb2VCWDY2dUpXQ2dTdnFWM0U0TGJxMzFfQ3BKMzZsUlktUmM3bDVid2NCN2PSAYwBQVVfeXFMTXFrZDZ3a1RQVHNwX0ZJQ3FwYnJQRXpOMVhLVWhBTFJiaDFWRXBfNk5qb2dsaU40S1duSzVSVnZtNUg5TW5QZXF3M3F4TGdCNGJheHRqeU9tNzg3ZzZZMEtGc3hLT2l1cGxjTExiMWRrMk5rWFNTRHdQdXpJUk5wZ2lOT3NwZFVvSWsyZlo?oc=5"
    }
   ],
   "01637895000132": [
@@ -23764,10 +23540,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2024-03-28",
-    "titulo": "Receita da Americanet Vero cresce 23,5% e vai a R$ 1,6 bilhão",
-    "fonte": "TeleSíntese",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdzlZWWgyUUhmY2w4OFFILWZFMGdIbnpuREdXcTBNaEtOWnlmWEVJaHdpcGNrTmphRFRGNWRCa2N1TUpCNFhwZFlPUGxWRnJIOHd0UG96ZFZOd3FYRW5taGxoWG55WEMyUUh2a2lteWVKUmtmendONU84aXI3YlRfNFJTX2JfYnB3NjFOcWFn?oc=5"
+    "data": "2024-03-15",
+    "titulo": "Vero Internet eleva emissão de debêntures para R$ 600 milhões",
+    "fonte": "TELETIME News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRXBMLXpaOU11TmFFU0FmYUxSZXhaQ0U4WU9Wby1lT3c1RG4wWC1lRFZfTFYyNlZ1d1FGRW55YVprS204UlROMXVCb0JtbTMyS21UR0hMSTNIYmppcENPT2ZYVkdDRDllamdOaW9nREhsVnY5ZkFVM3FKZzJ2RkNDbW9JY0NfdWkwRWV1d1B6N0t2UkJQamhZaUhIVnE?oc=5"
    },
    {
     "tipo": "analise",
@@ -24963,6 +24739,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-09-30",
+    "titulo": "Klabin (KLBN11) prevê alavancagem controlada e quer distribuir até 25% do Ebitda",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5vQkZKRnlYLWtoVGsxQ3Ziai1xMDVWQlBwZk43eVpCX2lQejFuSXJ0RDhzSnYtNEN1cjRXRkJYemVhdWZRMmM4ektoWXRZZWNGZDdHbXVfbEw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-08-19",
     "titulo": "Klabin (KLBN4)",
     "fonte": "TradeMap",
@@ -25018,13 +24801,6 @@
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRHpvTWE4UDllVFVubkJBLVUtZVNmMGJNRkszYW9BSjl3X19kRWZmaUtLTll3SkRXWmh4SjZVMFlaQ2U1QnJmOVM4Mk1IMG03MUhpeUVDSmN3OHBERG5XR1dUN19pRDc2aER1ZHNJMFQ4bzBIb1Q1V21GSk80aENBUm0xc3d4ZU8zeVctNmMzWFRPNnloRlFGbHYwemhTcng5dlVvVElDYXZYVVpwZUVRbnQwUnRSY21HWDhZ0gHAAUFVX3lxTE1aandqV28tSzdTZmRWLVA5bXNLemUtcEp3YzZyVUtGclFZVnhJX3N3TUswbDZWRHg2c0tqbnVmbXRPUzg5WjU0RWxBWl9VY3JCOWRUbmNpcU5SMHlzZUo1cndobHFiOEtSekplQ2tnNzhOei0tRE5PMVNKVy1FVGhsQkEwQllxTGpIOFE5M1VXMXh6M2tNNjBlb2VsN3VvVkxBU1dhRUVNUzUzWVhfcC0xNlZNN2J4bUJsQnNXZHZIcg?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2023-02-08",
-    "titulo": "Klabin (KLBN11) vende menos e lucro cai 25% no 4º trimestre, apesar de alta de preços",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vNDRobmUzeTVmLVdSY0dIWFo1Ty1MVjFzQ3E0WmpWbkZ5anFMWEtZQWpXMG5zZlhFXzRIUXY0ZlRmdmxwdXhaWUVoSmpXemhybHRmLVZmdS0?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2026-10-19",
     "titulo": "Klabin (KLBN11) pode decepcionar no 3T26? Safra prevê resultado 11% abaixo do esperado - Suno",
@@ -25072,13 +24848,6 @@
     "titulo": "Klabin (KLBN11) entrará em mercado de crédito de carbono - Suno",
     "fonte": "Suno",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83MXpqWlJDQzZQaFE1ZW1ZLXBvZEhZdEhxYVdCdGExX25VNFhVc1g5ZVZyOUlOQmZpNE0xbDh1REwzM3JQYklFbmh2c0FBejZhdDBMakU4UmVCa2tyMS03QTBRTmtUdm00Y01v0gFwQVVfeXFMTlNxS0pkYWtQTUgzWHNkSXBYRnpzTUp4U3VFS0g1aXc0VEZnYTROZVFLWGZxZlBNZUdjempPakUxUTE1OEhQRjdwVEx2N2lfcEExSkpJMk9wb2xmbUs5UUkycjRaMklJQzBYai1QVHJDUw?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2020-01-15",
-    "titulo": "Klabin anuncia que captará US$ 200 mi nos Estados Unidos - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zRU10M1F0MWxNT0stNXllSHdxR2VqaElWV19LLVR2MDNyb0pMSmpQWmFSbWw1T3B2b3hZZTBUd1JiZTJtbjFuTm1YcGVocVlUcmxmTHJMemVVX0JTUmtYU1Q4dFZBUk1mc2p0ZS1HbFXSAXZBVV95cUxQZW1jWFV1emxReGQteEJ6Znl6RVhid0pnUEN4a0RNOEZzZHd5aGZZZWZ0bHZCcnVORnhXeTVqbG5JSzA1R3FpSXZaQ1p2THkxSDNNc0JJUlBKY1U1WHdlYk1BSFdQbklSRGsxNDhmMzZ6Skp1WTRB?oc=5"
    }
   ],
   "49037416000173": [],
@@ -25275,66 +25044,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-19",
-    "titulo": "Phronesis reduz fatia para 4,82% nas PNs da Alupar (ALUP4)",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX0NYTnhiMG93ZmZ0My0zTkVtTGlhQjJ3SGktdTY0QmVFTnBTUzNIZWx1cDFrNXNYV2ZVY1JuMk5PRC1HMXhQM0VwaW9zdHZMb1BjWlAwM2dobzM3VDdRb3h4MzkwRFJ5OUE3aExoWlUwRE1NZjFRbG5xamh0SlNaaHN6Y0FhRURYdjVaNmdFd3JmbTcwOGhV?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Alupar (ALUP11)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02TDdIc0ZDQjZabXpMdDBIa205QWRjTDc2VVZJMGZCemphSVJJdGRfUDlfVU5tQkQzaHJpN2RDTnlnaVBaWFVCZmNlTWdrUWQtZS1CR281cDhrWnBKbTl0VHVaSVA2VDhETTlUVw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-16",
-    "titulo": "Alupar (ALUP4)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qMWliYnFjODJPS0lvNkRoR2htNzYyck5NVjU5UEE1ZjRIcGN2NENETUNLLUFHTnVXNktMWV9QLVNBdWNqUURkN1A0VmczVk1lc0tza29pVDlPbFp6a2xLSnFB?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-13",
-    "titulo": "Alupar (ALUP11): EQI Research vê dividendos maiores com expansão na América Latina",
-    "fonte": "EuQueroInvestir",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUVdNYkFJQ0ZyVVJTdEdmRTN6aHBQdFZVd1FkOWN5UkY2WjFhcHo3QXRCUGQtZjBxQW05NTRyVzJYdFMxeUUteU85MWtDX0hZYkQ3Z2lLN0VEMjdXaElweVZZZU1Mb0FXM1R3SVRmTzNNM0JUdXdrUENNd0lOYmU4R1NwTE9ST1F3aVhSWklvY1IzY0R3b3dUdTh6UmxpLUJkVVJJMTl3?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-27",
-    "titulo": "Notícia da Motiva, Alupar, Riachuelo, Multiplan, Axia e outros destaques",
-    "fonte": "Finance News",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUXdOejY3ZThOSklGcWQwa1BxYXoyem0tSldsNkdaTlV4dG5FR05vU1JPQlpDUGhmU2paQzRzUFV0VWtXaDZuOV9vVU5ja0MxRmYybFlJclFHNmNLVTFvUTlobWNUaVNFTFFBWXJSaGN0MFFHLU1iYVZXdUM5Sllobnd6VmtpNUhkZEFSSGxmYnNSQ2JtMmM3UGJ5d0NrU0lwUnVlVDlRNA?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-20",
-    "titulo": "Alupar (ALUP3)",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11MDBDSlY0RUFLdVQxZHA3RkxsOTBGbUNza2gzQXBuNWRUVk5TVE4tdWxoQlJNay1QdU9XUUo3cmQ1VGRHSk90X0UyVVJHcW42VjM5M1pVU2Y?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-18",
-    "titulo": "Alupar (ALUP11) registra receita de R$ 2,9 bi no 1S26",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOa043R05CZDEtNV9GSE9fUWRVWTRBeUl0b0g2MklKTU10emR3Nk56eG0yTVRtalpfbDdlWGFFOHJUS2RkaHBxN055STBPSHJBZ3k4dDZrRm1sSDVhV05aaWlST3lzZVdhMTY1SmtUVjB6MFlOWGwxNE5EYjFpX2p6Y1Fpa1VtTFh5U0FueGYzTUo?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-08-31",
     "titulo": "A conta da Alupar para investir R$ 10 bilhões sem abrir mão de dividendos",
     "fonte": "Exame",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSmdnUk1DOS1lMlo4R2pXUzdhd3JDN2RWQ3pod0R6cnJncVRYWFFXR2lHVUJ1dEx5OWgyVTI0ZXhMWWZodTM1V0hYY1p1S2VYOXc2NWRORTVWazBfbnBXR3RDMzJha19xWm1CUzdTa3UtY2JuWUtKSU1xRElETXRhX2JtWk81WFZMT3VXd3ZrVmV1dVVBWVpqVFIwSm5YMEVYWHc?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-06-03",
-    "titulo": "Rápidas: Petrobras, Vale, Magazine Luiza, Renner, Sanepar, Alupar, Raízen, Smartfit, Simpar",
-    "fonte": "financenews.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeDdGV3Z0V2tHUGI0b3NiUmpmZjlqSFM1NlBYQ2Vmc3RIZld2bnk1czRxU01KcmtvcTFEWGJWeDRiSmFNb1RLYkE3MG9Dd3RubFdzRDhwaUtjalRrRFhORGQ3ZWI4WVVwbGRjZ1ltMG9IWl9Xcldzd3oyRDF0c0lnZVF1cDlVOW9ndS1LczFPTUpMSGlOSUFIX0FKbzU2c3RaVXVzdkRWZ2NKYURIUlhPMWxjbXpfWVpMYnc?oc=5"
    },
    {
     "tipo": "noticia",
@@ -25344,11 +25057,60 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeHlBdGQ3U1RQdlQ2d1lGTUx2MUVZUEpJTjkwOFYtQ2M2QnpMVldfWjQ3WHNmR3FkdTExZk9iTU5KZUJ2Tm1kTkVwckRSN3lqajMyUFJJVVFsQkdUUXFVdWVfNklWbXJNNHRnb1QzUmdKQ2RxcGJnTFZhTjJjeTI4U0ZXa1BGcFQ2Y1BZS1kzZHpGZXAwVDYwVUFsQUtNMjh1STNWWHlmczBrWlRDeWtXaGtVelI?oc=5"
    },
    {
+    "tipo": "noticia",
+    "data": "2026-02-10",
+    "titulo": "Alupar capta R$ 2,45 bilhões em debêntures para financiar projetos de transmissão em SP, MG e GO",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQ2poaHVJRThaVVp1UHFyVVhOQlJpY1dXSUw0YkUyM3E0bEdnS2lKU0hFVUZkUmhWaWNUQm5IRmZkUGZRZnd6czNfOVpqQ0ZtNFctS0xJWFVxZDMzUjI5NlBBNlZqalViODcyZXVvNEdTcWhCRjByQjRkcnVndmJiMGtDVEkwMmZ5MG11RTZveEVrVEZuZ09Nb2Q5NWJlZ2FCS2RQdDdGcEl5OVNIbmJlNGhnSF83UGZoQVJZeFd0Z3NoblJyMDV0OWV3?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-12-19",
+    "titulo": "Dividendos e JCP: C&A, Tenda, Hypera, Alupar e mais empresas informam proventos",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUlloWEF5RE5pdEgyR2V3bzUtZTNDWTI1NEkzdWY0a216eDdud2xXaDBlOEloR2tPbWpKSmlBWjNpdFFfTFk4SnJvNm0zeUVFcWRfTjQ5akZqRksxNDJRbG9sbjFuaFdiazhMeUJkbkw5aWkwbmtMd1V6ZmgydUp0ZVg2ZTR0bmlGN294YWEycUp4TUVqWXpldVgzaUdPejZvSjh5T1kxUm4zRDNiWWpzbF84NNIBuAFBVV95cUxOS3oxRm42Zm1uS185ZlBFVXFVaEtXYTdUODFCbFBCb0hJeU8xalR3amxabFRvcEVmUVRLdnhjMHd2TUVMMlp1X3VuN1RTaHplUTlFQ0hIS1AzVDZLT2o1eWMwN3Nwc1JpMy1UdG14eVJDV3FpajQyTmVqVEJXSTRTUzNIQ0FZdWpSc2FDS2VQdUlqT2dzSmFLQVVfbl9obVNJMThBOTZwRi1JSkp6a1R2Yk9RaU5sRGRf?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-09-23",
+    "titulo": "Marfrig (MRFG3); Alupar (ALUP11); Ambipar (AMBP3): veja os destaques das empresas",
+    "fonte": "Valor Investe",
+    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNRUF4WVNRQTNpTnRFbGp5cm5hb2pid3ZWWThseV9MLUpoQ0NCdC1tR1ZycFZyM0lZMjNRamFXbi0yYTh2dThPck1wQ2hGTGFjN0U2VlpjaWZKMXE4anEtNFV1V2xxUlprSVJKeHR4alRNNk5tb1pXOVV5dEtUUW5KMmR5UXNEQkQzSlFqTXMyTTd1NnBZeFlaU29NRHU2U05nTF9nb2tENG82NUpFQUptSTFIZThSbU8zbGtGRk9pcU9MY2VVUkYtZFRHMEdkLUplUV9RUW8zY1NESERLeUhwbjVhd3VOcTA1TFdFVzk4ekRiU0HSAYICQVVfeXFMTmJ4eTBSZTJURWRMS0JJQ1hKN3UzNzMteVNPNXFwTExuNTFRMWx3YVFZdUNReVJsbldyU25tZktvMFY0SXpSZ1J2UDF5a3p0c3ZJQjZQckE0TjU0cmxXQUUtWXBZTEczYVh0UEtpdUNwTzVxWVhkamd1YVRLTFRFTERIcnU0Z215U3F5QkotbExsVi1WVXgzRm5mNHhuUVVvWWRvVklyRVJKSmI1NEx3NHFSWG4yZXJ1OFBIS0FUSC10RTlFV2JJVW5GSXdNNkZ4TXQ2NjVGOFc4eWhJV0xoT1N2dXNRemt2bGNCWUVCTjVGWGtyUUM2elVIMlVaNnhvelpR?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2024-10-11",
+    "titulo": "Alupar vai emitir R$ 850 milhões em debêntures incentivadas para projeto no Ceará",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaF9RMGFfTWRSazEzSWk2MnNWMGhPeXhyQ1ZRNU5jTl9JN01WdFRiSUIxUDF2aVphQzd6cFozNUFiMlB0NEhBYUVHQXVsbHVlNDRKdi1tQk5RTnNvUy1mLTl3WFpRb1ZoejJfRXZCdWN2ZDBXeEpsZ0JBNmF0OVVaM0Q1dVE5dVJqYjVFVWJKZVBaWV9VU29MTUc4UFR3MnVlTEZEZTBMekpMQTljXzFndXdvbll6Qk5xSnlacXFsTkVJNzFGUV93NlQ0WUhvekJG0gHfAUFVX3lxTE5DbHFKTXB1OGhBRE5KR2NVcGtnb0pnNXE3Z2w5NUxwcVllRzJHLXpCUmc2M2xTaGxxMTNfdGpPX1pfdkw0dC1Fand4MDRhSlE1ZGV5Z3hqdUJxZGlBU00xYmV4eTFHMWtoS3M0ZWstUjRudU9Jd0hMV1lsbDhHUUR2ZTBoQWktVzhBTVFoS2liQUJfNWhoWWVwRFJrOTR2VjliWDRvOGJDN1psZnVCZ2xKcWdGT0FucHRmcng4SnhJRzQzU0xDSGVPaU0zUmdmOFU5QmhRcG1pYlM0Y015cjA?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2020-08-03",
+    "titulo": "Alupar inicia operação da linha de transmissão Juazeiro III – Ourolândia II",
+    "fonte": "Money Times",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNakFrYmc0QkZxMUZXOWo2MDFNN3doTFZTSmZBWmtIbi0xUmVjOWpsOXVoUXM3Qi1oYmxhakRoMkY5Rl9XQ3VmZ1QxVGVkYWpSY3dhM0oyRkVjUWdOWWpRczFRMmxHeDY5LVJfZl9PTzd3ZXZ6VnpicG5RV2MxU2hUWlZGWmxtMWJIWUswUkNEOHFKT0l0R0hUWkJoZERzZC1TdktrWWEtSQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2019-12-10",
+    "titulo": "Alupar capta R$ 648,5 milhões com debêntures - Suno",
+    "fonte": "Suno - Investimentos Inteligentes",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCRDNEeERqc2ZYSzBTVXV6d1ZnRmdlcExqV1UyLThwSjZxdTBUZ3YxZDFOT2YzdmZKVFlERVhDR2JWOFItWU5sZEJ5ZHAwbllzSUJGT0g0Y01sVGlRUlBpZGNaTmRpTHViVExNRHNQNNIBdEFVX3lxTFBFWXZNT1hQeHJZTG9aS3RMWDJVdHlCbDVPSURuN1FmaTFPall4eW96Sm1kS2cyZ1lTM3BEVFNTNzFtRWpNU1FpekdPbnR0Y2o5b2k1bmd6ZlpUTS1zMWRKaFlpbGNMeXZGMmRTazQ1UjdhSllN?oc=5"
+   },
+   {
     "tipo": "analise",
     "data": "2026-08-21",
     "titulo": "Alupar - Radar de Resultados 2T26",
     "fonte": "BTG Pactual",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSlNXRmRGdW5VcjJMZFpXNGF2aWxZZWRNYkZyVk55UExTLTB1NXN3eURHZGdlQkl6ekl0S0dNUHlDQ3N3cnJCTExsaXM2NUxaTGhmRjV1V2FhQUVITkVpNzVkYnFZMHBXWXZwcVZnSl9TektHT2JJR012VTMyaVNVd2hjLV9TSlBpSlVxYjlFbjlkdkVMQWhKRzVuSEhxSnpwRVNfLWpmM0RsVEpiUm4tcXhxeWpnLVVnWEtfSENjUXNBOEFmR21nTWowRmY?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2023-08-10",
+    "titulo": "Alupar divulga resultados dentro do esperado no 2T, com anúncio de dividendos",
+    "fonte": "Itaú",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdnFzSGRBYnU1bHpacnFfMUlLV1hQblhtMTMzNTBZSGwyN2FGRG0tdWFTUFdMTmxWXy1sR09qQ3RjaWplUVRqaXFYVHk0RFN1eDg4XzNlR1dONjFWQ0lPaW1UQmEzNFI4ZlBRVV9GNldQREN5TDA0NUtoVFRnbTdaV3BaWkUwTEMxU0pJWlRSb1M?oc=5"
    },
    {
     "tipo": "analise",
@@ -26154,13 +25916,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-07-01",
-    "titulo": "Motiva (MOTV3) anuncia novo término de concessão da Renovias em 2026",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMmphbER3MzJwUHMwdEpJZnlQVUljVTRwMXl4NmpXY0ZmWTlIaDFENTh0X2FGWmFrNDVTN3V6bVduSzJUb1l2ZnJHUzB5U3lMcFU5VVZkV1kyeUo2LTcxd0x6YXluQm5JSC1ROXpmVjI4NTJEWEhPdk0wUHJpTTFBRU5kdnZ3SGJJU2ViQXpXOFd4OWRGZjBvazJ4NG1kLUZrVVdMWHpEMA?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-05-25",
     "titulo": "Motiva capta R$ 1,8 bilhão em debêntures AAA para expansão da Linha 4-Amarela do metrô de São Paulo",
     "fonte": "ADVFN",
@@ -26373,7 +26128,7 @@
     "tipo": "noticia",
     "data": "2021-08-23",
     "titulo": "Cerradinho Bioenergia protocola pedido de IPO na CVM",
-    "fonte": "TradeMap",
+    "fonte": "trademap.com.br",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45Y0ZQdXlmQmxVNS0yNFdPQVBaVkxRaXVuTFloTmtLVmxxSl9sOW9OU21WN2dFT3NWdjgyV3h5bVdQWklXRU5SZklLVmEzRXhiNnB6dVp1dzk?oc=5"
    }
   ],
@@ -26662,20 +26417,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-07-22",
-    "titulo": "CSN Mineração (CMIN3) atinge maior taxa média de aluguel em quase 2 anos",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5HY0ZjbEVBZm4xZkFaRkxPWWk2SGlzd2VzeExtY3pueXRrU3pWeHlEWm9ob21ma1BOU3dBUl9JLXlPU3MtWDhQUFpta2c2bGo2X0lRbXNQYVY?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-07-15",
-    "titulo": "CSN Mineração (CMIN3) paga R$ 1,3 bilhão em dividendos hoje (15); veja valor por ação",
-    "fonte": "Estadão",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSlFnNjNKd0hfanNJX3lzaXotSU8yajMzcXpuZEEwcXJaZW1LRTV0bDUydGVqcEJPLS1Tajd6X3AxLXhleU1yblNCOFpoQ0U5TzBwSEFzRXVKS1YxN3ZnbktXX3hveDYtM0pxSzNRS00xeE5jbmJ6R05id0N6RjdzdE5xT0E4Y2NzN2RYSVgyUjlOZHFtUXBYYTF1X3lId1l2dHN1MldJcGJyQjVQOFRYYUo2ZVDSAboBQVVfeXFMUDVWMThNSGI0MHZ5b0xQeEoyeS1SUEUyQjlsLW05X0E3enRlOW9YY19aVEdVWUZDYTYtcVVxNWx3TmlJMUJZdzBLb3A0MFh6eFMtR1BQU202VnJVS0ZNZ1lWQTlDQXZacEhEOE4yN2JTZ3ZDLUQ0ZkNUOGdoS08xMnhJNEpFby00b1VQSVBRckxlU1NxZ3d4bDJkcWo0WEFGbjh1NTV3STNZcXoyaGg4ZjdsTDZHXzVud0VR?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-05-13",
     "titulo": "Conheça todos os diferenciais das ações da CSN Mineração (CMIN3)",
     "fonte": "Toro Blog",
@@ -26692,7 +26433,7 @@
     "tipo": "noticia",
     "data": "2023-01-17",
     "titulo": "CSN Mineração (CMIN3) fecha acordo e receberá US$ 500 milhões de empresa suíça – entenda",
-    "fonte": "trademap.com.br",
+    "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9fOUIwQjBQU2dEUUVfdWRxdzRTaGxzck9YVGFiQ1FDclVkdEpxY2lYOTQ5akpYRUdPbjhFTnlNWVFickRWSFBlM3ktUWc2Z0pMZERsU0ZJRUg?oc=5"
    },
    {
@@ -26701,13 +26442,6 @@
     "titulo": "CSN Mineração (CMIN3) sobe após provento bilionário e Méliuz (CASH3) cai à espera do balanço",
     "fonte": "trademap.com.br",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1KQXlFTDFxN01NMF9wdDYyZU5POEFBbllBd2dUaTg2YU05UlpiWTFwbXVPSGkyN3M4eERUcWwzczhGOEtVTkN4RW5iNW9PWGtYcVVrU2pyOXE?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-11-07",
-    "titulo": "CSN Mineração (CMIN3) irá pagar mais de R$ 2,4 bilhões aos acionistas – veja quem pode receber",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vSURvbUtYWnhNOVhWOGwzLXVzaXF3Rk1oakwtRXJxWktDc3VYVGFPME81djhCT1UtbVp1cU5ucG44SmVBay1sTURDZHBMa2NObzBOM3pPTVA?oc=5"
    },
    {
     "tipo": "noticia",
@@ -26729,6 +26463,27 @@
     "titulo": "Fitch: Primeira vez, Rating ‘AAA(bra)’ à CSN Mineração",
     "fonte": "Monitor Mercantil",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPXzNEUUdITEl2ME9NQmFsSnhHUE0wWFZsUmNJNlJ3VlB5dGFHQTNkeWVzUUxRanlMY016VlkxQ0dZczN2cFNGOUNPRlc1NFdaS0dXN1ZWNDR0a2l0QVpGWWZFUUVHNTZFbk9HT3pVNU45SHhmTm9KaFU3WTB6VGhUYlNmTlpGdFJm?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-06-22",
+    "titulo": "CSN Mineração (CMIN3): Compra da Samarco dobraria produção e faria ser uma das grandes do setor, diz Genial",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yRzZDVzNrMzF5Vk0xMmo1S3lVdndOSU05TUdxbVEzU3NWaHBoMEx2ckI1bU93VF9UUGU3U3huSHdIN3NHYnF2bXRuZ2tCdUNzVWJjS3U1bC0?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-06-08",
+    "titulo": "CSN Mineração anuncia emissão de R$1,4 bi em debêntures para projeto em Porto de Itaguaí",
+    "fonte": "ISTOÉ DINHEIRO",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94N1Awbjd3QTN3TzZuVmlxcEdKRDRiUktTc1RGeUNnQU5nY1JjbVJTa01hT3JrQlljWS1QT1lZVXdFTmVQaTM2X0dTOFdfVURGS2JOOWxOaWxsZktnS2lBOTZPSjNqRmhMSnc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-06-08",
+    "titulo": "CSN Mineração (CMIN3) anuncia emissão de R$1,4 bilhões em debêntures",
+    "fonte": "Forbes Brasil",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQS2xJYi1xN29PTHVabmY5NEdUT282QTJYN0VKb2czaWpsTkxVZUQwQzNWR29pS2xLN053OVUwUFI0RzE0UGJPMkFCX1VoRzdEM1pNdm1vRE4tVWRvSFdzVXFWRFl5d3hyQ1c4Qk5UZmREeGJaTmprYVY3aFFXc1A3WGNrOWVPeGY4N2ltWW5oSXhvUjVSU092LXBqN2ZIajE5d3RsUlFKaEtRMERM?oc=5"
    },
    {
     "tipo": "analise",
@@ -27744,17 +27499,17 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-08-06",
-    "titulo": "Desktop amplia receita e acessos, mas lucro recua no 2º tri",
-    "fonte": "TeleSíntese",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMDJ5WGVKREQxNVRRUUxPbDRRTDZCVWdWbFJseC1FU1owbmgzNF9JbGVETFVvRE02R0JlTXZFT3I0NnFJbUFTYUpQMFFDR1dlNkhIOXczaU9GSExuU0M0VUtiTEJ5S1NlUS1JanpObWREbEJoamNwNWRrMDhTRV93UzAxUHBHbnVpbHF5VEZ3WQ?oc=5"
+    "data": "2025-10-24",
+    "titulo": "Desktop define emissão de debêntures e projeta ampliação de base",
+    "fonte": "TELETIME News",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZHZwa2w2UWhDVU0tazJPNjlEZE5LZWVvRWFUTm94UkRsZjdRX240VmF3dXlTZTRzM195NWs3ZGRLYVYtMWt1TTRaV2NabXRMYnN4ZUlBWmJVZFdmUW1RcVo4NmlsSElWSVdHeDNBaU51R3pWQzdfZ180bTRPUXpkLWU4alRmNTBFRl9tcTVrRzJRTkV0T3BLTjZrSGh2cVc3Y0E?oc=5"
    },
    {
     "tipo": "noticia",
     "data": "2025-08-06",
-    "titulo": "Desktop cresce receita líquida no segundo trimestre, mas lucro cai 41%",
-    "fonte": "TELETIME News",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVk9DeEZXNWt2ZXB2NXpFWHlVR2FsWXVvMnJwY1c4a1FDN19ESU5OQkhuSTJFU1lycVM3ck1xVFVJNlNmSW5YZGFrRDcyNW5pR3lwQmN6R0JfUUxxYjBYV3ZxNHF5cW9oVW5uLWpWYjA5dWJqQzRPZVRCYjBmQTMxaVdHd1R3OXZ5Z0ZfTVNuNFg5X2xteXYza0ExTjVMWEpsdHBOVlNNZw?oc=5"
+    "titulo": "Desktop amplia receita e acessos, mas lucro recua no 2º tri",
+    "fonte": "TeleSíntese",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMDJ5WGVKREQxNVRRUUxPbDRRTDZCVWdWbFJseC1FU1owbmgzNF9JbGVETFVvRE02R0JlTXZFT3I0NnFJbUFTYUpQMFFDR1dlNkhIOXczaU9GSExuU0M0VUtiTEJ5S1NlUS1JanpObWREbEJoamNwNWRrMDhTRV93UzAxUHBHbnVpbHF5VEZ3WQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -28207,17 +27962,17 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-07-16",
-    "titulo": "Brava Energia (BRAV3), Oncoclínicas (ONCO3), Copel (CPLE3) e outros destaques desta quinta (16)",
-    "fonte": "Money Times",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSXRrOWZtVHhPQjNpR1RTZXRvdFBHcmVlVkx6SlFFajVwcDZPU3p4cXlkTlFtVnJsekFqb3lMZ01qZDcxbk15ME5WYU5lUlZoZkVfLU1vT1k1SHlhNUh3TTlVVGFKdlpkUWZHUm5MS1VuZURoYmdoY3VkdU9HQ2dwcGhEcUpKbzNNdUE3NGFQSFpqSGpMaWRhZS1hMTQ3WEtLX3NVWnQyVGtsZzdIZ2k1YTJkRFF4OGdBUmVqeHVB?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-06-10",
     "titulo": "B3 suspende prazo para divulgação de parecer da Brava sobre a OPA",
     "fonte": "TAGD Advogados",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWVRrenRKbVdnQ3BvcjA5dTlESE9iYUxJUWJKZldGUHJWUDJQUFQwQ2cxSkVGemtlTVZxdjBxQ051Q2sxRGNuM3I3NmUwbkJORThlU3FJYTRTdEtLYkg5SFlYcXdJZzNWWllYUDB4TnE1cHoxWXdyMW92ekdVbkhfTDVyakNxMFlKRGZWRWRPZHhwNEU?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-09",
+    "titulo": "Brava obtém anuência prévia para oferta pública da Ecopetrol",
+    "fonte": "TAGD Advogados",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdXcyVWpyeXpBZlR0MVNYVFlZY3dGRVBqa0NPUllWb1dUeDJsQzhtQndFRkp6WjZDV3AxSGI5YzM2OURlQ1hEZy03QXBHTVY5SFFRMklydWZIME5VTlNLNWd5eXdmX2JiR2lkWHhNWGlMd0ZBWlVFakJoSW1BVVd4eDdqM0x6WU1iM0xLMQ?oc=5"
    }
   ],
   "28925264000175": [
@@ -28424,6 +28179,99 @@
     "titulo": "Em modelo de project finance, EPR Litoral Pioneiro recebe R$ 6,38 bi de financiamento do BNDES",
     "fonte": "Agência iNFRA",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNeEVhbmZQWWNFaHBPYWFfUmhuOENsb0dLb2h1WnE2Unc0dXJPaG5pUkFBZTdUdGc1aXpWUTBuTzVnSHdORmN6RmpwZVh6YTZHZkRmZmo4dHBoNEdua2ZqWnpodXk2cGRaRUNWLWxBbGw1cVZsVzVTeEM0bXZYdDE4R2NtSWZjSDRBTDhoNWV6eHJHZzQtbEdkNmxPM2tmTjZKMnFxZE96MHhZODZENDczeTRaQUVhSFBtQ0piN3ZmOA?oc=5"
+   }
+  ],
+  "06272793000184": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-08",
+    "titulo": "Renovação Concessão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1519278&numSequencia=1043984&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-04-02",
+    "titulo": "Mudança na composição do comitê de auditoria estatutário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1501062&numSequencia=1025768&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2026-01-06",
+    "titulo": "Comunicado ao Mercado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1464332&numSequencia=989038&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-11-12",
+    "titulo": "Exercício parcial das opções de compra",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1444346&numSequencia=969058&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-08-29",
+    "titulo": "Revisão Tarifária",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1418703&numSequencia=943415&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-30",
+    "titulo": "Instalação, mudança ou dissolução do Comitê de Auditoria Estatutário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286478&numSequencia=811204&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-27",
+    "titulo": "Comunicado Referente a Relatório de Classificação de Risco",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1286141&numSequencia=810867&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-09-25",
+    "titulo": "Esclarecimento sobre questionamento da CVM/B3",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1285195&numSequencia=809921&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-08-28",
+    "titulo": "Reajuste Tarifário Anual",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1276458&numSequencia=801184&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-02-11",
+    "titulo": "Aviso de Resgate Antecipado Facultativo",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1333579&numSequencia=858305&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2024-05-27",
+    "titulo": "Anúncio de Encerramento de Oferta de Distribuição Pública de Debentures",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1243001&numSequencia=767727&numVersao=1"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-08-26",
+    "titulo": "Equatorial (EQTL3) registra reajuste médio de 5,76% nas tarifas",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVTUtc0lOYzdzLXd5SzNjbFdTVmpTZXB5eHdVVGp3a1piNWJhV3BYVURYNmtla1Rjcm53T2FyQnR0ellkRmhBVjJHWFEzQ1V4dzJ1cWNRM1dVTlhGQjlzTm9idGFRZGlZZ09oQ0MzTUI0X1B4N2wzMVZlQldSQms5dERrb2hNMzN2VGdzNEZOYWpMWmNqM2lTV2otX0wzUQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2021-01-04",
+    "titulo": "BNDES aprova financiamento de R$ 2,1 bilhões à Equatorial",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOeEVzdGZ5ZTZWZXV2VDB1VnNKSV9mM2NDdFU4U3oxLWJiY2trbmVDVExXQi1NRmRWcVphTjNoMjRWTzd6TkJtOUhDemtqZlRMUTViYTg2bnoxUVlUbFh6aEMxTm5BVWFmX3pWZ2wzd2tURnJUMmJUSThmc19Sd3d2TFlFYXlmdXlzMjRsbWsybDdZVFRMbU8xejFLR0JpZ0RlVEJJVWFVUkY5QnNUWmVnU3lSaV9zNHBDcXFpR1hJaGVOSk1LV2ZJeGxRWl9Vck1ncHB5YmU4eUdqT2RWWkhFNVdDQXhaRVVab2NLV254aTdHQkc4?oc=5"
    }
   ],
   "26845460000104": [
@@ -28829,10 +28677,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2024-12-16",
+    "data": "2024-12-13",
     "titulo": "Ferrari Agroindústria emite R$ 100 milhões em debêntures para modernização de usina",
-    "fonte": "NovaCana",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaDBmRldsNjF6Tm15SlhwOUhHaS1lMC1xTDhTX2Z6bFV1Y0xkUVNTektDcDBLbUcwUzhRZC11S1hfOFVIMDVsUmZKQWt1RDI0dkRxX1hLNFBJY1BKZXNRUVVLa1FodkN5T0FWM3hKWm1lWGhEODdISEZSTzdQczBWN3ExNHI0aWlnNGR1VEpJdl9MSDV0YnlXX0hVRldETnZxSTJzcEU1SFRPckNDMkx2bWxB?oc=5"
+    "fonte": "AgFeed",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdUxuWU9DOTJUdUlwaGozR091S2pwMVYzeURTMWVWb2thSUtLMDVBck1lWHlwUVZlaXNMV29LYTZpTFVtVnYwS0U5RkJUcV8tN2ZMR2tyOGREQm1sOTNkcldFSGRreTBia3hvS1NiZF9nM0h6OTY0VnN5VF9feHJHTXNQWEdHeF9jY0VhVks2UWxjd1RnUXJ4OUphWUdqR0gzVzA4cUtaN0J3MmRBc1RBR2tvMHI?oc=5"
    },
    {
     "tipo": "noticia",
@@ -29221,6 +29069,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2025-05-02",
+    "titulo": "Iguá Saneamento inicia operação em Sergipe",
+    "fonte": "Iguá Saneamento",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5iVHdzU181VkxhUGZVSUNXam1mX0RkMEsza2dEank1TnE5M2o2V0FZaDdnX014TF85RklhSTZjbnhaeF9wRnd1Vk00cDB1cksyMjZkcl9JQ0pXTGtoalZldERlUWZpNnRBQW5GYXdpanB2elk4OEVtcVhsdw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2025-05-01",
     "titulo": "Iguá inicia operação de água e esgoto em Sergipe com plano de R$ 6,3 bi",
     "fonte": "InfoMoney",
@@ -29235,6 +29090,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2022-02-18",
+    "titulo": "Iguá faz sua estreia nos ‘green bonds’",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRzI3Z0hlVkI3NVRlZ1V2dFNiY1BiMTB6S0thS0IwOGJ1TjJXcHIwSnhwOFpJR2RXNUttOGx1UTVoQ2ZIbFFwNnlqNkhRVXlHcHdvZkFiNFNCOUV6SW1PS0F4N1RadVVEenZ2UUpPWGNDcnFDczBnbHNrb29HWjJUM25kYTRpN09iMHFhc0RzN3VOYTI5ZkZ2N0hB0gGoAUFVX3lxTE5sNGRieWxuWGQ4ZG5CazAtdXV3d2dQbFVrNDlCZm5ib1BYRHF4aXo3c3o0RnFYZ1JfMVFFTUkzR1V1VmhVdnU4Vktid2lxSjlWSFRpbDVPQzRaRHB0UHdSaE9NRDgxVGxXT1hQeGZSeF91MXBwVU52eEVlNmxiSVNwcUlZTWpRcEZzRDROT0l2Y2ZPcVFwWlBVOVRQQ0FLbW53bEVhU0FWQQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2021-10-14",
     "titulo": "Iguá Saneamento realiza sexta emissão de debêntures",
     "fonte": "LexLatin",
@@ -29246,20 +29108,6 @@
     "titulo": "Iguá adere à plataforma de “green bonds” do Banco Interamericano de Desenvolvimento",
     "fonte": "Iguá Saneamento",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT0ZURk1kakFBd3hsR3JQb2ZSNGFjLWxtMFVRQVBPYXZpWm5QcERwZU9JWXhvMzF6Q0dxVFZEb0xTYV9UUTBhT2tWLVpNX2dQYjFwdThvV0hhTTFabFByUkZpay1rZXdBVGxWOGxMb09lTFJJRjB0Qm9vcWQ2ajFrZWlFbzdkeHE3OFhqMzlNWXNtTlg2WF9hYkRtcTkxb1Fxa0FELWpPcGdDWXptRHlDYi1R?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-07-13",
-    "titulo": "A Iguá tem uma concessão para pagar e recorre a acionistas para levantar R$ 2,4 bi",
-    "fonte": "NeoFeed",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOT3Vac3NWUDFRNnFOS3ZOa1hqVlZHcEZadmR1LVRqWXlZRG5iSi1EQUtDckMyVmw2R1JmTzU4bzJvQ2NwSUhEb2RRWWxGRTVvZjg1NFF4VUlNSUo1ZEpqYU1kUFozNUxjM3R5b0VDXzM5cXlJYWw2QzdjSTFXLUxZRVB2ZE00b3lxUzZrVERWRGx5UWFnMkowQkxHajRsRzRGdXFOSl9taXJKUVYzWmNYMWdDNjQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2020-08-03",
-    "titulo": "Iguá Saneamento emite R$ 880 mi em debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdUVpbE1BaUM2LXNaazNrZS0xdlgzLUN6Q1JFSllCc0tvNFJ4RjFUUFpuR05ZbERFMGpNT1RhaDJqRm9zYW81V0lTcmxQNXM5WTdmdGZXa2NCVGN0WEltQjN5WjVyU3lHZzdMRkV2VjlKUktXY05jUlFJQnlicDNtMGFPaWdFLVN4eWpqR2R6MHYwT1FXNS1TcnlIejUyWWdVWGw0NdIBswFBVV95cUxOc2VHZkdJWVN0bXVQVEhTNjlwb0VJVU9NbVlNZlNRYkZqYTdoQmEyZk5PSGI2Wk1PRlJmWEJBbXZjZUNsWjdUd2xOdDZyWGdrNzQtY0JCNDl5VUdQbjJHMWpPMnJjVEU2RkQ5bGNvNm1oQ0xvMGlXeUpSRW1ubWkxeE8wV1V1YkRJYUVxOThvM2t1T2M5Sll2ZmVWeVpEZVhuenlOb2xLWVlDTnpqSnNLSTR5OA?oc=5"
    },
    {
     "tipo": "analise",
@@ -29330,7 +29178,7 @@
     "tipo": "noticia",
     "data": "2022-11-17",
     "titulo": "Concessionária Iguá Rio de Janeiro poderá captar até R$ 7,28 bilhões para investir em saneamento básico",
-    "fonte": "GOV.BR",
+    "fonte": "Governo Federal",
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOd1hGLXBoYlRrbmJaTmppZE96WkkxTFJfYlZ0NFpKdGFpNmpvWVdRemRfaDRndUdYMkVuWHBJaktqUFVtSnNCd0JNbGZQcTNYNFNzcnFxMzN1U1Yyd21CMndLS2VralUtZWJuQV9ZTWNxRlJWazMyMVR1YThMX3FjeVR5SGF0TmV1M2hrTnpDLVp3ZXRhQmhRMFhXV05BWHEzME9SUThSU3BvRmRPVmhVdDBDemJuY1RDNmN1d3NSMVY4Q2RlQjNIaVZZa3BvMDRtMEx5YjdTTQ?oc=5"
    },
    {
@@ -29583,6 +29431,13 @@
     "titulo": "São Martinho e Jalles Machado valem a pena na renda fixa?",
     "fonte": "Seu Dinheiro",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWk5zRVF0Q1MzTEJMQXdPWHZkeDFwR1gzOGk0c00zVGxpZ2JhcHhsVVc0SG9nX1NZaWRsV2NyRlgzZUVPcW1sbTVCRWpGOVp6a1lNOTBzejJ2TVpTbm5EaThTRVRhaTUxU1luUmh3Rk40aW9xalVSX2t4c2dvRC1udmlJdXlOZ2c3d05DM2xGM0lweWI0Wm82RkxCOWJSMTdoUjVEeG12bmZXUQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-07-06",
+    "titulo": "Veja 5 pontos que favorecem ações da Jalles",
+    "fonte": "EuQueroInvestir",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZGRFX1lQM19EdDNOYTV1UDZHT0JRbjlZNi1pYjhRdmtTcmhqbUUwcncxbkVyVWZSSlpubUdXd0k4WE1HNGJCb3d3Nms5d2lJU0ZmcllTRXgwZjR6V3I3bUFTZmtYaHVpNWxnQUlYQ3FrNGlzMkVibFloOHVGVFo2UGN6SQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -30828,17 +30683,17 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-12-19",
-    "titulo": "Orizon (ORVR3) aprova emissões de debêntures no valor de até R$ 400 milhões",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTDZqc2xVc1hZbGdQSkY2TmZLUDRlQnBpcWZ2ZTgwTXY4QjhzUVBVaGhTbHBUOG9sOEttNjB1RXI3dkd0V2d2RldnQXJtdktPYVN3RjVWTnJ3aFFQVEIxWGctSV9pSUI3QmtES1pLWTJqNVhmLXBGZW5yOGJvSjY4Rmh5MjhpVzZXQWdPSmdReUVmVW52M0hhUlRUMDFxRHNNdjRaNlM4dFFwVG84NFZyYtIBtgFBVV95cUxNQzJSOHJ5cW95bWJNOUxaWFVWTlU1X2U1RVRaZGRDUlRaXzNGbWktLS1EX2F3azdMQmEtaHpWZE9vVGl1bkNFRVZFc083eDVmcUdwVnBiQjUtOV9TN21IdGdCb2tqWlVES1JKMmZPQkdpXzZjSTgyWDhGeWZkY3ZnWldNOUtVSjVWckhwZVRVZDNaVFdxbmo5Zkx2bV9sM3NRTXhDYk1GVm1rcW8yNGpydVNobkxadw?oc=5"
+    "data": "2026-03-26",
+    "titulo": "Orizon sai de prejuízo para lucro líquido de R$ 23,4 milhões no quarto trimestre de 2025",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOek90T1g4ZkZSM3NRYTcyelRia1hRTWJKOU9Wb05lUUFlckl4bmdUUkl0bFdSTUhWLUx4dmxOQXdEYVRVUjB2LWtua0F5YkNua2d1RHk5Zm9Mc09jYWp4bUdsWVlTS2l6ZVBOcEgzdXBWRE9pMkI2ZGVCYTVnZXlJZVhqRkRROWpHdW5Dd3dFR1hneXRiQ19hSFBPejdiLXpUalRUZGVwTWV5R3ppM0ZmMjlqSDNkbTkwbXUtTUkwdkpfMlJyTVljNl96ZlZTX3A5YVdwSmxodTXSAecBQVVfeXFMT3c3T1dsM1NEOFVrMFA0S0x2MlJWZHFKa3ktX3JkdnkxWVFSVzBHZkl6ME1QR2ltemd5eGFyRW5MOHhzSkRuaXlHQzFzLVVvNFJ6Ylh1dW4zZ0lYVzMxSnJPd25Hai1MSjV3bzZQaDRuNkFNekJiVTdDRHJvNVpPLW1VV1k4QTlKX2FUMjk5UUVoTVZSRTRpb011YS1JMmdmY2dMQmV3aXhPWV8wdEVGcnBOZ3A4b1ZNakozczExeUVPUUxDZzQ4eUZYRUNETG4tQ1BxYmcyUDBuYk1zck1wN1hlZ2FYNjJJ?oc=5"
    },
    {
     "tipo": "noticia",
     "data": "2025-12-19",
-    "titulo": "Orizon aprova emissões de debêntures de até R$ 400 milhões para reforçar estrutura financeira",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNzhmWXU0TGZOajJVZ1ZqS0xoZENrdThPZGxxZ0V6MXJuWjFMVDY1RUFzemRENkdpMjAybmg2ZC1lUVNNOGdCYTEwOHJDbnMwNDRhM0l0dzh3TjktQWVLQ2NwYU5nT1JIalo0WlppT2VhUXFHU2IxcVpiT3VkdmV5MVVlWEo5eUFvcE1pOVA0R0gxejZDVVQzN1hjMlFoMkstWm5IbllmRVlHcWxudlh2N1IxT2E3cnQ0LWp1QjBPaEdMN1o4aEQ4?oc=5"
+    "titulo": "Orizon (ORVR3) aprova emissões de debêntures no valor de até R$ 400 milhões",
+    "fonte": "InfoMoney",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTDZqc2xVc1hZbGdQSkY2TmZLUDRlQnBpcWZ2ZTgwTXY4QjhzUVBVaGhTbHBUOG9sOEttNjB1RXI3dkd0V2d2RldnQXJtdktPYVN3RjVWTnJ3aFFQVEIxWGctSV9pSUI3QmtES1pLWTJqNVhmLXBGZW5yOGJvSjY4Rmh5MjhpVzZXQWdPSmdReUVmVW52M0hhUlRUMDFxRHNNdjRaNlM4dFFwVG84NFZyYtIBtgFBVV95cUxNQzJSOHJ5cW95bWJNOUxaWFVWTlU1X2U1RVRaZGRDUlRaXzNGbWktLS1EX2F3azdMQmEtaHpWZE9vVGl1bkNFRVZFc083eDVmcUdwVnBiQjUtOV9TN21IdGdCb2tqWlVES1JKMmZPQkdpXzZjSTgyWDhGeWZkY3ZnWldNOUtVSjVWckhwZVRVZDNaVFdxbmo5Zkx2bV9sM3NRTXhDYk1GVm1rcW8yNGpydVNobkxadw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -31035,15 +30890,7 @@
    }
   ],
   "42165941000125": [],
-  "25117259000148": [
-   {
-    "tipo": "noticia",
-    "data": "2020-08-14",
-    "titulo": "Usinas Fotovoltaicas Pirapora Recebem Prêmio Por Emissão de Debêntures de Infraestrutura | SEGS Portal...",
-    "fonte": "SEGS Portal Nacional",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOd3ZfMUtBaUFjRzc0d3BCTV9UQ1pMVW9vMEZKUDBOblNWTDVpOWRfRmc2SEozMTR6TGJmNk8zOHhaUDZtZ0lnbVVRaEE0dktxZHI4eFdsbm40ZzdzQXhIc21yUURacDBTMl84X2htek9VOWMtdlBrcHkyVUdqcWZuYW9yMERQZFlnN0F4WHg2QXVWZmpnUEQ3TnFvWDMtdzVBaUxyM0stRDBzTWFnMjhZS25Eb3RqZVRxVnl2eWZ4U3pXR3prdUd1MVRWSEc1WnBOV3lrYU9NamVaZXdt0gHcAUFVX3lxTE53dl8xS0FpQWNHNzR3cEJNX1RDWkxVb28wRkpQME5uU1ZMNWk5ZF9GZzZISjMxNHpMYmY2TzM4eFpQNm1nSWdtVVFoQTR2S3Fkcjh4V2xubjRnN3NBeEhzbXJRRFpwMFMyXzhfaG16T1U5Yy12UGtweTJVR2pxZm5hb3IwRFBkWWc3QXhYeDZBdVZmamdQRDdOcW9YMy13NUFpTHIzSy1EMHNNYWcyOFlLbkRvdGplVHFWeXZ5ZnhTeldHemt1R3UxVFZIRzVacE5XeWthT01qZVpld20?oc=5"
-   }
-  ],
+  "25117259000148": [],
   "27219024000192": [
    {
     "tipo": "noticia",
@@ -31582,13 +31429,6 @@
     "titulo": "Rumo (RAIL3): Resultados do 1T26",
     "fonte": "BTG Pactual",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbVZZUkpOVFUxTHFLR0pVOHVJMkF3NE9yNmctZTJnY25vVHhFeWRJN2o0SnpOT045SXNTeWRqcWl3WG1TMFVmc2J1RklubUkzOEJ2VkJvZDYwMVJuZkoteklEQndLUVk4R0FFYndvOTRRUU1Edlk0QzY2ODhhMVFfNXpobjNRUXFodEVIU0M0SzBSNWN2aHlGd1k3LVRrRXBubkY3OA?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2026-03-05",
-    "titulo": "Rumo (RAIL3): Resultados do 4T25",
-    "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVG1VTlM5bnlaUlNOekRkVjhLWFZQd2poU3E3VFExNVh0WU9fcUs5NF9CenQ2bHh2YVB6MkpCX0JTMV9xQ1dCUm5yR1kyQWZBZ0c1RzVoUVNRRkF4X3Q1UnNxMWVyMDNicHFIcDByRTY5U2txTXh4U3plVmpYM1FZRHJkWUJNUWdIZ1RKMXBQX2lHb3M4eVJCVVAzQ1JnWWk3cTJXTw?oc=5"
    },
    {
     "tipo": "analise",
@@ -32192,7 +32032,7 @@
     "tipo": "noticia",
     "data": "2026-09-21",
     "titulo": "TIM (TIMS3) troca de controlador, Petrobras (PETR4) soma R$ 9,9 bi em subsídios e IMC (MEAL3) negocia com Vinci",
-    "fonte": "trademap.com.br",
+    "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5oXy00RkJfLVQwMWRvMWp5Z282ckRmN0loRXhHcEhUczRzVHZqM1p4OWt0NnItaFJVTmFQNGRsS3Job2UwdUcwQkQycVY4eFlnQjNTci01Vko?oc=5"
    },
    {
@@ -32256,7 +32096,7 @@
     "data": "2026-04-17",
     "titulo": "TIM (TIMS3) antecipa pagamento de juros sobre capital próprio; veja detalhes - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWmtucFFQX05JRGJSNWJ0N1BjRGczMlpmRzRHdzFhVVNvZkZ2QzRodlg2ak1adThGcE5jNFNWeHNKb25LRmR4STRyX211Y0o0TW8tZ1pHUE9xRlV3Rzc4UXUxQWx4RXQ1b2VjS3hxOUlNNUpxTXBJeDNVaFcwTWlJd2o2eUNmemdFaVljdzA0YnZMdS1Lb0pv0gHXAUFVX3lxTE1Wcjltckx4dk1jdnNFSTlSbDBkbmRXT09WajYybk5vbWFXZWpSZ0g3RExGaVFUT1pFYW1fUFV1RXQtUk1DaExoTmRpWnVwU3cwekZhUURzeGhobUl5Y20tb2xpTjdYeFJXcWkwUmt1UGI4aTRLT3gtRlZjWE1lM05pamdOLUNTanIwMWpTWm40OER0WmVVN2dXSXZBa2lLQm9WY0lyYUVWMXp3SG9mZVdFajJCaDYxeGVpTmlmcl9GdDMxeTNTSnd0WDV4cVI0aW5Oem1WYzZr?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWmtucFFQX05JRGJSNWJ0N1BjRGczMlpmRzRHdzFhVVNvZkZ2QzRodlg2ak1adThGcE5jNFNWeHNKb25LRmR4STRyX211Y0o0TW8tZ1pHUE9xRlV3Rzc4UXUxQWx4RXQ1b2VjS3hxOUlNNUpxTXBJeDNVaFcwTWlJd2o2eUNmemdFaVljdzA0YnZMdS1Lb0pv0gGDAkFVX3lxTE10aTRNRFBTS3FLX1FGWXNYTk9FaUV3TXdONnZrVEtPc2p2b2FUQnF6ZFk0cXRvYW9IS2V5dGxCdUNXaXZmdzgyNHZheVlBUXRIZTlFQUpmU2ZTbGR6X2p2MDNqeHZwRHROWVRqd0VJZ0tvdnJ4MlhOMU0yWGZSYjJmNWotYjlJZjFDcEZPTGl6RnlUV29KUmlWN2czeGJINTUtNlVXVGlsU2tUaXotVHJRa2tTOE5ZWTBXYkJ4SEx0NnpSYXFVazBlcXBzWkF3R3pHZHFtSE1Tci00SFN3aXZMN1ozSGFWS0RnWXNyVXNfV0M5RFZGYXM2SWFLbno5SjZfX2M?oc=5"
    },
    {
     "tipo": "analise",
@@ -32583,13 +32423,6 @@
     "titulo": "Unifique (FIQE3) compra empresa gaúcha por R$ 41 milhões e assume dívidas",
     "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE52RXg4aHlZYkoxQ3BiM1A3eVNVR0FVMHkwVll6VzVZX3Fsa2JHbUVDa1BxV1hRLV82LXJqcnQzVTNRLUp2a2tMczVJY3ljVmFWZWlFaHdXbkw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-12-28",
-    "titulo": "Unifique Telecomunicações compra provedora gaúcha ViaWebRS por R$ 76,9 milhões",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUUJOZjFWUzRIT0VpX1gxdkdCcl8wbnQ4TGU1U1o0UEg1c3U2SWlEbFdMRXNDSEZucnRESjllajdnNTRaRU5vOVRxRzd3VDkyY2E2U2tTQm5YbC00NHh3dHJuSFFjOGtkazlOMW9RS184WjRJWElRcElDMV9HLTJYSnJLV2FZWmx6YldGcUdFa3NTSTlvYk9HSmYtb05GRjhHN1FoZjJYYTZ3UTJHeDdQU1pXZmlPZXduZjZFM2o5V2RWdkprbm9iN09adGkySkXSAd4BQVVfeXFMTVl4Q1pmcS0zcGVranE5eHRnUmM4SWpXVmJTWXdVV0I4UmhZcFJ5VEVJOVJhd28xSjNCNmdVZGlSaWtxRmJ4aGxqTFdVQkVIMTB1Z3VzMTJPellWNC1WS2k0RkFtbzNSTmFYdDVtLTEtZDRHSVBPd0U5S1hHTng3cUVoWU91UkpLVURKaURPQTM4Q2doV1BaWnFBUnRKRE9fTmNDWnR3LWVldnZZUExWVzZkeUNHbktGdXhOMlgwRE05b285Mk1EMkVKMUw4MnRqZVVCTTRwZ2kwT2Q0R1Jn?oc=5"
    }
   ],
   "50376938000189": [
@@ -32929,31 +32762,24 @@
    },
    {
     "tipo": "analise",
-    "data": "2026-10-13",
-    "titulo": "Resultados 3T26: quando Petrobras (PETR4), Vale (VALE3) e Itaú (ITUB4) divulgam seus balanços? - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBQVzlVMkkxUzItdENLa3V6d1VrODlpNVVsclBma3hjQnROOVk1R1laMGR1dXN0ZDk4aFFGMDFnU2QyR04xdmctWThpNFlCMWNwODVUNXBSM0JMaC1MWTVMZUpMb1o1eEk2QkRrcGltb2JzLU1SMTZDNjZQcHQ2Z9IBgwFBVV95cUxOaDRERW50eGRBZGtyU19wWEtsdkJHZ0JibEdqdHQ1ZVlWLU50S2V3ODNSM0ZNNVFycXZ1TTNrNFVaNWVRRnVkUE80dWRSWThpY05KVjNSaXl0NC1Cc2NKUWFnQWhYdFNhSzBveWQ4LWhYcXBDZGpjN01MS0NaRmtBaFRLTQ?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2026-10-01",
-    "titulo": "Quando vale a pena renegociar uma dívida em dia",
-    "fonte": "Itaú",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1nS3RVTXRFRnhnWjFLTDZjWUZoTjZJTDJLSS1oSUswaDVyc3NKcUdjcjFkQnE4R2FpaUlTamZ4dmJ4MWl1LTNmTFJEa1UwRFBMUGR1SmhLa2I1YXdBWlFpZg?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2026-08-04",
-    "titulo": "Ainda vale investir no CDI? XP aponta onde estão as oportunidades da renda fixa em agosto - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1XVTFJbnVGYmRlOHJlM2pVMGN2ajRjWVZDU0J1dWhOMjk0R1NEdWM5VFRBd2QzV1NBWkxud3p4a0xYcU52M0ZBdDNNY0h0V09xUjZLUnlEcGdHalRTU29STktQblJOSHhKc3ZvbDVyNWJSMVZfcXow0gF8QVVfeXFMTko1U3hzTVowOE1xVUpJZ3BnVjRPOHhoazB0TWpmcXpWNXRPR0tTYnV5SkFjY19EMFhZZzd0LWlMaVRVY1Y5NFFROEtFa1NiSERWSUQ4SWlCLWZnNXVuQlhsc3VLWXYwdGs3ejVxN3VZOEhaOFJVdUxTU0VHTw?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2026-02-25",
-    "titulo": "Cartões de crédito premium: vale a pena para o seu estilo de vida?",
+    "data": "2026-07-30",
+    "titulo": "Investimentos em renda fixa: ainda vale a pena?",
     "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZHhxOEtyXzMwam1fTDd2bEl5MVgtaUVuN0NmdnJXd1lCWE9QUEo5WnpqRDNudmdtOUd0TUNKUmRfYUdpTHN3a3pENEQ1SmY0ajJZc05UeG83MUI1YVBZYWpuZWhaWGJMX2RGYlhmMGtSdlpEb2VEdDBfNUZmVjNmU1VKa2NIQTVRUnllcmExMGtLcUo4ak15c290dFg2ajZMbUs2eWdLcnFCMHJGc1VlOHlqTDFJb3Z4?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMUhEM0x2SGZsSThKRXR3X1JDQzNVY21kY3AzSWZnZE9oRnlpY25ycW55QnR1MzFaRFRXb21ieWJSYXI5Q3c5RzNEaktVbkRsU1lhQVhlWUw1NmUweVZscDJyNWJ6Qjh1cEhub0phZDhBbDJrQThhaTVZUnRJM2hoaXM0SFY5WUlsUVY1QUY0ejJ2d0JBb3d1U3pLbw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2026-02-13",
+    "titulo": "Vale (VALE3) tem prejuízo bilionário, mas será que resultados foram ruins? Entenda - Suno",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUEhmZW83VTFIWkN5bGpxM2NWQnZ1QmJPRDJrckpfOXhrT05sMXYxaUhOUlVUSmhTOHI1ZVRIR0Vvd2hoamhTWlhwenI2YU82YWUzTnJZcEhMelZKSUt4M2Z3bXFoNm5fT2dPNUpwclZDMzNSUmdudmM4YkdtTWU2UVlINjFtS3JweVNQY0ZsT3RFLUphc2hF0gGcAUFVX3lxTE1uSmlZNXFmVWlZQ081WjdTNF9wdG1yN2FDNVAwOFVXX3NYRF9tNXZrdGhjdTllODlMT2lSaF9FZmxILXc4UmVFOElWZ0FYaHJtUVpTUkNnTDFCLUY1U201ZDE1MTFvUnNXYncyMm9NZkJnU2NZV2dOU2FZNnF5TzdLeE82bzE4TFFFR1pmUnlVb2ZkR3k0aFNqMWY2WQ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2025-10-06",
+    "titulo": "Vale (VALE3) anuncia recompra de debêntures por R$ 42; entenda a operação - Suno",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZTlCWW9BZFpsRUg3TGZucl8wNHNMbzRqdGg2dGswMi0yQWNSZDBVX0lZT2xoc2dZTWJoUVdVVURGMVNKa1lzZU16bm5RTmVjWW5GUTNzVDVqSkxINUw3LVFHOWljdkxhcnpac1h3X2JRdUFXMzFKWnZBcElhT0xIOE5kaERDQdIBiwFBVV95cUxPWEpoMDZLSVRPOGNWVUh2Q1Z5WHVIR1RjT3hSa0pad29KREppa1BzSVpkRFVHQTRnSURGMTZST29VUXBiY0xuS2I5ZlllcWUyb3JlLThCSXZjNldfdV9lVHpOUUJnZ2RUZFN2U0xIb2RxZTBERmpuRGFHRUxubkUwLS1JdnM2b3M1Mm5Z?oc=5"
    },
    {
     "tipo": "analise",
@@ -32964,24 +32790,10 @@
    },
    {
     "tipo": "analise",
-    "data": "2025-02-05",
-    "titulo": "Vale a pena comprar uma debênture hoje?",
-    "fonte": "Inter",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdmQ3VThuNEZrVGpWdnhwZWJ6VXBzLWt6TmxPcW9RM3NaUnFpMkh6ZG14QnJhNW9POF8zMkRrbk1qdEhzQlRGYkJnaGIyLUdzYTlvU2lfWFpwWTUzTmE2Y1dMSndxUGVqZmFCQjZCNHZsdDFzWEdNM3d6QjZPZHktZGlUb0VKU1BBcFhENnJJdzJBcVZqakZSdzJB?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2024-12-05",
-    "titulo": "Atualização de Crédito - Vale (Debêntures Participativas - CVRDA6)",
-    "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWjRYMlhzQzRqdmlxVEY0TXhqZnhlOHpZZFRBUnZHNDJGSjNWaVNRT25vd051bTNWQ1RNV0xLYjJkVkhyLV8zakQySzc1YTRIV1hRYTZFSHBzVnJEMm1CbDUwM2FaTXdnZFVobjNHM21oM2pGQk1oeGFPRUtxU0ZFNU9wSFdzOHQ4SXF1dGlRdzZwN2RLc25xdVdyekVEMl9OWnlPOEx0MHJCSkZLTjJ0OVdmOGc3T1E5dkx3N3U5Q0RyeS02MnAyd3p2czJsWGcwMXV2RUNsazQ?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2024-09-25",
-    "titulo": "Seguro Cartão de Crédito: para que serve e vale a pena ter?",
-    "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaTZuNi1SaTdZcDQ1NUtCREtOVXVEaWNLNC1UdzBPc29nZXVtdEVrRlNwbURxRWxpYXVDaHZRVzM4aDhXNWN0RTFqMlkyRkl4aXVYSm12N0Y1bVliQWdDMU53YmtmcDhMRF93cUUxajVqal9ydHNrankyWXM5VjI1OUI3cTRxZGg3QnlybHJxN1BwOHczdlBJZ2FDWjd1QTROd0VxaEMwSlBZbUNPTEs0?oc=5"
+    "data": "2025-07-30",
+    "titulo": "Vale a pena investir na Vale (VALE3)? Veja o que esperar dos resultados - Suno",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1VMDdZaTJGSWp2SUlvRUdVNkQ0NTZPbFpFelN0Rzd2RVdfa29iVGlqSEUwaFFrVGNSOTFqU3pZdkpiaGFXaXpEWHV3T1VKQVdXcENLSXZONjNnTlh2dko5LXhVVHUxY0xvam5mdU5ZeTJndl8tejJEMDlSR1dHZ9IBgwFBVV95cUxQWEM2SDFqUmNuOVBZRTFxWlMzLUtSUE90cHZ5OE02MUdrM1BxbGlqUHFBbkFIOTRCM0dMOTB1eWFnaUpoa1M1djg3alBGNTZnVE9CTDRtR0hoQU00RE9Mb0NVQng0MDgxLV9JdnpRUjhWMjE2WkU5QnMyb1ZtX1ZoUmRVWQ?oc=5"
    }
   ],
   "44067725000172": [
