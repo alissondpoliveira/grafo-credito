@@ -36,7 +36,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 47508411000156,COMPANHIA BRASILEIRA DE DISTRIBUICAO,Brasileira Distribuicao,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 45736131000170,UNIDAS LOCADORA S.A..,Unidas,locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grupo_inferido
+03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 45242914000105,C E A MODAS S.A.,C Modas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
@@ -92,7 +92,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 15413826000150,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 04423567000121,ENEVA S.A.,Eneva,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 00864214000106,ENERGISA SA,Energisa,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
-,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
+06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04895728000180,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 03220438000173,EQUATORIAL ENERGIA S.A.,Equatorial,energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08873873000110,ECORODOVIAS CONCESSOES E SERVICOS S/A,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
@@ -182,7 +182,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 94813102000170,TRES TENTOS AGROINDUSTRIAL S.A,Tres Tentos,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
+84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 33958695000178,UNIPAR CARBOCLORO S/A,Unipar Carbocloro,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 60665981000118,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,Uniao Quimica,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 60894730000105,USINAS SIDERURGICAS DE MG S/A - USIMINAS,Usinas Siderurgicas,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -274,7 +274,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 13017462000163,ENERGISA SERGIPE - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26664057000189,ENTREVIAS CONCESSIONARIA DE RODOVIAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,nao_identificado
 51137031000120,EPR LITORAL PIONEIRO S.A.,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26845460000104,VALE DO SERTAO TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
 26845283000166,ALTO SERTAO TRANSMISSORA DE ENERGIA S.A,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26845497000132,BURITIRAMA TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -326,7 +325,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 33000167000101,PETROLEO BRASILEIRO S/A - PETROBRAS,Petroleo Brasileiro,oleo_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
 42165941000125,POTENGI HOLDINGS S.A.,Potengi Holdings,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 25117259000148,PIRAPORA SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-27219024000192,PIRAPORA II SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,nao_identificado
+27219024000192,PIRAPORA II SOLAR HOLDING S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 48534024000157,PRS AEROPORTOS S.A.,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 17553029000101,PARANAIBA TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 32667691000178,PARINTINS AMAZONAS TRANSMISSORA DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,nao_identificado

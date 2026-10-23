@@ -1886,5 +1886,17 @@
  "89086144001198|6|Randoncorp (RAPT4) vê receita de setembr": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "45736131000170|7|4° Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03237583000167|3|A sucessão na Copa Energia, com a benção": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "08336783000190|5|Celesc (CLSC3; CLSC4) registra rating ‘A": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }
