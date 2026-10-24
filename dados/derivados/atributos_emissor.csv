@@ -56,13 +56,13 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 06147451001104,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,Calamo Distribuidora,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 16619378000108,CIMED & CO S.A.,Cimed Co,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 06981180000116,CEMIG DISTRIBUICAO S/A,Cemig,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 12420164000157,CM HOSPITALAR S.A.,Cm Hospitalar,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 07682638000107,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,Motiva (ex-CCR),mobilidade_urbana,project_finance,0,transicao,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 07047251000170,COMPANHIA ENERGETICA DO CEARA-COELCE,Enel,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.93,grande_grupo
 02800026000140,COGNA EDUCACAO S.A,Cogna Educacao,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 03025305000146,RODOVIAS DAS COLINAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
-92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
+92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,3,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
 04172213000151,COMPANHIA PIRATININGA DE FORCA E LUZ,CPFL,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04370282000170,COPEL GERACAO E TRANSMISSAO S.A.,Copel,integrada_gt,project_finance,12,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 04368898000106,COPEL  DISTRIBUICAO S/A,Copel,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -125,7 +125,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 00873894000124,LETS RENT A CAR S/A,Isolada (a identificar),locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
 00389481000179,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,Isolada (a identificar),logistica,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,nao_identificado
 09041168000110,LOG COMMERCIAL PROPERTIES E PARTICIPACOES S/A,Log Commercial,imobiliario_construcao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-05917486000140,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,Livetech Bahia,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+05917486000140,LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A,Livetech Bahia,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 16676520000159,HOSPITAL MATER DEI S.A.,Hospital Mater,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 13783221000478,MADERO INDUSTRIA E COMERCIO S.A.,Madero Industria,alimentos_bebidas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 17314329000120,INTERNATIONAL MEAL COMPANY ALIMENTACAO S/A,International Meal,alimentos_bebidas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
@@ -155,7 +155,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 33453598000123,RAIZEN S.A.,Rumo,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 06047087000139,REDE DOR SAO LUIZ S/A,Rede Dor,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 03342704000130,PETRORECONCAVO S.A.,Petroreconcavo,oleo_gas,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-89086144001198,RANDONCORP S.A.,Randoncorp,industria,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
+89086144001198,RANDONCORP S.A.,Randoncorp,industria,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 41508382000146,RODOVIAS DO BRASIL HOLDING S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,nao_identificado
 92802784000190,COMPANHIA RIOGRANDENSE DE SANEAMENTO - CORSAN,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 09095183000140,ENERGISA PARAIBA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
@@ -360,7 +360,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 15286382000139,MATRINCHA TRANSMISSORA DE ENERGIA TP NORTE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 26796760000140,TCC - TRANSMISSORA CAMINHO DO CAFE S/A,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 24624490000165,ARGO TRANSMISSAO DE ENERGIA S.A.,Argo,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grande_grupo
-49786044000188,TECP - TRANSMISSORA DE ENERGIA CENTRAL PAULISTANA S.A.,Isolada (a identificar),transmissao,project_finance,2,construcao,regra (ANEEL),construcao,,nao_identificado
+49786044000188,TECP - TRANSMISSORA DE ENERGIA CENTRAL PAULISTANA S.A.,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
 34840096000118,TRSP - TERMINAL DE REGASEIFICACAO DE GNL DE SAO PAULO S.A.,Trsp Terminal,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 02639850000160,TVV TERMINAL DE VILA VELHA S.A.,Tvv Terminal,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 27352303000120,UHE SAO SIMAO ENERGIA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado

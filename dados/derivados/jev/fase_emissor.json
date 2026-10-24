@@ -1910,5 +1910,17 @@
  "54846951000105|4|Compradora, Ferrari mais que dobra lucro": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "06981180000116|14|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "05917486000140|14|Celebração, Alteração ou Rescisão de Aco": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "26617923000180|1|Análise - Debênture Janaúba S.A. - Renda": {
+  "fase": "operacional",
+  "confianca": 0.73
  }
 }
