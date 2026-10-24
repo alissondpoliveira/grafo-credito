@@ -1898,5 +1898,17 @@
  "08336783000190|5|Celesc (CLSC3; CLSC4) registra rating ‘A": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "40263170000183|12|Aquisição Amplitec e Essencial": {
+  "fase": "operacional",
+  "confianca": 0.46
+ },
+ "36619747000170|2|Telefônica Brasil conclui incorporação d": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "54846951000105|4|Compradora, Ferrari mais que dobra lucro": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
