@@ -2070,5 +2070,9 @@
  "02255187000108|15|Acordo Comercial com AST SpaceMobile": {
   "fase": "transicao",
   "confianca": 0.45
+ },
+ "84683374000300|9|Tupy: companhia aprova recompra de até R": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
