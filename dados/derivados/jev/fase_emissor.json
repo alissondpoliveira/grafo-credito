@@ -1922,5 +1922,153 @@
  "26617923000180|1|Análise - Debênture Janaúba S.A. - Renda": {
   "fase": "operacional",
   "confianca": 0.73
+ },
+ "09288252000132|15|ACORDO ENTRE INSPIRALI E EINSTEIN": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "28594234000123|15|3º Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "00001180000126|15|6ª operação de resgate ou conversão das ": {
+  "fase": "operacional",
+  "confianca": 0.66
+ },
+ "40432544000147|10|Claro inicia emissão de R$ 750 milhões e": {
+  "fase": "operacional",
+  "confianca": 0.48
+ },
+ "04601397000128|15|Acordo Comercial com a AST SpaceMobile": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "42150391000170|15|Fato Relevante - Braskem comunica sobre ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "47508411000156|15|Publicac¸a~o da Homologac¸a~o do Plano d": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08336783000190|4|Celesc (CLSC4)": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "50746577000115|15|Atualização sobre transação envolvendo p": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "97837181000147|15|Encerramento das atividades na planta de": {
+  "fase": "operacional",
+  "confianca": 0.7
+ },
+ "04423567000121|15|Conclusão do Processo de Alienação da UT": {
+  "fase": "operacional",
+  "confianca": 0.37
+ },
+ "88610126000129|15|Oferta Pública de Aquisição de Ações - L": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "35822503000127|15|ACORDO ENTRE INSPIRALI E EINSTEIN": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "61156113000175|15|Andamento de assunto regulatório (Aleman": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "58070452000120|15|Renúncia e Eleição de Diretoria": {
+  "fase": "transicao",
+  "confianca": 0.27
+ },
+ "52548435000179|15|Novos Contratos Assinados no 3T26": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "13783221000478|13|5ª Emissão de Nota Comercial Escritural": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12104241000402|15|Plano de Recuperação Extrajudicial": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "03342704000130|15|Proposta de Reorganização Societária env": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "89086144001198|4|Azul, Oncoclínicas, Randoncorp, Casas Ba": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "43776517000180|15|RESULTADO DO EXERCÍCIO DO DIREITO DE REC": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07415333000120|15|Prévia de resultados": {
+  "fase": "operacional",
+  "confianca": 0.69
+ },
+ "35764708000101|15|Fato Relevante Aquisic¸a~o Ligga": {
+  "fase": "operacional",
+  "confianca": 0.79
+ },
+ "02286479000108|15|Outorga de fiança em favor dos debenturi": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "84683374000300|9|Tupy (TUPY3): Anuncia Aquisição de Debên": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "23373000000132|15|Prévia de resultados 3T26": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "42278473000103|15|Alienação Inter Seguros": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "33041260065290|15|Deferimento do pedido de Recuperação Jud": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "20223016000170|2|BNDES aprova financiamento para linha de": {
+  "fase": "construcao",
+  "confianca": 0.67
+ },
+ "29884545000190|5|4ª emissão de debêntures simples da Comp": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "27967244000102|6|Fechamento e consumação da operação de c": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "26845702000160|6|Fechamento e consumação da operação de c": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "54846951000105|5|Compradora, Ferrari mais que dobra lucro": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "23274194000119|1|Furnas marca para 30 de maio assembleia ": {
+  "fase": "operacional",
+  "confianca": 0.72
+ },
+ "42165941000125|1|BRF conclui operação com a BRF para a fo": {
+  "fase": "operacional",
+  "confianca": 0.76
+ },
+ "08070508000178|13|Deferimento do Pedido de Conversão do Re": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "02255187000108|15|Acordo Comercial com AST SpaceMobile": {
+  "fase": "transicao",
+  "confianca": 0.45
  }
 }
