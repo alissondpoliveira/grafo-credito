@@ -2074,5 +2074,17 @@
  "84683374000300|9|Tupy: companhia aprova recompra de até R": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "08845676000198|13|Fato Relevante - Renúncia Diretor Financ": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "89086144001198|3|Azul, Oncoclínicas, Randoncorp, Casas Ba": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "12229415000110|2|Moody's Local afirma rating da Usina Cor": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }
