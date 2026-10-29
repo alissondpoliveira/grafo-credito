@@ -393,7 +393,7 @@ def _mini_hist(valores: list, minimo: float, maximo: float, marca: float | None 
 
 def _numeros_home() -> dict:
     """Números dos dois projetos para os cartões. Falha de leitura deixa o cartão só com texto."""
-    out = {"grafo": None, "beneish": None}
+    out = {"grafo": None, "beneish": None, "bancos": None}
     try:
         d = json.loads((PUBLICO / "grafo-credito" / "dados.json").read_text(encoding="utf-8"))
         dias = sorted((RAIZ / "dados" / "anbima" / "debentures" / "normalizado").glob("*/*.csv"))
@@ -412,17 +412,26 @@ def _numeros_home() -> dict:
                           "svg": _mini_hist(ms, -5, 1, b["limiar"])}
     except Exception as exc:
         print(f"home: números do M-Score indisponíveis ({exc})")
+    try:
+        import urllib.request
+        req = urllib.request.Request("https://beneish.alissonprata.io/bancos.json", headers={"User-Agent": "alissonprata.io"})
+        k = json.load(urllib.request.urlopen(req, timeout=60))
+        out["bancos"] = {"avaliadas": sum(1 for i in k["instituicoes"] if i.get("avaliavel")), "data_base": str(k["data_base"])}
+    except Exception as exc:
+        print(f"home: números dos bancos indisponíveis ({exc})")
     return out
 
 
 def gerar_home() -> str:
     n = _numeros_home()
     fmtn = lambda v: f"{v:,}".replace(",", ".")
-    g, b = n["grafo"], n["beneish"]
+    g, b, k = n["grafo"], n["beneish"], n["bancos"]
     stats_g = (f'<dl class="stats"><div><dt>Séries</dt><dd>{fmtn(g["series"])}</dd></div><div><dt>Emissores</dt><dd>{fmtn(g["emissores"])}</dd></div>'
                f'<div><dt>Grupos de risco</dt><dd>{fmtn(g["grupos"])}</dd></div></dl>') if g else ""
     stats_b = (f'<dl class="stats"><div><dt>Companhias</dt><dd>{fmtn(b["empresas"])}</dd></div><div><dt>Acima do limiar</dt><dd>{fmtn(b["acima"])}</dd></div>'
-               f'<div><dt>Exercício</dt><dd>{b["exercicio"]}</dd></div></dl>') if b else ""
+               + (f'<div><dt>Bancos e financeiras</dt><dd>{fmtn(k["avaliadas"])}</dd></div>' if k else f'<div><dt>Exercício</dt><dd>{b["exercicio"]}</dd></div>')
+               + '</dl>') if b else ""
+    datas_b = (f' · exercício {b["exercicio"]}' if b else "") + (f' · bancos em {k["data_base"][4:]}/{k["data_base"][:4]}' if k else "")
     leg_g = '<p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>' if g and g["svg"] else ""
     leg_b = '<p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>' if b and b["svg"] else ""
     recentes = "".join(f'<li><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></li>' for a in _artigos()[:3])
@@ -449,12 +458,12 @@ def gerar_home() -> str:
 </article>
 <article class="cartao">
 <div class="kicker">Qualidade contábil</div>
-<h3><a href="https://beneish.alissonprata.io/">M-Score de Beneish</a></h3>
-<p>Quais companhias abertas não financeiras mostram nas demonstrações da CVM o padrão que o modelo de Beneish (1999) associa a lucro manipulado, e quais eventos dos documentos acompanham esse sinal.</p>
+<h3><a href="https://beneish.alissonprata.io/">Qualidade dos Lucros</a></h3>
+<p>Dá para confiar no lucro reportado? Nas companhias abertas não financeiras, o M-Score de Beneish (1999) procura nas demonstrações da CVM o padrão associado a lucro manipulado. Nos bancos, sete sinais inspirados no CAMELS olham provisão, ativos problemáticos, resultado não recorrente e capital de todas as instituições do IF.data do Banco Central.</p>
 <div class="base">{b["svg"] if b else ""}{leg_b}
 {stats_b}
-<p class="meta">DFP e IPE da CVM, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira</p>
-<p class="acoes"><a href="https://beneish.alissonprata.io/">Abrir</a><a href="https://github.com/alissondpoliveira/Evaluating-Quality-of-Financial-Reports">Código</a></p></div>
+<p class="meta">DFP e IPE da CVM, IF.data do Banco Central, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira{datas_b}</p>
+<p class="acoes"><a href="https://beneish.alissonprata.io/">Empresas</a><a href="https://beneish.alissonprata.io/bancos/">Bancos</a><a href="https://github.com/alissondpoliveira/Evaluating-Quality-of-Financial-Reports">Código</a></p></div>
 </article>
 </div>
 </section>
@@ -463,7 +472,7 @@ def gerar_home() -> str:
 <h2 id="t-metodo">Como trabalho</h2>
 <div class="notas">
 <div><h3>O dado é conferido na fonte</h3><p>Cada número vem de base pública com data. Antes de confiar em um índice, confiro a conta no documento original: foi assim que apareceu, no M-Score, uma conta de tributos a recuperar lida como contas a receber, e empresas sem controladas que só publicam demonstração individual.</p></div>
-<div><h3>Todo modelo tem um limite escrito</h3><p>As réguas de Beneish vêm de empresas americanas das décadas de 1980 e 1990; por isso o site mostra, ao lado, a posição da empresa no setor brasileiro. O spread justo do Grafo não mede o prêmio de liquidez de cada papel, e a página diz isso.</p></div>
+<div><h3>Todo modelo tem um limite escrito</h3><p>As réguas de Beneish vêm de empresas americanas das décadas de 1980 e 1990; por isso o site mostra, ao lado, a posição da empresa no setor brasileiro. Nos bancos, as réguas dos sete sinais são escolhas minhas, sem pesos estimados, e a página diz isso. O spread justo do Grafo não mede o prêmio de liquidez de cada papel.</p></div>
 <div><h3>Cada indicador mostra a fórmula</h3><p>Os sites têm um botão de explicação em cada número calculado, com a definição, a fórmula e como ler. O código está aberto, e as atualizações rodam sozinhas, com a data na página.</p></div>
 </div>
 </section>
