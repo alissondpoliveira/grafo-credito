@@ -2130,5 +2130,9 @@
  "08070508000178|14|Deferimento do Pedido de Conversão do Re": {
   "fase": "operacional",
   "confianca": 0.97
+ },
+ "04973790000142|1|Cancelamento de registro categoria 'B' d": {
+  "fase": "operacional",
+  "confianca": 0.76
  }
 }
