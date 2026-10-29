@@ -2086,5 +2086,49 @@
  "12229415000110|2|Moody's Local afirma rating da Usina Cor": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "09324949000111|2|Fato Relevante - Liquidação da 8ª Emissã": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "09325109000173|2|Comunicado Conta Escrow": {
+  "fase": "operacional",
+  "confianca": 0.95
+ },
+ "45242914000105|15|Aprovação 4º programa de recompra de açõ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08336783000190|3|Celesc (CLSC4)": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "06272793000184|10|Renovação Concessão": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "13783221000478|12|5ª Emissão de Nota Comercial Escritural": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "89086144001198|2|Azul, Oncoclínicas, Randoncorp, Casas Ba": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|8|Tupy: companhia aprova recompra de até R": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09326342000170|8|10ª Emissão de debentures": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07401436000212|5|Marco no setor: Eldorado emite primeira ": {
+  "fase": "transicao",
+  "confianca": 0.23
+ },
+ "08070508000178|14|Deferimento do Pedido de Conversão do Re": {
+  "fase": "operacional",
+  "confianca": 0.97
  }
 }

@@ -11,8 +11,8 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 12648266000124,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,Ambipar Empreendimentos,servicos_ambientais,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 02451848000162,CONCESSIONARIA DO SISTEMA ANHANGUERA-BANDEIRANTES S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 09288252000132,ANIMA HOLDING S/A,Anima Holding,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
-09324949000111,AUTOPISTA FLUMINENSE S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-09325109000173,AUTOPISTA PLANALTO SUL S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09324949000111,AUTOPISTA FLUMINENSE S/A,Arteris,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
+09325109000173,AUTOPISTA PLANALTO SUL S/A,Arteris,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 09336431000106,AUTOPISTA REGIS BITTENCOURT S/A,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 00242184000104,ARMAC LOCACAO LOGISTICA E SERVICOS S.A.,Isolada (a identificar),locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
 02919555000167,ARTERIS S.A.,Arteris,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -96,7 +96,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 15413826000150,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 04423567000121,ENEVA S.A.,Eneva,geracao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 00864214000106,ENERGISA SA,Energisa,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.87,grande_grupo
-06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
+06272793000184,EQUATORIAL MARANHAO DISTRIBUIDORA DE ENERGIA S.A,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 04895728000180,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 03220438000173,EQUATORIAL ENERGIA S.A.,Equatorial,energia_diversificada,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08873873000110,ECORODOVIAS CONCESSOES E SERVICOS S/A,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
@@ -186,7 +186,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 94813102000170,TRES TENTOS AGROINDUSTRIAL S.A,Tres Tentos,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
+84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 33958695000178,UNIPAR CARBOCLORO S/A,Unipar Carbocloro,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 60665981000118,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,Uniao Quimica,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 60894730000105,USINAS SIDERURGICAS DE MG S/A - USIMINAS,Usinas Siderurgicas,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -210,7 +210,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 23438929000100,ALARES INTERNET PARTICIPACOES S/A,Alares Internet,telecom,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 12009135000105,ALIANCA GERACAO DE ENERGIA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 08364948000138,ALUPAR INVESTIMENTO S/A,Alupar,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-09326342000170,AUTOPISTA FERNAO DIAS S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
+09326342000170,AUTOPISTA FERNAO DIAS S/A,Motiva (ex-CCR),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 49272860000173,APIUNA PARTICIPACOES S/A,Apiuna,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 09359927000197,ASA BRANCA HOLDING S.A.,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,nao_identificado
 10841050000155,CONCESSIONARIA DAS RODOVIAS AYRTON SENNA E CARVALHO PINTO S/A - ECOPISTAS,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
