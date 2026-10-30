@@ -2150,5 +2150,13 @@
  "39580673000101|3|Assinatura do Terceiro Termo Aditivo e d": {
   "fase": "operacional",
   "confianca": 0.72
+ },
+ "42288184000187|1|CCR: BNDES aprova financiamento de R$ 4,": {
+  "fase": "operacional",
+  "confianca": 0.64
+ },
+ "23274194000119|2|Aneel aprova incorporação de Furnas pela": {
+  "fase": "operacional",
+  "confianca": 0.91
  }
 }
