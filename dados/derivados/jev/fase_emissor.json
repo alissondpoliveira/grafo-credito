@@ -2134,5 +2134,21 @@
  "04973790000142|1|Cancelamento de registro categoria 'B' d": {
   "fase": "operacional",
   "confianca": 0.76
+ },
+ "03237583000167|3|Aos 70 anos, Copa Energia lança campanha": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "08336783000190|2|Celesc (CLSC3; CLSC4) registra rating ‘A": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "22261473000185|10|Nomeação do Sr. Carlos Ivan Camargo de C": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "39580673000101|3|Assinatura do Terceiro Termo Aditivo e d": {
+  "fase": "operacional",
+  "confianca": 0.72
  }
 }
