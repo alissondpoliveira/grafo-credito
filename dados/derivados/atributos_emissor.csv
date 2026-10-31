@@ -39,7 +39,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 27316538000166,VPORTS AUTORIDADE PORTUARIA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 03237583000167,COPA ENERGIA S A,Copa Energia,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grupo_inferido
 45242914000105,C E A MODAS S.A.,C Modas,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 46319697000169,CONCESSIONARIA ECOVIAS DAS GERAIS S.A.,EcoRodovias,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 15139629000194,CIA. DE ELETRIC. DO EST. DA BAHIA-COELBA,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 08467115000100,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -186,7 +185,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 94813102000170,TRES TENTOS AGROINDUSTRIAL S.A,Tres Tentos,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
 06248349000123,TRANSPORTADORA ASSOCIADA DE GAS S.A. - TAG,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 59115685000164,TUPI ENERGIAS RENOVAVEIS S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
-84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
+84683374000300,TUPY S/A,Tupy,mineracao_siderurgia,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 33958695000178,UNIPAR CARBOCLORO S/A,Unipar Carbocloro,quimica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 60665981000118,UNIAO QUIMICA FARMACEUTICA NACIONAL S.A.,Uniao Quimica,saude,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 60894730000105,USINAS SIDERURGICAS DE MG S/A - USIMINAS,Usinas Siderurgicas,mineracao_siderurgia,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
@@ -232,11 +231,12 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 24274124000123,ASSURUA 2 ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 12272084000100,EQUATORIAL ALAGOAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 48569926000129,AMBIENTAL CEARA 2 SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
+05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 10835932000108,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,Neoenergia,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 08322396000103,CERRADINHO BIOENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 58607200000197,CONCESSIONARIA ECOVIAS RAPOSO-CASTELO S.A,EcoRodovias,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 39881421000104,COMPANHIA ESTADUAL DE GERACAO DE ENERGIA ELETRICA - CEEE-G,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,nao_identificado
-22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.91,grande_grupo
 01115535000170,TESC - TERMINAL SANTA CATARINA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 44330975000153,COLOMBO AGROINDUSTRIA SA,Colombo Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 42288184000187,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -269,7 +269,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 55078938000116,EDP TRANSMISSAO NORTE NORDESTE 2 S.A.,EDP,transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,grupo_inferido
 24870962000160,EDTE -  EMPRESA DIAMANTINA DE TRANSMISSAO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
-25176391000120,ENEL GREEN POWER VOLTA GRANDE S.A,Enel,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
+25176391000120,ENEL GREEN POWER VOLTA GRANDE S.A,Enel,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 28438777000151,EKTT 9 SERV DE TRANS DE E E SPE S.A.,Ektt 9,outros_corporativo,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 07401436000212,ELDORADO BRASIL CELULOSE S.A.,Eldorado Brasil,papel_celulose,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 20626892000148,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
