@@ -2158,5 +2158,93 @@
  "23274194000119|2|Aneel aprova incorporação de Furnas pela": {
   "fase": "operacional",
   "confianca": 0.91
+ },
+ "42150391000170|15|Relatório de Produção e Vendas 3T26": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "01543032000104|9|COMUNICADO AO MERCADO REFERENTE À DIVULG": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "16619378000108|2|João Adibe: quem é o dono da Cimed e qua": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "50746577000115|15|Celebração de Transação Tributária": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "33042730000104|15|Fato Relevante - Assinatura do acordo de": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "97837181000147|15|Anuncio sobre efeitos de ajustes não rec": {
+  "fase": "operacional",
+  "confianca": 0.73
+ },
+ "09053134000145|15|Pedido de Tutela Cautelar": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "09257877000137|8|Renúncia de Diretor Presidente": {
+  "fase": "transicao",
+  "confianca": 0.34
+ },
+ "02932074000191|15|Aprovação do novo Programa de Recompra d": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "33337122000127|1|Ipiranga compra concorrente por R$ 2,2 b": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12104241000402|15|Atualização de Adesão ao plano de Recupe": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "33453598000123|15|Novos membros dos Conselhos de Administr": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "76484013000145|15|Resultado da Licitação para de Locação d": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "43776517000180|15|Consumação da Incorporação de Ações": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "02600854000134|4|Information Regarding The Public Offer A": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "84683374000300|7|Tupy: companhia aprova recompra de até R": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02846056000197|15|CAD - Eleição de membro": {
+  "fase": "operacional",
+  "confianca": 0.73
+ },
+ "12091809000155|15|Atualização sobre Arbitragem Relativa ao": {
+  "fase": "transicao",
+  "confianca": 0.42
+ },
+ "28201130000101|6|Desinvestimento em Ativos de Transmissão": {
+  "fase": "transicao",
+  "confianca": 0.61
+ },
+ "33000167000101|15|Relatório de Produção e Vendas 3T26": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "08070508000178|15|Novos membros do Conselho de Administraç": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "02421421000111|15|Incorporacão I-Systems": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
