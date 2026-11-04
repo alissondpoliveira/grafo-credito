@@ -372,7 +372,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02476026000136,ULTRAFERTIL S/A.,Ultrafertil,quimica,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23449511000190,UTE GNA I GERACAO DE ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02255187000108,UNIFIQUE TELECOMUNICACOES S.A.,Unifique Telecomunicacoes,telecom,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
-50376938000189,USINA SANTA ADELIA S.A.,Usina Santa,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+50376938000189,USINA SANTA ADELIA S.A.,Usina Santa,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 45281813000135,USINA SANTA FE S.A.,Usina Santa,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 04739720000124,USINA TERMELETRICA PAMPA SUL S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,nao_identificado
 33592510000154,VALE S/A,Vale,mineracao_siderurgia,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.96,grupo_inferido
