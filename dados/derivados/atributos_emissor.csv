@@ -154,7 +154,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 11992680000193,QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.,Qualicorp Consultoria,financeiro,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 28367479000118,QUANTUM PARTICIPACOES S.A.,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 46568486000160,MANTIQUEIRA HOLDING S.A.,State Grid,energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-61585865000151,RAIA DROGASIL S/A,Raia Drogasil,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
+61585865000151,RAIA DROGASIL S/A,Raia Drogasil,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 33453598000123,RAIZEN S.A.,Rumo,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 06047087000139,REDE DOR SAO LUIZ S/A,Rede Dor,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 03342704000130,PETRORECONCAVO S.A.,Petroreconcavo,oleo_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.82,grupo_inferido

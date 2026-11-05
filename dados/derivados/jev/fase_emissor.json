@@ -2254,5 +2254,13 @@
  "10319900000150|5|Alteração de membro da diretoria da Comp": {
   "fase": "operacional",
   "confianca": 0.44
+ },
+ "08845676000198|12|Fato Relevante - Renúncia Diretor Financ": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "61585865000151|14|Alienação da 4Bio Medicamentos S.A.": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }

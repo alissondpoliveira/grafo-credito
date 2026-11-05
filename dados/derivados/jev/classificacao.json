@@ -154888,5 +154888,74 @@
   "tokens": 902,
   "impacto": "neutro",
   "status": "automatico"
+ },
+ "53113791000122|noticia|2022-09-13|Totvs aprova 4ª emissão de debêntures no valor de R$ 1,5 bil": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 1.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 0.54,
+  "impacto_confianca": 0.19,
+  "relevante": 0.87,
+  "modelo": "jev-1.14.0",
+  "tokens": 899,
+  "impacto": "negativo",
+  "status": "automatico"
+ },
+ "12091809000155|noticia|2025-07-14|Brava Energia aprova emissão de até R$ 3 bilhões de debêntur": {
+  "evento": "nova_divida",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 1.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 0.84,
+  "impacto_confianca": 0.0,
+  "relevante": 0.97,
+  "modelo": "jev-1.14.0",
+  "tokens": 899,
+  "impacto": "neutro",
+  "status": "automatico"
+ },
+ "42500384000151|noticia|2026-02-11|Gigante da energia eólica, Serena troca a incerteza do Brasi": {
+  "evento": "outro",
+  "evento_confianca": 0.49,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.31,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.05,
+   "operacional": 0.03,
+   "societario_governanca": 0.04,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.03,
+   "outro": 0.54
+  },
+  "impacto_score": 1.52,
+  "impacto_confianca": 0.28,
+  "relevante": 0.83,
+  "modelo": "jev-1.14.0",
+  "tokens": 898,
+  "impacto": "positivo",
+  "status": "a_revisar"
  }
 }
