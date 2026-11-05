@@ -2246,5 +2246,13 @@
  "02421421000111|15|Incorporacão I-Systems": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "44854238000150|9|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "10319900000150|5|Alteração de membro da diretoria da Comp": {
+  "fase": "operacional",
+  "confianca": 0.44
  }
 }
