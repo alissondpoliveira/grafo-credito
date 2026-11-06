@@ -155509,5 +155509,51 @@
   "tokens": 900,
   "impacto": "neutro",
   "status": "a_revisar"
+ },
+ "51218147000193|noticia|2026-11-06|Iguatemi S.A (IGTI11)": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.61,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.65,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.02,
+   "societario_governanca": 0.0,
+   "resultado": 0.01,
+   "rating": 0.0,
+   "analise_credito": 0.01,
+   "outro": 0.31
+  },
+  "impacto_score": 0.76,
+  "impacto_confianca": 0.61,
+  "relevante": 0.3,
+  "modelo": "jev-1.14.0",
+  "tokens": 891,
+  "impacto": "neutro",
+  "status": "a_revisar"
+ },
+ "16404287000155|noticia|2023-08-21|Suzano (SUZB3) confirma que não pagará dividendos em 2023 e ": {
+  "evento": "resultado",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 1.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 1.24,
+  "impacto_confianca": 0.16,
+  "relevante": 0.86,
+  "modelo": "jev-1.14.0",
+  "tokens": 899,
+  "impacto": "neutro",
+  "status": "automatico"
  }
 }
