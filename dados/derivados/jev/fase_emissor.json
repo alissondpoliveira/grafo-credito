@@ -2262,5 +2262,13 @@
  "61585865000151|14|Alienação da 4Bio Medicamentos S.A.": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "84683374000300|8|Tupy reverte prejuízo e lucra R$ 53,6 mi": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "27821748000101|1|EDP Brasil (ENBR3) antecipa operação de ": {
+  "fase": "construcao",
+  "confianca": 0.3
  }
 }
