@@ -2278,5 +2278,21 @@
  "84683374000300|7|Tupy reverte prejuízo e lucra R$ 53,6 mi": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "10923227000162|2|BTG Pactual (BPAC3)": {
+  "fase": "operacional",
+  "confianca": 0.55
+ },
+ "01543032000104|10|COMUNICADO AO MERCADO REFERENTE À DIVULG": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "43514079000181|11|Mudança de Controle da Companhia": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "08070508000178|14|Novos membros do Conselho de Administraç": {
+  "fase": "operacional",
+  "confianca": 0.97
  }
 }
