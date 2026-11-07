@@ -155969,5 +155969,28 @@
   "tokens": 906,
   "impacto": "positivo",
   "status": "automatico"
+ },
+ "50746577000115|noticia|2026-02-10|Crise da Raízen respinga no grupo Cosan e Rumo adia emissão ": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.83,
+  "evento_probabilidades": {
+   "credito_negativo": 0.08,
+   "nova_divida": 0.85,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.07
+  },
+  "impacto_score": 0.35,
+  "impacto_confianca": 0.47,
+  "relevante": 0.72,
+  "modelo": "jev-1.14.0",
+  "tokens": 904,
+  "impacto": "negativo",
+  "status": "automatico"
  }
 }
