@@ -2294,5 +2294,77 @@
  "08070508000178|14|Novos membros do Conselho de Administraç": {
   "fase": "operacional",
   "confianca": 0.97
+ },
+ "12528708000107|15|Pedido de recuperação extrajudicial": {
+  "fase": "operacional",
+  "confianca": 0.37
+ },
+ "06057223000171|15|4º Programa de Recompra": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "00001180000126|15|Cancelamento do registro perante a SEC": {
+  "fase": "operacional",
+  "confianca": 0.67
+ },
+ "03237583000167|3|Do botijão à TV: donos da Copa Energia c": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "02474103000119|15|Aprovação da proposta de incorporação da": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "13270520000166|15|Homologação PRE": {
+  "fase": "operacional",
+  "confianca": 0.76
+ },
+ "21314559000166|15|Reapresentação da Apresentação de Result": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04992714000184|15|Medida Judicial para anular ou suspender": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "12104241000402|15|Suspensão AGE - 06.11": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "33453598000123|15|Aumento de Capital Privado, Instituição ": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "43776517000180|15|Aprovação do pagamento de JCP": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "16404287000155|15|Atualizações de Projeções": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "08807432000110|15|Celebração do Protocolo e Justificação d": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "12009135000105|1|Fundo chinês compra fatia na controlador": {
+  "fase": "operacional",
+  "confianca": 0.7
+ },
+ "08364948000138|15|Vitória em Leilão realizado no Chile (Pr": {
+  "fase": "transicao",
+  "confianca": 0.73
+ },
+ "22261473000185|11|Nomeação do Sr. Carlos Ivan Camargo de C": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "32431519000110|11|Rescisão de contrato": {
+  "fase": "transicao",
+  "confianca": 0.18
+ },
+ "28438834000100|2|Neoenergia (NEOE3) busca “waiver” de deb": {
+  "fase": "operacional",
+  "confianca": 0.3
  }
 }
