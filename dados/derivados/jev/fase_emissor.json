@@ -2366,5 +2366,13 @@
  "28438834000100|2|Neoenergia (NEOE3) busca “waiver” de deb": {
   "fase": "operacional",
   "confianca": 0.3
+ },
+ "40432544000147|9|S&P sinaliza elevação de ratings da Desk": {
+  "fase": "operacional",
+  "confianca": 0.48
+ },
+ "08336783000190|2|Demarest assessora Banco Votorantim e Sa": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }

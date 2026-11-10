@@ -158825,5 +158825,120 @@
   "tokens": 891,
   "impacto": "neutro",
   "status": "automatico"
+ },
+ "50746577000115|analise|2025-11-03|PROSPECTO DEFINITIVO DA OFERTA PÚBLICA DE DISTRIBUIÇÃO PRIMÁ": {
+  "evento": "analise_credito",
+  "evento_confianca": 0.32,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.15,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.02,
+   "operacional": 0.0,
+   "societario_governanca": 0.13,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.39,
+   "outro": 0.31
+  },
+  "impacto_score": 0.87,
+  "impacto_confianca": 0.41,
+  "relevante": 0.82,
+  "modelo": "jev-1.14.0",
+  "tokens": 923,
+  "impacto": "neutro",
+  "status": "a_revisar"
+ },
+ "16676520000159|noticia|2024-08-13|Hospital Mater Dei em Nova Lima será inaugurado nesta sexta-": {
+  "evento": "operacional",
+  "evento_confianca": 0.68,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.71,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.29
+  },
+  "impacto_score": 1.18,
+  "impacto_confianca": 0.58,
+  "relevante": 0.76,
+  "modelo": "jev-1.14.0",
+  "tokens": 893,
+  "impacto": "neutro",
+  "status": "a_revisar"
+ },
+ "33839910000111|analise|2026-10-13|Fitch Assigns ‘AAA(bra)’ Rating to Vivara’s Proposed 2nd Deb": {
+  "evento": "rating",
+  "evento_confianca": 0.87,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.06,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.88,
+   "analise_credito": 0.06,
+   "outro": 0.0
+  },
+  "impacto_score": 1.82,
+  "impacto_confianca": 0.72,
+  "relevante": 0.78,
+  "modelo": "jev-1.14.0",
+  "tokens": 908,
+  "impacto": "positivo",
+  "status": "automatico"
+ },
+ "28201130000101|noticia|2026-05-21|Energisa (ENGI11) vende empresas de transmissão para a Taesa": {
+  "evento": "aquisicao_venda",
+  "evento_confianca": 1.0,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 1.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.0
+  },
+  "impacto_score": 0.94,
+  "impacto_confianca": 0.0,
+  "relevante": 0.8,
+  "modelo": "jev-1.14.0",
+  "tokens": 917,
+  "impacto": "neutro",
+  "status": "automatico"
+ },
+ "51466860000156|analise|2026-08-20|São Martinho - Radar de Resultados 2T26": {
+  "evento": "resultado",
+  "evento_confianca": 0.51,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.56,
+   "rating": 0.0,
+   "analise_credito": 0.44,
+   "outro": 0.0
+  },
+  "impacto_score": 1.11,
+  "impacto_confianca": 0.8,
+  "relevante": 0.96,
+  "modelo": "jev-1.14.0",
+  "tokens": 895,
+  "impacto": "neutro",
+  "status": "a_revisar"
  }
 }
