@@ -62,7 +62,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 07047251000170,COMPANHIA ENERGETICA DO CEARA-COELCE,Enel,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.93,grande_grupo
 02800026000140,COGNA EDUCACAO S.A,Cogna Educacao,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
 03025305000146,RODOVIAS DAS COLINAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
-04973790000142,CPFL COMERCIALIZACAO BRASIL S/A,CPFL,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+04973790000142,CPFL COMERCIALIZACAO BRASIL S/A,CPFL,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 04172213000151,COMPANHIA PIRATININGA DE FORCA E LUZ,CPFL,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04370282000170,COPEL GERACAO E TRANSMISSAO S.A.,Copel,integrada_gt,project_finance,12,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 04368898000106,COPEL  DISTRIBUICAO S/A,Copel,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -201,7 +201,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 89637490000145,KLABIN S/A,Klabin,papel_celulose,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.81,grande_grupo
 49037416000173,ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A.,Isolada (a identificar),comercializacao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 45024644000158,CAJUINA AB1 HOLDINGS S.A,Cajuina Ab1,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-03798096000173,AGEO TERMINAIS E ARMAZENS GERAIS S/A,Ageo Terminais,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.9,grupo_inferido
+03798096000173,AGEO TERMINAIS E ARMAZENS GERAIS S/A,Ageo Terminais,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 39523638000142,AGUAS DA IMPERATRIZ S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 30997588000160,ATHON GERACAO DISTRIBUIDA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 23438929000100,ALARES INTERNET PARTICIPACOES S/A,Alares Internet,telecom,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
@@ -339,8 +339,8 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 48127008000140,EPR SUL DE MINAS S.A,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 42596330000131,RDVE SUBHOLDING S.A.,Rdve Subholding,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08070508000178,RAIZEN ENERGIA S/A,Rumo,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
-23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
-42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
+23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
+42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,nao_identificado
 42310775000103,AGUAS DO RIO 1 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,nao_identificado
 48851242000115,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,nao_identificado
 39580673000101,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,BRK,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo

@@ -159101,5 +159101,28 @@
   "tokens": 903,
   "impacto": "neutro",
   "status": "automatico"
+ },
+ "58070452000120|noticia|2021-08-30|Iguá adere à plataforma de “green bonds” do Banco Interameri": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.61,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.65,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.02,
+   "societario_governanca": 0.01,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.32
+  },
+  "impacto_score": 1.62,
+  "impacto_confianca": 0.41,
+  "relevante": 0.76,
+  "modelo": "jev-1.14.0",
+  "tokens": 901,
+  "impacto": "positivo",
+  "status": "a_revisar"
  }
 }

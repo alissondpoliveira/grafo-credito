@@ -2382,5 +2382,21 @@
  "51218147000193|7|Transição CEO": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "40432544000147|9|Claro inicia emissão de R$ 750 milhões e": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "03798096000173|2|Terminais Ageo captam R$ 450 milhões em ": {
+  "fase": "operacional",
+  "confianca": 0.56
+ },
+ "23096269000119|1|Comunicado ao Mercado": {
+  "fase": "operacional",
+  "confianca": 0.85
+ },
+ "42644220000106|5|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.85
  }
 }
