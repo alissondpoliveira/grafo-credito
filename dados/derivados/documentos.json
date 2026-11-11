@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-10T10:12",
+ "gerado_em": "2026-11-11T03:23",
  "emissores": {
   "08213823000107": [
    {
@@ -279,6 +279,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2025-03-21",
+    "titulo": "Mesmo sob pressão do aço chinês, a Aço Verde do Brasil cresce em 2024",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS09FeWpYbUFjd1E4Zk9SY3R4aUtYbHVZdlhuLTFhQ3dpc1BQRGwwNndqanhFd1J0UFptQ05HQlo4T0UzZ2xDYTFHUVJfSmtnN21ZZ2owVDBUMUNwbUVnblhudzQyd21CaGJRbG1uQ21aWjROOWRNeGxHdl9xUXJUbFd4S1d3RTk5N1VKZVRDTFRENFpDT0E5Y2NvcHNUUFgwNEZhbWZmR3NjZ0JqcVowbnB3dUltTVVBNFA4bXFjVl94c0pp0gHTAUFVX3lxTFAtdWhqbGdtbkhFaXBybWlPdFhXM3liLS1PLWoxcVc5Sl9MRFFqMXBCbmVpUjNtbm1ndTU4SERfWW1GQTljMHg4LWpjemFWWjdxQW1OTzZuTHRDdjBnTXpESE5xTDFEOHBBVUdvU01fMmdXaDAtY3FvTmpXWFJERFdiUDdvTGV5WTU4eFByLXNySE5oNXlRTnh5cWlGa2YyWnB0REQtMm1lTUxsODExUE1hWG9YYXNVQUtWNXZqTU1UeC1jeHJzVjV1aHNHODdmTDZPMzg?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2024-06-25",
     "titulo": "SIDERURGIA | AVB conclui emissão de R$ 200 milhões em debêntures verdes",
     "fonte": "Brasil Mineral",
@@ -288,8 +295,8 @@
     "tipo": "noticia",
     "data": "2024-06-24",
     "titulo": "Aço Verde do Brasil emite debênture de R$ 200 milhões, primeiro título verde no setor siderúrgico",
-    "fonte": "Terra",
-    "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQcUlYTkN3bkczTk1iZU9DRXZEWDQyaGFvMlJoX0JfUnZaa20tNFhmcUlYY0VxTlhtXzk2b3dUc0tRbkk0TFJJUXdPMUluV19EbkItaktvU181NXgwMC1yYWVMdk1xMU50b1A5VmdjcVAwSTVhdXJvVklReGNLTlJHNmJDM0duNVNBb2s4YnBSTi1FY1luLVZKS3pEVmZHUUlaZTJZeTBzRml6OHlXa1pKOHcxRThJRGNCVHpGc21ZWmpGVURmbC1DLVhDMFBBU0FPMjE1djNmMklZdjdCNV9uVC1qR3JEcWJlZ0lMRzJNYjIzRWxvVzNYNDFLTUo5bEJlYUZZN2x3?oc=5"
+    "fonte": "Estadão",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ2hfWjhtcDl5T0diU1lGRUU5WGhyeE1zRmdxRWV6NWJhbUtxSnlCSU1tS2t2ZTkzejQ3R0xHZWRhT3JhTEFCdnJOVXVtVFpxbVY2MjM3cm1McHM3TlVnVk5UVkUxOTBGd0ZuUTBzWkdKVHpNcGtuZmltR0R6Y2xXS25FamxIZUFicGxjMElhcmF6ZDJzV3Q0b1BrTFF4WUdDMU5ra25R0gGrAUFVX3lxTE5BY1NnWHlydndLVnl1V0huMVh6aEZKRUxTQnJTOGtvQlBES3hTd1BnSDdyU2ZrcXN0OC0wNkhoa1pXX0o2dVhoMFNNbkJZRHlEOGljT0I0VTZEYnhxYl92M0d0ejUtczVuQTVSTEphb3VKZWx4dk1yeDVQMW9iMVZXbzBDVkJoei1tLVd2N3E5a05Kak4tTndBcXA2djhibWR6MjhNUF9odmZzTQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -590,6 +597,13 @@
     "titulo": "Oferta de Aquisição Facultativa das Debêntures da 19ª Emissão da Companhia",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1410198&numSequencia=934910&numVersao=1"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-10-02",
+    "titulo": "Aegea contrata R$ 1,5 bilhão e chega a R$ 6 bilhões em captações desembolsadas em 2026",
+    "fonte": "atlaspublico.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPXzZhbmhRMGI1M3o4NF93dV9ROHVQbVpnUndPVFdJVUwyNU95aHAyTENrVlpDQVRPa3V1d1huMDNGbTZwRlZKLUhGdFcxc0F2dXN3Z0lYbjZ5YUREZU1vajV4RnJOUHQ1QmtBT0VHdllyX1JsR3VNNXg4NXd0VFJPRkhzVi1XbHE5UkJzNlJQRHlUYXAxMXdiUFhLVkJnZkhNYTBV?oc=5"
    },
    {
     "tipo": "noticia",
@@ -2447,13 +2461,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-06",
-    "titulo": "Axia Energia (AXIA3) aprova emissão de até R$ 1 bilhão em debêntures",
-    "fonte": "www.ativovirtual.com.br",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd2FSWF9Za2tYb1M2b1pSdVpCSnNlYlowMTNicW9qT1JrdnpFMk9xUlI4UldxSWhKNkhrWXhXY3IteExBczZ1d29mYWUxQjV3TEhSb3oyQ2FMUklNZmxNOUNvNlVmbFFQeVJjMC1SVDFOYW80MDZGMW9NSUhiMmZfSkZuOUEtaFVNZWxZeWM4ODFMM2JvUm9rM0UwX0tCYjBYVEdSb3lzU2k4aDFaME5pRmFR?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-11-05",
     "titulo": "AXIA Energia (AXIA3) aprova 14ª emissão de debêntures de R$ 500 mi - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
@@ -2514,6 +2521,20 @@
     "titulo": "Axia Energia aprova R$ 3 bilhões em novas debêntures para reforçar estrutura de dívida",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOT0s5TmZQdUItd3ZrNU1vcEJUWnktMi10cG1GWElvQ2g0OWdiVjlqVk51Ty1QYVVKUWdHZ1JZQ0xPTHBmTkRNd00zTHVGU0pJWmtIZmpaREZnSHpDNUR6ZE9sSVJxSi1TN01RaHZ0ZFEtV1pIeEl0cEk4ck1qdFI2WVpJUUs1eE5vbFRKWE1RQTRoM1JJNWEtYXZ3d1I4endFVDNkV3lfWUdNSy01Snp5d01qMTNTUUhfUXIzYUxB?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-09-02",
+    "titulo": "AXIA Energia coloca R$ 3 bilhões em jogo com novas debêntures",
+    "fonte": "UOL Economia",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaERST1pSSTFmQnZiXzNtQnVXaEMyYTEwZGF4WWhjeHRPNnlsQ2RpOWNOV1V6dnA1X2RocmRwSld6cUVOSmpWWVR3T29JVVpKak05RnRTNlJ6UjdabWJsc3dodFlQZzVYOVdmSFhGYWU0SDY3REU2QzRPNFM5bE1NZ1doNU9XM1ZCYXBVSzJma3gzSkFfUTd4QXlmVzljLXFxbDVVUkJqWmZ4ZkdoSE1YdU9Ua2hROEdQX1pxV1c0YkdwUQ?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2026-11-10",
+    "titulo": "AXIA Energia - 4ª Emissão - Comunicação de Resgate Antecipado Facultativo Total 2ª Série",
+    "fonte": "BTG Pactual",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOclQyMGVtWEs3clJuZnd0aDM5M0xfbGt0Rmd0WXdfOVRDZ0FsTTdteDNEdUxZNUg0WTRKUC01WWNnMjBqOERpa0NiQTlGRDVMb2JZcEtIa2wwbWFSSW1pS04zTFlGd1dlMWdWRG5sQ1ZQZGlRelE5OVk1Q1F6blBEbjJRTWk?oc=5"
    },
    {
     "tipo": "analise",
@@ -3182,13 +3203,6 @@
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQ3BEMG40WDRReWxfTjV3V2VadzlTcTFWeEpMblNyYVZCS3haMXVYcF9QLUh2eEVVamIxOXFaRU9VbVhCeFU0OVpMMjZCTEVOX2o2LVZWVE5QdXhiWndib0ZfdDI1MzhjTVBtYzBFVGdzQXVPUFNJV3l5ekxGa0Jra1pSU21zQlQtOUs2MG5ISGpfbkVxcU81QnVPWHhiSWRMOVNwTGFPbHVHTHVWNEplUEFXRzZrb2MzVVNGVExBVi04ZHdTbF9qStIB1wFBVV95cUxNOTR2eGxfdkpjMWRyZkJzbkNKeFQ0Y0hrM2dkVWg2Z3NIc2lidTdCVUlSejFlVnRjSzNrV3BkUmp3bGJVVDcwZHN4bGFLUVV1eW15UUZNckFmcGxCSTJiQVp3cGktdWdnZ0lpQWFnZFJOMGR2bGJubkM4a0xSMjZRMXdrcHBBRjAyV0VBaHdJeHBoY2RoaW5PY0RaYkd3Y0l0ZDY0c3FLajdCSlF3QTNJMHZGYVd3b0xFWmRjN29HSjBMR2JWWS1uQTVaT1JnNG1pT2t0ZnQ5SQ?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2022-09-21",
-    "titulo": "Zamp: fundos com 22,5% do capital rejeitam oferta e Mubadala encara pílula de veneno",
-    "fonte": "Exame",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQR3lja3ZBQnRncGpZei1nelVXQ1F4X0tpeGJRQ2hYb2pOWWVWc0xUWVVyVmVSdGIwX0VrQ1c5djlwYXNRdHZMTFNnX2hFY2lvUHFlS1Y1ZUpUZ1o0OEhHeVFOS3pqYXlGLWkzV1BNNlN0cnZ1Vi01U2xEWDFDNTA1d2I1bmtPVzRMaEVkY1BHRGtHQWFIZWVWWnlZdHRpeGIxZjhFZzd5UC0tb3Axd0E?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2022-11-11",
     "titulo": "Dona do Burger King, Zamp (ZAMP3) trouxe “resultados fortes”, diz BTG - Suno",
@@ -3618,13 +3632,6 @@
     "titulo": "Novo dono, velha dívida: Braskem (BRKM5) muda de fase sob pressão - Suno",
     "fonte": "Suno",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOckt0X1Z6THN5cnp0a1JJWVowbXNNNXl5VzJ6VHNYWGs2cEdhUmI0ZmJZRmhYc2g0Q3hPcFdyMHc3YWE3cDBacHVZZlBVbDZUMUxaX0N4aEVjd2lidnpONVNUMW1lX1pYNjFieS1RblN6bWpySnNWR2JmWUd0SzTSAYQBQVVfeXFMTzhxVWR4WnB6NmdYNkdfbHhnWGdCNTBUaFljRXBfM3FpSTl1c25XRktnVVEzems4cFF6dS0xZmpXcl9rUC1FVmJRSEtXemRmbHNVZnM3MmRfMk4xRFlfR2xmSHBJN2R6RGJxRWlEakt0cmVoazNDQjJaZGJMdVA1S0U1bE1N?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2021-11-10",
-    "titulo": "Braskem (BRKM5) diminui alavancagem em 24% e encerra o 3º tri em 0,83x - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE14ZzdLZmF3X05Qc3BPckpNd3JEMFotSE5WQU52ZUg1bDY1NDVxUTU2cFVXTk5PSkQxb0p3SHk1Y3A5MTVHU0ZPbHJJYllsSGFVa0thY2NyMkFsclpLTmo2My14SGVDRGc5alNjQWlXSUctQdIBd0FVX3lxTFB6ZjRreXZwMndodW9EVEhkZ20wUDFpZVY4WS04OF9VVEM2V1ljWUpVdzU0OER0ZlMzN3M2NlQ0RFdMVzBSNXhCUFlWQXQ0bkJIUE82TTNqbURsUFA1YmRtekxwLV93MTlqdmwxaUJTVWhjNC14OEZZ?oc=5"
    }
   ],
   "24396489000120": [
@@ -4733,6 +4740,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-11-10",
+    "titulo": "Conselho da Cia Brasileira de Distribuição aprova 21ª emissão de até R$ 112,8 milhões em debêntures para credores",
+    "fonte": "atlaspublico.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOUlsRFlUWFRMdjl5bnEwdTlZbXVSaXQ0d2pCNnZQY3k2eDJuYmIzZkhCSmhmX2E5aDA4TDdxRVBKWkMtQ3RRNDJCbm5zbHRiWEItTzZwdW1LLWY4b0hPYkRqNDlLZjE1My04c2dnb09tRENza2FpcE1saEluZDRxLTNWOEdzQms2eWgwMzQ4TlQwaHFhQS1GWFdtQk90MWs0d2c?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-10-21",
     "titulo": "Companhia Brasileira de Distribuição publica sentença de homologação do plano de recuperação extrajudicial",
     "fonte": "Clube FII News",
@@ -4833,6 +4847,13 @@
     "titulo": "Copa Energia conclui hoje captação de R$ 1,38 bilhão com debêntures",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZ0RCeHdUaVRQMUxTT0pwRnN5dlRka2JHZzdkN0UwRnNlT2tZYTBnZ3pJMkdLQ1lzUmZodk5xenN0NnBaVkhacGFqZkpvSlRSTlY5QTd3U2FkZ3NtVHMweFViRFhfQ3VPTFFJd0FBRDFxWGp6V1JDODU0VS1BSHVHb2lLZDJ1RXBGakphVEtKZDZpWGFOdHQ5ZVlQc0V3UUw2dFJDeDFhZjNoRWNRUXlkWkxieEUydGFMY0NR0gHKAUFVX3lxTE9aTUN0bm9WclBESDNBYWk0Q3lSYVE2MlJ5XzNRX2pPTk9HU3ZoZmpKSzliMlRaNjNlQVhzcmk5alFxNkpWdEdLeV9iX01nemZkMEZVMTdGTm9rblhEb0loVEVXTjdUcWx3U3hSY3JYbWhiUmliNDBrYS1yN2prazg5RllaOUlUTjROejQ1aUhhcnUwSHN3cy1TTkdBb0ozQzFmVXZ0SFlXS3JXT25nN1NRRHBnQ05rNHJzY0xVRGIzNjk2TnBVUGUtY3c?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2024-03-12",
+    "titulo": "Sônia Santana é a nova diretora de RH da Copa Energia",
+    "fonte": "Editora Brasil Energia",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLW5ZSjg1R3pCbnZmSEdQMUZqOWVHM2pwa1VwVDZOemI0WDVUNlVKbE9OdEZpZkZXLUw4QVB6MTV3eGZkcGI3LXFLWXN5S01TSmhzZlQxcUtIVTBhOUhBWTRPZVRqc1dvRWdHTVBXUGJIOGRNYV9aVEpVbXNfNHRGbnJZNGU5eGtYckdmUzY4QkhQRDBQOGc?oc=5"
    },
    {
     "tipo": "noticia",
@@ -6124,6 +6145,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2024-03-19",
+    "titulo": "Cemig conclui uma das maiores emissões de sustainable bonds do mercado nacional",
+    "fonte": "Agência Minas",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSy1YdGxrTEM2XzhYdGdfS0dDWlZuRjVlYmZYc3l1MFM4TFFWZk8xVEpTYmxubTdWcEtfNlNhZ3hORVpxMGFUa01yZzQ1T2Mxd1FrVGhpdGl5bkROVUJTbFlmYV9fMEpLWjF1N0dZOUNvdDNGVVFuei1HWVhJY3BRZkh6Vk9NYXFQdTh5V3hhRExCa0lhY1Ywb3F0R0ZCRlNkNWU0STQ0ZEprc05VdG81VndoWlR6NDVJbnVJSWFkNy1OOHhhUUdkaA?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2023-06-12",
     "titulo": "Cemig concluiu a maior emissão de debêntures sustentáveis do mercado nacional",
     "fonte": "Agência Minas",
@@ -6813,13 +6841,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-06",
-    "titulo": "Cogna (COGN3)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9hUjh3dUpDZlU4XzJuX1hMR2hXX0NtdDZ6Rk9wTEFUTVNEM1hpbU1PRnRfRl9oUkdsMUV2czlGUWQ5UFZUZWlxSGFGR0k?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-11-05",
     "titulo": "COGN3: BlackRock informa alienação de participação acionária na Cogna - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
@@ -6873,13 +6894,6 @@
     "titulo": "Cogna (COGN3) – Resultado do primeiro trimestre de 2020",
     "fonte": "Levante",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMWw4RkFxODd1eVEzNGltNlNiLVMwNTEzY3NSLVNNOV9mVXVXcGF5VFVOSDFyMXl6bnRZdUdZN2x2MjFmcjBQbzRqS3d0RmxUaGtvczBCbkV2WVEtREFUYkw4b05uNll2ZlNveHVNclJQbEVBRWlqamcxMm5LYjJGRzN5bld0Wl9IRVk1N2wzSDBDMDMyMTlBd0ZDUFJ0X0ViNGNoSA?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2020-08-21",
-    "titulo": "Resultado de Cogna",
-    "fonte": "Levante",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9zV3Y5UjhndHptc0VmV2o5aGNiMzcxS1VBSDJJMUl3X2x3Ni1sXzloZXRkajluTGhfbFFNZ1VoVjVKV1lGTkJpSUFNUTVnZDdySVo0bEVGcTBEd2M0UV9kVVRGZkJ4VVZBU3BDZnhGX3g2cWJXQmE3Rg?oc=5"
    }
   ],
   "03025305000146": [
@@ -7017,138 +7031,13 @@
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1400787&numSequencia=925499&numVersao=1"
    }
   ],
-  "92715812000131": [
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-12-05",
-    "titulo": "Alteração de Controle Acionário",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453640&numSequencia=978352&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-12-01",
-    "titulo": "Alteração de Controle Acionário da Companhia",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1451141&numSequencia=975853&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2024-04-26",
-    "titulo": "Reorganização Societária 5 pequenas transmissoras",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1227467&numSequencia=752193&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2024-02-28",
-    "titulo": "Incorporação da CPFL Cone Sul pela CPFL Transmissão",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1200548&numSequencia=725274&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2025-10-31",
-    "titulo": "Aquisição de lote no Leilão de Transmissão ANEEL nº 4/2025",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1438066&numSequencia=962778&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2025-05-22",
-    "titulo": "Oferta Pública de Distribuição da 15ª Emissão de Debêntures - Resultado do Procedimento de Bookbuilding",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381694&numSequencia=906406&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2025-03-05",
-    "titulo": "Oferta pública de distribuição da 14ª emissão de debentures - Conclusão do Procedimento de Bookbuilding",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1342001&numSequencia=866727&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-05-20",
-    "titulo": "Resultado do Procedimento de Bookbuilding - Oferta Pública de Distribuição da 11ª Emissão de Debêntures Simples",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1240243&numSequencia=764969&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-05-15",
-    "titulo": "Atualização do cronograma da oferta pública de distribuição das Debêntures - 11ª emissão",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1238536&numSequencia=763262&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-04-15",
-    "titulo": "Aviso ao Mercado - oferta pública de debênture -11ª emissão",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1221710&numSequencia=746436&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-05-22",
-    "titulo": "PRIMEIRO ADITAMENTO AO INSTRUMENTO PARTICULAR DE ESCRITURA DA 15ª (DÉCIMA QUINTA) EMISSÃO DE DEBÊNTURES",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381814&numSequencia=906526&numVersao=1"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2025-05-21",
-    "titulo": "2025.05.21 - 1º Aditamento à Escritura de Emissão - vf Registrada RTD Campinas.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67042",
-    "serie": "EEELA5"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2025-04-30",
-    "titulo": "2025.04.30 - Escritura de Emissão - vf Registrada RTD Campinas.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67041",
-    "serie": "EEELA5"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2025-03-05",
-    "titulo": "2025.03.05 - 1º Aditamento à Escritura de Emissão - vf Registrada JUCISRS.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65577",
-    "serie": "EEELA4"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2025-02-12",
-    "titulo": "2025.02.12 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65284",
-    "serie": "EEELA4"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2025-02-12",
-    "titulo": "2025.02.12 - Escritura de Emissão CPFL Transmissão - vf Registrada RTD Campinas.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65285",
-    "serie": "EEELA4"
-   },
-   {
-    "tipo": "escritura",
-    "data": "2024-09-03",
-    "titulo": "2024.09.03 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
-    "fonte": "Pentágono",
-    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=58706",
-    "serie": "EEELA3"
-   },
+  "04973790000142": [
    {
     "tipo": "noticia",
-    "data": "2025-09-05",
-    "titulo": "BB-BI analisa a CPFL Energia sob a ótica do crédito privado",
-    "fonte": "InvesTalk",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa2VaVUVyM3RTWmEzQUMydWVXNE1meUZsSmluZUN1Znp0NVcwdnVEWHo2TUJuNllhUkdxT3ZjeXRJeHduVk9QMWczQTV5anI4c2hGajQ3TmtoNExLdFBsWUVzdS1jalVPY1Zfb2RESVR1YjBVb29wWkw3UWFFdkFKcTAyMmtJWDE1QTh0Y0lIXzJsLU0?oc=5"
+    "data": "2026-01-16",
+    "titulo": "Cancelamento de registro categoria 'B' da CPFL Geração é aprovado",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNM1RHSWc4enBDcUw0bXdCTHpPMnRuZXZ0VVAzRkc4Yms1SEN3LWpfaXplVGZjUTRaVUplT041YXFnaHZOT3RxbllzY1NsNEpJM1JZQjFOYTk4VjdsWDF3SFBidXlUMjJlaWc2cVljdnQzRnlVaHNPdjduWHNOUk1DUGlpUUVJRTJaYVI5dmFZbTFWQXNSMXNYaGcyMzdYekFIbUY1bGlBQ2NPb25QRXJjWmRsVWNpYnBnQUxMdzRn0gHMAUFVX3lxTE84MjRxNkRkRXBJay1KdF91WUM4U2dMVHpjUGxzUmhiVXpvcFdLQjNubVhEVlY1UlBkTWVDcmg0Tjd2eG13NldkblRFSHZqcm15enUwWl9NUm5wWXJ5SzVuVlFEZVVtc2hVbFF4VDJyZGVhcXVsbVB5MlRqaWc1VDV6b0xLTDNhR0FFN042aGg4aFdEdzlnYmp5RWJabkZBSnVqMnNCaGpBNWZ2enA5X3ZTV2o1VXdJUWEwTFZfdG1ualRyQ01UczQ0NzIwdg?oc=5"
    }
   ],
   "04172213000151": [
@@ -8713,13 +8602,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-05-04",
-    "titulo": "Isa Energia (ISAE4): Lucro cai 14%, para R$ 619,1 milhões, com peso do resultado financeiro",
-    "fonte": "Money Times",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeXVlTUY0UmFPZXdaZXc5bS1JTWJocTZwRE1YVWV2RFJIVk9JWjlfYkp5R3FXYm9JM2VDWkNfMWNWNEs1dFpEcWktUEd3NTdmZk5QeWNoQmY5WkVXMVlOd1B6d1VnSXpydGJLb1JSOEQ2bzQxMkxFaEVteDhGb0dYU0VwNUFsWC1CSEtsRVZLbnJWV254TktBeTFvd2tmdnZ4cWt5amM5TXMwa21Na1lkWEtUT2hvejE3dGJ3?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-11-03",
     "titulo": "ISA Energia inicia operação comercial do Projeto Riacho Grande",
     "fonte": "Valor Econômico",
@@ -9008,13 +8890,6 @@
     "titulo": "Controlada da Axia (AXIA3) levanta R$ 1,9 bilhão",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdzZ5LW1ROU5KQnBHVm9KSkQ1cGFyazVMbDdBblFfMjgzLXg2S3BfS1BITktPbC1acFAydmRjM21IZ2h5NWlyaWxoMFA0ZzZmcjc2Wi14M2d6eE1TbGlJeVdIN0JUVE95ODQ4Z1Bqc1pVZlc1YXpVcEM1MlNxYkV3bUd6Wl93dXhlOUFr0gGQAUFVX3lxTE84UmRfcFBfbGVKZC0yQVZhZ1FNRFYxRlNldk0xbzIyazgzMnA4ckZQQTdKTExabHlXS05zeHpFNlR4N3IyRUlnX25qM2NlZ3l1Z2V2aEdTNE5GZFVlTXlHOXpOTTZLSHB2Ylk2VmFvMlJjN09LZ0tZUWhWOXFlVG4wSDVndklGMkZaVzZvZGN3MQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-06-29",
-    "titulo": "Axia Energia (AXIA3): 6ª Emissão de Debêntures da AXIA Energia Sul",
-    "fonte": "Acionista.com.br",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWVRTZ2Y4cV9nUDlLTWp1N18xeXhpWjVRRzY4Rk11S1RjZE9jZjNGZzRDWXVMVlM0Zl9hUGlIWGRTbVB2NElVVE1BVlBBSDh6Ti1oaVdlM2lrcXF6VXVmYmpGVjVnWFNWVGU3VU83bXBVS2p5RFpNcWRQTG1Sb3hBOWIwZFk1QjJKODRhd2VRdXN3NUk?oc=5"
    },
    {
     "tipo": "noticia",
@@ -9538,10 +9413,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-05-16",
-    "titulo": "Itaúsa (ITSA4) vê queda em Alpargatas e Dexco, mas aumenta lucro com ajuda de Itaú e venda da XP",
+    "data": "2022-12-08",
+    "titulo": "Direcional (DIRR3) e Dexco (DXCO3) anunciam remuneração a acionistas – veja quem tem direito",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBHRG9DSWxpeWdJaEFyMlVrMGluZnJrWDhLTjZBVFhMWFg4YXJIVEdpczdwOTlpczA2X29BRks5aGt5TDJhbGYyM3dWaXhPZVp0bmM4UU5id1Q?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pVjkxM3NtanFaRnVkc24zX2tIYW9kcWlyZFh5UkI2NjZVOUpQM3hZanVUM2tuT1d2TWhsRE1ILTRCZGlWZ0tnRFc0djQwdUFfRVhBMnlwOXk?oc=5"
    },
    {
     "tipo": "noticia",
@@ -9740,6 +9615,140 @@
     "titulo": "Energisa fecha acordo para entrada do Itaú na Denerge com aporte de R$ 1,4 bilhão | Junho 2026",
     "fonte": "XP Investimentos",
     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTFdNUTAtMXYwOUpUX09XUUxNMnhYcUp5c2Npd21KZkVpQWNSM2ZDUkJydHZFZzE2dkJwb3lvdUhMcGFHX2Z0M2tvemRaSXlxeC1rblJGQUZRU3RMSmQwYjJKdFlWVnVuV0NpUEpkMUdSNlNuNW5iN2t2eXl6ekxiZWxIdmlaOHpheUxRM0sxOHhrTDFJ?oc=5"
+   }
+  ],
+  "92715812000131": [
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-12-05",
+    "titulo": "Alteração de Controle Acionário",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1453640&numSequencia=978352&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2025-12-01",
+    "titulo": "Alteração de Controle Acionário da Companhia",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1451141&numSequencia=975853&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-04-26",
+    "titulo": "Reorganização Societária 5 pequenas transmissoras",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1227467&numSequencia=752193&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2024-02-28",
+    "titulo": "Incorporação da CPFL Cone Sul pela CPFL Transmissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1200548&numSequencia=725274&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-10-31",
+    "titulo": "Aquisição de lote no Leilão de Transmissão ANEEL nº 4/2025",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1438066&numSequencia=962778&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-05-22",
+    "titulo": "Oferta Pública de Distribuição da 15ª Emissão de Debêntures - Resultado do Procedimento de Bookbuilding",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381694&numSequencia=906406&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2025-03-05",
+    "titulo": "Oferta pública de distribuição da 14ª emissão de debentures - Conclusão do Procedimento de Bookbuilding",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1342001&numSequencia=866727&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-05-20",
+    "titulo": "Resultado do Procedimento de Bookbuilding - Oferta Pública de Distribuição da 11ª Emissão de Debêntures Simples",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1240243&numSequencia=764969&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-05-15",
+    "titulo": "Atualização do cronograma da oferta pública de distribuição das Debêntures - 11ª emissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1238536&numSequencia=763262&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
+    "data": "2024-04-15",
+    "titulo": "Aviso ao Mercado - oferta pública de debênture -11ª emissão",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1221710&numSequencia=746436&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-05-22",
+    "titulo": "PRIMEIRO ADITAMENTO AO INSTRUMENTO PARTICULAR DE ESCRITURA DA 15ª (DÉCIMA QUINTA) EMISSÃO DE DEBÊNTURES",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1381814&numSequencia=906526&numVersao=1"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-05-21",
+    "titulo": "2025.05.21 - 1º Aditamento à Escritura de Emissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67042",
+    "serie": "EEELA5"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-04-30",
+    "titulo": "2025.04.30 - Escritura de Emissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=67041",
+    "serie": "EEELA5"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-03-05",
+    "titulo": "2025.03.05 - 1º Aditamento à Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65577",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-02-12",
+    "titulo": "2025.02.12 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65284",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2025-02-12",
+    "titulo": "2025.02.12 - Escritura de Emissão CPFL Transmissão - vf Registrada RTD Campinas.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=65285",
+    "serie": "EEELA4"
+   },
+   {
+    "tipo": "escritura",
+    "data": "2024-09-03",
+    "titulo": "2024.09.03 - Escritura de Emissão - vf Registrada JUCISRS.pdf",
+    "fonte": "Pentágono",
+    "url": "https://www.pentagonotrustee.com.br/Site/DownloadBinario?id=58706",
+    "serie": "EEELA3"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-09-05",
+    "titulo": "BB-BI analisa a CPFL Energia sob a ótica do crédito privado",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa2VaVUVyM3RTWmEzQUMydWVXNE1meUZsSmluZUN1Znp0NVcwdnVEWHo2TUJuNllhUkdxT3ZjeXRJeHduVk9QMWczQTV5anI4c2hGajQ3TmtoNExLdFBsWUVzdS1jalVPY1Zfb2RESVR1YjBVb29wWkw3UWFFdkFKcTAyMmtJWDE1QTh0Y0lIXzJsLU0?oc=5"
    }
   ],
   "02474103000119": [
@@ -11466,13 +11475,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2022-05-15",
-    "titulo": "Equatorial aprova captação de R$ 1,65 bi",
-    "fonte": "CanalEnergia",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWxabkpqZEFoS1dmYWhuZ0hLRWdlMkpFYjNOVDlZcXFZaUluOXVqejJhMTdpX3I3MmhjZ1lZSzhhTkhDcDdqa2ZWR3V6Vml2TWtCSU1tMWJ3ZWJObEdLNUNoWVJreU02M1Y5NDRpSHNnQU1ucFVGTWNPWFB1TGwtQnNLS2VfcGx5Qy1QNUxESHpqdw?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2019-11-06",
     "titulo": "Itaú assina acordo para ter fatia em ativos de distribuição da Equatorial Energia",
     "fonte": "Forbes Brasil",
@@ -11661,6 +11663,13 @@
     "titulo": "Oferta de Aquisição Facultativa de debêntures da 13ª Emissão de Debêntures da Companhia",
     "fonte": "CVM",
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1400891&numSequencia=925603&numVersao=1"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-11-10",
+    "titulo": "EcoRodovias (ECOR3): Divulgou Resultados do 3T26",
+    "fonte": "Acionista.com.br",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5UTzJqZUF6am04QlBLT2ZzRlFsdjNRRlZCNlAwbnNySG9adDRLWXdWZ3h1OWxORk9VdUtBU0FMTWRScnI4dkJzMEp5bnBIVWlHSHFuVnU2N29OWlZ1R09ldFdLM3BrUHNfUkkxWnNfTkozVzNmeUNaZUsyOA?oc=5"
    }
   ],
   "28152650000171": [
@@ -11814,6 +11823,13 @@
     "titulo": "Governo e BNDES anunciam financiamento de até 40 anos para ferrovias e estimam R$ 600 bilhões em investimentos",
     "fonte": "Money Times",
     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPX0Y2b3piNzRGTHhITW1vWnBsc2NBVG03czJ2X0JPX3ZOdTd4MWdqbVlTTVdqYVVULXRsc3F5WG1MUkF6Z1h5UF9SczRtTnNOR1o0QUtCUG5fekdMWV9HcVAwMU1Xb0tMR0I5VWN6WnZleXQ3RWF2NFhKRlpYcUM0Umc0U1l3WTR0MGlnSmd5YXBGMGJhZ1EtalVncTlfY0NlMk1aUFhOM01XclZkaEdyUnlCWTBldlZsWUQ5eldmNUhQUjJQdG43WVlQM1RXSXhWTDU1dkhwanhwaGc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-11-03",
+    "titulo": "O plano de R$ 530 bilhões do governo para fazer oito ferroviais saírem do papel",
+    "fonte": "NeoFeed",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVkJ5TmNpSWVlX1czSWU3Nk94LTM4Z2hSN0JMbmZEcGc3SzlEZFhYMjFBWF91eW1lTjVxcEo0MHVvVEk0WV9wLTl1OEg5aVZPTEFBd09qcVZTUGpjVU9EMXBJcU9nTzhRWTVWRGdQWmp3SzlvdHJDMnVDX08wbWtnZGJyVG82MGVmY1JmanIwbTE2S05HSkZwWU1NNmZYbDl2VlVRbVNJMGVvRThuS1ZuNA?oc=5"
    },
    {
     "tipo": "noticia",
@@ -13011,13 +13027,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-10",
-    "titulo": "Lucro da Hidrovias do Brasil (HBSA3) caiu 31,7% no terceiro trimestre de 2026, para R$ 79,4 milhões",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1tZkVjYUpBN1Z4MEJaVHNSTVN2WmNBYXkzMDFCV01tNF8wWUlidl9rblV0YVVOZ3Q5TVEwaVRTUUtfQTFCM2d3UExjc3NZSGFLcVdVVklfbTg?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-09-30",
     "titulo": "Hidrovias: Atualização de crédito - Setembro/2026",
     "fonte": "InvesTalk",
@@ -13308,6 +13317,13 @@
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcm1wY1JhbzQ0ZUhiMG1MallEaEFYSDBVdDJaT2JzY3VHNERuSkZWOTNIaFlPWjcydDFyRVVVYThPQkVrNnlTWVBlRHFkdGxQMVJxdE5McERLLVQycVFfS3ZLbFc2QXdUdjZIN3RJbGs1WjEtX3ZnTlc3WS1IVHV1X2NPd0Y2Q0UwMUhlWE9xOTN4OEVkSWlub183RWpza3ZlNm9JZXVOVEZqbXViM05yT1Jza254TTNS?oc=5"
    },
    {
+    "tipo": "noticia",
+    "data": "2019-12-20",
+    "titulo": "Hypera vence disputa contra EMS e compra família Buscopan e Buscofem",
+    "fonte": "ICTQ",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcGZHeVdDdVB2akEtN2VKekh0SW9BYjV2eHRybDFTcHdHWGpOdDZBWTNHV0ZjdW1uZVI0aDB2OFZGdkpaOEZ6alYtemhMNnl1N0xFRTU5RThNeDNhY1FVMUQteFVsZFNfMWE3T1NoQ29yaEdrT0pReTlHQ29CVEdJYmRjRE1wUUVvenIwUU0wWkEyTk9fQjRuS3B0NnFMbTlRWXczSTQ3NGtoby1qMlNXSA?oc=5"
+   },
+   {
     "tipo": "analise",
     "data": "2026-10-14",
     "titulo": "HYPERA S.A. Companhia Aberta AVISO AOS DEBENTURISTAS DA 16ª (DÉCIMA SEXTA) EMISSÃO DE DEBÊNTURES SIMPLES, NÃO CONVERSÍVEIS",
@@ -13362,17 +13378,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-06",
+    "data": "2026-09-17",
     "titulo": "Iguatemi S.A (IGTI11)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9yZFg5X1I1MkRzUHpDRU1LVzRWRTY3ODFqSzIzSllFN3UxRTlTX1FlMmt6dXFkT0tEWmRpY2tHWVd2dXhOX21qWXYyVUxwQQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-11-06",
-    "titulo": "Iguatemi S.A (IGTI4)",
     "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTndsYmVUYm5DazlpX0hFX1E0Q2tmY01iMnE5LWJFUldRNkFLNnZwdVBOaGUzUmlxVGU2S2pTbnE5UEhGbUxaanVlc0huUlBwbDJCRHprSml6aldkN1pKMzBhblBxdGUyZWZ2b1QxSm9ST3EwdE1QUkc4Q2tBQjBqYjVB?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5OUllvY3RKRkFxcV84VWNkMmcyZ0cxLXVwTWFfQ21QZTlma3pTM21UNFNIbHhWVlZveVlONmVqNzJYQ2l1UDZGSkFXWWFpQnBnWFZPNnNIUnpZVjJydklONzI2X2xzeUQzVW9YRw?oc=5"
    },
    {
     "tipo": "noticia",
@@ -13666,13 +13675,6 @@
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB4M0I4WVdhVTBDaV9LWWoxYWJOdk9WckNYVFFlYWpkV2pqM0FHcTRveWpVU3E0NnB5NGNPSV9GdzVGSVBSTXlsdGR6OUIxckFxWDdEUS1Bcjc?oc=5"
    },
    {
-    "tipo": "noticia",
-    "data": "2022-06-30",
-    "titulo": "Iochpe-Maxion (MYPK3) anuncia R$ 35… (30/06/2022, 11:05)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB6VVZOd3h0cHNiNDlmblZDV0dQX0VPa21SRVFNLTZPODhKdzVjRG9sakhFclB5c0VLSUdrbjN3Z3E1bmQwb0gxVHZGaTRCQ2p4dHFaaVFuSnM?oc=5"
-   },
-   {
     "tipo": "analise",
     "data": "2026-04-30",
     "titulo": "Iochpe-Maxion (MYPK3): lucro cai mais de 60% no 1T26, mas resultado vem em linha - Suno",
@@ -13687,15 +13689,7 @@
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSTZYLXB3STl4QXJtazdzZVFOR1ctV3Q3dGFQVzMxaE80ZjJDNTB5U0RzZ3I4QlBqUUExOTREV3l5dkQzemtwV2NpZVlGcVJheVlzMlpQekNOT0QxNzlRWC1MTU9UVDlUT2VZWkEtdDA5Mjh0WWJZWmM5TUE4dHkwS200MEZUM2ZESDQwSzRLdVFqWklNMlc3aF8tZ0N5YTc0WENR?oc=5"
    }
   ],
-  "33337122000127": [
-   {
-    "tipo": "noticia",
-    "data": "2016-06-13",
-    "titulo": "Ipiranga compra concorrente por R$ 2,2 bi e Gerdau pode ser julgada pelo Carf; veja mais 8",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVXFWREJtdjZ2NjhEQXI2dzVjYllNdFBNSTBlSW9CVmh3TzFmX0UtWXpuWi0yczJBWHQ3cGlRWHVJYXhiajhYSUhnMG1WU2lLdGFyQk1qcWs1c01zd0pLbU5LWkFic1E1NWVMVHFsbjdaVzZvU29VRUI1QUNrV1N3dkZhazVKc1lyMXRtdmx0Q2NsdlVUTFdqVzdKUGlHYTlpSUlHTXp4WFBWNlVXTEs5YXpHUWI5eXhSVkhQWVFqYXdBZXpy0gHKAUFVX3lxTE5XVFkzZVJtWDIwYWhmcW5oQlR5ZWkwaDh6Y3FRMXdoZGh4VGtNemZLNTVBZ1dmb0VFWGxDRUJLSEc3SkZDaXlKYkVMUnVZeHFsRjFXR1ZSRHJQb09va1FLcW1WVnduWU1zZnU5azVEMVE4Y2NuVFVKc2lGcElEcjVaS0xnbk10Q0Z4MC1tUmlVajVjTFVhbUFjbmUxTy1jemRGZ0xiUUtBVUVNZEhqQVpvd25MbFpBUkl3bmo3YXg5NWRBWF9NN3RBYXc?oc=5"
-   }
-  ],
+  "33337122000127": [],
   "58070452000120": [
    {
     "tipo": "fato_relevante",
@@ -13988,17 +13982,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-11-10",
-    "titulo": "Itaúsa (ITSA3; ITSA4) registra lucro recorde no 3º trimestre de 2025 e reduz dívida em 26%",
-    "fonte": "Estadão",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORnRSLVFMUHNoRm9VSGYzTnV4bmNUSTR2M1MyekpHcE9kVlNaeVVBcXdGci1mVlNSb2VIYi1fMFpScnVTZ011N1V3SkItaXQweWh3V01DNFhKbWtYN1RyemZaencwWWhXNXk4VElCcGNxaXBHdFk0SzM1M25mTTFFU055MHMwYWtSUkNMVzE2QlFVcnpQQlVXd09WeG5CTXJ0N1hINTdRRUtVNHk4VkdiZjMyY0dCUzDSAbwBQVVfeXFMT1Q5bWVYenNiT2JvR2pCNm5OdkRMalRyaVp1bW44akFDeUdSTkdQOUUzME5mUlJUR3ozSkpLdUZScEQ0QzNpQkxQT3RuQXNaR3JDMmI2VlB3ck85MnB3RXZ5eEYtcjE1VVo5UHBaQWRFWjcwUlNvQUtwWHl5QjZLazcwTE96dkpQV2RvanhiNWtLbnFtNW0xcHZ2MjZITzBSZlpGa0pjMmFOdi1ETl9TZWFwMUk4NFYtb0cyakY?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-08-26",
-    "titulo": "Itaúsa vai emitir R$ 1 bilhão em debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSHctM3dNNFVSNFc3VDFSaVV1cjByWXNnYkRzWjVNd0Z2SXg2TVF6RFNYRE54M3ZlVmJ2bl9Oa3RWMzdFb0kybW1iRWlNUDRXOElqNG9yakpQdGxHNVdMMHBSMzZ0bl9KWlhob2NpUGFnbWxCZTRlSUdabl9QQzQ0VjdlOU82WlZlS2tFY1gtZk93aVVNcC1pbnQySjlabEc5aEHSAbABQVVfeXFMTmlsME5TNVpaalpDRGdWQWdwalNEamtwUkN1M045d0hMSkQ2OFBITXp5VkQxWEp1UHNLZmw1dnU0NjVDTmF3ZlZIbGY4MkxBUGpIT0d0VkVmcC1UVEp4QjdyOHRiX2xobTFKdE1GM0hJNWg3QmZKMXpYU3RubnBRdDVkMm54cm51MlIyOWQ1cGFTR1czeklHemxHaVFQTk9HNUkxUnRCVDJoUXJNYW5TdXY?oc=5"
+    "data": "2026-02-06",
+    "titulo": "Itaúsa (ITSA4): Vale a pena comprar com desconto de 25% e foco em dividendos?",
+    "fonte": "www.ativovirtual.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd0FBVmVDU2hLV25tS1pVYm1uUmZUOERka3hFcm1OWGR4ZDVyTHAyUmdfSEtsTDVCN1FEM0ZUbFd1X1VDTGVPR2JWQnJ0XzhWbVNqMUZLZmZ3bnVUcnM0eTZGbC1xS3p6elMzaVoydV9WQWJqVmRoUkxSWjJIdGdLQlhZdEZVeEMxWk9ObU9kZ3lqX1prc2t1dVZyNkVyeEE1ZXBiZC02OU5XTkxIVHNndmxNTy1CWWROSzVZ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14016,13 +14003,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-06-30",
-    "titulo": "Itaúsa fará resgate antecipado de debêntures no valor de R$ 1,25 bilhão",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMXVTV1JQdXBkejZBZWhZMGJtUUVYa2t2Z2M4SnpGbmRwLUV6TE1KdjdCSjhwOGZXYVVaS2dIU2xIU0xQd0NXdjRxcTBOR04zeVNmd2E1SUQzdG5RbjlmaUs1V0F1Z3JqUDBsRGwyQWtKYnRGUkI2VW1VUmVNZnpVZlQxQVFKTjJtYjdHdmg3MHAxXy1EVE5zdFloamw4YzFSMlBpVzBWMnlVc2tVVXIwNDZLUmFXSE5qQ0g2SkZkYU15cHFraVHSAdQBQVVfeXFMTnYtbmRkQTBDam81TnNyNS1lTFpfZFR5clNvT1lBRTJsMzBqNzBlcVR5Rl9fQ1YtRjlGdDUzdnJXTHF4amY0Zy1qZXNKQ0ZRalgzamsyQTRMRG9yYzExODN3eVlhMTk4NWdvLVVnOERkX2FYdHk0WkpydURkNUJMSU1kNmFvcWdFVE40cGVidE5DNkZNWFVCNGxPM1NCQXhoVVZacFBVMXl3cjJhallmYk5Wb1J0VkloUllzMEp0MHJuNE0wejZwWWluSy03WUhvcUY5amU?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2023-12-01",
     "titulo": "Itaúsa (ITSA4) solta novo comunicado sobre debêntures de R$ 1,25 bilhão",
     "fonte": "Estadão",
@@ -14030,10 +14010,17 @@
    },
    {
     "tipo": "noticia",
+    "data": "2022-09-12",
+    "titulo": "Itaúsa e Votorantim compram ações da CCR da Andrade Gutierrez por R$ 4,1 bilhões - InvestNews",
+    "fonte": "InvestNews",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNR254UG9ncERFZ3JXQWdhckR6MmR0RHRXQ0ZWcFV3NUZTRU51ZUR5NmNFalV6MVl6NVA1VGpOOVRCdm9kekROSm15QmpFUGtfU1hIMmx1Tmd2NGx6aGh6dXFZU0xEOGtGZkRCQ0dpQ2pWejBodzBfVURmZ3RkLTYtb1VuVGpFTlJGcjlxZHNuUWZJVHl0RXFEYjlQTnloaVNmVGtPU2VLUFJMZkVlUVFzZDR0U1gxd9IBuwFBVV95cUxPZTBLamplSGZPV0dZaERLVHN1bGV3YUYtaUtNeDY2VEI0d3JMN0FZT2F5X3hIcC0xT1lwMzJianRxcTFvR2UwM3hJdDhSNFZhaHZycTJGX1NfUVlEXzZPNjVleGV3cVlyU2dNbnEzZlBydUE3Nk1TbzJkUV9Oc2hZRGR6YW91SlpKXy1TRDhkcEdlMFRPUnVUUWRsQTZGUG5rTXlRcXRmT1Mya0diOXZzSzdVNUVwMV8waVl3?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2020-12-23",
     "titulo": "Grupo com Itaúsa e Copagaz paga R$ 4 bi à Petrobras e conclui compra da Liquigás",
-    "fonte": "Época Negócios",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWHBPNFdCNWZKX0Qwb0NNZXZzUktMY2gzMjlVZEJUbU1GLTRSa3ZEUmFrTlhwdE1NVFJQQTkxVjk3cTZRbVlDYmswRnMxZDhHNEl0OTBQOEFtVmdhQjRSQlhZOWJqMHkyUU1ndlA0bjFHZnZrV0U1Tm55dEhpM2NxOElZNlBHWHFPeldIS3NCbVlna05zWGhrdVNlUFFLU1gySDUxVndTNk85YkV0cDh4LWhFM1N5YnlHWWJNRXRDcTc4cHF1RzlKTW8xdllHUENQaUY2adIB2gFBVV95cUxQX0VxcXY3azlfYXRaTm5ZckZPckpXVVluN3pfNEs4QVR3VkZwUTJ1RDZFOWU4eE4xMk1BSGVqckE1RURnYVFvNk95V1lxYmJmOEZlQm5Gbmc2ZjB6b1ZTSF8zSUktbWYwbnc5dDZpRmkyZGJjNmxVMUVIb2xqQ0Nid2pGUndLNF9tTllFN3JIZ3IyR2xDYXZMUm5DRE9JNTI0Z2hDNmM4TThUdXc5WDV4cExMLURkLThRTTItVmZIa05IT2c3ajlhMHh5OENydmF4X0c2SGFVUDJyZw?oc=5"
+    "fonte": "Forbes Brasil",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ0xub280dWlJV0NfRko4M3Y0YUhRUFRVa3YydDlERDdFVHVvQ0JKSHh0czdneFRXY0V3M28wckdQeTFuT3RQQ3ZieWlGZXo4NmticDNTS0MySUZWd0RxNTRxUVB6Q1ZxYnN5aXhfejJsbEFkV3g5SXYtYkpTcEF4OGpaTU9DdzlfcTY1Z0ktdDNSSTNJZGoxa0pDYXdEaFJiU0xrSzNDbEJ1STUzYmg0NTQyNTFZb19sUGpB?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14225,13 +14212,6 @@
     "titulo": "Notícia da Gerdau, Suzano, Eneva, Cemig, JHSF, Grupo SBF, Santander e de outras companhias",
     "fonte": "financenews.com.br",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNY1VBS3Z6OG1aRE9VVXA0N0laVXVMNHhmMjhzY0F4eUV5MkRQNUlHMUN6aG5XSks2Q1B2TEgxSU9XVFNyMEpTd04yd0lHLTl2bDBpeDF3WGdaVVpEajJPR213WXlTODlKaEVKampzVTdsYVBOWlFSSXVPMUhXdmpSbnJwVGpCU2lHZVRGb25VRGhlOHhuajlqY2RIY1JaZVlnRjBFV1dwbVZGNkdsYkVtVFR6eGpCUmp6TDJOUg?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-09-22",
-    "titulo": "JHSF conclui captação de R$ 300 milhões em debêntures e reforça confiança do mercado",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOajRLUWNYSTBPVExRd2ZTTTRtUUZZS2N2WkdSR1JWejVIM09ENkNaVXpmUlZLU3A5eV81VV93d1YwQmhhQU5DWlBtRXNreWxXQTVyWWZwNGdscmQxYXFlbEFjcWp3RE1aLUp2bi1NS285cEZpY0ZnTDZ5SU5pLVpuVWJ2LXZtVWtHSm5HbEVmalhaMDhhSmpOZ3k3N0RxWnZDVkUtMEczY3ZMejB3LU5JcFdJU21hckdfMkww?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14440,24 +14420,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2023-03-03",
-    "titulo": "JSL (JSLG3) compra IC Transportes por R$ 925 milhões",
-    "fonte": "trademap.com.br",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE44Rk9pSThyTk5GcGE4TmtWa21rbktRQnVoUVgyQUpMVy1jbWk0QXZCMUdBVWlPS1RHVVRqWWRFVVhHcXRwNlRJbmtfZDF5Y1NDeURMbUtySlo?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2022-08-03",
     "titulo": "Ação da JSL (JSLG3) sobe após aumento na receita ofuscar queda no lucro do 2º trimestre",
     "fonte": "TradeMap",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lLXZIdnRVNzBmckhXQnZWb1gtQWRudGc1RUMtMUR2M2NBcHdFLVpuY3ZNenNEVXluMVRSbkxucG5qcUQwdjNXS0VNN0tmQXBrWFppcUNnaE0?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-06-08",
-    "titulo": "Da JSL (JSLG3) à Santos Brasil (STBP3): conheça as empresas de logística listadas na Bolsa",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1sRTRDSW4zSENCbnZ6RVM5bDdsRXJobkptSE94b3A0SWkwczV6QUZkYnRhY3dYVVZSbXo5dFNiYWFraS1nUkxuOHNZenlUVjFDdlM0WjJzd1k?oc=5"
    },
    {
     "tipo": "noticia",
@@ -14488,174 +14454,237 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPYW5ZTm9oUmNIRlA4MmtJTUg5WmVyd3l2SnZrRW5uWVVEMGp2VG1iMjJVZ1JibEV0Vkh1MEFmNkdTc2xmMFM1OFpKU3paTVdKRUQ1dWxXY1hKbGJMemRGRUJhQjZLSnh4ZXhST01TVmVJaVdRSmIyR1p4UWFFZmtoQlR5ejlHQlpfTjloTUhNSXA2LTVpX3pZ0gGcAUFVX3lxTFBNcUdLanRuR3FNb3lqN05rcWFJQ2UtRUxJR1VHenptQ195aUNDc1RER1lzaV9RdmJYTkpZWkhEY2FrZXkyUm0wS2o2Tm1hNWh4a0JoeDZ4RFp5TlBrSU9vaHlNQ0VGMTBFMEtIcndmNWZYdVJsZUpfLUxBcEM0Y1RreGhZcTNkWWVBc3pTWkoxRHFrM1VhVWxnV2hPMw?oc=5"
    }
   ],
-  "13270520000166": [
+  "07415333000120": [
    {
     "tipo": "fato_relevante",
+    "data": "2026-10-23",
+    "titulo": "Prévia de resultados",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579640&numSequencia=1104346&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-08-27",
+    "titulo": "Projeção CS Infra",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561839&numSequencia=1086545&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-27",
+    "titulo": "Prévia de resultados 2T26",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1548547&numSequencia=1073253&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-07-23",
+    "titulo": "Alienação da CS Porto Aratu",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1547175&numSequencia=1071881&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-21",
+    "titulo": "Exercício da opção de compra pela BNDESPAR",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525591&numSequencia=1050297&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-05-11",
+    "titulo": "Homologação Aumento de Capital",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1519448&numSequencia=1044154&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-04-20",
+    "titulo": "atingimento do montante mínimo para Aumento de Capital da VAMOS",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1506469&numSequencia=1031175&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-04-13",
+    "titulo": "Verificação das Condições Precedentes do Aumento de Capital",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1504183&numSequencia=1028889&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-04-02",
+    "titulo": "Prorrogação do período de exercício do direito de preferência",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1500802&numSequencia=1025508&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-04-02",
+    "titulo": "Atingimento do montante mínimo para Aumento de Capital Privado da Movida",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1501058&numSequencia=1025764&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-03-09",
+    "titulo": "Programa de recompra",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1487095&numSequencia=1011801&numVersao=1"
+   },
+   {
+    "tipo": "fato_relevante",
+    "data": "2026-03-05",
+    "titulo": "Aumento de capital privado",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1486334&numSequencia=1011040&numVersao=1"
+   },
+   {
+    "tipo": "comunicado",
     "data": "2026-11-05",
-    "titulo": "Homologação PRE",
+    "titulo": "Apresentação de Resultados 3T26",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1585106&numSequencia=1109812&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-05-04",
-    "titulo": "Deferimento do processamento da RE da Companhia e suas controladas",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1515448&numSequencia=1040154&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-04-29",
-    "titulo": "PRE Kora",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1511726&numSequencia=1036432&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-04-14",
-    "titulo": "Conversão de registro",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1361477&numSequencia=886203&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-03-20",
-    "titulo": "Leilão da OPA e conversão de registro da Companhia",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1349552&numSequencia=874278&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-02-18",
-    "titulo": "Publicação do Edital da Oferta",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1336301&numSequencia=861027&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-02-18",
-    "titulo": "Tender Offer Protocol",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1336302&numSequencia=861028&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-02-17",
-    "titulo": "Deferimento registro OPA",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1335869&numSequencia=860595&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-02-17",
-    "titulo": "Deferral of OPA Registration",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1335871&numSequencia=860597&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-01-16",
-    "titulo": "Change of CFO and IRO",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1325692&numSequencia=850418&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-01-15",
-    "titulo": "Renuncia de Diretor",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1325405&numSequencia=850131&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2025-01-06",
-    "titulo": "Debt restructuring",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1322376&numSequencia=847102&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1584326&numSequencia=1109032&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2026-03-31",
-    "titulo": "Atraso na entrega das demonstrações financeiras individuais e consolidadas de 2025",
+    "data": "2026-10-02",
+    "titulo": "Novo TRS",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1499247&numSequencia=1023953&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1574026&numSequencia=1098732&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2026-03-26",
-    "titulo": "Aprovação em AGD da prorrogação do prazo para o pagamento da parcela da Remuneração das Debêntures da Primeira e Segunda Séries da Segunda Emissão pelo prazo de 30 dias corridos",
+    "data": "2026-10-01",
+    "titulo": "Liquidação TRS 2023",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1496126&numSequencia=1020832&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1573512&numSequencia=1098218&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2026-01-07",
-    "titulo": "Renúncia do Sr. Thiago Lima Freitas Nogueira dos cargos de Diretor Financeiro e de Diretor de Relações com Investidores da Companhia e eleição do Sr. Alexandre Augusto Olivieri em substituição",
+    "data": "2026-09-30",
+    "titulo": "Anúncio novo CFO JSL",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1464930&numSequencia=989636&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1573050&numSequencia=1097756&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2025-02-28",
-    "titulo": "Renuncia de Diretor",
+    "data": "2026-09-21",
+    "titulo": "CS Infra declarada vencedora da concessão Lote 6",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1341472&numSequencia=866198&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1570263&numSequencia=1094969&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2024-12-06",
-    "titulo": "COMUNICADO AO MERCADO REFERENTE AO RESULTADO DO PROCEDIMENTO DE BOOKBUILDING NO ÂMBITO DA OFERTA PÚBLICA DE DISTRIBUIÇÃO, DA 2ª (SEGUNDA) EMISSÃO DE DEBÊNTURES",
+    "data": "2026-08-27",
+    "titulo": "Apresentação CS Infra",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1312434&numSequencia=837160&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561841&numSequencia=1086547&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2024-09-02",
-    "titulo": "Renúncia de diretor sem designação específica relacionado à área comercial",
+    "data": "2026-08-18",
+    "titulo": "Transação BRT e Mobi Leste",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1277878&numSequencia=802604&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1559230&numSequencia=1083936&numVersao=1"
    },
    {
     "tipo": "comunicado",
-    "data": "2024-08-13",
-    "titulo": "Apresentação de Resultados 2T24",
+    "data": "2026-08-13",
+    "titulo": "Apresentação de Resultados 2T26",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1270948&numSequencia=795674&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2024-07-19",
-    "titulo": "Renúncia diretor estatutário",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1261243&numSequencia=785969&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1556804&numSequencia=1081510&numVersao=1"
    },
    {
     "tipo": "aviso_debenturistas",
-    "data": "2026-07-17",
-    "titulo": "AGD",
+    "data": "2026-09-14",
+    "titulo": "Pagamento de juros/remuneração",
     "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1546112&numSequencia=1070818&numVersao=1"
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1568151&numSequencia=1092857&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2026-05-19",
+    "titulo": "Pagamento de juros e amortização",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1524149&numSequencia=1048855&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-07-14",
+    "titulo": "Aviso aos Debenturistas da 3ª Emissão de Debêntures Simples",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1400528&numSequencia=925240&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-06-18",
+    "titulo": "Aviso aos Debenturistas da 6ª Emissão de Debêntures Simples",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1391630&numSequencia=916342&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-05-19",
+    "titulo": "Aviso aos Debenturistas da 13ª Emissão de Debêntures Simples",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1380286&numSequencia=904998&numVersao=1"
+   },
+   {
+    "tipo": "aviso_debenturistas",
+    "data": "2025-03-14",
+    "titulo": "3a EMISSÃO DE DEBÊNTURES SIMPLES, NÃO CONVERSÍVEIS EM AÇÕES.",
+    "fonte": "CVM",
+    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1346958&numSequencia=871684&numVersao=1"
    },
    {
     "tipo": "noticia",
-    "data": "2025-08-14",
-    "titulo": "Menos de um ano depois de comprar debêntures da Kora, Lumina considera vender os títulos - InvestNews",
+    "data": "2026-10-01",
+    "titulo": "SIMPAR mantém 58,9% da Movida (MOVI3) após liquidação de swaps",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS2xQaldOVzdQSzNPU29pOFlYZWFHaVhQSS1zYUZxSUxjT1Q1TklMSzI2YTQ1SVVGNjdVdWwxTGtWUlZ3SXR0empvM3U4TUN0NF9SU3hrc2R6X3l5bHVPUW5VWENxR0V6Q3NTQzkwRlZDeTFLSmVEc0dqemRpOENfdkw5em11VEJwSVRFV1puLVpDdTQ0QkFKZE12WFo?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-05-11",
+    "titulo": "Simpar tenta escapar de dívida de bilhões com ajuda do BNDES",
     "fonte": "InvestNews",
-    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1wYXRDZUNHcTgyQnloR3MtVWtnY0YtamRBY1p2aEoyUzZuSmRjdFdFNzBRTG8tSlNKRVF0bS1WemNQajdMWUtYV2t6RWtjNzVKS2RVQThQejc2d3ZEUjVXb1ZpdEfSAWpBVV95cUxPVnI2VnVKMjktdXJ1aXdVUEgwTkh4dEpyNEQzbmlrSS12WVUtUklQTHlqeDZsMnBvS2phMi1fU0JTSU1TTlNQOFJYeko0Z0ZDS1c5YlNVNUF5MWE4SlQ2clNBLW01dmZBQXVB?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBoUktEd3pmanFwc1pkWlhnbWxUWFByY2RCOTFqb2tzTnJNZHo4Ty1tUGtTVW9WOTNrRkZRYVdFN0hqTkhpcUQ5WWlZc2F4cWxHQzB0aFZPQlc1NG5xUmFCX3JMem9BcUpuY1BVT1dwenBEMkVDWnNnRTRvOXNHd9IBgwFBVV95cUxNSEJMRXc0YnNsWGdrVXVrWWg0Qnc4MFFVWUNON2JJeV8wN3ZGTTBTR3NqYzhqS1dWODFJV1pDbFV5VWd6TDRTVXE5ZktJNWwxSmhzX1FPdjVUSVNOMmZEMWR2blZOTzRObHZvdjhUdVMwYU9MRVp6aFB0dDlUU2xjczFrNA?oc=5"
    },
    {
     "tipo": "noticia",
-    "data": "2025-08-14",
-    "titulo": "Lumina considera vender dívida na Kora Saúde, da HIG, dizem Fontes",
-    "fonte": "Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdVNsWnNmanZPM3paQkpNTFRSUTlBMnFETlQ0Rnd1ckZYWVJWa1pmbmlOQm45a3Zhc1NDTTVaamhpb1hMZGlCNXR5YkwxTGZXTEFVa3oyQTdISHlOQVYzbEtSOFhSZlpBLVFVeVVtRmNVUVJiOXdGM01OTVJXcWNCRzBjY0tvNFVUSkY4YjBPakNBbkNpZU5CQlIyZUozQmxFdEdOUG9oQnFCMnJxLVRiTnRxOWVaQQ?oc=5"
+    "data": "2025-12-08",
+    "titulo": "Aegea conclui compra da Ciclus, da Simpar",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOSV94YTd0RXBDQWRvbWk0X1RUdzRwZm4teWx1NnRmeDJjR05DeU9rT05KVGZ3dmloUmJ2eUZFMTRfWXJwWmY5Q29PQ2xNUUtLRzBwQlAxSlJiZC1XbWduMmpiWkRmYW9yV2RfOGYyRDZBUERRQ1RxRVloQjkxM3pNRGlfcVd2OEpvWkk1eno4NXhLVXRnWFpxa0FhYWVPU2fSAa4BQVVfeXFMTl90QWdROXdWR1I0RUk5dWgteFh1cXpudGdtcFRqLWNzUzBtMFRGdlFSMDU0WUJmVFFSbFpxMHNDbzhrR3lObWRPa1ZUZ1ZOTFpJSHhTNWdPanpvNUMxTTl1XzZJR2xva2c5NlN4UnoxU3lqaTFodjhMN1BjN3AzY01IcFd1SzZ5aDMwLVAzZ1hCcTQzWmxCUS1lVm5PNTByYzVsV09SeGN1OUVXanJB?oc=5"
    },
    {
     "tipo": "noticia",
-    "data": "2024-07-03",
-    "titulo": "Kora Saúde: Moody’s Local rebaixa rating corporativo da companhia para ‘A-.br’",
-    "fonte": "ADVFN",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ3dCTkRhcFBLZS1jcFhzbWpCdVc3S1ZQaGR5U0dCZzJMbG9fU3NlRDJpSHFsOXdyVVM0eHBPb3cwUVcxbDlvRmMweGVrdi1DZWhmc0ZnYzdtZFJzNjdUdlRRY0hzdVY4MWVSVUFVcDU5Y2NJSjJpUFg0bUhuVm4yTEdmTGJscnFlejZrV0RyOF81U1hlX1VmSDVyRGpTVEJYV3k4bkZxVUdzMWRJQThj?oc=5"
+    "data": "2025-10-02",
+    "titulo": "Simpar (SIMH3): controladora da Movida aposta em diversificação para driblar juro alto",
+    "fonte": "InvesTalk",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNWdmMGYyOExsSzlzOC1HaFBaSmpPdEVaS0kybll0Zjhvbm1aVHBlNEQwcHJVNUZhLU1PRTF5R0RGTFdxUXlzMTRUblN3YmVuSjQ3Tm1VcUhadlJ5RUVtcEptRG1LSFdxTEYzSTNPNEE3THB1dmJXeXZwX28yWUNsb1pJc0dyQl9hckRYNmJ0Ym50alBjb1ZucGNMcjFOUmw2bnduQXdjSm8tMVR5bDNrV1h1VWFmMU1YT0thS0RNTTNqR1ZIVUpB?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2025-02-19",
+    "titulo": "Juros altos forçam Simpar a frear investimentos e priorizar gestão de dívida para 2025 - InvestNews",
+    "fonte": "InvestNews",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOU2JEbHZlbFBnQlFnZEpNN0ZsUzRFdTVvLUtjOEpsMjVPNnEySk5Sd3RTS1FZMjJpX2ZweEZEaFF3V1RZTHgxQVFhMWxnTHNZZkg5SF8zUHR3U0ktNGFZRGphN19OY3RLLU1xVGNwcGFtbEJoLTlxQjRkZC1jNDYyYjZVLUpZYTFHWGR6cU5XYmphdWFVWHhhSVlR0gGfAUFVX3lxTFBiWDZjNmRtQzc1U055YVluR0NwN091QVFKZjRZeldRRHdrd2VncUNqVUF2RWdGVFlRQnZGSWlNNHFwa1ltZG54UV9RX000SHpDSjluN244QnNKcEVSVU1YdWh2OUlIQnZwUnY3MFRVR1hOU05pMTRBVzhta2tPRlBwdHBxdHBuNXdRS3dKeWtiYzFQQVR2aEVVYnU5OXNEcw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-12-06",
+    "titulo": "Simpar (SIMH3) aprova emissão de debêntures no valor de R$ 850 milhões - Suno",
+    "fonte": "Suno - Investimentos Inteligentes",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XeHpXRjhFNVpwdGFtVWFjal94QzA3WmQxY2QwcUJKSlc3TXQ2TW5ES2JraUJhUDcwU2QxLVI5ZVkxNzFyaUw2UngzYWk0Tkk0MUxzSXBScGtzdExDUFdRRjQ2X1NCNG1aeXN6QXJHYW1yb0XSAXhBVV95cUxQWUJwMzdVbEVuLTJFNVFzTjdnZ2FXcDI3UFBsYWI2X2R0Q0NDU0N5Y0NjMHJCRlk4LUhjZFFMQlpHbWZlZTl0WjNfTVpYSWRON0gzYnVjM2lBY1E4UUJObHA2TXJDbE5yTzczbXN6Q1lJRGY2b0lpR0k?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2022-12-06",
+    "titulo": "Simpar (SIMH3) aprova emissão de debêntures no valor de R$ 850 milhões - Suno",
+    "fonte": "Suno",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XeHpXRjhFNVpwdGFtVWFjal94QzA3WmQxY2QwcUJKSlc3TXQ2TW5ES2JraUJhUDcwU2QxLVI5ZVkxNzFyaUw2UngzYWk0Tkk0MUxzSXBScGtzdExDUFdRRjQ2X1NCNG1aeXN6QXJHYW1yb0XSAXhBVV95cUxQWUJwMzdVbEVuLTJFNVFzTjdnZ2FXcDI3UFBsYWI2X2R0Q0NDU0N5Y0NjMHJCRlk4LUhjZFFMQlpHbWZlZTl0WjNfTVpYSWRON0gzYnVjM2lBY1E4UUJObHA2TXJDbE5yTzczbXN6Q1lJRGY2b0lpR0k?oc=5"
    }
   ],
   "16670085000155": [
@@ -14868,13 +14897,6 @@
     "titulo": "Localiza aprova emissão de R$ 1,25 bilhão em debêntures, e reforça estratégia de liquidez na B3",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSjJYMUFmU1VablpRWWVHUmVlWDJfM0xlQ24zZGFWYnFTTFA2YTNfY3pIdkRWazlmZTY4Z1oybVZaUkJFUm1iWEJsUDBJTDBURzZpa1h5RzVyWXV1LWVPXzdxWG5TTzNpUnVhRC1TdF84dnBGMzA1czVLbzdSclB2MVNMTmY3MlJ3aEhlVGFEdERhQVhOMmxIT1RlWHNTZHBUVTdSN1BwTU52MzkzNGtIZUdYN3ZJQmVNam1KRzJpU3phdEE1dmVZUw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-08-25",
-    "titulo": "Localiza vai emitir até R$ 3,1 bilhões em debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeXJ5cVBTY2hEeUE3WDdyLW10Ukg4aGFsVUh5c3ZvUzRIaDRHNk5VSnFSQUFhUTVkYkx1ZmFfYld4OFBpR1dfZlNUQlp0WGtMZ0JpbndNZzEzMlQyMkhUM3dTNk51cTliUWVzdTdjNUxUQllWU1U2M21nVnlMdG55dnpjdW1GM09UZDU5WlNJZkpxZjNJLW16WlpZZXpQdDNLeWV4d0FiMmrSAbcBQVVfeXFMUEgtMmV4NzR3YXdPVEcybHhBVlhMZ2c1ZTVQeTE2Z3U1Zk9tcXJ3clVrc0lFZ0NUNE1fWmRNMXZFOUtJak5JdE05NlpCTEhWT0NITGtZN2RON1hEUUszVDFqRHROWHd6UFEzdHFDY3F1MDV2OTBNTldXd0FweVE4dkpNYXlPMjBDblBHUFRKamc5YTZUQTctekRZc0pybHVqaXJnM2sza2xQNWUzejI1azI3b1QtUGJV?oc=5"
    },
    {
     "tipo": "noticia",
@@ -15473,13 +15495,6 @@
     "titulo": "Hospital Mater Dei capta R$ 500 mil; paga R$ 800 mi",
     "fonte": "Além do Fato",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdUZ4YThxdVBIbHdhTzZ1VjVfSU80YTVBd2c0bm5Ec0htemExQmQzSTllRHJBanYyN3lodnpQWnNHLW50QnRuaS1YSEFpY1lYMjFqTkpyVXVhM0Z6YnBTejF2TDVfQ1B4YUNEODQ0MThLbWpnYUs2cENrYy1DZHVVQk81RmF3NmFWZHlvVlBXSFYtdw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-02-17",
-    "titulo": "Hospital Mater Dei pede registro de IPO para acelerar crescimento - Suno",
-    "fonte": "Suno - Investimentos Inteligentes",
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1BcV9UaTRiNkQ3NUhUR04zZ0Y2TFNZak1tSnFnZkliUWNhZURRNkpBTURlUzUxTEplRzBzQVFKSnVZQXJyNHNuZjJ0UXdBUVNUeUR0dDFYTHF2aVA4ZUo3QUxORmxXT3BDVGd0MlJjNllzZ3BvX01lWGRR0gF_QVVfeXFMUGhhY3hOam5vbTlpSEJfXzJrcE4tQkhDd0Vha09ZbDhVVkNUek9SUlZJVUxQTUVVSlNRMTloemx1Ry1EMHdvNjl4dlVpQjdDbjh2cVo0UUdIanZ5bVNzTTY1NVF5UlVPU3phM2xCRW9EX0xtc1dYVWxuUzZtUEY2bw?oc=5"
    }
   ],
   "13783221000478": [
@@ -15923,6 +15938,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-11-10",
+    "titulo": "Superintendência-Geral do Cade aprova sem restrições a compra do controle da Mills pela Loxam",
+    "fonte": "atlaspublico.com.br",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbXRFNG51eE5xRmtVd3J2aGgyOWVXd2dSelJsMndtZ19uR2I1dFlqSUlHdHpJck9TbzRFZmNZNmhRNEp0YmZxUFB4SzFrNEZBelRxQ0dfTlNMQUd5bzRxZWxZZUw0cVlZLWdXd0FwZTRxeE1EZFdTUG5Bbi1nQWgyX2gyX1hlR3JucXlkU1lhbVJFS0hyaVJUeW5SRi0zb0x3WjNZOQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-05-25",
     "titulo": "Maior locadora de equipamentos da Europa, Loxam compra controle da Mills por R$ 3,8 bilhões",
     "fonte": "InvestNews",
@@ -16093,6 +16115,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-10-09",
+    "titulo": "Goldman Sachs reduz participação para 3,88% na Movida (MOVI3)",
+    "fonte": "Visno Invest",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVU53VWpjWlNMVFl3TFBXTUFwSWJKWkVOY1VpLUg1N3VfZXRjeXoyeS1NQmwwbUVjb0kycFJvU2JaeUJTQWFXZUpNMURXZXF4dDZYWkdmU294MXRQUGcyeHFQd3pUOUxwaXN2eGNFeUFSNm9hNWdndm5PUXM5MkJCaUk1aWlfR3VlaGN5Qmg1Ml9LZDBtZ0stVGptZw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-10-01",
     "titulo": "SIMPAR mantém 58,9% da Movida (MOVI3) após liquidação de swaps",
     "fonte": "Visno Invest",
@@ -16111,13 +16140,6 @@
     "titulo": "Movida lança R$ 1,275 bi em debêntures para investidores profissionais",
     "fonte": "UOL Economia",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPOXE4MHRNMGJNcXdma0hVaWZLX2FSTDV0TDBXUThieUdjaUlKQWRZWDZicDdkdmNiaVFBOHJIcXp6Y3BYa25rRVRNa3N1NloyOUl2QlBpb2NEQ3poOWNoREk5aksydm1qQThETU1kb2pVSlQyTzNXa3c5QnhPSkxjcV92S3RlWFhCNHZ1UTVFWnFUaUZLajlxSGZfb050VUh2VnRfRnQySkRaWnNOVzh5MnU1MlpvYlhQd1RIN21KMEZIRkYyVnVNTldFck5FVGozN1RVdw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-09-22",
-    "titulo": "Movida (MOVI3) registra rating AA+.br em oferta de R$ 1,3 bi",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdDZRVE5ZbnpnbzEtVnZaMWpxZmtrakxJUEZTWHVic2dkRmZYenR4eG96cWZ1NWhDMmxNQTExSzRQZzdGbFU0cm1oa3RwQzF2VlR2a3duTU1uUjhWem5rSmtmR2NyQzNjbDJPMjk3ZjlNMW9GNTZwdDhxdGhuOVVRQ2tzRnc3WjdKRV9aREpLeFYweDlfWXpGaw?oc=5"
    }
   ],
   "03853896000140": [
@@ -16533,13 +16555,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-10-31",
-    "titulo": "Lucro da Multiplan (MULT3) recua 21% no 3T25. Hora de vender?",
-    "fonte": "Nord Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAtTG5oWWlKZXNKMGRiUTZmMEN5clZFMjF1UDMyZUpMbUZnX2tFb0x2a1hlQkRoVGU4U0VjbU1MclJNMFdHMGZRRU9SemY4eWYzRTFkRFRGd2FpemtWS3h0NkZfZ041cUNkWHROVGNWNlNFa25ZYkZRWnUtdDJrTXPSAYQBQVVfeXFMTU1QWG5tT05CN19fdnBpTHYtVU1hUUxTQzRXdzV6N3pVNmRSWW16MWJNY3lxWjdhT2hiOUx2UkFBNWdRaEMxelFCQzhqSnVJSXBHTWNXa2kxcVk1SmtWbUd2alE5eHJKSUgyZ2VxYmhzODlMZW14UUVYTEo4UEZzT3NIVXBP?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-09-03",
     "titulo": "Multiplan anuncia emissão de CRI de R$ 500 milhões e aposta em novos projetos",
     "fonte": "ADVFN",
@@ -16738,17 +16753,17 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-09-19",
+    "titulo": "Natura (NATU3)",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9UWkZFeDVjMW1sWGhZVnJib3duN2dzby1HdFo0bkhjaU9pdmV0Ukx5aWtnb3BLbGRRRW8yTXoySFlSNFVJcGpNYUl1cnVuTVJib2tLYVNlbzQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2026-09-18",
     "titulo": "Natura capta R$ 700 mi com título que atrela juros a uso de plástico sustentável",
     "fonte": "Capital Reset",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTmVEbFFReC1DVEtzTFlfTnEtMDQtOXRCbkNjbHdLWFBaX3poUHRoSFpNRENvbHpjYUw0UmN6M0lVMzUzTVFHeDFia1kyZHlCMVE3UFRVNDM5X0ZtMm5vVktoQTlVNTZtVHZYQUZzTlQ2ZWNzcTI1OUM0bktiODVzUDltS1k1dEZ4Qm1pbHhfNUd5VGdJSjU0WkRCZDAyVW5rX0l5WmswdXRUbzhzMGRqVlFYMkRpcFVSWnZsclRn?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-08-18",
-    "titulo": "Natura (NATU3)",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0zSFkzQTY1OUw4NFNTS2xPaE5FUDJjZEtVOXhnSTZJREVhd1MwRi11MEpkYnBmYmRRQ0tLYXF0Zll2NmtpVy1rT2N1cnE?oc=5"
    },
    {
     "tipo": "noticia",
@@ -17264,13 +17279,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-10-15",
-    "titulo": "Controlada da Orizon emite R$500 mi em debêntures Por Reuters - Investing.com Brasil",
-    "fonte": "Investing.com Brasil - Finanças, Câmbio e Investimentos",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSVJmOWJUNElyOGlPQmxhOFdEaVNhTDNXMGR4U1NFbDJuNzFWdmF3aHlpa0FQWmlibnRLeUV4bUQxLWFTWEprNkJhZHFSTGExSy1CV3BjRmRSNnBRM29kRDVTNzFJVXFrUTJzT2tTOWd4VEM5ZmdIRkc1QXBfcS1tZC04VHJybGZSdXNaQnRhZGlYbk5EYUJYOFZZTHlXU09EOHNwZU5Zaw?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-08-21",
     "titulo": "Orizon (ORVR3)",
     "fonte": "trademap.com.br",
@@ -17750,7 +17758,7 @@
     "tipo": "noticia",
     "data": "2023-11-03",
     "titulo": "Compass emite primeiras debêntures ESG no valor de R$ 1,7 bilhão",
-    "fonte": "Agência eixos",
+    "fonte": "eixos",
     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1KNExUQnlqMkpvdTlPdGFSNTVmRzN1cXp2WTVKSG94V2xOZHUtcTJIVmJXcy1HVXpudHZTbGlPRHhlR2lfdkY1MVJZaUpQN1g5TmpFaXlxSUYwLVVlaGZabzZlTVN5amRqZEdScjl1S0ZCMkVLMDlSUGp5ZlZvZw?oc=5"
    }
   ],
@@ -18218,13 +18226,6 @@
     "titulo": "🏥 Central Qualicorp | Cotação Em Tempo Real, Dividendos, Notícias E Balanços ( QUAL3",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12VGY4LUZWU0NtOFFjQUJWLXFROGVvRTZaakh0elRteW1PMzEyb1lyQTdUU1pGWjI4dWhfQ1NPUGdnSm5nWjhHSG02SDhnNklGLXVnM05n?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2020-10-22",
-    "titulo": "Qualicorp é suspeita de ter pago propina para obter redução de tributos, diz PF",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQR1g2SXBSbjF1U3RKS3JVTGtUQWtzMkc0YndVeklXT21jWEJhY2xlQ2lLZk01QVNYeTJFUG8zWHo4YWloVG9URWQwX0JrWllveFp4XzZnRTJwN0RvY1o1QURZM1FCTEtTWmFpcHltQWI4VW9iVHYyZzFvelA2c3NaY3hsb0ZuWHlEbUllTGk2dFNvNmpvRUFieHBtOThPY19fZV84NHVaNXNjeEV6OTdMOXM1VE00N3J4QUptWnljRGVvdkYxRE5XYTdPVHRLUnRkN1HSAeABQVVfeXFMT0dFcEVhSDVGYzhiLXg2blE0WDJUSFVheGNoT0IxSGlKdG9jR0dpZTlhVkJ6WTlaZ1FtOXVDTzFRWkl4dlR2bk5BcXlzRGRidVQzS3FNVzAyNk5Qd3JhX1dOQ21XWktNQ2w4NUNsN3NCeFNYR3NVVzRaSUNuQkd6OHFlSzBJN2drX3M2bjBhM3UtQVVLSVpaVThCdlVuVlJGWWs3Y2lCMEptZ081bmpLNTY1VkdLaTNJeGNOajAySEdkYmo1YzBlQ2RrMkpoMWFPSkpiZVFNSkJJcGhZRF9yMG0?oc=5"
    }
   ],
   "28367479000118": [
@@ -18364,6 +18365,13 @@
     "titulo": "Raia Drogasil (RADL3): Digitalização impulsiona receita e lucro sobe 48% no 2º trimestre",
     "fonte": "trademap.com.br",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1VYzFGZHZYMkgzUUNMdHBpS3JqSzBtOVBhSmNEcEpsd0lnYmszbThiU2xzUDhRSTZIREhVOXNsWFoxcUtlU2JwOThKdUFOQTNWYy1iUzBrdjg?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-05-20",
+    "titulo": "BB reduz preço-alvo de Raia Drogasil (RADL3) e Pague Menos (PGMN3) – veja o motivo",
+    "fonte": "trademap.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzTDAwb0QxUmZMVVB0YVgzeTd3cklSclE4MTcwYjZsSUpnZl80U2wyeThsR1N3OUdpeUUtMTd0eG0xZ2NPdjVKZVFhcEtBbzZ0b01YVVc5Vlc?oc=5"
    },
    {
     "tipo": "noticia",
@@ -19858,239 +19866,6 @@
     "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1443652&numSequencia=968364&numVersao=1"
    }
   ],
-  "07415333000120": [
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-10-23",
-    "titulo": "Prévia de resultados",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579640&numSequencia=1104346&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-08-27",
-    "titulo": "Projeção CS Infra",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561839&numSequencia=1086545&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-07-27",
-    "titulo": "Prévia de resultados 2T26",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1548547&numSequencia=1073253&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-07-23",
-    "titulo": "Alienação da CS Porto Aratu",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1547175&numSequencia=1071881&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-05-21",
-    "titulo": "Exercício da opção de compra pela BNDESPAR",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1525591&numSequencia=1050297&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-05-11",
-    "titulo": "Homologação Aumento de Capital",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1519448&numSequencia=1044154&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-04-20",
-    "titulo": "atingimento do montante mínimo para Aumento de Capital da VAMOS",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1506469&numSequencia=1031175&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-04-13",
-    "titulo": "Verificação das Condições Precedentes do Aumento de Capital",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1504183&numSequencia=1028889&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-04-02",
-    "titulo": "Prorrogação do período de exercício do direito de preferência",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1500802&numSequencia=1025508&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-04-02",
-    "titulo": "Atingimento do montante mínimo para Aumento de Capital Privado da Movida",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1501058&numSequencia=1025764&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-03-09",
-    "titulo": "Programa de recompra",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1487095&numSequencia=1011801&numVersao=1"
-   },
-   {
-    "tipo": "fato_relevante",
-    "data": "2026-03-05",
-    "titulo": "Aumento de capital privado",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1486334&numSequencia=1011040&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-11-05",
-    "titulo": "Apresentação de Resultados 3T26",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1584326&numSequencia=1109032&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-10-02",
-    "titulo": "Novo TRS",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1574026&numSequencia=1098732&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-10-01",
-    "titulo": "Liquidação TRS 2023",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1573512&numSequencia=1098218&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-09-30",
-    "titulo": "Anúncio novo CFO JSL",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1573050&numSequencia=1097756&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-09-21",
-    "titulo": "CS Infra declarada vencedora da concessão Lote 6",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1570263&numSequencia=1094969&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-08-27",
-    "titulo": "Apresentação CS Infra",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1561841&numSequencia=1086547&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-08-18",
-    "titulo": "Transação BRT e Mobi Leste",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1559230&numSequencia=1083936&numVersao=1"
-   },
-   {
-    "tipo": "comunicado",
-    "data": "2026-08-13",
-    "titulo": "Apresentação de Resultados 2T26",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1556804&numSequencia=1081510&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2026-09-14",
-    "titulo": "Pagamento de juros/remuneração",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1568151&numSequencia=1092857&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2026-05-19",
-    "titulo": "Pagamento de juros e amortização",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1524149&numSequencia=1048855&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-07-14",
-    "titulo": "Aviso aos Debenturistas da 3ª Emissão de Debêntures Simples",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1400528&numSequencia=925240&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-06-18",
-    "titulo": "Aviso aos Debenturistas da 6ª Emissão de Debêntures Simples",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1391630&numSequencia=916342&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-05-19",
-    "titulo": "Aviso aos Debenturistas da 13ª Emissão de Debêntures Simples",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1380286&numSequencia=904998&numVersao=1"
-   },
-   {
-    "tipo": "aviso_debenturistas",
-    "data": "2025-03-14",
-    "titulo": "3a EMISSÃO DE DEBÊNTURES SIMPLES, NÃO CONVERSÍVEIS EM AÇÕES.",
-    "fonte": "CVM",
-    "url": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1346958&numSequencia=871684&numVersao=1"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-10-01",
-    "titulo": "SIMPAR mantém 58,9% da Movida (MOVI3) após liquidação de swaps",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS2xQaldOVzdQSzNPU29pOFlYZWFHaVhQSS1zYUZxSUxjT1Q1TklMSzI2YTQ1SVVGNjdVdWwxTGtWUlZ3SXR0empvM3U4TUN0NF9SU3hrc2R6X3l5bHVPUW5VWENxR0V6Q3NTQzkwRlZDeTFLSmVEc0dqemRpOENfdkw5em11VEJwSVRFV1puLVpDdTQ0QkFKZE12WFo?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-05-11",
-    "titulo": "Simpar tenta escapar de dívida de bilhões com ajuda do BNDES",
-    "fonte": "InvestNews",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBoUktEd3pmanFwc1pkWlhnbWxUWFByY2RCOTFqb2tzTnJNZHo4Ty1tUGtTVW9WOTNrRkZRYVdFN0hqTkhpcUQ5WWlZc2F4cWxHQzB0aFZPQlc1NG5xUmFCX3JMem9BcUpuY1BVT1dwenBEMkVDWnNnRTRvOXNHd9IBgwFBVV95cUxNSEJMRXc0YnNsWGdrVXVrWWg0Qnc4MFFVWUNON2JJeV8wN3ZGTTBTR3NqYzhqS1dWODFJV1pDbFV5VWd6TDRTVXE5ZktJNWwxSmhzX1FPdjVUSVNOMmZEMWR2blZOTzRObHZvdjhUdVMwYU9MRVp6aFB0dDlUU2xjczFrNA?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-12-08",
-    "titulo": "Aegea conclui compra da Ciclus, da Simpar",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOSV94YTd0RXBDQWRvbWk0X1RUdzRwZm4teWx1NnRmeDJjR05DeU9rT05KVGZ3dmloUmJ2eUZFMTRfWXJwWmY5Q29PQ2xNUUtLRzBwQlAxSlJiZC1XbWduMmpiWkRmYW9yV2RfOGYyRDZBUERRQ1RxRVloQjkxM3pNRGlfcVd2OEpvWkk1eno4NXhLVXRnWFpxa0FhYWVPU2fSAa4BQVVfeXFMTl90QWdROXdWR1I0RUk5dWgteFh1cXpudGdtcFRqLWNzUzBtMFRGdlFSMDU0WUJmVFFSbFpxMHNDbzhrR3lObWRPa1ZUZ1ZOTFpJSHhTNWdPanpvNUMxTTl1XzZJR2xva2c5NlN4UnoxU3lqaTFodjhMN1BjN3AzY01IcFd1SzZ5aDMwLVAzZ1hCcTQzWmxCUS1lVm5PNTByYzVsV09SeGN1OUVXanJB?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-10-02",
-    "titulo": "Simpar (SIMH3): controladora da Movida aposta em diversificação para driblar juro alto",
-    "fonte": "InvesTalk",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNWdmMGYyOExsSzlzOC1HaFBaSmpPdEVaS0kybll0Zjhvbm1aVHBlNEQwcHJVNUZhLU1PRTF5R0RGTFdxUXlzMTRUblN3YmVuSjQ3Tm1VcUhadlJ5RUVtcEptRG1LSFdxTEYzSTNPNEE3THB1dmJXeXZwX28yWUNsb1pJc0dyQl9hckRYNmJ0Ym50alBjb1ZucGNMcjFOUmw2bnduQXdjSm8tMVR5bDNrV1h1VWFmMU1YT0thS0RNTTNqR1ZIVUpB?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-02-19",
-    "titulo": "Juros altos forçam Simpar a frear investimentos e priorizar gestão de dívida para 2025 - InvestNews",
-    "fonte": "InvestNews",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOU2JEbHZlbFBnQlFnZEpNN0ZsUzRFdTVvLUtjOEpsMjVPNnEySk5Sd3RTS1FZMjJpX2ZweEZEaFF3V1RZTHgxQVFhMWxnTHNZZkg5SF8zUHR3U0ktNGFZRGphN19OY3RLLU1xVGNwcGFtbEJoLTlxQjRkZC1jNDYyYjZVLUpZYTFHWGR6cU5XYmphdWFVWHhhSVlR0gGfAUFVX3lxTFBiWDZjNmRtQzc1U055YVluR0NwN091QVFKZjRZeldRRHdrd2VncUNqVUF2RWdGVFlRQnZGSWlNNHFwa1ltZG54UV9RX000SHpDSjluN244QnNKcEVSVU1YdWh2OUlIQnZwUnY3MFRVR1hOU05pMTRBVzhta2tPRlBwdHBxdHBuNXdRS3dKeWtiYzFQQVR2aEVVYnU5OXNEcw?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-12-06",
-    "titulo": "Simpar (SIMH3) aprova emissão de debêntures no valor de R$ 850 milhões - Suno",
-    "fonte": "Suno - Investimentos Inteligentes",
-    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XeHpXRjhFNVpwdGFtVWFjal94QzA3WmQxY2QwcUJKSlc3TXQ2TW5ES2JraUJhUDcwU2QxLVI5ZVkxNzFyaUw2UngzYWk0Tkk0MUxzSXBScGtzdExDUFdRRjQ2X1NCNG1aeXN6QXJHYW1yb0XSAXhBVV95cUxQWUJwMzdVbEVuLTJFNVFzTjdnZ2FXcDI3UFBsYWI2X2R0Q0NDU0N5Y0NjMHJCRlk4LUhjZFFMQlpHbWZlZTl0WjNfTVpYSWRON0gzYnVjM2lBY1E4UUJObHA2TXJDbE5yTzczbXN6Q1lJRGY2b0lpR0k?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2022-12-06",
-    "titulo": "Simpar (SIMH3) aprova emissão de debêntures no valor de R$ 850 milhões - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XeHpXRjhFNVpwdGFtVWFjal94QzA3WmQxY2QwcUJKSlc3TXQ2TW5ES2JraUJhUDcwU2QxLVI5ZVkxNzFyaUw2UngzYWk0Tkk0MUxzSXBScGtzdExDUFdRRjQ2X1NCNG1aeXN6QXJHYW1yb0XSAXhBVV95cUxQWUJwMzdVbEVuLTJFNVFzTjdnZ2FXcDI3UFBsYWI2X2R0Q0NDU0N5Y0NjMHJCRlk4LUhjZFFMQlpHbWZlZTl0WjNfTVpYSWRON0gzYnVjM2lBY1E4UUJObHA2TXJDbE5yTzczbXN6Q1lJRGY2b0lpR0k?oc=5"
-   }
-  ],
   "22902694000195": [],
   "01616929000102": [
    {
@@ -20703,13 +20478,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-09-22",
-    "titulo": "Suzano (SUZB3) fará resgate de debêntures no valor de R$ 750 milhões",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcmZKT1lGNGc2a2N5SW4wZUZvbXZBSXJZX3dlU09fWW1KcXhHLU1pRUVPN25nYTZzSERZckVYaTNybmFVSXAwZHBSLVlob2dqRDlNM3NrbUd0cUs2SURHaEZ0T1RqWUlLR3VfSFlPX3R2TjdwY3pUWEdKWm5KUTE1UDJWTmFiREdJM1FoNWEwcWVsMGZndTIwT3ZzZkxTTGdZRjN4TXo0d9IBrAFBVV95cUxQVGtRMFp1cTVRU0pTdGpOMWNhWndBc2ZsZnpWVFU4dlJWLTNacXRFdFlOUUdHeHY0TnhqZnRkck05MWxuUnVXTVRiLUZsQU5mbFIxeHBIQk5zZlpya1hfLTBSS255V1VxTWxORDlYbFRWczZiQmdQSW5fNmdQNUk5OGJFWXN0NlNQYW5VUm9hUFR3QlBRR2tNNXdsdkNiS3BoWUxFemJuMHFGZ0VT?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2024-01-17",
     "titulo": "Rumo e Suzano entram na carteira de juros para janeiro",
     "fonte": "Safra",
@@ -20748,14 +20516,14 @@
     "data": "2026-09-22",
     "titulo": "Suzano (SUZB3) quer reduzir dívida a US$ 11 bilhões e prevê dividendo mínimo; entenda o plano - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53dlZZOXAzdVlnNW5OTnBwNVI3OVRmM19XcVlNYjVHZkZoM3NpclR3My1VUG1UbVQ4d3hHX09jS3ZNVFZQMFlNWWMxbjk3bE5ZN0ZqeGpTNUF6d3I1VDBHaHNFOGRwb1U4RkRGNVZSYTV6UGFJdDJSczBGNHQ4QdIB5wFBVV95cUxQVWF2ZmNTdFgxc3RjSzloQ1hOaExaMHI1OU5FR2V5a0pzTEJSNEdpQnJqUnE2VVJRNjgwaS1NQmJjeUpFNVltbng0S2ktNnJTNXhQQUlNNzNFaV9SZ2pHWWRTbkNCc1RKNG9aWHp4RGg2VkVQQUFYM1BxTkN1ZEkxSFVBMGkwQS1jdjMxN1RmZ2puVngycTB4MzdEbVJRcF9hSWpBNThyQ3BGejQyS2tBOWhnYnJYNTNUQm5idzh1SjJNajhDYnYyZFhxVlE1YmZvVXdTNEx4Z0xBVzNESTZ5SmYxMThoaE0?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53dlZZOXAzdVlnNW5OTnBwNVI3OVRmM19XcVlNYjVHZkZoM3NpclR3My1VUG1UbVQ4d3hHX09jS3ZNVFZQMFlNWWMxbjk3bE5ZN0ZqeGpTNUF6d3I1VDBHaHNFOGRwb1U4RkRGNVZSYTV6UGFJdDJSczBGNHQ4QdIBgwFBVV95cUxPSk1vdzlPb25LOWFxYndFbEhxbVltNnV0N1RoWVp4WktlbllnWDJyX1ZEM0JuN0ZDcGZHTXM1YUY2eFV2Wm5LRDdsZjZWeUI0TFNOS3NIbHU4SEZrRlo5eUVvLWwtZXFVc2lDVGUxQU56OEMyMXhtTEJQUktydFRWQ0R5aw?oc=5"
    },
    {
     "tipo": "analise",
     "data": "2026-09-08",
     "titulo": "Suzano (SUZB3) vê US$ 175 milhões em ganhos com joint venture e mira dívida menor; entenda - Suno",
     "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWVdpTHpLM0otTms4SzlUUHRHV2Fxck9ORGdFSjlyeXBVbkhGWXN6cUtYVXJ1ektzV29wbl9FaFRpZE55UVpyMGFiMkk1WG9ZblRmQXRvcklvS3NPb0VsS2ZmM1hBSWttU0hobEM5ZkRhTVFXN3B3c2pfZjlDUjlLUEF3WjBVS1nSAfMBQVVfeXFMUHl1eVI3aXVnN0xWRjZMY0pNRFFpc25XeTVSVHFTOTZ0dGVDd2g5ME1wMjRZZk5md25hc2I2N2hKTHFWYzZsSG9ucTBGYVRMUHU2VFNWX3FNS0tyY1dZVnNjTlhoX0dRVERQa2V1Rk1HVE15LXo4ZGQ3THV5NTJrVUM5QjhqUk5vR2YzSTIydElySWlsWmY5NDZ4Wjd3TkFuLUc5cDViN0VvTVRWNXpEOVZIOXdOOTZScHhrRV9rT1lMVGlmMDFwcHN3ZWtqUF9RY1NaNFZDVDRLMWxUMnJlSnczbXhFSGtWdXdlbVhQSXl0RnJN?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWVdpTHpLM0otTms4SzlUUHRHV2Fxck9ORGdFSjlyeXBVbkhGWXN6cUtYVXJ1ektzV29wbl9FaFRpZE55UVpyMGFiMkk1WG9ZblRmQXRvcklvS3NPb0VsS2ZmM1hBSWttU0hobEM5ZkRhTVFXN3B3c2pfZjlDUjlLUEF3WjBVS1nSAYwBQVVfeXFMT2liNzFnV1VseXNyNjF3ZWV4eE54YjZWdmF3Ynl2T0tCTWNBRUhfVTJXUE1tV3Y1TnRfcUR1RVozUzVnLUdoYkRZMW81b2ZzdW8zbEFEaXFKclRpQ2V0bkEzelN1R1ZSMU9OVGVQdFdTNVRBclZwaERoak1JZHhSUUptMXllRVNrSzV6eDA?oc=5"
    },
    {
     "tipo": "analise",
@@ -21426,13 +21194,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-06",
-    "titulo": "Localiza aprova emissão de R$ 1,25 bi em debêntures",
-    "fonte": "CNN Brasil",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ1M5bjJyVkZqVlh5c1NZTlY2ZkJFYUFvNU5PbGNPNG1FZFZhbEJqdTYxbVFMZlFTcFhSNmdSWE5UY21CajdHSkg3MEc0VGE5Q21MTEllVXRmSDBTd2ZNU3pGNC1lSENkelN2M1VYVGcyNUN0d0FaY01aeXJaWHZLY0RrLUh3S2kyM2hJNVFXY00yZ2hwYllGQmxlQXFpN01UZjZ6Vg?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-10-19",
     "titulo": "Localiza (RENT3) aprova 49ª emissão de debêntures de R$ 1 bilhão - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
@@ -21469,6 +21230,13 @@
    {
     "tipo": "noticia",
     "data": "2026-06-24",
+    "titulo": "Localiza aprova emissão de R$ 10 bilhões em debêntures e distribui R$ 591 milhões em JCP",
+    "fonte": "Diário do Comércio",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ZczVxUmhPN3doc1RlMV9RdXZTSTZ3SVkxNWk4bW5ycFFDQWs2T1VuT3QzTlZNYkhmcGVGSS1kcFNDZDVkNGRvTTJlYVVCMjNNbjVRaTFqSHhjbVlOaFRoVkd3cFNuTEt3cXY4eEswdS1ISnc?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2026-06-24",
     "titulo": "Localiza (RENT3) aprova emissão de R$ 8 bi em debêntures",
     "fonte": "Visno Invest",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPS012bWdhLWI2ZXZZbHI4NWo3VENqRDJCallXWFhOZkFqbnE3N3dXX2hncFJwY1kwcjdRY2VfeDJQUFZLMC1DYk5KR0VpRDRkZllJNjJGNzhJNTJjRm9VVDhCanFnd3pzTFRwUnhBSGw4cnN0NG9oZ05QWDJDWnJSTVZicUs4QmY5YkItT25PYTYxajZwamc?oc=5"
@@ -21482,10 +21250,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-08-25",
-    "titulo": "Localiza vai emitir até R$ 3,1 bilhões em debêntures",
-    "fonte": "Valor Econômico",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeXJ5cVBTY2hEeUE3WDdyLW10Ukg4aGFsVUh5c3ZvUzRIaDRHNk5VSnFSQUFhUTVkYkx1ZmFfYld4OFBpR1dfZlNUQlp0WGtMZ0JpbndNZzEzMlQyMkhUM3dTNk51cTliUWVzdTdjNUxUQllWU1U2M21nVnlMdG55dnpjdW1GM09UZDU5WlNJZkpxZjNJLW16WlpZZXpQdDNLeWV4d0FiMmrSAbcBQVVfeXFMUEgtMmV4NzR3YXdPVEcybHhBVlhMZ2c1ZTVQeTE2Z3U1Zk9tcXJ3clVrc0lFZ0NUNE1fWmRNMXZFOUtJak5JdE05NlpCTEhWT0NITGtZN2RON1hEUUszVDFqRHROWHd6UFEzdHFDY3F1MDV2OTBNTldXd0FweVE4dkpNYXlPMjBDblBHUFRKamc5YTZUQTctekRZc0pybHVqaXJnM2sza2xQNWUzejI1azI3b1QtUGJV?oc=5"
+    "data": "2026-05-11",
+    "titulo": "Localiza aprova emissão de R$ 1,25 bi em debêntures",
+    "fonte": "CNN Brasil",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ1M5bjJyVkZqVlh5c1NZTlY2ZkJFYUFvNU5PbGNPNG1FZFZhbEJqdTYxbVFMZlFTcFhSNmdSWE5UY21CajdHSkg3MEc0VGE5Q21MTEllVXRmSDBTd2ZNU3pGNC1lSENkelN2M1VYVGcyNUN0d0FaY01aeXJaWHZLY0RrLUh3S2kyM2hJNVFXY00yZ2hwYllGQmxlQXFpN01UZjZ6Vg?oc=5"
    },
    {
     "tipo": "noticia",
@@ -21922,13 +21690,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-02-23",
-    "titulo": "Vale (VALE3); Telefônica Brasil (VIVT3); Azul (AZUL4): veja os destaques das empresas",
-    "fonte": "Valor Investe",
-    "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQR2hucmVBclZCUlFxS2EyU2JTYlV4Z0I1bUxDMFd3YTF3SnhUdGVpWXp1UmpOOHBZS292Z0dDQjRtbFo1OUI0eG9vZ2RsYzlCb1JQcXJVX0hzbjBPN21saUJ4UlJ0bkZtWHJINTU4a1lZVHdQcE5yaXY2dXNvcjF5VWNkRVp4aVY1eDBJUVpfcmI0NmM1NXNsX09QbGlPR2J4VjlSSWJ4V21hcUtlOWlEVmp1YWN6dkN1cXJpSEJfRlc1VENpVWo5OWx4WXJ3cTFCbzhLLWVjRVBZdDVwclRuWXR3aHZ1TjNEVEpESXpGOTFPeFZTZUJlbtIBhwJBVV95cUxPV1hQdUlBMG9HcXdYUVF3cmhmZDNUYXQxWmV4OHc0SkJFa0twcDdEVWZvN0xyMG1ubFVLRXkxak1nUTJYV3Q2dDQySnFrVHdPZFJWek5uUk1tMUFIMlBRd0pUMkRtMEo3c1VhWEZYR0tzUGdveElZenA3X01zSFlueXNVOTZ0WVlZN0VoX2FUQjExcU4zSEtxX2Jxc0lENnF3NWRFWGdzUHIzYnBkMjZTV29Id011ZU9xNW1kaWhoeVlQdm9TMktmUVBTQ3B5UDkwMGppMk1YZ1RfeEFKU2hBQVJETGFfSHRQeG5ZdWxXY0RZSUNkd1BpOEVmSjQ1Nm9RSXFIelRfZw?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2023-12-19",
     "titulo": "Casas Bahia (BHIA3), Telefônica (VIVT3) e Cosan (CSNA3) movimentam mercado nesta terça-feira; veja mais destaques - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
@@ -22155,17 +21916,24 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-01-07",
+    "titulo": "Totvs busca R$ 3 bilhões com debêntures",
+    "fonte": "Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV25TV3NrYmNYazFLTlR3SFFzQlR2NDNlMW1DMGpWNllYWU5EdXpOM3dGMnV2LTlJbzlsWHBmSHNPYVF6amNZT0FNYzhpTmNnNTU5YmNCMWRUZlFwQzhkWFpnV2xoUkp3OGU3QW5rdlJBMjVvRlhaV3BWblJ1X2taLWlkTUFLN0l6eWRGVFpubU14NGRFS1ZJY0RB0gGoAUFVX3lxTE1xSnB2bjg1N0V0dUIxaDFtS1pEZm9WVno2cldORHp6QjAwdnNWakF0R2RMdVYxLUo3UVBkN2FJNXJ1T053V0JGOXF1VkNqVy1KbWJadlVNWGJYMmYxcEw1T3RpeG1aOFNUcUxJYXR6ZG5HSnRwdXZjbXc4V2tHQlJqdE9qUzQ2bW9wQWZPdzlwXzctU0wybklxSnY2VGxjenNsWHYzUm5zQw?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2023-11-11",
+    "titulo": "Totvs busca até R$ 2,5 bilhões em follow on para fazer mais aquisições",
+    "fonte": "NeoFeed",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMFNPXzA3LUpXbHl4VHNGM1lFVC1HRXhVU2lKNnBoRmFQYk5BZkVBUEthb19ibGJZMGJSYlVqb0dwdmxqUVVPNmNjTjVzbDRvZDZtNWxORVNCdWNNSl9FanBiWlEzTWRlN0pXQ0ZBZ1J1MktJZDloYVlUSXc4TzBTVW5ZTmgyb1JMMFNsak9yVGpreThOa3dMTUQwbW8xc0lkNGV1aDZB?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2022-09-13",
     "titulo": "Totvs aprova 4ª emissão de debêntures no valor de R$ 1,5 bilhão",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVUFNNUxMQTlhazBPZGxyLWpWckRIYzZQNzVKMHpFYjBabEJXdW5ENmF2TEk4anh6WGZ6VUlzVWpmNnlHZHJ2Qy1VTjNHMDhyc0EwU3RXeGNmSlV2amVvcmM2WktkaUpuM21uV19UMjBWc2Z3dFFUSjRyTmVLelRwRXFaZ2N4TnNKTDBYYzZqa2M0NHc0cWNzYThKdEJSYlU?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2021-09-13",
-    "titulo": "Totvs busca até R$ 2,5 bilhões em follow on para fazer mais aquisições",
-    "fonte": "NeoFeed",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMFNPXzA3LUpXbHl4VHNGM1lFVC1HRXhVU2lKNnBoRmFQYk5BZkVBUEthb19ibGJZMGJSYlVqb0dwdmxqUVVPNmNjTjVzbDRvZDZtNWxORVNCdWNNSl9FanBiWlEzTWRlN0pXQ0ZBZ1J1MktJZDloYVlUSXc4TzBTVW5ZTmgyb1JMMFNsak9yVGpreThOa3dMTUQwbW8xc0lkNGV1aDZB?oc=5"
    },
    {
     "tipo": "noticia",
@@ -22397,6 +22165,13 @@
     "titulo": "Tupy (TUPY3) planeja expansão e aposta em sustentabilidade para 2025. Veja se é hora de comprar",
     "fonte": "Nord Investimentos",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JRk5xbzNxVUxLV05rRHUtRVBrUnUzZUNOYkMyTFR2dHFkSVVaTTNMaHZ1M1ozOVhoVV9TZERLNnljdGFhT0JuZWtIWUtWajkwYmFueWMySGF6ZG1lSHJ2OWFhenlya2JNYTJQTHF2TzRnQmZMNDVTVdIBfkFVX3lxTE5wa09UVVVEb0VHOHUxZ1hlajhDYzc3eldxS2Y2S3dwRDQ5aTVpajllQXBsbW04Slg1UHctS2otR2NHYmdjSWZKekFPWE9DRVhKTHBPMHNLMU9UQWFjY0xOVjRqWVc3Zlp1VXBVVnJrVk8zeWVncDA5UlVucWFZdw?oc=5"
+   },
+   {
+    "tipo": "analise",
+    "data": "2026-10-30",
+    "titulo": "Fitch Afirma Ratings 'BB-'/'AA(bra)' da Tupy; Perspectiva Estável",
+    "fonte": "BTG Pactual",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWTJ4RmxUVmlsMXlCSmJVa1dNN3YxSzJ6Y1B6VlA2RXVvRHc3TDl5djBVU0E1bWpjRlZjN09Tb2JVQXFONlUzU1pZT2tDeXdrcW9CY2xzY1N6UGtiamIycENYaVRsQlFaLTJmWXJpZDdFbGI1NjVrcHFnWjVLanZCRXBqNE8?oc=5"
    }
   ],
   "33958695000178": [
@@ -23301,24 +23076,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2023-11-15",
-    "titulo": "Votorantim (VOTS11) aprova emissão de debêntures milionária; veja valores",
-    "fonte": "Estadão",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPa2Z1SXcwUGV3cXNfenp6aWdyOHFYZExDdnd5YWFKZW5OQlVCcTZxeDBZUmprd3JFTVYzZVRsZW1IczN3MklFU0oyNDNvWlRwNURfamVOSVp2dG1JZ1BROGNHLXZXYXc1T0lyT1VTU09VSWliaTNjV01Zd2pWbVZVQlExWDhpelJpVHdB0gGQAUFVX3lxTE5jcnhTMHpoZll4eUFYT1VId2xYVmMwaEJWd04tT3N0SVl5TUFsUEduMEtGT0x4Vkp0QmFCMTRNYzk2V2VpVFBZZ2Nka3VCMHAxUzdoZkZrSjlUbE5OS2RPV1FTbnRSUWFGSllTd3lQUkxuY3dVMkl0UkVTV3NETTJwWEVHTHktTlg3elNmaHlpZQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2023-10-10",
     "titulo": "InterCement encaminha venda de plantas de concreto para Supermix, investida da Votorantim",
     "fonte": "InfoMoney",
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeE1VQmFEbEg2RENMcVd4ckJIdlVZSkM0d2NYY3c4Q2JldDRJQWVxd2E0dEJXRmRhamtZM0FSLTgxSFVIb1Qyc3h0aHRuRnV4U1dTTzUyZGdpZGtkbFQxUUhCVU5sZGlDZkRIQnc4OWFQUlFqeVJmbndpeUthcjdhdEJwMXNZMlF6QXl2YWstbzFhZEVxWGtIYU16NDNUTFlXVTdEdGI5RGFvUFZBckFVQUxGN2hLLUgy0gG-AUFVX3lxTE1JZEJpTFNsR2xMOFpfbkpHaThIMDZfaWpXYktMakpma0Z6aGxWYmVKX01uckxlc2hEa3lFckRUdzJzV0FQS2EzQnhqR3QyNEhSaW1qampvMXdNdUQwSkVndGhMUmxtOEk2Z19fLS1pbTExcEZQcUJEeWwwTHlGY3FKSDlTTEFlRXNHRFJuMFIxb2E1VTFqay1MXzZodWQxOUR5ZTJ5S25YTnBBZ2dBcEhZUGNXcTZBWWpYU0xueXc?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2023-03-15",
-    "titulo": "Votorantim Cimentos reporta lucro líquido 30% menor ao marcar R$ 1,1 bi em 2022",
-    "fonte": "capitalist.com.br",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNN04xMVRqMW1FMHB5eEdIYS1rcEtDeU8yMzVJWGo4dWxydzRzblhJVV8wYUNFWXZMY3ZzcGFXa3d1YVg5RFFncEJJbVQ2d2ZEZjJQeDAtU1VvSjlJb0ZSMWRGa2VRcXVGR0ZjdWsyLVRaM3ZuQWZ6a3RwdmpFbVNPenhTLTBubmtlWnlYc2lCX05SeXp5SE1yUEVnUW9TSFkyajlEbVlB?oc=5"
    },
    {
     "tipo": "noticia",
@@ -24037,13 +23798,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2023-08-05",
-    "titulo": "VLID3: cotação hoje, dividendos e indicadores da Valid",
-    "fonte": "Visno Invest",
-    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5hNVBuWnpmY2xjYlJ3ODB4WEZ1S2JRZGpFYTZNZk9WXzd1YkJRMEtrbVBFLXBoNlplTFU4VklyQ0k0MExYZXgzUDhKa3pOZXRq?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2021-12-30",
     "titulo": "SulAmérica (SULA11) anuncia compra; CSN (CSNA3), Valid (VLID3) e EDP (ENBR3) informam sobre proventos e mais notícias",
     "fonte": "InfoMoney",
@@ -24677,13 +24431,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-11-09",
-    "titulo": "CSN (CSNA3) vende cimenteira por R$ 12,7 bi, Raízen (RAIZ55) abre subscrição e Klabin (KLBN11) capta R$ 1,2 bi",
-    "fonte": "TradeMap",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JTm94UWVBQjZDbm5EMHNyRWM3UEV0dU9BVDlyMW5UV1B2RXU2RUE2UkJBV0xDaGk4ZzRobmRNdFBVQVVycnFNUnBqUURiZWJ2NVZTUmdBTko?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-04-23",
     "titulo": "Momento B3: Axia, Raízen, Allos, Klabin e os principais destaques desta quinta-feira (23)",
     "fonte": "ADVFN",
@@ -24758,13 +24505,6 @@
     "titulo": "Klabin (KLBN11) entrará em mercado de crédito de carbono - Suno",
     "fonte": "Suno",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83MXpqWlJDQzZQaFE1ZW1ZLXBvZEhZdEhxYVdCdGExX25VNFhVc1g5ZVZyOUlOQmZpNE0xbDh1REwzM3JQYklFbmh2c0FBejZhdDBMakU4UmVCa2tyMS03QTBRTmtUdm00Y01v0gFwQVVfeXFMTlNxS0pkYWtQTUgzWHNkSXBYRnpzTUp4U3VFS0g1aXc0VEZnYTROZVFLWGZxZlBNZUdjempPakUxUTE1OEhQRjdwVEx2N2lfcEExSkpJMk9wb2xmbUs5UUkycjRaMklJQzBYai1QVHJDUw?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2020-01-15",
-    "titulo": "Klabin anuncia que captará US$ 200 mi nos Estados Unidos - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zRU10M1F0MWxNT0stNXllSHdxR2VqaElWV19LLVR2MDNyb0pMSmpQWmFSbWw1T3B2b3hZZTBUd1JiZTJtbjFuTm1YcGVocVlUcmxmTHJMemVVX0JTUmtYU1Q4dFZBUk1mc2p0ZS1HbFXSAXZBVV95cUxQZW1jWFV1emxReGQteEJ6Znl6RVhid0pnUEN4a0RNOEZzZHd5aGZZZWZ0bHZCcnVORnhXeTVqbG5JSzA1R3FpSXZaQ1p2THkxSDNNc0JJUlBKY1U1WHdlYk1BSFdQbklSRGsxNDhmMzZ6Skp1WTRB?oc=5"
    }
   ],
   "49037416000173": [],
@@ -25160,10 +24900,10 @@
    },
    {
     "tipo": "analise",
-    "data": "2026-08-21",
-    "titulo": "Alupar - Radar de Resultados 2T26",
+    "data": "2025-02-27",
+    "titulo": "Alupar (ALUP11): Resultados fracos de geração levaram a um EBITDA abaixo do esperado",
     "fonte": "BTG Pactual",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdGJOTDJhdlYyLXNiVWktU05idENwUDNMUDkxY1ZYMlBwVVdrV3UwMGJXR2g3OTBmNGZJV2hkZmdLYlc4UWRPRXVxeDN1ckxFNmlfdmhxWUpLS0k4aGVyVk0yOF9uVUxOSFJHZ0lWVnFFUF8ybV9nNUNNZE1oNVlhMHI0aVB5NFFiSWhOZFhsNm5qSEFtNjRHMmZzREdGTzBrelVtaENVcWs1QW45ck9ick5tbw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMGVGSkszNmxkaE10dlRQOG53T2hOZEl3V2xZYmJnQUJnWHM3OWFZMk5aSG5VckdMeXgyQ2VhWXpxMDVmazUzWm5EM3BFSVV3UW1wNmxaVWRnNDQ2T29sbUdnNmp0Z1VVdUJVQlJQeTZqaXVBdzBqN0l6TkcxMHdXZGtLbEVEeVB5TFdjY2ptUnV1UXZ5QmdKOFMzUmZQQXB1LW52YQ?oc=5"
    },
    {
     "tipo": "analise",
@@ -25238,7 +24978,6 @@
     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOTkk5SkRRT1hOemZGTjNLd2thcUM1ZWZXdFVoX2pPa2hUVTNvcWVwMmpsQWxCbVBfRGQ4UzZSZnFESF85bHFmZXNuVHNOQTBWZXNZSzlWZ0ZfXzQtUTZNZDFIa1oyOWNwdjFUNmd3dlY3ZGJDVWZpbGhldVU1Z3laZ1JTRVowOWlxRGUyNFZqeGJFMDlFYi05ckFkMjZDOEg5S2YxSTFkSHpNU3Q0TnRiSENBbWpsT3lYeldXZ2lUSkJtUkRxTC1JaFJ2dnVYS2ZwNjNQQTMyUG92RTMwYkRmdGphRkY0VVBFTE1sLVhXWWdnVlFDUkNCb3oxdWs5d9IBgwJBVV95cUxQbl9OMFh4Z3dxZlJZT3d4ZVFxSUwwQ0VmTUdxMTY5SG5lMFJFbjF5X2RCa2JJNXJCSG9uNkxMTHJfTmhJRGZLVWNmWF8xd3VZRGpVSFNWdlc4LWxMLWNqbGNHMEtkUFc2ajM0X2UzOU9oalVtOTVnMm01d0stYXdHOFdLeHpKVXNqbjhjY2xCenhMRzMzeDJLLW03VmhyUGgzNy02OHFXWVk0V0NoY0dOX2szbllUM0ZrLWYzeUpBUmFpd3czZTg3M1ZPMy13LVJiRjhudWpIR2ZCUnhES2hVel84aXI0Tl9JRmJEMHJOZGhPWXphTHNYdUd4UUJZSFE0YWlv?oc=5"
    }
   ],
-  "49272860000173": [],
   "09359927000197": [
    {
     "tipo": "fato_relevante",
@@ -25983,13 +25722,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-04-02",
-    "titulo": "Motiva compra concessionária Autopista Fernão Dias da Arteris por R$ 381,4 milhões",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVWFmX1VCNEFrVFAtYkZaRFVXM095cnJaV09jeDRCTmdiMzZhSm1FN0hvWW9uZEF4b3BVWC1VOFZ3MXo3MjlZX1ZMLXYzbDE4cTFHdFUweXFvcy1GZ2E1SVlnTlhUNGZmZElEb1UzR0FweGplSGdoR3JvSG5lQWxTLTFuM2lacDFjdWhpSjNCUk1pcVUxTFdZTERWLVBGRld5c29hZl9LOWFzYktXSUtOdGd4WU9mMnVJd1pZ0gHAAUFVX3lxTE1BN3pRY0lzQzI1czN3M0FfQ3ZlMlFrOWFzamxBZFpObTRKcXh2cElabS1ieDdvbHE5LVVzZkhjNUZLaVBQN0ZzQk03Ykg3alFzVlA3SV9iblZXX2R5dFU4Q2RDeTE2d0dYa3NYVkUwQmFjc2VxTlg1VnJIRkplX2Y2LTI2NnpPeExFeG1yRHhMNFlfSW5FdU1jMkNJQmVGZGRlNGt1SFlLNFd1TENrYlFWbWlwRkhGUnFYLWQyMlZiZw?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-03-13",
     "titulo": "Motiva: ViaQuatro aprova emissão de debêntures de até R$ 1,829 bilhão para reforçar caixa e gestão financeira",
     "fonte": "ADVFN",
@@ -26348,15 +26080,7 @@
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOemp4TnUzTWRiMTdlRFBqY0IyVkNHb0otYUdSai1Ncmsya2Jhc3pMZ3U3YmVGQ1h5VHFOWjcwUUw1b3A0VVNLUUlUeHY4cUE1d2pHRDQ4bHRBM28wWDd1RFEtQ2s0Yy1jekFocGdPSlJJeURGWkQ1dW5HV3V4bkNGbUdBQQ?oc=5"
    }
   ],
-  "42288184000187": [
-   {
-    "tipo": "noticia",
-    "data": "2023-01-09",
-    "titulo": "CCR: BNDES aprova financiamento de R$ 4,6 bi para a concessionária de trens de SP",
-    "fonte": "InfoMoney",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOWRQLXJPN3d1cU1WYUQ4a09USzZMZWFWZ2hTdjEwY1hPcTRJNklEWXR0M3NnWk56M3ROSTRlRy1Mb2ZocHFtQVMwdEt3N3dXeGw5b2ppZ3BkMUZycXNlRENIRlFSWUYxRjlHa2UyRmFKOWY5T2hjR2YzNnRJR1ZtaDJoSEtjZW5MbUtLRjg3aUgxaVFQaDRvQjBTR3EtUTJtSlBPclp6b0gyQ1pzWVozYWdsTjlKVWVZ0gG-AUFVX3lxTE4xbEQzSTc3d3R3VFFMTTg3RGlucy1mdlU5SkVKYjNVYzNGaXVFcWhDQUdSQzdzZzFlSHZnTWJiUDI5VVFCaXVaMXVUQjIzMmtYdFlnZzlIdGtLRjlCNkFrZHdtNHVsaWZPeUlmTDUxdGhuY0c0QnNxVl91a2lyZnRnVWUyUUtYMG9RNndReVlUb3d2VGFXMHVZSUpCZk1hVFhfSUZXMkl1TW9HS2wxRTVTbk52M2VjeEUzVG5LbUE?oc=5"
-   }
-  ],
+  "42288184000187": [],
   "08902291000115": [
    {
     "tipo": "fato_relevante",
@@ -27231,13 +26955,6 @@
     "titulo": "Desktop tem alta de 8% na receita, mas lucro cai",
     "fonte": "TeleSíntese",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBReWhOV0ZCLXJZazJpNWVqcDFtZlZOZVRxVnJfb0FiZWQwUEJxUWthSDg1TUItRGFNd1NpRnM4QnN4OThwSHlrdk1rVjRPZVRvUXN0YTdray1pV2NxajJXb1FYM2lvakE0RS1OaHNxRjhQcDFROW5uYXlhaFFrVzg?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2025-08-06",
-    "titulo": "Desktop amplia receita e acessos, mas lucro recua no 2º tri",
-    "fonte": "TeleSíntese",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMDJ5WGVKREQxNVRRUUxPbDRRTDZCVWdWbFJseC1FU1owbmgzNF9JbGVETFVvRE02R0JlTXZFT3I0NnFJbUFTYUpQMFFDR1dlNkhIOXczaU9GSExuU0M0VUtiTEJ5S1NlUS1JanpObWREbEJoamNwNWRrMDhTRV93UzAxUHBHbnVpbHF5VEZ3WQ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -29828,13 +29545,6 @@
    },
    {
     "tipo": "noticia",
-    "data": "2025-12-15",
-    "titulo": "Neoenergia capta R$ 1 bi e promete aterrar redes expostas a riscos climáticos",
-    "fonte": "Canal Solar",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WVWpVREZDR1RRUDJBWE5kS2pQLUxwZF80Tmo1N3k1YUFfR0NaTUNrM1BFTHlqSXFzZXduVWVNUlFIdjltZWhxd25mNi1VWV9yd3pNcXhBZlNDdXA5bUxXV0RxSzE1Qm9aTTFjYmJrZTVuS3VF?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2025-12-12",
     "titulo": "Bradesco e Neoenergia realizam primeiras emissões de debêntures verdes no Eco Invest, que somam R$ 1 bi",
     "fonte": "Valor Econômico",
@@ -30005,8 +29715,8 @@
    {
     "tipo": "noticia",
     "data": "2025-06-26",
-    "titulo": "A máquina de mídia da Norte Energia que turbina Belo Monte",
-    "fonte": "Sumaúma",
+    "titulo": "A máquina de mídia da Norte Energia que turbina Belo Monte - SUMAÚMA",
+    "fonte": "SUMAÚMA - Jornalismo do Centro do Mundo",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNN3BQNjhLNWZUdUxvYXViUUwzdDREQi1FZnZIWFRRLWtiYTVERThweWNDNzY1RVJZTGU2SFJpaENtVWJLZkRjOEdDb3djRlprX3hHV3djUWYyTTVZeXJHdDk5bGcwYmVKS29HbWloc3NrWmx1TGRMRXBuREQ5c29fOGRkQnktUQ?oc=5"
    }
   ],
@@ -31256,24 +30966,10 @@
    },
    {
     "tipo": "noticia",
-    "data": "2026-08-10",
-    "titulo": "São Martinho tem queda de 39% no lucro no início da safra 2026/27",
-    "fonte": "CNN Brasil",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSDRJVFlwNVFFQ3N3elplbGlhMjBhTFQ4Wml5M3JlRUlvcFVZMmg4N2FpV3VBYUtpVkdwbXRhSlJVRUFMaTU0cXJsMXV3eC1wT0R6a21jRUw0TjJSaGdvTnNJbTNtSlJGRGlpRnFsYV9aUDBNUVU0Wk9KMW44OEJoUE9obF9IcWViV0k5TVg0eU5YbkMzd05OQUhpUzJuREFS?oc=5"
-   },
-   {
-    "tipo": "noticia",
     "data": "2026-07-22",
     "titulo": "São Martinho e Jalles Machado valem a pena na renda fixa?",
     "fonte": "Seu Dinheiro",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWk5zRVF0Q1MzTEJMQXdPWHZkeDFwR1gzOGk0c00zVGxpZ2JhcHhsVVc0SG9nX1NZaWRsV2NyRlgzZUVPcW1sbTVCRWpGOVp6a1lNOTBzejJ2TVpTbm5EaThTRVRhaTUxU1luUmh3Rk40aW9xalVSX2t4c2dvRC1udmlJdXlOZ2c3d05DM2xGM0lweWI0Wm82RkxCOWJSMTdoUjVEeG12bmZXUQ?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2026-07-06",
-    "titulo": "São Martinho pagará R$ 69,91 milhões em dividendos",
-    "fonte": "CNN Brasil",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZm0wNDhsa1NfcjEzbXJCT29yaVk5THc0MzdYajZwVk02ZnZyT3FKcFBwOTZ1MURtdzF1VFJhbEtuWG1ZbVlyMl9yVjlzbGF2NkFYRzU3VVp2ZGxjOWpXM3RITUFMdUhvNWFRUGJmV0xlbGtIRGJFanhVLTkzTFQ5c0ROOU5XQzY2Sm5r?oc=5"
    },
    {
     "tipo": "noticia",
@@ -31316,6 +31012,20 @@
     "titulo": "São Martinho busca R$ 1,25 bilhão em “CRAbêntures” para operação de cana",
     "fonte": "AgFeed",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQaTVtb0J4V2hBeE8ycEVuczV5NlJOUHVnNTQzdDJLNnBpMlhPeTU2OU5NTWZwT2dSSl9LRC00MHpaTlFiNFc4UGRmMklfWk9VcmpYV1h5ckRfMkhzMjFreUVMcFdLbjVlTEVvZ204Si1aR3ZTWGRETFVSWXZkcGFvcTItMGhmTU94cHFnRU96a05rTWR2MWFOOHlfZ1NSZ1BrR0E?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2024-04-05",
+    "titulo": "São Martinho busca R$ 1,25 bilhão em financiamento por meio de debêntures",
+    "fonte": "agrofy.com.br",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVU9BUTdjRFpQcnE1aWFUWGY5UWpLTEZuNnREMTJEUE5TQVRSZjQzY19XRDc4MnhpcnI3T19QUnRNeTE0UF82YlROREtkWjZfSmw4NkJ6QWJZWTNuaFNpYkRkc2lac1Z5NkJyTkVWR3VVUUtoakJhU3NhcHFqY0pkZm9mUjJ5RDF0NkN5cUFUbkZ0RWMzdzhWem9WeWVoVnpjMTh6TGJ5eVQzQQ?oc=5"
+   },
+   {
+    "tipo": "noticia",
+    "data": "2022-12-22",
+    "titulo": "São Martinho aprova a realização da 5ª emissão de debêntures no valor de R$ 500 milhões",
+    "fonte": "ADVFN",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZUlzSzFVZ3RiNHp5Ujd1dDQ3Zzh5cmR0elNrQ19lU2ZqYjY5R3FMcnNrNDJTaE5kdnN3WWxnaDIxbUY4bkpPd2NkQVdya1hXelFoMnVHWHlZeXFVU3ZGZ2pBNTdxNzFoTFpfTVpYM0xZXzNHT0YwWE9rODlJR3lqb1NUeGhRLXp0UXpVc0Rfd3lRVVNCZmE2MjZ4MkJ3MXIwaXY0czE3bERCTDk4eUJ6bkFyN3ZHVHVyQjR5Ympldi0?oc=5"
    },
    {
     "tipo": "analise",
@@ -31694,6 +31404,13 @@
    },
    {
     "tipo": "noticia",
+    "data": "2026-06-15",
+    "titulo": "Passivo de R$ 4,6 bilhões do Fistel permanece como principal risco para a TIM, diz Fitch",
+    "fonte": "TeleSíntese",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRFN4X3lFbmF6LVU0YlY4bjdHdmkwVm1WcEQzWVdVR1dsbW1VNnY1a1VMdmJQdTl3YmYzcWFfbEhUbFNTdm5yTkxBUkNOdzNqYjRSbmM0TnBSQ3dDT3BBYWJpWERWT0F5bnNYTUI2UWRmV3NxTXM3bUJGOTFoc2tRV0ZTUWZOTWJoLVJYRmlvZEdwMVR6VDY3dTMxYWVaU1ZKN016OHBjTUIwNjVwMUFTSmZVYw?oc=5"
+   },
+   {
+    "tipo": "noticia",
     "data": "2025-12-12",
     "titulo": "TIM aprova emissão de R$ 1,4 bilhão em debêntures de curto prazo",
     "fonte": "TeleSíntese",
@@ -31732,7 +31449,7 @@
     "data": "2026-10-15",
     "titulo": "Vivo e TIM devem apresentar resultados neutros no 3T, diante de um ambiente competitivo ainda desafiador",
     "fonte": "Itaú",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPb0JzSkFsc3g3cFFaSy1VRkJ6bkxBazV0cl9iN3drakZfUXVDSE9LYUdneEJmYVJ6VU9Zazd4VTR6QUtsRFpjWXpTYWlKcWtGMEVsNzhOVG5vS01FQTIyaFhFTFdkaGRwOW1lR1hTek1XanlhR2xPMnk1SmY2LTRFMGVwNXFGeUF1d2c?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQVlc2ZkVsYmpuMEs0bWd4Mk9lTHkxWFZZckZhZGNkYWdWMW1XR01zZGVnMW1DLTJ2ZHM5VVpSYXItRmU1MDRxUmZUOFoyNFgxbXI4VVhBZ0cwT3NPSXFjTEY4T25nZUNxR3BxcEtyaVV6clFvakFneUR2dUpqUXRnTE42NXV3UFpldk5NdTlrRQ?oc=5"
    },
    {
     "tipo": "analise",
@@ -32345,7 +32062,7 @@
     "data": "2026-05-15",
     "titulo": "Vale (VALE3) paga R$ 201 milhões; veja quem recebe nesta sexta - Suno",
     "fonte": "Suno - Investimentos Inteligentes",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMjNRejNXMXJtQUktVkJQdnJnVUdHLVBrMmNpWXF6VEFmQmVNMzkzS2Y2czl3alFTQVFJQll5cXBoX09PTnVYcFJXRVJmZGR6UktDNjh4RkY2Mkt1T1hTQ0ZZZXRPS0JSZHhpeFhsRVZVdmFFMFVfMTRnLXllNHlEQlpHUFcxWVRQUGJNT0hYVdIBlAFBVV95cUxObmFNY1hOS3JRTl82dnRYSTJ3dmdWODJSRFdLRnFfd29haTlmV3piOEN4Um5vX2t0TXBVTU45MjJoWHRzQWZyMHFYNGxjd0theE8zTHFxaUdFS0lIamowYzN5bkJ5cWU3YWhRei1WVXVxS2huZHljVDJ1TnZzWjhrVEVpS0JIVEU5TW0yQklnbG1iLUk5?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMjNRejNXMXJtQUktVkJQdnJnVUdHLVBrMmNpWXF6VEFmQmVNMzkzS2Y2czl3alFTQVFJQll5cXBoX09PTnVYcFJXRVJmZGR6UktDNjh4RkY2Mkt1T1hTQ0ZZZXRPS0JSZHhpeFhsRVZVdmFFMFVfMTRnLXllNHlEQlpHUFcxWVRQUGJNT0hYVdIB0wFBVV95cUxQRGprT1YtcTlDUDVuZ3M5Um82elpFVHB6VVRfYm1qcE5pY1ZoVHRYd0k2TFNoZHluSDlZTGJXWDJTSV9BX1BIYU8wVVpkMU9YWFlZSVpqODFCMzhEM0wtNTV4NElyZ216MXBGZDh4a2txdVhpRnpWaU1SRnMxU2swNnhSTlRncXlMOW8tZjhVWHMtRWc4emVxT3JXLUpfWE4tdTNyVXdvSEp2WF85VnptWHVkTlNZSmlzNVZlV0FSMDJhZWRHQ2drbFNIOHYwb3J3UDVJ?oc=5"
    },
    {
     "tipo": "noticia",
@@ -32360,13 +32077,6 @@
     "titulo": "Vale paga R$ 199,9 milhões em debêntures incentivadas e reforça a solidez financeira",
     "fonte": "ADVFN",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa3BaZDItRTFPbUxmVTk5R0k4Ny1TMVhtWDVQOUNWYkkwbmFfT3FJNnhaSGt5T3dzUngyQWc5cUhYMUEwUkxhczdRUHY0TlNnVHcyU2MtTDZMQVpUNnVzZnA2bWllZHg4d1p5SDNkT0RWcUtWR1ZNZjlHYy1XSFZkOTVENmZwNldMcEI0RDlseU5ZYmNYaGN0TUJqd0M1YWItVjJ1SUd1MlFVelNTRlBSczNTTUVnNEwtMjBz?oc=5"
-   },
-   {
-    "tipo": "analise",
-    "data": "2026-10-20",
-    "titulo": "Vale (VALE3) pede registro na China para captar US$ 1,5 bilhão - Suno",
-    "fonte": "Suno",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5VMGQ0RzliODkxTmdsdE9yTzVKVWxINTB6ek5IajdUWmhIWHF4UDQ3QzJCTWh0WDUxV19ZYTY5MEkxRXU5ZVRmcUxkU0V0WlI2WlN3S1pMbkF6d1l0aGpMY0g3R0FkTHRvVGFjbm9sd3ROVG5xdHVwbGlLVUppeU3SAYQBQVVfeXFMTUE1NzZZTG5WUURwaEt4UGJveTRVdXowUlJ2cjRSUFB4NGh4aGVXMV83N0RJcVlHcHBFWXBRQTNoZE5NVWhuVXc1OWYyR0N5c0RYRkhIYm1mb2pYcE15ZlpENlFZQUUzNkd2U1VDMzlsT0FaRkxVZFU2THoxMGVCUnpqeXpR?oc=5"
    },
    {
     "tipo": "analise",
@@ -32527,13 +32237,6 @@
     "titulo": "VLI Multimodal vai emitir R$ 1 bilhão em debêntures incentivadas",
     "fonte": "Valor Econômico",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVFZPYmJYczRhLU9rXzl1em84UjhnelMtS1NkeHF2U0ZGajdtNEQwY2gwcEkwRGhTcng4NS1MMERJa3d1Ni1PbFV4UTVDTEZXQXNYckNrVWt1OVI2ZnBFSXdjemhCSmlKeDR6VjBTOFNhQWdyTXZVWVhLbDJJS21QR3RxNXMzdndkNFQyWldLQm9KdTY1TkZDMUxhT3R6SlhiR1FyYkNzcHBrNUZvYjZXOXI0Tm94bE8yZE1R0gHKAUFVX3lxTE1oWW9wdHlpd1p6LWlQOUxmSWxBRWNhZm84YkdjV2JPOUJma2p1Z2U1MVpvclltTWNVRzA4U1RHeldlajhsTkYxRVFCWU04SU95ZHdOLXBDYWRweHZ5bU5zNTFyOFVXenlBVnI5R2ZfNG53ZFU2VGNxX2ZjdzdYV0tGUDdGek9xQXk3V05wMXlsSE93a3padjhkV09ETEtmT2ZFZGZ4ZHZMZ1hMM0ZXZzNYVnJEREZiTG9tRzFiNDBITDdnVUswSTVmQnc?oc=5"
-   },
-   {
-    "tipo": "noticia",
-    "data": "2022-02-16",
-    "titulo": "VLI Multimodal capta R$ 1 bi em emissão de debêntures",
-    "fonte": "LexLatin",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWkZQcS1tYkxGdlJuWXFKS1BkUmFqckkwRTVJX0dzbHoyNnJZaGlFTVMxVTVXSTRfMWpDZWZwUG1ObzZleHZFN2Y1MVVBeWVuXzhiTS04RFEwQ0thRDlyZnJGbW1xUzJIdGttOEZHRm5EY0hTSE9VYUhORkdBWWpFQWRCeTNlcDZTWWFzeUZR?oc=5"
    }
   ],
   "28019100000189": [

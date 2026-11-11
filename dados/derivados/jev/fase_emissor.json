@@ -2374,5 +2374,13 @@
  "08336783000190|2|Demarest assessora Banco Votorantim e Sa": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "03237583000167|4|Do botijão à TV: donos da Copa Energia c": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "51218147000193|7|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
