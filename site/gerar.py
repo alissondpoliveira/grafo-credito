@@ -478,7 +478,7 @@ def gerar_home() -> str:
 <article class="cartao">
 <div class="kicker">Qualidade contábil</div>
 <h3><a href="https://beneish.alissonprata.io/">Qualidade dos Lucros</a></h3>
-<p>Dá para confiar no lucro reportado? Nas companhias abertas não financeiras, o M-Score de Beneish (1999) procura nas demonstrações da CVM o padrão associado a lucro manipulado. Nos bancos, sete sinais inspirados no CAMELS olham provisão, ativos problemáticos, resultado não recorrente e capital de todas as instituições do IF.data do Banco Central.</p>
+<p>Dá para confiar no lucro reportado? Nas companhias abertas não financeiras, o M-Score de Beneish (1999) procura nas demonstrações da CVM o padrão associado a lucro manipulado, o accrual ratio mede quanto do lucro passou pelo caixa e o Z-Score de Altman mede o risco de insolvência. Nos bancos, sete sinais inspirados no CAMELS olham provisão, ativos problemáticos, resultado não recorrente e capital de todas as instituições do IF.data do Banco Central.</p>
 <div class="base">{b["svg"] if b else ""}{leg_b}
 {stats_b}
 <p class="meta">DFP e IPE da CVM, IF.data do Banco Central, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira{datas_b}</p>
