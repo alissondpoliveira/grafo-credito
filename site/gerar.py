@@ -3,6 +3,8 @@
 Saída em site/public/: index.html (página pessoal), grafo-credito/index.html
 (mapa de controle e risco, desvio em relação aos pares, simulador, tabela e modelo), artigos/
 (Financial Syntax, a partir de site/artigos/*.json; ver site/importar_linkedin.py), sitemap.xml e robots.txt.
+A versão em inglês sai em site/public/en/, traduzida do HTML em português (ver site/i18n.py); o que faltar na
+memória de tradução fica listado em site/i18n/pendentes.json para site/traduzir.py.
 
 Uso: python site/gerar.py
 """
@@ -15,6 +17,8 @@ import json
 import statistics
 from datetime import date, timedelta
 from pathlib import Path
+
+import i18n
 
 RAIZ = Path(__file__).resolve().parent.parent
 PUBLICO = RAIZ / "site" / "public"
@@ -340,7 +344,17 @@ FAVICON = ("data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' vi
            "%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E")
 
 
-def pagina(titulo: str, descricao: str, corpo: str, head_extra: str = "") -> str:
+def link_idioma() -> str:
+    """Marcador do botão PT | EN; i18n.finalizar() troca pelo link certo de cada idioma."""
+    return i18n.MARCADOR_IDIOMA
+
+
+def pagina(titulo: str, descricao: str, corpo: str, head_extra: str = "", caminho: str | None = None, botao: bool = True) -> str:
+    """caminho: endereço da página sem o /en (ex.: "/artigos"); com ele, entram as versões alternativas por idioma."""
+    alternativas = ""
+    if caminho is not None:
+        alternativas = (f'<link rel="alternate" hreflang="pt-BR" href="{SITE}{caminho}"><link rel="alternate" hreflang="en" href="{SITE}/en{caminho}">'
+                        f'<link rel="alternate" hreflang="x-default" href="{SITE}{caminho}"><meta name="caminho" content="{caminho}">')
     return f"""<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -349,15 +363,20 @@ def pagina(titulo: str, descricao: str, corpo: str, head_extra: str = "") -> str
 <title>{html.escape(titulo)}</title>
 <meta name="description" content="{html.escape(descricao)}">
 <link rel="icon" href="{FAVICON}">
+{alternativas}
 {head_extra}
 {FONTES}
-<style>{CSS}</style>
+<style>{CSS}{i18n.CSS_IDIOMA}</style>
 </head>
 <body>
+{link_idioma() if botao else ""}
 {corpo}
 </body>
 </html>
 """
+
+
+_link_en = i18n.link_en_para(SITE, "https://beneish.alissonprata.io")
 
 
 def I(k: str) -> str:
@@ -435,7 +454,7 @@ def gerar_home() -> str:
     leg_g = '<p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>' if g and g["svg"] else ""
     leg_b = '<p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>' if b and b["svg"] else ""
     recentes = "".join(f'<li><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></li>' for a in _artigos()[:3])
-    recentes = f'<ul class="recentes">{recentes}</ul>' if recentes else ""
+    recentes = f'<ul class="recentes" data-i18n-skip>{recentes}</ul>' if recentes else ""
     corpo = f"""<main class="home">
 <header class="topo-home">
 <div class="kicker">Crédito privado · qualidade contábil · mercado brasileiro</div>
@@ -513,7 +532,7 @@ def gerar_home() -> str:
             f'<meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="https://www.alissonprata.io/">'
             f'<meta name="twitter:card" content="summary">'
             f'<script type="application/ld+json">{json.dumps(pessoa, ensure_ascii=False)}</script><style>{CSS_ARTIGOS}</style>')
-    return pagina("Alisson Prata", desc, corpo, head)
+    return pagina("Alisson Prata", desc, corpo, head, caminho="/")
 
 
 def sem_acento(t: str) -> str:
@@ -722,6 +741,9 @@ def montar_grafo(series: list[dict], universo: dict, desvios: dict, clausulas: d
 
 JS = r"""
 const D = window.DADOS;
+// versão em inglês (site/public/en): datas no formato de lá; TD troca valores dos dados (window.TRD, ver i18n.py)
+const EN = document.documentElement.lang === 'en', TD = v => (window.TRD && window.TRD[v]) || v;
+const MESES_EN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 let DET = null, _det = null;
 const carregarDetalhe = () => _det || (_det = fetch('/grafo-credito/detalhe.json', {cache:'no-cache'}).then(r => r.json()).then(x => (DET = x)));
 const fmt = (v, c=2) => v==null||isNaN(v) ? '–' : Number(v).toLocaleString('pt-BR',{minimumFractionDigits:c,maximumFractionDigits:c}).replace('-', '−');
@@ -1502,7 +1524,7 @@ function mostrarRecentes(){
     const docs = (DET.docs[a.cnpj]||[]).slice(0, 8);
     const hist = a.hist || [];
     const P = DET.ponta[cod] || {};
-    const dt = v => v ? v.slice(8,10)+'/'+v.slice(5,7)+'/'+v.slice(0,4) : '–';
+    const dt = v => !v ? '–' : EN ? MESES_EN[+v.slice(5,7)]+' '+(+v.slice(8,10))+', '+v.slice(0,4) : v.slice(8,10)+'/'+v.slice(5,7)+'/'+v.slice(0,4);
     const txt = v => { if (v==null) return '–'; const k = P.tipo || ''; return k==='IPCA_MAIS' ? 'IPCA + '+fmt(v,2)+'%' : k==='DI_MAIS' ? 'DI + '+fmt(v,2)+'%' : k==='PCT_DI' ? fmt(v,2)+'% do DI' : fmt(v,2)+'%'; };
     const anosAte = v => v ? (new Date(v) - new Date(P.data||Date.now()))/(365.25*864e5) : null;
     const mi = v => v==null ? '–' : v>=1e9 ? 'R$ '+fmt(v/1e9,2)+' bi' : 'R$ '+fmt(v/1e6,1)+' mi';
@@ -1513,7 +1535,7 @@ function mostrarRecentes(){
       + '<div class="linha"><b>'+a.codigo+'</b> '+(P.ind!=null?'a <b>'+txt(P.ind)+'</b> na indicativa ANBIMA de '+dt(P.data):'sem taxa indicativa ANBIMA')
       + (ultNeg ? ', último negócio em '+dt(ultNeg[0])+(ultNeg[5]!=null?' a ~<b>'+txt(ultNeg[5])+'</b>':'') : ', sem negócio registrado no SND')
       + '. Emitida a '+(P.texto_emissao||a.indexador||'–')+', vence em <b>'+dt(P.venc)+'</b>'+(anosAte(P.venc)!=null?' ('+fmt(anosAte(P.venc),1)+' anos)':'')
-      + ', juros '+(P.juros_per ? P.juros_per.replace(/al$/,'ais') : '–')+(P.prox_juros?' (próximo em '+dt(P.prox_juros)+')':'')+', amortização '+amortTxt+'. '
+      + ', juros '+(P.juros_per ? (EN ? TD(P.juros_per) : P.juros_per.replace(/al$/,'ais')) : '–')+(P.prox_juros?' (próximo em '+dt(P.prox_juros)+')':'')+', amortização '+amortTxt+'. '
       + (P.incentivada==='S'?'Incentivada (Lei 12.431, isenta para PF).':'Tributada.')+'</div>'
       + '<div class="kpis">'
       + '<div class="kpi"><div class="r">Indicativa ANBIMA'+infoBtn('taxa')+'</div><div class="v">'+txt(P.ind)+'</div><div class="s">'+(P.int_min!=null?'intervalo '+fmt(P.int_min,2)+' a '+fmt(P.int_max,2):'')+'</div></div>'
@@ -1525,7 +1547,7 @@ function mostrarRecentes(){
       + '</div></div>';
     const carac = !P.venc ? '' : '<h3>Características</h3><div class="carac">'
       + [['Emissão / série', (P.emissao||'–')+'ª / '+(P.serie||'–')], ['Data de emissão', dt(P.dt_emissao)], ['Início da rentabilidade', dt(P.inicio_rent)], ['Vencimento', dt(P.venc)],
-         ['Remuneração de emissão', P.texto_emissao||a.indexador||'–'], ['Pagamento de juros', (P.juros_per||'–')+(P.carencia_juros?', desde '+dt(P.carencia_juros):'')], ['Próximo juros', dt(P.prox_juros)],
+         ['Remuneração de emissão', P.texto_emissao||a.indexador||'–'], ['Pagamento de juros', (TD(P.juros_per)||'–')+(P.carencia_juros?', desde '+dt(P.carencia_juros):'')], ['Próximo juros', dt(P.prox_juros)],
          ['Amortização', amortTxt], ['Volume emitido'+infoBtn('volume'), mi(P.volume_emitido)], ['Saldo em mercado (aprox.)'+infoBtn('saldo'), P.qtd_mercado&&a.pu?mi(P.qtd_mercado*a.pu):'–'],
          ['Valor nominal (emissão / atual)', P.vne?'R$ '+fmt(P.vne,2)+' / R$ '+fmt(P.vna,2):'–'], ['Garantia'+infoBtn('garantia'), a.garantia||'–'], ['Lei 12.431'+infoBtn('lei12431'), P.incentivada==='S'?'sim':'não'],
          ['Resgate antecipado', P.resgate==='S'?'previsto':P.resgate==='N'?'não previsto':'–'], ['Agente fiduciário', tit(P.fiduciario)], ['Coordenador líder', tit(P.coordenador)], ['ISIN', a.isin||'–']]
@@ -1777,9 +1799,9 @@ def gerar_projeto() -> str:
         selo_fonte = f' <span class="selo">{fonte}</span>' if fonte else ""
         trs.append(
             abre
-            + f'<td class="t"><span class="marca" style="background:{cor}"></span>{html.escape(s["codigo"])}{selo_hy}</td>'
-            + f'<td class="t">{html.escape(u["emissor_atual_snd"].title())}</td>'
-            + f'<td class="t extra">{html.escape(u["grupo_risco"])}{selo_fonte}</td>'
+            + f'<td class="t"><span class="marca" style="background:{cor}"></span><span data-i18n-skip>{html.escape(s["codigo"])}</span>{selo_hy}</td>'
+            + f'<td class="t" data-i18n-skip>{html.escape(u["emissor_atual_snd"].title())}</td>'
+            + f'<td class="t extra"><span data-i18n-skip>{html.escape(u["grupo_risco"])}</span>{selo_fonte}</td>'
             + f'<td class="t">{SEGMENTOS_NOMES.get(segm, segm)}</td>'
             + f'<td class="t">{classe}</td>'
             + f'<td class="t extra">{ {"S": "sim", "N": "não"}.get(s["incentivada"], "–") }</td>'
@@ -1837,7 +1859,7 @@ def gerar_projeto() -> str:
 <a class="marca-site" href="#inicio" data-vista="inicio" title="Taxas ANBIMA do último dia útil coletado ({dia_semana}); site atualizado em {gerado_longo} (horário de Brasília). Atualização automática todo dia útil à noite."><b>Grafo de Crédito</b><span>mercado de {dia_semana} · atualizado {gerado_curto} <em id="statusDados" class="status-dados">carregando…</em></span></a>
 <div class="busca-caixa"><input id="busca" type="search" autocomplete="off" placeholder="Buscar código, ISIN, empresa ou grupo" aria-label="Buscar ativo, emissor ou grupo"><kbd class="atalho" aria-hidden="true">/</kbd>
 <ul id="resultados" role="listbox"></ul></div>
-<div class="barra-acoes"><button id="tema" class="icone" aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">◐</button><a class="link-sobre" href="https://mercado.alissonprata.io/">Mercado</a><a class="link-sobre" href="/" style="margin-left:.9rem">Sobre</a></div>
+<div class="barra-acoes"><button id="tema" class="icone" aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">◐</button><a class="link-sobre" href="https://mercado.alissonprata.io/">Mercado</a><a class="link-sobre" href="/" style="margin-left:.9rem">Sobre</a>{link_idioma()}</div>
 </div>
 <nav class="abas" aria-label="Seções">
 <a href="#inicio" data-vista="inicio">Visão geral</a><a href="#mapa" data-vista="mapa">Mapa</a><a href="#valor" data-vista="valor">Valor relativo</a><a href="#ativos" data-vista="ativos">Ativos</a><a href="#simulador" data-vista="simulador">Simulador</a><a href="#cri" data-vista="cri">CRI e CRA</a><a href="#metodo" data-vista="metodo">Método</a>
@@ -2027,9 +2049,10 @@ def gerar_projeto() -> str:
 <div id="tip" class="tip"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>function iniciar(){{""" + JS + """}
-fetch('/grafo-credito/dados.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { window.DADOS = d; iniciar(); document.getElementById('statusDados').hidden = true; })
+fetch('/grafo-credito/dados.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { if (window.TRD) for (const k in d.segmentos) d.segmentos[k] = window.TRD[d.segmentos[k]] || d.segmentos[k]; window.DADOS = d; iniciar(); document.getElementById('statusDados').hidden = true; })
   .catch(() => { const st = document.getElementById('statusDados'); st.textContent = 'falha ao carregar os dados; recarregue a página'; st.classList.add('erro'); });</script>"""
-    return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo)
+    return pagina("Grafo de Crédito", "Grafo de Crédito: controle, grupos de risco e desvio de spread das debêntures de transmissão de energia.", corpo,
+                  caminho="/grafo-credito", botao=False)
 
 
 # ---------------------------------------------------------------- artigos (Financial Syntax)
@@ -2056,10 +2079,24 @@ nav{flex-wrap:wrap;gap:6px 16px}nav .nav-dir a{margin:0 1.1rem 0 0;color:var(--i
 """
 
 
+EM_INGLES = False  # main() liga ao montar a versão em inglês: os artigos saem da tradução em site/artigos/en/
+
+
 def _artigos() -> list[dict]:
     if not ARTIGOS.exists():
         return []
-    return sorted((json.loads(p.read_text(encoding="utf-8")) for p in ARTIGOS.glob("*.json")), key=lambda a: a["publicado"], reverse=True)
+    artigos = [json.loads(p.read_text(encoding="utf-8")) for p in ARTIGOS.glob("*.json")]
+    if EM_INGLES:
+        traduzidos = []
+        for a in artigos:
+            arq = ARTIGOS / "en" / f"{a['slug']}.json"
+            if arq.exists():
+                en = json.loads(arq.read_text(encoding="utf-8"))
+                traduzidos.append({**a, "titulo": en["titulo"], "resumo": en["resumo"], "corpo": en["corpo"]})
+            else:
+                print(f"artigo sem tradução, fora da versão em inglês: {a['slug']}")
+        artigos = traduzidos
+    return sorted(artigos, key=lambda a: a["publicado"], reverse=True)
 
 
 def _data_br(iso: str) -> str:
@@ -2087,9 +2124,9 @@ def gerar_artigo(a: dict) -> str:
 {_topo()}
 <article>
 <div class="kicker"><a href="/artigos" style="color:inherit;text-decoration:none">{html.escape(a.get("serie") or "Artigo")}</a></div>
-<h1>{html.escape(a["titulo"])}</h1>
+<h1 data-i18n-skip>{html.escape(a["titulo"])}</h1>
 <p class="meta-artigo">Alisson Prata, CFP® · <time datetime="{a["publicado"]}">{_data_br(a["publicado"])}</time></p>
-<div class="texto">
+<div class="texto" data-i18n-skip>
 {a["corpo"]}
 </div>
 <p class="origem">Publicado originalmente no LinkedIn em {_data_br(a["publicado"])}{", na newsletter Financial Syntax" if a.get("serie") else ""}. <a href="{html.escape(a["url_linkedin"])}">Ver no LinkedIn</a></p>
@@ -2112,13 +2149,13 @@ def gerar_artigo(a: dict) -> str:
             f'<meta name="twitter:card" content="{"summary_large_image" if img else "summary"}">'
             f'<script type="application/ld+json">{json.dumps(dados, ensure_ascii=False)}</script>'
             f'<style>{CSS_ARTIGOS}</style>')
-    return pagina(f"{a['titulo']} · Alisson Prata", a["resumo"], corpo, head)
+    return pagina(f"{a['titulo']} · Alisson Prata", a["resumo"], corpo, head, caminho=f"/artigos/{a['slug']}")
 
 
 def gerar_lista_artigos(artigos: list[dict]) -> str:
     itens = "".join(f"""<li><div class="kicker"><time datetime="{a["publicado"]}">{_data_br(a["publicado"])}</time>{" · " + html.escape(a["serie"]) if a.get("serie") else ""}</div>
-<h2><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></h2>
-<p>{html.escape(a["resumo"])}</p></li>""" for a in artigos)
+<h2 data-i18n-skip><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></h2>
+<p data-i18n-skip>{html.escape(a["resumo"])}</p></li>""" for a in artigos)
     desc = "Artigos de Alisson Prata, CFP®, e a newsletter Financial Syntax: análises de mercado com fonte, data e memória de cálculo."
     corpo = f"""<main class="estreito">
 {_topo()}
@@ -2136,34 +2173,60 @@ def gerar_lista_artigos(artigos: list[dict]) -> str:
     head = (f'<link rel="canonical" href="{SITE}/artigos"><meta property="og:type" content="website"><meta property="og:title" content="Artigos · Alisson Prata">'
             f'<meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="{SITE}/artigos">'
             f'<script type="application/ld+json">{json.dumps(dados, ensure_ascii=False)}</script><style>{CSS_ARTIGOS}</style>')
-    return pagina("Artigos · Alisson Prata", desc, corpo, head)
+    return pagina("Artigos · Alisson Prata", desc, corpo, head, caminho="/artigos")
 
 
 def gerar_sitemap(artigos: list[dict]) -> str:
     hoje = date.today().isoformat()
     urls = [(SITE + "/", hoje), (SITE + "/grafo-credito", hoje), (SITE + "/artigos", artigos[0]["publicado"] if artigos else hoje)]
     urls += [(f"{SITE}/artigos/{a['slug']}", a["publicado"]) for a in artigos]
+    traduzidos = {p.stem for p in (ARTIGOS / "en").glob("*.json")}
+    urls += [(_link_en(u), d) for u, d in urls if "/artigos/" not in u or u.rsplit("/", 1)[1] in traduzidos]
     corpo = "".join(f"<url><loc>{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{corpo}</urlset>\n'
 
 
-def gerar_artigos() -> None:
+def gerar_artigos(fin, destino: Path) -> None:
     artigos = _artigos()
     for a in artigos:
-        (PUBLICO / "artigos" / a["slug"]).mkdir(parents=True, exist_ok=True)
-        (PUBLICO / "artigos" / a["slug"] / "index.html").write_text(gerar_artigo(a), encoding="utf-8")
+        (destino / "artigos" / a["slug"]).mkdir(parents=True, exist_ok=True)
+        (destino / "artigos" / a["slug"] / "index.html").write_text(fin(gerar_artigo(a)), encoding="utf-8")
     if artigos:
-        (PUBLICO / "artigos" / "index.html").write_text(gerar_lista_artigos(artigos), encoding="utf-8")
-    (PUBLICO / "sitemap.xml").write_text(gerar_sitemap(artigos), encoding="utf-8")
-    (PUBLICO / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+        (destino / "artigos" / "index.html").write_text(fin(gerar_lista_artigos(artigos)), encoding="utf-8")
+    if not EM_INGLES:
+        (PUBLICO / "sitemap.xml").write_text(gerar_sitemap(artigos), encoding="utf-8")
+        (PUBLICO / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
 
 def main() -> None:
+    global EM_INGLES
     (PUBLICO / "grafo-credito").mkdir(parents=True, exist_ok=True)
-    (PUBLICO / "grafo-credito" / "index.html").write_text(gerar_projeto(), encoding="utf-8")
-    (PUBLICO / "index.html").write_text(gerar_home(), encoding="utf-8")
-    gerar_artigos()
-    print("site/public gerado")
+    projeto = gerar_projeto()
+    pt = lambda p: i18n.finalizar(p, False)
+    (PUBLICO / "grafo-credito" / "index.html").write_text(pt(projeto), encoding="utf-8")
+    (PUBLICO / "index.html").write_text(pt(gerar_home()), encoding="utf-8")
+    gerar_artigos(pt, PUBLICO)
+
+    # versão em inglês: mesmas páginas, traduzidas pela memória em site/i18n/en.json
+    EM_INGLES = True
+    mem = i18n.Memoria(RAIZ / "site" / "i18n")
+    dados = [json.loads((PUBLICO / "grafo-credito" / n).read_text(encoding="utf-8")) for n in ("dados.json", "cri_cra.json", "detalhe.json")]
+    en = lambda p: i18n.finalizar(p, True, mem, _link_en)
+    # valores dos dados que o JavaScript escreve na tela (nomes de empresa e de grupo ficam como estão)
+    d0, cri, det = dados
+    pontas = [p for p in det["ponta"].values() if p]
+    na_tela = (set(d0["segmentos"].values()) | {a.get("garantia") for a in d0["ativos"].values()}
+               | {x.get(k) for x in cri for k in ("st", "lg", "cl", "tl")}
+               | {p.get("juros_per") for p in pontas} | {e[1] for p in pontas for e in p.get("agenda") or []}
+               | {a.get("motivo_faixa") for a in d0["ativos"].values()})
+    EN = PUBLICO / "en"
+    (EN / "grafo-credito").mkdir(parents=True, exist_ok=True)
+    (EN / "grafo-credito" / "index.html").write_text(i18n.finalizar(projeto, True, mem, _link_en, na_tela), encoding="utf-8")
+    (EN / "index.html").write_text(en(gerar_home()), encoding="utf-8")
+    gerar_artigos(en, EN)
+    EM_INGLES = False
+    falta = mem.salvar_pendentes()
+    print("site/public gerado" + (f"; {falta} trecho(s) sem tradução em site/i18n/pendentes.json (rode site/traduzir.py)" if falta else ""))
 
 
 if __name__ == "__main__":
