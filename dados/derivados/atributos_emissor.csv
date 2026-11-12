@@ -233,7 +233,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08322396000103,CERRADINHO BIOENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 58607200000197,CONCESSIONARIA ECOVIAS RAPOSO-CASTELO S.A,EcoRodovias,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 39881421000104,COMPANHIA ESTADUAL DE GERACAO DE ENERGIA ELETRICA - CEEE-G,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,nao_identificado
-22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.91,grande_grupo
 01115535000170,TESC - TERMINAL SANTA CATARINA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 44330975000153,COLOMBO AGROINDUSTRIA SA,Colombo Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.9,grupo_inferido
 42288184000187,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -260,7 +260,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 24743678000122,ECHOENERGIA PARTICIPACOES S/A,Echoenergia,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 15484093000144,ECO101 CONCESSIONARIA DE RODOVIAS S/A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 22163297000149,CONCESSIONARIA PONTE RIO-NITEROI S/A - ECOPONTE,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
-29884545000190,ECORIOMINAS CONCESSIONARIA DE RODOVIAS S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
+29884545000190,ECORIOMINAS CONCESSIONARIA DE RODOVIAS S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 49008174000190,ACU TRANSMISSORA S.A.,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
 27831352000145,EDP TRANSMISSAO ALIANCA SC S.A.,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
