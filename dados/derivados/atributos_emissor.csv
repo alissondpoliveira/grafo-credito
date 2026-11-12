@@ -201,7 +201,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 89637490000145,KLABIN S/A,Klabin,papel_celulose,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.81,grande_grupo
 49037416000173,ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A.,Isolada (a identificar),comercializacao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 45024644000158,CAJUINA AB1 HOLDINGS S.A,Cajuina Ab1,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-03798096000173,AGEO TERMINAIS E ARMAZENS GERAIS S/A,Ageo Terminais,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
+03798096000173,AGEO TERMINAIS E ARMAZENS GERAIS S/A,Ageo Terminais,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.9,grupo_inferido
 39523638000142,AGUAS DA IMPERATRIZ S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 30997588000160,ATHON GERACAO DISTRIBUIDA S/A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 23438929000100,ALARES INTERNET PARTICIPACOES S/A,Alares Internet,telecom,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
@@ -233,7 +233,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08322396000103,CERRADINHO BIOENERGIA S.A.,Isolada (a identificar),geracao,corporativa,0,operacional,regra (ANEEL),operacional,,nao_identificado
 58607200000197,CONCESSIONARIA ECOVIAS RAPOSO-CASTELO S.A,EcoRodovias,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 39881421000104,COMPANHIA ESTADUAL DE GERACAO DE ENERGIA ELETRICA - CEEE-G,Isolada (a identificar),geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,nao_identificado
-22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.88,grande_grupo
+22261473000185,COMPANHIA DE GAS DE MINAS GERAIS GASMIG,Cemig,distribuicao_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 01115535000170,TESC - TERMINAL SANTA CATARINA S/A,Isolada (a identificar),portos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 44330975000153,COLOMBO AGROINDUSTRIA SA,Colombo Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.9,grupo_inferido
 42288184000187,CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.,Isolada (a identificar),mobilidade_urbana,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -266,7 +266,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
 55078938000116,EDP TRANSMISSAO NORTE NORDESTE 2 S.A.,EDP,transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,grupo_inferido
 24870962000160,EDTE -  EMPRESA DIAMANTINA DE TRANSMISSAO DE ENERGIA S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
-25176391000120,ENEL GREEN POWER VOLTA GRANDE S.A,Enel,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
+25176391000120,ENEL GREEN POWER VOLTA GRANDE S.A,Enel,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 28438777000151,EKTT 9 SERV DE TRANS DE E E SPE S.A.,Ektt 9,outros_corporativo,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 07401436000212,ELDORADO BRASIL CELULOSE S.A.,Eldorado Brasil,papel_celulose,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 20626892000148,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -287,7 +287,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 28201130000101,ENERGISA TRANSMISSAO DE ENERGIA S.A.,Energisa,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 26845702000160,BELEM TRANSMISSORA DE ENERGIA S.A.,Verene/IEB,transmissao,project_finance,1,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
 36030967000163,ENGIE SOLUCOES CIDADES INTELIGENTES E INFRAESTRUTURA DE UBERLANDIA S.A,Engie,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
+36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grupo_inferido
 48904104000157,FARO ENERGY PROJ. SOL. HOL. IV S.A,Faro Energy,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
@@ -339,8 +339,8 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 48127008000140,EPR SUL DE MINAS S.A,EPR,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 42596330000131,RDVE SUBHOLDING S.A.,Rdve Subholding,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08070508000178,RAIZEN ENERGIA S/A,Rumo,agro_acucar_etanol,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
-23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grande_grupo
-42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,nao_identificado
+23096269000119,RIO PARANA ENERGIA S/A,CTG,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
+42644220000106,AGUAS DO RIO 4 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
 42310775000103,AGUAS DO RIO 1 SPE S.A,Isolada (a identificar),saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,nao_identificado
 48851242000115,CONCESSIONARIA DAS RODOVIAS DO LESTE MS S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,nao_identificado
 39580673000101,BRK AMBIENTAL - REGIAO METROPOLITANA DE MACEIO S.A.,BRK,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo

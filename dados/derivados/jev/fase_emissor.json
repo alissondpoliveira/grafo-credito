@@ -2398,5 +2398,9 @@
  "42644220000106|5|Fato Relevante DFs": {
   "fase": "operacional",
   "confianca": 0.85
+ },
+ "08336783000190|1|Celesc registra um dos melhores resultad": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }
