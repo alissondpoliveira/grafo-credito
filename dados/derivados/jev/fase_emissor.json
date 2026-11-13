@@ -2406,5 +2406,25 @@
  "84683374000300|8|Tupy (TUPY3) lucrou R$ 53,6 milhões no t": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "45736131000170|8|4° Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "19046324000199|1|Orizon assina contrato de biometano com ": {
+  "fase": "construcao",
+  "confianca": 0.16
+ },
+ "84683374000300|9|Tupy (TUPY3) lucrou R$ 53,6 milhões no t": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12229415000110|1|Moody's Local afirma rating da Usina Cor": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "44067725000172|13|Assinatura 6º Termo Aditivo e Termo de A": {
+  "fase": "operacional",
+  "confianca": 0.58
  }
 }
