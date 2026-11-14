@@ -160849,5 +160849,51 @@
   "tokens": 892,
   "impacto": "positivo",
   "status": "automatico"
+ },
+ "42150391000170|analise|2020-07-17|Braskem (BRKM5) deverá lançar título de dívida no exterior n": {
+  "evento": "nova_divida",
+  "evento_confianca": 0.93,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.94,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.0,
+   "rating": 0.0,
+   "analise_credito": 0.06,
+   "outro": 0.0
+  },
+  "impacto_score": 0.79,
+  "impacto_confianca": 0.44,
+  "relevante": 0.85,
+  "modelo": "jev-1.14.0",
+  "tokens": 899,
+  "impacto": "neutro",
+  "status": "automatico"
+ },
+ "16404287000155|noticia|2025-12-10|Suzano, Ambev, Trisul, Telefônica, Tenda e mais ações para a": {
+  "evento": "outro",
+  "evento_confianca": 0.87,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.1,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.01,
+   "societario_governanca": 0.0,
+   "resultado": 0.01,
+   "rating": 0.0,
+   "analise_credito": 0.0,
+   "outro": 0.88
+  },
+  "impacto_score": 0.99,
+  "impacto_confianca": 0.96,
+  "relevante": 0.11,
+  "modelo": "jev-1.14.0",
+  "tokens": 895,
+  "impacto": "neutro",
+  "status": "automatico"
  }
 }
