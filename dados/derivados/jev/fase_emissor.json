@@ -2430,5 +2430,197 @@
  "84683374000300|8|Tupy (TUPY3) registra lucro de R$ 54 mi ": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "07636657000199|11|Aprovação da 6ª Emissão de Debêntures Si": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "08827501000158|15|Eleição CFO e DRI": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "02451848000162|9|Reconhecimento do desequilíbrio econômic": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "00242184000104|15|Programa de Recompra Dividendos": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "40432544000147|10|Raízen: “quando ficar claro o preço do p": {
+  "fase": "operacional",
+  "confianca": 0.49
+ },
+ "04601397000128|15|Pagamento de Juros sobre Capital Próprio": {
+  "fase": "operacional",
+  "confianca": 0.89
+ },
+ "24396489000120|15|16ª Emissão de Debêntures Simples": {
+  "fase": "operacional",
+  "confianca": 0.8
+ },
+ "09114805000130|15|Atualização de guidance": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "47508411000156|15|Celebração de Acordo com Grupo Casas Bah": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "45736131000170|8|5ª Emissão de Debêntures da Unidas Locad": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "27316538000166|3|Eneva e Vports firmam contratos para imp": {
+  "fase": "transicao",
+  "confianca": 0.52
+ },
+ "08336783000190|1|Demarest assessora Banco Votorantim e Sa": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "06981176000158|4|Comunicado ao Mercado - Liquidação das D": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "02800026000140|15|Programa de Recompra de Ações": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03025305000146|14|TAM 30/2026 - Extensão do prazo contratu": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04370282000170|13|Desinvestimento na UHE Baixo Iguaçu Conc": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "50746577000115|15|Alterações da Diretoria Executiva": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "33042730000104|15|Renúncia e Eleição de membro da Diretori": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "08845676000198|13|Fato Relevante - Eleição CFO e DRI": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "09257877000137|5|Renúncia de Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.25
+ },
+ "60840055000131|15|Nova Sociedade entre Fleury e Atlântica ": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "61156113000175|13|Andamento de assunto regulatório (Aleman": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "27093558000115|15|Deliberação do CADE acerca da compra de ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "03853896000140|15|Aquisição de Ações de Emissão da Própria": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "04992714000184|15|Fato Relevante sobre revisão tarifária e": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "12104241000402|15|Alteração na data da divulgação do 3T26": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "03279285000130|9|Aquisição G4": {
+  "fase": "operacional",
+  "confianca": 0.58
+ },
+ "89086144001198|4|Randoncorp (RAPT3) tem 4,8% do capital a": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "41508382000146|7|Redução da cifra do capital social.": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07859971000130|15|Fato Relevante - Incorporação Ananaí": {
+  "fase": "operacional",
+  "confianca": 0.83
+ },
+ "02286479000108|8|Outorga de fiança em favor dos debenturi": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "60665981000118|6|Emissão de 6ª Debentures": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "01637895000132|12|Negociações com o Conselho Administrativ": {
+  "fase": "operacional",
+  "confianca": 0.72
+ },
+ "33041260065290|15|Celebração de acordo com a CBD - GPA par": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "09326342000170|7|10ª Emissão de debentures": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "45456117000112|15|Reajuste Tarifário": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "08322396000103|12|Descontinuidade Projeções": {
+  "fase": "operacional",
+  "confianca": 0.67
+ },
+ "07401436000212|3|Marco no setor: Eldorado emite primeira ": {
+  "fase": "operacional",
+  "confianca": 0.3
+ },
+ "26664057000189|13|Eleição do Sr. Pablo  Gustavo Pascuttini": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "51137031000120|3|Safra recorde amplia demanda por logísti": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "18903785000178|2|Reequilíbrio econômico-financeiro parcia": {
+  "fase": "operacional",
+  "confianca": 0.76
+ },
+ "02635522000195|15|Aquisição de Ações de Emissão da Própria": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "33000167000101|15|Petrobras informa sobre remuneração aos ": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "48127008000140|1|EPR Sul de Minas lucra R$ 21,8 milhões n": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "42310775000103|5|Fato Relevante DFs": {
+  "fase": "operacional",
+  "confianca": 0.86
+ },
+ "51466860000156|15|Atualização do Guidance de Produção e Ca": {
+  "fase": "operacional",
+  "confianca": 0.82
+ },
+ "04739720000124|4|Alteração do Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "44067725000172|14|Processo Competitivo": {
+  "fase": "operacional",
+  "confianca": 0.55
  }
 }
