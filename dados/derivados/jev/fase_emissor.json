@@ -2622,5 +2622,41 @@
  "44067725000172|14|Processo Competitivo": {
   "fase": "operacional",
   "confianca": 0.55
+ },
+ "03025305000146|15|TAM 30/2026 - Extensão do prazo contratu": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "08439659000150|3|Renúncia da Diretora Vice-presidente de ": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "84683374000300|10|Tupy (TUPY3) aprova recompra de até R$ 3": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "38286323000166|2|Assuruá 4 e 5 lucra R$ 66,2 milhões no t": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "06840748000189|2|Tarifas residenciais da Equatorial Piauí": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51742485000120|3|1º Aditamento - Escritura 2ª emissão de ": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "48127012000108|3|Conclusão Procedimento de Bookbuilding 2": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "51137031000120|4|Safra recorde amplia demanda por logísti": {
+  "fase": "operacional",
+  "confianca": 0.5
+ },
+ "48534024000157|1|Sem deságio, GRU Airport leva maioria do": {
+  "fase": "operacional",
+  "confianca": 0.58
  }
 }
