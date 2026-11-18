@@ -2658,5 +2658,33 @@
  "48534024000157|1|Sem deságio, GRU Airport leva maioria do": {
   "fase": "operacional",
   "confianca": 0.58
+ },
+ "89086144001198|5|Petrobras (PETR4) nega acordo com BP, Us": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "84683374000300|9|Santander, Viveo, São Carlos, Smart Fit,": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "38286323000166|1|Assuruá 4 e 5 lucra R$ 66,2 milhões no t": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "51742485000120|2|1º Aditamento - Escritura 2ª emissão de ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "48127008000140|1|EPR Sul de Minas lucra R$ 13,9 milhões n": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "44067725000172|12|Processo Competitivo": {
+  "fase": "operacional",
+  "confianca": 0.26
+ },
+ "42276907000128|1|Renúncia de Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.66
  }
 }
