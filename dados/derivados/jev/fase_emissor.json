@@ -2706,5 +2706,17 @@
  "48127008000140|3|Tribunal de Contas suspende reajuste de ": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "64904295000103|13|Conclusão Da Aquisição Pela Camilatam Da": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "84683374000300|8|Santander, Viveo, São Carlos, Smart Fit,": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "48127008000140|2|Tribunal de Contas suspende reajuste de ": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }

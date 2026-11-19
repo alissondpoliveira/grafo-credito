@@ -166764,5 +166764,28 @@
   "tokens": 899,
   "impacto": "neutro",
   "status": "a_revisar"
+ },
+ "64904295000103|analise|2023-07-14|Rentabilidade de açúcar pesa no consolidado e Camil reporta ": {
+  "evento": "resultado",
+  "evento_confianca": 0.5,
+  "evento_probabilidades": {
+   "credito_negativo": 0.0,
+   "nova_divida": 0.0,
+   "pagamento_divida": 0.0,
+   "aquisicao_venda": 0.0,
+   "operacional": 0.0,
+   "societario_governanca": 0.0,
+   "resultado": 0.55,
+   "rating": 0.0,
+   "analise_credito": 0.45,
+   "outro": 0.0
+  },
+  "impacto_score": 0.1,
+  "impacto_confianca": 0.84,
+  "relevante": 0.74,
+  "modelo": "jev-1.14.0",
+  "tokens": 910,
+  "impacto": "negativo",
+  "status": "a_revisar"
  }
 }
