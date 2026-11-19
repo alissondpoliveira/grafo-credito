@@ -2686,5 +2686,25 @@
  "42276907000128|1|Renúncia de Diretor Presidente": {
   "fase": "operacional",
   "confianca": 0.66
+ },
+ "45736131000170|9|5ª Emissão de Debêntures da Unidas Locad": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "27902165000105|1|Oi (OIBR3): Highline vence leilão de 8 m": {
+  "fase": "operacional",
+  "confianca": 0.07
+ },
+ "89086144001198|6|Petrobras (PETR4) nega acordo com BP, Us": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "23274194000119|1|Eletrobras confirma realização de oferta": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "48127008000140|3|Tribunal de Contas suspende reajuste de ": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
