@@ -2718,5 +2718,13 @@
  "48127008000140|2|Tribunal de Contas suspende reajuste de ": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "45736131000170|7|5ª Emissão de Debêntures da Unidas Locad": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12009135000105|2|Fundo chinês compra fatia na controlador": {
+  "fase": "operacional",
+  "confianca": 0.61
  }
 }

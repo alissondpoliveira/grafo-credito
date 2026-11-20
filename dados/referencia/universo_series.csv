@@ -377,7 +377,6 @@ OZNH11,saude,corporativo,OZN HEALTH SPE S.A,OZN HEALTH SPE S.A,18080368000172,Oz
 PALFA4,distribuicao,energia,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,33050196000188,State Grid,CVM FRE,controlador PJ declarado (indireto),S,
 PALFA5,distribuicao,energia,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,33050196000188,State Grid,CVM FRE,controlador PJ declarado (indireto),S,
 PALFA6,distribuicao,energia,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,33050196000188,State Grid,CVM FRE,controlador PJ declarado (indireto),S,
-PALFA8,distribuicao,energia,COMPANHIA PAULISTA DE FORÇA E LUZ,COMPANHIA PAULISTA DE FORCA E LUZ,33050196000188,State Grid,CVM FRE,controlador PJ declarado (indireto),S,
 PASS12,distribuicao_gas,saneamento_gas,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,21389501000181,Compass,CVM FRE,nome do emissor; controle declarado na CVM,S,
 PASS13,distribuicao_gas,saneamento_gas,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,21389501000181,Compass,CVM FRE,nome do emissor; controle declarado na CVM,S,
 PASS14,distribuicao_gas,saneamento_gas,COMPASS GAS E ENERGIA S.A,COMPASS GAS E ENERGIA S.A,21389501000181,Compass,CVM FRE,nome do emissor; controle declarado na CVM,S,
