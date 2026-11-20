@@ -2726,5 +2726,13 @@
  "12009135000105|2|Fundo chinês compra fatia na controlador": {
   "fase": "operacional",
   "confianca": 0.61
+ },
+ "|4|São Martinho e Jalles Machado valem a pe": {
+  "fase": "operacional",
+  "confianca": 0.94
+ },
+ "84683374000300|10|Santander, Viveo, São Carlos, Smart Fit,": {
+  "fase": "operacional",
+  "confianca": 1.0
  }
 }
