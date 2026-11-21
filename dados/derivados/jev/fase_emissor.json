@@ -2734,5 +2734,17 @@
  "84683374000300|10|Santander, Viveo, São Carlos, Smart Fit,": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "27316538000166|2|Eneva e Vports firmam contratos para imp": {
+  "fase": "transicao",
+  "confianca": 0.22
+ },
+ "08439659000150|5|Renúncia da Diretora Vice-presidente de ": {
+  "fase": "operacional",
+  "confianca": 0.67
+ },
+ "89086144001198|7|Petrobras (PETR4) nega acordo com BP, Us": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
