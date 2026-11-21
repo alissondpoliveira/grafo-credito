@@ -56,7 +56,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 06147451001104,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,Calamo Distribuidora,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 16619378000108,CIMED & CO S.A.,Cimed Co,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 06981180000116,CEMIG DISTRIBUICAO S/A,Cemig,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+06981176000158,CEMIG GERACAO E TRANSMISSAO S/A,Cemig,integrada_gt,project_finance,2,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 12420164000157,CM HOSPITALAR S.A.,Cm Hospitalar,varejo,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 07682638000107,CONCESSIONARIA DA LINHA 4 DO METRO DE SAO PAULO S/A,Motiva (ex-CCR),mobilidade_urbana,project_finance,0,transicao,JEV (comunicados e notícias),operacional,0.87,grande_grupo
 07047251000170,COMPANHIA ENERGETICA DO CEARA-COELCE,Enel,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.93,grande_grupo
@@ -115,7 +115,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02932074000191,HYPERA S/A,Hypera,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 26707830000147,INTERLIGACAO ELETRICA AIMORES S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 26712591000113,INTERLIGACAO ELETRICA PARAGUACU S.A,ISA,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
-51218147000193,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,Iguatemi Empresa,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
+51218147000193,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,Iguatemi Empresa,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 35822503000127,INSPIRALI EDUCACAO S/A,Inspirali Educacao,educacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.82,grande_grupo
 61156113000175,IOCHPE-MAXION S/A,Iochpe Maxion,industria,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 33337122000127,IPIRANGA  PRODUTOS DE PETROLEO S.A.,Ipiranga Produtos,oleo_gas,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
@@ -243,7 +243,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 00535681000192,COMPANHIA PARANAENSE DE GAS COMPAGAS,Isolada (a identificar),distribuicao_gas,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 06840748000189,EQUATORIAL PIAUI DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
 53859112000169,COMPANHIA JAGUARI DE ENERGIA,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-51742485000120,EPR VIAS DO CAFE S.A,EPR,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+51742485000120,EPR VIAS DO CAFE S.A,EPR,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 08822767000108,CONCESSIONARIA DA RODOVIA MG-050 S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,nao_identificado
 49314049000108,CONCESSIONARIA DE RODOVIAS NOROESTE PAULISTA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 19521322000104,CONCESSIONARIA ROTA DO OESTE S.A.,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,nao_identificado
@@ -258,7 +258,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 24743678000122,ECHOENERGIA PARTICIPACOES S/A,Echoenergia,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 15484093000144,ECO101 CONCESSIONARIA DE RODOVIAS S/A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 22163297000149,CONCESSIONARIA PONTE RIO-NITEROI S/A - ECOPONTE,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
-29884545000190,ECORIOMINAS CONCESSIONARIA DE RODOVIAS S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
+29884545000190,ECORIOMINAS CONCESSIONARIA DE RODOVIAS S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
 49008174000190,ACU TRANSMISSORA S.A.,Isolada (a identificar),transmissao,project_finance,1,construcao,regra (ANEEL),construcao,,nao_identificado
 27831352000145,EDP TRANSMISSAO ALIANCA SC S.A.,EDP,transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,grupo_inferido
 04705039000165,HORIZON TRANSMISSAO ES S.A.,Isolada (a identificar),transmissao,project_finance,1,operacional,regra (ANEEL),operacional,,nao_identificado
@@ -312,7 +312,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 01083200000118,NEOENERGIA S/A,Neoenergia,energia_diversificada,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 28438834000100,NEOENERGIA MORRO DO CHAPEU TRANSMISSAO E ENERGIA S.A.,Neoenergia,transmissao,project_finance,1,transicao,regra (ANEEL),transicao,,grupo_inferido
 48710127000120,SPE NOVO NORTE AEROPORTOS S.A.,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-12300288000107,NORTE ENERGIA S/A,Axia (ex-Eletrobras),geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+12300288000107,NORTE ENERGIA S/A,Axia (ex-Eletrobras),geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
 14797436000168,DELTA 3 ENERGIA S.A,Isolada (a identificar),energia_diversificada,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 48725405000113,BLOCO DE ONZE AEROPORTOS DO BRASIL S.A,Isolada (a identificar),aeroportos,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 32021201000161,ORIGEM ENERGIA S.A.,Isolada (a identificar),energia_diversificada,corporativa,0,transicao,JEV (comunicados e notícias),operacional,0.92,nao_identificado

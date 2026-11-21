@@ -2746,5 +2746,9 @@
  "89086144001198|7|Petrobras (PETR4) nega acordo com BP, Us": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "12300288000107|11|Eleição do Novo Diretor-Presidente": {
+  "fase": "operacional",
+  "confianca": 0.92
  }
 }

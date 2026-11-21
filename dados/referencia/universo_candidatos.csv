@@ -117,7 +117,7 @@ CIELA0,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM
 CLCD16,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLCD17,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLCD18,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
-CLCD19,CELESC DISTRIBUIÇÃO S/A,,corporativo,outros_corporativo,nome do emissor,
+CLCD19,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLII12,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
 CLIS11,CLI SUL S/A,CLI SUL S/A,transporte,portos,CVM (CNPJ),Serviços Transporte e Logística
 CLMOA2,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S/A,CALAMO DISTRIBUIDORA DE PRODUTOS DE BELEZA S.A.,corporativo,outros_corporativo,nome do emissor,
@@ -288,7 +288,7 @@ HYPEA9,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higien
 HYPEB1,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
 HYPEB2,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
 HYPEC0,HYPERA S/A,HYPERA S/A,corporativo,saude,CVM (CNPJ),Farmacêutico e Higiene
-IEAS11,INTERLIGACAO ELETRICA AIMORES S.A,,energia,transmissao,nome do emissor,
+IEAS11,INTERLIGACAO ELETRICA AIMORES S.A,INTERLIGACAO ELETRICA AIMORES S.A,energia,transmissao,nome do emissor,
 IEPS11,INTERLIGACAO ELETRICA PARAGUACU S.A,INTERLIGACAO ELETRICA PARAGUACU S.A,energia,transmissao,nome do emissor,
 IGTAA3,IGUATEMI EMPRESA DE SHOPPING CENTERS S/A,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 IGTAB0,IGUATEMI EMPRESA DE SHOPPING CENTERS S/A,IGUATEMI EMPRESA DE SHOPPING CENTERS S.A,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
@@ -466,7 +466,7 @@ SMFTA1,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E D
 SMFTA2,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SMFTA3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SMFTA5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
-SMFTB3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,,corporativo,servicos_lazer,CVM (nome),Brinquedos e Lazer
+SMFTB3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SMFTB5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SMFTC3,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
 SMFTC5,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,corporativo,servicos_lazer,CVM (CNPJ),Brinquedos e Lazer
@@ -561,7 +561,7 @@ VLIDA1,VALID SOLUCOES S/A,VALID SOLUCOES S/A,corporativo,tecnologia_midia,CVM (C
 VLIDB1,VALID SOLUCOES S/A,VALID SOLUCOES S/A,corporativo,tecnologia_midia,CVM (CNPJ),Comunicação e Informática
 VLME11,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
 VLME12,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,VRENTAL LOCACAO DE MAQUINAS E EQUIPAMENTOS S.A.,corporativo,industria,CVM (CNPJ),"Máquinas, Equipamentos, Veículos e Peças"
-VVEO15,CM HOSPITALAR S.A.,,corporativo,varejo,CVM (nome),Comércio (Atacado e Varejo)
+VVEO15,CM HOSPITALAR S.A.,CM HOSPITALAR S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 VVEO16,CM HOSPITALAR S.A.,CM HOSPITALAR S.A.,corporativo,varejo,CVM (CNPJ),Comércio (Atacado e Varejo)
 WIZC12,WIZ SOLUCOES E CORRETAGEM DE SEGUROS S.A.,WIZ SOLUCOES E CORRETAGEM DE SEGUROS S.A.,corporativo,financeiro,CVM (CNPJ),Seguradoras e Corretoras
 YDUQ17,YDUQS PARTICIPACOES S.A,YDUQS PARTICIPACOES S.A,corporativo,educacao,CVM (CNPJ),Emp. Adm. Part. - Educação
@@ -840,7 +840,7 @@ ELET16,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,i
 ELET23,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELET42,CENTRAIS ELETRICAS BRASILEIRAS S/A ELETROBRAS,AXIA ENERGIA S.A.,energia,integrada_gt,CVM (CNPJ),Emp. Adm. Part. - Energia Elétrica
 ELPLA5,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
-ELPLA7,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,,energia,distribuicao,nome do emissor,
+ELPLA7,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELPLC8,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELTE12,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,EMPRESA LITORANEA DE TRANSMISSAO DE ENERGIA S.A. - ELTE,energia,transmissao,nome do emissor,
 ELTN15,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
@@ -984,7 +984,7 @@ IVIAA0,CONC. RODOV. INTERI. PAULISTA S/A,CONCESSIONARIA DE RODOVIAS DO INTERIOR 
 JALL11,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL13,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL14,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
-JALL15,JALLES MACHADO S.A.,,corporativo,agro_acucar_etanol,CVM (nome),"Agricultura (Açúcar, Álcool e Cana)"
+JALL15,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL21,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JALL24,JALLES MACHADO S.A.,JALLES MACHADO S.A.,corporativo,agro_acucar_etanol,CVM (CNPJ),"Agricultura (Açúcar, Álcool e Cana)"
 JSMLB5,SIMPAR S.A.,SIMPAR S.A.,transporte,logistica,CVM (CNPJ),Serviços Transporte e Logística
