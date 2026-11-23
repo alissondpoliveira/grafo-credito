@@ -868,5 +868,12 @@
  "⟨0⟩ maiores de cada lado": "⟨0⟩ largest on each side",
  "⟨0⟩ significa que o preço cai cerca de ⟨1⟩% se a taxa subir ⟨2⟩ bps (e sobe parecido se cair). Vale bem para choques pequenos; nos grandes, entra a convexidade.": "⟨0⟩ means the price falls about ⟨1⟩% if the rate rises ⟨2⟩ bps (and rises similarly if it falls). This holds well for small shocks; for large ones, convexity comes into play.",
  "⟨0⟩º dia": "Day ⟨0⟩",
- "DFP e IPE da CVM, IF.data do Banco Central, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira · ⟨0⟩ meses até ⟨1⟩/⟨2⟩ · bancos em ⟨3⟩/⟨4⟩": "CVM's DFP and IPE, Banco Central's IF.data, events classified by JEV (TypeSafe) · updated every Monday · ⟨0⟩ months to ⟨1⟩/⟨2⟩ · banks in ⟨3⟩/⟨4⟩"
+ "DFP e IPE da CVM, IF.data do Banco Central, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira · ⟨0⟩ meses até ⟨1⟩/⟨2⟩ · bancos em ⟨3⟩/⟨4⟩": "CVM's DFP and IPE, Banco Central's IF.data, events classified by JEV (TypeSafe) · updated every Monday · ⟨0⟩ months to ⟨1⟩/⟨2⟩ · banks in ⟨3⟩/⟨4⟩",
+ "Análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede. Os marcados com Financial Syntax saíram na newsletter de mesmo nome, no LinkedIn e no Substack.": "Market analysis for investors who want the mechanism, not the headline. Each piece cites sources and dates, shows the calculations, and states what the model used does not measure. Those marked Financial Syntax were published in the newsletter of the same name, on LinkedIn and Substack.",
+ "Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil. O Morning Call e o Fechamento também saem como podcast no Substack.": "Morning Call, Market Close and News Digest, with audio and the sources of each edition, published every business day. The Morning Call and the Market Close are also released in English as a podcast on Substack.",
+ "⟦0⟧Abrir o Mercado⟦1⟧⟦2⟧Ouvir no Substack⟦3⟧": "⟦0⟧Open Markets⟦1⟧⟦2⟧Listen on Substack⟦3⟧",
+ "⟦0⟧Assinar no Substack⟦1⟧⟦2⟧Assinar no LinkedIn⟦3⟧": "⟦0⟧Subscribe on Substack⟦1⟧⟦2⟧Subscribe on LinkedIn⟦3⟧",
+ "⟦0⟧Ler os artigos⟦1⟧⟦2⟧Assinar no Substack⟦3⟧⟦4⟧Assinar no LinkedIn⟦5⟧": "⟦0⟧Read the articles⟦1⟧⟦2⟧Subscribe on Substack⟦3⟧⟦4⟧Subscribe on LinkedIn⟦5⟧",
+ "⟦0⟧LinkedIn⟦1⟧⟦2⟧GitHub⟦3⟧⟦4⟧Assinar no Substack⟦5⟧⟦6⟧Assinar no LinkedIn⟦7⟧": "⟦0⟧LinkedIn⟦1⟧⟦2⟧GitHub⟦3⟧⟦4⟧Subscribe on Substack⟦5⟧⟦6⟧Subscribe on LinkedIn⟦7⟧",
+ "⟦0⟧LinkedIn⟦1⟧⟦2⟧Substack⟦3⟧⟦4⟧GitHub⟦5⟧⟦6⟧Financial Syntax⟦7⟧": "⟦0⟧LinkedIn⟦1⟧⟦2⟧Substack⟦3⟧⟦4⟧GitHub⟦5⟧⟦6⟧Financial Syntax⟦7⟧"
 }

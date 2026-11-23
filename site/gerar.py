@@ -30,6 +30,10 @@ CLAUSULAS = RAIZ / "dados" / "referencia" / "clausulas_escrituras.csv"
 ARTIGOS = RAIZ / "site" / "artigos"
 SITE = "https://www.alissonprata.io"
 NEWSLETTER = "https://www.linkedin.com/newsletters/financial-syntax-7449592226130874368/"
+# Substack (23/11/2026): publicação em português e em inglês; a versão em inglês do site troca uma pela outra (main)
+SUBSTACK = "https://alissonoliveiracfp.substack.com/"
+SUBSTACK_EN = "https://financialsyntax.substack.com/"
+SUBSTACK_PERFIL = "https://substack.com/@alissonoliveiracfp"
 
 FONTES = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">'
 
@@ -508,12 +512,12 @@ def gerar_home() -> str:
 <h3><a href="/artigos">Financial Syntax</a></h3>
 <p>Newsletter de análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede.</p>
 {recentes}
-<p class="acoes"><a href="/artigos">Ler os artigos</a><a href="{NEWSLETTER}">Assinar no LinkedIn</a></p>
+<p class="acoes"><a href="/artigos">Ler os artigos</a><a href="{SUBSTACK}">Assinar no Substack</a><a href="{NEWSLETTER}">Assinar no LinkedIn</a></p>
 </article>
 <article class="cartao leve">
 <h3><a href="https://mercado.alissonprata.io/">Mercado</a></h3>
-<p>Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil.</p>
-<p class="acoes"><a href="https://mercado.alissonprata.io/">Abrir o Mercado</a></p>
+<p>Morning Call, Fechamento de Mercado e News Digest, com áudio e as fontes de cada edição, publicados todo dia útil. O Morning Call e o Fechamento também saem como podcast no Substack.</p>
+<p class="acoes"><a href="https://mercado.alissonprata.io/">Abrir o Mercado</a><a href="{SUBSTACK}">Ouvir no Substack</a></p>
 </article>
 </div>
 </section>
@@ -524,13 +528,13 @@ def gerar_home() -> str:
 </section>
 
 <footer class="rodape-home">
-<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="/artigos">Financial Syntax</a></p>
+<p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a><a href="{SUBSTACK_PERFIL}">Substack</a><a href="https://github.com/alissondpoliveira">GitHub</a><a href="/artigos">Financial Syntax</a></p>
 <p class="fraco pequeno">Projetos educacionais e pessoais, sem fim comercial e sem vínculo institucional. Os modelos são simplificados, podem conter erros e nada aqui é recomendação de investimento.</p>
 </footer>
 </main>"""
     pessoa = {"@context": "https://schema.org", "@type": "Person", "name": "Alisson Prata", "url": "https://www.alissonprata.io/",
               "description": "Análises e ferramentas sobre crédito privado, qualidade contábil e mercado brasileiro.",
-              "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira"]}
+              "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira", SUBSTACK_PERFIL]}
     desc = "Alisson Prata: ferramentas e análises sobre crédito privado, qualidade contábil e mercado brasileiro, com dados públicos."
     head = (f'<link rel="canonical" href="https://www.alissonprata.io/">'
             f'<meta property="og:type" content="profile"><meta property="og:title" content="Alisson Prata">'
@@ -2115,11 +2119,11 @@ def _topo() -> str:
 
 
 RODAPE_ARTIGOS = ('<footer><p class="links"><a href="https://www.linkedin.com/in/alissonpoliveira">LinkedIn</a>'
-                  f'<a href="https://github.com/alissondpoliveira">GitHub</a><a href="{NEWSLETTER}">Assinar a Financial Syntax</a></p>'
+                  f'<a href="https://github.com/alissondpoliveira">GitHub</a><a href="{SUBSTACK}">Assinar no Substack</a><a href="{NEWSLETTER}">Assinar no LinkedIn</a></p>'
                   '<p>Conteúdo de estudo e opinião pessoal, sem vínculo institucional. Nada aqui é recomendação de investimento.</p></footer>')
 
 AUTOR = {"@type": "Person", "name": "Alisson Prata", "url": SITE + "/",
-         "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira"]}
+         "sameAs": ["https://www.linkedin.com/in/alissonpoliveira", "https://github.com/alissondpoliveira", SUBSTACK_PERFIL]}
 
 
 def gerar_artigo(a: dict) -> str:
@@ -2167,8 +2171,8 @@ def gerar_lista_artigos(artigos: list[dict]) -> str:
 <header>
 <div class="kicker">Escrita</div>
 <h1>Artigos</h1>
-<p class="dek">Análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede. Os marcados com Financial Syntax saíram na newsletter de mesmo nome, no LinkedIn.</p>
-<p class="acoes"><a href="{NEWSLETTER}">Assinar a Financial Syntax no LinkedIn</a></p>
+<p class="dek">Análises de mercado para o investidor que quer o mecanismo, não a manchete. Cada texto cita fonte e data, mostra a memória de cálculo e declara o que o modelo usado não mede. Os marcados com Financial Syntax saíram na newsletter de mesmo nome, no LinkedIn e no Substack.</p>
+<p class="acoes"><a href="{SUBSTACK}">Assinar no Substack</a><a href="{NEWSLETTER}">Assinar no LinkedIn</a></p>
 </header>
 <ul class="lista-artigos">{itens}</ul>
 {RODAPE_ARTIGOS}
@@ -2247,7 +2251,7 @@ def main() -> None:
     EM_INGLES = True
     mem = i18n.Memoria(RAIZ / "site" / "i18n")
     dados = [json.loads((PUBLICO / "grafo-credito" / n).read_text(encoding="utf-8")) for n in ("dados.json", "cri_cra.json", "detalhe.json")]
-    en = lambda p: i18n.finalizar(p, True, mem, _link_en)
+    en = lambda p: i18n.finalizar(p.replace(SUBSTACK, SUBSTACK_EN), True, mem, _link_en)
     # valores dos dados que o JavaScript escreve na tela (nomes de empresa e de grupo ficam como estão)
     d0, cri, det = dados
     pontas = [p for p in det["ponta"].values() if p]
