@@ -2191,7 +2191,7 @@ def gerar_sitemap(artigos: list[dict]) -> str:
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{corpo}</urlset>\n'
 
 
-def gerar_feed(artigos: list[dict]) -> str:
+def gerar_feed(artigos: list[dict], ingles: bool = False) -> str:
     """RSS 2.0 com o texto completo (content:encoded): leitores de feed e o importador do Substack.
     Links e imagens relativos viram absolutos, para quem lê o feed fora do site."""
     from datetime import datetime, timezone
@@ -2203,18 +2203,20 @@ def gerar_feed(artigos: list[dict]) -> str:
     def absoluto(corpo: str) -> str:
         return re.sub(r'(src|href)="/(?!/)', rf'\1="{SITE}/', corpo.strip())
 
+    base = f"{SITE}/en" if ingles else SITE
     itens = "".join(
-        f"<item><title>{html.escape(a['titulo'])}</title><link>{SITE}/artigos/{a['slug']}</link>"
-        f"<guid isPermaLink=\"true\">{SITE}/artigos/{a['slug']}</guid><pubDate>{data(a['publicado'])}</pubDate>"
+        f"<item><title>{html.escape(a['titulo'])}</title><link>{base}/artigos/{a['slug']}</link>"
+        f"<guid isPermaLink=\"true\">{base}/artigos/{a['slug']}</guid><pubDate>{data(a['publicado'])}</pubDate>"
         f"<dc:creator>Alisson Prata</dc:creator><description>{html.escape(a['resumo'])}</description>"
         f"<content:encoded><![CDATA[{absoluto(a['corpo']).replace(']]>', ']]]]><![CDATA[>')}]]></content:encoded></item>"
         for a in artigos)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" '
             'xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
-            f"<title>Financial Syntax · Alisson Prata</title><link>{SITE}/artigos</link>"
-            f'<atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>'
-            "<description>Artigos de Alisson Prata sobre mercado, crédito e análise de investimentos.</description>"
-            f"<language>pt-BR</language>{itens}</channel></rss>\n")
+            f"<title>Financial Syntax · Alisson Prata</title><link>{base}/artigos</link>"
+            f'<atom:link href="{SITE}/{"feed-en" if ingles else "feed"}.xml" rel="self" type="application/rss+xml"/>'
+            + ("<description>Articles by Alisson Prata on markets, credit and investment analysis.</description>" if ingles else
+               "<description>Artigos de Alisson Prata sobre mercado, crédito e análise de investimentos.</description>")
+            + f"<language>{'en' if ingles else 'pt-BR'}</language>{itens}</channel></rss>\n")
 
 
 def gerar_artigos(fin, destino: Path) -> None:
@@ -2224,7 +2226,9 @@ def gerar_artigos(fin, destino: Path) -> None:
         (destino / "artigos" / a["slug"] / "index.html").write_text(fin(gerar_artigo(a)), encoding="utf-8")
     if artigos:
         (destino / "artigos" / "index.html").write_text(fin(gerar_lista_artigos(artigos)), encoding="utf-8")
-    if not EM_INGLES:
+    if EM_INGLES:  # só os artigos com tradução (o _artigos() em inglês já filtra)
+        (PUBLICO / "feed-en.xml").write_text(gerar_feed(artigos, ingles=True), encoding="utf-8")
+    else:
         (PUBLICO / "sitemap.xml").write_text(gerar_sitemap(artigos), encoding="utf-8")
         (PUBLICO / "feed.xml").write_text(gerar_feed(artigos), encoding="utf-8")
         (PUBLICO / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
