@@ -427,7 +427,12 @@ def _numeros_home() -> dict:
         req = urllib.request.Request("https://beneish.alissonprata.io/dados.json", headers={"User-Agent": "alissonprata.io"})
         b = json.load(urllib.request.urlopen(req, timeout=30))
         ms = [e["mscore"] for e in b["empresas"] if e.get("mscore") is not None]
-        out["beneish"] = {"empresas": len(ms), "acima": sum(m > b["limiar"] for m in ms), "exercicio": b["exercicio"],
+        per = b.get("periodo") or {}
+        if per.get("ltm"):  # últimos 12 meses (ITR + DFP) até o fim do trimestre
+            rotulo = f"12 meses até {per['fim'][5:7]}/{per['fim'][:4]}"  # número no mês: a tradução não muda a cada trimestre
+        else:
+            rotulo = f"exercício {b['exercicio']}"
+        out["beneish"] = {"empresas": len(ms), "acima": sum(m > b["limiar"] for m in ms), "exercicio": b["exercicio"], "rotulo": rotulo,
                           "svg": _mini_hist(ms, -5, 1, b["limiar"])}
     except Exception as exc:
         print(f"home: números do M-Score indisponíveis ({exc})")
@@ -450,7 +455,7 @@ def gerar_home() -> str:
     stats_b = (f'<dl class="stats"><div><dt>Companhias</dt><dd>{fmtn(b["empresas"])}</dd></div><div><dt>Acima do limiar</dt><dd>{fmtn(b["acima"])}</dd></div>'
                + (f'<div><dt>Bancos e financeiras</dt><dd>{fmtn(k["avaliadas"])}</dd></div>' if k else f'<div><dt>Exercício</dt><dd>{b["exercicio"]}</dd></div>')
                + '</dl>') if b else ""
-    datas_b = (f' · exercício {b["exercicio"]}' if b else "") + (f' · bancos em {k["data_base"][4:]}/{k["data_base"][:4]}' if k else "")
+    datas_b = (f' · {b["rotulo"]}' if b else "") + (f' · bancos em {k["data_base"][4:]}/{k["data_base"][:4]}' if k else "")
     leg_g = '<p class="leg">Desvio do spread em relação ao justo pelos pares, em pontos-base; a linha marca zero.</p>' if g and g["svg"] else ""
     leg_b = '<p class="leg">Distribuição do M-Score; a linha marca o limiar de −1,78.</p>' if b and b["svg"] else ""
     recentes = "".join(f'<li><a href="/artigos/{a["slug"]}">{html.escape(a["titulo"])}</a></li>' for a in _artigos()[:3])
@@ -2186,6 +2191,32 @@ def gerar_sitemap(artigos: list[dict]) -> str:
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{corpo}</urlset>\n'
 
 
+def gerar_feed(artigos: list[dict]) -> str:
+    """RSS 2.0 com o texto completo (content:encoded): leitores de feed e o importador do Substack.
+    Links e imagens relativos viram absolutos, para quem lê o feed fora do site."""
+    from datetime import datetime, timezone
+    from email.utils import format_datetime
+
+    def data(iso: str) -> str:
+        return format_datetime(datetime.fromisoformat(iso).replace(hour=9, tzinfo=timezone(timedelta(hours=-3))))
+
+    def absoluto(corpo: str) -> str:
+        return re.sub(r'(src|href)="/(?!/)', rf'\1="{SITE}/', corpo.strip())
+
+    itens = "".join(
+        f"<item><title>{html.escape(a['titulo'])}</title><link>{SITE}/artigos/{a['slug']}</link>"
+        f"<guid isPermaLink=\"true\">{SITE}/artigos/{a['slug']}</guid><pubDate>{data(a['publicado'])}</pubDate>"
+        f"<dc:creator>Alisson Prata</dc:creator><description>{html.escape(a['resumo'])}</description>"
+        f"<content:encoded><![CDATA[{absoluto(a['corpo']).replace(']]>', ']]]]><![CDATA[>')}]]></content:encoded></item>"
+        for a in artigos)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" '
+            'xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+            f"<title>Financial Syntax · Alisson Prata</title><link>{SITE}/artigos</link>"
+            f'<atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>'
+            "<description>Artigos de Alisson Prata sobre mercado, crédito e análise de investimentos.</description>"
+            f"<language>pt-BR</language>{itens}</channel></rss>\n")
+
+
 def gerar_artigos(fin, destino: Path) -> None:
     artigos = _artigos()
     for a in artigos:
@@ -2195,6 +2226,7 @@ def gerar_artigos(fin, destino: Path) -> None:
         (destino / "artigos" / "index.html").write_text(fin(gerar_lista_artigos(artigos)), encoding="utf-8")
     if not EM_INGLES:
         (PUBLICO / "sitemap.xml").write_text(gerar_sitemap(artigos), encoding="utf-8")
+        (PUBLICO / "feed.xml").write_text(gerar_feed(artigos), encoding="utf-8")
         (PUBLICO / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
 

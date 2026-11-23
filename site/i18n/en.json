@@ -867,5 +867,6 @@
  "⟦0⟧⟲⟦1⟧⟦2⟧ Recentrar⟦3⟧": "⟦0⟧⟲⟦1⟧⟦2⟧ Recenter⟦3⟧",
  "⟨0⟩ maiores de cada lado": "⟨0⟩ largest on each side",
  "⟨0⟩ significa que o preço cai cerca de ⟨1⟩% se a taxa subir ⟨2⟩ bps (e sobe parecido se cair). Vale bem para choques pequenos; nos grandes, entra a convexidade.": "⟨0⟩ means the price falls about ⟨1⟩% if the rate rises ⟨2⟩ bps (and rises similarly if it falls). This holds well for small shocks; for large ones, convexity comes into play.",
- "⟨0⟩º dia": "Day ⟨0⟩"
+ "⟨0⟩º dia": "Day ⟨0⟩",
+ "DFP e IPE da CVM, IF.data do Banco Central, eventos classificados pelo JEV (TypeSafe) · atualizado toda segunda-feira · ⟨0⟩ meses até ⟨1⟩/⟨2⟩ · bancos em ⟨3⟩/⟨4⟩": "CVM's DFP and IPE, Banco Central's IF.data, events classified by JEV (TypeSafe) · updated every Monday · ⟨0⟩ months to ⟨1⟩/⟨2⟩ · banks in ⟨3⟩/⟨4⟩"
 }
