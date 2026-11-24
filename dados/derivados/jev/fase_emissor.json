@@ -2858,5 +2858,13 @@
  "02255187000108|15|Nova Suspensão dos Trabalhos da Assemble": {
   "fase": "construcao",
   "confianca": 0.26
+ },
+ "89086144001198|6|Randoncorp (RAPT3) tem receita de R$ 1,2": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02502844000166|3|Alteração do Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.96
  }
 }
