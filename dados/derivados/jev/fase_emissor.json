@@ -2750,5 +2750,113 @@
  "12300288000107|11|Eleição do Novo Diretor-Presidente": {
   "fase": "operacional",
   "confianca": 0.92
+ },
+ "12528708000107|15|Deferimento Recuperação Extrajudicial": {
+  "fase": "operacional",
+  "confianca": 0.48
+ },
+ "40432544000147|8|Raízen: “quando ficar claro o preço do p": {
+  "fase": "operacional",
+  "confianca": 0.44
+ },
+ "47508411000156|15|Plano Especial de Pagamento Trabalhista ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "08336783000190|3|Celesc (CLSC3) registra lucro de R$ 278 ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "12420164000157|15|Prorrogação do Prazo para Reenquadrament": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "07047251000170|15|Revisão de Rating da Enel Brasil e Subsi": {
+  "fase": "operacional",
+  "confianca": 0.96
+ },
+ "04368898000106|10|Fato Relevante 01/26 - 6º Ciclo de Revis": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "61695227000193|13|Revisão de Rating da Enel Brasil e Subsi": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "09257877000137|9|Renúncia de Diretor Presidente": {
+  "fase": "operacional",
+  "confianca": 0.8
+ },
+ "|7|ISA Energia (ISAE3, ISAE4) anuncia poten": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "52548435000179|15|Transação entre CS Holding e Sinal Servi": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "05917486000140|14|Solicitação de Convocação de Assembleia ": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "04992714000184|15|Rating": {
+  "fase": "operacional",
+  "confianca": 0.92
+ },
+ "06047087000139|15|Anúncio de Alienação SAMI": {
+  "fase": "operacional",
+  "confianca": 0.88
+ },
+ "89086144001198|5|Randoncorp (RAPT3) tem receita de R$ 1,2": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "07415333000120|15|Descontinuidade de guidance de controlad": {
+  "fase": "operacional",
+  "confianca": 0.68
+ },
+ "35764708000101|15|Fato Relevante": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "41570356000148|7|Fato Relevante 11.10.2025": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "89637490000145|15|Fato Relevante - Caldeira de Recuperação": {
+  "fase": "operacional",
+  "confianca": 0.7
+ },
+ "45456117000112|14|Reajuste Tarifário": {
+  "fase": "operacional",
+  "confianca": 0.91
+ },
+ "12272084000100|1|Equatorial Energia, R&N Telecom fecham c": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "42288184000187|1|BNDES aprova R$ 4,6 bilhões para concess": {
+  "fase": "operacional",
+  "confianca": 0.5
+ },
+ "08170849000115|15|Ajuste de Endividamento Líquido Definiti": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "12091809000155|15|Conclusão da Aquisição de Parcela Comple": {
+  "fase": "operacional",
+  "confianca": 0.34
+ },
+ "48127008000140|1|Governador eleito, Cleitinho questiona n": {
+  "fase": "operacional",
+  "confianca": 0.97
+ },
+ "34840096000118|1|Brasileira Compass planeja iniciar opera": {
+  "fase": "construcao",
+  "confianca": 0.56
+ },
+ "02255187000108|15|Nova Suspensão dos Trabalhos da Assemble": {
+  "fase": "construcao",
+  "confianca": 0.26
  }
 }
