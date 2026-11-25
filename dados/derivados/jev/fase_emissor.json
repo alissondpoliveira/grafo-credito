@@ -2866,5 +2866,13 @@
  "02502844000166|3|Alteração do Diretor Presidente": {
   "fase": "operacional",
   "confianca": 0.96
+ },
+ "08336783000190|4|Celesc (CLSC3) registra lucro de R$ 278 ": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "54846951000105|4|Ferrari desembolsa R$ 161 milhões para a": {
+  "fase": "operacional",
+  "confianca": 0.96
  }
 }

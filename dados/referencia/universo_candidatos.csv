@@ -114,7 +114,7 @@ CIEL17,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM
 CIEL18,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
 CIEL19,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
 CIELA0,CIELO S/A,CIELO S.A - INSTITUICAO DE PAGAMENTO,corporativo,financeiro,CVM (CNPJ),Intermediação Financeira
-CLCD16,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
+CLCD16,CELESC DISTRIBUIÇÃO S/A,,corporativo,outros_corporativo,nome do emissor,
 CLCD17,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLCD18,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
 CLCD19,CELESC DISTRIBUIÇÃO S/A,CELESC DISTRIBUICAO S.A.,corporativo,outros_corporativo,nome do emissor,
@@ -215,7 +215,7 @@ ELFA12,ELFA MEDICAMENTOS SA,ELFA MEDICAMENTOS SA,corporativo,saude,CVM (CNPJ),Se
 ELPLA6,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELPLB8,ELETROPAULO METROP. ELETRIC. DE S.P. S/A,ELETROPAULO METROPOL. ELETR. DE S.P. S/A,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ELTN16,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
-ELTN19,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
+ELTN19,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,,energia,integrada_gt,nome do emissor,
 ELTN26,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,energia,integrada_gt,CVM (CNPJ),Energia Elétrica
 ENERB5,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
 ENERC3,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,ENERGISA MATO GROSSO DO SUL - DISTRIBUIDORA DE ENERGIA S.A.,energia,distribuicao,CVM (CNPJ),Energia Elétrica
@@ -304,7 +304,7 @@ ISAEB3,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (
 ISAEC1,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAED1,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISPE12,IGUA SERGIPE S.A.,IGUA SERGIPE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
-ISPE13,IGUA SERGIPE S.A.,,saneamento_gas,saneamento,CVM (nome),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
+ISPE13,IGUA SERGIPE S.A.,IGUA SERGIPE S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 ITSA17,ITAUSA S/A,ITAUSA S/A,corporativo,financeiro,CVM (CNPJ),Emp. Adm. Part. - Intermediação Financeira
 ITSA18,ITAUSA S/A,ITAUSA S/A,corporativo,financeiro,CVM (CNPJ),Emp. Adm. Part. - Intermediação Financeira
 JHSFA1,JHSF PARTICIPAÇÕES S/A,JHSF PARTICIPACOES S/A,corporativo,outros_corporativo,CVM (CNPJ),"Emp. Adm. Part. - Const. Civil, Mat. Const. e Decoração"
@@ -972,7 +972,7 @@ IRJS14,IGUA RIO DE JANEIRO S.A.,IGUA RIO DE JANEIRO S.A.,saneamento_gas,saneamen
 IRJS15,IGUA RIO DE JANEIRO S.A.,IGUA RIO DE JANEIRO S.A.,saneamento_gas,saneamento,CVM (CNPJ),"Emp. Adm. Part. - Saneamento, Serv. Água e Gás"
 ISAEA8,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEA9,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
-ISAEB0,ISA ENERGIA BRASIL S.A.,,energia,transmissao,CVM (nome),Energia Elétrica
+ISAEB0,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEB2,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEB8,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
 ISAEC0,ISA ENERGIA BRASIL S.A.,ISA ENERGIA BRASIL S.A.,energia,transmissao,CVM (CNPJ),Energia Elétrica
@@ -1194,7 +1194,6 @@ UNTE11,UNIFIQUE TELECOMUNICACOES S.A.,UNIFIQUE TELECOMUNICACOES S.A.,corporativo
 USAS11,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
 USAS12,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
 USAS22,USINA SANTA ADÉLIA S.A.,USINA SANTA ADELIA S.A.,corporativo,agro_acucar_etanol,nome do emissor,
-USNA12,USINA SANTA FE S.A.,USINA SANTA FE S.A.,corporativo,agro_acucar_etanol,nome do emissor,
 USNA13,USINA SANTA FE S.A.,USINA SANTA FE S.A.,corporativo,agro_acucar_etanol,nome do emissor,
 UTPS11,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica
 UTPS12,USINA TERMELETRICA PAMPA SUL S.A.,USINA TERMELETRICA PAMPA SUL S.A.,energia,geracao,CVM (CNPJ),Energia Elétrica

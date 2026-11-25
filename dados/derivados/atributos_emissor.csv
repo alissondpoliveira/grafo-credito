@@ -43,14 +43,13 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 08467115000100,COMPANHIA ESTADUAL DE DISTRIBUICAO DE ENERGIA ELETRICA - CEEE D,Equatorial,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 03467321000199,ENERGISA MATO GROSSO - DISTRIBUIDORA DE ENERGIA S.A.,Energisa,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 05914650000166,ENERGISA RONDONIA - DISTRIBUIDORA DE ENERGIA S/A,Energisa,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-60933603000178,CESP - COMPANHIA ENERGETICA DE SAO PAULO,Auren,geracao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
+60933603000178,CESP - COMPANHIA ENERGETICA DE SAO PAULO,Auren,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.94,grande_grupo
 61856571000117,COMPANHIA DE GAS DE SAO PAULO - COMGAS,Compass,distribuicao_gas,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 07802794000156,ESSENTIA PCHS S.A,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 01543032000104,EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 33541368000116,COMPANHIA HIDRO ELETRICA DO SAO FRANCISCO - CHESF,Axia (ex-Eletrobras),integrada_gt,corporativa,25,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
 19014221000147,CHINA THREE GORGES BRASIL ENERGIA S.A.,CTG,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.84,grande_grupo
 01027058000191,CIELO S.A - INSTITUICAO DE PAGAMENTO,Cielo Instituicao,financeiro,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
-,CENTRAIS ELETRICAS DO NORTE DO BRASIL S/A - ELETRONORTE,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 08336783000190,CELESC DISTRIBUICAO S.A.,Celesc Distribuicao,outros_corporativo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 15114494000102,CORREDOR LOGISTICA E INFRAESTRUTURA S.A,Isolada (a identificar),logistica,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.89,nao_identificado
 43514079000181,CLI SUL S/A,Isolada (a identificar),portos,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.86,nao_identificado
@@ -63,7 +62,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 07047251000170,COMPANHIA ENERGETICA DO CEARA-COELCE,Enel,energia_diversificada,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 02800026000140,COGNA EDUCACAO S.A,Cogna Educacao,educacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 03025305000146,RODOVIAS DAS COLINAS S.A,Isolada (a identificar),rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,nao_identificado
-92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
+04973790000142,CPFL COMERCIALIZACAO BRASIL S/A,CPFL,transmissao,corporativa,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 04172213000151,COMPANHIA PIRATININGA DE FORCA E LUZ,CPFL,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 04370282000170,COPEL GERACAO E TRANSMISSAO S.A.,Copel,integrada_gt,project_finance,12,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 04368898000106,COPEL  DISTRIBUICAO S/A,Copel,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
@@ -86,6 +85,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 02509491000126,CONCESSIONARIA ECOVIAS DOS IMIGRANTES S.A.,EcoRodovias,rodovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
 07779299000173,EDP TRANSMISSAO GOIAS S.A.,EDP,transmissao,corporativa,3,operacional,JEV (comunicados e notícias),operacional,0.95,grupo_inferido
 07282377000120,ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA SA,Energisa,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
+92715812000131,CPFL TRANSMISSAO S.A.,CPFL,transmissao,corporativa,4,operacional,JEV (comunicados e notícias),operacional,0.8,grande_grupo
 02474103000119,ENGIE BRASIL ENERGIA SA,Engie,geracao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.92,grande_grupo
 02328280000197,ELEKTRO REDES S.A.,Neoenergia,distribuicao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.97,grande_grupo
 09053134000145,ELFA MEDICAMENTOS SA,Elfa Medicamentos,saude,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.86,grande_grupo
@@ -123,6 +123,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 61532644000115,ITAUSA S/A,Itausa,financeiro,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.82,grande_grupo
 08294224000165,JHSF PARTICIPACOES S/A,Jhsf,outros_corporativo,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 52548435000179,JSL S.A,Simpar,logistica,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
+07415333000120,SIMPAR S.A.,Simpar,logistica,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 16670085000155,LOCALIZA RENT A CAR S/A,Localiza,locacao,corporativa,0,operacional,JEV (comunicados e notícias),operacional,1.0,grupo_inferido
 00873894000124,LETS RENT A CAR S/A,Isolada (a identificar),locacao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,nao_identificado
 00389481000179,LM TRANSPORTES INTERESTADUAIS SERVICOS E COMERCIO S.A.,Isolada (a identificar),logistica,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,nao_identificado
@@ -164,7 +165,6 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 06347409000165,SBF COMERCIO DE PRODUTOS ESPORTIVOS S.A.,Sbf Comercio,varejo,project_finance,0,operacional,JEV (comunicados e notícias),operacional,1.0,grande_grupo
 07594978000178,SMARTFIT ESCOLA DE GINASTICA E DANCA S/A,Smartfit Escola,servicos_lazer,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.82,grupo_inferido
 43776517000180,CIA SANEAMENTO BASICO EST. SP - SABESP,Sabesp,saneamento,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.98,grupo_inferido
-07415333000120,SIMPAR S.A.,Simpar,logistica,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 01616929000102,SANEAMENTO DE GOIAS S/A,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 02762121000104,SANTOS BRASIL PARTICIPACOES S/A,Santos Brasil,portos,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 07714104000107,GIGA MAIS FIBRA TELECOMUNICACOES S.A.,Giga Mais,telecom,corporativa,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
@@ -224,7 +224,7 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 59196897000113,CONCESSIONARIA DE RODOVIAS PRVIAS S.A.,Motiva (ex-CCR),rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 02846056000197,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,Motiva (ex-CCR),mobilidade_urbana,corporativa,0,operacional,regra (ANEEL),operacional,,grande_grupo
 24274124000123,ASSURUA 2 ENERGIA S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
-12272084000100,EQUATORIAL ALAGOAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.97,grupo_inferido
+12272084000100,EQUATORIAL ALAGOAS DISTRIBUIDORA DE ENERGIA S.A.,Equatorial,distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 48569926000129,AMBIENTAL CEARA 2 SPE S.A.,Isolada (a identificar),saneamento,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 05965546000109,COMPANHIA DE ELETRICIDADE DO AMAPA - CEA,Isolada (a identificar),distribuicao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
 10835932000108,COMPANHIA ENERGETICA DE PERNAMBUCO-CELPE,Neoenergia,distribuicao,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.95,grande_grupo
@@ -287,10 +287,10 @@ cnpj,emissor,grupo_risco,segmento,estrutura,n_contratos_aneel,fase,fonte_fase,fa
 36030967000163,ENGIE SOLUCOES CIDADES INTELIGENTES E INFRAESTRUTURA DE UBERLANDIA S.A,Engie,outros_corporativo,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 36619747000170,FIBRASIL INFRAESTRUTURA E FIBRA OTICA S.A.,Fibrasil Infraestrutura,telecom,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.83,grupo_inferido
 12489315000123,FERREIRA GOMES ENERGIA S.A.,Alupar,geracao,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
-54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.85,grupo_inferido
+54846951000105,FERRARI AGROINDUSTRIA S/A,Ferrari Agroindustria,agro_acucar_etanol,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grupo_inferido
 46710597000169,FS I INDUSTRIA DE ETANOL S.A,Fs I,agro_acucar_etanol,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
 23274194000119,FURNAS CENTRAIS ELETRICAS S/A,Axia (ex-Eletrobras),integrada_gt,project_finance,0,operacional,regra (ANEEL),operacional,,grupo_inferido
-02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.96,grande_grupo
+02502844000166,RUMO MALHA PAULISTA S/A,Rumo,ferrovias,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.99,grande_grupo
 27157474000106,AGUAS DE TERESINA SANEAMENTO  SPE  S.A.,Aegea,saneamento,project_finance,0,operacional,JEV (comunicados e notícias),operacional,0.98,grande_grupo
 18903785000178,HOLDING DO ARAGUAIA S.A.,EcoRodovias,rodovias,project_finance,0,operacional,regra (ANEEL),operacional,,grande_grupo
 32431519000110,HELIO VALGAS SOLAR PARTICIPACOES S.A.,Isolada (a identificar),geracao,project_finance,0,operacional,regra (ANEEL),operacional,,nao_identificado
