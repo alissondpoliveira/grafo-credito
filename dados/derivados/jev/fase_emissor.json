@@ -2894,5 +2894,21 @@
  "58070452000120|8|Renúncia e Eleição de Diretoria": {
   "fase": "operacional",
   "confianca": 0.62
+ },
+ "27316538000166|1|Pedro Henrique Benevides será o novo dir": {
+  "fase": "operacional",
+  "confianca": 0.74
+ },
+ "84683374000300|10|TUPY3: cotação hoje, dividendos e indica": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "44330975000153|4|Colombo Agroindústria terá assembleia ex": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "01417222000177|13|14a. Emissão de Debêntures": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
