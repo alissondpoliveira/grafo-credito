@@ -2882,5 +2882,17 @@
  "89086144001198|4|Randoncorp (RAPT3) tem receita de R$ 1,2": {
   "fase": "operacional",
   "confianca": 1.0
+ },
+ "92715812000131|10|Alteração de Controle Acionário": {
+  "fase": "operacional",
+  "confianca": 0.77
+ },
+ "04172213000151|10|Renovação da Concessão": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "58070452000120|8|Renúncia e Eleição de Diretoria": {
+  "fase": "operacional",
+  "confianca": 0.62
  }
 }
