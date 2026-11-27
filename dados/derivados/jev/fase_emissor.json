@@ -2910,5 +2910,13 @@
  "01417222000177|13|14a. Emissão de Debêntures": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "03237583000167|2|Do botijão à TV: donos da Copa Energia c": {
+  "fase": "operacional",
+  "confianca": 0.98
+ },
+ "51218147000193|6|Transição CEO": {
+  "fase": "operacional",
+  "confianca": 0.98
  }
 }
