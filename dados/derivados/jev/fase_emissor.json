@@ -2918,5 +2918,13 @@
  "51218147000193|6|Transição CEO": {
   "fase": "operacional",
   "confianca": 0.98
+ },
+ "32431519000110|12|Rescisão de contrato": {
+  "fase": "transicao",
+  "confianca": 0.19
+ },
+ "42353180000135|6|Procedimento arbitral": {
+  "fase": "operacional",
+  "confianca": 0.44
  }
 }
