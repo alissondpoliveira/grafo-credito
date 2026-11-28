@@ -2926,5 +2926,17 @@
  "42353180000135|6|Procedimento arbitral": {
   "fase": "operacional",
   "confianca": 0.44
+ },
+ "04368898000106|11|Fato Relevante 01/26 - 6º Ciclo de Revis": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "02600854000134|7|Information Regarding The Public Offer A": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51137031000120|2|Mattos Filho assessora EPR Litoral Pione": {
+  "fase": "transicao",
+  "confianca": 0.01
  }
 }
