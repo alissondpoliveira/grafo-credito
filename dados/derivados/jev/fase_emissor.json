@@ -2938,5 +2938,13 @@
  "51137031000120|2|Mattos Filho assessora EPR Litoral Pione": {
   "fase": "transicao",
   "confianca": 0.01
+ },
+ "84683374000300|10|Tupy (TUPY3) tem nova presidente do Cons": {
+  "fase": "operacional",
+  "confianca": 1.0
+ },
+ "51137031000120|1|Mattos Filho assessora EPR Litoral Pione": {
+  "fase": "operacional",
+  "confianca": 0.61
  }
 }
